@@ -66,6 +66,8 @@ async def get_current_admin(credentials: Optional[HTTPAuthorizationCredentials] 
         user = await db.users.find_one({"id": payload["sub"]}, {"_id": 0, "password_hash": 0})
         if not user:
             raise HTTPException(status_code=401, detail="User not found")
+        if user.get("role") != "admin":
+            raise HTTPException(status_code=403, detail="Forbidden")
         return user
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=401, detail="Token expired")
