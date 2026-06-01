@@ -1,0 +1,144 @@
+{
+  "project_context": {
+    "business_name": "KrishiGears",
+    "tagline": "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
+    "objective": "Create a premium agricultural machinery website that positions KrishiGears as a trusted supplier of farming equipment across India.",
+    "target_market": "Farmers, Agricultural Equipment Dealers, Farm Contractors, Retailers, Agricultural Input Stores, Government Tenders, Institutional Buyers",
+    "app_type": "hybrid_fullstack (marketing + ecommerce-catalog + lead-gen)"
+  },
+  "theme_and_archetype": {
+    "theme": "Dark",
+    "archetype": "The Performance Pro / Industrial High-Contrast",
+    "justification": "KrishiGears needs a 'Command-Center' focus. Dark mode combined with high-visibility Lime Green conveys elite athleticism and precision but tailored for raw industrial agricultural power. It distances the brand from cheap consumer goods and positions it as a premium, heavy-duty machinery supplier.",
+    "emotional_tone": "Trustworthy, rugged, authoritative, precise, and tech-forward."
+  },
+  "color_system": {
+    "background": {
+      "base": "#0A0A0A",
+      "surface": "#141414",
+      "surface_elevated": "#1F1F1F"
+    },
+    "brand": {
+      "primary": "#84CC16",
+      "primary_hover": "#A3E635",
+      "primary_active": "#65A30D"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A",
+      "inverse": "#000000"
+    },
+    "structural": {
+      "border": "#27272A",
+      "divider": "#3F3F46"
+    },
+    "rules": [
+      "No pure #000000 or #808080. Greys are tinted with slight warmth or coolness. Using Zinc/Neutral tailwind palettes.",
+      "Lime green (#84CC16) is used EXCLUSIVELY for key kinetic triggers (Primary CTAs, active states, active tab indicators, tracing beams). Do not use it for large background fills unless it's a specific banner.",
+      "Text on primary lime green backgrounds MUST be Black (#000000) or very dark grey (#0A0A0A) to meet APCA contrast ratios."
+    ]
+  },
+  "typography": {
+    "strategy": "The 'Swiss Brutalist' Tech Look",
+    "headings": {
+      "font_family": "Outfit",
+      "fallback": "sans-serif",
+      "weight": "font-bold to font-black",
+      "tracking": "tracking-tight",
+      "line_height": "leading-none",
+      "rules": "H1 max text-5xl to text-6xl. Do not use generic sans for headings."
+    },
+    "body": {
+      "font_family": "Manrope",
+      "fallback": "sans-serif",
+      "weight": "font-normal to font-medium",
+      "tracking": "tracking-normal",
+      "line_height": "leading-relaxed"
+    },
+    "labels": {
+      "style": "uppercase, text-xs, tracking-[0.2em], text-zinc-400 font-bold"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing: p-6, p-8, p-12, p-20, p-32.",
+    "grids": {
+      "marketing_sections": "MODE A: 'Tetris' Bento Grid for category showcases and Why Choose Us sections. Asymmetrical grid-cols-1 md:grid-cols-8 lg:grid-cols-12 with gap-8. Mix tall and wide cards.",
+      "catalog_specs": "MODE B: 'Control Room' Grid for Product Specifications and features. grid-cols-1 md:grid-cols-2 lg:grid-cols-4 with gap-4. High density, explicit borders."
+    },
+    "surfaces": {
+      "headers": "Glassmorphism: bg-black/60 backdrop-blur-xl with a border-b border-white/10.",
+      "cards": "Grid Borders (The Technical Look). border border-zinc-800 bg-[#141414]. Hover states lift slightly (-translate-y-1) and cast a subtle lime glow shadow.",
+      "inputs": "Flat, dark fields (bg-[#0A0A0A]) with sharp 1px borders (border-zinc-800) and lime green focus rings (focus:ring-lime-500)."
+    }
+  },
+  "components_strategy": {
+    "general": "Hybrid approach. Pure HTML/Tailwind for marketing layouts. Shadcn UI for forms, dialogues, and complex interactions.",
+    "navigation": "Sticky top nav. bg-black/60 backdrop-blur-xl. Logo left, links center, Dealer/Contact CTA right. Always visible on desktop.",
+    "buttons": "Sharp corners or very slight radius (rounded-md). Primary: bg-lime-500 text-black hover:bg-lime-400. Secondary: bg-transparent border border-zinc-700 text-white hover:border-lime-500 hover:text-lime-500.",
+    "forms": "Use Shadcn Input, Select, Textarea. Dark theme overrides. Forms must look like high-end technical command interfaces.",
+    "tables": "Spec tables use border-collapse, visible grid lines (border-zinc-800), alternating row subtle backgrounds.",
+    "testing": "All interactive elements MUST include data-testid attributes (e.g., data-testid='submit-enquiry-button')."
+  },
+  "media_and_assets": {
+    "logo_url": "https://customer-assets.emergentagent.com/job_2f7e8e24-8a87-4e22-80ae-e4a8236f7388/artifacts/1qde0bgj_Screenshot%202026-05-31%20at%206.41.53%E2%80%AFPM.png",
+    "icons_library": "lucide-react",
+    "images": {
+      "hero_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/9862aaeb293a349960ecdc460806fb8e845ef8f429f07916720d038ddd900a0c.png",
+        "description": "Dark mode studio lighting of agricultural machinery. Use as the main hero background with a heavy bg-black/50 to bg-black/70 overlay to ensure the lime green tagline pops.",
+        "category": "hero"
+      },
+      "india_network_map": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/ff6f800948e74c34944cb1e852b7e44ed1b403d82f8a109308aa798d597de06e.png",
+        "description": "Stylized glowing map of India showing dealer network.",
+        "category": "dealer_network_section"
+      },
+      "abstract_terrain": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/302977c3a18070a0158c2af9eb152ac221f3f38edc6076959ee3d8560900c403.png",
+        "description": "Abstract dark topographic map. Use as background for CTA bands or About sections.",
+        "category": "background_texture"
+      },
+      "farmer_field_1": {
+        "url": "https://images.unsplash.com/photo-1606739211185-2c846d734a6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhZ3JpY3VsdHVyYWwlMjBtYWNoaW5lcnklMjB0cmFjdG9yJTIwZmllbGR8ZW58MHx8fHwxNzgwMzI0NzgxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Tractor on field",
+        "category": "about_us_image"
+      },
+      "farmer_field_2": {
+        "url": "https://images.pexels.com/photos/29039798/pexels-photo-29039798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Indian farmer laboring in paddy field",
+        "category": "testimonial_or_blog_image"
+      },
+      "machinery_1": {
+        "url": "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Powerful tractor plowing",
+        "category": "product_category_placeholder"
+      }
+    }
+  },
+  "page_specific_instructions": {
+    "home": [
+      "Hero: Large H1 tagline 'For the Farmers, With the Farmer, To the Farmer, HAMESHA'. Use hero_background image with gradient overlay.",
+      "Category Grid: Present the 19 categories using a Bento grid style or a sleek horizontal scrolling marquee for smaller items. Do not just use a boring symmetrical grid.",
+      "Dealer Network: Showcase the india_network_map image with stats (e.g., 'Pan India Support', 'Subsidy Approved').",
+      "Floating Actions: Add a fixed bottom-right WhatsApp button (bg-green-500) and a mobile-only call button."
+    ],
+    "products": [
+      "Use technical/grid border styling for product cards.",
+      "Each product page must have a 'Command Center' specs table. Expose technical details clearly.",
+      "Include a 'Request Bulk Order' or 'Enquiry' CTA prominently on product detail pages."
+    ],
+    "about_and_network": [
+      "Use farmer_field images. Contrast the high-tech machinery aesthetic with grounded, human farmer stories.",
+      "Highlight 'FMTTI Approved' and 'Subsidy Approved' as trust badges."
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install `lucide-react` for icons.",
+    "Set up Tailwind config with the custom colors: background, surface, border, and primary lime (zinc-based greys + lime-500).",
+    "Create the specific product categories listed in the requirements exactly as provided (Power Tillers, Power Weeders, Brush Cutters, etc.).",
+    "Implement pure HTML/Tailwind for the dynamic bento layouts on the marketing homepage, and use Shadcn for the forms and inputs.",
+    "Add 'data-testid' to all buttons, form inputs, and major navigation links.",
+    "Ensure dark mode is forced or is the default theme across the application."
+  ]
+}
