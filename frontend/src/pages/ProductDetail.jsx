@@ -30,8 +30,8 @@ export default function ProductDetail() {
         {/* Gallery + Info */}
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6">
-            <div className="aspect-square overflow-hidden border border-zinc-800 bg-[#0F0F0F]">
-              <img src={product.images[active]} alt={product.name} className="w-full h-full object-cover" />
+            <div className="aspect-square overflow-hidden border border-zinc-800 bg-white">
+              <img src={product.images[active]} alt={product.name} className="w-full h-full object-contain p-4" />
             </div>
             {product.images.length > 1 && (
               <div className="grid grid-cols-5 gap-2 mt-3">
@@ -52,6 +52,20 @@ export default function ProductDetail() {
           <div className="lg:col-span-6">
             <div className="kg-eyebrow">{category.name}</div>
             <h1 className="font-display font-black text-3xl md:text-4xl lg:text-5xl tracking-tight mt-3">{product.name}</h1>
+            {product.model && (
+              <div className="mt-3 inline-flex items-center gap-2 text-zinc-400 font-mono text-sm">
+                <span className="text-zinc-500">Model:</span> <span className="text-white">{product.model}</span>
+              </div>
+            )}
+            {product.badges?.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {product.badges.map((b) => (
+                  <span key={b} className="text-xs font-bold tracking-wider uppercase px-3 py-1 bg-lime-500/10 text-lime-400 border border-lime-500/40">
+                    {b}
+                  </span>
+                ))}
+              </div>
+            )}
             <div className="mt-4 inline-flex items-center gap-2 text-lime-500 font-bold">
               <ShieldCheck className="h-4 w-4" /> Authorized Royal Kissan Agro Product
             </div>
