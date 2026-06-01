@@ -1,54 +1,68 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { Toaster } from "sonner";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Products from "@/pages/Products";
+import CategoryPage from "@/pages/CategoryPage";
+import ProductDetail from "@/pages/ProductDetail";
+import DealerNetwork from "@/pages/DealerNetwork";
+import BecomeDealer from "@/pages/BecomeDealer";
+import BulkOrder from "@/pages/BulkOrder";
+import Contact from "@/pages/Contact";
+import Warranty from "@/pages/Warranty";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import SeoLanding from "@/pages/SeoLanding";
+import AdminLogin from "@/pages/admin/AdminLogin";
+import AdminDashboard from "@/pages/admin/AdminDashboard";
+import ScrollToTop from "@/components/ScrollToTop";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-h-screen bg-background text-foreground">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          {/* Admin (no header/footer) */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+
+          {/* Public pages share layout */}
+          <Route
+            path="*"
+            element={
+              <>
+                <Header />
+                <main className="pt-20">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/products/category/:slug" element={<CategoryPage />} />
+                    <Route path="/products/:slug" element={<ProductDetail />} />
+                    <Route path="/dealer-network" element={<DealerNetwork />} />
+                    <Route path="/become-a-dealer" element={<BecomeDealer />} />
+                    <Route path="/bulk-order" element={<BulkOrder />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/warranty-and-support" element={<Warranty />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
+                    <Route path="/seo/:slug" element={<SeoLanding />} />
+                    <Route path="*" element={<Home />} />
+                  </Routes>
+                </main>
+                <Footer />
+                <FloatingActions />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
+      <Toaster theme="dark" position="top-center" richColors />
     </div>
   );
 }
