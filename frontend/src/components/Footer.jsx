@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter, ShieldCheck } from "lucide-react";
 import { LOGO_URL, COMPANY, CATEGORIES, SEO_PAGES } from "@/data/catalog";
 
 export default function Footer() {
@@ -65,9 +65,11 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3 text-zinc-400">
               <Mail className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <div>
-                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-500 block">{COMPANY.email}</a>
-                <a href={`mailto:${COMPANY.support}`} className="hover:text-lime-500 block">{COMPANY.support}</a>
+              <div className="space-y-1">
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-500 block">Sales — {COMPANY.email}</a>
+                <a href={`mailto:${COMPANY.support}`} className="hover:text-lime-500 block">Service — {COMPANY.support}</a>
+                <a href={`mailto:${COMPANY.dealers}`} className="hover:text-lime-500 block">Dealers — {COMPANY.dealers}</a>
+                <a href={`mailto:${COMPANY.accounts}`} className="hover:text-lime-500 block">Accounts — {COMPANY.accounts}</a>
               </div>
             </li>
             <li className="flex items-start gap-3 text-zinc-400">
@@ -77,6 +79,10 @@ export default function Footer() {
             <li className="flex items-start gap-3 text-zinc-400">
               <MapPin className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
               <span>{COMPANY.address}</span>
+            </li>
+            <li className="flex items-start gap-3 text-zinc-400">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
+              <span>GSTIN: <span className="text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
             </li>
           </ul>
         </div>

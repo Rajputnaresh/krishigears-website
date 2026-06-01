@@ -38,10 +38,13 @@ export const COMPANY = {
   tagline: "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
   website: "KrishiGears.in",
   email: "sales@krishigears.com",
-  support: "support@krishigears.com",
-  phone: "+91 98765 43210",
-  whatsapp: "919876543210",
-  address: "PAN India Supply & Service Network",
+  support: "service@krishigears.com",
+  accounts: "accounts@krishigears.com",
+  dealers: "dealers@krishigears.com",
+  phone: "+91 60060 78815",
+  whatsapp: "916006078815",
+  address: "Jaipur, Rajasthan, India",
+  gst: "08EQLPD7160R1Z2",
 };
 
 export const CATEGORIES = [

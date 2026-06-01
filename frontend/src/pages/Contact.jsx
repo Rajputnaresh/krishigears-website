@@ -42,8 +42,10 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-4">
             <ChannelCard icon={Phone} title="Call us" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" />
             <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://wa.me/${COMPANY.whatsapp}`} testid="contact-whatsapp" />
-            <ChannelCard icon={Mail} title="Sales" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
-            <ChannelCard icon={Mail} title="Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
+            <ChannelCard icon={Mail} title="Sales / Orders" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
+            <ChannelCard icon={Mail} title="Service / Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
+            <ChannelCard icon={Mail} title="Dealership" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />
+            <ChannelCard icon={Mail} title="Accounts / Payments" value={COMPANY.accounts} href={`mailto:${COMPANY.accounts}`} testid="contact-email-accounts" />
             <ChannelCard icon={MapPin} title="Coverage" value={COMPANY.address} testid="contact-address" />
           </div>
 

@@ -392,7 +392,7 @@ function ContactStrip() {
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-500">PAN India Supply</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-500">Head Office · PAN India Supply</div>
                 <div className="text-sm">{COMPANY.address}</div>
               </div>
             </div>
