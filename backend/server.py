@@ -9,6 +9,8 @@ import uuid
 import logging
 import bcrypt
 import jwt
+import asyncio
+import httpx
 from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Literal
 
@@ -201,6 +203,43 @@ def lead_doc(lead_type: str, payload: dict) -> dict:
     }
 
 
+# ---------- Google Sheets webhook forwarder ----------
+SHEET_WEBHOOKS = {
+    "enquiry": os.environ.get("GSHEETS_ENQUIRY_URL", "").strip(),
+    "dealer": os.environ.get("GSHEETS_DEALER_URL", "").strip(),
+}
+
+
+async def forward_to_sheet(lead_type: str, doc: dict) -> None:
+    """Fire-and-forget POST of a lead to a Google Apps Script webhook.
+    Silently skips when no URL is configured. Failures are logged but never
+    affect the user's form-submission flow.
+    """
+    url = SHEET_WEBHOOKS.get(lead_type)
+    if not url:
+        return
+    payload = {
+        "id": doc.get("id"),
+        "type": doc.get("type"),
+        "created_at": doc.get("created_at"),
+        **(doc.get("data") or {}),
+    }
+    try:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+            resp = await client.post(url, json=payload)
+            if resp.status_code >= 400:
+                logger.warning("Sheet webhook %s -> %s: %s", lead_type, resp.status_code, resp.text[:200])
+    except Exception as e:  # noqa: BLE001
+        logger.warning("Sheet webhook %s failed: %s", lead_type, e)
+
+
+def fire_sheet_forward(lead_type: str, doc: dict) -> None:
+    """Schedule the webhook call without blocking the request."""
+    if not SHEET_WEBHOOKS.get(lead_type):
+        return
+    asyncio.create_task(forward_to_sheet(lead_type, doc))
+
+
 # ---------- Public Routes ----------
 @api_router.get("/")
 async def root():
@@ -227,6 +266,7 @@ async def auth_me(user: dict = Depends(get_current_admin)):
 async def submit_enquiry(payload: EnquiryCreate):
     doc = lead_doc("enquiry", payload.model_dump())
     await db.leads.insert_one(doc)
+    fire_sheet_forward("enquiry", doc)
     return {"success": True, "id": doc["id"]}
 
 
@@ -234,6 +274,7 @@ async def submit_enquiry(payload: EnquiryCreate):
 async def submit_dealer(payload: DealerCreate):
     doc = lead_doc("dealer", payload.model_dump())
     await db.leads.insert_one(doc)
+    fire_sheet_forward("dealer", doc)
     return {"success": True, "id": doc["id"]}
 
 
