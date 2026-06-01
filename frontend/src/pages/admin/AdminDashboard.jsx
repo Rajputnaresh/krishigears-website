@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import {
@@ -29,6 +29,10 @@ export default function AdminDashboard() {
   const [user, setUser] = useState(null);
   const [stats, setStats] = useState(null);
 
+  const refreshStats = useCallback(() => {
+    apiClient.get("/admin/stats").then((res) => setStats(res.data)).catch(() => {});
+  }, []);
+
   useEffect(() => {
     const token = localStorage.getItem("kg_admin_token");
     if (!token) { navigate("/admin/login"); return; }
@@ -39,11 +43,7 @@ export default function AdminDashboard() {
         navigate("/admin/login");
       });
     refreshStats();
-  }, [navigate]);
-
-  const refreshStats = () => {
-    apiClient.get("/admin/stats").then((res) => setStats(res.data)).catch(() => {});
-  };
+  }, [navigate, refreshStats]);
 
   const logout = () => {
     localStorage.removeItem("kg_admin_token");
@@ -126,15 +126,15 @@ function LeadsPanel({ onChange }) {
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(null);
 
-  const fetchLeads = (t = type) => {
+  const fetchLeads = useCallback((t = type) => {
     setLoading(true);
     apiClient.get(`/admin/leads?type=${t}`)
       .then((res) => setLeads(res.data))
       .catch((err) => toast.error(formatApiError(err)))
       .finally(() => setLoading(false));
-  };
+  }, [type]);
 
-  useEffect(() => { fetchLeads(type); }, [type]);
+  useEffect(() => { fetchLeads(type); }, [type, fetchLeads]);
 
   const remove = async (id) => {
     if (!window.confirm("Delete this lead?")) return;
@@ -223,15 +223,15 @@ function BlogPanel({ onChange }) {
   const [editing, setEditing] = useState(null);
   const [open, setOpen] = useState(false);
 
-  const fetchPosts = () => {
+  const fetchPosts = useCallback(() => {
     setLoading(true);
     apiClient.get("/admin/blog")
       .then((res) => setPosts(res.data))
       .catch((err) => toast.error(formatApiError(err)))
       .finally(() => setLoading(false));
-  };
+  }, []);
 
-  useEffect(() => { fetchPosts(); }, []);
+  useEffect(() => { fetchPosts(); }, [fetchPosts]);
 
   const remove = async (slug) => {
     if (!window.confirm("Delete this post?")) return;

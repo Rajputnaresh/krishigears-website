@@ -3,7 +3,7 @@
 Mirrors /app/frontend/src/data/catalog.js — products and categories.
 Used to populate MongoDB on first startup.
 """
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 RKA = "https://royalkissanagro.com/wp-content/uploads"
 
@@ -45,12 +45,12 @@ WARRANTY_6 = "6 months manufacturer warranty + KrishiGears after-sales service n
 WARRANTY_SPARE = "3 months replacement on manufacturing defects"
 
 
-def _features(extra: List[str] = []) -> List[str]:
-    return _BASE_FEATURES + extra
+def _features(extra: Optional[List[str]] = None) -> List[str]:
+    return _BASE_FEATURES + (extra or [])
 
 
-def _benefits(extra: List[str] = []) -> List[str]:
-    return _BASE_BENEFITS + extra
+def _benefits(extra: Optional[List[str]] = None) -> List[str]:
+    return _BASE_BENEFITS + (extra or [])
 
 
 PRODUCTS: List[Dict[str, Any]] = [

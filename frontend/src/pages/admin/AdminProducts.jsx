@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { toast } from "sonner";
 import {
   Plus, Pencil, Trash2, Eye, EyeOff, Search, X, Star,
@@ -23,15 +23,15 @@ export default function AdminProducts() {
   const [editing, setEditing] = useState(null);
   const [open, setOpen] = useState(false);
 
-  const fetchProducts = () => {
+  const fetchProducts = useCallback(() => {
     setLoading(true);
     apiClient.get("/admin/products")
       .then((res) => setProducts(res.data))
       .catch((err) => toast.error(formatApiError(err)))
       .finally(() => setLoading(false));
-  };
+  }, []);
 
-  useEffect(() => { fetchProducts(); }, []);
+  useEffect(() => { fetchProducts(); }, [fetchProducts]);
 
   const toggleActive = async (p) => {
     try {
