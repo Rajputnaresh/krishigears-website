@@ -20,8 +20,18 @@ export default function Home() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
-    apiClient.get("/products")
-      .then((res) => setFeaturedProducts((res.data || []).slice(0, 6)))
+    // Prefer featured products; if fewer than 6, fill with the rest by sort order.
+    Promise.all([
+      apiClient.get("/products?featured=true"),
+      apiClient.get("/products"),
+    ])
+      .then(([feat, all]) => {
+        const featured = feat.data || [];
+        const allList = all.data || [];
+        const ids = new Set(featured.map((p) => p.slug));
+        const fillers = allList.filter((p) => !ids.has(p.slug));
+        setFeaturedProducts([...featured, ...fillers].slice(0, 6));
+      })
       .catch(() => setFeaturedProducts([]));
   }, []);
 
