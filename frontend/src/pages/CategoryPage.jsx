@@ -75,28 +75,36 @@ export default function CategoryPage() {
           </div>
         </div>
 
-        {items === null ? (
-          <div className="text-center text-zinc-500 py-12">Loading models…</div>
-        ) : items.length > 0 ? (
-          <>
-            <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models ({items.length})</span></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {items.map((p) => (
-                <ProductCard key={p.slug} product={p} />
-              ))}
-            </div>
-          </>
-        ) : (
-          <div className="border border-zinc-800 bg-[#0F0F0F] p-10 text-center">
-            <p className="text-zinc-300">Multiple models available in this category. Please request a quote and we'll share the full catalogue with prices.</p>
-            <div className="mt-6">
-              <EnquiryDialog product={category.name} trigger={
-                <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
-              } />
-            </div>
-          </div>
-        )}
+        <ModelsSection items={items} category={category} />
       </div>
     </div>
+  );
+}
+
+function ModelsSection({ items, category }) {
+  if (items === null) {
+    return <div className="text-center text-zinc-500 py-12">Loading models…</div>;
+  }
+  if (items.length === 0) {
+    return (
+      <div className="border border-zinc-800 bg-[#0F0F0F] p-10 text-center">
+        <p className="text-zinc-300">Multiple models available in this category. Please request a quote and we'll share the full catalogue with prices.</p>
+        <div className="mt-6">
+          <EnquiryDialog product={category.name} trigger={
+            <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
+          } />
+        </div>
+      </div>
+    );
+  }
+  return (
+    <>
+      <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models ({items.length})</span></h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {items.map((p) => (
+          <ProductCard key={p.slug} product={p} />
+        ))}
+      </div>
+    </>
   );
 }

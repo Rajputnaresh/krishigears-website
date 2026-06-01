@@ -113,27 +113,29 @@ export default function AdminProducts() {
         </Select>
       </div>
 
-      {loading ? (
-        <div className="text-center text-zinc-500 py-12">Loading products…</div>
-      ) : filtered.length === 0 ? (
-        <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No products match your filters.</div>
-      ) : (
-        <div className="border border-zinc-800 divide-y divide-zinc-800">
-          {filtered.map((p) => (
-            <ProductRow
-              key={p.slug}
-              product={p}
-              onEdit={() => openEdit(p)}
-              onDelete={() => remove(p)}
-              onToggleActive={() => toggleActive(p)}
-              onToggleFeatured={() => toggleFeatured(p)}
-              onMove={(d) => move(p, d)}
-            />
-          ))}
-        </div>
-      )}
+      <ProductsList loading={loading} filtered={filtered} onEdit={openEdit} onDelete={remove} onToggleActive={toggleActive} onToggleFeatured={toggleFeatured} onMove={move} />
 
       <ProductEditor open={open} setOpen={setOpen} product={editing} onSaved={fetchProducts}/>
+    </div>
+  );
+}
+
+function ProductsList({ loading, filtered, onEdit, onDelete, onToggleActive, onToggleFeatured, onMove }) {
+  if (loading) return <div className="text-center text-zinc-500 py-12">Loading products…</div>;
+  if (filtered.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No products match your filters.</div>;
+  return (
+    <div className="border border-zinc-800 divide-y divide-zinc-800">
+      {filtered.map((p) => (
+        <ProductRow
+          key={p.slug}
+          product={p}
+          onEdit={() => onEdit(p)}
+          onDelete={() => onDelete(p)}
+          onToggleActive={() => onToggleActive(p)}
+          onToggleFeatured={() => onToggleFeatured(p)}
+          onMove={(d) => onMove(p, d)}
+        />
+      ))}
     </div>
   );
 }

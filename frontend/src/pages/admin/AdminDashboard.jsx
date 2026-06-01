@@ -171,47 +171,49 @@ function LeadsPanel({ onChange }) {
         </button>
       </div>
 
-      {loading ? (
-        <div className="text-center text-zinc-500 py-12">Loading…</div>
-      ) : leads.length === 0 ? (
-        <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No leads in this category yet.</div>
-      ) : (
-        <div className="border border-zinc-800 overflow-hidden">
-          {leads.map((lead) => {
-            const isOpen = expanded === lead.id;
-            return (
-              <div key={lead.id} className="border-b border-zinc-800 last:border-b-0">
-                <div className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-zinc-950 transition">
-                  <div className="col-span-2 text-[10px] tracking-[0.2em] uppercase text-lime-500 font-bold">{lead.type}</div>
-                  <div className="col-span-4 font-bold text-white">{lead.data?.name || lead.data?.full_name || "—"}</div>
-                  <div className="col-span-3 text-sm text-zinc-300">{lead.data?.phone || "—"}</div>
-                  <div className="col-span-2 text-xs text-zinc-500">{new Date(lead.created_at).toLocaleDateString()}</div>
-                  <div className="col-span-1 flex justify-end gap-2">
-                    <button data-testid={`lead-expand-${lead.id}`} onClick={() => setExpanded(isOpen ? null : lead.id)} className="text-zinc-400 hover:text-lime-500">
-                      {isOpen ? <ChevronUp className="h-4 w-4"/> : <ChevronDown className="h-4 w-4"/>}
-                    </button>
-                    <button data-testid={`lead-delete-${lead.id}`} onClick={() => remove(lead.id)} className="text-zinc-400 hover:text-red-500">
-                      <Trash2 className="h-4 w-4"/>
-                    </button>
-                  </div>
-                </div>
-                {isOpen && (
-                  <div className="px-4 pb-4 bg-zinc-950">
-                    <div className="grid sm:grid-cols-2 gap-3 text-sm">
-                      {Object.entries(lead.data || {}).map(([k, v]) => (
-                        <div key={k} className="border border-zinc-800 p-3 bg-black">
-                          <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{k.replace(/_/g, " ")}</div>
-                          <div className="text-zinc-200 break-words mt-1">{v || <span className="text-zinc-600">—</span>}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+      <LeadsList loading={loading} leads={leads} expanded={expanded} setExpanded={setExpanded} onRemove={remove} />
+    </div>
+  );
+}
+
+function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
+  if (loading) return <div className="text-center text-zinc-500 py-12">Loading…</div>;
+  if (leads.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No leads in this category yet.</div>;
+  return (
+    <div className="border border-zinc-800 overflow-hidden">
+      {leads.map((lead) => {
+        const isOpen = expanded === lead.id;
+        return (
+          <div key={lead.id} className="border-b border-zinc-800 last:border-b-0">
+            <div className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-zinc-950 transition">
+              <div className="col-span-2 text-[10px] tracking-[0.2em] uppercase text-lime-500 font-bold">{lead.type}</div>
+              <div className="col-span-4 font-bold text-white">{lead.data?.name || lead.data?.full_name || "—"}</div>
+              <div className="col-span-3 text-sm text-zinc-300">{lead.data?.phone || "—"}</div>
+              <div className="col-span-2 text-xs text-zinc-500">{new Date(lead.created_at).toLocaleDateString()}</div>
+              <div className="col-span-1 flex justify-end gap-2">
+                <button data-testid={`lead-expand-${lead.id}`} onClick={() => setExpanded(isOpen ? null : lead.id)} className="text-zinc-400 hover:text-lime-500">
+                  {isOpen ? <ChevronUp className="h-4 w-4"/> : <ChevronDown className="h-4 w-4"/>}
+                </button>
+                <button data-testid={`lead-delete-${lead.id}`} onClick={() => onRemove(lead.id)} className="text-zinc-400 hover:text-red-500">
+                  <Trash2 className="h-4 w-4"/>
+                </button>
               </div>
-            );
-          })}
-        </div>
-      )}
+            </div>
+            {isOpen && (
+              <div className="px-4 pb-4 bg-zinc-950">
+                <div className="grid sm:grid-cols-2 gap-3 text-sm">
+                  {Object.entries(lead.data || {}).map(([k, v]) => (
+                    <div key={k} className="border border-zinc-800 p-3 bg-black">
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{k.replace(/_/g, " ")}</div>
+                      <div className="text-zinc-200 break-words mt-1">{v || <span className="text-zinc-600">—</span>}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -255,38 +257,40 @@ function BlogPanel({ onChange }) {
         </button>
       </div>
 
-      {loading ? (
-        <div className="text-center text-zinc-500 py-12">Loading…</div>
-      ) : posts.length === 0 ? (
-        <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No blog posts yet. Click "New Post" to create your first.</div>
-      ) : (
-        <div className="border border-zinc-800">
-          {posts.map((p) => (
-            <div key={p.slug} className="grid grid-cols-12 gap-4 p-4 items-center border-b border-zinc-800 last:border-b-0">
-              <div className="col-span-1">
-                {p.cover_image && <img src={p.cover_image} alt="" className="h-12 w-12 object-cover border border-zinc-800"/>}
-              </div>
-              <div className="col-span-6">
-                <div className="font-bold">{p.title}</div>
-                <div className="text-xs text-zinc-500 mt-1">/blog/{p.slug}</div>
-              </div>
-              <div className="col-span-2">
-                <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-zinc-500 bg-zinc-900"}`}>
-                  {p.published ? "PUBLISHED" : "DRAFT"}
-                </span>
-              </div>
-              <div className="col-span-2 text-xs text-zinc-500">{new Date(p.created_at).toLocaleDateString()}</div>
-              <div className="col-span-1 flex justify-end gap-2">
-                <a href={`/blog/${p.slug}`} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-lime-500"><Eye className="h-4 w-4"/></a>
-                <button onClick={() => openEdit(p)} data-testid={`blog-edit-${p.slug}`} className="text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
-                <button onClick={() => remove(p.slug)} data-testid={`blog-delete-${p.slug}`} className="text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+      <BlogList loading={loading} posts={posts} onEdit={openEdit} onDelete={remove} />
 
       <BlogEditor open={open} setOpen={setOpen} post={editing} onSaved={() => { fetchPosts(); onChange?.(); }}/>
+    </div>
+  );
+}
+
+function BlogList({ loading, posts, onEdit, onDelete }) {
+  if (loading) return <div className="text-center text-zinc-500 py-12">Loading…</div>;
+  if (posts.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No blog posts yet. Click "New Post" to create your first.</div>;
+  return (
+    <div className="border border-zinc-800">
+      {posts.map((p) => (
+        <div key={p.slug} className="grid grid-cols-12 gap-4 p-4 items-center border-b border-zinc-800 last:border-b-0">
+          <div className="col-span-1">
+            {p.cover_image && <img src={p.cover_image} alt="" className="h-12 w-12 object-cover border border-zinc-800"/>}
+          </div>
+          <div className="col-span-6">
+            <div className="font-bold">{p.title}</div>
+            <div className="text-xs text-zinc-500 mt-1">/blog/{p.slug}</div>
+          </div>
+          <div className="col-span-2">
+            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-zinc-500 bg-zinc-900"}`}>
+              {p.published ? "PUBLISHED" : "DRAFT"}
+            </span>
+          </div>
+          <div className="col-span-2 text-xs text-zinc-500">{new Date(p.created_at).toLocaleDateString()}</div>
+          <div className="col-span-1 flex justify-end gap-2">
+            <a href={`/blog/${p.slug}`} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-lime-500"><Eye className="h-4 w-4"/></a>
+            <button onClick={() => onEdit(p)} data-testid={`blog-edit-${p.slug}`} className="text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
+            <button onClick={() => onDelete(p.slug)} data-testid={`blog-delete-${p.slug}`} className="text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
