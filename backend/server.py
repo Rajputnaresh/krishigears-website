@@ -204,10 +204,15 @@ def lead_doc(lead_type: str, payload: dict) -> dict:
 
 
 # ---------- Google Sheets webhook forwarder ----------
-SHEET_WEBHOOKS = {
-    "enquiry": os.environ.get("GSHEETS_ENQUIRY_URL", "").strip(),
-    "dealer": os.environ.get("GSHEETS_DEALER_URL", "").strip(),
-}
+async def get_sheet_url(lead_type: str) -> str:
+    """Return the configured webhook URL for a lead type.
+    DB settings override environment variables so admins can update via UI.
+    """
+    setting = await db.settings.find_one({"key": f"gsheets_{lead_type}_url"})
+    if setting and setting.get("value"):
+        return setting["value"].strip()
+    env_key = "GSHEETS_ENQUIRY_URL" if lead_type == "enquiry" else "GSHEETS_DEALER_URL"
+    return os.environ.get(env_key, "").strip()
 
 
 async def forward_to_sheet(lead_type: str, doc: dict) -> None:
@@ -215,7 +220,7 @@ async def forward_to_sheet(lead_type: str, doc: dict) -> None:
     Silently skips when no URL is configured. Failures are logged but never
     affect the user's form-submission flow.
     """
-    url = SHEET_WEBHOOKS.get(lead_type)
+    url = await get_sheet_url(lead_type)
     if not url:
         return
     payload = {
@@ -235,8 +240,6 @@ async def forward_to_sheet(lead_type: str, doc: dict) -> None:
 
 def fire_sheet_forward(lead_type: str, doc: dict) -> None:
     """Schedule the webhook call without blocking the request."""
-    if not SHEET_WEBHOOKS.get(lead_type):
-        return
     asyncio.create_task(forward_to_sheet(lead_type, doc))
 
 
@@ -384,6 +387,65 @@ async def admin_stats(user: dict = Depends(get_current_admin)):
         "contact": contact,
         "blog_posts": posts,
     }
+
+
+# ---------- Sheets Integration settings ----------
+class SheetSettings(BaseModel):
+    enquiry_url: str = ""
+    dealer_url: str = ""
+
+
+@api_router.get("/admin/integrations/sheets")
+async def get_sheet_settings(user: dict = Depends(get_current_admin)):
+    enq = await get_sheet_url("enquiry")
+    deal = await get_sheet_url("dealer")
+    return {"enquiry_url": enq, "dealer_url": deal}
+
+
+@api_router.put("/admin/integrations/sheets")
+async def update_sheet_settings(payload: SheetSettings, user: dict = Depends(get_current_admin)):
+    await db.settings.update_one(
+        {"key": "gsheets_enquiry_url"},
+        {"$set": {"key": "gsheets_enquiry_url", "value": payload.enquiry_url.strip(), "updated_at": now_iso()}},
+        upsert=True,
+    )
+    await db.settings.update_one(
+        {"key": "gsheets_dealer_url"},
+        {"$set": {"key": "gsheets_dealer_url", "value": payload.dealer_url.strip(), "updated_at": now_iso()}},
+        upsert=True,
+    )
+    return {"success": True, "enquiry_url": payload.enquiry_url.strip(), "dealer_url": payload.dealer_url.strip()}
+
+
+@api_router.post("/admin/integrations/sheets/test/{lead_type}")
+async def test_sheet_webhook(lead_type: str, user: dict = Depends(get_current_admin)):
+    if lead_type not in ("enquiry", "dealer"):
+        raise HTTPException(status_code=400, detail="lead_type must be 'enquiry' or 'dealer'")
+    url = await get_sheet_url(lead_type)
+    if not url:
+        raise HTTPException(status_code=400, detail="No URL configured for this lead type")
+    test_doc = {
+        "id": f"test-{uuid.uuid4().hex[:8]}",
+        "type": lead_type,
+        "created_at": now_iso(),
+        "data": {
+            "name": "KrishiGears Test",
+            "full_name": "KrishiGears Test",
+            "phone": "9999999999",
+            "email": "test@krishigears.in",
+            "product": "Power Tiller",
+            "city": "Jaipur",
+            "state": "Rajasthan",
+            "message": "This is a test row sent from the KrishiGears Admin panel.",
+        },
+    }
+    payload = {"id": test_doc["id"], "type": test_doc["type"], "created_at": test_doc["created_at"], **test_doc["data"]}
+    try:
+        async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
+            resp = await client.post(url, json=payload)
+            return {"success": resp.status_code < 400, "status_code": resp.status_code, "body": resp.text[:300]}
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(status_code=502, detail=f"Webhook call failed: {e}")
 
 
 app.include_router(api_router)

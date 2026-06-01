@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
+import SheetsIntegration from "@/pages/admin/SheetsIntegration";
 
 const LEAD_TYPES = [
   { value: "all", label: "All Leads", icon: Inbox },
@@ -86,6 +87,7 @@ export default function AdminDashboard() {
           <TabsList className="bg-[#0F0F0F] border border-zinc-800">
             <TabsTrigger data-testid="tab-leads" value="leads">Leads</TabsTrigger>
             <TabsTrigger data-testid="tab-blog" value="blog">Blog Posts</TabsTrigger>
+            <TabsTrigger data-testid="tab-sheets" value="sheets">Sheets Integration</TabsTrigger>
           </TabsList>
 
           <TabsContent value="leads" className="mt-6">
@@ -93,6 +95,9 @@ export default function AdminDashboard() {
           </TabsContent>
           <TabsContent value="blog" className="mt-6">
             <BlogPanel onChange={refreshStats}/>
+          </TabsContent>
+          <TabsContent value="sheets" className="mt-6">
+            <SheetsIntegration />
           </TabsContent>
         </Tabs>
       </main>
