@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MessageCircle } from "lucide-react";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -94,6 +94,16 @@ export default function Header() {
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a
+            href={`https://wa.me/${COMPANY.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
+            data-testid="header-whatsapp-link"
+            title="WhatsApp Chat"
+            className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white transition"
+          >
+            <MessageCircle className="h-4 w-4 fill-white" />
+          </a>
+          <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
             data-testid="header-call-link"
             className="text-sm font-medium text-zinc-300 hover:text-lime-500 flex items-center gap-2"
@@ -153,6 +163,15 @@ export default function Header() {
                 className="mt-2 px-5 py-3 border border-zinc-700 text-center rounded-md text-zinc-200"
               >
                 <Phone className="h-4 w-4 inline mr-2" /> {COMPANY.phone}
+              </a>
+              <a
+                href={`https://wa.me/${COMPANY.whatsapp}`}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="m-nav-whatsapp"
+                className="mt-2 px-5 py-3 bg-[#25D366] hover:bg-[#1ebe57] text-white text-center rounded-md inline-flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-4 w-4 fill-white" /> WhatsApp Us
               </a>
             </nav>
           </SheetContent>

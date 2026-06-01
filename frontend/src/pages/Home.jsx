@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, PRODUCTS } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import ProductCard from "@/components/ProductCard";
 import { useState } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
@@ -166,24 +167,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {PRODUCTS.slice(0, 6).map((p) => (
-              <Link
-                key={p.slug}
-                to={`/products/${p.slug}`}
-                data-testid={`featured-prod-${p.slug}`}
-                className="kg-card overflow-hidden flex flex-col"
-              >
-                <div className="aspect-[4/3] bg-zinc-900 overflow-hidden">
-                  <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover hover:scale-105 transition duration-700" />
-                </div>
-                <div className="p-5">
-                  <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">{CATEGORIES.find(c => c.slug === p.category)?.name}</div>
-                  <h3 className="font-display font-bold text-lg mt-2">{p.name}</h3>
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-zinc-500 text-sm">Request Price</span>
-                    <ArrowRight className="h-4 w-4 text-lime-500"/>
-                  </div>
-                </div>
-              </Link>
+              <ProductCard key={p.slug} product={p} />
             ))}
           </div>
         </div>

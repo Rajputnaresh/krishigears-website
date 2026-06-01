@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { CATEGORIES, PRODUCTS, COMPANY } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import ProductCard from "@/components/ProductCard";
 
 export default function CategoryPage() {
   const { slug } = useParams();
@@ -63,18 +64,7 @@ export default function CategoryPage() {
             <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {items.map((p) => (
-                <Link key={p.slug} to={`/products/${p.slug}`} data-testid={`cat-prod-${p.slug}`} className="kg-card overflow-hidden">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover hover:scale-105 transition duration-700" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display font-bold text-lg">{p.name}</h3>
-                    <div className="mt-3 flex items-center justify-between">
-                      <span className="text-xs text-zinc-500 uppercase tracking-wider">View details</span>
-                      <ArrowRight className="h-4 w-4 text-lime-500" />
-                    </div>
-                  </div>
-                </Link>
+                <ProductCard key={p.slug} product={p} />
               ))}
             </div>
           </>
