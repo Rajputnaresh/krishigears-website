@@ -3,10 +3,10 @@ import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
   Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight
 } from "lucide-react";
-import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, PRODUCTS } from "@/data/catalog";
+import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,13 @@ const ICONS = { "shield-check": ShieldCheck, truck: Truck, "badge-check": BadgeC
 
 export default function Home() {
   const featured = CATEGORIES.filter((c) => c.featured);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    apiClient.get("/products")
+      .then((res) => setFeaturedProducts((res.data || []).slice(0, 6)))
+      .catch(() => setFeaturedProducts([]));
+  }, []);
 
   return (
     <div className="bg-background text-foreground">
@@ -166,7 +173,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {PRODUCTS.slice(0, 6).map((p) => (
+            {featuredProducts.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}
           </div>

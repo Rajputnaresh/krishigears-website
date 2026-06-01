@@ -1,22 +1,40 @@
-import { Link, useParams, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import { CATEGORIES, PRODUCTS, COMPANY } from "@/data/catalog";
+import { CATEGORIES, COMPANY } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { apiClient } from "@/lib/api";
 
 export default function CategoryPage() {
   const { slug } = useParams();
+  const [items, setItems] = useState(null);
   const category = CATEGORIES.find((c) => c.slug === slug);
-  if (!category) return <Navigate to="/products" replace />;
 
-  const items = PRODUCTS.filter((p) => p.category === slug);
+  useEffect(() => {
+    if (!category) return;
+    setItems(null);
+    apiClient.get(`/products?category=${slug}`)
+      .then((res) => setItems(res.data))
+      .catch(() => setItems([]));
+  }, [slug, category]);
+
+  if (!category) {
+    return (
+      <div className="kg-section text-center">
+        <h1 className="kg-h2">Category not found</h1>
+        <Link to="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ChevronRight className="h-4 w-4"/> All products</Link>
+      </div>
+    );
+  }
+
   const Icon = category.icon;
   const waMsg = encodeURIComponent(`Hello KrishiGears, I am interested in ${category.name}. Please share details.`);
 
   return (
     <div data-testid="category-page" className="kg-section">
       <div className="max-w-[1400px] mx-auto">
-        {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs text-zinc-500 mb-8">
           <Link to="/" className="hover:text-lime-500">Home</Link>
           <ChevronRight className="h-3 w-3" />
@@ -25,7 +43,6 @@ export default function CategoryPage() {
           <span className="text-lime-500">{category.name}</span>
         </div>
 
-        {/* Header */}
         <div className="grid lg:grid-cols-12 gap-10 items-center mb-12">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-3 mb-4">
@@ -45,23 +62,24 @@ export default function CategoryPage() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="cat-whatsapp-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
+                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >
-                WhatsApp Enquiry
+                <WhatsAppIcon className="h-4 w-4"/> WhatsApp Enquiry
               </a>
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="aspect-[4/3] overflow-hidden border border-zinc-800">
-              <img src={category.image} alt={category.name} className="w-full h-full object-cover" />
+            <div className="aspect-[4/3] overflow-hidden border border-zinc-800 bg-white">
+              <img src={category.image} alt={category.name} className="w-full h-full object-contain p-4" />
             </div>
           </div>
         </div>
 
-        {/* Products */}
-        {items.length > 0 ? (
+        {items === null ? (
+          <div className="text-center text-zinc-500 py-12">Loading models…</div>
+        ) : items.length > 0 ? (
           <>
-            <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models</span></h2>
+            <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models ({items.length})</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {items.map((p) => (
                 <ProductCard key={p.slug} product={p} />

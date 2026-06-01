@@ -14,6 +14,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
 import SheetsIntegration from "@/pages/admin/SheetsIntegration";
+import AdminProducts from "@/pages/admin/AdminProducts";
 
 const LEAD_TYPES = [
   { value: "all", label: "All Leads", icon: Inbox },
@@ -78,7 +79,7 @@ export default function AdminDashboard() {
             <StatCard label="Enquiries" value={stats.enquiry} />
             <StatCard label="Dealer Apps" value={stats.dealer} />
             <StatCard label="Bulk Orders" value={stats.bulk_order} />
-            <StatCard label="Contact" value={stats.contact} />
+            <StatCard label="Active Products" value={stats.products_active} />
             <StatCard label="Blog Posts" value={stats.blog_posts} />
           </div>
         )}
@@ -86,12 +87,16 @@ export default function AdminDashboard() {
         <Tabs defaultValue="leads" className="w-full">
           <TabsList className="bg-[#0F0F0F] border border-zinc-800">
             <TabsTrigger data-testid="tab-leads" value="leads">Leads</TabsTrigger>
+            <TabsTrigger data-testid="tab-products" value="products">Products</TabsTrigger>
             <TabsTrigger data-testid="tab-blog" value="blog">Blog Posts</TabsTrigger>
             <TabsTrigger data-testid="tab-sheets" value="sheets">Sheets Integration</TabsTrigger>
           </TabsList>
 
           <TabsContent value="leads" className="mt-6">
             <LeadsPanel onChange={refreshStats}/>
+          </TabsContent>
+          <TabsContent value="products" className="mt-6">
+            <AdminProducts/>
           </TabsContent>
           <TabsContent value="blog" className="mt-6">
             <BlogPanel onChange={refreshStats}/>

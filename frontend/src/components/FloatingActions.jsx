@@ -1,12 +1,12 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { COMPANY } from "@/data/catalog";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function FloatingActions() {
   const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hello KrishiGears, I am interested in your products.")}`;
 
   return (
     <>
-      {/* WhatsApp — always visible */}
       <a
         href={waLink}
         target="_blank"
@@ -15,9 +15,8 @@ export default function FloatingActions() {
         className="fixed bottom-6 right-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition animate-pulse-lime"
         aria-label="WhatsApp Chat"
       >
-        <MessageCircle className="h-6 w-6 fill-white" />
+        <WhatsAppIcon className="h-7 w-7" />
       </a>
-      {/* Sticky call button — mobile only */}
       <a
         href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
         data-testid="floating-call-btn"

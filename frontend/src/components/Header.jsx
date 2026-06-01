@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -101,7 +102,7 @@ export default function Header() {
             title="WhatsApp Chat"
             className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white transition"
           >
-            <MessageCircle className="h-4 w-4 fill-white" />
+            <WhatsAppIcon className="h-4 w-4" />
           </a>
           <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
@@ -171,7 +172,7 @@ export default function Header() {
                 data-testid="m-nav-whatsapp"
                 className="mt-2 px-5 py-3 bg-[#25D366] hover:bg-[#1ebe57] text-white text-center rounded-md inline-flex items-center justify-center gap-2"
               >
-                <MessageCircle className="h-4 w-4 fill-white" /> WhatsApp Us
+                <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
               </a>
             </nav>
           </SheetContent>

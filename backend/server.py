@@ -12,7 +12,7 @@ import jwt
 import asyncio
 import httpx
 from datetime import datetime, timezone, timedelta
-from typing import List, Optional, Literal
+from typing import List, Optional, Literal, Dict, Any
 
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, Request, Query
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -20,6 +20,8 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from contextlib import asynccontextmanager
+
+from seed_data import PRODUCTS as SEED_PRODUCTS
 
 
 # MongoDB connection
@@ -99,12 +101,45 @@ async def seed_admin():
         logger.info("Updated admin password for %s", admin_email)
 
 
+async def seed_products():
+    count = await db.products.count_documents({})
+    if count > 0:
+        return
+    docs = []
+    for idx, p in enumerate(SEED_PRODUCTS):
+        docs.append({
+            "id": str(uuid.uuid4()),
+            "slug": p["slug"],
+            "category": p["category"],
+            "name": p["name"],
+            "model": p.get("model", ""),
+            "badges": p.get("badges", []),
+            "images": p.get("images", []),
+            "specs": p.get("specs", {}),
+            "features": p.get("features", []),
+            "applications": p.get("applications", []),
+            "benefits": p.get("benefits", []),
+            "warranty": p.get("warranty", ""),
+            "active": True,
+            "featured": False,
+            "sort_order": idx,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "updated_at": datetime.now(timezone.utc).isoformat(),
+        })
+    if docs:
+        await db.products.insert_many(docs)
+        logger.info("Seeded %d products", len(docs))
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await db.users.create_index("email", unique=True)
     await db.leads.create_index([("created_at", -1)])
     await db.blog_posts.create_index("slug", unique=True)
+    await db.products.create_index("slug", unique=True)
+    await db.products.create_index([("sort_order", 1)])
     await seed_admin()
+    await seed_products()
     yield
     client.close()
 
@@ -186,6 +221,39 @@ class BlogPostUpdate(BaseModel):
     cover_image: Optional[str] = None
     tags: Optional[List[str]] = None
     published: Optional[bool] = None
+
+
+class ProductCreate(BaseModel):
+    slug: str
+    category: str
+    name: str
+    model: str = ""
+    badges: List[str] = []
+    images: List[str] = []
+    specs: Dict[str, str] = {}
+    features: List[str] = []
+    applications: List[str] = []
+    benefits: List[str] = []
+    warranty: str = ""
+    active: bool = True
+    featured: bool = False
+    sort_order: int = 999
+
+
+class ProductUpdate(BaseModel):
+    category: Optional[str] = None
+    name: Optional[str] = None
+    model: Optional[str] = None
+    badges: Optional[List[str]] = None
+    images: Optional[List[str]] = None
+    specs: Optional[Dict[str, str]] = None
+    features: Optional[List[str]] = None
+    applications: Optional[List[str]] = None
+    benefits: Optional[List[str]] = None
+    warranty: Optional[str] = None
+    active: Optional[bool] = None
+    featured: Optional[bool] = None
+    sort_order: Optional[int] = None
 
 
 # ---------- Helpers ----------
@@ -309,6 +377,26 @@ async def get_blog_post(slug: str):
     return post
 
 
+# ---------- Public Products ----------
+@api_router.get("/products")
+async def list_products(category: Optional[str] = Query(default=None), featured: Optional[bool] = Query(default=None)):
+    query: Dict[str, Any] = {"active": True}
+    if category:
+        query["category"] = category
+    if featured is not None:
+        query["featured"] = featured
+    cursor = db.products.find(query, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(500)
+
+
+@api_router.get("/products/{slug}")
+async def get_product(slug: str):
+    p = await db.products.find_one({"slug": slug, "active": True}, {"_id": 0})
+    if not p:
+        raise HTTPException(status_code=404, detail="Product not found")
+    return p
+
+
 # ---------- Admin Routes ----------
 @api_router.get("/admin/leads")
 async def admin_list_leads(
@@ -379,6 +467,8 @@ async def admin_stats(user: dict = Depends(get_current_admin)):
     bulk = await db.leads.count_documents({"type": "bulk-order"})
     contact = await db.leads.count_documents({"type": "contact"})
     posts = await db.blog_posts.count_documents({})
+    products_total = await db.products.count_documents({})
+    products_active = await db.products.count_documents({"active": True})
     return {
         "total_leads": total,
         "enquiry": enquiry,
@@ -386,7 +476,52 @@ async def admin_stats(user: dict = Depends(get_current_admin)):
         "bulk_order": bulk,
         "contact": contact,
         "blog_posts": posts,
+        "products_total": products_total,
+        "products_active": products_active,
     }
+
+
+# ---------- Admin Products ----------
+@api_router.get("/admin/products")
+async def admin_list_products(user: dict = Depends(get_current_admin)):
+    cursor = db.products.find({}, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(1000)
+
+
+@api_router.post("/admin/products")
+async def admin_create_product(payload: ProductCreate, user: dict = Depends(get_current_admin)):
+    existing = await db.products.find_one({"slug": payload.slug})
+    if existing:
+        raise HTTPException(status_code=409, detail="Slug already exists")
+    doc = {
+        "id": str(uuid.uuid4()),
+        **payload.model_dump(),
+        "created_at": now_iso(),
+        "updated_at": now_iso(),
+    }
+    await db.products.insert_one(doc)
+    doc.pop("_id", None)
+    return doc
+
+
+@api_router.put("/admin/products/{slug}")
+async def admin_update_product(slug: str, payload: ProductUpdate, user: dict = Depends(get_current_admin)):
+    updates = {k: v for k, v in payload.model_dump().items() if v is not None}
+    if not updates:
+        raise HTTPException(status_code=400, detail="No fields to update")
+    updates["updated_at"] = now_iso()
+    result = await db.products.update_one({"slug": slug}, {"$set": updates})
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Product not found")
+    return await db.products.find_one({"slug": slug}, {"_id": 0})
+
+
+@api_router.delete("/admin/products/{slug}")
+async def admin_delete_product(slug: str, user: dict = Depends(get_current_admin)):
+    result = await db.products.delete_one({"slug": slug})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Product not found")
+    return {"success": True}
 
 
 # ---------- Sheets Integration settings ----------

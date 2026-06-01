@@ -1,17 +1,38 @@
-import { useState } from "react";
-import { Link, useParams, Navigate } from "react-router-dom";
-import { Check, ChevronRight, MessageCircle, ShieldCheck } from "lucide-react";
-import { CATEGORIES, PRODUCTS, COMPANY } from "@/data/catalog";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Check, ChevronRight, ShieldCheck } from "lucide-react";
+import { CATEGORIES, COMPANY } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { apiClient } from "@/lib/api";
 
 export default function ProductDetail() {
   const { slug } = useParams();
   const [active, setActive] = useState(0);
-  const product = PRODUCTS.find((p) => p.slug === slug);
-  if (!product) return <Navigate to="/products" replace />;
+  const [product, setProduct] = useState(null);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    setProduct(null);
+    setNotFound(false);
+    setActive(0);
+    apiClient.get(`/products/${slug}`)
+      .then((res) => setProduct(res.data))
+      .catch(() => setNotFound(true));
+  }, [slug]);
+
+  if (notFound) {
+    return (
+      <div className="kg-section text-center">
+        <h1 className="kg-h2">Product not found</h1>
+        <Link to="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ChevronRight className="h-4 w-4"/> All products</Link>
+      </div>
+    );
+  }
+  if (!product) return <div className="kg-section text-center text-zinc-500">Loading product…</div>;
 
   const category = CATEGORIES.find((c) => c.slug === product.category);
-  const waMsg = encodeURIComponent(`Hello KrishiGears, I'm interested in ${product.name}. Please share price & availability.`);
+  const waMsg = encodeURIComponent(`Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""}. Please share price & availability.`);
 
   return (
     <div data-testid="product-detail-page" className="kg-section">
@@ -82,7 +103,7 @@ export default function ProductDetail() {
                 data-testid="product-whatsapp-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >
-                <MessageCircle className="h-4 w-4"/> WhatsApp Enquiry
+                <WhatsAppIcon className="h-4 w-4"/> WhatsApp Enquiry
               </a>
             </div>
 
