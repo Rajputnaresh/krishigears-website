@@ -40,8 +40,8 @@ export default function DealerNetwork() {
               { v: "500+", l: "Active Dealers" },
               { v: "1000+", l: "Pin Codes Served" },
               { v: "48h", l: "Fast Dispatch" },
-            ].map((s, i) => (
-              <div key={i} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
+            ].map((s) => (
+              <div key={s.l} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
                 <div className="font-display font-black text-4xl text-lime-500">{s.v}</div>
                 <div className="text-xs uppercase tracking-[0.2em] text-zinc-400 mt-2">{s.l}</div>
               </div>
@@ -82,10 +82,10 @@ export default function DealerNetwork() {
               { i: ShieldCheck, t: "Authorized Service", d: "Genuine warranty support through our authorized service network." },
               { i: Headphones, t: "Local Support", d: "Regional sales team that speaks your language and understands local farming." },
               { i: MapPin, t: "Last-mile Reach", d: "We serve over 1000+ pin codes including remote rural districts." },
-            ].map((b, i) => {
+            ].map((b) => {
               const I = b.i;
               return (
-                <div key={i} className="kg-card p-7">
+                <div key={b.t} className="kg-card p-7">
                   <I className="h-7 w-7 text-lime-500" />
                   <h3 className="font-display font-bold text-lg mt-4">{b.t}</h3>
                   <p className="text-zinc-400 text-sm mt-2 leading-relaxed">{b.d}</p>

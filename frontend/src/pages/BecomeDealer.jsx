@@ -63,8 +63,8 @@ export default function BecomeDealer() {
               "Priority spare parts supply",
               "Authorized warranty service training",
               "Government tender & subsidy support",
-            ].map((b, i) => (
-              <li key={i} className="flex items-start gap-3 text-zinc-300 text-sm">
+            ].map((b) => (
+              <li key={b} className="flex items-start gap-3 text-zinc-300 text-sm">
                 <CheckCircle2 className="h-5 w-5 text-lime-500 shrink-0 mt-0.5" />{b}
               </li>
             ))}

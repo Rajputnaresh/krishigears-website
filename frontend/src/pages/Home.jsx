@@ -497,7 +497,7 @@ function TestimonialsSection({ reviews }) {
               <p className="text-zinc-300 text-sm leading-relaxed">{t.text}</p>
               <div className="mt-5 flex items-center gap-1">
                 {Array.from({ length: t.rating || 5 }).map((_, j) => (
-                  <Star key={j} className="h-3.5 w-3.5 fill-lime-500 text-lime-500" />
+                  <Star key={`star-${j}`} className="h-3.5 w-3.5 fill-lime-500 text-lime-500" />
                 ))}
               </div>
               <div className="mt-4 pt-4 border-t border-zinc-800">

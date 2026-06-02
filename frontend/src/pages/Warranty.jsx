@@ -41,10 +41,10 @@ export default function Warranty() {
               { i: Clock, t: "Fast Resolution", d: "Warranty queries acknowledged within 24 hours of submission." },
               { i: Headphones, t: "Dedicated Support", d: "Customer care available via phone, WhatsApp and email." },
               { i: Phone, t: "Call Support", d: COMPANY.phone, link: `tel:${COMPANY.phone.replace(/\s+/g, "")}` },
-            ].map((b, i) => {
+            ].map((b) => {
               const I = b.i;
               return (
-                <div key={i} className="kg-card p-7">
+                <div key={b.t} className="kg-card p-7">
                   <I className="h-7 w-7 text-lime-500" />
                   <h3 className="font-display font-bold text-lg mt-4">{b.t}</h3>
                   <p className="text-zinc-400 text-sm mt-2 leading-relaxed">{b.d}</p>
@@ -62,7 +62,7 @@ export default function Warranty() {
           <h2 className="kg-h2 mt-3">Common <span className="text-lime-500">questions.</span></h2>
           <Accordion type="single" collapsible className="mt-8">
             {FAQS.map((f, i) => (
-              <AccordionItem key={i} value={`f${i}`} className="border-zinc-800">
+              <AccordionItem key={f.q} value={`f${i}`} className="border-zinc-800">
                 <AccordionTrigger data-testid={`faq-trigger-${i}`} className="text-left text-base hover:text-lime-500 hover:no-underline">
                   {f.q}
                 </AccordionTrigger>

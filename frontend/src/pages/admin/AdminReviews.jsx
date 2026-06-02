@@ -68,7 +68,7 @@ function ReviewList({ loading, reviews, onEdit, onDelete, onToggleActive }) {
               <div className="font-bold">{r.name}</div>
               <div className="text-xs text-zinc-500">{[r.role, r.location].filter(Boolean).join(" · ")}</div>
               <div className="flex gap-0.5 mt-1.5">
-                {Array.from({ length: r.rating || 5 }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-lime-500 text-lime-500"/>)}
+                {Array.from({ length: r.rating || 5 }).map((_, i) => <Star key={`star-${i}`} className="h-3.5 w-3.5 fill-lime-500 text-lime-500"/>)}
               </div>
             </div>
           </div>

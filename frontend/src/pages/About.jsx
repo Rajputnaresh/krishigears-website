@@ -51,10 +51,10 @@ export default function About() {
               { icon: MapPin, t: "PAN India reach", d: "From Punjab to Tamil Nadu, Gujarat to Assam — we deliver where farmers need us." },
               { icon: Tractor, t: "Built for Indian farms", d: "Rugged machines tuned for Indian soil, crops and operating conditions." },
               { icon: Award, t: "Warranty support", d: "Every machine comes with a manufacturer warranty and after-sales service network." },
-            ].map((v, i) => {
+            ].map((v) => {
               const I = v.icon;
               return (
-                <div key={i} className="kg-card p-7">
+                <div key={v.t} className="kg-card p-7">
                   <I className="h-7 w-7 text-lime-500" />
                   <h3 className="font-display font-bold text-xl mt-4">{v.t}</h3>
                   <p className="text-zinc-400 text-sm mt-2 leading-relaxed">{v.d}</p>

@@ -47,8 +47,8 @@ export default function SeoLanding() {
               "Government tender & subsidy support",
               "Free product training and after-sales support",
               "Genuine spare parts available year-round",
-            ].map((b, i) => (
-              <div key={i} className="flex items-start gap-3 text-zinc-300">
+            ].map((b) => (
+              <div key={b} className="flex items-start gap-3 text-zinc-300">
                 <Check className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />{b}
               </div>
             ))}
