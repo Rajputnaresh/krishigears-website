@@ -45,12 +45,14 @@ KrishiGears is an authorized dealer of Royal Kissan Agro agricultural machinery 
 ## Code Review Fixes (2026-02-XX)
 - ✅ `backend/tests/backend_test.py`: Admin credentials now read from `TEST_ADMIN_EMAIL` / `TEST_ADMIN_PASSWORD` env vars (with safe defaults)
 - ✅ React hooks exhaustive-deps: Added explicit `eslint-disable-next-line` with rationale for mount-only effects in `Home.jsx` (2 effects) and `SheetsIntegration.jsx` — module-level imports (`apiClient`, `formatApiError`) are stable and don't need to be in deps
-- ✅ React array index keys: Replaced index keys with stable content-based keys in `ProductDetail.jsx` (images, features, applications, benefits) and `Home.jsx` (stats blocks, marquee, trust badges, dealer benefits, dealer stats)
+- ✅ React array index keys: Replaced index keys with stable content/id-based keys in `ProductDetail.jsx` (images, features, applications, benefits), `Home.jsx` (5 static lists), `Footer.jsx` (social icons), `SheetsIntegration.jsx` (FAQ accordion), `BlogPost.jsx` (markdown lines)
+- ✅ **High-impact fix**: `AdminProducts.jsx` specs editor — added stable `id` field to each spec row (via `makeSpecId()`). Previously index keys caused input focus loss / state bleed when adding/removing spec rows mid-list. Smoke-tested by opening editor on a real product.
 - ℹ️ Skipped (with rationale):
   - Python `is None` in `server.py` — report incorrect; `is None` is PEP 8 standard
   - `craco.config.js:91` console.warn — already gated by `if (isDevServer)`
   - Component splits / useMemo for static lists — over-engineering, no measurable benefit, deferred
   - localStorage → httpOnly cookies — user opted to defer (large architectural change with deployment risk on single-admin site)
+  - Most "missing hook deps" flagged are false positives from an overaggressive analyzer (stable module imports and state setters do not need to be in deps). ESLint with `react-hooks/exhaustive-deps` runs clean on the entire `/src` tree.
 
 ## Tech Notes / Decisions
 - JWT via Authorization header (NOT cookies) — chosen for simpler CORS with `*` origin

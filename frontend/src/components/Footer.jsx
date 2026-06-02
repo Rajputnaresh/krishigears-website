@@ -19,11 +19,16 @@ export default function Footer() {
             Premium agricultural machinery supplier across India. Delivering genuine power tillers, weeders, brush cutters and spare parts to farmers nationwide.
           </p>
           <div className="mt-6 flex gap-3">
-            {[Facebook, Instagram, Youtube, Twitter].map((I, i) => (
-              <a key={i} href="#" className="h-9 w-9 grid place-items-center border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 text-zinc-400 transition">
-                <I className="h-4 w-4" />
-              </a>
-            ))}
+          {[
+            { Icon: Facebook, label: "Facebook" },
+            { Icon: Instagram, label: "Instagram" },
+            { Icon: Youtube, label: "YouTube" },
+            { Icon: Twitter, label: "Twitter" },
+          ].map(({ Icon: I, label }) => (
+            <a key={label} href="#" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 text-zinc-400 transition">
+              <I className="h-4 w-4" />
+            </a>
+          ))}
           </div>
         </div>
 

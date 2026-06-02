@@ -183,11 +183,13 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
 
 const blankProduct = {
   slug: "", category: CATEGORIES[0].slug, name: "", model: "",
-  badges: [], images: [""], specs: [{ k: "", v: "" }],
+  badges: [], images: [""], specs: [{ id: "spec-0", k: "", v: "" }],
   features: [""], applications: [""], benefits: [""],
   warranty: "12 months manufacturer warranty + KrishiGears after-sales service network.",
   active: true, featured: false, sort_order: 999,
 };
+
+const makeSpecId = () => `spec-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
 function ProductEditor({ open, setOpen, product, onSaved }) {
   const isEdit = !!product;
@@ -203,7 +205,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
         model: product.model || "",
         badges: product.badges || [],
         images: product.images?.length ? product.images : [""],
-        specs: Object.entries(product.specs || {}).map(([k, v]) => ({ k, v })),
+        specs: Object.entries(product.specs || {}).map(([k, v]) => ({ id: makeSpecId(), k, v })),
         features: product.features?.length ? product.features : [""],
         applications: product.applications?.length ? product.applications : [""],
         benefits: product.benefits?.length ? product.benefits : [""],
@@ -213,7 +215,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
         sort_order: product.sort_order ?? 999,
       });
     } else if (open) {
-      setForm({ ...blankProduct, specs: [{ k: "", v: "" }] });
+      setForm({ ...blankProduct, specs: [{ id: makeSpecId(), k: "", v: "" }] });
     }
   }, [product, open]);
 
@@ -342,7 +344,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
           <Section title="Specifications" subtitle="Add key-value rows shown in the spec table.">
             <div className="space-y-2">
               {form.specs.map((s, i) => (
-                <div key={i} className="grid grid-cols-12 gap-2">
+                <div key={s.id} className="grid grid-cols-12 gap-2">
                   <Input
                     data-testid={`pe-spec-k-${i}`}
                     value={s.k} onChange={(e) => updateArr("specs", i, { ...s, k: e.target.value })}
@@ -356,7 +358,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
                   <button onClick={() => removeArrItem("specs", i)} className="col-span-1 text-zinc-500 hover:text-red-500"><X className="h-4 w-4 mx-auto"/></button>
                 </div>
               ))}
-              <button onClick={() => addArrItem("specs", { k: "", v: "" })} className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold">
+              <button onClick={() => addArrItem("specs", { id: makeSpecId(), k: "", v: "" })} className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold">
                 <Plus className="h-3 w-3"/> Add spec
               </button>
             </div>

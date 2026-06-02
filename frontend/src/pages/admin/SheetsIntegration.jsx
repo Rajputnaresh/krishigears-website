@@ -377,8 +377,8 @@ export default function SheetsIntegration() {
             { q: "What if Google Sheets is down?", a: "Forms still submit successfully. Leads are stored in MongoDB and visible in the Leads tab. When Sheets is back, new leads will flow as usual (older ones won't replay automatically — but you can always export from the admin if needed)." },
             { q: "Can I change the URL later?", a: "Yes. Just paste a new Web app URL above and click Save URLs. Setting an empty URL disables the integration for that lead type." },
             { q: "Why two separate sheets?", a: "Enquiries and dealer applications have different fields. Keeping them separate makes filtering, sharing and team workflows much cleaner." },
-          ].map((f, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="border-zinc-800">
+          ].map((f) => (
+            <AccordionItem key={f.q} value={`faq-${f.q.slice(0, 20)}`} className="border-zinc-800">
               <AccordionTrigger className="px-6 text-left hover:text-lime-500 hover:no-underline text-sm">
                 {f.q}
               </AccordionTrigger>

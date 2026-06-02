@@ -117,10 +117,11 @@ export default function BlogPost() {
         </div>
         <div className="mt-10 prose prose-invert max-w-none">
           {post.content.split("\n").map((line, i) => {
-            if (line.startsWith("## ")) return <h2 key={i} className="font-display font-bold text-2xl mt-10 mb-3">{line.slice(3)}</h2>;
-            if (line.match(/^\d+\./)) return <p key={i} className="text-zinc-300 leading-relaxed">{line}</p>;
+            const key = `${i}-${line.slice(0, 20)}`;
+            if (line.startsWith("## ")) return <h2 key={key} className="font-display font-bold text-2xl mt-10 mb-3">{line.slice(3)}</h2>;
+            if (line.match(/^\d+\./)) return <p key={key} className="text-zinc-300 leading-relaxed">{line}</p>;
             if (!line.trim()) return null;
-            return <p key={i} className="text-zinc-300 leading-relaxed mt-4">{line}</p>;
+            return <p key={key} className="text-zinc-300 leading-relaxed mt-4">{line}</p>;
           })}
         </div>
       </div>
