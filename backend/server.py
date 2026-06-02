@@ -22,6 +22,7 @@ from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from contextlib import asynccontextmanager
 
 from seed_data import PRODUCTS as SEED_PRODUCTS
+from seed_blog import BLOG_POSTS as SEED_BLOG_POSTS
 
 
 # MongoDB connection
@@ -131,6 +132,32 @@ async def seed_products():
         logger.info("Seeded %d products", len(docs))
 
 
+async def seed_blog_posts():
+    """Idempotently insert built-in blog posts if their slugs are missing.
+    Frontend /blog cards reference these slugs; without seeding, those URLs
+    return 404 in production logs."""
+    inserted = 0
+    now = datetime.now(timezone.utc).isoformat()
+    for post in SEED_BLOG_POSTS:
+        if await db.blog_posts.find_one({"slug": post["slug"]}, {"_id": 1}):
+            continue
+        await db.blog_posts.insert_one({
+            "id": str(uuid.uuid4()),
+            "slug": post["slug"],
+            "title": post["title"],
+            "excerpt": post["excerpt"],
+            "content": post["content"],
+            "cover_image": post.get("cover_image"),
+            "tags": post.get("tags", []),
+            "published": True,
+            "created_at": now,
+            "updated_at": now,
+        })
+        inserted += 1
+    if inserted:
+        logger.info("Seeded %d blog posts", inserted)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await db.users.create_index("email", unique=True)
@@ -140,6 +167,7 @@ async def lifespan(app: FastAPI):
     await db.products.create_index([("sort_order", 1)])
     await seed_admin()
     await seed_products()
+    await seed_blog_posts()
     yield
     client.close()
 
