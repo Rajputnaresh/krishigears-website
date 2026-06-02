@@ -10,8 +10,8 @@ import requests
 BASE_URL = os.environ.get("REACT_APP_BACKEND_URL", "https://farm-machinery-demo.preview.emergentagent.com").rstrip("/")
 API = f"{BASE_URL}/api"
 
-ADMIN_EMAIL = "admin@krishigears.in"
-ADMIN_PASSWORD = "KrishiGears@2026"
+ADMIN_EMAIL = os.environ.get("TEST_ADMIN_EMAIL", "admin@krishigears.in")
+ADMIN_PASSWORD = os.environ.get("TEST_ADMIN_PASSWORD", "KrishiGears@2026")
 
 TEST_SLUG = "farm-machinery-demo"
 

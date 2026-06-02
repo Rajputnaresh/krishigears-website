@@ -32,6 +32,8 @@ export default function Home() {
         setFeaturedProducts([...featured, ...fillers].slice(0, 6));
       })
       .catch(() => setFeaturedProducts([]));
+    // apiClient is a module-level stable import — mount-only fetch.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [videos, setVideos] = useState([]);
@@ -39,6 +41,8 @@ export default function Home() {
   useEffect(() => {
     apiClient.get("/videos").then((r) => setVideos(r.data || [])).catch(() => setVideos([]));
     apiClient.get("/reviews").then((r) => setReviews(r.data || [])).catch(() => setReviews([]));
+    // apiClient is a module-level stable import — mount-only fetch.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -89,8 +93,8 @@ export default function Home() {
                 { v: "19+", l: "Product Categories" },
                 { v: "PAN India", l: "Supply Network" },
                 { v: "100%", l: "Genuine Parts" },
-              ].map((s, i) => (
-                <div key={i} className="border-l-2 border-lime-500 pl-4">
+              ].map((s) => (
+                <div key={s.l} className="border-l-2 border-lime-500 pl-4">
                   <div className="font-display font-black text-3xl text-white">{s.v}</div>
                   <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 mt-1">{s.l}</div>
                 </div>
@@ -105,7 +109,7 @@ export default function Home() {
             {[...TRUST_BADGES, ...TRUST_BADGES].map((b, i) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
               return (
-                <div key={i} className="flex items-center gap-2 text-zinc-500 text-sm">
+                <div key={`marquee-${i}-${b.icon}`} className="flex items-center gap-2 text-zinc-500 text-sm">
                   <Icon className="h-4 w-4 text-lime-500"/> <span className="tracking-wider uppercase text-xs font-medium">{b.label}</span>
                 </div>
               );
@@ -224,8 +228,8 @@ export default function Home() {
                 { v: "PAN India", l: "Delivery & Support" },
                 { v: "FMTTI", l: "Tested Equipment" },
                 { v: "Genuine", l: "Spare Parts Only" },
-              ].map((b, i) => (
-                <div key={i} className="border border-zinc-800 p-4 bg-[#0F0F0F]">
+              ].map((b) => (
+                <div key={b.l} className="border border-zinc-800 p-4 bg-[#0F0F0F]">
                   <div className="text-lime-500 font-display font-black text-lg">{b.v}</div>
                   <div className="text-xs uppercase tracking-wider text-zinc-400 mt-1">{b.l}</div>
                 </div>
@@ -247,10 +251,10 @@ export default function Home() {
             <h2 className="kg-h2 mt-3">Eight reasons farmers <span className="text-lime-500">trust us.</span></h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {TRUST_BADGES.map((b, i) => {
+            {TRUST_BADGES.map((b) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
               return (
-                <div key={i} data-testid={`trust-${b.icon}`} className="kg-card p-6 text-center">
+                <div key={b.icon} data-testid={`trust-${b.icon}`} className="kg-card p-6 text-center">
                   <div className="h-12 w-12 mx-auto grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm">
                     <Icon className="h-5 w-5" />
                   </div>
@@ -282,8 +286,8 @@ export default function Home() {
               Strong margins, dedicated dealer support, fast dispatch and authorized warranty — partner with India's most trusted agricultural machinery distributor and grow with us.
             </p>
             <ul className="mt-6 space-y-2">
-              {["Attractive dealer margins", "Co-branded marketing support", "Free dealer training", "Priority spare parts supply"].map((b, i) => (
-                <li key={i} className="flex items-center gap-3 text-zinc-300 text-sm">
+              {["Attractive dealer margins", "Co-branded marketing support", "Free dealer training", "Priority spare parts supply"].map((b) => (
+                <li key={b} className="flex items-center gap-3 text-zinc-300 text-sm">
                   <div className="h-1.5 w-1.5 bg-lime-500"></div>{b}
                 </li>
               ))}
@@ -304,8 +308,8 @@ export default function Home() {
                 { v: "500+", l: "Dealer Network" },
                 { v: "1000+", l: "Pin Codes" },
                 { v: "48h", l: "Fast Dispatch" },
-              ].map((s, i) => (
-                <div key={i} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
+              ].map((s) => (
+                <div key={s.l} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
                   <div className="font-display font-black text-4xl text-lime-500">{s.v}</div>
                   <div className="text-xs uppercase tracking-[0.2em] text-zinc-400 mt-2">{s.l}</div>
                 </div>

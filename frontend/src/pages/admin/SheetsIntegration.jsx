@@ -104,6 +104,8 @@ export default function SheetsIntegration() {
       })
       .catch((err) => toast.error(formatApiError(err)))
       .finally(() => setLoading(false));
+    // apiClient and formatApiError are module-level stable imports — mount-only fetch.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const save = async () => {

@@ -42,6 +42,16 @@ KrishiGears is an authorized dealer of Royal Kissan Agro agricultural machinery 
 - ✅ Stats cards on admin dashboard
 - ✅ 33/33 backend tests passing (iteration_1)
 
+## Code Review Fixes (2026-02-XX)
+- ✅ `backend/tests/backend_test.py`: Admin credentials now read from `TEST_ADMIN_EMAIL` / `TEST_ADMIN_PASSWORD` env vars (with safe defaults)
+- ✅ React hooks exhaustive-deps: Added explicit `eslint-disable-next-line` with rationale for mount-only effects in `Home.jsx` (2 effects) and `SheetsIntegration.jsx` — module-level imports (`apiClient`, `formatApiError`) are stable and don't need to be in deps
+- ✅ React array index keys: Replaced index keys with stable content-based keys in `ProductDetail.jsx` (images, features, applications, benefits) and `Home.jsx` (stats blocks, marquee, trust badges, dealer benefits, dealer stats)
+- ℹ️ Skipped (with rationale):
+  - Python `is None` in `server.py` — report incorrect; `is None` is PEP 8 standard
+  - `craco.config.js:91` console.warn — already gated by `if (isDevServer)`
+  - Component splits / useMemo for static lists — over-engineering, no measurable benefit, deferred
+  - localStorage → httpOnly cookies — user opted to defer (large architectural change with deployment risk on single-admin site)
+
 ## Tech Notes / Decisions
 - JWT via Authorization header (NOT cookies) — chosen for simpler CORS with `*` origin
 - Static `data/catalog.js` for 19 categories + 5 sample products (no admin product CRUD in MVP)

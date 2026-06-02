@@ -58,7 +58,7 @@ export default function ProductDetail() {
               <div className="grid grid-cols-5 gap-2 mt-3">
                 {product.images.map((src, i) => (
                   <button
-                    key={i}
+                    key={src}
                     onClick={() => setActive(i)}
                     data-testid={`product-thumb-${i}`}
                     className={`aspect-square overflow-hidden border ${active === i ? "border-lime-500" : "border-zinc-800"}`}
@@ -112,7 +112,7 @@ export default function ProductDetail() {
               <div className="kg-eyebrow mb-4">Key Features</div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {product.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-zinc-300">
+                  <li key={`feat-${i}-${f.slice(0, 30)}`} className="flex items-start gap-2 text-sm text-zinc-300">
                     <Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" /> {f}
                   </li>
                 ))}
@@ -143,7 +143,7 @@ export default function ProductDetail() {
             <div className="kg-eyebrow">Applications</div>
             <ul className="mt-4 space-y-3">
               {product.applications.map((a, i) => (
-                <li key={i} className="flex items-start gap-2 text-zinc-300 text-sm"><div className="h-1.5 w-1.5 bg-lime-500 mt-2"></div>{a}</li>
+                <li key={`app-${i}-${a.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-300 text-sm"><div className="h-1.5 w-1.5 bg-lime-500 mt-2"></div>{a}</li>
               ))}
             </ul>
           </div>
@@ -151,7 +151,7 @@ export default function ProductDetail() {
             <div className="kg-eyebrow">Benefits</div>
             <ul className="mt-4 space-y-3">
               {product.benefits.map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-zinc-300 text-sm"><Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" />{b}</li>
+                <li key={`ben-${i}-${b.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-300 text-sm"><Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" />{b}</li>
               ))}
             </ul>
           </div>
