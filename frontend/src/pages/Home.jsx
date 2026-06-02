@@ -20,7 +20,6 @@ export default function Home() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
-    // Prefer featured products; if fewer than 6, fill with the rest by sort order.
     Promise.all([
       apiClient.get("/products?featured=true"),
       apiClient.get("/products"),
@@ -33,6 +32,13 @@ export default function Home() {
         setFeaturedProducts([...featured, ...fillers].slice(0, 6));
       })
       .catch(() => setFeaturedProducts([]));
+  }, []);
+
+  const [videos, setVideos] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    apiClient.get("/videos").then((r) => setVideos(r.data || [])).catch(() => setVideos([]));
+    apiClient.get("/reviews").then((r) => setReviews(r.data || [])).catch(() => setReviews([]));
   }, []);
 
   return (
@@ -257,53 +263,10 @@ export default function Home() {
       </section>
 
       {/* ========== VIDEO GALLERY ========== */}
-      <section data-testid="video-section" className="kg-section">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="kg-eyebrow">In Action</div>
-          <h2 className="kg-h2 mt-3">Watch our equipment <span className="text-lime-500">at work.</span></h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-5">
-            {[
-              "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&q=80",
-              "https://images.unsplash.com/photo-1592982537447-7440770faae2?w=800&q=80",
-              "https://images.unsplash.com/photo-1717774070207-7afbb9f30d59?w=800&q=80",
-            ].map((src, i) => (
-              <div key={i} className="relative aspect-video overflow-hidden border border-zinc-800 group cursor-pointer">
-                <img src={src} alt="" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition" />
-                <div className="absolute inset-0 grid place-items-center">
-                  <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black rounded-full group-hover:scale-110 transition">
-                    <Play className="h-6 w-6 fill-black ml-1" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <VideoGallery videos={videos} />
 
       {/* ========== TESTIMONIALS ========== */}
-      <section data-testid="testimonials-section" className="kg-section bg-[#080808] border-y border-zinc-900">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="kg-eyebrow">Voices from the field</div>
-          <h2 className="kg-h2 mt-3 max-w-2xl">What our <span className="text-lime-500">farmers & dealers</span> say.</h2>
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} data-testid={`testimonial-${i}`} className="kg-card p-6">
-                <Quote className="h-6 w-6 text-lime-500 mb-4" />
-                <p className="text-zinc-300 text-sm leading-relaxed">{t.text}</p>
-                <div className="mt-5 flex items-center gap-1">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="h-3.5 w-3.5 fill-lime-500 text-lime-500" />
-                  ))}
-                </div>
-                <div className="mt-4 pt-4 border-t border-zinc-800">
-                  <div className="font-bold text-sm">{t.name}</div>
-                  <div className="text-xs text-zinc-500">{t.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection reviews={reviews} />
 
       {/* ========== DEALER OPPORTUNITY ========== */}
       <section data-testid="dealer-cta-section" className="kg-section relative overflow-hidden">
@@ -438,6 +401,108 @@ function ContactStrip() {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+      </div>
+    </section>
+  );
+}
+
+function getYoutubeEmbed(url) {
+  if (!url) return null;
+  const m = url.match(/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/);
+  return m ? `https://www.youtube.com/embed/${m[1]}` : null;
+}
+
+function VideoGallery({ videos }) {
+  if (!videos || videos.length === 0) return null;
+  return (
+    <section data-testid="video-section" className="kg-section">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="kg-eyebrow">In Action</div>
+        <h2 className="kg-h2 mt-3">Watch our equipment <span className="text-lime-500">at work.</span></h2>
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {videos.slice(0, 6).map((v) => <VideoCard key={v.id} video={v} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoCard({ video }) {
+  const youtubeEmbed = getYoutubeEmbed(video.url);
+  const [playing, setPlaying] = useState(false);
+
+  if (youtubeEmbed && playing) {
+    return (
+      <div className="aspect-video overflow-hidden border border-zinc-800 bg-black">
+        <iframe
+          src={`${youtubeEmbed}?autoplay=1`}
+          title={video.title}
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
+    );
+  }
+
+  const thumb = video.thumbnail || (youtubeEmbed ? `https://img.youtube.com/vi/${youtubeEmbed.split("/embed/")[1]}/hqdefault.jpg` : "");
+  const onClick = (e) => {
+    if (youtubeEmbed) { e.preventDefault(); setPlaying(true); }
+  };
+
+  return (
+    <a
+      href={video.url}
+      target={youtubeEmbed ? "_self" : "_blank"}
+      rel="noreferrer"
+      onClick={onClick}
+      data-testid={`home-video-${video.id}`}
+      className="relative aspect-video overflow-hidden border border-zinc-800 group cursor-pointer block bg-zinc-900"
+    >
+      {thumb && <img src={thumb} alt={video.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"/>
+      <div className="absolute inset-0 grid place-items-center">
+        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black rounded-full group-hover:scale-110 transition">
+          <Play className="h-6 w-6 fill-black ml-1" />
+        </div>
+      </div>
+      <div className="absolute bottom-3 left-3 right-3">
+        <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
+        <div className="text-white font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
+      </div>
+    </a>
+  );
+}
+
+function TestimonialsSection({ reviews }) {
+  const list = reviews && reviews.length > 0 ? reviews : TESTIMONIALS;
+  return (
+    <section data-testid="testimonials-section" className="kg-section bg-[#080808] border-y border-zinc-900">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="kg-eyebrow">Voices from the field</div>
+        <h2 className="kg-h2 mt-3 max-w-2xl">What our <span className="text-lime-500">farmers & dealers</span> say.</h2>
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {list.slice(0, 8).map((t, i) => (
+            <div key={t.id || `t-${i}`} data-testid={`testimonial-${i}`} className="kg-card p-6">
+              {t.photo_url && (
+                <div className="h-14 w-14 overflow-hidden border border-zinc-800 mb-4 bg-white">
+                  <img src={t.photo_url} alt={t.name} className="w-full h-full object-cover"/>
+                </div>
+              )}
+              {!t.photo_url && <Quote className="h-6 w-6 text-lime-500 mb-4" />}
+              <p className="text-zinc-300 text-sm leading-relaxed">{t.text}</p>
+              <div className="mt-5 flex items-center gap-1">
+                {Array.from({ length: t.rating || 5 }).map((_, j) => (
+                  <Star key={j} className="h-3.5 w-3.5 fill-lime-500 text-lime-500" />
+                ))}
+              </div>
+              <div className="mt-4 pt-4 border-t border-zinc-800">
+                <div className="font-bold text-sm">{t.name}</div>
+                <div className="text-xs text-zinc-500">{[t.role, t.location].filter(Boolean).join(" · ")}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

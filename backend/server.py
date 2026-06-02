@@ -256,6 +256,64 @@ class ProductUpdate(BaseModel):
     sort_order: Optional[int] = None
 
 
+class VideoCreate(BaseModel):
+    title: str
+    url: str
+    source: Literal["youtube", "instagram", "twitter", "facebook", "other"] = "youtube"
+    thumbnail: Optional[str] = ""
+    description: Optional[str] = ""
+    active: bool = True
+    sort_order: int = 999
+
+
+class VideoUpdate(BaseModel):
+    title: Optional[str] = None
+    url: Optional[str] = None
+    source: Optional[str] = None
+    thumbnail: Optional[str] = None
+    description: Optional[str] = None
+    active: Optional[bool] = None
+    sort_order: Optional[int] = None
+
+
+class ReviewCreate(BaseModel):
+    name: str
+    role: Optional[str] = ""
+    location: Optional[str] = ""
+    text: str
+    rating: int = 5
+    photo_url: Optional[str] = ""
+    product_slug: Optional[str] = ""
+    active: bool = True
+    sort_order: int = 999
+
+
+class ReviewUpdate(BaseModel):
+    name: Optional[str] = None
+    role: Optional[str] = None
+    location: Optional[str] = None
+    text: Optional[str] = None
+    rating: Optional[int] = None
+    photo_url: Optional[str] = None
+    product_slug: Optional[str] = None
+    active: Optional[bool] = None
+    sort_order: Optional[int] = None
+
+
+class WarrantyRegistrationCreate(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    owner_name: str
+    phone: str
+    email: Optional[str] = None
+    product_model: str
+    serial_number: Optional[str] = None
+    purchase_date: Optional[str] = None
+    dealer_name: Optional[str] = None
+    city: Optional[str] = None
+    state: Optional[str] = None
+    message: Optional[str] = None
+
+
 # ---------- Helpers ----------
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -279,8 +337,12 @@ async def get_sheet_url(lead_type: str) -> str:
     setting = await db.settings.find_one({"key": f"gsheets_{lead_type}_url"})
     if setting and setting.get("value"):
         return setting["value"].strip()
-    env_key = "GSHEETS_ENQUIRY_URL" if lead_type == "enquiry" else "GSHEETS_DEALER_URL"
-    return os.environ.get(env_key, "").strip()
+    env_map = {
+        "enquiry": "GSHEETS_ENQUIRY_URL",
+        "dealer": "GSHEETS_DEALER_URL",
+        "warranty": "GSHEETS_WARRANTY_URL",
+    }
+    return os.environ.get(env_map.get(lead_type, ""), "").strip()
 
 
 async def forward_to_sheet(lead_type: str, doc: dict) -> None:
@@ -395,6 +457,35 @@ async def get_product(slug: str):
     if not p:
         raise HTTPException(status_code=404, detail="Product not found")
     return p
+
+
+# ---------- Public Videos ----------
+@api_router.get("/videos")
+async def list_videos():
+    cursor = db.videos.find({"active": True}, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(50)
+
+
+# ---------- Public Reviews ----------
+@api_router.get("/reviews")
+async def list_reviews():
+    cursor = db.reviews.find({"active": True}, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(50)
+
+
+# ---------- Warranty Registration (public submit) ----------
+@api_router.post("/warranty/register")
+async def submit_warranty(payload: WarrantyRegistrationCreate):
+    doc = {
+        "id": str(uuid.uuid4()),
+        "type": "warranty",
+        "data": payload.model_dump(),
+        "status": "new",
+        "created_at": now_iso(),
+    }
+    await db.warranty_registrations.insert_one(doc)
+    fire_sheet_forward("warranty", doc)
+    return {"success": True, "id": doc["id"]}
 
 
 # ---------- Admin Routes ----------
@@ -524,38 +615,136 @@ async def admin_delete_product(slug: str, user: dict = Depends(get_current_admin
     return {"success": True}
 
 
+# ---------- Admin Videos ----------
+@api_router.get("/admin/videos")
+async def admin_list_videos(user: dict = Depends(get_current_admin)):
+    cursor = db.videos.find({}, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(200)
+
+
+@api_router.post("/admin/videos")
+async def admin_create_video(payload: VideoCreate, user: dict = Depends(get_current_admin)):
+    doc = {
+        "id": str(uuid.uuid4()),
+        **payload.model_dump(),
+        "created_at": now_iso(),
+        "updated_at": now_iso(),
+    }
+    await db.videos.insert_one(doc)
+    doc.pop("_id", None)
+    return doc
+
+
+@api_router.put("/admin/videos/{video_id}")
+async def admin_update_video(video_id: str, payload: VideoUpdate, user: dict = Depends(get_current_admin)):
+    updates = {k: v for k, v in payload.model_dump().items() if v is not None}
+    if not updates:
+        raise HTTPException(status_code=400, detail="No fields to update")
+    updates["updated_at"] = now_iso()
+    result = await db.videos.update_one({"id": video_id}, {"$set": updates})
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Video not found")
+    return await db.videos.find_one({"id": video_id}, {"_id": 0})
+
+
+@api_router.delete("/admin/videos/{video_id}")
+async def admin_delete_video(video_id: str, user: dict = Depends(get_current_admin)):
+    result = await db.videos.delete_one({"id": video_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Video not found")
+    return {"success": True}
+
+
+# ---------- Admin Reviews ----------
+@api_router.get("/admin/reviews")
+async def admin_list_reviews(user: dict = Depends(get_current_admin)):
+    cursor = db.reviews.find({}, {"_id": 0}).sort([("sort_order", 1), ("created_at", -1)])
+    return await cursor.to_list(200)
+
+
+@api_router.post("/admin/reviews")
+async def admin_create_review(payload: ReviewCreate, user: dict = Depends(get_current_admin)):
+    doc = {
+        "id": str(uuid.uuid4()),
+        **payload.model_dump(),
+        "created_at": now_iso(),
+        "updated_at": now_iso(),
+    }
+    await db.reviews.insert_one(doc)
+    doc.pop("_id", None)
+    return doc
+
+
+@api_router.put("/admin/reviews/{review_id}")
+async def admin_update_review(review_id: str, payload: ReviewUpdate, user: dict = Depends(get_current_admin)):
+    updates = {k: v for k, v in payload.model_dump().items() if v is not None}
+    if not updates:
+        raise HTTPException(status_code=400, detail="No fields to update")
+    updates["updated_at"] = now_iso()
+    result = await db.reviews.update_one({"id": review_id}, {"$set": updates})
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Review not found")
+    return await db.reviews.find_one({"id": review_id}, {"_id": 0})
+
+
+@api_router.delete("/admin/reviews/{review_id}")
+async def admin_delete_review(review_id: str, user: dict = Depends(get_current_admin)):
+    result = await db.reviews.delete_one({"id": review_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Review not found")
+    return {"success": True}
+
+
+# ---------- Admin Warranty Registrations ----------
+@api_router.get("/admin/warranty")
+async def admin_list_warranty(user: dict = Depends(get_current_admin)):
+    cursor = db.warranty_registrations.find({}, {"_id": 0}).sort([("created_at", -1)])
+    return await cursor.to_list(1000)
+
+
+@api_router.delete("/admin/warranty/{reg_id}")
+async def admin_delete_warranty(reg_id: str, user: dict = Depends(get_current_admin)):
+    result = await db.warranty_registrations.delete_one({"id": reg_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Registration not found")
+    return {"success": True}
+
+
 # ---------- Sheets Integration settings ----------
 class SheetSettings(BaseModel):
     enquiry_url: str = ""
     dealer_url: str = ""
+    warranty_url: str = ""
 
 
 @api_router.get("/admin/integrations/sheets")
 async def get_sheet_settings(user: dict = Depends(get_current_admin)):
-    enq = await get_sheet_url("enquiry")
-    deal = await get_sheet_url("dealer")
-    return {"enquiry_url": enq, "dealer_url": deal}
+    return {
+        "enquiry_url": await get_sheet_url("enquiry"),
+        "dealer_url": await get_sheet_url("dealer"),
+        "warranty_url": await get_sheet_url("warranty"),
+    }
 
 
 @api_router.put("/admin/integrations/sheets")
 async def update_sheet_settings(payload: SheetSettings, user: dict = Depends(get_current_admin)):
-    await db.settings.update_one(
-        {"key": "gsheets_enquiry_url"},
-        {"$set": {"key": "gsheets_enquiry_url", "value": payload.enquiry_url.strip(), "updated_at": now_iso()}},
-        upsert=True,
-    )
-    await db.settings.update_one(
-        {"key": "gsheets_dealer_url"},
-        {"$set": {"key": "gsheets_dealer_url", "value": payload.dealer_url.strip(), "updated_at": now_iso()}},
-        upsert=True,
-    )
-    return {"success": True, "enquiry_url": payload.enquiry_url.strip(), "dealer_url": payload.dealer_url.strip()}
+    for key, value in (
+        ("gsheets_enquiry_url", payload.enquiry_url),
+        ("gsheets_dealer_url", payload.dealer_url),
+        ("gsheets_warranty_url", payload.warranty_url),
+    ):
+        await db.settings.update_one(
+            {"key": key},
+            {"$set": {"key": key, "value": value.strip(), "updated_at": now_iso()}},
+            upsert=True,
+        )
+    return {"success": True, "enquiry_url": payload.enquiry_url.strip(), "dealer_url": payload.dealer_url.strip(), "warranty_url": payload.warranty_url.strip()}
 
 
 @api_router.post("/admin/integrations/sheets/test/{lead_type}")
 async def test_sheet_webhook(lead_type: str, user: dict = Depends(get_current_admin)):
-    if lead_type not in ("enquiry", "dealer"):
-        raise HTTPException(status_code=400, detail="lead_type must be 'enquiry' or 'dealer'")
+    if lead_type not in ("enquiry", "dealer", "warranty"):
+        raise HTTPException(status_code=400, detail="lead_type must be 'enquiry', 'dealer' or 'warranty'")
     url = await get_sheet_url(lead_type)
     if not url:
         raise HTTPException(status_code=400, detail="No URL configured for this lead type")
@@ -566,18 +755,22 @@ async def test_sheet_webhook(lead_type: str, user: dict = Depends(get_current_ad
         "data": {
             "name": "KrishiGears Test",
             "full_name": "KrishiGears Test",
+            "owner_name": "KrishiGears Test",
             "phone": "9999999999",
             "email": "test@krishigears.in",
             "product": "Power Tiller",
+            "product_model": "RK-170F",
             "city": "Jaipur",
             "state": "Rajasthan",
+            "purchase_date": "2026-01-15",
+            "serial_number": "SN-TEST-001",
             "message": "This is a test row sent from the KrishiGears Admin panel.",
         },
     }
     payload = {"id": test_doc["id"], "type": test_doc["type"], "created_at": test_doc["created_at"], **test_doc["data"]}
     try:
-        async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
-            resp = await client.post(url, json=payload)
+        async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client_http:
+            resp = await client_http.post(url, json=payload)
             return {"success": resp.status_code < 400, "status_code": resp.status_code, "body": resp.text[:300]}
     except Exception as e:  # noqa: BLE001
         raise HTTPException(status_code=502, detail=f"Webhook call failed: {e}")

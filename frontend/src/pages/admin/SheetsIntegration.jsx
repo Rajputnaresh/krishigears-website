@@ -11,6 +11,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 
 const ENQUIRY_HEADERS = "Received At\tLead ID\tName\tPhone\tEmail\tLocation\tProduct\tMessage";
 const DEALER_HEADERS = "Received At\tLead ID\tFull Name\tPhone\tEmail\tBusiness Name\tCity\tState\tPincode\tYears in Business\tCurrent Products\tMessage";
+const WARRANTY_HEADERS = "Received At\tReg ID\tOwner Name\tPhone\tEmail\tProduct Model\tSerial Number\tPurchase Date\tDealer Name\tCity\tState\tMessage";
 
 const ENQUIRY_SCRIPT = `function doPost(e) {
   try {
@@ -60,18 +61,46 @@ const DEALER_SCRIPT = `function doPost(e) {
   }
 }`;
 
+const WARRANTY_SCRIPT = `function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+    sheet.appendRow([
+      new Date(data.created_at || new Date()),
+      data.id || "",
+      data.owner_name || "",
+      data.phone || "",
+      data.email || "",
+      data.product_model || "",
+      data.serial_number || "",
+      data.purchase_date || "",
+      data.dealer_name || "",
+      data.city || "",
+      data.state || "",
+      data.message || ""
+    ]);
+    return ContentService.createTextOutput(JSON.stringify({ok:true}))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ok:false, error:String(err)}))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}`;
+
 export default function SheetsIntegration() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [testing, setTesting] = useState(null);
   const [enquiryUrl, setEnquiryUrl] = useState("");
   const [dealerUrl, setDealerUrl] = useState("");
+  const [warrantyUrl, setWarrantyUrl] = useState("");
 
   useEffect(() => {
     apiClient.get("/admin/integrations/sheets")
       .then((res) => {
         setEnquiryUrl(res.data.enquiry_url || "");
         setDealerUrl(res.data.dealer_url || "");
+        setWarrantyUrl(res.data.warranty_url || "");
       })
       .catch((err) => toast.error(formatApiError(err)))
       .finally(() => setLoading(false));
@@ -83,8 +112,9 @@ export default function SheetsIntegration() {
       await apiClient.put("/admin/integrations/sheets", {
         enquiry_url: enquiryUrl.trim(),
         dealer_url: dealerUrl.trim(),
+        warranty_url: warrantyUrl.trim(),
       });
-      toast.success("Sheet URLs saved. New leads will be forwarded.");
+      toast.success("Sheet URLs saved. New submissions will be forwarded.");
     } catch (err) { toast.error(formatApiError(err)); }
     finally { setSaving(false); }
   };
@@ -108,6 +138,7 @@ export default function SheetsIntegration() {
 
   const enquiryConfigured = !!enquiryUrl;
   const dealerConfigured = !!dealerUrl;
+  const warrantyConfigured = !!warrantyUrl;
 
   return (
     <div data-testid="sheets-integration-panel" className="space-y-8">
@@ -125,6 +156,7 @@ export default function SheetsIntegration() {
             <div className="mt-4 flex flex-wrap gap-3">
               <StatusPill ok={enquiryConfigured} label="Enquiry Sheet" />
               <StatusPill ok={dealerConfigured} label="Dealer Sheet" />
+              <StatusPill ok={warrantyConfigured} label="Warranty Sheet" />
             </div>
           </div>
         </div>
@@ -245,6 +277,41 @@ export default function SheetsIntegration() {
               </div>
             </Step>
           </SetupStep>
+
+          <SetupStep
+            value="sheet-3"
+            num="3"
+            title="Create the Warranty Registration Sheet"
+            done={warrantyConfigured}
+          >
+            <Step>
+              <p>Open a third blank Google Sheet:</p>
+              <a href="https://sheets.new" target="_blank" rel="noreferrer" data-testid="open-new-sheet-warranty" className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-4 py-2 rounded-md mt-2">
+                Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
+              </a>
+            </Step>
+            <Step>
+              <p>Rename: <code className="text-lime-400 bg-black border border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Warranty Registrations</code></p>
+            </Step>
+            <Step>
+              <p>Paste these headers into row 1:</p>
+              <CodeBlock label="Headers" code={WARRANTY_HEADERS} onCopy={() => copy(WARRANTY_HEADERS, "Headers")}/>
+            </Step>
+            <Step>
+              <p>Extensions → Apps Script → paste this <em>warranty-specific</em> code:</p>
+              <CodeBlock label="Apps Script (Warranty)" code={WARRANTY_SCRIPT} onCopy={() => copy(WARRANTY_SCRIPT, "Apps Script code")}/>
+            </Step>
+            <Step>
+              <p>Deploy → New deployment → Web app → <strong className="text-lime-400">Anyone</strong> access → Authorize → Copy URL.</p>
+            </Step>
+            <Step>
+              <p>Paste it here:</p>
+              <div className="mt-3">
+                <Label className="text-xs uppercase tracking-wider text-zinc-400">Warranty Sheet Web App URL</Label>
+                <Input data-testid="warranty-url-input" value={warrantyUrl} onChange={(e) => setWarrantyUrl(e.target.value)} placeholder="https://script.google.com/macros/s/AKfycb…/exec" className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"/>
+              </div>
+            </Step>
+          </SetupStep>
         </Accordion>
       </div>
 
@@ -265,7 +332,7 @@ export default function SheetsIntegration() {
             {saving ? "Saving..." : "Save URLs"}
           </button>
         </div>
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-3 gap-3">
           <button
             onClick={() => test("enquiry")}
             disabled={!enquiryConfigured || testing === "enquiry"}
@@ -273,7 +340,7 @@ export default function SheetsIntegration() {
             className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
           >
             {testing === "enquiry" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
-            Test Enquiry Sheet
+            Test Enquiry
           </button>
           <button
             onClick={() => test("dealer")}
@@ -282,7 +349,16 @@ export default function SheetsIntegration() {
             className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
           >
             {testing === "dealer" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
-            Test Dealer Sheet
+            Test Dealer
+          </button>
+          <button
+            onClick={() => test("warranty")}
+            disabled={!warrantyConfigured || testing === "warranty"}
+            data-testid="test-warranty-btn"
+            className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
+          >
+            {testing === "warranty" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
+            Test Warranty
           </button>
         </div>
       </div>

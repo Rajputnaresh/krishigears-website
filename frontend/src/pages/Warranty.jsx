@@ -1,7 +1,13 @@
-import { ShieldCheck, Phone, Wrench, FileCheck, Clock, Headphones } from "lucide-react";
+import { ShieldCheck, Phone, Wrench, FileCheck, Clock, Headphones, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { COMPANY } from "@/data/catalog";
+import { apiClient, formatApiError } from "@/lib/api";
 
 const FAQS = [
   { q: "What warranty does KrishiGears offer on its products?", a: "All KrishiGears machines come with the manufacturer's standard warranty — typically 6 to 12 months depending on the product category. Warranty covers manufacturing defects only; consumables, blades, belts and damages due to misuse are not covered." },
@@ -76,6 +82,98 @@ export default function Warranty() {
           </div>
         </div>
       </section>
+
+      <RegisterWarrantySection/>
+    </div>
+  );
+}
+
+function RegisterWarrantySection() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [form, setForm] = useState({
+    owner_name: "", phone: "", email: "",
+    product_model: "", serial_number: "", purchase_date: "",
+    dealer_name: "", city: "", state: "", message: ""
+  });
+  const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!form.owner_name || !form.phone || !form.product_model) {
+      toast.error("Name, phone and product model are required");
+      return;
+    }
+    setLoading(true);
+    try {
+      await apiClient.post("/warranty/register", form);
+      setSuccess(true);
+      toast.success("Warranty registered. We'll send a confirmation soon.");
+    } catch (err) {
+      toast.error(formatApiError(err));
+    } finally { setLoading(false); }
+  };
+
+  if (success) {
+    return (
+      <section data-testid="warranty-register-success" className="kg-section bg-[#080808] border-t border-zinc-900">
+        <div className="max-w-2xl mx-auto text-center border border-lime-500/30 bg-lime-500/5 p-12">
+          <CheckCircle2 className="h-16 w-16 mx-auto text-lime-500" />
+          <h2 className="kg-h2 mt-6">Warranty Registered.</h2>
+          <p className="text-zinc-400 mt-4">Your product is now on our records. Keep your invoice safe — for any service request, just WhatsApp us at <strong className="text-lime-500">{COMPANY.phone}</strong>.</p>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section data-testid="warranty-register-section" className="kg-section bg-[#080808] border-t border-zinc-900">
+      <div className="max-w-[1100px] mx-auto">
+        <div className="kg-eyebrow">Activate your warranty</div>
+        <h2 className="kg-h2 mt-3 text-balance">Register your machine in <span className="text-lime-500">2 minutes.</span></h2>
+        <p className="text-zinc-400 mt-4 max-w-2xl leading-relaxed">
+          Just bought a KrishiGears product? Register it below so we have your purchase on record. This activates your warranty coverage and helps us serve you faster when you need support.
+        </p>
+
+        <form onSubmit={submit} className="mt-10 border border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="h-6 w-6 text-lime-500" />
+            <h3 className="font-display font-bold text-xl">Warranty Registration</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Field label="Owner Name*" testid="warranty-owner" value={form.owner_name} onChange={update("owner_name")} />
+            <Field label="Phone*" testid="warranty-phone" value={form.phone} onChange={update("phone")} />
+            <Field label="Email" testid="warranty-email" value={form.email} onChange={update("email")} />
+            <Field label="Product Model*" testid="warranty-model" value={form.product_model} onChange={update("product_model")} placeholder="e.g. RK-170F"/>
+            <Field label="Serial Number" testid="warranty-serial" value={form.serial_number} onChange={update("serial_number")} />
+            <Field label="Purchase Date" testid="warranty-date" type="date" value={form.purchase_date} onChange={update("purchase_date")} />
+            <Field label="Dealer / Shop Name" testid="warranty-dealer" value={form.dealer_name} onChange={update("dealer_name")} />
+            <Field label="City" testid="warranty-city" value={form.city} onChange={update("city")} />
+            <Field label="State" testid="warranty-state" value={form.state} onChange={update("state")} />
+          </div>
+          <div>
+            <Label className="text-xs uppercase tracking-wider text-zinc-400">Additional notes (optional)</Label>
+            <Textarea data-testid="warranty-message" rows={3} value={form.message} onChange={update("message")} className="bg-black border-zinc-800 mt-1.5"/>
+          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            data-testid="warranty-submit-btn"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50"
+          >
+            {loading ? "Registering..." : "Register Warranty"}
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
+
+function Field({ label, testid, value, onChange, type = "text", placeholder }) {
+  return (
+    <div>
+      <Label className="text-xs uppercase tracking-wider text-zinc-400">{label}</Label>
+      <Input data-testid={testid} type={type} value={value} onChange={onChange} placeholder={placeholder} className="bg-black border-zinc-800 mt-1.5"/>
     </div>
   );
 }
