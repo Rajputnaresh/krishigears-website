@@ -12,7 +12,7 @@ export default function About() {
           <div className="kg-eyebrow">About {COMPANY.name}</div>
           <h1 className="kg-h1 mt-4 max-w-3xl text-balance">Standing with farmers, every season, <span className="text-lime-500">hamesha.</span></h1>
           <p className="mt-6 text-zinc-400 max-w-2xl leading-relaxed text-lg">
-            {COMPANY.name} is an authorized dealer of Royal Kissan Agro — a premium agricultural machinery brand trusted across India. We bring rugged, dependable equipment within reach of every Indian farmer, from small landholders to large contractors and institutions.
+            {COMPANY.name} is one of India's trusted names in premium agricultural machinery — a homegrown brand built to bring rugged, dependable equipment within reach of every Indian farmer, from small landholders to large contractors and institutions.
           </p>
         </div>
       </section>

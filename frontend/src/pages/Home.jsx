@@ -54,7 +54,7 @@ export default function Home() {
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 py-24 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8 animate-fade-up">
             <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.25em] uppercase text-lime-400 font-bold rounded-sm">
-              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> Authorized Dealer · Royal Kissan Agro
+              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> Premium Agricultural Machinery · GST Registered
             </div>
             <h1 className="kg-h1 mt-6 text-balance">
               For the <span className="text-lime-500">Farmers,</span><br/>
@@ -213,7 +213,7 @@ export default function Home() {
             <div className="kg-eyebrow">About KrishiGears</div>
             <h2 className="kg-h2 mt-3 text-balance">Built by farmers. <span className="text-lime-500">For farmers.</span></h2>
             <p className="text-zinc-400 mt-6 leading-relaxed">
-              KrishiGears is an authorized dealer of Royal Kissan Agro — bringing premium agricultural machinery within reach of every Indian farmer. From smallholders to large contractors, our equipment is rugged, fuel-efficient and backed by genuine warranty support.
+              KrishiGears is India's trusted name in premium agricultural machinery — bringing rugged, fuel-efficient farming equipment within reach of every Indian farmer. From smallholders to large contractors, our machines are built tough and backed by genuine warranty support.
             </p>
             <p className="text-zinc-400 mt-4 leading-relaxed">
               We don't just sell machines. We deliver productivity, dignity and progress — directly to your doorstep, anywhere in India.
@@ -222,7 +222,7 @@ export default function Home() {
               {[
                 { v: "GST", l: "Registered Business" },
                 { v: "PAN India", l: "Delivery & Support" },
-                { v: "Authorized", l: "Royal Kissan Dealer" },
+                { v: "FMTTI", l: "Tested Equipment" },
                 { v: "Genuine", l: "Spare Parts Only" },
               ].map((b, i) => (
                 <div key={i} className="border border-zinc-800 p-4 bg-[#0F0F0F]">

@@ -88,7 +88,7 @@ export default function ProductDetail() {
               </div>
             )}
             <div className="mt-4 inline-flex items-center gap-2 text-lime-500 font-bold">
-              <ShieldCheck className="h-4 w-4" /> Authorized Royal Kissan Agro Product
+              <ShieldCheck className="h-4 w-4" /> Genuine KrishiGears Product
             </div>
             <p className="text-zinc-400 mt-5 leading-relaxed">{product.warranty}</p>
 

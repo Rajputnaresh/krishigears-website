@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-6 text-zinc-400 leading-relaxed text-sm">
-            Premium agricultural machinery supplier across India. Authorized dealer of Royal Kissan Agro products. Delivering genuine power tillers, weeders, brush cutters and spare parts to farmers nationwide.
+            Premium agricultural machinery supplier across India. Delivering genuine power tillers, weeders, brush cutters and spare parts to farmers nationwide.
           </p>
           <div className="mt-6 flex gap-3">
             {[Facebook, Instagram, Youtube, Twitter].map((I, i) => (
@@ -104,7 +104,7 @@ export default function Footer() {
 
       <div className="border-t border-zinc-900">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-zinc-500">© {new Date().getFullYear()} KrishiGears — Authorized dealer of Royal Kissan Agro. All rights reserved.</div>
+          <div className="text-xs text-zinc-500">© {new Date().getFullYear()} KrishiGears. All rights reserved.</div>
           <div className="text-xs text-zinc-500">{COMPANY.website}</div>
         </div>
       </div>

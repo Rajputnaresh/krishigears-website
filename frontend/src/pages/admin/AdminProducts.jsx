@@ -319,7 +319,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
               onRemove={(i) => removeArrItem("images", i)}
               previewImages
             />
-            <div className="mt-2 text-[10px] text-zinc-500">Tip: For Royal Kissan products, you can paste URLs directly from royalkissanagro.com.</div>
+            <div className="mt-2 text-[10px] text-zinc-500">Tip: Paste image URLs from your phone gallery, Google Drive, Unsplash, or any public image hosting.</div>
           </Section>
 
           {/* Badges */}

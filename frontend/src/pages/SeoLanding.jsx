@@ -39,7 +39,7 @@ export default function SeoLanding() {
           <h2 className="kg-h2 mt-3 max-w-3xl">India's preferred {page.title.replace(" in India", "").toLowerCase()} <span className="text-lime-500">— and counting.</span></h2>
           <div className="mt-10 grid md:grid-cols-2 gap-4">
             {[
-              "Authorized dealer of Royal Kissan Agro products",
+              "Premium KrishiGears branded products",
               "GST-registered supplier with proper invoicing",
               "PAN India delivery to 1000+ pin codes",
               "Genuine warranty support and service network",

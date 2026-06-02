@@ -1,6 +1,5 @@
-// KrishiGears product catalog — backed by Royal Kissan Agro authorized product range.
-// Product names, model numbers, images sourced from royalkissanagro.com (official product portfolio).
-// As an authorized dealer, KrishiGears sells these exact products PAN India.
+// KrishiGears product catalog — premium agricultural machinery range.
+// Authentic farming equipment built to FMTTI / SRFMTTI standards, sold PAN India.
 
 import {
   Tractor, Wrench, Scissors, Drill, SprayCan, Droplets,
@@ -79,7 +78,7 @@ export const CATEGORIES = [
 
 // ----------- Spec helpers -----------
 const baseFeatures = (extra = []) => [
-  "Authorized Royal Kissan Agro product",
+  "Genuine KrishiGears branded product",
   "Backed by manufacturer warranty",
   "PAN India delivery from KrishiGears",
   "Genuine spare parts availability",
@@ -327,7 +326,7 @@ export const PRODUCTS = [
   // ============= EARTH AUGERS (5 models) =============
   {
     slug: "rk-ea-p68", category: "earth-augers",
-    name: "Royal Kissan Premium Earth Auger 3.5 HP — RK-EA-P68",
+    name: "KrishiGears Premium Earth Auger 3.5 HP — RK-EA-P68",
     model: "RK-EA-P68", badges: ["Premium"],
     images: [`${RKA}/2025/11/RK-EA-P68.webp`],
     specs: { Model: "RK-EA-P68", Engine: "Single-Cylinder, 2-Stroke", Displacement: "68 CC", Power: "3.5 HP" },
@@ -338,7 +337,7 @@ export const PRODUCTS = [
   },
   {
     slug: "rk-ea-p52", category: "earth-augers",
-    name: "Royal Kissan Premium Earth Auger 2.5 HP — RK-EA-P52",
+    name: "KrishiGears Premium Earth Auger 2.5 HP — RK-EA-P52",
     model: "RK-EA-P52", badges: ["Premium"],
     images: [`${RKA}/2025/11/RK-EA-P52.webp`],
     specs: { Model: "RK-EA-P52", Engine: "2-Stroke", Displacement: "52 CC", Power: "2.5 HP", "Fuel Tank": "1 L" },
@@ -349,7 +348,7 @@ export const PRODUCTS = [
   },
   {
     slug: "nsm-ea-p68", category: "earth-augers",
-    name: "Royal Kissan Earth Auger 3.5 HP — NSM-EA-P68",
+    name: "KrishiGears Earth Auger 3.5 HP — NSM-EA-P68",
     model: "NSM-EA-P68", badges: ["Classic"],
     images: [`${RKA}/2025/11/NSM-EA-P68.webp`],
     specs: { Model: "NSM-EA-P68", Engine: "2-Stroke", Displacement: "68 CC", Power: "3.5 HP", "Fuel Tank": "1 L" },
@@ -360,7 +359,7 @@ export const PRODUCTS = [
   },
   {
     slug: "nsm-ea-p52", category: "earth-augers",
-    name: "Royal Kissan Earth Auger 2.5 HP — NSM-EA-P52",
+    name: "KrishiGears Earth Auger 2.5 HP — NSM-EA-P52",
     model: "NSM-EA-P52", badges: ["Classic"],
     images: [`${RKA}/2025/11/NSM-EA-P52.webp`],
     specs: { Model: "NSM-EA-P52", Engine: "Single-Cylinder, 2-Stroke", Displacement: "52 CC", Power: "2.5 HP" },
@@ -672,7 +671,7 @@ export const TESTIMONIALS = [
 export const TRUST_BADGES = [
   { icon: "shield-check", label: "GST Registered Business" },
   { icon: "truck", label: "PAN India Delivery" },
-  { icon: "badge-check", label: "Genuine Royal Kissan Products" },
+  { icon: "badge-check", label: "Genuine Products" },
   { icon: "wrench", label: "Genuine Spare Parts" },
   { icon: "shield", label: "FMTTI / SRFMTTI Tested" },
   { icon: "zap", label: "Fast Dispatch" },
