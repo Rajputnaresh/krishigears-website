@@ -15,6 +15,7 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Literal, Dict, Any
 
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, Request, Query
+from fastapi.responses import Response
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -174,6 +175,70 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 api_router = APIRouter(prefix="/api")
+
+
+# ---------- Bot-probe filter ----------
+# Vulnerability scanners constantly hit known-malicious paths
+# (e.g. /api/.env, /api/phpinfo.php, /api/v1/workflows). These are
+# not real users and they spam the access log. We return a fast 404
+# without going through the router so nothing else gets touched.
+_BOT_PROBE_SUBSTRINGS = (
+    "/.env",
+    "/phpinfo.php",
+    "/info.php",
+    "/server.js",
+    "/settings.py",
+    "/v1/workflows",
+    "/v1/executions",
+    "/v1/credentials",
+    "/webhook/",
+    "/serverless/",
+    "/api/node/",
+    "/api/config/",
+    "/api/config.js",
+    "/api/constants.js",
+    "/api/constant.js",
+    "/api/common.js",
+    "/api/env.js",
+    "/api/credentials",
+    "/api/login",
+    "/api/user",
+    "/api/users/",
+    "/api/auth/",
+    "/api/data/",
+    "/api/v1/",
+    "/api/%2A",
+    "/api/*",
+    "/apis/",
+    "/api-node/",
+    "/api-backend/",
+    "/wp-admin",
+    "/wp-login",
+    "/.git/",
+)
+
+
+@app.middleware("http")
+async def block_bot_probes(request, call_next):
+    path = request.url.path
+    if any(p in path for p in _BOT_PROBE_SUBSTRINGS):
+        # Silent 404; nothing logged downstream.
+        return Response(status_code=404)
+    return await call_next(request)
+
+
+# Suppress uvicorn access-log noise for the same probe paths so logs only
+# show real traffic.
+class _BotProbeLogFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        try:
+            msg = record.getMessage()
+        except Exception:
+            return True
+        return not any(p in msg for p in _BOT_PROBE_SUBSTRINGS)
+
+
+logging.getLogger("uvicorn.access").addFilter(_BotProbeLogFilter())
 
 
 # ---------- Models ----------
