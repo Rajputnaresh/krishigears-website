@@ -235,7 +235,9 @@ class _BotProbeLogFilter(logging.Filter):
             msg = record.getMessage()
         except Exception:
             return True
-        return not any(p in msg for p in _BOT_PROBE_SUBSTRINGS)
+        if any(p in msg for p in _BOT_PROBE_SUBSTRINGS):
+            return False
+        return True
 
 
 logging.getLogger("uvicorn.access").addFilter(_BotProbeLogFilter())

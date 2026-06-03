@@ -6,8 +6,10 @@ export function track(eventName, params = {}) {
   if (typeof window.gtag !== "function") return;
   try {
     window.gtag("event", eventName, params);
-  } catch (_) {
-    // swallow — never let analytics break the UX
+  } catch (err) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn("[analytics] gtag failed:", err);
+    }
   }
 }
 
