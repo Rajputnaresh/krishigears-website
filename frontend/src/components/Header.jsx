@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -98,6 +99,7 @@ export default function Header() {
             href={`https://wa.me/${COMPANY.whatsapp}`}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackWhatsAppClick("header_desktop")}
             data-testid="header-whatsapp-link"
             title="WhatsApp Chat"
             className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white transition"
@@ -106,6 +108,7 @@ export default function Header() {
           </a>
           <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
+            onClick={() => trackPhoneClick("header_desktop")}
             data-testid="header-call-link"
             className="text-sm font-medium text-zinc-300 hover:text-lime-500 flex items-center gap-2"
           >
@@ -160,6 +163,7 @@ export default function Header() {
               </Link>
               <a
                 href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
+                onClick={() => trackPhoneClick("header_mobile")}
                 data-testid="m-nav-call"
                 className="mt-2 px-5 py-3 border border-zinc-700 text-center rounded-md text-zinc-200"
               >
@@ -169,6 +173,7 @@ export default function Header() {
                 href={`https://wa.me/${COMPANY.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsAppClick("header_mobile")}
                 data-testid="m-nav-whatsapp"
                 className="mt-2 px-5 py-3 bg-[#25D366] hover:bg-[#1ebe57] text-white text-center rounded-md inline-flex items-center justify-center gap-2"
               >

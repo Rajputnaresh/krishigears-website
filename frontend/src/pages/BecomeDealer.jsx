@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { apiClient, formatApiError } from "@/lib/api";
+import { trackDealerSubmit } from "@/lib/analytics";
 import { FARMER_FIELD } from "@/data/catalog";
 
 export default function BecomeDealer() {
@@ -26,6 +27,7 @@ export default function BecomeDealer() {
     setLoading(true);
     try {
       await apiClient.post("/leads/dealer", form);
+      trackDealerSubmit();
       setSuccess(true);
       toast.success("Application submitted! Our dealer team will contact you within 48 hours.");
     } catch (err) {

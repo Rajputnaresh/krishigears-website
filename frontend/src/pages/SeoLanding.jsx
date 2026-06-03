@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { Check, ArrowRight, MapPin } from "lucide-react";
 import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function SeoLanding() {
   const { slug } = useParams();
@@ -27,7 +28,7 @@ export default function SeoLanding() {
             <EnquiryDialog product={category?.name || page.title} trigger={
               <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Price</button>
             } />
-            <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" data-testid="seo-whatsapp-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Us</a>
+            <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("seo_landing", slug)} data-testid="seo-whatsapp-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Us</a>
           </div>
         </div>
       </section>

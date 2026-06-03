@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { COMPANY } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
+import { trackWhatsAppClick, trackPhoneClick, trackEnquirySubmit } from "@/lib/analytics";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -21,6 +22,7 @@ export default function Contact() {
     setLoading(true);
     try {
       await apiClient.post("/leads/contact", form);
+      trackEnquirySubmit(null, "contact");
       toast.success("Message sent. We will reply within 24 hours.");
       setForm({ name: "", phone: "", email: "", subject: "", message: "" });
     } catch (err) {
@@ -40,8 +42,8 @@ export default function Contact() {
         <div className="mt-12 grid lg:grid-cols-12 gap-10">
           {/* Channels */}
           <div className="lg:col-span-5 space-y-4">
-            <ChannelCard icon={Phone} title="Call us" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" />
-            <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://wa.me/${COMPANY.whatsapp}`} testid="contact-whatsapp" />
+            <ChannelCard icon={Phone} title="Call us" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" onClick={() => trackPhoneClick("contact_page")} />
+            <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://wa.me/${COMPANY.whatsapp}`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
             <ChannelCard icon={Mail} title="Sales / Orders" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
             <ChannelCard icon={Mail} title="Service / Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
             <ChannelCard icon={Mail} title="Dealership" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />
@@ -89,7 +91,7 @@ export default function Contact() {
   );
 }
 
-function ChannelCard({ icon: Icon, title, value, href, testid }) {
+function ChannelCard({ icon: Icon, title, value, href, testid, onClick }) {
   const inner = (
     <>
       <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm shrink-0">
@@ -103,7 +105,7 @@ function ChannelCard({ icon: Icon, title, value, href, testid }) {
   );
   if (href) {
     return (
-      <a href={href} data-testid={testid} className="kg-card p-5 flex items-center gap-4 hover:border-lime-500/50 transition" target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+      <a href={href} onClick={onClick} data-testid={testid} className="kg-card p-5 flex items-center gap-4 hover:border-lime-500/50 transition" target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
         {inner}
       </a>
     );

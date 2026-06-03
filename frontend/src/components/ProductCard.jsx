@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function ProductCard({ product }) {
   const category = CATEGORIES.find((c) => c.slug === product.category);
@@ -33,7 +34,7 @@ export default function ProductCard({ product }) {
         href={waHref}
         target="_blank"
         rel="noreferrer"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => { e.stopPropagation(); trackWhatsAppClick("product_card", product.slug); }}
         data-testid={`product-card-whatsapp-${product.slug}`}
         title={`WhatsApp enquiry for ${product.name}`}
         aria-label={`WhatsApp enquiry for ${product.name}`}

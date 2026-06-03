@@ -6,6 +6,7 @@ import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { apiClient } from "@/lib/api";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function CategoryPage() {
   const { slug } = useParams();
@@ -61,6 +62,7 @@ export default function CategoryPage() {
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsAppClick("category_page", slug)}
                 data-testid="cat-whatsapp-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >

@@ -5,6 +5,7 @@ import { CATEGORIES, COMPANY } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { apiClient } from "@/lib/api";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -100,6 +101,7 @@ export default function ProductDetail() {
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsAppClick("product_detail", product.slug)}
                 data-testid="product-whatsapp-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >

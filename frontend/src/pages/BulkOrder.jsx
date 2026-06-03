@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { CATEGORIES } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
+import { trackBulkOrderSubmit } from "@/lib/analytics";
 
 export default function BulkOrder() {
   const [loading, setLoading] = useState(false);
@@ -28,6 +29,7 @@ export default function BulkOrder() {
     setLoading(true);
     try {
       await apiClient.post("/leads/bulk-order", form);
+      trackBulkOrderSubmit();
       setSuccess(true);
       toast.success("Bulk order enquiry sent. Our team will share quotation soon.");
     } catch (err) {

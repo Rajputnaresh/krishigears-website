@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react";
 import { COMPANY } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 export default function FloatingActions() {
   const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hello KrishiGears, I am interested in your products.")}`;
@@ -11,6 +12,7 @@ export default function FloatingActions() {
         href={waLink}
         target="_blank"
         rel="noreferrer"
+        onClick={() => trackWhatsAppClick("floating_button")}
         data-testid="floating-whatsapp-btn"
         className="fixed bottom-6 right-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition animate-pulse-lime"
         aria-label="WhatsApp Chat"
@@ -19,6 +21,7 @@ export default function FloatingActions() {
       </a>
       <a
         href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
+        onClick={() => trackPhoneClick("floating_button")}
         data-testid="floating-call-btn"
         className="lg:hidden fixed bottom-6 left-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-lime-500 text-black shadow-2xl hover:scale-110 transition"
         aria-label="Call KrishiGears"

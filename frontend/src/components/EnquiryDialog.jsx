@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { apiClient, formatApiError } from "@/lib/api";
+import { trackEnquirySubmit } from "@/lib/analytics";
 
 export default function EnquiryDialog({ trigger, product = "" }) {
   const [open, setOpen] = useState(false);
@@ -22,6 +23,7 @@ export default function EnquiryDialog({ trigger, product = "" }) {
     setLoading(true);
     try {
       await apiClient.post("/leads/enquiry", form);
+      trackEnquirySubmit(product);
       toast.success("Enquiry sent! Our team will call you within 24 hours.");
       setForm({ name: "", phone: "", email: "", location: "", product, message: "" });
       setOpen(false);

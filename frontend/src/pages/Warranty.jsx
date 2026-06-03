@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { COMPANY } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
+import { trackWarrantySubmit } from "@/lib/analytics";
 
 const FAQS = [
   { q: "What warranty does KrishiGears offer on its products?", a: "All KrishiGears machines come with the manufacturer's standard warranty — typically 6 to 12 months depending on the product category. Warranty covers manufacturing defects only; consumables, blades, belts and damages due to misuse are not covered." },
@@ -107,6 +108,7 @@ function RegisterWarrantySection() {
     setLoading(true);
     try {
       await apiClient.post("/warranty/register", form);
+      trackWarrantySubmit();
       setSuccess(true);
       toast.success("Warranty registered. We'll send a confirmation soon.");
     } catch (err) {
