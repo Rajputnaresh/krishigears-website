@@ -20,12 +20,14 @@ import SeoLanding from "@/pages/SeoLanding";
 import AdminLogin from "@/pages/admin/AdminLogin";
 import AdminDashboard from "@/pages/admin/AdminDashboard";
 import ScrollToTop from "@/components/ScrollToTop";
+import GAListener from "@/components/GAListener";
 
 function App() {
   return (
     <div className="App min-h-screen bg-background text-foreground">
       <BrowserRouter>
         <ScrollToTop />
+        <GAListener />
         <Routes>
           {/* Admin (no header/footer) */}
           <Route path="/admin/login" element={<AdminLogin />} />
