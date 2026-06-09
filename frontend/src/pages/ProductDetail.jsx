@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Check, ChevronRight, ShieldCheck } from "lucide-react";
-import { CATEGORIES, COMPANY } from "@/data/catalog";
+import { CATEGORIES, COMPANY, farmingtoolsProductUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { apiClient } from "@/lib/api";
@@ -18,7 +18,13 @@ export default function ProductDetail() {
     setNotFound(false);
     setActive(0);
     apiClient.get(`/products/${slug}`)
-      .then((res) => setProduct(res.data))
+      .then((res) => {
+        if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
+          setProduct(res.data);
+        } else {
+          setNotFound(true);
+        }
+      })
       .catch(() => setNotFound(true));
   }, [slug]);
 
@@ -33,7 +39,8 @@ export default function ProductDetail() {
   if (!product) return <div className="kg-section text-center text-zinc-500">Loading product…</div>;
 
   const category = CATEGORIES.find((c) => c.slug === product.category);
-  const waMsg = encodeURIComponent(`Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""}. Please share price & availability.`);
+  const waMsg = encodeURIComponent(`Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`);
+  const retailUrl = farmingtoolsProductUrl(product.slug);
 
   return (
     <div data-testid="product-detail-page" className="kg-section">
@@ -94,9 +101,21 @@ export default function ProductDetail() {
             <p className="text-zinc-400 mt-5 leading-relaxed">{product.warranty}</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={retailUrl}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="product-buy-online-btn"
+                className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md"
+              >
+                Buy Online
+              </a>
               <EnquiryDialog product={product.name} trigger={
-                <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Request Price</button>
+                <button data-testid="product-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk / Dealer Inquiry</button>
               } />
+              <Link to="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Institutional Supply
+              </Link>
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
@@ -105,7 +124,7 @@ export default function ProductDetail() {
                 data-testid="product-whatsapp-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >
-                <WhatsAppIcon className="h-4 w-4"/> WhatsApp Enquiry
+                <WhatsAppIcon className="h-4 w-4"/> WhatsApp Supply Enquiry
               </a>
             </div>
 
@@ -167,9 +186,9 @@ export default function ProductDetail() {
           </div>
           <div className="flex flex-wrap gap-3 md:justify-end">
             <EnquiryDialog product={product.name} trigger={
-              <button data-testid="product-warranty-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Get Quote</button>
+              <button data-testid="product-warranty-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Get B2B Quote</button>
             } />
-            <Link to="/bulk-order" data-testid="product-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order</Link>
+            <Link to="/bulk-order" data-testid="product-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
           </div>
         </div>
       </div>

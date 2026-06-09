@@ -7,7 +7,7 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 export default function ProductCard({ product }) {
   const category = CATEGORIES.find((c) => c.slug === product.category);
   const waMsg = encodeURIComponent(
-    `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""}. Please share price & availability.`
+    `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`
   );
   const waHref = `https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`;
 
@@ -64,7 +64,7 @@ export default function ProductCard({ product }) {
           )}
           <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-900">
             <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2.5 py-1">
-              Price on Request
+              B2B Supply
             </span>
             <ArrowRight className="h-4 w-4 text-lime-500" />
           </div>

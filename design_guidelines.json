@@ -85,17 +85,17 @@
     "icons_library": "lucide-react",
     "images": {
       "hero_background": {
-        "url": "/assets/brand/hero-bg.png",
+        "url": "/assets/brand/hero-bg.jpg",
         "description": "Dark mode studio lighting of agricultural machinery. Use as the main hero background with a heavy bg-black/50 to bg-black/70 overlay to ensure the lime green tagline pops.",
         "category": "hero"
       },
       "india_network_map": {
-        "url": "/assets/brand/india-map.png",
+        "url": "/assets/brand/india-map.jpg",
         "description": "Stylized glowing map of India showing dealer network.",
         "category": "dealer_network_section"
       },
       "abstract_terrain": {
-        "url": "/assets/brand/abstract-terrain.png",
+        "url": "/assets/brand/abstract-terrain.jpg",
         "description": "Abstract dark topographic map. Use as background for CTA bands or About sections.",
         "category": "background_texture"
       },

@@ -1,18 +1,57 @@
 # KrishiGears Website
 
-React + FastAPI site for KrishiGears.
+KrishiGears.in is the B2B brand, dealer network, bulk order, OEM/distributor and institutional lead-generation website for KrishiGears. Retail buying intent is routed to FarmingTools.in.
 
-This repo is self-hostable and no longer depends on Emergent runtime scripts,
-Emergent dev overlays, private Emergent package URLs, or Emergent-hosted core
-assets.
+## Framework
 
-## App Structure
+- Frontend: Create React App with CRACO, React Router and Tailwind CSS.
+- Backend: FastAPI exposed on Vercel as a Python serverless function.
+- Database: MongoDB through Motor async client with warm serverless connection reuse.
 
-- `frontend/` - React app built with CRACO and Tailwind.
-- `backend/` - FastAPI API with MongoDB storage for products, blogs, leads,
-  warranty registrations, videos, reviews, and admin access.
-- `render.yaml` - Render Blueprint for a backend web service plus a static
-  frontend.
+## Vercel Build Settings
+
+Use the repository root as the Vercel project root.
+
+- Install command: `cd frontend && yarn install --frozen-lockfile --ignore-engines`
+- Build command: `cd frontend && yarn build`
+- Output directory: `frontend/build`
+- API entrypoint: `api/index.py`
+- API routing: `/api/*` rewrites to the FastAPI app.
+- SPA routing: all non-API routes rewrite to `index.html`.
+
+These settings are also defined in `vercel.json`.
+
+## Required Environment Variables
+
+Set these in Vercel Project Settings > Environment Variables. Do not commit real values.
+
+Backend:
+
+- `MONGODB_URI` preferred MongoDB Atlas connection string
+- `MONGO_URL` optional legacy alias
+- `DATABASE_URL` optional fallback alias if already used for MongoDB
+- `DB_NAME`
+- `MONGODB_DB` optional alias for `DB_NAME`
+- `JWT_SECRET`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+- `CORS_ORIGINS`
+
+Frontend:
+
+- `REACT_APP_BACKEND_URL` leave empty on Vercel for same-origin `/api`
+- `REACT_APP_SITE_URL=https://krishigears.in`
+- `REACT_APP_FARMINGTOOLS_URL=https://farmingtools.in`
+
+Optional:
+
+- `GSHEETS_ENQUIRY_URL`
+- `GSHEETS_DEALER_URL`
+- `GSHEETS_WARRANTY_URL`
+- `MONGO_MAX_POOL_SIZE`
+- `MONGO_SERVER_SELECTION_TIMEOUT_MS`
+
+Note: this project is Create React App, not Next.js. Use `REACT_APP_*` for browser-exposed values. If Vercel already has `NEXT_PUBLIC_SITE_URL` or `NEXT_PUBLIC_FARMINGTOOLS_URL`, duplicate those values into `REACT_APP_SITE_URL` and `REACT_APP_FARMINGTOOLS_URL`.
 
 ## Local Development
 
@@ -34,29 +73,37 @@ yarn install --ignore-engines
 yarn start
 ```
 
-The frontend defaults to `http://localhost:8001` for API calls in development.
-For production, set `REACT_APP_BACKEND_URL` to your backend's public origin.
+## Lead Forms
 
-## Render Hosting
+The following forms submit to FastAPI and store leads in MongoDB:
 
-1. Create a MongoDB Atlas database and copy its connection string.
-2. In Render, create a Blueprint from this GitHub repository.
-3. Render reads `render.yaml` and creates:
-   - `krishigears-api` - FastAPI backend.
-   - `krishigears-frontend` - static React frontend.
-4. Set these backend environment variables in Render:
-   - `MONGO_URL`
-   - `DB_NAME`
-   - `JWT_SECRET`
-   - `ADMIN_EMAIL`
-   - `ADMIN_PASSWORD`
-   - `CORS_ORIGINS`
-5. Set frontend `REACT_APP_BACKEND_URL` to the public URL of the backend
-   service, for example `https://krishigears-api.onrender.com`.
-6. Add your custom domain to the frontend service and point DNS to Render.
+- Product enquiry: `/api/leads/enquiry`
+- Dealer application: `/api/leads/dealer`
+- Bulk order / institutional supply: `/api/leads/bulk-order`
+- Contact form: `/api/leads/contact`
+- Warranty registration: `/api/warranty/register`
 
-For `CORS_ORIGINS`, use a comma-separated list, for example:
+Email delivery is not required for form capture. Google Sheets webhooks are optional and can be configured later through env vars or the admin integration screen.
 
-```text
-https://krishigears.in,https://www.krishigears.in
-```
+## Domain Setup
+
+Add both domains in Vercel:
+
+- `krishigears.in`
+- `www.krishigears.in`
+
+Typical DNS records:
+
+- Apex `krishigears.in`: `A` record to `76.76.21.21`
+- `www.krishigears.in`: `CNAME` record to `cname.vercel-dns.com`
+
+After DNS verification, set `krishigears.in` as the primary production domain and redirect `www` to the apex domain in Vercel.
+
+## SEO Role
+
+- KrishiGears.in: B2B brand, dealer, bulk order, OEM/distributor and institutional lead-generation site.
+- FarmingTools.in: primary ecommerce/retail purchase site.
+- Product/category pages remain on KrishiGears for B2B validation and lead capture.
+- Retail purchase CTAs point to FarmingTools.in.
+
+Robots and sitemap are in `frontend/public/robots.txt` and `frontend/public/sitemap.xml`.

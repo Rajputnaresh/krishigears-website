@@ -1,6 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Check, ArrowRight, MapPin } from "lucide-react";
-import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
+import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP, FARMINGTOOLS_URL, farmingtoolsCategoryUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
@@ -9,6 +9,7 @@ export default function SeoLanding() {
   const page = SEO_PAGES.find((p) => p.slug === slug);
   if (!page) return <Navigate to="/" replace />;
   const category = page.category ? CATEGORIES.find((c) => c.slug === page.category) : null;
+  const retailUrl = category ? farmingtoolsCategoryUrl(category.slug) : FARMINGTOOLS_URL;
 
   return (
     <div data-testid="seo-landing-page">
@@ -25,8 +26,11 @@ export default function SeoLanding() {
             KrishiGears is a leading {page.title.toLowerCase()} with PAN India dispatch, genuine warranty support and competitive pricing for dealers, FPOs, contractors and institutional buyers.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
+            <a href={retailUrl} target="_blank" rel="noreferrer" data-testid="seo-buy-online-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">
+              Buy Online
+            </a>
             <EnquiryDialog product={category?.name || page.title} trigger={
-              <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Price</button>
+              <button data-testid="seo-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Bulk / Dealer Inquiry</button>
             } />
             <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("seo_landing", slug)} data-testid="seo-whatsapp-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Us</a>
           </div>
@@ -76,12 +80,12 @@ export default function SeoLanding() {
       {/* CTA */}
       <section className="kg-section bg-[#080808] border-y border-zinc-900">
         <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="kg-h2 max-w-2xl mx-auto text-balance">Get the best price on <span className="text-lime-500">{(category?.name || "agricultural machinery").toLowerCase()}</span> today.</h2>
+          <h2 className="kg-h2 max-w-2xl mx-auto text-balance">Plan bulk supply for <span className="text-lime-500">{(category?.name || "agricultural machinery").toLowerCase()}</span>.</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {category && (
               <Link to={`/products/category/${category.slug}`} data-testid="seo-view-products" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">View Products <ArrowRight className="h-4 w-4"/></Link>
             )}
-            <Link to="/bulk-order" data-testid="seo-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Bulk Order</Link>
+            <Link to="/bulk-order" data-testid="seo-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Bulk Order Inquiry</Link>
           </div>
         </div>
       </section>

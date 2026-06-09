@@ -1,7 +1,7 @@
 // JSON-LD structured data helpers — returned as a serialized <script> tag
 // inside a Helmet child. Each function returns a stringified JSON-LD blob.
 
-const SITE = "https://krishigears.in";
+const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
 
 export function organizationJsonLd() {
   return JSON.stringify({

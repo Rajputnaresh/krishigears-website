@@ -7,9 +7,9 @@ import {
 } from "lucide-react";
 
 export const LOGO_URL = "/logo512.png";
-export const HERO_BG = "/assets/brand/hero-bg.png";
-export const INDIA_MAP = "/assets/brand/india-map.png";
-export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.png";
+export const HERO_BG = "/assets/brand/hero-bg.jpg";
+export const INDIA_MAP = "/assets/brand/india-map.jpg";
+export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.jpg";
 
 const RKA = "https://royalkissanagro.com/wp-content/uploads";
 
@@ -57,11 +57,11 @@ export const COMPANY = {
 // FarmingTools.in — sister B2C ecommerce site for retail purchases.
 // KrishiGears.in is the B2B / dealer / OEM / institutional brand site.
 // All retail "buy" intent on KrishiGears redirects here.
-export const FARMINGTOOLS_URL = "https://farmingtools.in";
+export const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
 export const farmingtoolsProductUrl = (slug) =>
   slug ? `${FARMINGTOOLS_URL}/products/${slug}` : FARMINGTOOLS_URL;
 export const farmingtoolsCategoryUrl = (slug) =>
-  slug ? `${FARMINGTOOLS_URL}/category/${slug}` : FARMINGTOOLS_URL;
+  slug ? `${FARMINGTOOLS_URL}/collections/${slug}` : FARMINGTOOLS_URL;
 
 export const CATEGORIES = [
   { slug: "power-weeders",            name: "Power Weeders",            icon: Sprout,   image: COVER.weeder,        short: "Petrol & diesel power weeders from 5HP to 8.5HP. FMTTI tested & subsidy approved.", featured: true },

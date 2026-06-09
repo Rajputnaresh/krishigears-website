@@ -26,17 +26,41 @@ from seed_data import PRODUCTS as SEED_PRODUCTS
 from seed_blog import BLOG_POSTS as SEED_BLOG_POSTS
 
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
-JWT_SECRET = os.environ['JWT_SECRET']
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRY_HOURS = 24
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+
+def first_env(*names: str, default: Optional[str] = None) -> Optional[str]:
+    for name in names:
+        value = os.environ.get(name)
+        if value and value.strip():
+            return value.strip()
+    return default
+
+
+def required_env(*names: str) -> str:
+    value = first_env(*names)
+    if value:
+        return value
+    joined = " or ".join(names)
+    raise RuntimeError(f"Missing required environment variable: {joined}")
+
+
+# MongoDB connection is created once per warm serverless instance and reused.
+mongo_url = required_env("MONGODB_URI", "MONGO_URL", "DATABASE_URL")
+db_name = first_env("DB_NAME", "MONGODB_DB", default="krishigears")
+client = AsyncIOMotorClient(
+    mongo_url,
+    maxPoolSize=int(first_env("MONGO_MAX_POOL_SIZE", default="10")),
+    minPoolSize=0,
+    serverSelectionTimeoutMS=int(first_env("MONGO_SERVER_SELECTION_TIMEOUT_MS", default="5000")),
+)
+db = client[db_name]
+
+JWT_SECRET = required_env("JWT_SECRET")
 
 
 # ---------- Auth helpers ----------
@@ -82,8 +106,12 @@ async def get_current_admin(credentials: Optional[HTTPAuthorizationCredentials] 
 
 
 async def seed_admin():
-    admin_email = os.environ["ADMIN_EMAIL"].lower()
-    admin_password = os.environ["ADMIN_PASSWORD"]
+    admin_email = first_env("ADMIN_EMAIL", default="")
+    admin_password = first_env("ADMIN_PASSWORD", default="")
+    if not admin_email or not admin_password:
+        logger.warning("ADMIN_EMAIL or ADMIN_PASSWORD is not set; skipping admin user seed.")
+        return
+    admin_email = admin_email.lower()
     existing = await db.users.find_one({"email": admin_email})
     if existing is None:
         await db.users.insert_one({
@@ -161,16 +189,23 @@ async def seed_blog_posts():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await db.users.create_index("email", unique=True)
-    await db.leads.create_index([("created_at", -1)])
-    await db.blog_posts.create_index("slug", unique=True)
-    await db.products.create_index("slug", unique=True)
-    await db.products.create_index([("sort_order", 1)])
-    await seed_admin()
-    await seed_products()
-    await seed_blog_posts()
+    try:
+        await client.admin.command("ping")
+        logger.info("Connected to MongoDB database: %s", db_name)
+        await db.users.create_index("email", unique=True)
+        await db.leads.create_index([("created_at", -1)])
+        await db.blog_posts.create_index("slug", unique=True)
+        await db.products.create_index("slug", unique=True)
+        await db.products.create_index([("sort_order", 1)])
+        await seed_admin()
+        await seed_products()
+        await seed_blog_posts()
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("MongoDB startup failed. Check MONGODB_URI/MONGO_URL and database access.")
+        raise RuntimeError("MongoDB startup failed. Verify the MongoDB URI, network access, and database name.") from exc
     yield
-    client.close()
+    if first_env("VERCEL") != "1":
+        client.close()
 
 
 app = FastAPI(lifespan=lifespan)
@@ -873,10 +908,21 @@ async def test_sheet_webhook(lead_type: str, user: dict = Depends(get_current_ad
 
 app.include_router(api_router)
 
+def cors_origins() -> List[str]:
+    configured = first_env("CORS_ORIGINS")
+    if configured:
+        return [origin.strip() for origin in configured.split(",") if origin.strip()]
+    return [
+        "http://localhost:3000",
+        "https://krishigears.in",
+        "https://www.krishigears.in",
+    ]
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=cors_origins(),
     allow_methods=["*"],
     allow_headers=["*"],
 )

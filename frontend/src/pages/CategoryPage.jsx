@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import { CATEGORIES, COMPANY } from "@/data/catalog";
+import { ChevronRight } from "lucide-react";
+import { CATEGORIES, COMPANY, farmingtoolsCategoryUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -17,7 +17,7 @@ export default function CategoryPage() {
     if (!category) return;
     setItems(null);
     apiClient.get(`/products?category=${slug}`)
-      .then((res) => setItems(res.data))
+      .then((res) => setItems(Array.isArray(res.data) ? res.data : []))
       .catch(() => setItems([]));
   }, [slug, category]);
 
@@ -31,7 +31,7 @@ export default function CategoryPage() {
   }
 
   const Icon = category.icon;
-  const waMsg = encodeURIComponent(`Hello KrishiGears, I am interested in ${category.name}. Please share details.`);
+  const waMsg = encodeURIComponent(`Hello KrishiGears, I am interested in ${category.name} for bulk/dealer/institutional supply. Please share details.`);
 
   return (
     <div data-testid="category-page" className="kg-section">
@@ -55,9 +55,21 @@ export default function CategoryPage() {
             <h1 className="kg-h1">{category.name}</h1>
             <p className="text-zinc-400 mt-5 leading-relaxed max-w-xl">{category.short}</p>
             <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={farmingtoolsCategoryUrl(category.slug)}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="cat-buy-online-btn"
+                className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md"
+              >
+                Buy Online
+              </a>
               <EnquiryDialog product={category.name} trigger={
-                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Request Price</button>
+                <button data-testid="cat-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk / Dealer Inquiry</button>
               } />
+              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Institutional Supply
+              </Link>
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
@@ -90,7 +102,7 @@ function ModelsSection({ items, category }) {
   if (items.length === 0) {
     return (
       <div className="border border-zinc-800 bg-[#0F0F0F] p-10 text-center">
-        <p className="text-zinc-300">Multiple models available in this category. Please request a quote and we'll share the full catalogue with prices.</p>
+        <p className="text-zinc-300">Multiple models are available in this category. Request the B2B catalogue and our team will share supply details for dealers, bulk buyers and institutions.</p>
         <div className="mt-6">
           <EnquiryDialog product={category.name} trigger={
             <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>

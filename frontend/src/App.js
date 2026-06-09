@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
+import RouteSEO from "@/components/RouteSEO";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Products from "@/pages/Products";
@@ -27,6 +28,7 @@ function App() {
     <div className="App min-h-screen bg-background text-foreground">
       <BrowserRouter>
         <ScrollToTop />
+        <RouteSEO />
         <GAListener />
         <Routes>
           {/* Admin (no header/footer) */}

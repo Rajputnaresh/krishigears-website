@@ -80,7 +80,15 @@ export default function BlogPost() {
 
   useEffect(() => {
     apiClient.get(`/blog/${slug}`)
-      .then((res) => setPost(res.data))
+      .then((res) => {
+        if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
+          setPost(res.data);
+        } else if (SAMPLE[slug]) {
+          setPost(SAMPLE[slug]);
+        } else {
+          setNotFound(true);
+        }
+      })
       .catch(() => {
         if (SAMPLE[slug]) setPost(SAMPLE[slug]);
         else setNotFound(true);

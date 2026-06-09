@@ -3,8 +3,7 @@ import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
   Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight
 } from "lucide-react";
-import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES } from "@/data/catalog";
-import EnquiryDialog from "@/components/EnquiryDialog";
+import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, FARMINGTOOLS_URL } from "@/data/catalog";
 import ProductCard from "@/components/ProductCard";
 import { useEffect, useState } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
@@ -25,8 +24,8 @@ export default function Home() {
       apiClient.get("/products"),
     ])
       .then(([feat, all]) => {
-        const featured = feat.data || [];
-        const allList = all.data || [];
+        const featured = Array.isArray(feat.data) ? feat.data : [];
+        const allList = Array.isArray(all.data) ? all.data : [];
         const ids = new Set(featured.map((p) => p.slug));
         const fillers = allList.filter((p) => !ids.has(p.slug));
         setFeaturedProducts([...featured, ...fillers].slice(0, 6));
@@ -39,8 +38,8 @@ export default function Home() {
   const [videos, setVideos] = useState([]);
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    apiClient.get("/videos").then((r) => setVideos(r.data || [])).catch(() => setVideos([]));
-    apiClient.get("/reviews").then((r) => setReviews(r.data || [])).catch(() => setReviews([]));
+    apiClient.get("/videos").then((r) => setVideos(Array.isArray(r.data) ? r.data : [])).catch(() => setVideos([]));
+    apiClient.get("/reviews").then((r) => setReviews(Array.isArray(r.data) ? r.data : [])).catch(() => setReviews([]));
     // apiClient is a module-level stable import — mount-only fetch.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -67,24 +66,33 @@ export default function Home() {
               <span className="block text-zinc-500 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.3em]">HAMESHA.</span>
             </h1>
             <p className="mt-6 text-zinc-400 text-lg max-w-2xl leading-relaxed">
-              Premium agricultural machinery, genuine spare parts and end-to-end support — delivered across India. Power tillers, weeders, brush cutters, sprayers, reapers and more, built for real farms.
+              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                to="/products"
-                data-testid="hero-explore-btn"
+              <a
+                href={FARMINGTOOLS_URL}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="hero-buy-online"
                 className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md transition"
               >
-                Explore Products
+                Buy Online
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+              </a>
+              <Link
+                to="/become-a-dealer"
+                data-testid="hero-dealer-btn"
+                className="inline-flex items-center gap-2 border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
+              >
+                Become Dealer
               </Link>
-              <EnquiryDialog
-                trigger={
-                  <button data-testid="hero-enquiry-btn" className="inline-flex items-center gap-2 border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition">
-                    Request Price
-                  </button>
-                }
-              />
+              <Link
+                to="/bulk-order"
+                data-testid="hero-bulk-btn"
+                className="inline-flex items-center gap-2 border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
+              >
+                Bulk Order Inquiry
+              </Link>
             </div>
 
             {/* Quick stats */}
@@ -188,8 +196,8 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
-              <div className="kg-eyebrow">Bestsellers</div>
-              <h2 className="kg-h2 mt-3">Featured Equipment.</h2>
+              <div className="kg-eyebrow">Products We Supply</div>
+              <h2 className="kg-h2 mt-3">Featured B2B equipment.</h2>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -217,10 +225,10 @@ export default function Home() {
             <div className="kg-eyebrow">About KrishiGears</div>
             <h2 className="kg-h2 mt-3 text-balance">Built by farmers. <span className="text-lime-500">For farmers.</span></h2>
             <p className="text-zinc-400 mt-6 leading-relaxed">
-              KrishiGears is India's trusted name in premium agricultural machinery — bringing rugged, fuel-efficient farming equipment within reach of every Indian farmer. From smallholders to large contractors, our machines are built tough and backed by genuine warranty support.
+              KrishiGears is India's trusted B2B agricultural machinery brand for dealers, distributors, FPOs, contractors, institutions and OEM partners. Our range is built for rugged field use and backed by genuine warranty support.
             </p>
             <p className="text-zinc-400 mt-4 leading-relaxed">
-              We don't just sell machines. We deliver productivity, dignity and progress — directly to your doorstep, anywhere in India.
+              We support serious procurement with GST invoicing, bulk dispatch coordination, genuine spare parts and dealer enablement. Retail orders are fulfilled through FarmingTools.in.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[

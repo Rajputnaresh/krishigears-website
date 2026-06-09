@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE = "https://krishigears.in";
+const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
 const DEFAULT_OG_IMAGE = `${SITE}/splash-1200.jpg`;
 const DEFAULT_DESC =
   "KrishiGears — premium agricultural machinery brand. Bulk supply, dealer network, OEM distribution and institutional procurement of power tillers, weeders, brush cutters & farm tools across India.";
@@ -16,7 +16,8 @@ export default function SEO({
   noindex = false,
   children,
 }) {
-  const url = `${SITE}${path}`;
+  const cleanPath = path === "/" ? "/" : `/${path.replace(/^\/+|\/+$/g, "")}`;
+  const url = `${SITE}${cleanPath}`;
   const fullTitle = title ? `${title} | KrishiGears` : "KrishiGears — Bulk Supply, Dealer Network & OEM Distribution of Farm Machinery";
 
   return (

@@ -37,7 +37,10 @@ export default function Blog() {
 
   useEffect(() => {
     apiClient.get("/blog")
-      .then((res) => setPosts(res.data?.length ? res.data : SAMPLE_POSTS))
+      .then((res) => {
+        const list = Array.isArray(res.data) ? res.data : [];
+        setPosts(list.length ? list : SAMPLE_POSTS);
+      })
       .catch(() => setPosts(SAMPLE_POSTS));
   }, []);
 

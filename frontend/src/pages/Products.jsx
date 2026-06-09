@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { CATEGORIES } from "@/data/catalog";
-import EnquiryDialog from "@/components/EnquiryDialog";
+import { CATEGORIES, FARMINGTOOLS_URL } from "@/data/catalog";
 
 export default function Products() {
   return (
     <div data-testid="products-page" className="kg-section">
       <div className="max-w-[1400px] mx-auto">
-        <div className="kg-eyebrow">Product Catalogue</div>
-        <h1 className="kg-h1 mt-4 max-w-3xl">A complete range of <span className="text-lime-500">agricultural machinery.</span></h1>
+        <div className="kg-eyebrow">Products We Supply</div>
+        <h1 className="kg-h1 mt-4 max-w-3xl">Agricultural machinery for <span className="text-lime-500">B2B supply.</span></h1>
         <p className="text-zinc-400 mt-6 max-w-2xl leading-relaxed">
-          Explore our 19 product categories — from heavy-duty tillers to precision sprayers and genuine spare parts. Tap any category to view models, specs and request a quote.
+          Explore our 19 product categories for dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution. Retail buyers should purchase online through FarmingTools.in.
         </p>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
@@ -47,11 +46,10 @@ export default function Products() {
             <h3 className="font-display font-bold text-2xl mt-2">Need a bulk quotation or government tender pricing?</h3>
             <p className="text-zinc-400 mt-2 text-sm">FPOs, agri input stores, contractors and institutions — talk to us.</p>
           </div>
-          <div className="flex gap-3">
-            <Link to="/bulk-order" data-testid="products-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Bulk Order</Link>
-            <EnquiryDialog trigger={
-              <button data-testid="products-enquiry" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Request Price</button>
-            } />
+          <div className="flex flex-wrap gap-3">
+            <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Buy Online</a>
+            <Link to="/bulk-order" data-testid="products-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
+            <Link to="/become-a-dealer" data-testid="products-dealer-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Become Dealer</Link>
           </div>
         </div>
       </div>

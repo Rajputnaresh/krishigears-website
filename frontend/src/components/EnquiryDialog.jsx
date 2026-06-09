@@ -39,9 +39,9 @@ export default function EnquiryDialog({ trigger, product = "" }) {
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="bg-[#0A0A0A] border-zinc-800 text-white max-w-lg">
         <DialogHeader>
-          <DialogTitle className="font-display text-2xl">Request Price / Enquiry</DialogTitle>
+          <DialogTitle className="font-display text-2xl">Bulk / Dealer Inquiry</DialogTitle>
           <DialogDescription className="text-zinc-400">
-            Fill in your details. Our team will contact you within 24 hours with the best price.
+            Share your requirement. Our team will contact you within 24 hours for dealer, bulk order or institutional supply support.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={submit} className="space-y-4 mt-2">
