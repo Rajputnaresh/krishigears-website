@@ -54,6 +54,15 @@ export const COMPANY = {
   gst: "08EQLPD7160R1Z2",
 };
 
+// FarmingTools.in — sister B2C ecommerce site for retail purchases.
+// KrishiGears.in is the B2B / dealer / OEM / institutional brand site.
+// All retail "buy" intent on KrishiGears redirects here.
+export const FARMINGTOOLS_URL = "https://farmingtools.in";
+export const farmingtoolsProductUrl = (slug) =>
+  slug ? `${FARMINGTOOLS_URL}/products/${slug}` : FARMINGTOOLS_URL;
+export const farmingtoolsCategoryUrl = (slug) =>
+  slug ? `${FARMINGTOOLS_URL}/category/${slug}` : FARMINGTOOLS_URL;
+
 export const CATEGORIES = [
   { slug: "power-weeders",            name: "Power Weeders",            icon: Sprout,   image: COVER.weeder,        short: "Petrol & diesel power weeders from 5HP to 8.5HP. FMTTI tested & subsidy approved.", featured: true },
   { slug: "brush-cutters",            name: "Brush Cutters",            icon: Scissors, image: COVER.brushCutter,   short: "1.6HP to 3HP brush cutters — 2-stroke & 4-stroke, 35cc to 52cc, SRFMTTI tested.", featured: true },
