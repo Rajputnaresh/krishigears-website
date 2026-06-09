@@ -58,10 +58,83 @@ export const COMPANY = {
 // KrishiGears.in is the B2B / dealer / OEM / institutional brand site.
 // All retail "buy" intent on KrishiGears redirects here.
 export const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
-export const farmingtoolsProductUrl = (slug) =>
-  slug ? `${FARMINGTOOLS_URL}/products/${slug}` : FARMINGTOOLS_URL;
-export const farmingtoolsCategoryUrl = (slug) =>
-  slug ? `${FARMINGTOOLS_URL}/collections/${slug}` : FARMINGTOOLS_URL;
+
+const FARMINGTOOLS_COLLECTION_HANDLES = {
+  "agricultural-accessories": "accessories",
+  "agricultural-engines": "engines-motors",
+  "agricultural-spare-parts": "spare-parts",
+  "battery-sprayers": "battery-sprayers",
+  "brush-cutter-spare-parts": "brush-cutter-spare-parts",
+  "brush-cutters": "brush-cutters",
+  "chaff-cutters": "chaff-cutters",
+  "chain-saws": "chainsaws",
+  "earth-augers": "earth-augers",
+  "htp-pumps": "htp-sprayers",
+  "mini-cultivators": "mini-power-tillers",
+  "power-sprayers": "power-sprayers",
+  "power-tillers": "power-weeders-tillers",
+  "power-weeder-spare-parts": "spare-parts",
+  "power-weeders": "power-weeders",
+  "reapers": "power-reapers",
+  "rotavator-blades": "tiller-attachments",
+  "seeders": "seeders",
+  "water-pumps": "water-pumps",
+};
+
+const FARMINGTOOLS_PRODUCT_HANDLES = {
+  "nb-icd-c178": "royal-kissan-nb-icd-c178",
+  "nb-icd-c186": "royal-kissan-nb-icd-c186",
+  "np-icp-c177": "royal-kissan-np-icp-c177",
+  "nsm-bc-c35": "royal-kissan-nsm-bc-c35-sp-bp",
+  "nsm-bc-c43": "royal-kissan-nsm-bc-c43-sp-bp",
+  "nsm-bc-c52": "royal-kissan-nsm-bc-c52-sp-bp",
+  "nsm-csp-c58": "royal-kissan-nsm-csp-c58-18-22",
+  "nsm-ea-p52": "royal-kissan-nsm-ea-p52",
+  "nsm-ea-p55": "royal-kissan-nsm-ea-p55",
+  "nsm-ea-p68": "royal-kissan-nsm-ea-p68",
+  "rk-170f": "royal-kissan-nb-icp-c170-lce",
+  "rk-173f-diesel": "royal-kissan-rk-173f",
+  "rk-177f-wolf": "royal-kissan-rk-170f",
+  "rk-baby-weeder": "royal-kissan-rk-bw-p63",
+  "rk-bc-p50": "royal-kissan-rk-bc-p50-sp",
+  "rk-bc-up35": "royal-kissan-rk-bc-up35-bp-sp",
+  "rk-bc-up43": "royal-kissan-rk-bc-up43-sp",
+  "rk-bc-up52": "royal-kissan-rk-bc-up52-sp-bp",
+  "rk-chaff-cutter": "royal-kissan-rk-cc-3-2",
+  "rk-csp-up58": "royal-kissan-rk-csp-up58-18-22",
+  "rk-csp-up63": "royal-kissan-rk-csp-up63-18-22",
+  "rk-ea-p52": "royal-kissan-rk-ea-p52",
+  "rk-ea-p68": "royal-kissan-rk-ea-p68",
+  "rk-icd-up186-sh": "royal-kissan-rk-icd-up186-sh",
+  "rk-icp-p170-lde": "royal-kissan-rk-icp-p170-lde",
+  "rk-icp-p177-lde": "royal-kissan-rk-icp-p177-lde",
+  "rk-icp-up170-sh": "royal-kissan-rk-icp-up170-sh-ultra-premium",
+  "rk-pw-wp-d80": "royal-kissan-rk-pw-wp-d80",
+  "rk-pw-wp-p80": "royal-kissan-rk-pw-wp-p80",
+  "rk-su80": "royal-kissan-rk-su80",
+  "rk-wp-p02": "royal-kissan-rk-wp-p02",
+  "rk-wp-p03": "royal-kissan-rk-wp-p03",
+  "rk-wp-p1-5": "royal-kissan-rk-wp-p1-5",
+  "rk-wp-up3": "royal-kissan-rk-wp-up3",
+  "wqd10-11-075a": "royal-kissan-wqd10-11-0-75a",
+  "wqd15-10-11a": "royal-kissan-wqd15-10-1-1fa",
+  "wqd15-15-15fa": "royal-kissan-wqd15-15-1-5fa",
+};
+
+export const farmingtoolsCategoryUrl = (slug) => {
+  const handle = FARMINGTOOLS_COLLECTION_HANDLES[slug] || slug;
+  return handle ? `${FARMINGTOOLS_URL}/collections/${handle}` : FARMINGTOOLS_URL;
+};
+
+export const farmingtoolsProductUrl = (productOrSlug, categorySlug) => {
+  const slug = typeof productOrSlug === "object" ? productOrSlug?.slug : productOrSlug;
+  const fallbackCategory = typeof productOrSlug === "object" ? productOrSlug?.category : categorySlug;
+  const handle = FARMINGTOOLS_PRODUCT_HANDLES[slug];
+
+  if (handle) return `${FARMINGTOOLS_URL}/products/${handle}`;
+  if (fallbackCategory) return farmingtoolsCategoryUrl(fallbackCategory);
+  return FARMINGTOOLS_URL;
+};
 
 export const CATEGORIES = [
   { slug: "power-weeders",            name: "Power Weeders",            icon: Sprout,   image: COVER.weeder,        short: "Petrol & diesel power weeders from 5HP to 8.5HP. FMTTI tested & subsidy approved.", featured: true },

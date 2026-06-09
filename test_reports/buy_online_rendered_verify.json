@@ -1,0 +1,402 @@
+{
+  "summary": {
+    "products": 50,
+    "categories": 15,
+    "product_mismatches": 0,
+    "category_mismatches": 0
+  },
+  "products": [
+    {
+      "product_page": "https://krishigears.in/products/rk-hose-pipe",
+      "expected": "https://farmingtools.in/collections/accessories",
+      "actual": "https://farmingtools.in/collections/accessories",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-engine",
+      "expected": "https://farmingtools.in/collections/engines-motors",
+      "actual": "https://farmingtools.in/collections/engines-motors",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-maize-thresher",
+      "expected": "https://farmingtools.in/collections/engines-motors",
+      "actual": "https://farmingtools.in/collections/engines-motors",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-crankshaft",
+      "expected": "https://farmingtools.in/collections/spare-parts",
+      "actual": "https://farmingtools.in/collections/spare-parts",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-piston-ring",
+      "expected": "https://farmingtools.in/collections/spare-parts",
+      "actual": "https://farmingtools.in/collections/spare-parts",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-sprayer-battery",
+      "expected": "https://farmingtools.in/collections/battery-sprayers",
+      "actual": "https://farmingtools.in/collections/battery-sprayers",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-carburetor",
+      "expected": "https://farmingtools.in/collections/brush-cutter-spare-parts",
+      "actual": "https://farmingtools.in/collections/brush-cutter-spare-parts",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-bc-c35",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-bc-c35-sp-bp",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-bc-c35-sp-bp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-bc-c43",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-bc-c43-sp-bp",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-bc-c43-sp-bp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-bc-c52",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-bc-c52-sp-bp",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-bc-c52-sp-bp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-bc-p50",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-bc-p50-sp",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-bc-p50-sp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-bc-up35",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-bc-up35-bp-sp",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-bc-up35-bp-sp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-bc-up43",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-bc-up43-sp",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-bc-up43-sp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-bc-up52",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-bc-up52-sp-bp",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-bc-up52-sp-bp",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-grass-mower",
+      "expected": "https://farmingtools.in/collections/brush-cutters",
+      "actual": "https://farmingtools.in/collections/brush-cutters",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-chaff-cutter",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-cc-3-2",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-cc-3-2",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-csp-c58",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-csp-c58-18-22",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-csp-c58-18-22",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-csp-up58",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-csp-up58-18-22",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-csp-up58-18-22",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-csp-up63",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-csp-up63-18-22",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-csp-up63-18-22",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-ea-p52",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-ea-p52",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-ea-p52",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-ea-p55",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-ea-p55",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-ea-p55",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nsm-ea-p68",
+      "expected": "https://farmingtools.in/products/royal-kissan-nsm-ea-p68",
+      "actual": "https://farmingtools.in/products/royal-kissan-nsm-ea-p68",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-ea-p52",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-ea-p52",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-ea-p52",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-ea-p68",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-ea-p68",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-ea-p68",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-mini-inter",
+      "expected": "https://farmingtools.in/collections/mini-power-tillers",
+      "actual": "https://farmingtools.in/collections/mini-power-tillers",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-sprayer-power",
+      "expected": "https://farmingtools.in/collections/power-sprayers",
+      "actual": "https://farmingtools.in/collections/power-sprayers",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-recoil-starter",
+      "expected": "https://farmingtools.in/collections/spare-parts",
+      "actual": "https://farmingtools.in/collections/spare-parts",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nb-icd-c178",
+      "expected": "https://farmingtools.in/products/royal-kissan-nb-icd-c178",
+      "actual": "https://farmingtools.in/products/royal-kissan-nb-icd-c178",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/nb-icd-c186",
+      "expected": "https://farmingtools.in/products/royal-kissan-nb-icd-c186",
+      "actual": "https://farmingtools.in/products/royal-kissan-nb-icd-c186",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/np-icp-c177",
+      "expected": "https://farmingtools.in/products/royal-kissan-np-icp-c177",
+      "actual": "https://farmingtools.in/products/royal-kissan-np-icp-c177",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-170f",
+      "expected": "https://farmingtools.in/products/royal-kissan-nb-icp-c170-lce",
+      "actual": "https://farmingtools.in/products/royal-kissan-nb-icp-c170-lce",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-173f-diesel",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-173f",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-173f",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-177f-wolf",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-170f",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-170f",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-baby-weeder",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-bw-p63",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-bw-p63",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-icd-up186-sh",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-icd-up186-sh",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-icd-up186-sh",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-icp-p170-lde",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-icp-p170-lde",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-icp-p170-lde",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-icp-p177-lde",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-icp-p177-lde",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-icp-p177-lde",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-icp-up170-sh",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-icp-up170-sh-ultra-premium",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-icp-up170-sh-ultra-premium",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-reaper",
+      "expected": "https://farmingtools.in/collections/power-reapers",
+      "actual": "https://farmingtools.in/collections/power-reapers",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-seeder",
+      "expected": "https://farmingtools.in/collections/seeders",
+      "actual": "https://farmingtools.in/collections/seeders",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-pw-wp-d80",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-pw-wp-d80",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-pw-wp-d80",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-pw-wp-p80",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-pw-wp-p80",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-pw-wp-p80",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-su80",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-su80",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-su80",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-wp-p02",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-wp-p02",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-wp-p02",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-wp-p03",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-wp-p03",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-wp-p03",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-wp-p1-5",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-wp-p1-5",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-wp-p1-5",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/rk-wp-up3",
+      "expected": "https://farmingtools.in/products/royal-kissan-rk-wp-up3",
+      "actual": "https://farmingtools.in/products/royal-kissan-rk-wp-up3",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/wqd10-11-075a",
+      "expected": "https://farmingtools.in/products/royal-kissan-wqd10-11-0-75a",
+      "actual": "https://farmingtools.in/products/royal-kissan-wqd10-11-0-75a",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/wqd15-10-11a",
+      "expected": "https://farmingtools.in/products/royal-kissan-wqd15-10-1-1fa",
+      "actual": "https://farmingtools.in/products/royal-kissan-wqd15-10-1-1fa",
+      "status": "ok"
+    },
+    {
+      "product_page": "https://krishigears.in/products/wqd15-15-15fa",
+      "expected": "https://farmingtools.in/products/royal-kissan-wqd15-15-1-5fa",
+      "actual": "https://farmingtools.in/products/royal-kissan-wqd15-15-1-5fa",
+      "status": "ok"
+    }
+  ],
+  "categories": [
+    {
+      "page": "https://krishigears.in/products/category/agricultural-accessories",
+      "expected": "https://farmingtools.in/collections/accessories",
+      "actual": "https://farmingtools.in/collections/accessories",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/agricultural-engines",
+      "expected": "https://farmingtools.in/collections/engines-motors",
+      "actual": "https://farmingtools.in/collections/engines-motors",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/agricultural-spare-parts",
+      "expected": "https://farmingtools.in/collections/spare-parts",
+      "actual": "https://farmingtools.in/collections/spare-parts",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/battery-sprayers",
+      "expected": "https://farmingtools.in/collections/battery-sprayers",
+      "actual": "https://farmingtools.in/collections/battery-sprayers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/brush-cutters",
+      "expected": "https://farmingtools.in/collections/brush-cutters",
+      "actual": "https://farmingtools.in/collections/brush-cutters",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/chaff-cutters",
+      "expected": "https://farmingtools.in/collections/chaff-cutters",
+      "actual": "https://farmingtools.in/collections/chaff-cutters",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/chain-saws",
+      "expected": "https://farmingtools.in/collections/chainsaws",
+      "actual": "https://farmingtools.in/collections/chainsaws",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/earth-augers",
+      "expected": "https://farmingtools.in/collections/earth-augers",
+      "actual": "https://farmingtools.in/collections/earth-augers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/mini-cultivators",
+      "expected": "https://farmingtools.in/collections/mini-power-tillers",
+      "actual": "https://farmingtools.in/collections/mini-power-tillers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/power-sprayers",
+      "expected": "https://farmingtools.in/collections/power-sprayers",
+      "actual": "https://farmingtools.in/collections/power-sprayers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/power-tillers",
+      "expected": "https://farmingtools.in/collections/power-weeders-tillers",
+      "actual": "https://farmingtools.in/collections/power-weeders-tillers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/power-weeders",
+      "expected": "https://farmingtools.in/collections/power-weeders",
+      "actual": "https://farmingtools.in/collections/power-weeders",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/reapers",
+      "expected": "https://farmingtools.in/collections/power-reapers",
+      "actual": "https://farmingtools.in/collections/power-reapers",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/seeders",
+      "expected": "https://farmingtools.in/collections/seeders",
+      "actual": "https://farmingtools.in/collections/seeders",
+      "status": "ok"
+    },
+    {
+      "page": "https://krishigears.in/products/category/water-pumps",
+      "expected": "https://farmingtools.in/collections/water-pumps",
+      "actual": "https://farmingtools.in/collections/water-pumps",
+      "status": "ok"
+    }
+  ]
+}

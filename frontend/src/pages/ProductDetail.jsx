@@ -40,7 +40,7 @@ export default function ProductDetail() {
 
   const category = CATEGORIES.find((c) => c.slug === product.category);
   const waMsg = encodeURIComponent(`Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`);
-  const retailUrl = farmingtoolsProductUrl(product.slug);
+  const retailUrl = farmingtoolsProductUrl(product);
 
   return (
     <div data-testid="product-detail-page" className="kg-section">
