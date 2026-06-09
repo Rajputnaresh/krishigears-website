@@ -32,6 +32,19 @@ const SAMPLE_POSTS = [
   },
 ];
 
+const POST_OVERRIDES = {
+  "power-tiller-buying-guide-india-2026": {
+    slug: "power-tiller-dealer-procurement-checklist",
+    title: "Power Tiller Dealer Procurement Checklist",
+    excerpt: "Dealer, FPO and institutional checklist for range planning, documentation, warranty support and spare-part readiness.",
+    tags: ["Power Tiller", "Dealer Supply"],
+  },
+};
+
+function normalizePost(post) {
+  return { ...post, ...(POST_OVERRIDES[post.slug] || {}) };
+}
+
 export default function Blog() {
   const [posts, setPosts] = useState(null);
 
@@ -39,9 +52,9 @@ export default function Blog() {
     apiClient.get("/blog")
       .then((res) => {
         const list = Array.isArray(res.data) ? res.data : [];
-        setPosts(list.length ? list : SAMPLE_POSTS);
+        setPosts((list.length ? list : SAMPLE_POSTS).map(normalizePost));
       })
-      .catch(() => setPosts(SAMPLE_POSTS));
+      .catch(() => setPosts(SAMPLE_POSTS.map(normalizePost)));
   }, []);
 
   if (posts === null) {

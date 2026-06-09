@@ -4,13 +4,12 @@ import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
 
-const SAMPLE = {
-  "power-tiller-dealer-procurement-checklist": {
-    title: "Power Tiller Dealer Procurement Checklist",
-    cover_image: FIELD_TRACTOR,
-    created_at: "2026-01-15T10:00:00Z",
-    tags: ["Power Tiller", "Dealer Supply"],
-    content: `Power tiller procurement for dealers, FPOs and institutions needs more than a model list. A workable supply plan should cover demand clusters, documentation, warranty process, spare-part readiness and training.
+const PROCUREMENT_POST = {
+  title: "Power Tiller Dealer Procurement Checklist",
+  cover_image: FIELD_TRACTOR,
+  created_at: "2026-01-15T10:00:00Z",
+  tags: ["Power Tiller", "Dealer Supply"],
+  content: `Power tiller procurement for dealers, FPOs and institutions needs more than a model list. A workable supply plan should cover demand clusters, documentation, warranty process, spare-part readiness and training.
 
 ## 1. Define territory demand
 Map crop clusters, soil conditions, service coverage and seasonal demand before committing inventory to a district or institutional program.
@@ -28,7 +27,11 @@ Align spare parts, trained technicians, warranty intake and customer education b
 For dealer, FPO and institutional requirements, confirm dispatch schedule, packaging, service contact and escalation process before the first delivery.
 
 Need a dealer or institutional supply plan? Share the territory, expected volume and service requirements with KrishiGears.`,
-  },
+};
+
+const SAMPLE = {
+  "power-tiller-dealer-procurement-checklist": PROCUREMENT_POST,
+  "power-tiller-buying-guide-india-2026": PROCUREMENT_POST,
   "brush-cutter-maintenance-checklist": {
     title: "Brush Cutter Maintenance: A 10-Point Checklist for Long Life",
     cover_image: PLOWING,
@@ -73,6 +76,10 @@ KrishiGears is an authorized supplier for several state schemes. Contact us with
   },
 };
 
+function normalizePost(slug, post) {
+  return SAMPLE[slug] ? { ...post, ...SAMPLE[slug] } : post;
+}
+
 export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
@@ -82,7 +89,7 @@ export default function BlogPost() {
     apiClient.get(`/blog/${slug}`)
       .then((res) => {
         if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
-          setPost(res.data);
+          setPost(normalizePost(slug, res.data));
         } else if (SAMPLE[slug]) {
           setPost(SAMPLE[slug]);
         } else {
