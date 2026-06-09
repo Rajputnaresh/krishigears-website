@@ -101,21 +101,24 @@ export default function ProductDetail() {
             <p className="text-zinc-400 mt-5 leading-relaxed">{product.warranty}</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
+              <EnquiryDialog product={product.name} trigger={
+                <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
+              } />
+              <Link to="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Become Dealer
+              </Link>
+              <Link to="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Institutional Supply
+              </Link>
               <a
                 href={retailUrl}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="product-buy-online-btn"
-                className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md"
+                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
               >
-                Buy Online
+                Buy Online at FarmingTools
               </a>
-              <EnquiryDialog product={product.name} trigger={
-                <button data-testid="product-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk / Dealer Inquiry</button>
-              } />
-              <Link to="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
-                Institutional Supply
-              </Link>
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
@@ -144,7 +147,7 @@ export default function ProductDetail() {
 
         {/* Specifications */}
         <div className="mt-20">
-          <div className="kg-eyebrow">Command Center</div>
+          <div className="kg-eyebrow">B2B Reference Specs</div>
           <h2 className="kg-h2 mt-3">Technical <span className="text-lime-500">Specifications.</span></h2>
           <div className="mt-8 border border-zinc-800">
             <div className="grid grid-cols-1 md:grid-cols-2">

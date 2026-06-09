@@ -1,0 +1,1137 @@
+{
+  "summary": {
+    "pages_rendered": 80,
+    "missing_titles": 0,
+    "missing_descriptions": 0,
+    "homepage_canonical_reuse": 0,
+    "canonical_check_count": 0,
+    "missing_og_title": 0,
+    "missing_og_description": 0,
+    "robots_txt_status": "ok",
+    "sitemap_url_count": 30,
+    "structured_data_pages": 80,
+    "static_html_caveat": "Metadata is injected client-side by React Helmet; rendered metadata is valid, but raw static HTML still has fallback metadata."
+  },
+  "pages": [
+    {
+      "page_url": "https://krishigears.in/",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/about",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/about",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/dealer-network",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/dealer-network",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/become-a-dealer",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/become-a-dealer",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/bulk-order",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/bulk-order",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/contact",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/contact",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/warranty-and-support",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/warranty-and-support",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/blog",
+      "page_type": "core",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/blog",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/power-weeders",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/power-weeders",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/brush-cutters",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/brush-cutters",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/chain-saws",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/chain-saws",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/earth-augers",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/earth-augers",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/water-pumps",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/water-pumps",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/power-sprayers",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/power-sprayers",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/battery-sprayers",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/battery-sprayers",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/reapers",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/reapers",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/chaff-cutters",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/chaff-cutters",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/agricultural-engines",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/agricultural-engines",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/seeders",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/seeders",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/mini-cultivators",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/mini-cultivators",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/power-tillers",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/power-tillers",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/agricultural-spare-parts",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/agricultural-spare-parts",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/category/agricultural-accessories",
+      "page_type": "category",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/category/agricultural-accessories",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "page_type": "seo_landing",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-icp-up170-sh",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-icp-up170-sh",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-177f-wolf",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-177f-wolf",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-170f",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-170f",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-icp-p177-lde",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-icp-p177-lde",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-icp-p170-lde",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-icp-p170-lde",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/np-icp-c177",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/np-icp-c177",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-173f-diesel",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-173f-diesel",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-icd-up186-sh",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-icd-up186-sh",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nb-icd-c186",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nb-icd-c186",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nb-icd-c178",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nb-icd-c178",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-bc-up52",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-bc-up52",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-bc-up43",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-bc-up43",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-bc-up35",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-bc-up35",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-bc-p50",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-bc-p50",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-bc-c52",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-bc-c52",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-bc-c43",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-bc-c43",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-bc-c35",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-bc-c35",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-csp-up58",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-csp-up58",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-csp-up63",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-csp-up63",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-csp-c58",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-csp-c58",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-ea-p68",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-ea-p68",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-ea-p52",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-ea-p52",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-ea-p68",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-ea-p68",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-ea-p52",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-ea-p52",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/nsm-ea-p55",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/nsm-ea-p55",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-wp-up3",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-wp-up3",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-wp-p03",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-wp-p03",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-wp-p02",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-wp-p02",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-wp-p1-5",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-wp-p1-5",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-pw-wp-d80",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-pw-wp-d80",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-pw-wp-p80",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-pw-wp-p80",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-su80",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-su80",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/wqd10-11-075a",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/wqd10-11-075a",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/wqd15-10-11a",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/wqd15-10-11a",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/wqd15-15-15fa",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/wqd15-15-15fa",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-reaper",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-reaper",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-chaff-cutter",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-chaff-cutter",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-maize-thresher",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-maize-thresher",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-grass-mower",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-grass-mower",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-mini-inter",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-mini-inter",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-baby-weeder",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-baby-weeder",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-seeder",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-seeder",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-engine",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-engine",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-sprayer-power",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-sprayer-power",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-sprayer-battery",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-sprayer-battery",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-hose-pipe",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-hose-pipe",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-crankshaft",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-crankshaft",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-piston-ring",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-piston-ring",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-carburetor",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-carburetor",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    },
+    {
+      "page_url": "https://krishigears.in/products/rk-recoil-starter",
+      "page_type": "product",
+      "title_present": true,
+      "description_present": true,
+      "canonical": "https://krishigears.in/products/rk-recoil-starter",
+      "canonical_status": "ok",
+      "robots": "index, follow, max-image-preview:large",
+      "og_title_present": true,
+      "og_description_present": true,
+      "schema_types": [
+        "LocalBusiness"
+      ]
+    }
+  ]
+}

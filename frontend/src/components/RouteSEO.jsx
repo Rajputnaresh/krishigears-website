@@ -16,7 +16,7 @@ const STATIC_META = {
   "/products": {
     title: "Products We Supply",
     description:
-      "Explore KrishiGears agricultural machinery supplied for dealers, bulk orders, institutions and OEM distribution. Retail buyers can purchase online through FarmingTools.in.",
+      "Explore KrishiGears agricultural machinery supplied for dealers, bulk orders, institutions and OEM distribution. Retail demand is routed to FarmingTools.in.",
   },
   "/dealer-network": {
     title: "Dealer Network",
@@ -88,8 +88,8 @@ export default function RouteSEO() {
     if (category) {
       return (
         <SEO
-          title={`${category.name} for B2B Supply`}
-          description={`${category.name} supplied by KrishiGears for dealers, bulk buyers, FPOs, contractors and institutions across India. Retail purchase links go to FarmingTools.in.`}
+          title={`${category.name} Supply Category`}
+          description={`${category.name} supply category for KrishiGears dealers, distributors, FPOs, contractors, OEM partners and institutional procurement teams across India.`}
           path={path}
           image={category.image}
         />
@@ -104,7 +104,7 @@ export default function RouteSEO() {
       return (
         <SEO
           title={`${product.name}${product.model ? ` ${product.model}` : ""}`}
-          description={`${product.name} from KrishiGears for dealer, bulk order and institutional agricultural machinery supply. Retail buyers can purchase through FarmingTools.in.`}
+          description={`${product.name} from KrishiGears for dealer, bulk order, distributor and institutional agricultural machinery supply. Consumer transactions are routed to FarmingTools.in.`}
           path={path}
           image={product.images?.[0]}
           type="product"
@@ -120,7 +120,7 @@ export default function RouteSEO() {
       return (
         <SEO
           title={page.title}
-          description={`${page.title} from KrishiGears for B2B dealer supply, OEM distribution, bulk orders, FPOs, contractors and institutional procurement across India.`}
+          description={`${page.title} through KrishiGears for dealer onboarding, distributor programs, OEM partnerships, FPO supply, government requirements and institutional procurement.`}
           path={path}
         />
       );

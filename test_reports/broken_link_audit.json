@@ -1,0 +1,1770 @@
+{
+  "summary": {
+    "pages_crawled": 80,
+    "links_found": 2663,
+    "unique_targets": 165,
+    "broken_404_links": 0,
+    "farmingtools_product_targets_checked": 37,
+    "farmingtools_collection_targets_checked": 28,
+    "note": "FarmingTools product/collection targets were validated against live Shopify sitemaps to avoid CDN rate-limit false positives.",
+    "buy_online_product_pages_checked": 50,
+    "buy_online_category_pages_checked": 15,
+    "buy_online_product_targets_checked": 37,
+    "buy_online_collection_fallbacks_checked": 13,
+    "buy_online_category_collection_targets_checked": 15,
+    "broken_buy_online_targets": 0
+  },
+  "broken_links": [],
+  "sampled_links": [
+    {
+      "source": "https://krishigears.in/",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Buy Online",
+      "href": "https://farmingtools.in/",
+      "status": 200,
+      "final": "https://farmingtools.in/"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Become Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Bulk Order Inquiry",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "View all 19 categories",
+      "href": "https://krishigears.in/products",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "CATEGORY Power Weeders Dealer, FPO and institutional supply for power weeder ranges with service and spare-part support. Browse Range",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "CATEGORY Brush Cutters Distributor-ready brush cutter supply for dealers, contractors, institutions and service networks. Browse Range",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "CATEGORY Chain Saws B2B chain saw supply for forestry, farm maintenance, dealer networks and institutional procurement. Browse Range",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "CATEGORY Earth Augers Bulk and dealer supply for earth auger programs across plantation, fencing and government requirements. Browse Range",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Water Pumps View \u2192",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Sprayers View \u2192",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Battery Sprayers View \u2192",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Reapers View \u2192",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Chaff Cutters View \u2192",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Agricultural Engines View \u2192",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Seeders View \u2192",
+      "href": "https://krishigears.in/products/category/seeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/seeders"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Mini Cultivators View \u2192",
+      "href": "https://krishigears.in/products/category/mini-cultivators",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/mini-cultivators"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Tillers View \u2192",
+      "href": "https://krishigears.in/products/category/power-tillers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-tillers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Agricultural Spare Parts View \u2192",
+      "href": "https://krishigears.in/products/category/agricultural-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Weeder Spare Parts View \u2192",
+      "href": "https://krishigears.in/products/category/power-weeder-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeder-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Brush Cutter Spare Parts View \u2192",
+      "href": "https://krishigears.in/products/category/brush-cutter-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutter-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "HTP Pumps View \u2192",
+      "href": "https://krishigears.in/products/category/htp-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/htp-pumps"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Rotavator Blades View \u2192",
+      "href": "https://krishigears.in/products/category/rotavator-blades",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/rotavator-blades"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Agricultural Accessories View \u2192",
+      "href": "https://krishigears.in/products/category/agricultural-accessories",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-accessories"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%20Ultra-Premium%20Petrol%20Power%20Weeder%20%E2%80%94%205.17%20HP%20(RK-ICP-UP170-SH)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%20Ultra-Premium%20Petrol%20Power%20Weeder%20%E2%80%94%205.17%20HP%20(RK-ICP-UP170-SH)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS Ultra-Premium Petrol Power Weeder \u2014 5.17 HP RK-ICP-UP170-SH B2B SUPPLY",
+      "href": "https://krishigears.in/products/rk-icp-up170-sh",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/rk-icp-up170-sh"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.44%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-177F-WOLF%20(RK-177F-WOLF)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.44%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-177F-WOLF%20(RK-177F-WOLF)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS 5.44 HP Petrol Power Weeder \u2014 RK-177F-WOLF RK-177F-WOLF B2B SUPPLY",
+      "href": "https://krishigears.in/products/rk-177f-wolf",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/rk-177f-wolf"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-170F%20(RK-170F)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-170F%20(RK-170F)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS 5.5 HP Petrol Power Weeder \u2014 RK-170F RK-170F B2B SUPPLY",
+      "href": "https://krishigears.in/products/rk-170f",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/rk-170f"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%207.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-ICP-P177-LDE%20(RK-ICP-P177-LDE)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%207.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-ICP-P177-LDE%20(RK-ICP-P177-LDE)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS 7.5 HP Petrol Power Weeder \u2014 RK-ICP-P177-LDE RK-ICP-P177-LDE B2B SUPPLY",
+      "href": "https://krishigears.in/products/rk-icp-p177-lde",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/rk-icp-p177-lde"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-ICP-P170-LDE%20(ATV%20Tyres)%20(RK-ICP-P170-LDE)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%205.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20RK-ICP-P170-LDE%20(ATV%20Tyres)%20(RK-ICP-P170-LDE)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS 5.5 HP Petrol Power Weeder \u2014 RK-ICP-P170-LDE (ATV Tyres) RK-ICP-P170-LDE B2B SUPPLY",
+      "href": "https://krishigears.in/products/rk-icp-p170-lde",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/rk-icp-p170-lde"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%20Classic%207.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20NP-ICP-C177%20(NP-ICP-C177)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%27m%20interested%20in%20Classic%207.5%20HP%20Petrol%20Power%20Weeder%20%E2%80%94%20NP-ICP-C177%20(NP-ICP-C177)%20for%20bulk%2Fdealer%2Finstitutional%20supply.%20Please%20share%20details."
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "POWER WEEDERS Classic 7.5 HP Petrol Power Weeder \u2014 NP-ICP-C177 NP-ICP-C177 B2B SUPPLY",
+      "href": "https://krishigears.in/products/np-icp-c177",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/np-icp-c177"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Learn more about us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Apply as Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "View Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Contact Sales",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "",
+      "href": "https://krishigears.in/about#",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/about",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Power Weeders Dealer, FPO and institutional supply\u2026",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Brush Cutters Distributor-ready brush cutter suppl\u2026",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Chain Saws B2B chain saw supply for forestry, f\u2026",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Earth Augers Bulk and dealer supply for earth aug\u2026",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Water Pumps Water pump supply category for deale\u2026",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Power Sprayers Power sprayer supply for plantation \u2026",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Battery Sprayers Battery sprayer supply for dealer sh\u2026",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Reapers Reaper supply for dealer territories\u2026",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Chaff Cutters Chaff cutter supply for dairy cluste\u2026",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Agricultural Engines Agricultural engine supply for OEM p\u2026",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Seeders Seeder supply programs for dealers, \u2026",
+      "href": "https://krishigears.in/products/category/seeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/seeders"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Mini Cultivators Mini cultivator supply for dealers, \u2026",
+      "href": "https://krishigears.in/products/category/mini-cultivators",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/mini-cultivators"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Power Tillers Power tiller supply category for dea\u2026",
+      "href": "https://krishigears.in/products/category/power-tillers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-tillers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Agricultural Spare Parts Genuine spare-part supply for dealer\u2026",
+      "href": "https://krishigears.in/products/category/agricultural-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Power Weeder Spare Parts Power weeder spare-part supply for d\u2026",
+      "href": "https://krishigears.in/products/category/power-weeder-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeder-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Brush Cutter Spare Parts Brush cutter spare-part supply for s\u2026",
+      "href": "https://krishigears.in/products/category/brush-cutter-spare-parts",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutter-spare-parts"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY HTP Pumps HTP pump supply for sprayer dealers,\u2026",
+      "href": "https://krishigears.in/products/category/htp-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/htp-pumps"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Rotavator Blades Rotavator blade supply for dealer co\u2026",
+      "href": "https://krishigears.in/products/category/rotavator-blades",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/rotavator-blades"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "CATEGORY Agricultural Accessories Accessory supply for dealers, distri\u2026",
+      "href": "https://krishigears.in/products/category/agricultural-accessories",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-accessories"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Buy Online",
+      "href": "https://farmingtools.in/",
+      "status": 200,
+      "final": "https://farmingtools.in/"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Bulk Order Inquiry",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Become Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "",
+      "href": "https://krishigears.in/products#",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/products",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Join Network",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Find Local Dealer",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "",
+      "href": "https://krishigears.in/dealer-network#",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/dealer-network",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "",
+      "href": "https://krishigears.in/become-a-dealer#",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/become-a-dealer",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Become a Dealer",
+      "href": "https://krishigears.in/become-a-dealer",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/become-a-dealer"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "",
+      "href": "https://krishigears.in/bulk-order#",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Power Weeders",
+      "href": "https://krishigears.in/products/category/power-weeders",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-weeders"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Brush Cutters",
+      "href": "https://krishigears.in/products/category/brush-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/brush-cutters"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Chain Saws",
+      "href": "https://krishigears.in/products/category/chain-saws",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chain-saws"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Earth Augers",
+      "href": "https://krishigears.in/products/category/earth-augers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/earth-augers"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Water Pumps",
+      "href": "https://krishigears.in/products/category/water-pumps",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/water-pumps"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Power Sprayers",
+      "href": "https://krishigears.in/products/category/power-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/power-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Battery Sprayers",
+      "href": "https://krishigears.in/products/category/battery-sprayers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/battery-sprayers"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Reapers",
+      "href": "https://krishigears.in/products/category/reapers",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/reapers"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Chaff Cutters",
+      "href": "https://krishigears.in/products/category/chaff-cutters",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/chaff-cutters"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Agricultural Engines",
+      "href": "https://krishigears.in/products/category/agricultural-engines",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/products/category/agricultural-engines"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Bulk Order",
+      "href": "https://krishigears.in/bulk-order",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/bulk-order"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Warranty",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Contact Us",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Power Weeder Dealer Network & Bulk Supply",
+      "href": "https://krishigears.in/seo/power-weeder-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-weeder-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Power Tiller Dealer Network & Institutional Supply",
+      "href": "https://krishigears.in/seo/power-tiller-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/power-tiller-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Brush Cutter Distributor & Dealer Supply",
+      "href": "https://krishigears.in/seo/brush-cutter-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/brush-cutter-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Earth Auger Bulk Supply & Distributor Support",
+      "href": "https://krishigears.in/seo/earth-auger-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/earth-auger-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Agricultural Machinery OEM, Dealer & Government Supply",
+      "href": "https://krishigears.in/seo/agricultural-machinery-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/agricultural-machinery-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "Farming Equipment Distributor, FPO & Institutional Supply",
+      "href": "https://krishigears.in/seo/farming-equipment-supplier-india",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/seo/farming-equipment-supplier-india"
+    },
+    {
+      "source": "https://krishigears.in/bulk-order",
+      "text": "",
+      "href": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products.",
+      "status": 200,
+      "final": "https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20am%20interested%20in%20your%20products."
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "KRISHIGEARS FARMING TOOLS",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "Home",
+      "href": "https://krishigears.in/",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "About Us",
+      "href": "https://krishigears.in/about",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/about"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "Dealer Network",
+      "href": "https://krishigears.in/dealer-network",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/dealer-network"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "Blog",
+      "href": "https://krishigears.in/blog",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/blog"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "Warranty & Support",
+      "href": "https://krishigears.in/warranty-and-support",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/warranty-and-support"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "Contact",
+      "href": "https://krishigears.in/contact",
+      "status": "rendered_or_internal",
+      "final": "https://krishigears.in/contact"
+    },
+    {
+      "source": "https://krishigears.in/contact",
+      "text": "",
+      "href": "https://wa.me/916006078815",
+      "status": 200,
+      "final": "https://wa.me/916006078815"
+    }
+  ]
+}

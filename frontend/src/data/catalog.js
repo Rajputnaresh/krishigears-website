@@ -54,7 +54,7 @@ export const COMPANY = {
   gst: "08EQLPD7160R1Z2",
 };
 
-// FarmingTools.in — sister B2C ecommerce site for retail purchases.
+// FarmingTools.in — sister B2C ecommerce site for consumer transactions.
 // KrishiGears.in is the B2B / dealer / OEM / institutional brand site.
 // All retail "buy" intent on KrishiGears redirects here.
 export const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
@@ -137,25 +137,25 @@ export const farmingtoolsProductUrl = (productOrSlug, categorySlug) => {
 };
 
 export const CATEGORIES = [
-  { slug: "power-weeders",            name: "Power Weeders",            icon: Sprout,   image: COVER.weeder,        short: "Petrol & diesel power weeders from 5HP to 8.5HP. FMTTI tested & subsidy approved.", featured: true },
-  { slug: "brush-cutters",            name: "Brush Cutters",            icon: Scissors, image: COVER.brushCutter,   short: "1.6HP to 3HP brush cutters — 2-stroke & 4-stroke, 35cc to 52cc, SRFMTTI tested.", featured: true },
-  { slug: "chain-saws",               name: "Chain Saws",               icon: Trees,    image: COVER.chainsaw,      short: "Professional 3.2–3.5 HP, 58–63cc petrol chainsaws with 18\"/22\" bars.", featured: true },
-  { slug: "earth-augers",             name: "Earth Augers",             icon: Drill,    image: COVER.earthAuger,    short: "2.5HP & 3.5HP earth augers — 52cc to 68cc, double gearbox, low vibration.", featured: true },
-  { slug: "water-pumps",              name: "Water Pumps",              icon: Droplets, image: COVER.waterPump,     short: "2.5–5.1HP portable pumps, PTO attachments and submersible sewage pumps." },
-  { slug: "power-sprayers",           name: "Power Sprayers",           icon: SprayCan, image: COVER.sprayer,       short: "High-pressure power sprayers for plantations & large farms." },
-  { slug: "battery-sprayers",         name: "Battery Sprayers",         icon: SprayCan, image: COVER.sprayer,       short: "12V & 16L knapsack battery sprayers — silent and efficient." },
-  { slug: "reapers",                  name: "Reapers",                  icon: Wheat,    image: COVER.reaper,        short: "Self-propelled paddy & wheat reapers for fast, clean harvest." },
-  { slug: "chaff-cutters",            name: "Chaff Cutters",            icon: Scissors, image: COVER.chaffCutter,   short: "Electric & engine-driven chaff cutters for fodder preparation." },
-  { slug: "agricultural-engines",     name: "Agricultural Engines",     icon: Cog,      image: COVER.engine,        short: "Reliable kerosene, diesel & petrol agricultural engines." },
-  { slug: "seeders",                  name: "Seeders",                  icon: Sprout,   image: COVER.seeder,        short: "Manual & power seeders for precision sowing across crops." },
-  { slug: "mini-cultivators",         name: "Mini Cultivators",         icon: Tractor,  image: COVER.miniInter,     short: "Lightweight mini intercultivators for kitchen gardens & polyhouses." },
-  { slug: "power-tillers",            name: "Power Tillers",            icon: Tractor,  image: COVER.miniInter,     short: "Heavy-duty tillers for paddy, wheat & vegetable cultivation." },
-  { slug: "agricultural-spare-parts", name: "Agricultural Spare Parts", icon: Settings, image: COVER.crankshaft,    short: "Genuine spare parts: crankshafts, pistons, carburetors and more." },
-  { slug: "power-weeder-spare-parts", name: "Power Weeder Spare Parts", icon: Settings, image: COVER.piston,        short: "OEM-grade replacement parts for power weeders." },
-  { slug: "brush-cutter-spare-parts", name: "Brush Cutter Spare Parts", icon: Wrench,   image: COVER.recoil,        short: "Blades, harnesses, coils, nylon heads & complete kits." },
-  { slug: "htp-pumps",                name: "HTP Pumps",                icon: Droplets, image: COVER.sprayer,       short: "High Triplex pumps for high-pressure spraying needs." },
-  { slug: "rotavator-blades",         name: "Rotavator Blades",         icon: CircleDot, image: COVER.crankshaft,   short: "Hardened L & C-type rotavator blades — long-lasting edge." },
-  { slug: "agricultural-accessories", name: "Agricultural Accessories", icon: Package,  image: COVER.hosePipe,      short: "Hose pipes, tool kits, fuel cans, safety gear & farm essentials." },
+  { slug: "power-weeders",            name: "Power Weeders",            icon: Sprout,   image: COVER.weeder,        short: "Dealer, FPO and institutional supply for power weeder ranges with service and spare-part support.", featured: true },
+  { slug: "brush-cutters",            name: "Brush Cutters",            icon: Scissors, image: COVER.brushCutter,   short: "Distributor-ready brush cutter supply for dealers, contractors, institutions and service networks.", featured: true },
+  { slug: "chain-saws",               name: "Chain Saws",               icon: Trees,    image: COVER.chainsaw,      short: "B2B chain saw supply for forestry, farm maintenance, dealer networks and institutional procurement.", featured: true },
+  { slug: "earth-augers",             name: "Earth Augers",             icon: Drill,    image: COVER.earthAuger,    short: "Bulk and dealer supply for earth auger programs across plantation, fencing and government requirements.", featured: true },
+  { slug: "water-pumps",              name: "Water Pumps",              icon: Droplets, image: COVER.waterPump,     short: "Water pump supply category for dealers, institutional tenders, FPOs and service-backed distribution." },
+  { slug: "power-sprayers",           name: "Power Sprayers",           icon: SprayCan, image: COVER.sprayer,       short: "Power sprayer supply for plantation dealers, contractors, institutions and OEM distribution partners." },
+  { slug: "battery-sprayers",         name: "Battery Sprayers",         icon: SprayCan, image: COVER.sprayer,       short: "Battery sprayer supply for dealer shelves, FPO procurement and institution-level field programs." },
+  { slug: "reapers",                  name: "Reapers",                  icon: Wheat,    image: COVER.reaper,        short: "Reaper supply for dealer territories, harvest contractors, FPOs and institutional purchasing." },
+  { slug: "chaff-cutters",            name: "Chaff Cutters",            icon: Scissors, image: COVER.chaffCutter,   short: "Chaff cutter supply for dairy clusters, dealer networks, FPOs and bulk procurement channels." },
+  { slug: "agricultural-engines",     name: "Agricultural Engines",     icon: Cog,      image: COVER.engine,        short: "Agricultural engine supply for OEM programs, dealer inventory and service-backed distribution." },
+  { slug: "seeders",                  name: "Seeders",                  icon: Sprout,   image: COVER.seeder,        short: "Seeder supply programs for dealers, FPOs, institutional procurement and crop input networks." },
+  { slug: "mini-cultivators",         name: "Mini Cultivators",         icon: Tractor,  image: COVER.miniInter,     short: "Mini cultivator supply for dealers, nursery programs, FPOs and institutional field operations." },
+  { slug: "power-tillers",            name: "Power Tillers",            icon: Tractor,  image: COVER.miniInter,     short: "Power tiller supply category for dealer onboarding, institutional procurement and OEM distribution." },
+  { slug: "agricultural-spare-parts", name: "Agricultural Spare Parts", icon: Settings, image: COVER.crankshaft,    short: "Genuine spare-part supply for dealer service counters, workshops and institutional maintenance teams." },
+  { slug: "power-weeder-spare-parts", name: "Power Weeder Spare Parts", icon: Settings, image: COVER.piston,        short: "Power weeder spare-part supply for dealers, service networks and bulk maintenance programs." },
+  { slug: "brush-cutter-spare-parts", name: "Brush Cutter Spare Parts", icon: Wrench,   image: COVER.recoil,        short: "Brush cutter spare-part supply for service partners, dealers and distributor repair channels." },
+  { slug: "htp-pumps",                name: "HTP Pumps",                icon: Droplets, image: COVER.sprayer,       short: "HTP pump supply for sprayer dealers, contractors, institutional users and service partners." },
+  { slug: "rotavator-blades",         name: "Rotavator Blades",         icon: CircleDot, image: COVER.crankshaft,   short: "Rotavator blade supply for dealer counters, workshops, OEM partners and institutional fleets." },
+  { slug: "agricultural-accessories", name: "Agricultural Accessories", icon: Package,  image: COVER.hosePipe,      short: "Accessory supply for dealers, distributor networks, bulk procurement and service support teams." },
 ];
 
 // ----------- Spec helpers -----------
@@ -762,10 +762,10 @@ export const TRUST_BADGES = [
 ];
 
 export const SEO_PAGES = [
-  { slug: "power-weeder-supplier-india", title: "Power Weeder Supplier in India", category: "power-weeders" },
-  { slug: "power-tiller-supplier-india", title: "Power Tiller Supplier in India", category: "power-tillers" },
-  { slug: "brush-cutter-supplier-india", title: "Brush Cutter Supplier in India", category: "brush-cutters" },
-  { slug: "earth-auger-supplier-india", title: "Earth Auger Supplier in India", category: "earth-augers" },
-  { slug: "agricultural-machinery-supplier-india", title: "Agricultural Machinery Supplier in India", category: null },
-  { slug: "farming-equipment-supplier-india", title: "Farming Equipment Supplier in India", category: null },
+  { slug: "power-weeder-supplier-india", title: "Power Weeder Dealer Network & Bulk Supply", category: "power-weeders" },
+  { slug: "power-tiller-supplier-india", title: "Power Tiller Dealer Network & Institutional Supply", category: "power-tillers" },
+  { slug: "brush-cutter-supplier-india", title: "Brush Cutter Distributor & Dealer Supply", category: "brush-cutters" },
+  { slug: "earth-auger-supplier-india", title: "Earth Auger Bulk Supply & Distributor Support", category: "earth-augers" },
+  { slug: "agricultural-machinery-supplier-india", title: "Agricultural Machinery OEM, Dealer & Government Supply", category: null },
+  { slug: "farming-equipment-supplier-india", title: "Farming Equipment Distributor, FPO & Institutional Supply", category: null },
 ];

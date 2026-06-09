@@ -32,6 +32,7 @@ export default function CategoryPage() {
 
   const Icon = category.icon;
   const waMsg = encodeURIComponent(`Hello KrishiGears, I am interested in ${category.name} for bulk/dealer/institutional supply. Please share details.`);
+  const supplySignals = ["Dealer supply", "Bulk procurement", "Institutional orders", "Service support"];
 
   return (
     <div data-testid="category-page" className="kg-section">
@@ -50,26 +51,36 @@ export default function CategoryPage() {
               <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500">
                 <Icon className="h-6 w-6" />
               </div>
-              <div className="kg-eyebrow">Category</div>
+              <div className="kg-eyebrow">Supply Category</div>
             </div>
-            <h1 className="kg-h1">{category.name}</h1>
+            <h1 className="kg-h1">{category.name} Supply Category</h1>
             <p className="text-zinc-400 mt-5 leading-relaxed max-w-xl">{category.short}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {supplySignals.map((signal) => (
+                <span key={signal} className="text-xs font-bold tracking-wider uppercase px-3 py-1.5 border border-zinc-800 text-zinc-300 bg-black/30">
+                  {signal}
+                </span>
+              ))}
+            </div>
             <div className="mt-6 flex flex-wrap gap-3">
+              <EnquiryDialog product={category.name} trigger={
+                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
+              } />
+              <Link to="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Become Dealer
+              </Link>
+              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+                Institutional Supply
+              </Link>
               <a
                 href={farmingtoolsCategoryUrl(category.slug)}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="cat-buy-online-btn"
-                className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md"
+                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
               >
-                Buy Online
+                Buy Online at FarmingTools
               </a>
-              <EnquiryDialog product={category.name} trigger={
-                <button data-testid="cat-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk / Dealer Inquiry</button>
-              } />
-              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
-                Institutional Supply
-              </Link>
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
                 target="_blank"
@@ -102,7 +113,7 @@ function ModelsSection({ items, category }) {
   if (items.length === 0) {
     return (
       <div className="border border-zinc-800 bg-[#0F0F0F] p-10 text-center">
-        <p className="text-zinc-300">Multiple models are available in this category. Request the B2B catalogue and our team will share supply details for dealers, bulk buyers and institutions.</p>
+        <p className="text-zinc-300">Multiple supply models are available in this category. Request the B2B catalogue and our team will share dealer, distributor, bulk and institutional supply details.</p>
         <div className="mt-6">
           <EnquiryDialog product={category.name} trigger={
             <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
@@ -113,7 +124,7 @@ function ModelsSection({ items, category }) {
   }
   return (
     <>
-      <h2 className="kg-h2 mb-6">Available <span className="text-lime-500">Models ({items.length})</span></h2>
+      <h2 className="kg-h2 mb-6">Supply <span className="text-lime-500">Models ({items.length})</span></h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {items.map((p) => (
           <ProductCard key={p.slug} product={p} />

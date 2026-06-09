@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-6 text-zinc-400 leading-relaxed text-sm">
-            Premium agricultural machinery supplier across India. Delivering genuine power tillers, weeders, brush cutters and spare parts to farmers nationwide.
+            B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.
           </p>
           <div className="mt-6 flex gap-3">
           {[
@@ -93,10 +93,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* SEO landing links */}
+      {/* B2B supply links */}
       <div className="border-t border-zinc-900">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6">
-          <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">Supplier Across India</div>
+          <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">B2B Supply Programs</div>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
             {SEO_PAGES.map((p) => (
               <Link key={p.slug} to={`/seo/${p.slug}`} className="hover:text-lime-500">

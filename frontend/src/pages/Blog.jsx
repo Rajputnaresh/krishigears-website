@@ -7,12 +7,12 @@ import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
 // Static fallback sample posts (used only when DB is empty)
 const SAMPLE_POSTS = [
   {
-    slug: "power-tiller-buying-guide-india-2026",
-    title: "Power Tiller Buying Guide: Choosing the Right Model for Indian Farms (2026)",
-    excerpt: "Diesel vs petrol, 9HP vs 15HP, tilling width and gear options — a complete buying guide for Indian farmers.",
+    slug: "power-tiller-dealer-procurement-checklist",
+    title: "Power Tiller Dealer Procurement Checklist",
+    excerpt: "Dealer, FPO and institutional checklist for range planning, documentation, warranty support and spare-part readiness.",
     cover_image: FIELD_TRACTOR,
     created_at: "2026-01-15T10:00:00Z",
-    tags: ["Power Tiller", "Buying Guide"],
+    tags: ["Power Tiller", "Dealer Supply"],
   },
   {
     slug: "brush-cutter-maintenance-checklist",
@@ -51,10 +51,10 @@ export default function Blog() {
   return (
     <div data-testid="blog-page" className="kg-section">
       <div className="max-w-[1300px] mx-auto">
-        <div className="kg-eyebrow">From the Field</div>
-        <h1 className="kg-h1 mt-4 text-balance">Stories, guides & <span className="text-lime-500">expert advice.</span></h1>
+        <div className="kg-eyebrow">B2B Knowledge Hub</div>
+        <h1 className="kg-h1 mt-4 text-balance">Dealer, service & <span className="text-lime-500">procurement notes.</span></h1>
         <p className="text-zinc-400 mt-6 max-w-2xl leading-relaxed">
-          Practical articles for farmers, dealers and institutional buyers — covering machinery selection, maintenance, subsidies and farm productivity.
+          Practical notes for dealers, distributors, FPOs and institutional buyers covering supply planning, maintenance readiness, subsidies and procurement documentation.
         </p>
 
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -80,7 +80,7 @@ export function productJsonLd(product) {
     name: product.name,
     sku: product.model || product.slug,
     description:
-      `${product.name} (Model ${product.model || product.slug}). Available for bulk supply, dealer distribution and institutional procurement through KrishiGears. For retail purchase visit FarmingTools.in.`,
+      `${product.name} (Model ${product.model || product.slug}). Available for bulk supply, dealer distribution and institutional procurement through KrishiGears. Consumer transactions are routed to FarmingTools.in.`,
     brand: { "@type": "Brand", name: "KrishiGears" },
     image: (product.images && product.images[0]) || `${SITE}/splash-1200.jpg`,
     category: product.category,

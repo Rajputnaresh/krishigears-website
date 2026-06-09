@@ -5,29 +5,29 @@ import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
 
 const SAMPLE = {
-  "power-tiller-buying-guide-india-2026": {
-    title: "Power Tiller Buying Guide: Choosing the Right Model for Indian Farms (2026)",
+  "power-tiller-dealer-procurement-checklist": {
+    title: "Power Tiller Dealer Procurement Checklist",
     cover_image: FIELD_TRACTOR,
     created_at: "2026-01-15T10:00:00Z",
-    tags: ["Power Tiller", "Buying Guide"],
-    content: `Choosing the right power tiller can transform farm productivity — but with engine options from 9HP to 15HP, diesel vs petrol fuel choices, and tilling widths varying from 600mm to 1200mm, the decision is rarely straightforward.
+    tags: ["Power Tiller", "Dealer Supply"],
+    content: `Power tiller procurement for dealers, FPOs and institutions needs more than a model list. A workable supply plan should cover demand clusters, documentation, warranty process, spare-part readiness and training.
 
-## 1. Match HP to your farm size
-For farms under 2 acres, a 9HP petrol tiller is usually sufficient. For 2–5 acres, opt for a 12HP. For larger farms or paddy-wheat double cropping, go for a 15HP diesel tiller for fuel efficiency and long-run durability.
+## 1. Define territory demand
+Map crop clusters, soil conditions, service coverage and seasonal demand before committing inventory to a district or institutional program.
 
-## 2. Diesel vs petrol
-Diesel engines have higher torque, better fuel efficiency at full load and longer service life — ideal for heavy continuous use. Petrol engines start easier in cold weather and have lower initial cost.
+## 2. Plan model mix
+Keep separate ranges for compact plots, paddy use, contractor use and heavier institutional demand so the dealer team can quote consistently.
 
-## 3. Tilling width
-A wider tilling width covers more ground per pass but requires more HP. Match width to HP — a 1200mm rotor with a 9HP engine will struggle in hard soil.
+## 3. Confirm documentation
+Maintain GST, warranty, serial number, subsidy and tender documentation before dispatch so downstream support remains clean.
 
-## 4. Transmission
-6-forward + 2-reverse gear options give you flexibility across paddy, wheat and dry-soil tilling. Avoid 3-speed tillers for serious commercial use.
+## 4. Prepare service support
+Align spare parts, trained technicians, warranty intake and customer education before supply starts in a new region.
 
-## 5. After-sales matters more than price
-A great machine with poor spare parts availability becomes a paperweight. Always buy from authorized dealers who stock genuine spares and offer warranty repair.
+## 5. Coordinate dispatch
+For dealer, FPO and institutional requirements, confirm dispatch schedule, packaging, service contact and escalation process before the first delivery.
 
-Need help choosing? WhatsApp us your farm size and crops — we'll recommend the right model.`,
+Need a dealer or institutional supply plan? Share the territory, expected volume and service requirements with KrishiGears.`,
   },
   "brush-cutter-maintenance-checklist": {
     title: "Brush Cutter Maintenance: A 10-Point Checklist for Long Life",
