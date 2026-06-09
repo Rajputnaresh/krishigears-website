@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import SEO from "@/components/SEO";
-import { CATEGORIES, PRODUCTS, SEO_PAGES } from "@/data/catalog";
+import { CATEGORIES, PRODUCTS, SEO_PAGES, farmingtoolsProductUrl } from "@/data/catalog";
 
 const STATIC_META = {
   "/": {
@@ -63,6 +63,59 @@ function titleFromSlug(slug) {
     .join(" ");
 }
 
+const FARMINGTOOLS_CANONICAL_PRODUCT_SLUGS = new Set([
+  "nsm-bc-c35",
+  "nsm-bc-c43",
+  "nsm-bc-c52",
+  "rk-bc-p50",
+  "rk-bc-up35",
+  "rk-bc-up43",
+  "rk-bc-up52",
+  "nsm-csp-c58",
+  "rk-csp-up58",
+  "rk-csp-up63",
+  "nsm-ea-p52",
+  "nsm-ea-p55",
+  "nsm-ea-p68",
+  "rk-ea-p52",
+  "rk-ea-p68",
+  "nb-icd-c186",
+  "np-icp-c177",
+  "rk-170f",
+  "rk-173f-diesel",
+  "rk-177f-wolf",
+  "rk-icd-up186-sh",
+  "rk-icp-p170-lde",
+  "rk-icp-p177-lde",
+  "rk-icp-up170-sh",
+  "rk-pw-wp-d80",
+  "rk-pw-wp-p80",
+  "rk-su80",
+  "rk-wp-p02",
+  "rk-wp-p03",
+  "rk-wp-p1-5",
+  "rk-wp-up3",
+  "wqd10-11-075a",
+  "wqd15-10-11a",
+  "wqd15-15-15fa",
+]);
+
+const NOINDEX_PRODUCT_SLUGS = new Set([
+  "rk-hose-pipe",
+  "rk-engine",
+  "rk-maize-thresher",
+  "rk-crankshaft",
+  "rk-piston-ring",
+  "rk-sprayer-battery",
+  "rk-carburetor",
+  "rk-grass-mower",
+  "rk-mini-inter",
+  "rk-sprayer-power",
+  "rk-recoil-starter",
+  "rk-reaper",
+  "rk-seeder",
+]);
+
 export default function RouteSEO() {
   const { pathname } = useLocation();
   const path = normalizePath(pathname);
@@ -74,6 +127,7 @@ export default function RouteSEO() {
         description="KrishiGears private admin area."
         path={path}
         noindex
+        robots="noindex, nofollow"
       />
     );
   }
@@ -101,6 +155,11 @@ export default function RouteSEO() {
     const slug = path.replace("/products/", "");
     const product = PRODUCTS.find((item) => item.slug === slug);
     if (product) {
+      const canonicalUrl = FARMINGTOOLS_CANONICAL_PRODUCT_SLUGS.has(slug)
+        ? farmingtoolsProductUrl(product)
+        : undefined;
+      const noindex = NOINDEX_PRODUCT_SLUGS.has(slug);
+
       return (
         <SEO
           title={`${product.name}${product.model ? ` ${product.model}` : ""}`}
@@ -108,6 +167,8 @@ export default function RouteSEO() {
           path={path}
           image={product.images?.[0]}
           type="product"
+          canonicalUrl={canonicalUrl}
+          noindex={noindex}
         />
       );
     }

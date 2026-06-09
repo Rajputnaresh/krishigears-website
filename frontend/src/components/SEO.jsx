@@ -14,18 +14,22 @@ export default function SEO({
   image = DEFAULT_OG_IMAGE,
   type = "website",
   noindex = false,
+  canonicalUrl,
+  robots,
   children,
 }) {
   const cleanPath = path === "/" ? "/" : `/${path.replace(/^\/+|\/+$/g, "")}`;
   const url = `${SITE}${cleanPath}`;
+  const canonicalHref = canonicalUrl || url;
   const fullTitle = title ? `${title} | KrishiGears` : "KrishiGears — Bulk Supply, Dealer Network & OEM Distribution of Farm Machinery";
+  const robotsContent = robots || (noindex ? "noindex, follow" : "index, follow, max-image-preview:large");
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      <link rel="canonical" href={canonicalHref} />
+      {robotsContent && <meta name="robots" content={robotsContent} />}
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
