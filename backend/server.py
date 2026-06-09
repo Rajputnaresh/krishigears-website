@@ -15,10 +15,11 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Literal, Dict, Any
 
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, Request, Query
-from fastapi.responses import Response
+from fastapi.responses import JSONResponse, Response
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo.errors import PyMongoError
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from contextlib import asynccontextmanager
 
@@ -50,17 +51,24 @@ def required_env(*names: str) -> str:
 
 
 # MongoDB connection is created once per warm serverless instance and reused.
-mongo_url = required_env("MONGODB_URI", "MONGO_URL", "DATABASE_URL")
+mongo_url = first_env("MONGODB_URI", "MONGO_URL", "DATABASE_URL")
 db_name = first_env("DB_NAME", "MONGODB_DB", default="krishigears")
-client = AsyncIOMotorClient(
-    mongo_url,
-    maxPoolSize=int(first_env("MONGO_MAX_POOL_SIZE", default="10")),
-    minPoolSize=0,
-    serverSelectionTimeoutMS=int(first_env("MONGO_SERVER_SELECTION_TIMEOUT_MS", default="5000")),
-)
-db = client[db_name]
+client = None
+db = None
+db_startup_error: Optional[str] = None
 
-JWT_SECRET = required_env("JWT_SECRET")
+if mongo_url:
+    client = AsyncIOMotorClient(
+        mongo_url,
+        maxPoolSize=int(first_env("MONGO_MAX_POOL_SIZE", default="10")),
+        minPoolSize=0,
+        serverSelectionTimeoutMS=int(first_env("MONGO_SERVER_SELECTION_TIMEOUT_MS", default="5000")),
+    )
+    db = client[db_name]
+else:
+    db_startup_error = "Missing required environment variable: MONGODB_URI or MONGO_URL or DATABASE_URL"
+
+JWT_SECRET = first_env("JWT_SECRET")
 
 
 # ---------- Auth helpers ----------
@@ -73,6 +81,8 @@ def verify_password(plain: str, hashed: str) -> bool:
 
 
 def create_access_token(user_id: str, email: str) -> str:
+    if not JWT_SECRET:
+        raise HTTPException(status_code=503, detail="JWT_SECRET is not configured")
     payload = {
         "sub": user_id,
         "email": email,
@@ -86,6 +96,8 @@ security = HTTPBearer(auto_error=False)
 
 
 async def get_current_admin(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)) -> dict:
+    if not JWT_SECRET:
+        raise HTTPException(status_code=503, detail="JWT_SECRET is not configured")
     if credentials is None:
         raise HTTPException(status_code=401, detail="Not authenticated")
     token = credentials.credentials
@@ -189,6 +201,11 @@ async def seed_blog_posts():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    global db_startup_error
+    if client is None or db is None:
+        logger.error(db_startup_error)
+        yield
+        return
     try:
         await client.admin.command("ping")
         logger.info("Connected to MongoDB database: %s", db_name)
@@ -202,7 +219,7 @@ async def lifespan(app: FastAPI):
         await seed_blog_posts()
     except Exception as exc:  # noqa: BLE001
         logger.exception("MongoDB startup failed. Check MONGODB_URI/MONGO_URL and database access.")
-        raise RuntimeError("MongoDB startup failed. Verify the MongoDB URI, network access, and database name.") from exc
+        db_startup_error = "MongoDB startup failed. Verify the MongoDB URI, network access, and database name."
     yield
     if first_env("VERCEL") != "1":
         client.close()
@@ -260,6 +277,28 @@ async def block_bot_probes(request, call_next):
         # Silent 404; nothing logged downstream.
         return Response(status_code=404)
     return await call_next(request)
+
+
+@app.middleware("http")
+async def require_runtime_config(request, call_next):
+    path = request.url.path.rstrip("/") or "/"
+    public_status_paths = {"/api", "/api/health"}
+    if path.startswith("/api") and path not in public_status_paths and (client is None or db is None):
+        return JSONResponse(
+            status_code=503,
+            content={
+                "detail": "MongoDB is not configured. Set MONGODB_URI, MONGO_URL, or DATABASE_URL in Vercel.",
+                "status": "configuration_error",
+            },
+        )
+    try:
+        return await call_next(request)
+    except PyMongoError:
+        logger.exception("MongoDB operation failed")
+        return JSONResponse(
+            status_code=503,
+            content={"detail": "Database operation failed", "status": "database_error"},
+        )
 
 
 # Suppress uvicorn access-log noise for the same probe paths so logs only
@@ -507,6 +546,38 @@ def fire_sheet_forward(lead_type: str, doc: dict) -> None:
 @api_router.get("/")
 async def root():
     return {"name": "KrishiGears API", "status": "ok"}
+
+
+@api_router.get("/health")
+async def health():
+    timestamp = now_iso()
+    db_status = "not_configured"
+    db_error = db_startup_error
+
+    if client is not None and db is not None:
+        try:
+            await client.admin.command("ping")
+            db_status = "connected"
+            db_error = None
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Health check MongoDB ping failed: %s", exc)
+            db_status = "error"
+            db_error = "MongoDB ping failed"
+
+    status_code = 200 if db_status == "connected" else 503
+    return JSONResponse(
+        status_code=status_code,
+        content={
+            "application": "KrishiGears API",
+            "status": "ok" if status_code == 200 else "degraded",
+            "database": {
+                "status": db_status,
+                "name": db_name if db is not None else None,
+                "error": db_error,
+            },
+            "timestamp": timestamp,
+        },
+    )
 
 
 @api_router.post("/auth/login", response_model=LoginResponse)
