@@ -81,21 +81,21 @@
     "testing": "All interactive elements MUST include data-testid attributes (e.g., data-testid='submit-enquiry-button')."
   },
   "media_and_assets": {
-    "logo_url": "https://customer-assets.emergentagent.com/job_2f7e8e24-8a87-4e22-80ae-e4a8236f7388/artifacts/1qde0bgj_Screenshot%202026-05-31%20at%206.41.53%E2%80%AFPM.png",
+    "logo_url": "/logo512.png",
     "icons_library": "lucide-react",
     "images": {
       "hero_background": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/9862aaeb293a349960ecdc460806fb8e845ef8f429f07916720d038ddd900a0c.png",
+        "url": "/assets/brand/hero-bg.png",
         "description": "Dark mode studio lighting of agricultural machinery. Use as the main hero background with a heavy bg-black/50 to bg-black/70 overlay to ensure the lime green tagline pops.",
         "category": "hero"
       },
       "india_network_map": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/ff6f800948e74c34944cb1e852b7e44ed1b403d82f8a109308aa798d597de06e.png",
+        "url": "/assets/brand/india-map.png",
         "description": "Stylized glowing map of India showing dealer network.",
         "category": "dealer_network_section"
       },
       "abstract_terrain": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/302977c3a18070a0158c2af9eb152ac221f3f38edc6076959ee3d8560900c403.png",
+        "url": "/assets/brand/abstract-terrain.png",
         "description": "Abstract dark topographic map. Use as background for CTA bands or About sections.",
         "category": "background_texture"
       },

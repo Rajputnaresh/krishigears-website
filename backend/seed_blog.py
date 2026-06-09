@@ -8,7 +8,7 @@ BLOG_POSTS = [
         "slug": "power-tiller-buying-guide-india-2026",
         "title": "Power Tiller Buying Guide: Choosing the Right Model for Indian Farms (2026)",
         "excerpt": "Match HP to farm size, compare diesel vs petrol, and pick the right tilling width. A practical 2026 buyer's guide for Indian farmers.",
-        "cover_image": "https://customer-assets.emergentagent.com/job_58575101-7f75-40dc-b241-e86f31f659d8/artifacts/field-tractor.jpg",
+        "cover_image": "/assets/blog/field-tractor.jpg",
         "tags": ["Power Tiller", "Buying Guide"],
         "content": """Choosing the right power tiller can transform farm productivity — but with engine options from 9HP to 15HP, diesel vs petrol fuel choices, and tilling widths varying from 600mm to 1200mm, the decision is rarely straightforward.
 
@@ -33,7 +33,7 @@ Need help choosing? WhatsApp us your farm size and crops — we'll recommend the
         "slug": "brush-cutter-maintenance-checklist",
         "title": "Brush Cutter Maintenance: A 10-Point Checklist for Long Life",
         "excerpt": "Extend your brush cutter's life by 3x with this 10-point maintenance routine — covering fuel mix, air filter, spark plug, gearbox grease and more.",
-        "cover_image": "https://customer-assets.emergentagent.com/job_58575101-7f75-40dc-b241-e86f31f659d8/artifacts/plowing.jpg",
+        "cover_image": "/assets/blog/plowing.jpg",
         "tags": ["Brush Cutter", "Maintenance"],
         "content": """Brush cutters work hard in harsh conditions. Proper maintenance can extend life by 3x. Here is our 10-point routine:
 
@@ -54,7 +54,7 @@ Following this routine keeps your cutter running like new.""",
         "slug": "agri-machinery-subsidy-states-india",
         "title": "State-Wise Agricultural Machinery Subsidies in India",
         "excerpt": "Most Indian states offer 40-50% subsidy on small farm machinery under SMAM, RKVY and state-specific schemes. Here's how to apply.",
-        "cover_image": "https://customer-assets.emergentagent.com/job_58575101-7f75-40dc-b241-e86f31f659d8/artifacts/farmer-field.jpg",
+        "cover_image": "/assets/blog/farmer-field.jpg",
         "tags": ["Subsidy", "Government"],
         "content": """Most Indian states offer 40-50% subsidy on small farm machinery under various central and state schemes such as SMAM, RKVY and state-specific programs.
 

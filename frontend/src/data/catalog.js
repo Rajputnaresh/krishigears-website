@@ -7,9 +7,9 @@ import {
 } from "lucide-react";
 
 export const LOGO_URL = "/logo512.png";
-export const HERO_BG = "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/9862aaeb293a349960ecdc460806fb8e845ef8f429f07916720d038ddd900a0c.png";
-export const INDIA_MAP = "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/ff6f800948e74c34944cb1e852b7e44ed1b403d82f8a109308aa798d597de06e.png";
-export const ABSTRACT_TERRAIN = "https://static.prod-images.emergentagent.com/jobs/2f7e8e24-8a87-4e22-80ae-e4a8236f7388/images/302977c3a18070a0158c2af9eb152ac221f3f38edc6076959ee3d8560900c403.png";
+export const HERO_BG = "/assets/brand/hero-bg.png";
+export const INDIA_MAP = "/assets/brand/india-map.png";
+export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.png";
 
 const RKA = "https://royalkissanagro.com/wp-content/uploads";
 

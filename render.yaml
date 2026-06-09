@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: krishigears-api
+    runtime: python
+    plan: free
+    branch: conflict_020626_1056
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/
+    envVars:
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        value: krishigears
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: GSHEETS_ENQUIRY_URL
+        sync: false
+      - key: GSHEETS_DEALER_URL
+        sync: false
+      - key: GSHEETS_WARRANTY_URL
+        sync: false
+
+  - type: web
+    name: krishigears-frontend
+    runtime: static
+    plan: free
+    branch: conflict_020626_1056
+    buildCommand: cd frontend && yarn install --frozen-lockfile --ignore-engines && yarn build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: REACT_APP_BACKEND_URL
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
