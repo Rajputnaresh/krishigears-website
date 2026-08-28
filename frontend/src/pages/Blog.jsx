@@ -15,12 +15,12 @@ const SAMPLE_POSTS = [
     tags: ["Power Tiller", "Dealer Supply"],
   },
   {
-    slug: "brush-cutter-maintenance-checklist",
-    title: "Brush Cutter Maintenance: A 10-Point Checklist for Long Life",
-    excerpt: "Keep your brush cutter running smoothly season after season with this 10-point maintenance routine.",
+    slug: "power-weeder-maintenance-checklist",
+    title: "Power Weeder Maintenance: A 10-Point Checklist for Long Life",
+    excerpt: "Keep your power weeder running smoothly season after season with this 10-point maintenance routine.",
     cover_image: PLOWING,
     created_at: "2026-01-10T10:00:00Z",
-    tags: ["Brush Cutter", "Maintenance"],
+    tags: ["Power Weeder", "Maintenance"],
   },
   {
     slug: "agri-machinery-subsidy-states-india",

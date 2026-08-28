@@ -32,11 +32,11 @@ Need a dealer or institutional supply plan? Share the territory, expected volume
 const SAMPLE = {
   "power-tiller-dealer-procurement-checklist": PROCUREMENT_POST,
   "power-tiller-buying-guide-india-2026": PROCUREMENT_POST,
-  "brush-cutter-maintenance-checklist": {
-    title: "Brush Cutter Maintenance: A 10-Point Checklist for Long Life",
+  "power-weeder-maintenance-checklist": {
+    title: "Power Weeder Maintenance: A 10-Point Checklist for Long Life",
     cover_image: PLOWING,
     created_at: "2026-01-10T10:00:00Z",
-    tags: ["Brush Cutter", "Maintenance"],
+    tags: ["Power Weeder", "Maintenance"],
     content: `Brush cutters work hard in harsh conditions. Proper maintenance can extend life by 3x. Here is our 10-point routine:
 
 1. Use fresh 2T oil-petrol mix in the right ratio (typically 1:25 or 1:50 per manual)

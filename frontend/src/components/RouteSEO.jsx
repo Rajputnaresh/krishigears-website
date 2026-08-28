@@ -178,10 +178,11 @@ export default function RouteSEO() {
     const slug = path.replace("/seo/", "");
     const page = SEO_PAGES.find((item) => item.slug === slug);
     if (page) {
+      const geoSuffix = page.city ? ` in ${page.city}, ${page.state}` : "";
       return (
         <SEO
           title={page.title}
-          description={`${page.title} through KrishiGears for dealer onboarding, distributor programs, OEM partnerships, FPO supply, government requirements and institutional procurement.`}
+          description={`${page.title} through KrishiGears${geoSuffix} for dealer onboarding, distributor programs, OEM partnerships, FPO supply, government requirements and institutional procurement.`}
           path={path}
         />
       );

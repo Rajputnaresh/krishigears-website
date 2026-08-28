@@ -19,8 +19,28 @@ export default function SeoLanding() {
     "Warranty, service and spare-part coordination",
   ];
 
+  const localSchema = page.city ? {
+    "@context": "https://schema.org",
+    "@type": "WholesaleStore",
+    "name": `KrishiGears ${supplyFocus} Supply in ${page.city}`,
+    "description": `B2B ${supplyFocus.toLowerCase()} supplier serving dealers and institutions in ${page.city}, ${page.state}.`,
+    "url": `https://krishigears.com/seo/${page.slug}`,
+    "telephone": "+91-60060-78815",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": page.city,
+      "addressRegion": page.state,
+      "addressCountry": "IN"
+    }
+  } : null;
+
   return (
     <div data-testid="seo-landing-page">
+      {localSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(localSchema)}
+        </script>
+      )}
       {/* Hero */}
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
@@ -31,7 +51,7 @@ export default function SeoLanding() {
           <div className="kg-eyebrow">{COMPANY.name} · B2B Supply Network</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">{page.title}</h1>
           <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
-            KrishiGears supports dealer networks, distributor partners, OEM programs, FPOs, contractors and institutional procurement teams with documented supply, service coordination and PAN India dispatch.
+            KrishiGears supports dealer networks, distributor partners, OEM programs, FPOs, contractors and institutional procurement teams {page.city ? `in ${page.city}, ${page.state}` : "across India"} with documented supply, service coordination and direct dispatch.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={category?.name || page.title} trigger={

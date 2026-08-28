@@ -27,7 +27,7 @@ export default function About() {
               We started KrishiGears with a simple belief: every Indian farmer deserves access to premium-quality machinery, genuine spare parts and honest service — no matter how small or remote their farm.
             </p>
             <p className="text-zinc-400 mt-4 leading-relaxed">
-              Today, we proudly supply a complete range of power tillers, weeders, brush cutters, sprayers, reapers and spare parts across India, with PAN-India dispatch and dedicated dealer assistance.
+              Today, we proudly supply a complete range of power weeders and genuine spare parts across India, with PAN-India dispatch and dedicated dealer assistance.
             </p>
           </div>
           <div className="lg:col-span-6 order-1 lg:order-2">
