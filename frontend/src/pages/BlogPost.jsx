@@ -5,75 +5,90 @@ import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
 
-const PROCUREMENT_POST = {
-  title: "Power Tiller Dealer Procurement Checklist",
-  cover_image: FIELD_TRACTOR,
-  created_at: "2026-01-15T10:00:00Z",
-  tags: ["Power Tiller", "Dealer Supply"],
-  content: `Power tiller procurement for dealers, FPOs and institutions needs more than a model list. A workable supply plan should cover demand clusters, documentation, warranty process, spare-part readiness and training.
-
-## 1. Define territory demand
-Map crop clusters, soil conditions, service coverage and seasonal demand before committing inventory to a district or institutional program.
-
-## 2. Plan model mix
-Keep separate ranges for compact plots, paddy use, contractor use and heavier institutional demand so the dealer team can quote consistently.
-
-## 3. Confirm documentation
-Maintain GST, warranty, serial number, subsidy and tender documentation before dispatch so downstream support remains clean.
-
-## 4. Prepare service support
-Align spare parts, trained technicians, warranty intake and customer education before supply starts in a new region.
-
-## 5. Coordinate dispatch
-For dealer, FPO and institutional requirements, confirm dispatch schedule, packaging, service contact and escalation process before the first delivery.
-
-Need a dealer or institutional supply plan? Share the territory, expected volume and service requirements with KrishiGears.`,
-};
-
 const SAMPLE = {
-  "power-tiller-dealer-procurement-checklist": PROCUREMENT_POST,
-  "power-tiller-buying-guide-india-2026": PROCUREMENT_POST,
-  "power-weeder-maintenance-checklist": {
-    title: "Power Weeder Maintenance: A 10-Point Checklist for Long Life",
-    cover_image: PLOWING,
-    created_at: "2026-01-10T10:00:00Z",
-    tags: ["Power Weeder", "Maintenance"],
-    content: `Brush cutters work hard in harsh conditions. Proper maintenance can extend life by 3x. Here is our 10-point routine:
+  "power-weeder-buying-guide-2026": {
+    title: "Power Weeder Buying Guide 2026: Petrol vs Diesel vs Electric Start",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    created_at: "2026-01-15T10:00:00Z",
+    tags: ["Power Weeder", "Buying Guide", "B2B Procurement"],
+    content: `Choosing the right power weeder is critical for Indian FPOs (Farmer Producer Organizations) and agri-dealers to ensure long-term ROI and minimal maintenance costs. In 2026, the power weeder market is dominated by three main categories: Petrol, Diesel, and Electric-Start models.
 
-1. Use fresh 2T oil-petrol mix in the right ratio (typically 1:25 or 1:50 per manual)
-2. Clean the air filter every 10 hours of use
-3. Replace the spark plug every 100 hours
-4. Check and tighten the blade bolt before each use
-5. Inspect the harness and anti-vibration mounts monthly
-6. Grease the gearbox at the cutter head every 25 hours
-7. Drain fuel during off-season storage
-8. Store the unit in a dry, dust-free place
-9. Replace the trimmer line spool when frayed
-10. Service the carburetor annually by an authorized technician
+## 1. Petrol Power Weeders (7 HP to 9 HP)
+Petrol models, such as the **RK-170F** and **RK-177F WOLF**, are the most popular choice for small-to-medium landholdings. 
+- **Pros:** Lightweight, highly maneuverable, and extremely easy to start. They vibrate less than diesel engines.
+- **Ideal for:** Inter-cultivation in horticulture, vegetable farming, and orchards.
+- **Maintenance:** Requires regular spark plug cleaning and carburetor checks.
 
-Following this routine keeps your cutter running like new.`,
+## 2. Diesel Power Weeders (5.5 HP to 10 HP)
+Diesel engines (like the **RK-173F** and **RK-ICD-UP186-SH**) are heavy-duty workhorses designed for tough, sun-baked clay soils.
+- **Pros:** Higher torque at lower RPMs, unmatched fuel economy, and better longevity for contract farming.
+- **Ideal for:** Sugarcane, cotton, and heavy paddy cultivation.
+- **Maintenance:** Injector cleaning and fuel filter replacements are critical.
+
+## 3. Electric Start Models
+Many 9 HP and 10 HP diesel models now come with a key-start (Electric Start) option. While this adds to the initial procurement cost, it dramatically reduces operator fatigue.
+- **Recommendation:** If you run a Custom Hiring Center (CHC) or rental business, electric start is highly recommended to prevent starter recoil rope breakages from inexperienced operators.
+
+### B2B Procurement Strategy
+When planning inventory for the Kharif season, dealers should maintain a **70:30 ratio** of Petrol to Diesel models in Central India, whereas Southern states with heavier soils often demand a **40:60** ratio favoring Diesel.`,
   },
-  "agri-machinery-subsidy-states-india": {
-    title: "State-Wise Agricultural Machinery Subsidies in India",
-    cover_image: FARMER_FIELD,
+  "rk-170f-vs-177f-vs-173f-comparison": {
+    title: "RK-170F vs RK-177F vs RK-173F: Which Power Weeder is Right for You?",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/baby-weeder.webp",
+    created_at: "2026-01-10T10:00:00Z",
+    tags: ["Comparison", "Power Weeder", "Specs"],
+    content: `When agricultural dealers stock KrishiGears machinery, selecting the right model mix is crucial. Here is a definitive commercial and technical breakdown of our three top-selling units.
+
+## RK-170F (7 HP Petrol)
+The **RK-170F** is the undisputed entry-level champion for Indian horticulture.
+* **Engine:** 212cc, 4-Stroke OHV
+* **Tilling Width:** Up to 3.5 feet
+* **Best For:** Vegetable farmers, narrow-row crops, and terraced farming.
+* **Dealer Advantage:** Highest volume mover. Easy to service with universally available spare parts.
+
+## RK-177F WOLF (9 HP Petrol)
+The **RK-177F WOLF** is the high-performance upgrade. It combines the lightweight agility of a petrol engine with the raw tilling power of a heavy-duty chassis.
+* **Engine:** 270cc, 4-Stroke OHV
+* **Tilling Depth:** Up to 8 inches in hardened soil.
+* **Best For:** Orchards, banana plantations, and wide-row inter-cultivation.
+* **Dealer Advantage:** Premium margins with excellent customer satisfaction due to zero bog-down in wet conditions.
+
+## RK-173F (5.5 HP Diesel)
+Do not let the 5.5 HP rating fool you—the **RK-173F** outputs massive torque comparable to a 9 HP petrol engine.
+* **Engine:** 247cc Air-Cooled Diesel
+* **Transmission:** Direct Gear Drive (No belts)
+* **Best For:** Sugarcane, heavy clay soils, and commercial custom hiring.
+* **Dealer Advantage:** Appeals to institutional buyers and FPOs prioritizing diesel fuel economy.
+
+### Summary Verdict
+For dryland horticulture, push the **RK-170F**. For maximum petrol performance, stock the **RK-177F WOLF**. For institutional/heavy soil markets, the **RK-173F** diesel is mandatory.`,
+  },
+  "power-weeder-government-subsidy-dbt-guide": {
+    title: "Power Weeder Government Subsidy: How Dealers & FPOs Can Apply via DBT",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
     created_at: "2026-01-05T10:00:00Z",
-    tags: ["Subsidy", "Government"],
-    content: `Most Indian states offer 40-50% subsidy on small farm machinery under various central and state schemes such as SMAM, RKVY and state-specific programs.
+    tags: ["Subsidy", "Government", "DBT Portal"],
+    content: `Government subsidies drive over 40% of small agricultural machinery sales in India. For dealers and FPOs (Farmer Producer Organizations), mastering the Direct Benefit Transfer (DBT) portal is non-negotiable.
 
-## How to apply
-- Register on your state's agriculture department portal
-- Upload Aadhaar, land records, bank details
-- Choose a listed implement and authorized supplier
-- Wait for approval, then purchase from the dealer
+## Sub-Mission on Agricultural Mechanization (SMAM)
+The SMAM scheme is the primary vehicle for power weeder subsidies.
+* **Individual Farmers:** Eligible for 40% to 50% subsidy on the base price.
+* **SC/ST/Women/Small & Marginal Farmers:** Generally qualify for the upper 50% slab.
+* **Custom Hiring Centers (CHCs):** FPOs setting up CHCs can avail up to 80% project cost subsidy (up to ₹10 Lakhs).
 
-## Documents typically required
-- Aadhaar card
-- 7/12 extract / Khasra / land record
-- Bank passbook
-- Caste certificate (if claiming SC/ST/OBC quota)
-- Self-declaration
+## State-Level DBT Portals
+Every state implements SMAM through its own DBT portal:
+1. **MahaDBT (Maharashtra):** Requires farmers to upload 7/12 extracts and Aadhaar linkages.
+2. **UP Agriculture:** Focuses heavily on first-come, first-serve token generation.
+3. **e-Rupi / MP DBT:** Rapidly adopting digital voucher systems for direct dealer redemption.
 
-KrishiGears is an authorized supplier for several state schemes. Contact us with your state and product interest to check eligibility.`,
+## Dealer Compliance Checklist
+To process subsidy sales, KrishiGears dealers must ensure:
+1. **FMTTI Test Reports:** All KrishiGears machines hold valid Government testing certificates from institutions like Budni or Hisar. You must provide these to the farmer.
+2. **GST Billing:** The invoice must exactly match the farmer's Aadhaar and 7/12 name.
+3. **Geo-Tagged Photos:** Most inspectors require a photo of the farmer with the machine and the engraved chassis number.
+
+By proactively helping farmers navigate the DBT portal, dealers can increase their conversion rates by over 60%.`,
   },
 };
 

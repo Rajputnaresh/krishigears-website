@@ -7,39 +7,32 @@ import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
 // Static fallback sample posts (used only when DB is empty)
 const SAMPLE_POSTS = [
   {
-    slug: "power-tiller-dealer-procurement-checklist",
-    title: "Power Tiller Dealer Procurement Checklist",
-    excerpt: "Dealer, FPO and institutional checklist for range planning, documentation, warranty support and spare-part readiness.",
-    cover_image: FIELD_TRACTOR,
+    slug: "power-weeder-buying-guide-2026",
+    title: "Power Weeder Buying Guide 2026: Petrol vs Diesel vs Electric Start",
+    excerpt: "A comprehensive 2026 procurement guide for agri-dealers, FPOs, and commercial contractors comparing petrol, diesel, and electric-start power weeders.",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
     created_at: "2026-01-15T10:00:00Z",
-    tags: ["Power Tiller", "Dealer Supply"],
+    tags: ["Power Weeder", "Buying Guide", "B2B Procurement"],
   },
   {
-    slug: "power-weeder-maintenance-checklist",
-    title: "Power Weeder Maintenance: A 10-Point Checklist for Long Life",
-    excerpt: "Keep your power weeder running smoothly season after season with this 10-point maintenance routine.",
-    cover_image: PLOWING,
+    slug: "rk-170f-vs-177f-vs-173f-comparison",
+    title: "RK-170F vs RK-177F vs RK-173F: Which Power Weeder is Right for You?",
+    excerpt: "Head-to-head technical comparison of KrishiGears top-selling power weeder models for Indian soil conditions.",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/baby-weeder.webp",
     created_at: "2026-01-10T10:00:00Z",
-    tags: ["Power Weeder", "Maintenance"],
+    tags: ["Comparison", "Power Weeder", "Specs"],
   },
   {
-    slug: "agri-machinery-subsidy-states-india",
-    title: "State-Wise Agricultural Machinery Subsidies in India",
-    excerpt: "A quick reference for state-level subsidies on power tillers, weeders and sprayers.",
-    cover_image: FARMER_FIELD,
+    slug: "power-weeder-government-subsidy-dbt-guide",
+    title: "Power Weeder Government Subsidy: How Dealers & FPOs Can Apply via DBT",
+    excerpt: "A step-by-step operational guide for agricultural dealers and FPOs to access 40% to 50% government subsidies on power weeders.",
+    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
     created_at: "2026-01-05T10:00:00Z",
-    tags: ["Subsidy", "Government"],
+    tags: ["Subsidy", "Government", "DBT Portal"],
   },
 ];
 
-const POST_OVERRIDES = {
-  "power-tiller-buying-guide-india-2026": {
-    slug: "power-tiller-dealer-procurement-checklist",
-    title: "Power Tiller Dealer Procurement Checklist",
-    excerpt: "Dealer, FPO and institutional checklist for range planning, documentation, warranty support and spare-part readiness.",
-    tags: ["Power Tiller", "Dealer Supply"],
-  },
-};
+const POST_OVERRIDES = {};
 
 function normalizePost(post) {
   return { ...post, ...(POST_OVERRIDES[post.slug] || {}) };

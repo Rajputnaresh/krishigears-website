@@ -1172,29 +1172,6 @@ async def test_sheet_webhook(lead_type: str, user: dict = Depends(get_current_ad
         raise HTTPException(status_code=502, detail=f"Webhook call failed: {e}")
 
 
-app.include_router(api_router)
-
-def cors_origins() -> List[str]:
-    configured = first_env("CORS_ORIGINS")
-    if configured:
-        return [origin.strip() for origin in configured.split(",") if origin.strip()]
-    return [
-        "http://localhost:3000",
-        "https://krishigears.com",
-        "https://www.krishigears.com",
-        "https://krishigears.in",
-        "https://www.krishigears.in",
-    ]
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=cors_origins(),
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 @api_router.get("/admin/force-purge-non-weeders")
 async def force_purge():
     res = await db.products.delete_many({"category": {"$nin": ["power-weeders", "power-weeder-spare-parts"]}})
@@ -1210,8 +1187,6 @@ Petrol models, such as the **RK-170F** and **RK-177F WOLF**, are the most popula
 - **Pros:** Lightweight, highly maneuverable, and extremely easy to start. They vibrate less than diesel engines.
 - **Ideal for:** Inter-cultivation in horticulture, vegetable farming, and orchards.
 - **Maintenance:** Requires regular spark plug cleaning and carburetor checks.
-
-![Petrol Weeder in Action](/assets/blog/farmer-field.jpg)
 
 ## 2. Diesel Power Weeders (5.5 HP to 10 HP)
 Diesel engines (like the **RK-173F** and **RK-ICD-UP186-SH**) are heavy-duty workhorses designed for tough, sun-baked clay soils.
@@ -1232,26 +1207,24 @@ When agricultural dealers stock KrishiGears machinery, selecting the right model
 
 ## RK-170F (7 HP Petrol)
 The **RK-170F** is the undisputed entry-level champion for Indian horticulture.
-*   **Engine:** 212cc, 4-Stroke OHV
-*   **Tilling Width:** Up to 3.5 feet
-*   **Best For:** Vegetable farmers, narrow-row crops, and terraced farming.
-*   **Dealer Advantage:** Highest volume mover. Easy to service with universally available spare parts.
-
-![RK-170F Tilling](/assets/blog/plowing.jpg)
+* **Engine:** 212cc, 4-Stroke OHV
+* **Tilling Width:** Up to 3.5 feet
+* **Best For:** Vegetable farmers, narrow-row crops, and terraced farming.
+* **Dealer Advantage:** Highest volume mover. Easy to service with universally available spare parts.
 
 ## RK-177F WOLF (9 HP Petrol)
 The **RK-177F WOLF** is the high-performance upgrade. It combines the lightweight agility of a petrol engine with the raw tilling power of a heavy-duty chassis.
-*   **Engine:** 270cc, 4-Stroke OHV
-*   **Tilling Depth:** Up to 8 inches in hardened soil.
-*   **Best For:** Orchards, banana plantations, and wide-row inter-cultivation.
-*   **Dealer Advantage:** Premium margins with excellent customer satisfaction due to zero bog-down in wet conditions.
+* **Engine:** 270cc, 4-Stroke OHV
+* **Tilling Depth:** Up to 8 inches in hardened soil.
+* **Best For:** Orchards, banana plantations, and wide-row inter-cultivation.
+* **Dealer Advantage:** Premium margins with excellent customer satisfaction due to zero bog-down in wet conditions.
 
 ## RK-173F (5.5 HP Diesel)
 Do not let the 5.5 HP rating fool you—the **RK-173F** outputs massive torque comparable to a 9 HP petrol engine.
-*   **Engine:** 247cc Air-Cooled Diesel
-*   **Transmission:** Direct Gear Drive (No belts)
-*   **Best For:** Sugarcane, heavy clay soils, and commercial custom hiring.
-*   **Dealer Advantage:** Appeals to institutional buyers and FPOs prioritizing diesel fuel economy.
+* **Engine:** 247cc Air-Cooled Diesel
+* **Transmission:** Direct Gear Drive (No belts)
+* **Best For:** Sugarcane, heavy clay soils, and commercial custom hiring.
+* **Dealer Advantage:** Appeals to institutional buyers and FPOs prioritizing diesel fuel economy.
 
 ### Summary Verdict
 For dryland horticulture, push the **RK-170F**. For maximum petrol performance, stock the **RK-177F WOLF**. For institutional/heavy soil markets, the **RK-173F** diesel is mandatory.
@@ -1262,40 +1235,42 @@ Government subsidies drive over 40% of small agricultural machinery sales in Ind
 
 ## Sub-Mission on Agricultural Mechanization (SMAM)
 The SMAM scheme is the primary vehicle for power weeder subsidies.
-*   **Individual Farmers:** Eligible for 40% to 50% subsidy on the base price.
-*   **SC/ST/Women/Small & Marginal Farmers:** Generally qualify for the upper 50% slab.
-*   **Custom Hiring Centers (CHCs):** FPOs setting up CHCs can avail up to 80% project cost subsidy (up to ₹10 Lakhs).
-
-![Subsidy Application](/assets/blog/field-tractor.jpg)
+* **Individual Farmers:** Eligible for 40% to 50% subsidy on the base price.
+* **SC/ST/Women/Small & Marginal Farmers:** Generally qualify for the upper 50% slab.
+* **Custom Hiring Centers (CHCs):** FPOs setting up CHCs can avail up to 80% project cost subsidy (up to ₹10 Lakhs).
 
 ## State-Level DBT Portals
 Every state implements SMAM through its own DBT portal:
-1.  **MahaDBT (Maharashtra):** Requires farmers to upload 7/12 extracts and Aadhaar linkages.
-2.  **UP Agriculture:** Focuses heavily on first-come, first-serve token generation.
-3.  **e-Rupi / MP DBT:** Rapidly adopting digital voucher systems for direct dealer redemption.
+1. **MahaDBT (Maharashtra):** Requires farmers to upload 7/12 extracts and Aadhaar linkages.
+2. **UP Agriculture:** Focuses heavily on first-come, first-serve token generation.
+3. **e-Rupi / MP DBT:** Rapidly adopting digital voucher systems for direct dealer redemption.
 
 ## Dealer Compliance Checklist
 To process subsidy sales, KrishiGears dealers must ensure:
-1.  **FMTTI Test Reports:** All KrishiGears machines hold valid Government testing certificates from institutions like Budni or Hisar. You must provide these to the farmer.
-2.  **GST Billing:** The invoice must exactly match the farmer's Aadhaar and 7/12 name.
-3.  **Geo-Tagged Photos:** Most inspectors require a photo of the farmer with the machine and the engraved chassis number.
+1. **FMTTI Test Reports:** All KrishiGears machines hold valid Government testing certificates from institutions like Budni or Hisar. You must provide these to the farmer.
+2. **GST Billing:** The invoice must exactly match the farmer's Aadhaar and 7/12 name.
+3. **Geo-Tagged Photos:** Most inspectors require a photo of the farmer with the machine and the engraved chassis number.
 
 By proactively helping farmers navigate the DBT portal, dealers can increase their conversion rates by over 60%.
 """
 
     await db.blog_posts.update_one(
         {"slug": "power-weeder-buying-guide-2026"},
-        {"$set": {"content": content_buying_guide, "cover_image": "/assets/blog/farmer-field.jpg"}}
+        {"$set": {"content": content_buying_guide, "cover_image": "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp"}}
     )
     
     await db.blog_posts.update_one(
         {"slug": "rk-170f-vs-177f-vs-173f-comparison"},
-        {"$set": {"content": content_comparison, "cover_image": "/assets/blog/plowing.jpg"}}
+        {"$set": {"content": content_comparison, "cover_image": "https://royalkissanagro.com/wp-content/uploads/2025/10/baby-weeder.webp"}}
     )
     
     await db.blog_posts.update_one(
         {"slug": "power-weeder-government-subsidy-dbt-guide"},
-        {"$set": {"content": content_subsidy, "cover_image": "/assets/blog/field-tractor.jpg"}}
+        {"$set": {"content": content_subsidy, "cover_image": "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp"}}
     )
     
     return {"status": "seeded rich blogs"}
+
+
+app.include_router(api_router)
+
