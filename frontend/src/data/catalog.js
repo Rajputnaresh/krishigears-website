@@ -308,3 +308,6 @@ export const SEO_PAGES = [...GEO_SEO_PAGES,
   { slug: "power-weeder-supplier-india", title: "Power Weeder Dealer Network & Bulk Supply", category: "power-weeders" },
   { slug: "power-weeder-spare-parts-supplier-india", title: "Power Weeder Spare Parts Distributor & OEM Supply", category: "power-weeder-spare-parts" }
 ];
+
+// O(1) lookup Map for thousands of geo pages — used by SeoLanding and RouteSEO
+export const SEO_PAGES_MAP = new Map(SEO_PAGES.map((p) => [p.slug, p]));
