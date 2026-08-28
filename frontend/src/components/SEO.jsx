@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
+const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.com").replace(/\/$/, "");
 const DEFAULT_OG_IMAGE = `${SITE}/splash-1200.jpg`;
 const DEFAULT_DESC =
-  "KrishiGears — premium agricultural machinery brand. Bulk supply, dealer network, OEM distribution and institutional procurement of power weeders power tillers, weeders, brush cutters & farm tools genuine spare parts across India.";
+  "KrishiGears — India's dedicated B2B Power Weeder brand. Wholesale supply, dealer network, OEM distribution and institutional procurement of power weeders & genuine spare parts across India.";
 
 // Centralized SEO component. Every page passes title + description + path.
 // Falls back to safe defaults so we never ship an unset tag.

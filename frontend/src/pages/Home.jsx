@@ -98,7 +98,7 @@ export default function Home() {
             {/* Quick stats */}
             <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl">
               {[
-                { v: "19+", l: "Product Categories" },
+                { v: "7+", l: "Power Weeder Models" },
                 { v: "PAN India", l: "Supply Network" },
                 { v: "100%", l: "Genuine Parts" },
               ].map((s) => (
@@ -135,7 +135,7 @@ export default function Home() {
               <h2 className="kg-h2 mt-3">Built for every <span className="text-lime-500">Indian farm.</span></h2>
             </div>
             <Link to="/products" data-testid="all-products-link" className="text-sm text-lime-500 hover:text-lime-400 flex items-center gap-1 font-bold">
-              View all 19 categories <ChevronRight className="h-4 w-4" />
+              View all products <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
 

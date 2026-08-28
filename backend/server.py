@@ -985,6 +985,8 @@ def cors_origins() -> List[str]:
         return [origin.strip() for origin in configured.split(",") if origin.strip()]
     return [
         "http://localhost:3000",
+        "https://krishigears.com",
+        "https://www.krishigears.com",
         "https://krishigears.in",
         "https://www.krishigears.in",
     ]

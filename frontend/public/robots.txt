@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /admin/
 
-Sitemap: https://krishigears.in/sitemap.xml
+Sitemap: https://krishigears.com/sitemap.xml
