@@ -1,49 +1,43 @@
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Check, ArrowRight, MapPin, Wrench, Package, Phone } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
-
-// Common spare parts catalog (categorical inventory, applies across India)
-const SPARE_CATEGORIES = [
-  { name: "Engine Parts", items: ["Piston kit", "Cylinder block", "Crankshaft", "Cam shaft", "Spark plug", "Air filter", "Fuel filter", "Oil filter", "Carburetor", "Recoil starter assembly", "Flywheel", "Ignition coil", "Throttle cable"] },
-  { name: "Blade & Cutting", items: ["Dry land blades (L-type)", "Paddy blades (C-type)", "Serrrated blades", "Rotary tiller blades", "Blade hub", "Blade carrier", "Skid plate", "Depth adjustment lever"] },
-  { name: "Transmission & Drivetrain", items: ["Gear box assembly", "Clutch shoes", "Belt (V-belt)", "Pulley set", "Drive shaft", "Bearing set (6203/6205/6206)", "Chain & sprocket", "Clutch cable"] },
-  { name: "Handlebar & Controls", items: ["Handlebar assembly", "Throttle lever", "Clutch lever", "Gear shift lever", "Reverse lever", "Throttle cable", "Clutch cable", "Handle grips"] },
-  { name: "Wheels & Tyres", items: ["Rubber wheels (4.00-8)", "Paddy wheels", "Transport wheels", "Wheel hub", "Axle assembly", "Tyre tube"] },
-  { name: "Frame & Body", items: ["Main frame", "Engine mount", "Bumper", "Hood/cover", "Side cover", "Foot rest"] },
-];
-
-// Common problems & fixes (informational content)
-const COMMON_PROBLEMS = [
-  { issue: "Power weeder not starting", fix: "Check fuel level, spark plug condition, air filter blockage, and carburetor cleanliness. Ensure fuel mixture ratio (25:1 for 2-stroke, pure diesel for 4-stroke)." },
-  { issue: "Engine cuts off after a few minutes", fix: "Likely a clogged fuel filter, carburetor float issue, or overheating. Inspect fuel line for air leaks and clean the carburetor jets." },
-  { issue: "Blades not rotating", fix: "Check belt tension, clutch shoes wear, and drive shaft connection. Replace if clutch shoes are below 2mm thickness." },
-  { issue: "Excessive vibration during operation", fix: "Inspect blade balance, bent blade carrier, loose engine mount bolts, or worn handlebar rubber dampers." },
-  { issue: "Smoke from engine (white/blue/black)", fix: "White = coolant issue or burning oil; Blue = oil-fuel mix wrong; Black = rich fuel mixture. Adjust carburetor or replace seals." },
-  { issue: "Loss of power in wet/paddy field", fix: "Use paddy wheels instead of rubber wheels. Check if water ingress in air filter. Reduce working depth." },
-  { issue: "Belt slipping under load", fix: "Tension the V-belt via the idler pulley, or replace if stretched/glazed." },
-  { issue: "Gear shifting problems", fix: "Inspect shift fork, shift cable, and gear box oil level. Top up with SAE 90 gear oil if low." },
-];
-
-// Service offerings at location
-const SERVICE_OFFERINGS = [
-  "On-site repair and breakdown support",
-  "Pickup-and-drop for warranty machines",
-  "Annual Maintenance Contract (AMC) for institutional buyers",
-  "Field demonstration and operator training",
-  "Spare-parts stocking at partner locations",
-  "Toll-free technical helpline (Hindi, English, regional)",
-];
 import { SPARE_PARTS_MAP } from "@/data/sparePartsSeo";
+import { pickRandom } from "@/lib/random";
+
+const ALL_SPARE_CATEGORIES = [
+  { name: "Engine Core Components", icon: "⚙️", items: ["Piston & Ring Set (RK-170F/RK-177F)", "Cylinder Block Assembly", "Crankshaft with Bearings", "Camshaft Assembly", "Spark Plug (NGK BP6ES)", "Carburetor Assembly", "Fuel Injector Nozzle (Diesel)", "Flywheel", "Ignition Coil / Magneto"] },
+  { name: "Transmission & Drivetrain", icon: "🔗", items: ["Cast Iron Gearbox Housing", "Clutch Shoe Friction Pads (Heavy Duty)", "V-Belt (B-Section)", "Drive Shaft (Hexagonal)", "Tensioner Pulley Set", "Bearing Set (6203/6205/6206)", "Chain & Sprocket (Baby Weeder)", "Clutch Cable Assembly"] },
+  { name: "Blades & Tillage Attachments", icon: "🔪", items: ["Dry Land Blades (L-Type, High Carbon)", "Wetland Paddy Blades (C-Type)", "Serrated Deep Tilling Blades", "Rotary Tiller Hub", "Blade Carrier Plate", "Skid Plate / Depth Bar", "Ridger Attachment", "Ditcher Plow"] },
+  { name: "Consumables & Maintenance", icon: "🛢️", items: ["Air Filter Element (Foam/Paper)", "Fuel Filter (Inline/Tank)", "Engine Oil Filter", "Recoil Starter Rope (Nylon)", "Recoil Spring", "SAE 90 Gear Oil (1L)", "20W40 Engine Oil", "Carburetor Cleaning Kit"] },
+  { name: "Controls & Handles", icon: "🕹️", items: ["Handlebar Assembly (Adjustable)", "Throttle Lever (Metal)", "Clutch Lever", "Gear Shift Lever", "Reverse Gear Lever", "Throttle Cable", "Clutch Cable", "Anti-Vibration Rubber Grips"] },
+  { name: "Wheels & Chassis", icon: "🚜", items: ["Rubber Wheels (4.00-8 Chevron)", "Iron Paddy Wheels (Cage)", "Transport Wheels", "Wheel Hub with Pins", "Axle Assembly", "Engine Mounting Plate", "Bumper Guard", "Fender / Mudguard (Left/Right)"] },
+];
+
+const SERVICE_OFFERINGS = [
+  "OEM guaranteed fitment for KrishiGears models",
+  "Next-day dispatch for critical breakdown parts",
+  "Wholesale pricing for local dealers & mechanics",
+  "Genuine RK-series engine components",
+  "Field-tested high carbon rotary blades",
+  "Direct factory-to-farm supply chain",
+];
 
 export default function SpareParts() {
   const { slug } = useParams();
   const pageData = SPARE_PARTS_MAP.get(slug);
-  
-  // Fallback if accessed via old url structure
   const location = pageData?.city || slug?.split("-").slice(0, -2).join(" ") || "India";
-  const stateGuess = pageData?.state || "";
+  const state = pageData?.state || "";
+  
+  // Deterministic random selection to prevent duplicate content across 5700+ pages
+  const randomCategories = pickRandom(ALL_SPARE_CATEGORIES, 4, location + "parts");
+  
+  // Randomize the items within the categories
+  const dynamicCategories = randomCategories.map(cat => ({
+    ...cat,
+    items: pickRandom(cat.items, 5, location + cat.name)
+  }));
 
   const localSchema = {
     "@context": "https://schema.org",
@@ -56,6 +50,11 @@ export default function SpareParts() {
     "address": { "@type": "PostalAddress", "addressLocality": location, "addressCountry": "IN" },
   };
 
+  const isMarathi = state === "Maharashtra";
+  const vernacularHeadline = isMarathi
+    ? `${location} मध्ये पॉवर वीडर सुटे भाग — घाऊक पुरवठादार`
+    : `${location} में पावर वीडर स्पेयर पार्ट्स — थोक विक्रेता और डीलर`;
+
   return (
     <div data-testid="spare-parts-page">
       <script type="application/ld+json">{JSON.stringify(localSchema)}</script>
@@ -66,72 +65,69 @@ export default function SpareParts() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
-          <div className="kg-eyebrow">{COMPANY.name} · Spare Parts Supply</div>
+          <div className="kg-eyebrow">{COMPANY.name} · Spares & Attachments</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">
-            Power Weeder Spare Parts in {location} — Genuine OEM & Aftermarket
+            Power Weeder Spare Parts in {location} — OEM Wholesale Supply
           </h1>
           <h2 className="text-xl text-zinc-400 mt-2 font-normal">
-            {location} में पावर वीडर के असली स्पेयर पार्ट्स — ब्लेड, इंजन पार्ट्स, ट्रांसमिशन
+            {vernacularHeadline}
           </h2>
           <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
-            Genuine spare parts for all major power weeder brands in {location}. Blade sets, engine components,
-            transmission parts, filters and accessories — stocked locally and dispatched across {location} district
-            with COD and prepaid options for dealers and farmers.
+            Direct supply of genuine high-carbon blades, RK-series engine components, gearboxes, and
+            maintenance kits for power weeders in {location}. We support local mechanics, dealers, and
+            farmers with guaranteed OEM fitment.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <EnquiryDialog product="Power Weeder Spare Parts" trigger={
-              <button data-testid="spare-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Spare Parts Quote</button>
+            <EnquiryDialog product={`Spare Parts Bulk Order in ${location}`} trigger={
+              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
             } />
-            <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts", slug)} data-testid="spare-whatsapp" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Spare Parts Desk</a>
+            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I need power weeder spare parts in ${location}. Looking for: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Parts Counter</a>
           </div>
         </div>
       </section>
 
-      <section className="kg-section bg-[#080808] border-y border-zinc-900">
+      <section className="kg-section bg-zinc-950">
         <div className="max-w-[1200px] mx-auto">
-          <div className="kg-eyebrow">Parts Catalog</div>
-          <h2 className="kg-h2 mt-3">Spare part categories we supply in {location}.</h2>
-          <h3 className="text-lg text-zinc-400 mt-2 font-normal">{location} में हम जो स्पेयर पार्ट्स की आपूर्ति करते हैं</h3>
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {SPARE_CATEGORIES.map((cat) => (
-              <div key={cat.name} className="border border-zinc-800 p-6 rounded-md hover:border-lime-500 transition">
-                <div className="flex items-center gap-2 mb-3">
-                  <Package className="h-5 w-5 text-lime-500" />
-                  <h3 className="font-bold text-lg">{cat.name}</h3>
-                </div>
-                <ul className="space-y-1.5 text-sm text-zinc-400">
-                  {cat.items.map((item) => <li key={item} className="flex items-start gap-2"><span className="text-lime-500">•</span>{item}</li>)}
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <h2 className="kg-h2 mb-4">Available Inventory for {location}</h2>
+              <p className="text-zinc-400 mb-8 leading-relaxed">
+                We maintain a comprehensive catalog of wear-and-tear parts and core components.
+                If a specific part for your 7HP or 9HP weeder is not listed, our parts desk can source it using your machine's serial number.
+              </p>
+              <div className="p-6 bg-zinc-900 border border-zinc-800 rounded-md">
+                <h3 className="font-bold text-white mb-4 flex items-center gap-2">
+                  <Package className="h-5 w-5 text-lime-500" /> Supply Guarantees
+                </h3>
+                <ul className="space-y-3">
+                  {SERVICE_OFFERINGS.map((offer, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-zinc-300">
+                      <Check className="h-4 w-4 text-lime-500 shrink-0 mt-0.5" />
+                      {offer}
+                    </li>
+                  ))}
                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="kg-section">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="kg-eyebrow">Service Support</div>
-          <h2 className="kg-h2 mt-3">Beyond parts: full service in {location}.</h2>
-          <h3 className="text-lg text-zinc-400 mt-2 font-normal">{location} में हमारी सेवा — सिर्फ पार्ट्स नहीं, पूरा सपोर्ट</h3>
-          <div className="mt-10 grid md:grid-cols-2 gap-4">
-            {SERVICE_OFFERINGS.map((s) => (
-              <div key={s} className="flex items-start gap-3 text-zinc-300">
-                <Check className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />{s}
+            </div>
+            
+            <div className="lg:col-span-8">
+              <div className="grid sm:grid-cols-2 gap-6">
+                {dynamicCategories.map((cat) => (
+                  <div key={cat.name} className="border border-zinc-800 bg-black rounded-md overflow-hidden hover:border-zinc-600 transition-colors">
+                    <div className="bg-zinc-900 px-5 py-3 border-b border-zinc-800 font-bold text-white flex items-center gap-2">
+                      <span>{cat.icon}</span> {cat.name}
+                    </div>
+                    <ul className="p-5 space-y-2">
+                      {cat.items.map((item) => (
+                        <li key={item} className="text-sm text-zinc-400 flex items-start gap-2">
+                          <span className="text-zinc-700 shrink-0">▪</span> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="kg-section bg-[#080808] border-y border-zinc-900">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="kg-h2 max-w-2xl mx-auto text-balance">Need a specific part not listed?</h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-            Send the model name and part photo on WhatsApp. We source hard-to-find components within 3-5 working days.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts_custom", slug)} className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2"><Phone className="h-4 w-4" />WhatsApp Part Inquiry</a>
-            <Link to="/contact" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Contact Form</Link>
+            </div>
           </div>
         </div>
       </section>
