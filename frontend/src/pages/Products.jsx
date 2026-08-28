@@ -32,7 +32,7 @@ export default function Products() {
                   </div>
                 </div>
                 <div className="p-4 flex items-center justify-between">
-                  <span className="text-xs text-zinc-500">{c.short.slice(0, 36)}…</span>
+                  <span className="text-xs text-zinc-500">{(c.short || "Explore category").slice(0, 36)}…</span>
                   <ArrowRight className="h-4 w-4 text-lime-500 group-hover:translate-x-1 transition" />
                 </div>
               </Link>
