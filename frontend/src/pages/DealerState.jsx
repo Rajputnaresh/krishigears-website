@@ -30,21 +30,21 @@ const STATE_DATA = {
 };
 
 const DEALER_BENEFITS = [
-  { icon: "💰", title: "30-40% margin on MRP", desc: "Industry-leading dealer margins with quarterly incentive bonuses on volume targets" },
-  { icon: "📦", title: "Live inventory dashboard", desc: "Real-time stock visibility, automatic reorder alerts and dispatch tracking" },
-  { icon: "🚚", title: "48-hour dispatch guarantee", desc: "Stocked inventory at central warehouse ships in 2 working days to your location" },
-  { icon: "🛠️", title: "Free service training", desc: "3-day technical training at our facility: engine, transmission, electronics, troubleshooting" },
-  { icon: "📢", title: "Co-marketing budget", desc: "50% co-funded local marketing: banners, local print ads, demo day support" },
-  { icon: "📋", title: "Exclusive territory protection", desc: "Single dealer per district. No overlap. Your customers, your business" },
+  { icon: "💰", title: "Direct Factory Economics", desc: "Industry-leading margins because we operate a zero-warehouse, factory-direct supply chain" },
+  { icon: "📦", title: "On-Demand Dispatch", desc: "No dead stock. Order directly from our supplier network only when you have a confirmed sale" },
+  { icon: "🚚", title: "Documented Supply Network", desc: "Full GST invoicing, e-way bills, and transit tracking directly to your showroom" },
+  { icon: "🛠️", title: "Technical Support", desc: "Access to our OEM parts network and technical troubleshooting for RK-series engines" },
+  { icon: "📢", title: "Local Geo-SEO Leads", desc: "We route inquiries generated from our digital platform directly to your dealership" },
+  { icon: "📋", title: "Exclusive Territory Protection", desc: "Single authorized supply node per district. No overlap. Your customers, your business" },
 ];
 
 const DEALER_REQUIREMENTS = [
-  "Existing agri-input retail shop OR 500 sq ft commercial space for showroom",
-  "Investment capacity: ₹5-15 lakh (based on tier 1 vs tier 3 district)",
-  "GST registration and PAN card",
-  "Two-wheeler for local service calls",
-  "One trained mechanic (we provide training free)",
-  "Working capital for 30 days of stock holding",
+  "Existing agri-input retail shop OR commercial space for showroom",
+  "Commitment to the On-Demand ordering model (No bulk speculative stocking required)",
+  "GST registration and active PAN card",
+  "Two-wheeler for local service calls and field demonstrations",
+  "Ability to handle basic RK-series engine and rotary maintenance",
+  "Working capital for placing on-demand supplier orders",
 ];
 
 const DEALER_PROCESS = [
