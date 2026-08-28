@@ -3,7 +3,7 @@ import { Check, AlertTriangle, Wrench, Phone, ArrowRight } from "lucide-react";
 import { COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
-import { SERVICE_MAP } from "@/data/serviceSeo";
+import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import { pickRandom } from "@/lib/random";
 
 const ALL_ENGINE_PROBLEMS = [
@@ -45,9 +45,14 @@ const SERVICE_OPTIONS = [
 
 export default function ServiceProblems() {
   const { slug } = useParams();
-  const pageData = SERVICE_MAP.get(slug);
-  const location = pageData?.city || slug?.split("-").slice(0, -2).join(" ") || "India";
-  const state = pageData?.state || "";
+  
+  // URL format: power-weeder-repair-service-in-{city_slug}
+  const citySlugMatch = slug?.match(/power-weeder-repair-service-in-(.+)/);
+  const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+  
+  const geo = CITY_STATE_MAP[citySlug] || {};
+  const location = geo.city || slug?.split("-").slice(0, -2).join(" ") || "India";
+  const state = geo.state || "";
   
   // Deterministic random selection for this city to prevent duplicate content
   const randomEngine = pickRandom(ALL_ENGINE_PROBLEMS, 4, location + "eng");

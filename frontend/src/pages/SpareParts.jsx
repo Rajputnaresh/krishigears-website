@@ -3,7 +3,7 @@ import { Check, ArrowRight, MapPin, Wrench, Package, Phone } from "lucide-react"
 import { CATEGORIES, COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
-import { SPARE_PARTS_MAP } from "@/data/sparePartsSeo";
+import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import { pickRandom } from "@/lib/random";
 
 const ALL_SPARE_CATEGORIES = [
@@ -26,9 +26,14 @@ const SERVICE_OFFERINGS = [
 
 export default function SpareParts() {
   const { slug } = useParams();
-  const pageData = SPARE_PARTS_MAP.get(slug);
-  const location = pageData?.city || slug?.split("-").slice(0, -2).join(" ") || "India";
-  const state = pageData?.state || "";
+  
+  // URL format: power-weeder-spare-parts-in-{city_slug}
+  const citySlugMatch = slug?.match(/power-weeder-spare-parts-in-(.+)/);
+  const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+
+  const geo = CITY_STATE_MAP[citySlug] || {};
+  const location = geo.city || slug?.split("-").slice(0, -2).join(" ") || "India";
+  const state = geo.state || "";
   
   // Deterministic random selection to prevent duplicate content across 5700+ pages
   const randomCategories = pickRandom(ALL_SPARE_CATEGORIES, 4, location + "parts");

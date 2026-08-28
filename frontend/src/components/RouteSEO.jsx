@@ -1,3 +1,5 @@
+import { CITY_STATE_MAP } from "@/data/cityStateMap";
+
 import { useLocation } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { CATEGORIES, PRODUCTS, SEO_PAGES_MAP, farmingtoolsProductUrl } from "@/data/catalog";
@@ -174,9 +176,37 @@ export default function RouteSEO() {
     }
   }
 
+
+  // Inside the component...
   if (path.startsWith("/seo/")) {
     const slug = path.replace("/seo/", "");
-    const page = SEO_PAGES_MAP.get(slug);
+    
+    // Check if hardcoded
+    let page = SEO_PAGES_MAP.get(slug);
+    
+    if (!page) {
+      let match = slug?.match(/power-weeders-supplier-(.+)/);
+      let isWeeder = true;
+      let crop = null;
+      let citySlug = null;
+      if (match) { citySlug = match[1]; } else {
+        match = slug?.match(/power-weeder-spare-parts-supplier-(.+)/);
+        if (match) { citySlug = match[1]; isWeeder = false; } else {
+          match = slug?.match(/power-weeder-(.+?)-(.+)/);
+          if (match) { crop = match[1].charAt(0).toUpperCase() + match[1].slice(1).replace("-", " "); citySlug = match[2]; }
+        }
+      }
+      if (citySlug && CITY_STATE_MAP[citySlug]) {
+        const geo = CITY_STATE_MAP[citySlug];
+        page = {
+          title: crop ? `Best Power Weeder for ${crop} Farming in ${geo.city}` : `${isWeeder ? "Power Weeder" : "Power Weeder Spare Parts"} Dealer & Wholesale Supply in ${geo.city}`,
+          city: geo.city,
+          state: geo.state,
+          crop
+        };
+      }
+    }
+    
     if (page) {
       const geoSuffix = page.city ? ` in ${page.city}, ${page.state}` : "";
       const cropSuffix = page.crop ? ` Optimized for ${page.crop} cultivation.` : "";
@@ -188,6 +218,40 @@ export default function RouteSEO() {
         />
       );
     }
+  }
+
+  if (path.startsWith("/service/")) {
+    const slug = path.replace("/service/", "");
+    const citySlugMatch = slug?.match(/power-weeder-repair-service-in-(.+)/);
+    const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+    const geo = CITY_STATE_MAP[citySlug] || {};
+    const city = geo.city || citySlug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+    const state = geo.state || "";
+    
+    return (
+      <SEO
+        title={`Power Weeder Repair & Service Center in ${city}${state ? `, ${state}` : ""}`}
+        description={`Expert power weeder repair, engine diagnosis, and servicing in ${city}. Find authentic KrishiGears service support and spare parts.`}
+        path={path}
+      />
+    );
+  }
+
+  if (path.startsWith("/spare-parts/")) {
+    const slug = path.replace("/spare-parts/", "");
+    const citySlugMatch = slug?.match(/power-weeder-spare-parts-in-(.+)/);
+    const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+    const geo = CITY_STATE_MAP[citySlug] || {};
+    const city = geo.city || citySlug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+    const state = geo.state || "";
+    
+    return (
+      <SEO
+        title={`Power Weeder Spare Parts in ${city}${state ? `, ${state}` : ""} - OEM Supply`}
+        description={`Genuine power weeder spare parts, blades, and engine components for wholesale supply and dealers in ${city}.`}
+        path={path}
+      />
+    );
   }
 
   if (path.startsWith("/blog/")) {

@@ -1,13 +1,64 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Check, ArrowRight, MapPin } from "lucide-react";
-import { CATEGORIES, SEO_PAGES_MAP, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
+import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { CITY_STATE_MAP } from "@/data/cityStateMap";
 
 export default function SeoLanding() {
   const { slug } = useParams();
-  const page = SEO_PAGES_MAP.get(slug);
+  
+  // First check if it's a hardcoded national SEO page
+  let page = SEO_PAGES.find(p => p.slug === slug);
+  
+  if (!page) {
+    // Dynamically parse city-based geo SEO pages to save 5MB JS bundle size
+    let match = slug?.match(/power-weeders-supplier-(.+)/);
+    let isWeeder = true;
+    let crop = null;
+    let citySlug = null;
+    
+    if (match) {
+      citySlug = match[1];
+    } else {
+      match = slug?.match(/power-weeder-spare-parts-supplier-(.+)/);
+      if (match) {
+        citySlug = match[1];
+        isWeeder = false;
+      } else {
+        match = slug?.match(/power-weeder-(.+?)-(.+)/);
+        if (match) {
+          crop = match[1].charAt(0).toUpperCase() + match[1].slice(1).replace("-", " ");
+          citySlug = match[2];
+        }
+      }
+    }
+    
+    if (citySlug) {
+      const geo = CITY_STATE_MAP[citySlug] || {};
+      const city = geo.city || citySlug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+      const category = isWeeder ? "power-weeders" : "power-weeder-spare-parts";
+      
+      const hindiTitle = isWeeder
+        ? `${city} में पावर वीडर डीलर और थोक सप्लाई`
+        : `${city} में पावर वीडर स्पेयर पार्ट्स सप्लाई`;
+
+      page = {
+        slug,
+        title: crop 
+          ? `Best Power Weeder for ${crop} Farming in ${city}`
+          : `${isWeeder ? "Power Weeder" : "Power Weeder Spare Parts"} Dealer & Wholesale Supply in ${city}`,
+        category,
+        city,
+        state: geo.state || "",
+        crop,
+        hindiTitle: crop ? `${city} में ${crop} खेती के लिए सबसे अच्छा पावर वीडर` : hindiTitle
+      };
+    }
+  }
+
   if (!page) return <Navigate to="/" replace />;
+
   const category = page.category ? CATEGORIES.find((c) => c.slug === page.category) : null;
   const supplyFocus = category?.name || "Agricultural Machinery";
   const partnerTracks = [

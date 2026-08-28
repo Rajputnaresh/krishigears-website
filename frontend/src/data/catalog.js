@@ -1,4 +1,3 @@
-import { GEO_SEO_PAGES } from "./geoSeo";
 // KrishiGears product catalog — premium agricultural machinery range.
 // Authentic farming equipment built to FMTTI / SRFMTTI standards, sold PAN India.
 
@@ -304,7 +303,7 @@ export const TRUST_BADGES = [
   { icon: "handshake", label: "Dealer Assistance" },
 ];
 
-export const SEO_PAGES = [...GEO_SEO_PAGES, 
+export const SEO_PAGES = [
   { slug: "power-weeder-supplier-india", title: "Power Weeder Dealer Network & Bulk Supply", category: "power-weeders" },
   { slug: "power-weeder-spare-parts-supplier-india", title: "Power Weeder Spare Parts Distributor & OEM Supply", category: "power-weeder-spare-parts" }
 ];
