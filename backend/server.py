@@ -705,6 +705,32 @@ def fire_sheet_forward(lead_type: str, doc: dict) -> None:
     asyncio.create_task(forward_to_sheet(lead_type, doc))
 
 
+async def forward_to_crm(doc: dict) -> None:
+    """Fire-and-forget POST of a lead to the WhatsApp CRM MVP webhook."""
+    # Hardcoded for the MVP CRM integration
+    url = "https://krishigears-whatsapp-crm-mvp.onrender.com/api/webhooks/website/lead"
+    secret = os.environ.get("CRM_WEBHOOK_SECRET") or os.environ.get("CRON_SECRET", "")
+    
+    payload = {
+        "id": doc.get("id"),
+        "type": doc.get("type"),
+        "created_at": doc.get("created_at"),
+        **(doc.get("data") or {}),
+    }
+    try:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+            headers = {"X-Webhook-Secret": secret}
+            res = await client.post(url, json=payload, headers=headers)
+            res.raise_for_status()
+    except Exception as e:
+        # Silently fail so we don't break the user flow, but print for debugging
+        print(f"Failed to forward lead to CRM: {e}")
+
+def fire_crm_forward(doc: dict) -> None:
+    """Schedule the CRM webhook call without blocking the request."""
+    asyncio.create_task(forward_to_crm(doc))
+
+
 # ---------- Public Routes ----------
 @api_router.get("/")
 async def root():
@@ -764,6 +790,7 @@ async def submit_enquiry(payload: EnquiryCreate):
     doc = lead_doc("enquiry", payload.model_dump())
     await db.leads.insert_one(doc)
     fire_sheet_forward("enquiry", doc)
+    fire_crm_forward(doc)
     return {"success": True, "id": doc["id"]}
 
 
@@ -772,6 +799,7 @@ async def submit_dealer(payload: DealerCreate):
     doc = lead_doc("dealer", payload.model_dump())
     await db.leads.insert_one(doc)
     fire_sheet_forward("dealer", doc)
+    fire_crm_forward(doc)
     return {"success": True, "id": doc["id"]}
 
 
@@ -779,6 +807,8 @@ async def submit_dealer(payload: DealerCreate):
 async def submit_bulk_order(payload: BulkOrderCreate):
     doc = lead_doc("bulk-order", payload.model_dump())
     await db.leads.insert_one(doc)
+    fire_sheet_forward("bulk-order", doc)
+    fire_crm_forward(doc)
     return {"success": True, "id": doc["id"]}
 
 
@@ -786,6 +816,8 @@ async def submit_bulk_order(payload: BulkOrderCreate):
 async def submit_contact(payload: ContactCreate):
     doc = lead_doc("contact", payload.model_dump())
     await db.leads.insert_one(doc)
+    fire_sheet_forward("contact", doc)
+    fire_crm_forward(doc)
     return {"success": True, "id": doc["id"]}
 
 
