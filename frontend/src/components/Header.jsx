@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Sun, Moon } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -8,7 +8,6 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
-import { useTheme } from "@/components/ThemeProvider";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -20,7 +19,7 @@ const NAV = [
 ];
 
 export default function Header() {
-  const { isDark, toggleTheme } = useTheme();
+  
   const [open, setOpen] = useState(false);
 
   return (
@@ -123,9 +122,6 @@ export default function Header() {
           >
             Become a Dealer
           </Link>
-          <button onClick={toggleTheme} className="p-2.5 ml-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition text-zinc-700 dark:text-zinc-300">
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
         </div>
 
         {/* Mobile */}
@@ -142,9 +138,6 @@ export default function Header() {
                 <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span></div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition text-zinc-700 dark:text-zinc-300">
-                  {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-                </button>
                 <button onClick={() => setOpen(false)} data-testid="mobile-menu-close"><X className="h-5 w-5"/></button>
               </div>
             </div>
