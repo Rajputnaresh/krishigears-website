@@ -67,46 +67,46 @@ export default function SpareParts() {
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Spares & Attachments</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">
             Power Weeder Spare Parts in {location} — OEM Wholesale Supply
           </h1>
-          <h2 className="text-xl text-zinc-400 mt-2 font-normal">
+          <h2 className="text-xl text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
             {vernacularHeadline}
           </h2>
-          <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
+          <p className="text-zinc-700 dark:text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
             Direct supply of genuine high-carbon blades, RK-series engine components, gearboxes, and
             maintenance kits for power weeders in {location}. We support local mechanics, dealers, and
             farmers with guaranteed OEM fitment.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={`Spare Parts Bulk Order in ${location}`} trigger={
-              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
+              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
             } />
-            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I need power weeder spare parts in ${location}. Looking for: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Parts Counter</a>
+            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I need power weeder spare parts in ${location}. Looking for: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts", slug)} className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Parts Counter</a>
           </div>
         </div>
       </section>
 
-      <section className="kg-section bg-zinc-950">
+      <section className="kg-section bg-white dark:bg-zinc-950">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <h2 className="kg-h2 mb-4">Available Inventory for {location}</h2>
-              <p className="text-zinc-400 mb-8 leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
                 We maintain a comprehensive catalog of wear-and-tear parts and core components.
                 If a specific part for your 7HP or 9HP weeder is not listed, our parts desk can source it using your machine's serial number.
               </p>
-              <div className="p-6 bg-zinc-900 border border-zinc-800 rounded-md">
-                <h3 className="font-bold text-white mb-4 flex items-center gap-2">
+              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md">
+                <h3 className="font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
                   <Package className="h-5 w-5 text-lime-500" /> Supply Guarantees
                 </h3>
                 <ul className="space-y-3">
                   {SERVICE_OFFERINGS.map((offer, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-zinc-300">
+                    <li key={idx} className="flex items-start gap-3 text-sm text-zinc-700 dark:text-zinc-300">
                       <Check className="h-4 w-4 text-lime-500 shrink-0 mt-0.5" />
                       {offer}
                     </li>
@@ -118,13 +118,13 @@ export default function SpareParts() {
             <div className="lg:col-span-8">
               <div className="grid sm:grid-cols-2 gap-6">
                 {dynamicCategories.map((cat) => (
-                  <div key={cat.name} className="border border-zinc-800 bg-black rounded-md overflow-hidden hover:border-zinc-600 transition-colors">
-                    <div className="bg-zinc-900 px-5 py-3 border-b border-zinc-800 font-bold text-white flex items-center gap-2">
+                  <div key={cat.name} className="border border-zinc-200 dark:border-zinc-800 bg-black rounded-md overflow-hidden hover:border-zinc-600 transition-colors">
+                    <div className="bg-zinc-50 dark:bg-zinc-900 px-5 py-3 border-b border-zinc-200 dark:border-zinc-800 font-bold text-zinc-900 dark:text-white flex items-center gap-2">
                       <span>{cat.icon}</span> {cat.name}
                     </div>
                     <ul className="p-5 space-y-2">
                       {cat.items.map((item) => (
-                        <li key={item} className="text-sm text-zinc-400 flex items-start gap-2">
+                        <li key={item} className="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
                           <span className="text-zinc-700 shrink-0">▪</span> {item}
                         </li>
                       ))}

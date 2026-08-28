@@ -110,33 +110,33 @@ export default function BlogPost() {
       </div>
     );
   }
-  if (!post) return <div className="kg-section text-center text-zinc-500">Loading…</div>;
+  if (!post) return <div className="kg-section text-center text-zinc-500 dark:text-zinc-500">Loading…</div>;
 
   return (
     <article data-testid="blog-post-page" className="kg-section">
       <div className="max-w-[800px] mx-auto">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-lime-500"><ArrowLeft className="h-4 w-4"/> All articles</Link>
-        <div className="mt-8 text-xs text-zinc-500 flex items-center gap-2">
+        <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><ArrowLeft className="h-4 w-4"/> All articles</Link>
+        <div className="mt-8 text-xs text-zinc-500 dark:text-zinc-500 flex items-center gap-2">
           <Calendar className="h-3.5 w-3.5"/> {new Date(post.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
         </div>
         <h1 className="kg-h1 mt-4 text-balance">{post.title}</h1>
         {post.tags?.length > 0 && (
           <div className="mt-5 flex flex-wrap gap-2">
             {post.tags.map((t) => (
-              <span key={t} className="text-xs px-3 py-1 border border-zinc-800 text-zinc-400 inline-flex items-center gap-1"><Tag className="h-3 w-3"/>{t}</span>
+              <span key={t} className="text-xs px-3 py-1 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 inline-flex items-center gap-1"><Tag className="h-3 w-3"/>{t}</span>
             ))}
           </div>
         )}
-        <div className="mt-10 aspect-[16/9] overflow-hidden border border-zinc-800">
+        <div className="mt-10 aspect-[16/9] overflow-hidden border border-zinc-200 dark:border-zinc-800">
           <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
         </div>
         <div className="mt-10 prose prose-invert max-w-none">
           {post.content.split("\n").map((line, i) => {
             const key = `${i}-${line.slice(0, 20)}`;
             if (line.startsWith("## ")) return <h2 key={key} className="font-display font-bold text-2xl mt-10 mb-3">{line.slice(3)}</h2>;
-            if (line.match(/^\d+\./)) return <p key={key} className="text-zinc-300 leading-relaxed">{line}</p>;
+            if (line.match(/^\d+\./)) return <p key={key} className="text-zinc-700 dark:text-zinc-300 leading-relaxed">{line}</p>;
             if (!line.trim()) return null;
-            return <p key={key} className="text-zinc-300 leading-relaxed mt-4">{line}</p>;
+            return <p key={key} className="text-zinc-700 dark:text-zinc-300 leading-relaxed mt-4">{line}</p>;
           })}
         </div>
       </div>

@@ -26,13 +26,13 @@ export default function Warranty() {
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Warranty & Support</div>
           <h1 className="kg-h1 mt-4 text-balance">Your machine. <span className="text-lime-500">Our promise.</span></h1>
-          <p className="text-zinc-400 mt-6 max-w-2xl leading-relaxed">
+          <p className="text-zinc-600 dark:text-zinc-400 mt-6 max-w-2xl leading-relaxed">
             Every KrishiGears product is backed by manufacturer warranty, authorized service network and dedicated customer care. Here's everything you need to know about claiming support.
           </p>
         </div>
       </section>
 
-      <section className="kg-section bg-[#080808] border-y border-zinc-900 -mt-8">
+      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900 -mt-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -48,7 +48,7 @@ export default function Warranty() {
                 <div key={b.t} className="kg-card p-7">
                   <I className="h-7 w-7 text-lime-500" />
                   <h3 className="font-display font-bold text-lg mt-4">{b.t}</h3>
-                  <p className="text-zinc-400 text-sm mt-2 leading-relaxed">{b.d}</p>
+                  <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-2 leading-relaxed">{b.d}</p>
                   {b.link && <a href={b.link} className="mt-4 inline-block text-lime-500 text-sm font-bold">Call now →</a>}
                 </div>
               );
@@ -63,11 +63,11 @@ export default function Warranty() {
           <h2 className="kg-h2 mt-3">Common <span className="text-lime-500">questions.</span></h2>
           <Accordion type="single" collapsible className="mt-8">
             {FAQS.map((f, i) => (
-              <AccordionItem key={f.q} value={`f${i}`} className="border-zinc-800">
+              <AccordionItem key={f.q} value={`f${i}`} className="border-zinc-200 dark:border-zinc-800">
                 <AccordionTrigger data-testid={`faq-trigger-${i}`} className="text-left text-base hover:text-lime-500 hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-zinc-400 leading-relaxed">
+                <AccordionContent className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
@@ -76,8 +76,8 @@ export default function Warranty() {
 
           <div className="mt-12 border border-lime-500/30 bg-lime-500/5 p-8 text-center">
             <h3 className="font-display font-bold text-2xl">Need help with a specific machine?</h3>
-            <p className="text-zinc-400 mt-2">Share your invoice number and we'll get back within 24 hours.</p>
-            <Link to="/contact" data-testid="warranty-contact-cta" className="mt-6 inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">
+            <p className="text-zinc-600 dark:text-zinc-400 mt-2">Share your invoice number and we'll get back within 24 hours.</p>
+            <Link to="/contact" data-testid="warranty-contact-cta" className="mt-6 inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">
               Contact Support
             </Link>
           </div>
@@ -118,26 +118,26 @@ function RegisterWarrantySection() {
 
   if (success) {
     return (
-      <section data-testid="warranty-register-success" className="kg-section bg-[#080808] border-t border-zinc-900">
+      <section data-testid="warranty-register-success" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
         <div className="max-w-2xl mx-auto text-center border border-lime-500/30 bg-lime-500/5 p-12">
           <CheckCircle2 className="h-16 w-16 mx-auto text-lime-500" />
           <h2 className="kg-h2 mt-6">Warranty Registered.</h2>
-          <p className="text-zinc-400 mt-4">Your product is now on our records. Keep your invoice safe — for any service request, just WhatsApp us at <strong className="text-lime-500">{COMPANY.phone}</strong>.</p>
+          <p className="text-zinc-600 dark:text-zinc-400 mt-4">Your product is now on our records. Keep your invoice safe — for any service request, just WhatsApp us at <strong className="text-lime-500">{COMPANY.phone}</strong>.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section data-testid="warranty-register-section" className="kg-section bg-[#080808] border-t border-zinc-900">
+    <section data-testid="warranty-register-section" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1100px] mx-auto">
         <div className="kg-eyebrow">Activate your warranty</div>
         <h2 className="kg-h2 mt-3 text-balance">Register your machine in <span className="text-lime-500">2 minutes.</span></h2>
-        <p className="text-zinc-400 mt-4 max-w-2xl leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl leading-relaxed">
           Just bought a KrishiGears product? Register it below so we have your purchase on record. This activates your warranty coverage and helps us serve you faster when you need support.
         </p>
 
-        <form onSubmit={submit} className="mt-10 border border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+        <form onSubmit={submit} className="mt-10 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
           <div className="flex items-center gap-3">
             <ShieldCheck className="h-6 w-6 text-lime-500" />
             <h3 className="font-display font-bold text-xl">Warranty Registration</h3>
@@ -154,14 +154,14 @@ function RegisterWarrantySection() {
             <Field label="State" testid="warranty-state" value={form.state} onChange={update("state")} />
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Additional notes (optional)</Label>
-            <Textarea data-testid="warranty-message" rows={3} value={form.message} onChange={update("message")} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Additional notes (optional)</Label>
+            <Textarea data-testid="warranty-message" rows={3} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <button
             type="submit"
             disabled={loading}
             data-testid="warranty-submit-btn"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Registering..." : "Register Warranty"}
           </button>
@@ -174,8 +174,8 @@ function RegisterWarrantySection() {
 function Field({ label, testid, value, onChange, type = "text", placeholder }) {
   return (
     <div>
-      <Label className="text-xs uppercase tracking-wider text-zinc-400">{label}</Label>
-      <Input data-testid={testid} type={type} value={value} onChange={onChange} placeholder={placeholder} className="bg-black border-zinc-800 mt-1.5"/>
+      <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{label}</Label>
+      <Input data-testid={testid} type={type} value={value} onChange={onChange} placeholder={placeholder} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
     </div>
   );
 }

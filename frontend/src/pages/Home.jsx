@@ -50,7 +50,7 @@ export default function Home() {
       <section data-testid="hero-section" className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black/40 via-black/60 to-black"></div>
           <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-50"></div>
         </div>
 
@@ -63,9 +63,9 @@ export default function Home() {
               For the <span className="text-lime-500">Farmers,</span><br/>
               With the <span className="text-lime-500">Farmer,</span><br/>
               To the <span className="text-lime-500">Farmer.</span>
-              <span className="block text-zinc-500 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.3em]">HAMESHA.</span>
+              <span className="block text-zinc-500 dark:text-zinc-500 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.3em]">HAMESHA.</span>
             </h1>
-            <p className="mt-6 text-zinc-400 text-lg max-w-2xl leading-relaxed">
+            <p className="mt-6 text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
               B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -74,7 +74,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="hero-buy-online"
-                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md transition"
+                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md transition"
               >
                 Buy Online
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
@@ -82,14 +82,14 @@ export default function Home() {
               <Link
                 to="/become-a-dealer"
                 data-testid="hero-dealer-btn"
-                className="inline-flex items-center gap-2 border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
+                className="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
               >
                 Become Dealer
               </Link>
               <Link
                 to="/bulk-order"
                 data-testid="hero-bulk-btn"
-                className="inline-flex items-center gap-2 border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
+                className="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
               >
                 Bulk Order Inquiry
               </Link>
@@ -103,8 +103,8 @@ export default function Home() {
                 { v: "100%", l: "Genuine Parts" },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-lime-500 pl-4">
-                  <div className="font-display font-black text-3xl text-white">{s.v}</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 mt-1">{s.l}</div>
+                  <div className="font-display font-black text-3xl text-zinc-900 dark:text-white">{s.v}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-500 mt-1">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -112,12 +112,12 @@ export default function Home() {
         </div>
 
         {/* Bottom marquee */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-zinc-900 bg-black/60 backdrop-blur-md py-3 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 border-t border-zinc-100 dark:border-zinc-900 bg-black/60 backdrop-blur-md py-3 overflow-hidden">
           <div className="flex gap-12 whitespace-nowrap animate-marquee">
             {[...TRUST_BADGES, ...TRUST_BADGES].map((b, i) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
               return (
-                <div key={`marquee-${i}-${b.icon}`} className="flex items-center gap-2 text-zinc-500 text-sm">
+                <div key={`marquee-${i}-${b.icon}`} className="flex items-center gap-2 text-zinc-500 dark:text-zinc-500 text-sm">
                   <Icon className="h-4 w-4 text-lime-500"/> <span className="tracking-wider uppercase text-xs font-medium">{b.label}</span>
                 </div>
               );
@@ -150,10 +150,10 @@ export default function Home() {
                   key={c.slug}
                   to={`/products/category/${c.slug}`}
                   data-testid={`cat-card-${c.slug}`}
-                  className={`relative group overflow-hidden border border-zinc-800 bg-[#141414] hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
+                  className={`relative group overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-[#141414] hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
                 >
                   <img src={c.image} alt={c.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
                   <div className="relative h-full p-7 flex flex-col justify-between">
                     <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500">
                       <Icon className="h-6 w-6" />
@@ -161,8 +161,8 @@ export default function Home() {
                     <div>
                       <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">Category</div>
                       <h3 className="font-display font-black text-2xl md:text-3xl mt-2">{c.name}</h3>
-                      <p className="text-zinc-400 text-sm mt-2 max-w-md">{c.short}</p>
-                      <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-lime-500 transition">
+                      <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-2 max-w-md">{c.short}</p>
+                      <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-zinc-900 dark:text-white group-hover:text-lime-500 transition">
                         Browse Range <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
                       </div>
                     </div>
@@ -179,11 +179,11 @@ export default function Home() {
                   key={c.slug}
                   to={`/products/category/${c.slug}`}
                   data-testid={`cat-tile-${c.slug}`}
-                  className="md:col-span-3 p-5 border border-zinc-800 bg-[#0F0F0F] hover:bg-[#141414] hover:border-lime-500/40 hover:-translate-y-1 transition-all"
+                  className="md:col-span-3 p-5 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] hover:bg-[#141414] hover:border-lime-500/40 hover:-translate-y-1 transition-all"
                 >
                   <Icon className="h-5 w-5 text-lime-500 mb-3" />
                   <div className="font-display font-bold text-base leading-tight">{c.name}</div>
-                  <div className="mt-2 text-xs text-zinc-500">View →</div>
+                  <div className="mt-2 text-xs text-zinc-500 dark:text-zinc-500">View →</div>
                 </Link>
               );
             })}
@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* ========== FEATURED PRODUCTS ========== */}
-      <section data-testid="featured-products-section" className="kg-section bg-[#080808] border-y border-zinc-900">
+      <section data-testid="featured-products-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
@@ -212,11 +212,11 @@ export default function Home() {
       <section data-testid="about-section" className="kg-section">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 relative">
-            <div className="aspect-[4/5] overflow-hidden border border-zinc-800 relative">
+            <div className="aspect-[4/5] overflow-hidden border border-zinc-200 dark:border-zinc-800 relative">
               <img src={FARMER_FIELD} alt="Indian farmer" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent"></div>
             </div>
-            <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black p-6 max-w-xs lime-glow">
+            <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-zinc-50 dark:text-black p-6 max-w-xs lime-glow">
               <div className="font-display font-black text-4xl">10K+</div>
               <div className="text-sm font-bold uppercase tracking-wider mt-1">Farmers Served Across India</div>
             </div>
@@ -224,10 +224,10 @@ export default function Home() {
           <div className="lg:col-span-6">
             <div className="kg-eyebrow">About KrishiGears</div>
             <h2 className="kg-h2 mt-3 text-balance">Built by farmers. <span className="text-lime-500">For farmers.</span></h2>
-            <p className="text-zinc-400 mt-6 leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 mt-6 leading-relaxed">
               KrishiGears is India's trusted B2B agricultural machinery brand for dealers, distributors, FPOs, contractors, institutions and OEM partners. Our range is built for rugged field use and backed by genuine warranty support.
             </p>
-            <p className="text-zinc-400 mt-4 leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 mt-4 leading-relaxed">
               We support serious procurement with GST invoicing, bulk dispatch coordination, genuine spare parts and dealer enablement. Retail orders are fulfilled through FarmingTools.in.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
@@ -237,9 +237,9 @@ export default function Home() {
                 { v: "FMTTI", l: "Tested Equipment" },
                 { v: "Genuine", l: "Spare Parts Only" },
               ].map((b) => (
-                <div key={b.l} className="border border-zinc-800 p-4 bg-[#0F0F0F]">
+                <div key={b.l} className="border border-zinc-200 dark:border-zinc-800 p-4 bg-[#0F0F0F]">
                   <div className="text-lime-500 font-display font-black text-lg">{b.v}</div>
-                  <div className="text-xs uppercase tracking-wider text-zinc-400 mt-1">{b.l}</div>
+                  <div className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mt-1">{b.l}</div>
                 </div>
               ))}
             </div>
@@ -251,7 +251,7 @@ export default function Home() {
       </section>
 
       {/* ========== WHY CHOOSE US ========== */}
-      <section data-testid="why-choose-section" className="kg-section bg-[#080808] border-y border-zinc-900 relative overflow-hidden">
+      <section data-testid="why-choose-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${ABSTRACT_TERRAIN})`, backgroundSize: "cover" }}></div>
         <div className="max-w-[1400px] mx-auto relative">
           <div className="text-center mb-14 max-w-2xl mx-auto">
@@ -266,7 +266,7 @@ export default function Home() {
                   <div className="h-12 w-12 mx-auto grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <div className="mt-4 text-sm font-bold uppercase tracking-wider text-white">{b.label}</div>
+                  <div className="mt-4 text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-white">{b.label}</div>
                 </div>
               );
             })}
@@ -284,27 +284,27 @@ export default function Home() {
       <section data-testid="dealer-cta-section" className="kg-section relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={INDIA_MAP} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="kg-eyebrow">Dealer Opportunity</div>
             <h2 className="kg-h2 mt-3 text-balance">Become a <span className="text-lime-500">KrishiGears</span> dealer in your district.</h2>
-            <p className="text-zinc-400 mt-6 max-w-xl leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 mt-6 max-w-xl leading-relaxed">
               Strong margins, dedicated dealer support, fast dispatch and authorized warranty — partner with India's most trusted agricultural machinery distributor and grow with us.
             </p>
             <ul className="mt-6 space-y-2">
               {["Attractive dealer margins", "Co-branded marketing support", "Free dealer training", "Priority spare parts supply"].map((b) => (
-                <li key={b} className="flex items-center gap-3 text-zinc-300 text-sm">
+                <li key={b} className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300 text-sm">
                   <div className="h-1.5 w-1.5 bg-lime-500"></div>{b}
                 </li>
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
+              <Link to="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
                 Apply as Dealer <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link to="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
+              <Link to="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
                 View Network
               </Link>
             </div>
@@ -319,7 +319,7 @@ export default function Home() {
               ].map((s) => (
                 <div key={s.l} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
                   <div className="font-display font-black text-4xl text-lime-500">{s.v}</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-zinc-400 mt-2">{s.l}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-zinc-600 dark:text-zinc-400 mt-2">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -356,59 +356,59 @@ function ContactStrip() {
   };
 
   return (
-    <section data-testid="home-contact-section" className="kg-section bg-[#080808] border-t border-zinc-900">
+    <section data-testid="home-contact-section" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12">
         <div>
           <div className="kg-eyebrow">Get in touch</div>
           <h2 className="kg-h2 mt-3 text-balance">Have a question? <span className="text-lime-500">Talk to us.</span></h2>
-          <p className="text-zinc-400 mt-6 leading-relaxed max-w-md">
+          <p className="text-zinc-600 dark:text-zinc-400 mt-6 leading-relaxed max-w-md">
             Our team is ready to help you choose the right machine, place a bulk order, or join our dealer network. Fill the form and we'll get back within 24 hours.
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-500">Head Office · PAN India Supply</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-500">Head Office · PAN India Supply</div>
                 <div className="text-sm">{COMPANY.address}</div>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Headphones className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-500">Customer Care</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-500">Customer Care</div>
                 <div className="text-sm">{COMPANY.phone}</div>
               </div>
             </div>
           </div>
         </div>
-        <form onSubmit={submit} className="border border-zinc-800 bg-[#0F0F0F] p-6 md:p-8 space-y-4">
+        <form onSubmit={submit} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-8 space-y-4">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Name*</Label>
-              <Input data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
+              <Input data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Phone*</Label>
-              <Input data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Phone*</Label>
+              <Input data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Email</Label>
-            <Input data-testid="home-contact-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-800 mt-1.5" />
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Email</Label>
+            <Input data-testid="home-contact-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Subject</Label>
-            <Input data-testid="home-contact-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-800 mt-1.5" />
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Subject</Label>
+            <Input data-testid="home-contact-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Message*</Label>
-            <Textarea data-testid="home-contact-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-800 mt-1.5" />
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Message*</Label>
+            <Textarea data-testid="home-contact-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <button
             type="submit"
             disabled={loading}
             data-testid="home-contact-submit"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
@@ -445,7 +445,7 @@ function VideoCard({ video }) {
 
   if (youtubeEmbed && playing) {
     return (
-      <div className="aspect-video overflow-hidden border border-zinc-800 bg-black">
+      <div className="aspect-video overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-black">
         <iframe
           src={`${youtubeEmbed}?autoplay=1`}
           title={video.title}
@@ -469,18 +469,18 @@ function VideoCard({ video }) {
       rel="noreferrer"
       onClick={onClick}
       data-testid={`home-video-${video.id}`}
-      className="relative aspect-video overflow-hidden border border-zinc-800 group cursor-pointer block bg-zinc-900"
+      className="relative aspect-video overflow-hidden border border-zinc-200 dark:border-zinc-800 group cursor-pointer block bg-zinc-50 dark:bg-zinc-900"
     >
       {thumb && <img src={thumb} alt={video.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"/>
+      <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/80 via-white/40 dark:via-black/40 to-transparent"/>
       <div className="absolute inset-0 grid place-items-center">
-        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black rounded-full group-hover:scale-110 transition">
+        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-zinc-50 dark:text-black rounded-full group-hover:scale-110 transition">
           <Play className="h-6 w-6 fill-black ml-1" />
         </div>
       </div>
       <div className="absolute bottom-3 left-3 right-3">
         <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
-        <div className="text-white font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
+        <div className="text-zinc-900 dark:text-white font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
       </div>
     </a>
   );
@@ -489,7 +489,7 @@ function VideoCard({ video }) {
 function TestimonialsSection({ reviews }) {
   const list = reviews && reviews.length > 0 ? reviews : TESTIMONIALS;
   return (
-    <section data-testid="testimonials-section" className="kg-section bg-[#080808] border-y border-zinc-900">
+    <section data-testid="testimonials-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1400px] mx-auto">
         <div className="kg-eyebrow">Voices from the field</div>
         <h2 className="kg-h2 mt-3 max-w-2xl">What our <span className="text-lime-500">farmers & dealers</span> say.</h2>
@@ -497,20 +497,20 @@ function TestimonialsSection({ reviews }) {
           {list.slice(0, 8).map((t, i) => (
             <div key={t.id || `t-${i}`} data-testid={`testimonial-${i}`} className="kg-card p-6">
               {t.photo_url && (
-                <div className="h-14 w-14 overflow-hidden border border-zinc-800 mb-4 bg-white">
+                <div className="h-14 w-14 overflow-hidden border border-zinc-200 dark:border-zinc-800 mb-4 bg-white">
                   <img src={t.photo_url} alt={t.name} className="w-full h-full object-cover"/>
                 </div>
               )}
               {!t.photo_url && <Quote className="h-6 w-6 text-lime-500 mb-4" />}
-              <p className="text-zinc-300 text-sm leading-relaxed">{t.text}</p>
+              <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">{t.text}</p>
               <div className="mt-5 flex items-center gap-1">
                 {Array.from({ length: t.rating || 5 }).map((_, j) => (
                   <Star key={`star-${j}`} className="h-3.5 w-3.5 fill-lime-500 text-lime-500" />
                 ))}
               </div>
-              <div className="mt-4 pt-4 border-t border-zinc-800">
+              <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800">
                 <div className="font-bold text-sm">{t.name}</div>
-                <div className="text-xs text-zinc-500">{[t.role, t.location].filter(Boolean).join(" · ")}</div>
+                <div className="text-xs text-zinc-500 dark:text-zinc-500">{[t.role, t.location].filter(Boolean).join(" · ")}</div>
               </div>
             </div>
           ))}

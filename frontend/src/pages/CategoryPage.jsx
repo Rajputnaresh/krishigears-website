@@ -37,7 +37,7 @@ export default function CategoryPage() {
   return (
     <div data-testid="category-page" className="kg-section">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-center gap-2 text-xs text-zinc-500 mb-8">
+        <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-500 mb-8">
           <Link to="/" className="hover:text-lime-500">Home</Link>
           <ChevronRight className="h-3 w-3" />
           <Link to="/products" className="hover:text-lime-500">Products</Link>
@@ -54,22 +54,22 @@ export default function CategoryPage() {
               <div className="kg-eyebrow">Supply Category</div>
             </div>
             <h1 className="kg-h1">{category.name} Supply Category</h1>
-            <p className="text-zinc-400 mt-5 leading-relaxed max-w-xl">{category.short}</p>
+            <p className="text-zinc-600 dark:text-zinc-400 mt-5 leading-relaxed max-w-xl">{category.short}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {supplySignals.map((signal) => (
-                <span key={signal} className="text-xs font-bold tracking-wider uppercase px-3 py-1.5 border border-zinc-800 text-zinc-300 bg-black/30">
+                <span key={signal} className="text-xs font-bold tracking-wider uppercase px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 bg-black/30">
                   {signal}
                 </span>
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <EnquiryDialog product={category.name} trigger={
-                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
+                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
               } />
-              <Link to="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link to="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Become Dealer
               </Link>
-              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Institutional Supply
               </Link>
               <a
@@ -77,7 +77,7 @@ export default function CategoryPage() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="cat-buy-online-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
+                className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
               >
                 Buy Online at FarmingTools
               </a>
@@ -87,14 +87,14 @@ export default function CategoryPage() {
                 rel="noreferrer"
                 onClick={() => trackWhatsAppClick("category_page", slug)}
                 data-testid="cat-whatsapp-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
+                className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
               >
                 <WhatsAppIcon className="h-4 w-4"/> WhatsApp Enquiry
               </a>
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="aspect-[4/3] overflow-hidden border border-zinc-800 bg-white">
+            <div className="aspect-[4/3] overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white">
               <img src={category.image} alt={category.name} className="w-full h-full object-contain p-4" />
             </div>
           </div>
@@ -108,15 +108,15 @@ export default function CategoryPage() {
 
 function ModelsSection({ items, category }) {
   if (items === null) {
-    return <div className="text-center text-zinc-500 py-12">Loading models…</div>;
+    return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading models…</div>;
   }
   if (items.length === 0) {
     return (
-      <div className="border border-zinc-800 bg-[#0F0F0F] p-10 text-center">
-        <p className="text-zinc-300">Multiple supply models are available in this category. Request the B2B catalogue and our team will share dealer, distributor, bulk and institutional supply details.</p>
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-10 text-center">
+        <p className="text-zinc-700 dark:text-zinc-300">Multiple supply models are available in this category. Request the B2B catalogue and our team will share dealer, distributor, bulk and institutional supply details.</p>
         <div className="mt-6">
           <EnquiryDialog product={category.name} trigger={
-            <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
+            <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
           } />
         </div>
       </div>

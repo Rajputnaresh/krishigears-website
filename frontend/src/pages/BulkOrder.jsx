@@ -43,7 +43,7 @@ export default function BulkOrder() {
         <div className="max-w-2xl mx-auto text-center border border-lime-500/30 bg-lime-500/5 p-12">
           <CheckCircle2 className="h-16 w-16 mx-auto text-lime-500" />
           <h1 className="kg-h2 mt-6">Quotation Request Received.</h1>
-          <p className="text-zinc-400 mt-4">Our bulk order team will share a detailed quotation with institutional pricing within <strong className="text-lime-500">24 hours</strong>.</p>
+          <p className="text-zinc-600 dark:text-zinc-400 mt-4">Our bulk order team will share a detailed quotation with institutional pricing within <strong className="text-lime-500">24 hours</strong>.</p>
         </div>
       </div>
     );
@@ -54,11 +54,11 @@ export default function BulkOrder() {
       <div className="max-w-[1100px] mx-auto">
         <div className="kg-eyebrow">Bulk / Institutional Orders</div>
         <h1 className="kg-h1 mt-4 text-balance">Bulk pricing for <span className="text-lime-500">FPOs, contractors & institutions.</span></h1>
-        <p className="text-zinc-400 mt-6 leading-relaxed max-w-2xl">
+        <p className="text-zinc-600 dark:text-zinc-400 mt-6 leading-relaxed max-w-2xl">
           Farmer Producer Organizations, agri input stores, large contractors and government tender buyers — request a bulk quotation with institutional pricing, GST invoice and PAN India dispatch.
         </p>
 
-        <form onSubmit={submit} className="mt-12 border border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+        <form onSubmit={submit} className="mt-12 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
           <div className="flex items-center gap-3">
             <Package className="h-6 w-6 text-lime-500" />
             <h2 className="font-display font-bold text-2xl">Bulk Order Form</h2>
@@ -73,12 +73,12 @@ export default function BulkOrder() {
           </div>
 
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Product Category*</Label>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Product Category*</Label>
             <Select value={form.product} onValueChange={(v) => setForm((f) => ({ ...f, product: v }))}>
-              <SelectTrigger data-testid="bulk-product-select" className="bg-black border-zinc-800 mt-1.5">
+              <SelectTrigger data-testid="bulk-product-select" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5">
                 <SelectValue placeholder="Select a product category" />
               </SelectTrigger>
-              <SelectContent className="bg-[#0A0A0A] border-zinc-800 text-white max-h-72">
+              <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
                 {CATEGORIES.map((c) => (
                   <SelectItem key={c.slug} value={c.name}>{c.name}</SelectItem>
                 ))}
@@ -87,14 +87,14 @@ export default function BulkOrder() {
           </div>
 
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Additional Requirements</Label>
-            <Textarea data-testid="bulk-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Additional Requirements</Label>
+            <Textarea data-testid="bulk-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <button
             type="submit"
             disabled={loading}
             data-testid="bulk-submit-btn"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Submitting..." : "Request Quotation"}
           </button>
@@ -107,8 +107,8 @@ export default function BulkOrder() {
 function Field({ label, testid, value, onChange }) {
   return (
     <div>
-      <Label className="text-xs uppercase tracking-wider text-zinc-400">{label}</Label>
-      <Input data-testid={testid} value={value} onChange={onChange} className="bg-black border-zinc-800 mt-1.5" />
+      <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{label}</Label>
+      <Input data-testid={testid} value={value} onChange={onChange} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
     </div>
   );
 }

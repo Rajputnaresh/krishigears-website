@@ -136,7 +136,7 @@ export default function SheetsIntegration() {
     toast.success(`${label} copied to clipboard`);
   };
 
-  if (loading) return <div className="text-center text-zinc-500 py-12">Loading settings…</div>;
+  if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading settings…</div>;
 
   const enquiryConfigured = !!enquiryUrl;
   const dealerConfigured = !!dealerUrl;
@@ -145,15 +145,15 @@ export default function SheetsIntegration() {
   return (
     <div data-testid="sheets-integration-panel" className="space-y-8">
       {/* Hero / status */}
-      <div className="border border-zinc-800 bg-[#0F0F0F] p-6 md:p-8">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-8">
         <div className="flex items-start gap-4">
           <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm shrink-0">
             <Sheet className="h-6 w-6" />
           </div>
           <div className="flex-1">
             <h3 className="font-display font-bold text-2xl">Google Sheets Integration</h3>
-            <p className="text-zinc-400 mt-2 max-w-2xl text-sm leading-relaxed">
-              Auto-forward every <strong className="text-white">Product Enquiry</strong> and <strong className="text-white">Dealer Application</strong> into your own Google Sheets. Two separate sheets, both updated in real time, on top of the MongoDB admin panel.
+            <p className="text-zinc-600 dark:text-zinc-400 mt-2 max-w-2xl text-sm leading-relaxed">
+              Auto-forward every <strong className="text-zinc-900 dark:text-white">Product Enquiry</strong> and <strong className="text-zinc-900 dark:text-white">Dealer Application</strong> into your own Google Sheets. Two separate sheets, both updated in real time, on top of the MongoDB admin panel.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <StatusPill ok={enquiryConfigured} label="Enquiry Sheet" />
@@ -165,11 +165,11 @@ export default function SheetsIntegration() {
       </div>
 
       {/* Step-by-step guide */}
-      <div className="border border-zinc-800 bg-[#0F0F0F]">
-        <div className="p-6 border-b border-zinc-800">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+        <div className="p-6 border-b border-zinc-200 dark:border-zinc-800">
           <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">Setup Guide</div>
           <h3 className="font-display font-bold text-xl mt-2">10-minute walkthrough — follow once, never touch again.</h3>
-          <p className="text-zinc-500 text-sm mt-2">Do these steps once for the Enquiry sheet, then repeat for the Dealer sheet.</p>
+          <p className="text-zinc-500 dark:text-zinc-500 text-sm mt-2">Do these steps once for the Enquiry sheet, then repeat for the Dealer sheet.</p>
         </div>
 
         <Accordion type="multiple" defaultValue={["sheet-1"]} className="divide-y divide-zinc-800">
@@ -186,13 +186,13 @@ export default function SheetsIntegration() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="open-new-sheet-enquiry"
-                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-4 py-2 rounded-md mt-2"
+                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2"
               >
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
             </Step>
             <Step>
-              <p>Rename the sheet to: <code className="text-lime-400 bg-black border border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Enquiries</code></p>
+              <p>Rename the sheet to: <code className="text-lime-400 bg-black border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Enquiries</code></p>
             </Step>
             <Step>
               <p>Click cell <strong>A1</strong> and paste these column headers (Google Sheets will split them across cells automatically):</p>
@@ -204,29 +204,29 @@ export default function SheetsIntegration() {
             <Step>
               <p><strong>Delete</strong> any default code in the editor and paste this:</p>
               <CodeBlock label="Apps Script (Enquiry)" code={ENQUIRY_SCRIPT} onCopy={() => copy(ENQUIRY_SCRIPT, "Apps Script code")}/>
-              <p className="text-xs text-zinc-500 mt-2">Press <kbd className="bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-300">Ctrl/Cmd + S</kbd> to save. Name it "KrishiGears Webhook".</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">Press <kbd className="bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-700 dark:text-zinc-300">Ctrl/Cmd + S</kbd> to save. Name it "KrishiGears Webhook".</p>
             </Step>
             <Step>
               <p>Top-right of the Apps Script editor click <strong>Deploy → New deployment</strong>. Then:</p>
-              <ul className="list-disc pl-5 mt-2 space-y-1 text-zinc-300">
+              <ul className="list-disc pl-5 mt-2 space-y-1 text-zinc-700 dark:text-zinc-300">
                 <li>Click the ⚙️ gear icon → choose <strong>Web app</strong></li>
                 <li>Execute as: <strong>Me (your Gmail)</strong></li>
                 <li>Who has access: <strong className="text-lime-400">Anyone</strong> ← important</li>
                 <li>Click <strong>Deploy</strong></li>
                 <li>If asked, <strong>Authorize access</strong> → pick your account → click <em>Advanced</em> → <em>Go to KrishiGears Webhook (unsafe)</em> → <em>Allow</em></li>
               </ul>
-              <p className="mt-3 text-zinc-300">A popup shows a <strong>Web app URL</strong> ending in <code className="text-lime-400">/exec</code>. <strong>Copy it.</strong></p>
+              <p className="mt-3 text-zinc-700 dark:text-zinc-300">A popup shows a <strong>Web app URL</strong> ending in <code className="text-lime-400">/exec</code>. <strong>Copy it.</strong></p>
             </Step>
             <Step>
               <p>Paste the URL below and click <strong>Save & Test</strong>:</p>
               <div className="mt-3">
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Enquiry Sheet Web App URL</Label>
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Enquiry Sheet Web App URL</Label>
                 <Input
                   data-testid="enquiry-url-input"
                   value={enquiryUrl}
                   onChange={(e) => setEnquiryUrl(e.target.value)}
                   placeholder="https://script.google.com/macros/s/AKfycb…/exec"
-                  className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"
+                  className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-xs"
                 />
               </div>
             </Step>
@@ -245,13 +245,13 @@ export default function SheetsIntegration() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="open-new-sheet-dealer"
-                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-4 py-2 rounded-md mt-2"
+                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2"
               >
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
             </Step>
             <Step>
-              <p>Rename: <code className="text-lime-400 bg-black border border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Dealer Applications</code></p>
+              <p>Rename: <code className="text-lime-400 bg-black border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Dealer Applications</code></p>
             </Step>
             <Step>
               <p>Click cell <strong>A1</strong> and paste these headers:</p>
@@ -260,7 +260,7 @@ export default function SheetsIntegration() {
             <Step>
               <p><strong>Extensions → Apps Script</strong>, delete default code and paste this <em>dealer-specific</em> code:</p>
               <CodeBlock label="Apps Script (Dealer)" code={DEALER_SCRIPT} onCopy={() => copy(DEALER_SCRIPT, "Apps Script code")}/>
-              <p className="text-xs text-zinc-500 mt-2">Save with <kbd className="bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-300">Ctrl/Cmd + S</kbd>.</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">Save with <kbd className="bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-700 dark:text-zinc-300">Ctrl/Cmd + S</kbd>.</p>
             </Step>
             <Step>
               <p><strong>Deploy → New deployment</strong> → Web app → <strong className="text-lime-400">Anyone</strong> access → Deploy → Authorize. Copy the new <code className="text-lime-400">/exec</code> URL.</p>
@@ -268,13 +268,13 @@ export default function SheetsIntegration() {
             <Step>
               <p>Paste that URL here:</p>
               <div className="mt-3">
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Dealer Sheet Web App URL</Label>
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Dealer Sheet Web App URL</Label>
                 <Input
                   data-testid="dealer-url-input"
                   value={dealerUrl}
                   onChange={(e) => setDealerUrl(e.target.value)}
                   placeholder="https://script.google.com/macros/s/AKfycb…/exec"
-                  className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"
+                  className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-xs"
                 />
               </div>
             </Step>
@@ -288,12 +288,12 @@ export default function SheetsIntegration() {
           >
             <Step>
               <p>Open a third blank Google Sheet:</p>
-              <a href="https://sheets.new" target="_blank" rel="noreferrer" data-testid="open-new-sheet-warranty" className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-4 py-2 rounded-md mt-2">
+              <a href="https://sheets.new" target="_blank" rel="noreferrer" data-testid="open-new-sheet-warranty" className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2">
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
             </Step>
             <Step>
-              <p>Rename: <code className="text-lime-400 bg-black border border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Warranty Registrations</code></p>
+              <p>Rename: <code className="text-lime-400 bg-black border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-xs">KrishiGears – Warranty Registrations</code></p>
             </Step>
             <Step>
               <p>Paste these headers into row 1:</p>
@@ -309,8 +309,8 @@ export default function SheetsIntegration() {
             <Step>
               <p>Paste it here:</p>
               <div className="mt-3">
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Warranty Sheet Web App URL</Label>
-                <Input data-testid="warranty-url-input" value={warrantyUrl} onChange={(e) => setWarrantyUrl(e.target.value)} placeholder="https://script.google.com/macros/s/AKfycb…/exec" className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"/>
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Warranty Sheet Web App URL</Label>
+                <Input data-testid="warranty-url-input" value={warrantyUrl} onChange={(e) => setWarrantyUrl(e.target.value)} placeholder="https://script.google.com/macros/s/AKfycb…/exec" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-xs"/>
               </div>
             </Step>
           </SetupStep>
@@ -322,13 +322,13 @@ export default function SheetsIntegration() {
         <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
           <div>
             <h3 className="font-display font-bold text-xl">Save & Verify</h3>
-            <p className="text-zinc-400 text-sm mt-1">After saving, click the test buttons — a sample row will appear in your sheets.</p>
+            <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">After saving, click the test buttons — a sample row will appear in your sheets.</p>
           </div>
           <button
             onClick={save}
             disabled={saving}
             data-testid="save-sheets-btn"
-            className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3 rounded-md inline-flex items-center gap-2 disabled:opacity-50"
+            className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3 rounded-md inline-flex items-center gap-2 disabled:opacity-50"
           >
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : "Save URLs"}
@@ -339,7 +339,7 @@ export default function SheetsIntegration() {
             onClick={() => test("enquiry")}
             disabled={!enquiryConfigured || testing === "enquiry"}
             data-testid="test-enquiry-btn"
-            className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
+            className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-300 dark:border-zinc-700 disabled:hover:text-current"
           >
             {testing === "enquiry" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
             Test Enquiry
@@ -348,7 +348,7 @@ export default function SheetsIntegration() {
             onClick={() => test("dealer")}
             disabled={!dealerConfigured || testing === "dealer"}
             data-testid="test-dealer-btn"
-            className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
+            className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-300 dark:border-zinc-700 disabled:hover:text-current"
           >
             {testing === "dealer" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
             Test Dealer
@@ -357,7 +357,7 @@ export default function SheetsIntegration() {
             onClick={() => test("warranty")}
             disabled={!warrantyConfigured || testing === "warranty"}
             data-testid="test-warranty-btn"
-            className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-700 disabled:hover:text-current"
+            className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-4 py-3 rounded-md font-bold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:border-zinc-300 dark:border-zinc-700 disabled:hover:text-current"
           >
             {testing === "warranty" ? <Loader2 className="h-4 w-4 animate-spin"/> : <FlaskConical className="h-4 w-4"/>}
             Test Warranty
@@ -366,8 +366,8 @@ export default function SheetsIntegration() {
       </div>
 
       {/* FAQ */}
-      <div className="border border-zinc-800 bg-[#0F0F0F]">
-        <div className="p-6 border-b border-zinc-800">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+        <div className="p-6 border-b border-zinc-200 dark:border-zinc-800">
           <h3 className="font-display font-bold text-xl">Common questions</h3>
         </div>
         <Accordion type="single" collapsible>
@@ -378,11 +378,11 @@ export default function SheetsIntegration() {
             { q: "Can I change the URL later?", a: "Yes. Just paste a new Web app URL above and click Save URLs. Setting an empty URL disables the integration for that lead type." },
             { q: "Why two separate sheets?", a: "Enquiries and dealer applications have different fields. Keeping them separate makes filtering, sharing and team workflows much cleaner." },
           ].map((f) => (
-            <AccordionItem key={f.q} value={`faq-${f.q.slice(0, 20)}`} className="border-zinc-800">
+            <AccordionItem key={f.q} value={`faq-${f.q.slice(0, 20)}`} className="border-zinc-200 dark:border-zinc-800">
               <AccordionTrigger className="px-6 text-left hover:text-lime-500 hover:no-underline text-sm">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="px-6 text-zinc-400 text-sm leading-relaxed">
+              <AccordionContent className="px-6 text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
                 {f.a}
               </AccordionContent>
             </AccordionItem>
@@ -395,7 +395,7 @@ export default function SheetsIntegration() {
 
 function StatusPill({ ok, label }) {
   return (
-    <div data-testid={`status-${label.toLowerCase().replace(/\s/g, "-")}`} className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold tracking-wider uppercase ${ok ? "bg-lime-500/10 text-lime-400 border border-lime-500/30" : "bg-zinc-900 text-zinc-500 border border-zinc-800"}`}>
+    <div data-testid={`status-${label.toLowerCase().replace(/\s/g, "-")}`} className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold tracking-wider uppercase ${ok ? "bg-lime-500/10 text-lime-400 border border-lime-500/30" : "bg-zinc-50 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-500 border border-zinc-200 dark:border-zinc-800"}`}>
       {ok ? <CheckCircle2 className="h-3.5 w-3.5"/> : <AlertCircle className="h-3.5 w-3.5"/>}
       {label} {ok ? "Connected" : "Not connected"}
     </div>
@@ -407,17 +407,17 @@ function SetupStep({ value, num, title, done, children }) {
     <AccordionItem value={value} className="border-0">
       <AccordionTrigger className="px-6 py-5 hover:no-underline">
         <div className="flex items-center gap-4 text-left">
-          <div className={`h-9 w-9 grid place-items-center font-display font-black rounded-sm ${done ? "bg-lime-500 text-black" : "bg-zinc-800 text-white"}`}>
+          <div className={`h-9 w-9 grid place-items-center font-display font-black rounded-sm ${done ? "bg-lime-500 text-zinc-50 dark:text-black" : "bg-zinc-800 text-zinc-900 dark:text-white"}`}>
             {done ? <Check className="h-4 w-4"/> : num}
           </div>
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 font-bold">Step {num}</div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 font-bold">Step {num}</div>
             <div className="font-display font-bold text-lg">{title}</div>
           </div>
         </div>
       </AccordionTrigger>
       <AccordionContent className="px-6 pb-6">
-        <div className="pl-13 space-y-5 text-zinc-300 text-sm leading-relaxed">{children}</div>
+        <div className="pl-13 space-y-5 text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">{children}</div>
       </AccordionContent>
     </AccordionItem>
   );
@@ -434,9 +434,9 @@ function Step({ children }) {
 
 function CodeBlock({ label, code, onCopy }) {
   return (
-    <div className="mt-3 border border-zinc-800 bg-black overflow-hidden">
-      <div className="flex items-center justify-between px-3 py-2 border-b border-zinc-800 bg-zinc-950">
-        <span className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 font-bold">{label}</span>
+    <div className="mt-3 border border-zinc-200 dark:border-zinc-800 bg-black overflow-hidden">
+      <div className="flex items-center justify-between px-3 py-2 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+        <span className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 font-bold">{label}</span>
         <button
           onClick={onCopy}
           className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold"
@@ -444,7 +444,7 @@ function CodeBlock({ label, code, onCopy }) {
           <Copy className="h-3 w-3"/> Copy
         </button>
       </div>
-      <pre className="px-4 py-3 text-xs text-zinc-300 overflow-x-auto whitespace-pre-wrap break-all font-mono">{code}</pre>
+      <pre className="px-4 py-3 text-xs text-zinc-700 dark:text-zinc-300 overflow-x-auto whitespace-pre-wrap break-all font-mono">{code}</pre>
     </div>
   );
 }

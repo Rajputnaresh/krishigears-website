@@ -35,7 +35,7 @@ export default function Contact() {
       <div className="max-w-[1200px] mx-auto">
         <div className="kg-eyebrow">Contact Us</div>
         <h1 className="kg-h1 mt-4 text-balance">Let's talk about <span className="text-lime-500">your farm.</span></h1>
-        <p className="text-zinc-400 mt-6 max-w-2xl leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 mt-6 max-w-2xl leading-relaxed">
           Sales enquiries, dealer applications, bulk quotations, warranty support — pick the channel that works for you. Our team responds within 24 hours.
         </p>
 
@@ -52,35 +52,35 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form onSubmit={submit} className="lg:col-span-7 border border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+          <form onSubmit={submit} className="lg:col-span-7 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
             <h2 className="font-display font-bold text-2xl">Send us a message</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Name*</Label>
-                <Input data-testid="contact-form-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-800 mt-1.5" />
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
+                <Input data-testid="contact-form-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
               </div>
               <div>
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Phone*</Label>
-                <Input data-testid="contact-form-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-800 mt-1.5" />
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Phone*</Label>
+                <Input data-testid="contact-form-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
               </div>
               <div>
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Email</Label>
-                <Input data-testid="contact-form-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-800 mt-1.5" />
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Email</Label>
+                <Input data-testid="contact-form-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
               </div>
               <div>
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Subject</Label>
-                <Input data-testid="contact-form-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-800 mt-1.5" />
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Subject</Label>
+                <Input data-testid="contact-form-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
               </div>
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Message*</Label>
-              <Textarea data-testid="contact-form-message" rows={5} value={form.message} onChange={update("message")} className="bg-black border-zinc-800 mt-1.5"/>
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Message*</Label>
+              <Textarea data-testid="contact-form-message" rows={5} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
             </div>
             <button
               type="submit"
               disabled={loading}
               data-testid="contact-form-submit"
-              className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
+              className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
             >
               <Send className="h-4 w-4"/>{loading ? "Sending..." : "Send Message"}
             </button>
@@ -98,8 +98,8 @@ function ChannelCard({ icon: Icon, title, value, href, testid, onClick }) {
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 font-bold">{title}</div>
-        <div className="font-bold text-white mt-1">{value}</div>
+        <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 font-bold">{title}</div>
+        <div className="font-bold text-zinc-900 dark:text-white mt-1">{value}</div>
       </div>
     </>
   );

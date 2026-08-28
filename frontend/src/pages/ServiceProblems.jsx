@@ -76,38 +76,38 @@ export default function ServiceProblems() {
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Service & Troubleshooting</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">
             Power Weeder Problems & Service in {location} — Expert Repair Support
           </h1>
-          <h2 className="text-xl text-zinc-400 mt-2 font-normal">
+          <h2 className="text-xl text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
             {vernacularHeadline}
           </h2>
-          <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
+          <p className="text-zinc-700 dark:text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
             Whether your power weeder won't start in {location} paddy fields, blades aren't cutting properly,
             or the engine keeps cutting out mid-session — we have the service team and spare parts to get you
             back working in under 48 hours.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={`Power Weeder Service in ${location}`} trigger={
-              <button data-testid="service-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Book Service Call</button>
+              <button data-testid="service-enquiry" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Book Service Call</button>
             } />
-            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I have a power weeder problem in ${location}. Machine details: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("service_problems", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Service Desk</a>
-            <Link to="/warranty-and-support" data-testid="warranty-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Warranty Info</Link>
+            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I have a power weeder problem in ${location}. Machine details: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("service_problems", slug)} className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Service Desk</a>
+            <Link to="/warranty-and-support" data-testid="warranty-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Warranty Info</Link>
           </div>
         </div>
       </section>
 
-      <section className="kg-section bg-zinc-950">
+      <section className="kg-section bg-white dark:bg-zinc-950">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="kg-h2 text-center mb-12">Common Power Weeder Problems in {location}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {DYNAMIC_CATEGORIES.map((cat) => (
-              <div key={cat.category} className="border border-zinc-800 rounded-md overflow-hidden">
-                <div className={`bg-zinc-900 px-6 py-4 font-bold text-xl flex items-center gap-3 ${cat.color}`}>
+              <div key={cat.category} className="border border-zinc-200 dark:border-zinc-800 rounded-md overflow-hidden">
+                <div className={`bg-zinc-50 dark:bg-zinc-900 px-6 py-4 font-bold text-xl flex items-center gap-3 ${cat.color}`}>
                   <span className="text-2xl">{cat.icon}</span> {cat.category}
                 </div>
                 <div className="divide-y divide-zinc-800">
@@ -115,9 +115,9 @@ export default function ServiceProblems() {
                     <div key={prob.issue} className="p-5">
                       <div className="flex items-start gap-3 mb-3">
                         <AlertTriangle className="h-5 w-5 text-yellow-500 shrink-0 mt-0.5" />
-                        <h4 className="font-bold text-zinc-200">{prob.issue}</h4>
+                        <h4 className="font-bold text-zinc-800 dark:text-zinc-200">{prob.issue}</h4>
                       </div>
-                      <ul className="ml-8 space-y-1.5 text-sm text-zinc-400">
+                      <ul className="ml-8 space-y-1.5 text-sm text-zinc-600 dark:text-zinc-400">
                         {prob.causes.map((c) => (
                           <li key={c} className="flex items-start gap-2"><span className="text-lime-500 shrink-0">→</span>{c}</li>
                         ))}
@@ -137,10 +137,10 @@ export default function ServiceProblems() {
           <h2 className="kg-h2 mt-3">Service packages available for {location} dealers and farmers.</h2>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICE_OPTIONS.map((opt) => (
-              <div key={opt.name} className="p-6 bg-zinc-900 rounded-md border border-zinc-800">
+              <div key={opt.name} className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-md border border-zinc-200 dark:border-zinc-800">
                 <div className="text-3xl mb-4">{opt.icon}</div>
-                <h4 className="font-bold text-xl text-white mb-2">{opt.name}</h4>
-                <p className="text-zinc-400">{opt.desc}</p>
+                <h4 className="font-bold text-xl text-zinc-900 dark:text-white mb-2">{opt.name}</h4>
+                <p className="text-zinc-600 dark:text-zinc-400">{opt.desc}</p>
               </div>
             ))}
           </div>

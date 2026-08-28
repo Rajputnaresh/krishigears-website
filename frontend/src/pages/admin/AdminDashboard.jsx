@@ -53,21 +53,21 @@ export default function AdminDashboard() {
     navigate("/admin/login");
   };
 
-  if (!user) return <div className="min-h-screen grid place-items-center bg-black text-zinc-400">Loading…</div>;
+  if (!user) return <div className="min-h-screen grid place-items-center bg-black text-zinc-600 dark:text-zinc-400">Loading…</div>;
 
   return (
-    <div data-testid="admin-dashboard" className="min-h-screen bg-[#070707] text-white">
+    <div data-testid="admin-dashboard" className="min-h-screen bg-[#070707] text-zinc-900 dark:text-white">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-black/80 backdrop-blur border-b border-zinc-900">
+      <header className="sticky top-0 z-30 bg-black/80 backdrop-blur border-b border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={LOGO_URL} alt="" className="h-10 w-10 rounded-full"/>
             <div>
               <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span> Admin</div>
-              <div className="text-[10px] tracking-[0.25em] text-zinc-500 uppercase">{user.email}</div>
+              <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">{user.email}</div>
             </div>
           </div>
-          <button onClick={logout} data-testid="admin-logout" className="text-sm text-zinc-400 hover:text-lime-500 inline-flex items-center gap-2">
+          <button onClick={logout} data-testid="admin-logout" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500 inline-flex items-center gap-2">
             <LogOut className="h-4 w-4"/> Logout
           </button>
         </div>
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
         )}
 
         <Tabs defaultValue="leads" className="w-full">
-          <TabsList className="bg-[#0F0F0F] border border-zinc-800 flex-wrap h-auto">
+          <TabsList className="bg-[#0F0F0F] border border-zinc-200 dark:border-zinc-800 flex-wrap h-auto">
             <TabsTrigger data-testid="tab-leads" value="leads">Leads</TabsTrigger>
             <TabsTrigger data-testid="tab-products" value="products">Products</TabsTrigger>
             <TabsTrigger data-testid="tab-videos" value="videos">Videos</TabsTrigger>
@@ -122,8 +122,8 @@ export default function AdminDashboard() {
 
 function StatCard({ label, value }) {
   return (
-    <div className="border border-zinc-800 bg-[#0F0F0F] p-4">
-      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{label}</div>
+    <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-4">
+      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-500">{label}</div>
       <div className="font-display font-black text-3xl text-lime-500 mt-1">{value ?? "—"}</div>
     </div>
   );
@@ -168,7 +168,7 @@ function LeadsPanel({ onChange }) {
                 data-testid={`leads-filter-${t.value}`}
                 onClick={() => setType(t.value)}
                 className={`px-4 py-2 border text-sm font-medium inline-flex items-center gap-2 transition ${
-                  type === t.value ? "border-lime-500 text-lime-500 bg-lime-500/10" : "border-zinc-800 text-zinc-400 hover:border-zinc-600"
+                  type === t.value ? "border-lime-500 text-lime-500 bg-lime-500/10" : "border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-zinc-600"
                 }`}
               >
                 <I className="h-3.5 w-3.5"/>{t.label}
@@ -176,7 +176,7 @@ function LeadsPanel({ onChange }) {
             );
           })}
         </div>
-        <button data-testid="leads-refresh" onClick={() => fetchLeads()} className="text-sm text-zinc-400 hover:text-lime-500 inline-flex items-center gap-2">
+        <button data-testid="leads-refresh" onClick={() => fetchLeads()} className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500 inline-flex items-center gap-2">
           <RefreshCw className="h-4 w-4"/> Refresh
         </button>
       </div>
@@ -187,35 +187,35 @@ function LeadsPanel({ onChange }) {
 }
 
 function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
-  if (loading) return <div className="text-center text-zinc-500 py-12">Loading…</div>;
-  if (leads.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No leads in this category yet.</div>;
+  if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading…</div>;
+  if (leads.length === 0) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12 border border-dashed border-zinc-200 dark:border-zinc-800">No leads in this category yet.</div>;
   return (
-    <div className="border border-zinc-800 overflow-hidden">
+    <div className="border border-zinc-200 dark:border-zinc-800 overflow-hidden">
       {leads.map((lead) => {
         const isOpen = expanded === lead.id;
         return (
-          <div key={lead.id} className="border-b border-zinc-800 last:border-b-0">
-            <div className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-zinc-950 transition">
+          <div key={lead.id} className="border-b border-zinc-200 dark:border-zinc-800 last:border-b-0">
+            <div className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-white dark:bg-zinc-950 transition">
               <div className="col-span-2 text-[10px] tracking-[0.2em] uppercase text-lime-500 font-bold">{lead.type}</div>
-              <div className="col-span-4 font-bold text-white">{lead.data?.name || lead.data?.full_name || "—"}</div>
-              <div className="col-span-3 text-sm text-zinc-300">{lead.data?.phone || "—"}</div>
-              <div className="col-span-2 text-xs text-zinc-500">{new Date(lead.created_at).toLocaleDateString()}</div>
+              <div className="col-span-4 font-bold text-zinc-900 dark:text-white">{lead.data?.name || lead.data?.full_name || "—"}</div>
+              <div className="col-span-3 text-sm text-zinc-700 dark:text-zinc-300">{lead.data?.phone || "—"}</div>
+              <div className="col-span-2 text-xs text-zinc-500 dark:text-zinc-500">{new Date(lead.created_at).toLocaleDateString()}</div>
               <div className="col-span-1 flex justify-end gap-2">
-                <button data-testid={`lead-expand-${lead.id}`} onClick={() => setExpanded(isOpen ? null : lead.id)} className="text-zinc-400 hover:text-lime-500">
+                <button data-testid={`lead-expand-${lead.id}`} onClick={() => setExpanded(isOpen ? null : lead.id)} className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500">
                   {isOpen ? <ChevronUp className="h-4 w-4"/> : <ChevronDown className="h-4 w-4"/>}
                 </button>
-                <button data-testid={`lead-delete-${lead.id}`} onClick={() => onRemove(lead.id)} className="text-zinc-400 hover:text-red-500">
+                <button data-testid={`lead-delete-${lead.id}`} onClick={() => onRemove(lead.id)} className="text-zinc-600 dark:text-zinc-400 hover:text-red-500">
                   <Trash2 className="h-4 w-4"/>
                 </button>
               </div>
             </div>
             {isOpen && (
-              <div className="px-4 pb-4 bg-zinc-950">
+              <div className="px-4 pb-4 bg-white dark:bg-zinc-950">
                 <div className="grid sm:grid-cols-2 gap-3 text-sm">
                   {Object.entries(lead.data || {}).map(([k, v]) => (
-                    <div key={k} className="border border-zinc-800 p-3 bg-black">
-                      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{k.replace(/_/g, " ")}</div>
-                      <div className="text-zinc-200 break-words mt-1">{v || <span className="text-zinc-600">—</span>}</div>
+                    <div key={k} className="border border-zinc-200 dark:border-zinc-800 p-3 bg-black">
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-500">{k.replace(/_/g, " ")}</div>
+                      <div className="text-zinc-800 dark:text-zinc-200 break-words mt-1">{v || <span className="text-zinc-600">—</span>}</div>
                     </div>
                   ))}
                 </div>
@@ -262,7 +262,7 @@ function BlogPanel({ onChange }) {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-display font-bold text-xl">Manage Blog Posts</h3>
-        <button data-testid="blog-new-btn" onClick={openNew} className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
+        <button data-testid="blog-new-btn" onClick={openNew} className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
           <Plus className="h-4 w-4"/> New Post
         </button>
       </div>
@@ -275,29 +275,29 @@ function BlogPanel({ onChange }) {
 }
 
 function BlogList({ loading, posts, onEdit, onDelete }) {
-  if (loading) return <div className="text-center text-zinc-500 py-12">Loading…</div>;
-  if (posts.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No blog posts yet. Click "New Post" to create your first.</div>;
+  if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading…</div>;
+  if (posts.length === 0) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12 border border-dashed border-zinc-200 dark:border-zinc-800">No blog posts yet. Click "New Post" to create your first.</div>;
   return (
-    <div className="border border-zinc-800">
+    <div className="border border-zinc-200 dark:border-zinc-800">
       {posts.map((p) => (
-        <div key={p.slug} className="grid grid-cols-12 gap-4 p-4 items-center border-b border-zinc-800 last:border-b-0">
+        <div key={p.slug} className="grid grid-cols-12 gap-4 p-4 items-center border-b border-zinc-200 dark:border-zinc-800 last:border-b-0">
           <div className="col-span-1">
-            {p.cover_image && <img src={p.cover_image} alt="" className="h-12 w-12 object-cover border border-zinc-800"/>}
+            {p.cover_image && <img src={p.cover_image} alt="" className="h-12 w-12 object-cover border border-zinc-200 dark:border-zinc-800"/>}
           </div>
           <div className="col-span-6">
             <div className="font-bold">{p.title}</div>
-            <div className="text-xs text-zinc-500 mt-1">/blog/{p.slug}</div>
+            <div className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">/blog/{p.slug}</div>
           </div>
           <div className="col-span-2">
-            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-zinc-500 bg-zinc-900"}`}>
+            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900"}`}>
               {p.published ? "PUBLISHED" : "DRAFT"}
             </span>
           </div>
-          <div className="col-span-2 text-xs text-zinc-500">{new Date(p.created_at).toLocaleDateString()}</div>
+          <div className="col-span-2 text-xs text-zinc-500 dark:text-zinc-500">{new Date(p.created_at).toLocaleDateString()}</div>
           <div className="col-span-1 flex justify-end gap-2">
-            <a href={`/blog/${p.slug}`} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-lime-500"><Eye className="h-4 w-4"/></a>
-            <button onClick={() => onEdit(p)} data-testid={`blog-edit-${p.slug}`} className="text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
-            <button onClick={() => onDelete(p.slug)} data-testid={`blog-delete-${p.slug}`} className="text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
+            <a href={`/blog/${p.slug}`} target="_blank" rel="noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><Eye className="h-4 w-4"/></a>
+            <button onClick={() => onEdit(p)} data-testid={`blog-edit-${p.slug}`} className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
+            <button onClick={() => onDelete(p.slug)} data-testid={`blog-delete-${p.slug}`} className="text-zinc-600 dark:text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
           </div>
         </div>
       ))}
@@ -364,34 +364,34 @@ function BlogEditor({ open, setOpen, post, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-800 text-white max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">{isEdit ? "Edit Post" : "New Post"}</DialogTitle>
         </DialogHeader>
         <div className="space-y-4 mt-2">
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Title</Label>
-            <Input data-testid="blog-form-title" value={form.title} onChange={update("title")} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Title</Label>
+            <Input data-testid="blog-form-title" value={form.title} onChange={update("title")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Slug (URL)</Label>
-            <Input data-testid="blog-form-slug" value={form.slug} onChange={update("slug")} disabled={isEdit} placeholder={autoSlug(form.title)} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Slug (URL)</Label>
+            <Input data-testid="blog-form-slug" value={form.slug} onChange={update("slug")} disabled={isEdit} placeholder={autoSlug(form.title)} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Excerpt (short summary)</Label>
-            <Textarea data-testid="blog-form-excerpt" rows={2} value={form.excerpt} onChange={update("excerpt")} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Excerpt (short summary)</Label>
+            <Textarea data-testid="blog-form-excerpt" rows={2} value={form.excerpt} onChange={update("excerpt")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Cover Image URL</Label>
-            <Input data-testid="blog-form-cover" value={form.cover_image} onChange={update("cover_image")} placeholder="https://…" className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Cover Image URL</Label>
+            <Input data-testid="blog-form-cover" value={form.cover_image} onChange={update("cover_image")} placeholder="https://…" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Tags (comma separated)</Label>
-            <Input data-testid="blog-form-tags" value={form.tags} onChange={update("tags")} placeholder="Power Tiller, Buying Guide" className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Tags (comma separated)</Label>
+            <Input data-testid="blog-form-tags" value={form.tags} onChange={update("tags")} placeholder="Power Tiller, Buying Guide" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Content (Markdown supported: use ## for headings)</Label>
-            <Textarea data-testid="blog-form-content" rows={12} value={form.content} onChange={update("content")} className="bg-black border-zinc-800 mt-1.5 font-mono text-sm"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Content (Markdown supported: use ## for headings)</Label>
+            <Textarea data-testid="blog-form-content" rows={12} value={form.content} onChange={update("content")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-sm"/>
           </div>
           <div className="flex items-center gap-3">
             <Switch data-testid="blog-form-published" checked={form.published} onCheckedChange={(v) => setForm((f) => ({ ...f, published: v }))} />
@@ -401,7 +401,7 @@ function BlogEditor({ open, setOpen, post, onSaved }) {
             onClick={save}
             disabled={saving}
             data-testid="blog-form-save"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
           >
             {saving ? "Saving..." : (isEdit ? "Update Post" : "Create Post")}
           </button>

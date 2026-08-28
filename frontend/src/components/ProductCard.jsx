@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
         data-testid={`product-card-whatsapp-${product.slug}`}
         title={`WhatsApp enquiry for ${product.name}`}
         aria-label={`WhatsApp enquiry for ${product.name}`}
-        className="absolute bottom-[110px] right-3 z-10 h-11 w-11 grid place-items-center bg-[#25D366] hover:bg-[#1ebe57] text-white rounded-full shadow-xl hover:scale-110 transition"
+        className="absolute bottom-[110px] right-3 z-10 h-11 w-11 grid place-items-center bg-[#25D366] hover:bg-[#1ebe57] text-zinc-900 dark:text-white rounded-full shadow-xl hover:scale-110 transition"
       >
         <WhatsAppIcon className="h-5 w-5" />
       </a>
@@ -52,17 +52,17 @@ export default function ProductCard({ product }) {
             className="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-700"
           />
         </div>
-        <div className="p-5 flex-1 flex flex-col border-t border-zinc-800">
+        <div className="p-5 flex-1 flex flex-col border-t border-zinc-200 dark:border-zinc-800">
           <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">
             {category?.name}
           </div>
           <h3 className="font-display font-bold text-base mt-2 leading-tight line-clamp-2">{product.name}</h3>
           {product.model && (
-            <div className="mt-2 inline-flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-500 font-mono">
+            <div className="mt-2 inline-flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-500 dark:text-zinc-500 font-mono">
               <BadgeCheck className="h-3 w-3 text-lime-500"/> {product.model}
             </div>
           )}
-          <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-900">
+          <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-100 dark:border-zinc-900">
             <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2.5 py-1">
               B2B Supply
             </span>

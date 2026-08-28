@@ -37,49 +37,49 @@ export default function EnquiryDialog({ trigger, product = "" }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-800 text-white max-w-lg">
+      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-lg">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">Bulk / Dealer Inquiry</DialogTitle>
-          <DialogDescription className="text-zinc-400">
+          <DialogDescription className="text-zinc-600 dark:text-zinc-400">
             Share your requirement. Our team will contact you within 24 hours for dealer, bulk order or institutional supply support.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={submit} className="space-y-4 mt-2">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Name*</Label>
-              <Input data-testid="enquiry-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
+              <Input data-testid="enquiry-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Phone*</Label>
-              <Input data-testid="enquiry-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Phone*</Label>
+              <Input data-testid="enquiry-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Email</Label>
-              <Input data-testid="enquiry-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Email</Label>
+              <Input data-testid="enquiry-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Location</Label>
-              <Input data-testid="enquiry-location" value={form.location} onChange={update("location")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Location</Label>
+              <Input data-testid="enquiry-location" value={form.location} onChange={update("location")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
           </div>
           {!product && (
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Product of Interest</Label>
-              <Input data-testid="enquiry-product" value={form.product} onChange={update("product")} className="bg-black border-zinc-800 mt-1.5" />
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Product of Interest</Label>
+              <Input data-testid="enquiry-product" value={form.product} onChange={update("product")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
           )}
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Message</Label>
-            <Textarea data-testid="enquiry-message" value={form.message} onChange={update("message")} rows={3} className="bg-black border-zinc-800 mt-1.5" />
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Message</Label>
+            <Textarea data-testid="enquiry-message" value={form.message} onChange={update("message")} rows={3} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <button
             type="submit"
             disabled={loading}
             data-testid="enquiry-submit-btn"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-3 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Sending..." : "Submit Enquiry"}
           </button>

@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import "@/index.css";
 import App from "@/App";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,7 +20,9 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </HelmetProvider>
     </QueryClientProvider>
   </React.StrictMode>,

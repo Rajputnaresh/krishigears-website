@@ -14,7 +14,7 @@ const SOURCES = [
   { value: "instagram", label: "Instagram", icon: Instagram, color: "text-pink-500" },
   { value: "twitter", label: "X / Twitter", icon: Twitter, color: "text-sky-400" },
   { value: "facebook", label: "Facebook", icon: Facebook, color: "text-blue-500" },
-  { value: "other", label: "Direct URL", icon: Link2, color: "text-zinc-400" },
+  { value: "other", label: "Direct URL", icon: Link2, color: "text-zinc-600 dark:text-zinc-400" },
 ];
 
 export default function AdminVideos() {
@@ -48,7 +48,7 @@ export default function AdminVideos() {
     <div data-testid="admin-videos-panel">
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-display font-bold text-xl">Video Gallery ({videos.length})</h3>
-        <button onClick={() => { setEditing(null); setOpen(true); }} data-testid="admin-video-new" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
+        <button onClick={() => { setEditing(null); setOpen(true); }} data-testid="admin-video-new" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
           <Plus className="h-4 w-4"/> Add Video
         </button>
       </div>
@@ -61,17 +61,17 @@ export default function AdminVideos() {
 }
 
 function VideoList({ loading, videos, onEdit, onDelete, onToggleActive }) {
-  if (loading) return <div className="text-center text-zinc-500 py-12">Loading…</div>;
-  if (videos.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No videos yet. Paste a YouTube / Instagram / X / Facebook URL to add your first.</div>;
+  if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading…</div>;
+  if (videos.length === 0) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12 border border-dashed border-zinc-200 dark:border-zinc-800">No videos yet. Paste a YouTube / Instagram / X / Facebook URL to add your first.</div>;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {videos.map((v) => {
         const src = SOURCES.find((s) => s.value === v.source) || SOURCES[0];
         const Icon = src.icon;
         return (
-          <div key={v.id} className="border border-zinc-800 bg-[#0F0F0F] p-4">
+          <div key={v.id} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-4">
             <div className="flex items-start gap-3">
-              <div className="h-20 w-32 bg-zinc-900 overflow-hidden shrink-0">
+              <div className="h-20 w-32 bg-zinc-50 dark:bg-zinc-900 overflow-hidden shrink-0">
                 {v.thumbnail && <img src={v.thumbnail} alt="" className="w-full h-full object-cover"/>}
               </div>
               <div className="flex-1 min-w-0">
@@ -79,16 +79,16 @@ function VideoList({ loading, videos, onEdit, onDelete, onToggleActive }) {
                   <Icon className="h-3.5 w-3.5"/> {src.label}
                 </div>
                 <div className="font-bold text-sm mt-1 line-clamp-2">{v.title}</div>
-                <a href={v.url} target="_blank" rel="noreferrer" className="text-[10px] text-zinc-500 font-mono break-all line-clamp-1 hover:text-lime-500">{v.url}</a>
+                <a href={v.url} target="_blank" rel="noreferrer" className="text-[10px] text-zinc-500 dark:text-zinc-500 font-mono break-all line-clamp-1 hover:text-lime-500">{v.url}</a>
               </div>
             </div>
-            <div className="mt-3 flex items-center justify-between border-t border-zinc-800 pt-3">
-              <button onClick={() => onToggleActive(v)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${v.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 bg-zinc-900 border border-zinc-800"}`}>
+            <div className="mt-3 flex items-center justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
+              <button onClick={() => onToggleActive(v)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${v.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
                 {v.active ? "Visible" : "Hidden"}
               </button>
               <div className="flex gap-2">
-                <button onClick={() => onEdit(v)} data-testid={`admin-video-edit-${v.id}`} className="text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
-                <button onClick={() => onDelete(v)} data-testid={`admin-video-delete-${v.id}`} className="text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
+                <button onClick={() => onEdit(v)} data-testid={`admin-video-edit-${v.id}`} className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
+                <button onClick={() => onDelete(v)} data-testid={`admin-video-delete-${v.id}`} className="text-zinc-600 dark:text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
               </div>
             </div>
           </div>
@@ -147,47 +147,47 @@ function VideoEditor({ open, setOpen, video, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-800 text-white max-w-2xl">
+      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-2xl">
         <DialogHeader><DialogTitle className="font-display text-2xl">{isEdit ? "Edit Video" : "Add Video"}</DialogTitle></DialogHeader>
         <div className="space-y-4 mt-2">
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Title*</Label>
-            <Input data-testid="video-form-title" value={form.title} onChange={(e) => setForm({...form, title: e.target.value})} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Title*</Label>
+            <Input data-testid="video-form-title" value={form.title} onChange={(e) => setForm({...form, title: e.target.value})} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Video URL* (YouTube / Instagram / X / Facebook)</Label>
-            <Input data-testid="video-form-url" value={form.url} onChange={(e) => setUrl(e.target.value)} placeholder="https://youtube.com/watch?v=… or https://instagram.com/reel/…" className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"/>
-            <div className="text-[10px] text-zinc-500 mt-1">Source auto-detected. YouTube videos embed natively; Instagram/X/FB open in a new tab when clicked.</div>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Video URL* (YouTube / Instagram / X / Facebook)</Label>
+            <Input data-testid="video-form-url" value={form.url} onChange={(e) => setUrl(e.target.value)} placeholder="https://youtube.com/watch?v=… or https://instagram.com/reel/…" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-xs"/>
+            <div className="text-[10px] text-zinc-500 dark:text-zinc-500 mt-1">Source auto-detected. YouTube videos embed natively; Instagram/X/FB open in a new tab when clicked.</div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Source</Label>
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Source</Label>
               <Select value={form.source} onValueChange={(v) => setForm({...form, source: v})}>
-                <SelectTrigger className="bg-black border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
-                <SelectContent className="bg-[#0A0A0A] border-zinc-800 text-white">
+                <SelectTrigger className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
+                <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white">
                   {SOURCES.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-400">Sort Order</Label>
-              <Input data-testid="video-form-sort" type="number" value={form.sort_order} onChange={(e) => setForm({...form, sort_order: parseInt(e.target.value, 10) || 999})} className="bg-black border-zinc-800 mt-1.5"/>
+              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Sort Order</Label>
+              <Input data-testid="video-form-sort" type="number" value={form.sort_order} onChange={(e) => setForm({...form, sort_order: parseInt(e.target.value, 10) || 999})} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
             </div>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Thumbnail URL (optional — auto-fetched for YouTube)</Label>
-            <Input data-testid="video-form-thumb" value={form.thumbnail} onChange={(e) => setForm({...form, thumbnail: e.target.value})} placeholder="https://…" className="bg-black border-zinc-800 mt-1.5"/>
-            {form.thumbnail && <div className="mt-2 aspect-video w-40 overflow-hidden border border-zinc-800"><img src={form.thumbnail} alt="" className="w-full h-full object-cover"/></div>}
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Thumbnail URL (optional — auto-fetched for YouTube)</Label>
+            <Input data-testid="video-form-thumb" value={form.thumbnail} onChange={(e) => setForm({...form, thumbnail: e.target.value})} placeholder="https://…" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
+            {form.thumbnail && <div className="mt-2 aspect-video w-40 overflow-hidden border border-zinc-200 dark:border-zinc-800"><img src={form.thumbnail} alt="" className="w-full h-full object-cover"/></div>}
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-400">Short Description</Label>
-            <Textarea data-testid="video-form-desc" rows={2} value={form.description} onChange={(e) => setForm({...form, description: e.target.value})} className="bg-black border-zinc-800 mt-1.5"/>
+            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Short Description</Label>
+            <Textarea data-testid="video-form-desc" rows={2} value={form.description} onChange={(e) => setForm({...form, description: e.target.value})} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
           </div>
           <div className="flex items-center gap-3">
             <Switch data-testid="video-form-active" checked={form.active} onCheckedChange={(v) => setForm({...form, active: v})}/>
             <span className="text-sm">{form.active ? "Visible on homepage" : "Hidden"}</span>
           </div>
-          <button onClick={save} disabled={saving} data-testid="video-form-save" className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2">
+          <button onClick={save} disabled={saving} data-testid="video-form-save" className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2">
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : (isEdit ? "Update Video" : "Add Video")}
           </button>

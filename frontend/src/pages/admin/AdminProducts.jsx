@@ -85,7 +85,7 @@ export default function AdminProducts() {
         <button
           onClick={openNew}
           data-testid="admin-products-new"
-          className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2"
+          className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2"
         >
           <Plus className="h-4 w-4"/> Add Product
         </button>
@@ -93,20 +93,20 @@ export default function AdminProducts() {
 
       <div className="flex flex-wrap gap-3 mb-5">
         <div className="relative flex-1 min-w-[240px]">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-500" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-500 dark:text-zinc-500" />
           <Input
             data-testid="admin-products-search"
             placeholder="Search by name, model, slug…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="pl-10 bg-black border-zinc-800"
+            className="pl-10 bg-black border-zinc-200 dark:border-zinc-800"
           />
         </div>
         <Select value={filterCategory} onValueChange={setFilterCategory}>
-          <SelectTrigger data-testid="admin-products-category-filter" className="w-[240px] bg-black border-zinc-800">
+          <SelectTrigger data-testid="admin-products-category-filter" className="w-[240px] bg-black border-zinc-200 dark:border-zinc-800">
             <SelectValue placeholder="All categories"/>
           </SelectTrigger>
-          <SelectContent className="bg-[#0A0A0A] border-zinc-800 text-white max-h-72">
+          <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
             <SelectItem value="all">All categories</SelectItem>
             {CATEGORIES.map((c) => <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>)}
           </SelectContent>
@@ -121,10 +121,10 @@ export default function AdminProducts() {
 }
 
 function ProductsList({ loading, filtered, onEdit, onDelete, onToggleActive, onToggleFeatured, onMove }) {
-  if (loading) return <div className="text-center text-zinc-500 py-12">Loading products…</div>;
-  if (filtered.length === 0) return <div className="text-center text-zinc-500 py-12 border border-dashed border-zinc-800">No products match your filters.</div>;
+  if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading products…</div>;
+  if (filtered.length === 0) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12 border border-dashed border-zinc-200 dark:border-zinc-800">No products match your filters.</div>;
   return (
-    <div className="border border-zinc-800 divide-y divide-zinc-800">
+    <div className="border border-zinc-200 dark:border-zinc-800 divide-y divide-zinc-800">
       {filtered.map((p) => (
         <ProductRow
           key={p.slug}
@@ -143,21 +143,21 @@ function ProductsList({ loading, filtered, onEdit, onDelete, onToggleActive, onT
 function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeatured, onMove }) {
   const category = CATEGORIES.find((c) => c.slug === product.category);
   return (
-    <div className="grid grid-cols-12 gap-3 p-3 items-center hover:bg-zinc-950 transition">
+    <div className="grid grid-cols-12 gap-3 p-3 items-center hover:bg-white dark:bg-zinc-950 transition">
       <div className="col-span-1">
-        <div className="aspect-square w-14 bg-white border border-zinc-800 overflow-hidden">
+        <div className="aspect-square w-14 bg-white border border-zinc-200 dark:border-zinc-800 overflow-hidden">
           {product.images?.[0] && <img src={product.images[0]} alt="" className="w-full h-full object-contain p-1"/>}
         </div>
       </div>
       <div className="col-span-4">
         <div className="font-bold text-sm leading-tight line-clamp-2">{product.name}</div>
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px] text-zinc-500">
+        <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px] text-zinc-500 dark:text-zinc-500">
           {product.model && <span className="font-mono">{product.model}</span>}
           <span className="text-lime-500">{category?.name}</span>
         </div>
       </div>
       <div className="col-span-2">
-        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 bg-zinc-900 border border-zinc-800"}`}>
+        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
           {product.active ? <Eye className="h-3 w-3"/> : <EyeOff className="h-3 w-3"/>}
           {product.active ? "Active" : "Hidden"}
         </button>
@@ -168,14 +168,14 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
         </button>
       </div>
       <div className="col-span-2 flex items-center gap-1">
-        <button onClick={() => onMove("up")} className="h-7 w-7 grid place-items-center text-zinc-500 hover:text-lime-500" title="Move up"><ChevronUp className="h-4 w-4"/></button>
-        <button onClick={() => onMove("down")} className="h-7 w-7 grid place-items-center text-zinc-500 hover:text-lime-500" title="Move down"><ChevronDown className="h-4 w-4"/></button>
+        <button onClick={() => onMove("up")} className="h-7 w-7 grid place-items-center text-zinc-500 dark:text-zinc-500 hover:text-lime-500" title="Move up"><ChevronUp className="h-4 w-4"/></button>
+        <button onClick={() => onMove("down")} className="h-7 w-7 grid place-items-center text-zinc-500 dark:text-zinc-500 hover:text-lime-500" title="Move down"><ChevronDown className="h-4 w-4"/></button>
         <span className="text-[10px] text-zinc-600 font-mono">#{product.sort_order ?? "—"}</span>
       </div>
       <div className="col-span-2 flex items-center justify-end gap-2">
-        <a href={`/products/${product.slug}`} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-lime-500" title="View on site"><Eye className="h-4 w-4"/></a>
-        <button onClick={onEdit} data-testid={`admin-edit-${product.slug}`} className="text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
-        <button onClick={onDelete} data-testid={`admin-delete-${product.slug}`} className="text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
+        <a href={`/products/${product.slug}`} target="_blank" rel="noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500" title="View on site"><Eye className="h-4 w-4"/></a>
+        <button onClick={onEdit} data-testid={`admin-edit-${product.slug}`} className="text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><Pencil className="h-4 w-4"/></button>
+        <button onClick={onDelete} data-testid={`admin-delete-${product.slug}`} className="text-zinc-600 dark:text-zinc-400 hover:text-red-500"><Trash2 className="h-4 w-4"/></button>
       </div>
     </div>
   );
@@ -275,7 +275,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-800 text-white max-w-4xl max-h-[92vh] overflow-y-auto">
+      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-4xl max-h-[92vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">{isEdit ? `Edit · ${product.name}` : "Add New Product"}</DialogTitle>
         </DialogHeader>
@@ -288,10 +288,10 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
               <Field label="Model Number" testid="pe-model" value={form.model} onChange={update("model")} placeholder="e.g. RK-170F"/>
               <Field label="Slug (URL)" testid="pe-slug" value={form.slug} onChange={update("slug")} disabled={isEdit} placeholder={autoSlug(form.name) || "auto-from-name"}/>
               <div>
-                <Label className="text-xs uppercase tracking-wider text-zinc-400">Category*</Label>
+                <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Category*</Label>
                 <Select value={form.category} onValueChange={(v) => setForm((f) => ({ ...f, category: v }))}>
-                  <SelectTrigger data-testid="pe-category" className="bg-black border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
-                  <SelectContent className="bg-[#0A0A0A] border-zinc-800 text-white max-h-72">
+                  <SelectTrigger data-testid="pe-category" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
+                  <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
                     {CATEGORIES.map((c) => <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>)}
                   </SelectContent>
                 </Select>
@@ -321,7 +321,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
               onRemove={(i) => removeArrItem("images", i)}
               previewImages
             />
-            <div className="mt-2 text-[10px] text-zinc-500">Tip: Paste image URLs from your phone gallery, Google Drive, Unsplash, or any public image hosting.</div>
+            <div className="mt-2 text-[10px] text-zinc-500 dark:text-zinc-500">Tip: Paste image URLs from your phone gallery, Google Drive, Unsplash, or any public image hosting.</div>
           </Section>
 
           {/* Badges */}
@@ -348,14 +348,14 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
                   <Input
                     data-testid={`pe-spec-k-${i}`}
                     value={s.k} onChange={(e) => updateArr("specs", i, { ...s, k: e.target.value })}
-                    placeholder="Spec name (e.g. Power)" className="col-span-5 bg-black border-zinc-800 text-sm"
+                    placeholder="Spec name (e.g. Power)" className="col-span-5 bg-black border-zinc-200 dark:border-zinc-800 text-sm"
                   />
                   <Input
                     data-testid={`pe-spec-v-${i}`}
                     value={s.v} onChange={(e) => updateArr("specs", i, { ...s, v: e.target.value })}
-                    placeholder="Value (e.g. 5.5 HP)" className="col-span-6 bg-black border-zinc-800 text-sm"
+                    placeholder="Value (e.g. 5.5 HP)" className="col-span-6 bg-black border-zinc-200 dark:border-zinc-800 text-sm"
                   />
-                  <button onClick={() => removeArrItem("specs", i)} className="col-span-1 text-zinc-500 hover:text-red-500"><X className="h-4 w-4 mx-auto"/></button>
+                  <button onClick={() => removeArrItem("specs", i)} className="col-span-1 text-zinc-500 dark:text-zinc-500 hover:text-red-500"><X className="h-4 w-4 mx-auto"/></button>
                 </div>
               ))}
               <button onClick={() => addArrItem("specs", { id: makeSpecId(), k: "", v: "" })} className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold">
@@ -402,14 +402,14 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
 
           {/* Warranty */}
           <Section title="Warranty">
-            <Textarea data-testid="pe-warranty" rows={2} value={form.warranty} onChange={update("warranty")} className="bg-black border-zinc-800"/>
+            <Textarea data-testid="pe-warranty" rows={2} value={form.warranty} onChange={update("warranty")} className="bg-black border-zinc-200 dark:border-zinc-800"/>
           </Section>
 
           <button
             onClick={save}
             disabled={saving}
             data-testid="pe-save"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
           >
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : (isEdit ? "Update Product" : "Create Product")}
@@ -422,10 +422,10 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
 
 function Section({ title, subtitle, children }) {
   return (
-    <div className="border border-zinc-800 bg-[#0F0F0F]">
-      <div className="px-4 py-3 border-b border-zinc-800">
+    <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+      <div className="px-4 py-3 border-b border-zinc-200 dark:border-zinc-800">
         <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">{title}</div>
-        {subtitle && <div className="text-xs text-zinc-500 mt-1">{subtitle}</div>}
+        {subtitle && <div className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">{subtitle}</div>}
       </div>
       <div className="p-4">{children}</div>
     </div>
@@ -435,8 +435,8 @@ function Section({ title, subtitle, children }) {
 function Field({ label, testid, value, onChange, type = "text", disabled, placeholder }) {
   return (
     <div>
-      <Label className="text-xs uppercase tracking-wider text-zinc-400">{label}</Label>
-      <Input data-testid={testid} type={type} value={value} onChange={onChange} disabled={disabled} placeholder={placeholder} className="bg-black border-zinc-800 mt-1.5"/>
+      <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{label}</Label>
+      <Input data-testid={testid} type={type} value={value} onChange={onChange} disabled={disabled} placeholder={placeholder} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
     </div>
   );
 }
@@ -447,7 +447,7 @@ function ArrayEditor({ values, placeholder, testidPrefix, onChange, onAdd, onRem
       {values.map((v, i) => (
         <div key={i} className="flex items-center gap-2">
           {previewImages && v && (
-            <div className="h-10 w-10 bg-white border border-zinc-800 overflow-hidden shrink-0">
+            <div className="h-10 w-10 bg-white border border-zinc-200 dark:border-zinc-800 overflow-hidden shrink-0">
               <img src={v} alt="" className="w-full h-full object-contain"/>
             </div>
           )}
@@ -456,9 +456,9 @@ function ArrayEditor({ values, placeholder, testidPrefix, onChange, onAdd, onRem
             value={v}
             onChange={(e) => onChange(i, e.target.value)}
             placeholder={placeholder}
-            className="bg-black border-zinc-800 text-sm flex-1"
+            className="bg-black border-zinc-200 dark:border-zinc-800 text-sm flex-1"
           />
-          <button onClick={() => onRemove(i)} className="text-zinc-500 hover:text-red-500 shrink-0"><X className="h-4 w-4"/></button>
+          <button onClick={() => onRemove(i)} className="text-zinc-500 dark:text-zinc-500 hover:text-red-500 shrink-0"><X className="h-4 w-4"/></button>
         </div>
       ))}
       <button onClick={onAdd} className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold">
