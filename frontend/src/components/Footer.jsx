@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter, ShieldCheck } from "lucide-react";
-import { LOGO_URL, COMPANY, CATEGORIES, SEO_PAGES } from "@/data/catalog";
+import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 
 export default function Footer() {
   return (
