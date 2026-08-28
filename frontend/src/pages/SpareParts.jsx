@@ -64,6 +64,18 @@ export default function SpareParts() {
     <div data-testid="spare-parts-page">
       <script type="application/ld+json">{JSON.stringify(localSchema)}</script>
 
+      {location && state && (
+        <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-500 relative z-10">
+          <Link to="/" className="hover:text-lime-500 transition">Home</Link>
+          <span>/</span>
+          <Link to="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
+          <span>/</span>
+          <Link to={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
+          <span>/</span>
+          <span className="text-zinc-900 dark:text-zinc-300">{location} Spare Parts</span>
+        </div>
+      )}
+
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
@@ -133,6 +145,21 @@ export default function SpareParts() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Silo Links */}
+      <section className="kg-section bg-zinc-50 dark:bg-[#080808] border-t border-zinc-200 dark:border-zinc-800">
+        <div className="max-w-[1200px] mx-auto text-center">
+          <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {location} Resources</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to={`/seo/power-weeders-supplier-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+              Power Weeder Dealers in {location}
+            </Link>
+            <Link to={`/service/power-weeder-repair-service-in-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+              Power Weeder Repair Service in {location}
+            </Link>
           </div>
         </div>
       </section>

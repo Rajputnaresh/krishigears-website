@@ -86,12 +86,25 @@ export default function SeoLanding() {
   } : null;
 
   return (
-    <div data-testid="seo-landing-page">
+    <div data-testid="seo-landing" className="min-h-screen">
       {localSchema && (
         <script type="application/ld+json">
           {JSON.stringify(localSchema)}
         </script>
       )}
+
+      {page.city && page.state && (
+        <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+          <Link to="/" className="hover:text-lime-500 transition">Home</Link>
+          <span>/</span>
+          <Link to="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
+          <span>/</span>
+          <Link to={`/dealer/${page.state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{page.state}</Link>
+          <span>/</span>
+          <span className="text-zinc-900 dark:text-zinc-300">{page.city} Power Weeders</span>
+        </div>
+      )}
+      
       {/* Hero */}
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
@@ -140,6 +153,23 @@ export default function SeoLanding() {
           </div>
         </div>
       </section>
+
+      {/* Internal Silo Links */}
+      {page.city && (
+        <section className="kg-section bg-zinc-50 dark:bg-[#080808] border-t border-zinc-200 dark:border-zinc-800">
+          <div className="max-w-[1200px] mx-auto text-center">
+            <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {page.city} Services</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to={`/service/power-weeder-repair-service-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+                Power Weeder Repair Service in {page.city}
+              </Link>
+              <Link to={`/spare-parts/power-weeder-spare-parts-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+                Power Weeder Spare Parts in {page.city}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Coverage */}
       <section className="kg-section relative overflow-hidden">

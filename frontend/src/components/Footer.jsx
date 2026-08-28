@@ -94,15 +94,28 @@ export default function Footer() {
       </div>
 
       {/* B2B supply links */}
-      <div className="border-t border-zinc-100 dark:border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6">
-          <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">B2B Supply Programs</div>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500 dark:text-zinc-500">
-            {SEO_PAGES.map((p) => (
-              <Link key={p.slug} to={`/seo/${p.slug}`} className="hover:text-lime-500">
-                {p.title}
-              </Link>
-            ))}
+      <div className="border-t border-zinc-200 dark:border-zinc-900">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 grid md:grid-cols-2 gap-8">
+          <div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">B2B Supply Programs</div>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
+              <Link to="/seo/power-weeders-supplier-india" className="hover:text-lime-500">Power Weeder Dealer Network</Link>
+              <Link to="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-500">Power Weeder Spare Parts OEM Supply</Link>
+            </div>
+          </div>
+          <div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">Top Dealer States</div>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
+              <Link to="/dealer/maharashtra" className="hover:text-lime-500">Maharashtra</Link>
+              <Link to="/dealer/karnataka" className="hover:text-lime-500">Karnataka</Link>
+              <Link to="/dealer/tamil-nadu" className="hover:text-lime-500">Tamil Nadu</Link>
+              <Link to="/dealer/gujarat" className="hover:text-lime-500">Gujarat</Link>
+              <Link to="/dealer/madhya-pradesh" className="hover:text-lime-500">Madhya Pradesh</Link>
+              <Link to="/dealer/uttar-pradesh" className="hover:text-lime-500">Uttar Pradesh</Link>
+              <Link to="/dealer/rajasthan" className="hover:text-lime-500">Rajasthan</Link>
+              <Link to="/dealer/bihar" className="hover:text-lime-500">Bihar</Link>
+              <Link to="/dealer-network" className="hover:text-lime-500 font-bold">View All States →</Link>
+            </div>
           </div>
         </div>
       </div>

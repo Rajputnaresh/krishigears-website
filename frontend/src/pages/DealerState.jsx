@@ -168,11 +168,18 @@ export default function DealerState() {
             <div className="kg-eyebrow">Key Cities</div>
             <h2 className="kg-h2 mt-3">Active dealer recruitment in these {stateName} cities.</h2>
             <div className="mt-8 flex flex-wrap gap-2">
-              {stateData.cities.map((c) => (
-                <span key={c} className="text-sm px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-lime-500 hover:text-lime-500 transition cursor-default inline-flex items-center gap-1.5">
-                  <MapPin className="h-3 w-3"/>{c}
-                </span>
-              ))}
+              {stateData.cities.map((c) => {
+                const citySlug = c.toLowerCase().replace(/\s+/g, "-");
+                return (
+                  <Link 
+                    key={c} 
+                    to={`/seo/power-weeders-supplier-${citySlug}`}
+                    className="text-sm px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-lime-500 hover:text-lime-500 transition inline-flex items-center gap-1.5 rounded-md"
+                  >
+                    <MapPin className="h-3 w-3"/> {c} Dealers
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
