@@ -35,13 +35,15 @@ const SERVICE_OFFERINGS = [
   "Spare-parts stocking at partner locations",
   "Toll-free technical helpline (Hindi, English, regional)",
 ];
+import { SPARE_PARTS_MAP } from "@/data/sparePartsSeo";
 
 export default function SpareParts() {
   const { slug } = useParams();
-  // Parse slug: <location>-spare-parts or <location>-power-weeder-spare-parts
-  const parts = slug?.split("-") || [];
-  const location = parts.slice(0, parts.length >= 4 ? -2 : -1).join(" ");
-  const stateGuess = parts.length >= 4 ? parts[parts.length - 1] : "";
+  const pageData = SPARE_PARTS_MAP.get(slug);
+  
+  // Fallback if accessed via old url structure
+  const location = pageData?.city || slug?.split("-").slice(0, -2).join(" ") || "India";
+  const stateGuess = pageData?.state || "";
 
   const localSchema = {
     "@context": "https://schema.org",

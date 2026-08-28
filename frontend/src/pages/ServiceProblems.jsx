@@ -58,11 +58,12 @@ const SERVICE_OPTIONS = [
   { name: "Genuine Parts Only", desc: "All replacements use OEM-spec parts, not cheap aftermarket copies", icon: "✅" },
   { name: "Warranty Support", desc: "We handle warranty claims directly with the manufacturer on your behalf", icon: "🛡️" },
 ];
+import { SERVICE_MAP } from "@/data/serviceSeo";
 
 export default function ServiceProblems() {
   const { slug } = useParams();
-  const parts = slug?.split("-") || [];
-  const location = parts.slice(0, Math.max(0, parts.length - 2)).join(" ");
+  const pageData = SERVICE_MAP.get(slug);
+  const location = pageData?.city || slug?.split("-").slice(0, -2).join(" ") || "India";
 
   return (
     <div data-testid="service-problems-page">
