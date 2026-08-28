@@ -18,6 +18,9 @@ import Warranty from "@/pages/Warranty";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import SeoLanding from "@/pages/SeoLanding";
+import SpareParts from "@/pages/SpareParts";
+import ServiceProblems from "@/pages/ServiceProblems";
+import DealerState from "@/pages/DealerState";
 import AdminLogin from "@/pages/admin/AdminLogin";
 import AdminDashboard from "@/pages/admin/AdminDashboard";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -56,6 +59,10 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/seo/:slug" element={<SeoLanding />} />
+                    <Route path="/spare-parts/:slug" element={<SpareParts />} />
+                    <Route path="/service/:slug" element={<ServiceProblems />} />
+                    <Route path="/dealer/:state" element={<DealerState />} />
+                    <Route path="/become-a-dealer/:state" element={<DealerState />} />
                     <Route path="*" element={<Home />} />
                   </Routes>
                 </main>

@@ -241,6 +241,97 @@ async def seed_geo_seo_pages():
         logger.info("Seeded %d geo-SEO pages", len(pages))
 
 
+async def seed_spare_parts_pages():
+    """Seed /spare-parts/:slug pages — one per district."""
+    try:
+        from india_districts import DISTRICTS
+    except ImportError:
+        return
+    existing = await db.spare_parts_pages.count_documents({})
+    if existing > 0:
+        return
+    now = datetime.now(timezone.utc).isoformat()
+    pages = []
+    for district_name, info in DISTRICTS.items():
+        slug = f"{district_name.lower().replace(' ', '-')}-spare-parts"
+        pages.append({
+            "id": str(uuid.uuid4()),
+            "slug": slug,
+            "district": district_name,
+            "state": info["state"],
+            "title": f"Power Weeder Spare Parts in {district_name}, {info['state']}",
+            "hindiTitle": f"{district_name}, {info['state']} में पावर वीडर स्पेयर पार्ट्स",
+            "created_at": now,
+            "updated_at": now,
+            "published": True,
+        })
+    if pages:
+        await db.spare_parts_pages.insert_many(pages)
+        await db.spare_parts_pages.create_index("slug", unique=True)
+        logger.info("Seeded %d spare parts pages", len(pages))
+
+
+async def seed_service_pages():
+    """Seed /service/:slug pages — power weeder problems & service in each district."""
+    try:
+        from india_districts import DISTRICTS
+    except ImportError:
+        return
+    existing = await db.service_pages.count_documents({})
+    if existing > 0:
+        return
+    now = datetime.now(timezone.utc).isoformat()
+    pages = []
+    for district_name, info in DISTRICTS.items():
+        slug = f"{district_name.lower().replace(' ', '-')}-power-weeder-service"
+        pages.append({
+            "id": str(uuid.uuid4()),
+            "slug": slug,
+            "district": district_name,
+            "state": info["state"],
+            "title": f"Power Weeder Service & Repair in {district_name}, {info['state']}",
+            "hindiTitle": f"{district_name}, {info['state']} में पावर वीडर सर्विस और मरम्मत",
+            "created_at": now,
+            "updated_at": now,
+            "published": True,
+        })
+    if pages:
+        await db.service_pages.insert_many(pages)
+        await db.service_pages.create_index("slug", unique=True)
+        logger.info("Seeded %d service pages", len(pages))
+
+
+async def seed_dealer_state_pages():
+    """Seed /dealer/:state and /become-a-dealer/:state pages — one per state."""
+    STATES = [
+        "andhra-pradesh", "assam", "bihar", "chhattisgarh", "goa", "gujarat",
+        "haryana", "himachal-pradesh", "jharkhand", "karnataka", "kerala",
+        "madhya-pradesh", "maharashtra", "odisha", "punjab", "rajasthan",
+        "tamil-nadu", "telangana", "uttar-pradesh", "uttarakhand", "west-bengal",
+        "delhi", "jammu-kashmir", "chandigarh", "pondicherry",
+    ]
+    existing = await db.dealer_state_pages.count_documents({})
+    if existing > 0:
+        return
+    now = datetime.now(timezone.utc).isoformat()
+    pages = []
+    for s in STATES:
+        pages.append({
+            "id": str(uuid.uuid4()),
+            "slug": s,
+            "state": s,
+            "title": f"Become KrishiGears Dealer in {s.replace('-', ' ').title()}",
+            "hindiTitle": f"{s.replace('-', ' ').title()} में KrishiGears डीलर बनें",
+            "created_at": now,
+            "updated_at": now,
+            "published": True,
+        })
+    if pages:
+        await db.dealer_state_pages.insert_many(pages)
+        await db.dealer_state_pages.create_index("slug", unique=True)
+        logger.info("Seeded %d dealer state pages", len(pages))
+
+
 async def seed_blog_posts():
     """Idempotently insert built-in blog posts if their slugs are missing.
     Frontend /blog cards reference these slugs; without seeding, those URLs
@@ -286,6 +377,9 @@ async def lifespan(app: FastAPI):
         await seed_products()
         await seed_blog_posts()
         await seed_geo_seo_pages()
+        await seed_spare_parts_pages()
+        await seed_service_pages()
+        await seed_dealer_state_pages()
     except Exception as exc:  # noqa: BLE001
         logger.exception("MongoDB startup failed. Check MONGODB_URI/MONGO_URL and database access.")
         db_startup_error = "MongoDB startup failed. Verify the MongoDB URI, network access, and database name."
