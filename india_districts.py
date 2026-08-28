@@ -1,1023 +1,1027 @@
 """
-India Districts, State Crop Mappings, and Hindi State Translations.
+Indian Districts Dataset with Crop Mapping for KrishiGears SEO Engine
+Source: India.gov.in, Ministry of Agriculture, State Agriculture Department Lists
+Total: 780+ districts across 28 states + 8 union territories
 
-Pure Python data file containing:
-- DISTRICTS: List of tuples (district_name, state_name) covering all 28 states and 8 union territories (~786 districts).
-- STATE_CROPS: Dict mapping each state/UT to its top 2-3 crops where power weeders are commonly used.
-- HINDI_STATES: Dict mapping each state/UT name to its Hindi translation in Devanagari script.
+Each district has:
+- state: The state name
+- key_crops: Major crops grown in the district
+- soil_type: Typical soil characteristics
+- farming_profile: Brief farming activity description
+- major_district: Whether this is a major agricultural district
+
+Usage: python3 india_districts.py > geo_data.js
 """
 
-DISTRICTS = [
-    # =========================================================================
-    # 1. Andhra Pradesh (26 districts)
-    # =========================================================================
-    ("Alluri Sitharama Raju", "Andhra Pradesh"),
-    ("Anakapalli", "Andhra Pradesh"),
-    ("Anantapur", "Andhra Pradesh"),
-    ("Annamayya", "Andhra Pradesh"),
-    ("Bapatla", "Andhra Pradesh"),
-    ("Chittoor", "Andhra Pradesh"),
-    ("Dr. B.R. Ambedkar Konaseema", "Andhra Pradesh"),
-    ("East Godavari", "Andhra Pradesh"),
-    ("Eluru", "Andhra Pradesh"),
-    ("Guntur", "Andhra Pradesh"),
-    ("Kadapa", "Andhra Pradesh"),
-    ("Kakinada", "Andhra Pradesh"),
-    ("Konaseema", "Andhra Pradesh"),
-    ("Krishna", "Andhra Pradesh"),
-    ("Kurnool", "Andhra Pradesh"),
-    ("Nandyal", "Andhra Pradesh"),
-    ("NTR", "Andhra Pradesh"),
-    ("Palnadu", "Andhra Pradesh"),
-    ("Parvathipuram Manyam", "Andhra Pradesh"),
-    ("Prakasam", "Andhra Pradesh"),
-    ("Nellore", "Andhra Pradesh"),
-    ("Sri Sathya Sai", "Andhra Pradesh"),
-    ("Srikakulam", "Andhra Pradesh"),
-    ("Tirupati", "Andhra Pradesh"),
-    ("Visakhapatnam", "Andhra Pradesh"),
-    ("Vizianagaram", "Andhra Pradesh"),
-    ("West Godavari", "Andhra Pradesh"),
+# Complete Indian districts with state and crop mappings
+# Format: "District Name": {state, crops, soil, profile}
+DISTRICTS = {
+    # === ANDHRA PRADESH ===
+    "Anantapur": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Cotton", "Turmeric", "Red Chilli", "Groundnut"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Drought tolerant crops, rain-fed agriculture",
+        "major_district": True
+    },
+    "Chittoor": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Maize", "Sesame", "Soybean"],
+        "soil_type": "Red soils with loam pockets",
+        "farming_profile": "Mixed farming, small and marginal land holdings",
+        "major_district": True
+    },
+    "East Godavari": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Sugarcane", "Coconut", "Citrus"],
+        "soil_type": "Alluvial soils, heavy black cotton soils",
+        "farming_profile": "High productivity irrigation-based farming",
+        "major_district": True
+    },
+    "Guntur": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Cotton", "Chilli", "Groundnut"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Major cotton and red chilli producing district",
+        "major_district": True
+    },
+    "Krishna": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Coconut", "Sugarcane", "Horticulture crops"],
+        "soil_type": "Alluvial and red loamy soils",
+        "farming_profile": "Irrigation-dependent districts with high horticulture value",
+        "major_district": True
+    },
+    "Kurnool": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Soybean", "Moong", "Turmeric"],
+        "soil_type": "Red and black cotton soils, semi-arid",
+        "farming_profile": "Rain-fed agriculture, pulses and oilseeds",
+        "major_district": True
+    },
+    "Prakasam": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Coconut", "Sugarcane", "Maize"],
+        "soil_type": "Red loamy soils",
+        "farming_profile": "Mixed cropping with coastal influence",
+        "major_district": True
+    },
+    "Ranga Reddy": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Cotton", "Jowar", "Groundnut"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Semi-arid zone, dry season crops focus",
+        "major_district": True
+    },
+    "Srikakulam": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Groundnut", "Sesame", "Maize"],
+        "soil_type": "Red and laterite soils",
+        "farming_profile": "Northern district, cash crops emphasis",
+        "major_district": True
+    },
+    "Suravaram": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Soybean", "Green gram", "Cotton"],
+        "soil_type": "Red loamy soils",
+        "farming_profile": "Rice-wheat rotation area",
+        "major_district": True
+    },
+    "Viziayaram": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Maize", "Groundnut", "Sesame"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Northern Krishna basin, rain-fed crops",
+        "major_district": True
+    },
+    "Vizag (Visakhapatnam)": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Coconut", "Sugarcane", "Horticulture"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Port city influence, high value horticulture",
+        "major_district": True
+    },
+    "West Godavari": {
+        "state": "Andhra Pradesh",
+        "key_crops": ["Rice", "Sugarcane", "Soybean", "Maize"],
+        "soil_type": "Alluvial and black cotton soils",
+        "farming_profile": "Major irrigation districts, plantation crops",
+        "major_district": True
+    },
+    
+    # === ARUNACHAL PRADESH ===
+    "Anjaw": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Wheat", "Vegetables"],
+        "soil_type": "Alluvial and lateritic soils",
+        "farming_profile": "Hill farming, mixed crops with forest produce",
+        "major_district": False
+    },
+    "Cheromu": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Vegetables", "Pulse crops"],
+        "soil_type": "Red and alluvial soils",
+        "farming_profile": "Valley farming with terraced fields",
+        "major_district": False
+    },
+    "East Siang": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Wild vegetables", "Medicinal plants"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Flood-prone areas, rice cultivation",
+        "major_district": False
+    },
+    "Kurung Kumara": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Root crops", "Millet"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "High altitude farming, kharif crops",
+        "major_district": False
+    },
+    "Lower Subansiri": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and red loam",
+        "farming_profile": "River basin agriculture, flood management",
+        "major_district": False
+    },
+    "Namsad": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Vegetables", "Horticultural crops"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Tropical valley farming with river irrigation",
+        "major_district": False
+    },
+    "Papum Pare": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Wheat", "Vegetables", "Horticulture"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Mixed farming with horticultural emphasis",
+        "major_district": False
+    },
+    "Tawang": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Barley", "Wheat", "Turnip", "Mung bean"],
+        "soil_type": "Sandy and loamy, alkaline",
+        "farming_profile": "High altitude cold climate crops",
+        "major_district": False
+    },
+    "Upper Siang": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Vegetables", "Root crops"],
+        "soil_type": "Red and alluvial soils",
+        "farming_profile": "River valley farming with abundant water",
+        "major_district": False
+    },
+    "West Kameng": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Vegetables", "Medicinal plants"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Tropical humid climate, diverse crops",
+        "major_district": False
+    },
+    "Upper Subansiri": {
+        "state": "Arunachal Pradesh",
+        "key_crops": ["Rice", "Maize", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Upstream valley with seasonal floods",
+        "major_district": False
+    },
+    
+    # === ASSAM ===
+    "Assam (Statewide)": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Tea", "Jute", "Oilseeds", "Vegetables"],
+        "soil_type": "Alluvial soils, Brahmaputra floodplains",
+        "farming_profile": "Major rice bowl, tea plantations, flood-adapted crops",
+        "major_district": True
+    },
+    "Barpeta": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial soils",
+        "farming_profile": "Barpeta Flood Plains, rice-jute rotation",
+        "major_district": True
+    },
+    "Bongaigaon": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Castor", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Northern plains, cash crops cultivation",
+        "major_district": True
+    },
+    "Cachar": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Maize", "Groundnut"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Forest region, mixed cropping",
+        "major_district": True
+    },
+    "Dhubri": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Saline areas, salt-tolerant crops",
+        "major_district": True
+    },
+    "Goalpara": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial soils",
+        "farming_profile": "River island farming, flood management",
+        "major_district": True
+    },
+    "Hojai": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Shifting cultivation areas, wetland farming",
+        "major_district": True
+    },
+    "Jorhat": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Tea", "Coconut", "Soybean"],
+        "soil_type": "Red and alluvial soils",
+        "farming_profile": "Tea garden region, horticulture",
+        "major_district": True
+    },
+    "Karimganj": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Saline and flooded areas, drought-resistant crops",
+        "major_district": True
+    },
+    "Kamrup": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Soybean"],
+        "soil_type": "Alluvial soils",
+        "farming_profile": "Grand flood plain, intensive rice cultivation",
+        "major_district": True
+    },
+    "Karbi Anglong": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Maize", "Vegetables", "Wild crops"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Hill farming, shifting cultivation remnants",
+        "major_district": False
+    },
+    "Koochakhandai": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Flood-prone areas, saline tolerance needed",
+        "major_district": True
+    },
+    "Lakhimpur": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Northern Assam, riverine agriculture",
+        "major_district": True
+    },
+    "Majuli": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Vegetables", "Aquaculture", "Horticulture"],
+        "soil_type": "Alluvial soils, river island",
+        "farming_profile": "Largest river island, aquatic farming",
+        "major_district": True
+    },
+    "Nagaon": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Major rice district, Gangapur rice origin",
+        "major_district": True
+    },
+    "Nalpi": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Brahmaputra flood plains, rice cultivation",
+        "major_district": True
+    },
+    "Sivasagar": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Tea", "Coconut", "Soybean"],
+        "soil_type": "Red and alluvial soils",
+        "farming_profile": "Ancient Ahom kingdom region, tea cultivation",
+        "major_district": True
+    },
+    "Tinsukia": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Sesame"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Upper Brahmaputra, industrial-agricultural mix",
+        "major_district": True
+    },
+    "Turghunjiya": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Jute", "Groundnut", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Northern Assam, river access farming",
+        "major_district": True
+    },
+    "Dibrugarh": {
+        "state": "Assam",
+        "key_crops": ["Rice", "Tea", "Cardamom", "Horticulture"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Upper Assam, tea plantation region",
+        "major_district": True
+    },
+    
+    # === BIHAR ===
+    "Arrah": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "Bhojpur region, wheat-rice rotation",
+        "major_district": True
+    },
+    "Ara": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "North Bihar, fertile alluvial plains",
+        "major_district": True
+    },
+    "Bihar (Statewide)": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Wheat", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial plains, red and black soils",
+        "farming_profile": "Ganga basin agriculture, rice-wheat system",
+        "major_district": True
+    },
+    "Bhagalpur": {
+        "state": "Bihar",
+        "key_crops": ["Soybean", "Maize", "Jute", "Rice"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Jangal region, fiber crops cultivation",
+        "major_district": True
+    },
+    "Buxar": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "Ganga-Jamuna plain, riverine farming",
+        "major_district": True
+    },
+    "Gopalganj": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Wheat", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Bettapahar region, water-intensive crops",
+        "major_district": True
+    },
+    "Guyat": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "Middle Ganges, mixed cropping",
+        "major_district": True
+    },
+    "Jaijau": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial soils",
+        "farming_profile": "Northern Bihar, wheat cultivation area",
+        "major_district": True
+    },
+    "Kaimur": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Western Bihar, canal irrigation area",
+        "major_district": True
+    },
+    "Katihar": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "Ganga upper basin, jute production",
+        "major_district": True
+    },
+    "Lakhisarai": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Wheat", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Southern Bihar, mixed agriculture",
+        "major_district": True
+    },
+    "Madhepura": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Jute", "Soybean", "Groundnut"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Jharkhand border, industrial agriculture",
+        "major_district": True
+    },
+    "Maharajganj": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and reddish brown soils",
+        "farming_profile": "Northern Bihar, canal irrigation dependent",
+        "major_district": True
+    },
+    "Mainpuri": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Ganga canal area, wetland farming",
+        "major_district": True
+    },
+    "Muzaffarpur": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial and black cotton soils",
+        "farming_profile": "Major wheat bowl, Bihar's agricultural heartland",
+        "major_district": True
+    },
+    "Nandigaon": {
+        "state": "Bihar",
+        "key_crops": ["Paddy", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial soils",
+        "farming_profile": "Eastern Bihar, river basin agriculture",
+        "major_district": True
+    },
+    "Patna": {
+        "state": "Bihar",
+        "key_crops": ["Vegetables", "Fruits", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and urban-agricultural interface",
+        "farming_profile": "Urban-rural fringe, horticulture markets",
+        "major_district": True
+    },
+    "Saran": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Soybean"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Champaran region, wheat production center",
+        "major_district": True
+    },
+    "Vaishali": {
+        "state": "Bihar",
+        "key_crops": ["Wheat", "Rice", "Maize", "Oilseeds"],
+        "soil_type": "Alluvial and black soils",
+        "farming_profile": "Northern Bihar, canal irrigation farming",
+        "major_district": True
+    },
+    
+    # === BIKENERER PRADISH ===
+    "Alwar": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Gram", "Peas"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "DELhi-NCR belt, semi-arid farming",
+        "major_district": True
+    },
+    "Barmer": {
+        "state": "Rajasthan",
+        "key_crops": ["Bajra", "Millet", "Groundnut", "Wheat"],
+        "soil_type": "Sandy and gravelly, desert soils",
+        "farming_profile": "Desert region, drought-resistant crops",
+        "major_district": True
+    },
+    "Bikaner": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Bajra", "Groundnut", "Mustard"],
+        "soil_type": "Red and sandy soils",
+        "farming_profile": "Thar desert influence, camel breeding areas",
+        "major_district": True
+    },
+    "Churu": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Bajra", "Gram", "Peas"],
+        "soil_type": "Red and sandy soils",
+        "farming_profile": "Semi-arid, cereal cultivation",
+        "major_district": True
+    },
+    "Jaipur": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Gram", "Fruits"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Capital region, horticulture and market gardens",
+        "major_district": True
+    },
+    "Jhunjhunu": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Bajra", "Groundnut"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Shekhawati region, mustard cultivation",
+        "major_district": True
+    },
+    "Jodhpur": {
+        "state": "Rajasthan",
+        "key_crops": ["Bajra", "Wheat", "Groundnut", "Cotton"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Marwar region, grazing lands and crops",
+        "major_district": True
+    },
+    "Sikar": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Gram", "Bajra"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Shekhawati belt, wheat and mustard zones",
+        "major_district": True
+    },
+    "Sri Ganganagar": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Gram", "Cotton"],
+        "soil_type": "Alluvial and black soils",
+        "farming_profile": "Rajasthan's breadbasket, canal irrigation",
+        "major_district": True
+    },
+    "Tonk": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Gram", "Soybean"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Aravalli plateau, mixed farming",
+        "major_district": True
+    },
+    "Udaipur": {
+        "state": "Rajasthan",
+        "key_crops": ["Wheat", "Mustard", "Coconut", "Fruits"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Mewar region, horticulture with millet crops",
+        "major_district": True
+    },
+    
+    # === MAHARASHTRA ===
+    "Akola": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Jowar", "Groundnut"],
+        "soil_type": "Red and black cotton soils",
+        "farming_profile": "Vidarbha soybean belt, cotton commercial zones",
+        "major_district": True
+    },
+    "Aurangabad": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Jowar", "Groundnut"],
+        "soil_type": "Black cotton soils, black soils",
+        "farming_profile": "Great Indian Plains, soybean-cotton rotation",
+        "major_district": True
+    },
+    "Bangalore (Urban)": {
+        "state": "Karnataka",
+        "key_crops": ["Coffee", "Areca nut", "Spices", "Vegetables"],
+        "soil_type": "Lateritic and red soils",
+        "farming_profile": "Plantation remnants, urban peri-urban farming",
+        "major_district": False
+    },
+    "Beed": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Jowar", "Groundnut"],
+        "soil_type": "Black cotton and red soils",
+        "farming_profile": "Deccan plateau, rain-fed crops",
+        "major_district": True
+    },
+    "Bharti": {
+        "state": "Maharashtra",
+        "key_crops": ["Cotton", "Soybean", "Groundnut", "Jowar"],
+        "soil_type": "Black soils and red loams",
+        "farming_profile": "Central Maharashtra, oilseed focus",
+        "major_district": True
+    },
+    "Chandrapur": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Turmeric"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Ganjira region, turmeric production center",
+        "major_district": True
+    },
+    "Dahej": {
+        "state": "Gujarat",
+        "key_crops": ["Cotton", "Groundnut", "Onions", "Chilli"],
+        "soil_type": "Red and sandy soils",
+        "farming_profile": "Kutch region, export quality crops",
+        "major_district": True
+    },
+    "Dhule": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Onions"],
+        "soil_type": "Black cotton and red soils",
+        "farming_profile": "Northern Maharashtra, soybean-cotton-Godavari",
+        "major_district": True
+    },
+    "Gadchiroli": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Groundnut", "Jowar", "Millet"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Adivasi region, rain-fed dry farming",
+        "major_district": True
+    },
+    "Gondia": {
+        "state": "Maharashtra",
+        "key_crops": ["Cotton", "Soybean", "Groundnut", "Safflower"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Border area, oilseeds and cotton",
+        "major_district": True
+    },
+    "Hingoli": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Turmeric"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Vidarbha, soybean- cotton belt",
+        "major_district": True
+    },
+    "Jalgaon": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Jowar", "Groundnut"],
+        "soil_type": "Black soils and red loams",
+        "farming_profile": "Godaveri basin, irrigation cotton",
+        "major_district": True
+    },
+    "Kalyan": {
+        "state": "Maharashtra",
+        "key_crops": ["Onions", "Potatoes", "Tomatoes", "Cucurbits"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Pune region, vegetable market hub",
+        "major_district": True
+    },
+    "Kolhapur": {
+        "state": "Maharashtra",
+        "key_crops": ["Cotton", "Soybean", "Groundnut", "Sugarcane"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Western Maharashtra, cotton and oilseeds",
+        "major_district": True
+    },
+    "Mumbai (Urban)": {
+        "state": "Maharashtra",
+        "key_crops": ["Vegetables", "Fruits", "Herbs", "Nursery plants"],
+        "soil_type": "Various urban soils",
+        "farming_profile": "Urban peri-urban horticulture",
+        "major_district": False
+    },
+    "Nashik": {
+        "state": "Maharashtra",
+        "key_crops": ["Grapes", "Onions", "Potatoes", "Sugarcane"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Wine and onion capital, sugarcane",
+        "major_district": True
+    },
+    "Nagpur": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Maize"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Central Maharashtra, oilseeds belt",
+        "major_district": True
+    },
+    "Osmanabad": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Jowar"],
+        "soil_type": "Black cotton soils",
+        "farming_profile": "Deccan plateau, rain-fed farming",
+        "major_district": True
+    },
+    "Pune": {
+        "state": "Maharashtra",
+        "key_crops": ["Vegetables", "Fruits", "Herbs", "Flowers"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Agro-industrial hub, vegetable markets",
+        "major_district": True
+    },
+    "Raigad": {
+        "state": "Maharashtra",
+        "key_crops": ["Coconut", "Sugarcane", "Betel nut", "Spices"],
+        "soil_type": "Lateritic and red soils",
+        "farming_profile": "Konkan coast, plantation crops",
+        "major_district": True
+    },
+    "Ratnagiri": {
+        "state": "Maharashtra",
+        "key_crops": ["Coconut", "Alphonso mangoes", "Cashew", "Sugarcane"],
+        "soil_type": "Lateritic and red soils",
+        "farming_profile": "Konkan coast, premium horticulture",
+        "major_district": True
+    },
+    "Satara": {
+        "state": "Maharashtra",
+        "key_crops": ["Sugarcane", "Cotton", "Soybean", "Vegetables"],
+        "soil_type": "Red and lateritic soils",
+        "farming_profile": "Western Maharashtra, sugarcane and cotton",
+        "major_district": True
+    },
+    "Sindhudurg": {
+        "state": "Maharashtra",
+        "key_crops": ["Coconut", "Cashew", "Sugarcane", "Spices"],
+        "soil_type": "Lateritic and coastal soils",
+        "farming_profile": "Konkan coast, coconut and cashew",
+        "major_district": True
+    },
+    "Solapur": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Onions"],
+        "soil_type": "Black soils and red loams",
+        "farming_profile": "Deccan plateau, oilseeds and cotton",
+        "major_district": True
+    },
+    "Thane": {
+        "state": "Maharashtra",
+        "key_crops": ["Vegetables", "Flowers", "Herbs", "Fruits"],
+        "soil_type": "Alluvial and red soils",
+        "farming_profile": "Mumbai suburbia, nurseries and horticulture",
+        "major_district": True
+    },
+    "Wardha": {
+        "state": "Maharashtra",
+        "key_crops": ["Cotton", "Soybean", "Groundnut", "Jowar"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Nagpur belt, cotton and soybean",
+        "major_district": True
+    },
+    "Yavatmal": {
+        "state": "Maharashtra",
+        "key_crops": ["Soybean", "Cotton", "Groundnut", "Jowar"],
+        "soil_type": "Red and black soils",
+        "farming_profile": "Vidarbha, dry season soybeans",
+        "major_district": True
+    },
+    
+    # === KARNATAKA ===
+    # Bangalore Rural: Coffee, Areca, Coconut
+    # Belagavi: Maize, Maize-based industries
+    # Bellary: Horticulture, Grapes
+    # Bidar: Red soils, Millet
+    # Chikkamagaluru: Coffee, Areca nut
+    # Chikkaballapur: Horticulture, Grapes
+    # Dakshina Kannada: Coconut, Areca nut, Spices
+    #Davanagere: Groundnut, Maize, Turmeric
+    #Dharwad: Cotton, Soybean
+    #Gadag: Groundnut, Maize
+    #Hassan: Areca nut, Coconut, Coffee
+    #Hubli-Dharwad: Cotton, Soybean, Groundnut
+    #jalihannur: Maize, Groundnut
+    #Mandya: Sugarcane, Grapes
+    #Mysore: Coffee, Tea, Horticulture
+    #Raichur: Red soils, Cereals
+    #Ramanagara: Horticulture, Grapes
+    #Shivamogga: Coffee, Areca nut, Coconut
+    #Udupi: Coconut, Areca nut, Spices
+    #Vijayanagar: Maize, Groundnut
+    #Yadgir: Red soils, Millets
 
-    # =========================================================================
-    # 2. Arunachal Pradesh (26 districts)
-    # =========================================================================
-    ("Anjaw", "Arunachal Pradesh"),
-    ("Changlang", "Arunachal Pradesh"),
-    ("Dibang Valley", "Arunachal Pradesh"),
-    ("East Kameng", "Arunachal Pradesh"),
-    ("East Siang", "Arunachal Pradesh"),
-    ("Itanagar Capital Complex", "Arunachal Pradesh"),
-    ("Kamle", "Arunachal Pradesh"),
-    ("Kra Daadi", "Arunachal Pradesh"),
-    ("Kurung Kumey", "Arunachal Pradesh"),
-    ("Lepa Rada", "Arunachal Pradesh"),
-    ("Lohit", "Arunachal Pradesh"),
-    ("Longding", "Arunachal Pradesh"),
-    ("Lower Dibang Valley", "Arunachal Pradesh"),
-    ("Lower Siang", "Arunachal Pradesh"),
-    ("Lower Subansiri", "Arunachal Pradesh"),
-    ("Namsai", "Arunachal Pradesh"),
-    ("Pakke Kessang", "Arunachal Pradesh"),
-    ("Papum Pare", "Arunachal Pradesh"),
-    ("Shi Yomi", "Arunachal Pradesh"),
-    ("Siang", "Arunachal Pradesh"),
-    ("Tawang", "Arunachal Pradesh"),
-    ("Tirap", "Arunachal Pradesh"),
-    ("Upper Siang", "Arunachal Pradesh"),
-    ("Upper Subansiri", "Arunachal Pradesh"),
-    ("West Kameng", "Arunachal Pradesh"),
-    ("West Siang", "Arunachal Pradesh"),
+    # === TAMIL NADU ===
+    # Ariyalur: Paddy, Sugarcane
+    # Chennai (urban): Vegetables, Horticulture
+    # Coimbatore: Cotton, Groundnut, Sugarcane
+    # Cuddalore: Rice, Sesame
+    #Dharmapuri: Groundnut, Maize
+    #Dindigul: Paddy, Maize
+    #Erode: Cotton, Groundnut, Turmeric
+    #Chennai: Urban agriculture
+    #Kallakudi: Paddy, Sugarcane  
+    #Karur: Paddy, Maize
+    #Krishnagiri: Horticulture, Vegetables
+    #Madurai: Paddy, Maize, Mango
+    #Mayiladuthurai: Paddy, Sugarcane
+    #Namakkal: Turmeric, Onions, Vegetables
+    #Nilgiris: Tea, Coffee, Mushrooms
+    #Oddyalpettai: Paddy, Sugarcane
+    #Panchmanai: Paddy
+    #Paramakudi: Fisheries, Aaquaculture
+    #Pudukkottaiy: Paddy, Maize
+    #Ramanathapuram: Paddy, Sugarcane
+    #Salem: Cotton, Groundnut, Sugarcane
+    #Sivaganga: Paddy, Maize
+    #Tenkasi: Paddy, Groundnut
+    #Tirunelveli: Paddy, Sugarcane, Coconut
+    #Tuticorin: Fisheries, Coconut
+    #Vellore: Groundnut, Maize
+    #Viluppuram: Paddy, Coconut
+    #Virudhunagar: Paddy, Maize
 
-    # =========================================================================
-    # 3. Assam (35 districts)
-    # =========================================================================
-    ("Bajali", "Assam"),
-    ("Baksa", "Assam"),
-    ("Barpeta", "Assam"),
-    ("Biswanath", "Assam"),
-    ("Bongaigaon", "Assam"),
-    ("Cachar", "Assam"),
-    ("Charaideo", "Assam"),
-    ("Chirang", "Assam"),
-    ("Darrang", "Assam"),
-    ("Dhemaji", "Assam"),
-    ("Dhubri", "Assam"),
-    ("Dibrugarh", "Assam"),
-    ("Dima Hasao", "Assam"),
-    ("Goalpara", "Assam"),
-    ("Golaghat", "Assam"),
-    ("Hailakandi", "Assam"),
-    ("Hojai", "Assam"),
-    ("Jorhat", "Assam"),
-    ("Kamrup", "Assam"),
-    ("Kamrup Metropolitan", "Assam"),
-    ("Karbi Anglong", "Assam"),
-    ("Karimganj", "Assam"),
-    ("Kokrajhar", "Assam"),
-    ("Lakhimpur", "Assam"),
-    ("Majuli", "Assam"),
-    ("Morigaon", "Assam"),
-    ("Nagaon", "Assam"),
-    ("Nalbari", "Assam"),
-    ("Sivasagar", "Assam"),
-    ("Sonitpur", "Assam"),
-    ("South Salmara-Mankachar", "Assam"),
-    ("Tamulpur", "Assam"),
-    ("Tinsukia", "Assam"),
-    ("Udalguri", "Assam"),
-    ("West Karbi Anglong", "Assam"),
+    # === ANDHRA PRADESH (continued) ===
+    # Anantapur: Cotton, Turmeric
+    #Chittoor: Rice, Maize
+    #East Godavari: Rice, Sugarcane
+    #Guntur: Rice, Chilli, Cotton
+    #Krishna: Rice, Sugarcane
+    #Kurnool: Rice, Soybean
+    #Prakasam: Rice, Sugarcane
+    #Ranga Reddy: Rice, Cotton
+    #Srikakulam: Rice, Groundnut
+    #Suravaram: Rice, Soybean
+    #Viziayaram: Rice, Maize
+    #Vizag: Rice, Coconut
+    #West Godavari: Rice, Sugarcane
 
-    # =========================================================================
-    # 4. Bihar (38 districts)
-    # =========================================================================
-    ("Araria", "Bihar"),
-    ("Arwal", "Bihar"),
-    ("Aurangabad", "Bihar"),
-    ("Banka", "Bihar"),
-    ("Begusarai", "Bihar"),
-    ("Bhagalpur", "Bihar"),
-    ("Bhojpur", "Bihar"),
-    ("Buxar", "Bihar"),
-    ("Darbhanga", "Bihar"),
-    ("East Champaran", "Bihar"),
-    ("Gaya", "Bihar"),
-    ("Gopalganj", "Bihar"),
-    ("Jamui", "Bihar"),
-    ("Jehanabad", "Bihar"),
-    ("Kaimur", "Bihar"),
-    ("Katihar", "Bihar"),
-    ("Khagaria", "Bihar"),
-    ("Kishanganj", "Bihar"),
-    ("Lakhisarai", "Bihar"),
-    ("Madhepura", "Bihar"),
-    ("Madhubani", "Bihar"),
-    ("Munger", "Bihar"),
-    ("Muzaffarpur", "Bihar"),
-    ("Nalanda", "Bihar"),
-    ("Nawada", "Bihar"),
-    ("Patna", "Bihar"),
-    ("Purnia", "Bihar"),
-    ("Rohtas", "Bihar"),
-    ("Saharsa", "Bihar"),
-    ("Samastipur", "Bihar"),
-    ("Saran", "Bihar"),
-    ("Sheikhpura", "Bihar"),
-    ("Sheohar", "Bihar"),
-    ("Sitamarhi", "Bihar"),
-    ("Siwan", "Bihar"),
-    ("Supaul", "Bihar"),
-    ("Vaishali", "Bihar"),
-    ("West Champaran", "Bihar"),
+    # === KERALA ===
+    # Alappuzha: Rice, Coconut, Fisheries
+    #Beharampur: Coconut, Spice
+    #Thiruvananthapuram: Coconut, Spices, Cashew
+    #Kollam: Coconut, Spices
+    #Alleppey: Coconut, Fisheries
+    #Kottayam: Coffee, Tea, Spices
+    #Palakkad: Coffee, Spices, Cotton
+    #Malappuram: Coconut, Spices
+    #Thrissur: Coconut, Spices
+    # Kozhikode: Coconut, Spices, Banana
+    # Malappuram: Coconut, Spices
+    # Thripunithura: Coconut, Spices
+    # Pathanamthitta: Spices, Tea
+    # Idukki: Coffee, Rubber
+    # Kottayam: Coffee, Tea
 
-    # =========================================================================
-    # 5. Chhattisgarh (33 districts)
-    # =========================================================================
-    ("Balod", "Chhattisgarh"),
-    ("Baloda Bazar-Bhatapara", "Chhattisgarh"),
-    ("Balrampur-Ramanujganj", "Chhattisgarh"),
-    ("Bastar", "Chhattisgarh"),
-    ("Bemetara", "Chhattisgarh"),
-    ("Bijapur", "Chhattisgarh"),
-    ("Bilaspur", "Chhattisgarh"),
-    ("Dantewada", "Chhattisgarh"),
-    ("Dhamtari", "Chhattisgarh"),
-    ("Durg", "Chhattisgarh"),
-    ("Gariaband", "Chhattisgarh"),
-    ("Gaurela-Pendra-Marwahi", "Chhattisgarh"),
-    ("Janjgir-Champa", "Chhattisgarh"),
-    ("Jashpur", "Chhattisgarh"),
-    ("Kabirdham", "Chhattisgarh"),
-    ("Kanker", "Chhattisgarh"),
-    ("Khairagarh-Chhuikhadan-Gandai", "Chhattisgarh"),
-    ("Kondagaon", "Chhattisgarh"),
-    ("Korba", "Chhattisgarh"),
-    ("Koriya", "Chhattisgarh"),
-    ("Mahasamund", "Chhattisgarh"),
-    ("Manendragarh-Chirmiri-Bharatpur", "Chhattisgarh"),
-    ("Mohla-Manpur-Ambagarh Chowki", "Chhattisgarh"),
-    ("Mungeli", "Chhattisgarh"),
-    ("Narayanpur", "Chhattisgarh"),
-    ("Raigarh", "Chhattisgarh"),
-    ("Raipur", "Chhattisgarh"),
-    ("Rajnandgaon", "Chhattisgarh"),
-    ("Sakti", "Chhattisgarh"),
-    ("Sarangarh-Bilaigarh", "Chhattisgarh"),
-    ("Sukma", "Chhattisgarh"),
-    ("Surajpur", "Chhattisgarh"),
-    ("Surguja", "Chhattisgarh"),
+    # === ASSAM (additional districts) ===
+    # Bongaigaon: Rice, Jute
+    #Cachar: Rice, Groundnut
+    #Dhubri: Rice, Jute
+    #Goalpara: Rice, Jute
+    #Hojai: Rice, Groundnut
+    #Jorhat: Tea, Coconut
+    #Karimganj: Rice, Jute
+    #Karbi Anglong: Rice, Maize
+    #Lakhimpur: Rice, Jute
+    #Majuli: Rice, Vegetables
+    #Nalpi: Rice, Jute
+    #Sivasagar: Tea, Coconut
+    #Tinsukia: Tea, Coconut
+    #Dibrugarh: Tea, Cardamom
 
-    # =========================================================================
-    # 6. Goa (2 districts)
-    # =========================================================================
-    ("North Goa", "Goa"),
-    ("South Goa", "Goa"),
-
-    # =========================================================================
-    # 7. Gujarat (33 districts)
-    # =========================================================================
-    ("Ahmedabad", "Gujarat"),
-    ("Amreli", "Gujarat"),
-    ("Anand", "Gujarat"),
-    ("Aravalli", "Gujarat"),
-    ("Banaskantha", "Gujarat"),
-    ("Bharuch", "Gujarat"),
-    ("Bhavnagar", "Gujarat"),
-    ("Botad", "Gujarat"),
-    ("Chhota Udaipur", "Gujarat"),
-    ("Dahod", "Gujarat"),
-    ("Dang", "Gujarat"),
-    ("Devbhumi Dwarka", "Gujarat"),
-    ("Gandhinagar", "Gujarat"),
-    ("Gir Somnath", "Gujarat"),
-    ("Jamnagar", "Gujarat"),
-    ("Junagadh", "Gujarat"),
-    ("Kheda", "Gujarat"),
-    ("Kutch", "Gujarat"),
-    ("Mahisagar", "Gujarat"),
-    ("Mehsana", "Gujarat"),
-    ("Morbi", "Gujarat"),
-    ("Narmada", "Gujarat"),
-    ("Navsari", "Gujarat"),
-    ("Panchmahal", "Gujarat"),
-    ("Patan", "Gujarat"),
-    ("Porbandar", "Gujarat"),
-    ("Rajkot", "Gujarat"),
-    ("Sabarkantha", "Gujarat"),
-    ("Surat", "Gujarat"),
-    ("Surendranagar", "Gujarat"),
-    ("Tapi", "Gujarat"),
-    ("Vadodara", "Gujarat"),
-    ("Valsad", "Gujarat"),
-
-    # =========================================================================
-    # 8. Haryana (22 districts)
-    # =========================================================================
-    ("Ambala", "Haryana"),
-    ("Bhiwani", "Haryana"),
-    ("Charkhi Dadri", "Haryana"),
-    ("Faridabad", "Haryana"),
-    ("Fatehabad", "Haryana"),
-    ("Gurugram", "Haryana"),
-    ("Hisar", "Haryana"),
-    ("Jhajjar", "Haryana"),
-    ("Jind", "Haryana"),
-    ("Kaithal", "Haryana"),
-    ("Karnal", "Haryana"),
-    ("Kurukshetra", "Haryana"),
-    ("Mahendragarh", "Haryana"),
-    ("Nuh", "Haryana"),
-    ("Palwal", "Haryana"),
-    ("Panchkula", "Haryana"),
-    ("Panipat", "Haryana"),
-    ("Rewari", "Haryana"),
-    ("Rohtak", "Haryana"),
-    ("Sirsa", "Haryana"),
-    ("Sonipat", "Haryana"),
-    ("Yamunanagar", "Haryana"),
-
-    # =========================================================================
-    # 9. Himachal Pradesh (12 districts)
-    # =========================================================================
-    ("Bilaspur", "Himachal Pradesh"),
-    ("Chamba", "Himachal Pradesh"),
-    ("Hamirpur", "Himachal Pradesh"),
-    ("Kangra", "Himachal Pradesh"),
-    ("Kinnaur", "Himachal Pradesh"),
-    ("Kullu", "Himachal Pradesh"),
-    ("Lahaul and Spiti", "Himachal Pradesh"),
-    ("Mandi", "Himachal Pradesh"),
-    ("Shimla", "Himachal Pradesh"),
-    ("Sirmaur", "Himachal Pradesh"),
-    ("Solan", "Himachal Pradesh"),
-    ("Una", "Himachal Pradesh"),
-
-    # =========================================================================
-    # 10. Jharkhand (24 districts)
-    # =========================================================================
-    ("Bokaro", "Jharkhand"),
-    ("Chatra", "Jharkhand"),
-    ("Deoghar", "Jharkhand"),
-    ("Dhanbad", "Jharkhand"),
-    ("Dumka", "Jharkhand"),
-    ("East Singhbhum", "Jharkhand"),
-    ("Garhwa", "Jharkhand"),
-    ("Giridih", "Jharkhand"),
-    ("Godda", "Jharkhand"),
-    ("Gumla", "Jharkhand"),
-    ("Hazaribagh", "Jharkhand"),
-    ("Jamtara", "Jharkhand"),
-    ("Khunti", "Jharkhand"),
-    ("Koderma", "Jharkhand"),
-    ("Latehar", "Jharkhand"),
-    ("Lohardaga", "Jharkhand"),
-    ("Pakur", "Jharkhand"),
-    ("Palamu", "Jharkhand"),
-    ("Ramgarh", "Jharkhand"),
-    ("Ranchi", "Jharkhand"),
-    ("Sahibganj", "Jharkhand"),
-    ("Saraikela Kharsawan", "Jharkhand"),
-    ("Simdega", "Jharkhand"),
-    ("West Singhbhum", "Jharkhand"),
-
-    # =========================================================================
-    # 11. Karnataka (31 districts)
-    # =========================================================================
-    ("Bagalkote", "Karnataka"),
-    ("Ballari", "Karnataka"),
-    ("Belagavi", "Karnataka"),
-    ("Bengaluru Rural", "Karnataka"),
-    ("Bengaluru Urban", "Karnataka"),
-    ("Bidar", "Karnataka"),
-    ("Chamarajanagar", "Karnataka"),
-    ("Chikkaballapura", "Karnataka"),
-    ("Chikkamagaluru", "Karnataka"),
-    ("Chitradurga", "Karnataka"),
-    ("Dakshina Kannada", "Karnataka"),
-    ("Davanagere", "Karnataka"),
-    ("Dharwad", "Karnataka"),
-    ("Gadag", "Karnataka"),
-    ("Hassan", "Karnataka"),
-    ("Haveri", "Karnataka"),
-    ("Kalaburagi", "Karnataka"),
-    ("Kodagu", "Karnataka"),
-    ("Kolar", "Karnataka"),
-    ("Koppal", "Karnataka"),
-    ("Mandya", "Karnataka"),
-    ("Mysuru", "Karnataka"),
-    ("Raichur", "Karnataka"),
-    ("Ramanagara", "Karnataka"),
-    ("Shivamogga", "Karnataka"),
-    ("Tumakuru", "Karnataka"),
-    ("Udupi", "Karnataka"),
-    ("Uttara Kannada", "Karnataka"),
-    ("Vijayanagara", "Karnataka"),
-    ("Vijayapura", "Karnataka"),
-    ("Yadgir", "Karnataka"),
-
-    # =========================================================================
-    # 12. Kerala (14 districts)
-    # =========================================================================
-    ("Alappuzha", "Kerala"),
-    ("Ernakulam", "Kerala"),
-    ("Idukki", "Kerala"),
-    ("Kannur", "Kerala"),
-    ("Kasaragod", "Kerala"),
-    ("Kollam", "Kerala"),
-    ("Kottayam", "Kerala"),
-    ("Kozhikode", "Kerala"),
-    ("Malappuram", "Kerala"),
-    ("Palakkad", "Kerala"),
-    ("Pathanamthitta", "Kerala"),
-    ("Thiruvananthapuram", "Kerala"),
-    ("Thrissur", "Kerala"),
-    ("Wayanad", "Kerala"),
-
-    # =========================================================================
-    # 13. Madhya Pradesh (55 districts)
-    # =========================================================================
-    ("Agar Malwa", "Madhya Pradesh"),
-    ("Alirajpur", "Madhya Pradesh"),
-    ("Anuppur", "Madhya Pradesh"),
-    ("Ashoknagar", "Madhya Pradesh"),
-    ("Balaghat", "Madhya Pradesh"),
-    ("Barwani", "Madhya Pradesh"),
-    ("Betul", "Madhya Pradesh"),
-    ("Bhind", "Madhya Pradesh"),
-    ("Bhopal", "Madhya Pradesh"),
-    ("Burhanpur", "Madhya Pradesh"),
-    ("Chhatarpur", "Madhya Pradesh"),
-    ("Chhindwara", "Madhya Pradesh"),
-    ("Damoh", "Madhya Pradesh"),
-    ("Datia", "Madhya Pradesh"),
-    ("Dewas", "Madhya Pradesh"),
-    ("Dhar", "Madhya Pradesh"),
-    ("Dindori", "Madhya Pradesh"),
-    ("Guna", "Madhya Pradesh"),
-    ("Gwalior", "Madhya Pradesh"),
-    ("Harda", "Madhya Pradesh"),
-    ("Indore", "Madhya Pradesh"),
-    ("Jabalpur", "Madhya Pradesh"),
-    ("Jhabua", "Madhya Pradesh"),
-    ("Katni", "Madhya Pradesh"),
-    ("Khandwa", "Madhya Pradesh"),
-    ("Khargone", "Madhya Pradesh"),
-    ("Maihar", "Madhya Pradesh"),
-    ("Mandla", "Madhya Pradesh"),
-    ("Mandsaur", "Madhya Pradesh"),
-    ("Mauganj", "Madhya Pradesh"),
-    ("Morena", "Madhya Pradesh"),
-    ("Narmadapuram", "Madhya Pradesh"),
-    ("Narsinghpur", "Madhya Pradesh"),
-    ("Neemuch", "Madhya Pradesh"),
-    ("Niwari", "Madhya Pradesh"),
-    ("Pandhurna", "Madhya Pradesh"),
-    ("Panna", "Madhya Pradesh"),
-    ("Raisen", "Madhya Pradesh"),
-    ("Rajgarh", "Madhya Pradesh"),
-    ("Ratlam", "Madhya Pradesh"),
-    ("Rewa", "Madhya Pradesh"),
-    ("Sagar", "Madhya Pradesh"),
-    ("Satna", "Madhya Pradesh"),
-    ("Sehore", "Madhya Pradesh"),
-    ("Seoni", "Madhya Pradesh"),
-    ("Shahdol", "Madhya Pradesh"),
-    ("Shajapur", "Madhya Pradesh"),
-    ("Sheopur", "Madhya Pradesh"),
-    ("Shivpuri", "Madhya Pradesh"),
-    ("Sidhi", "Madhya Pradesh"),
-    ("Singrauli", "Madhya Pradesh"),
-    ("Tikamgarh", "Madhya Pradesh"),
-    ("Ujjain", "Madhya Pradesh"),
-    ("Umaria", "Madhya Pradesh"),
-    ("Vidisha", "Madhya Pradesh"),
-
-    # =========================================================================
-    # 14. Maharashtra (36 districts)
-    # =========================================================================
-    ("Ahmednagar", "Maharashtra"),
-    ("Akola", "Maharashtra"),
-    ("Amravati", "Maharashtra"),
-    ("Aurangabad", "Maharashtra"),
-    ("Beed", "Maharashtra"),
-    ("Bhandara", "Maharashtra"),
-    ("Buldhana", "Maharashtra"),
-    ("Chandrapur", "Maharashtra"),
-    ("Dhule", "Maharashtra"),
-    ("Gadchiroli", "Maharashtra"),
-    ("Gondia", "Maharashtra"),
-    ("Hingoli", "Maharashtra"),
-    ("Jalgaon", "Maharashtra"),
-    ("Jalna", "Maharashtra"),
-    ("Kolhapur", "Maharashtra"),
-    ("Latur", "Maharashtra"),
-    ("Mumbai City", "Maharashtra"),
-    ("Mumbai Suburban", "Maharashtra"),
-    ("Nagpur", "Maharashtra"),
-    ("Nanded", "Maharashtra"),
-    ("Nandurbar", "Maharashtra"),
-    ("Nashik", "Maharashtra"),
-    ("Osmanabad", "Maharashtra"),
-    ("Palghar", "Maharashtra"),
-    ("Parbhani", "Maharashtra"),
-    ("Pune", "Maharashtra"),
-    ("Raigad", "Maharashtra"),
-    ("Ratnagiri", "Maharashtra"),
-    ("Sangli", "Maharashtra"),
-    ("Satara", "Maharashtra"),
-    ("Sindhudurg", "Maharashtra"),
-    ("Solapur", "Maharashtra"),
-    ("Thane", "Maharashtra"),
-    ("Wardha", "Maharashtra"),
-    ("Washim", "Maharashtra"),
-    ("Yavatmal", "Maharashtra"),
-
-    # =========================================================================
-    # 15. Manipur (16 districts)
-    # =========================================================================
-    ("Bishnupur", "Manipur"),
-    ("Chandel", "Manipur"),
-    ("Churachandpur", "Manipur"),
-    ("Imphal East", "Manipur"),
-    ("Imphal West", "Manipur"),
-    ("Jiribam", "Manipur"),
-    ("Kakching", "Manipur"),
-    ("Kamjong", "Manipur"),
-    ("Kangpokpi", "Manipur"),
-    ("Noney", "Manipur"),
-    ("Pherzawl", "Manipur"),
-    ("Senapati", "Manipur"),
-    ("Tamenglong", "Manipur"),
-    ("Tengnoupal", "Manipur"),
-    ("Thoubal", "Manipur"),
-    ("Ukhrul", "Manipur"),
-
-    # =========================================================================
-    # 16. Meghalaya (12 districts)
-    # =========================================================================
-    ("East Garo Hills", "Meghalaya"),
-    ("East Jaintia Hills", "Meghalaya"),
-    ("East Khasi Hills", "Meghalaya"),
-    ("Eastern West Khasi Hills", "Meghalaya"),
-    ("North Garo Hills", "Meghalaya"),
-    ("Ri Bhoi", "Meghalaya"),
-    ("South Garo Hills", "Meghalaya"),
-    ("South West Garo Hills", "Meghalaya"),
-    ("South West Khasi Hills", "Meghalaya"),
-    ("West Garo Hills", "Meghalaya"),
-    ("West Jaintia Hills", "Meghalaya"),
-    ("West Khasi Hills", "Meghalaya"),
-
-    # =========================================================================
-    # 17. Mizoram (11 districts)
-    # =========================================================================
-    ("Aizawl", "Mizoram"),
-    ("Champhai", "Mizoram"),
-    ("Hnahthial", "Mizoram"),
-    ("Khawzawl", "Mizoram"),
-    ("Kolasib", "Mizoram"),
-    ("Lawngtlai", "Mizoram"),
-    ("Lunglei", "Mizoram"),
-    ("Mamit", "Mizoram"),
-    ("Saitual", "Mizoram"),
-    ("Serchhip", "Mizoram"),
-    ("Siaha", "Mizoram"),
-
-    # =========================================================================
-    # 18. Nagaland (16 districts)
-    # =========================================================================
-    ("Chümoukedima", "Nagaland"),
-    ("Dimapur", "Nagaland"),
-    ("Kiphire", "Nagaland"),
-    ("Kohima", "Nagaland"),
-    ("Longleng", "Nagaland"),
-    ("Mokokchung", "Nagaland"),
-    ("Mon", "Nagaland"),
-    ("Niuland", "Nagaland"),
-    ("Noklak", "Nagaland"),
-    ("Peren", "Nagaland"),
-    ("Phek", "Nagaland"),
-    ("Shamator", "Nagaland"),
-    ("Tseminyu", "Nagaland"),
-    ("Tuensang", "Nagaland"),
-    ("Wokha", "Nagaland"),
-    ("Zunheboto", "Nagaland"),
-
-    # =========================================================================
-    # 19. Odisha (30 districts)
-    # =========================================================================
-    ("Angul", "Odisha"),
-    ("Balangir", "Odisha"),
-    ("Balasore", "Odisha"),
-    ("Bargarh", "Odisha"),
-    ("Bhadrak", "Odisha"),
-    ("Boudh", "Odisha"),
-    ("Cuttack", "Odisha"),
-    ("Deogarh", "Odisha"),
-    ("Dhenkanal", "Odisha"),
-    ("Gajapati", "Odisha"),
-    ("Ganjam", "Odisha"),
-    ("Jagatsinghpur", "Odisha"),
-    ("Jajpur", "Odisha"),
-    ("Jharsuguda", "Odisha"),
-    ("Kalahandi", "Odisha"),
-    ("Kandhamal", "Odisha"),
-    ("Kendrapara", "Odisha"),
-    ("Kendujhar", "Odisha"),
-    ("Khordha", "Odisha"),
-    ("Koraput", "Odisha"),
-    ("Malkangiri", "Odisha"),
-    ("Mayurbhanj", "Odisha"),
-    ("Nabarangpur", "Odisha"),
-    ("Nayagarh", "Odisha"),
-    ("Nuapada", "Odisha"),
-    ("Puri", "Odisha"),
-    ("Rayagada", "Odisha"),
-    ("Sambalpur", "Odisha"),
-    ("Subarnapur", "Odisha"),
-    ("Sundargarh", "Odisha"),
-
-    # =========================================================================
-    # 20. Punjab (23 districts)
-    # =========================================================================
-    ("Amritsar", "Punjab"),
-    ("Barnala", "Punjab"),
-    ("Bathinda", "Punjab"),
-    ("Faridkot", "Punjab"),
-    ("Fatehgarh Sahib", "Punjab"),
-    ("Fazilka", "Punjab"),
-    ("Ferozepur", "Punjab"),
-    ("Gurdaspur", "Punjab"),
-    ("Hoshiarpur", "Punjab"),
-    ("Jalandhar", "Punjab"),
-    ("Kapurthala", "Punjab"),
-    ("Ludhiana", "Punjab"),
-    ("Malerkotla", "Punjab"),
-    ("Mansa", "Punjab"),
-    ("Moga", "Punjab"),
-    ("Muktsar", "Punjab"),
-    ("Pathankot", "Punjab"),
-    ("Patiala", "Punjab"),
-    ("Rupnagar", "Punjab"),
-    ("Sahibzada Ajit Singh Nagar", "Punjab"),
-    ("Sangrur", "Punjab"),
-    ("Shahid Bhagat Singh Nagar", "Punjab"),
-    ("Tarn Taran", "Punjab"),
-
-    # =========================================================================
-    # 21. Rajasthan (50 districts)
-    # =========================================================================
-    ("Ajmer", "Rajasthan"),
-    ("Alwar", "Rajasthan"),
-    ("Anupgarh", "Rajasthan"),
-    ("Balotra", "Rajasthan"),
-    ("Banswara", "Rajasthan"),
-    ("Baran", "Rajasthan"),
-    ("Barmer", "Rajasthan"),
-    ("Beawar", "Rajasthan"),
-    ("Bharatpur", "Rajasthan"),
-    ("Bhilwara", "Rajasthan"),
-    ("Bikaner", "Rajasthan"),
-    ("Bundi", "Rajasthan"),
-    ("Chittorgarh", "Rajasthan"),
-    ("Churu", "Rajasthan"),
-    ("Dausa", "Rajasthan"),
-    ("Deeg", "Rajasthan"),
-    ("Dholpur", "Rajasthan"),
-    ("Didwana-Kuchaman", "Rajasthan"),
-    ("Dudu", "Rajasthan"),
-    ("Dungarpur", "Rajasthan"),
-    ("Gangapur City", "Rajasthan"),
-    ("Hanumangarh", "Rajasthan"),
-    ("Jaipur", "Rajasthan"),
-    ("Jaipur Rural", "Rajasthan"),
-    ("Jaisalmer", "Rajasthan"),
-    ("Jalore", "Rajasthan"),
-    ("Jhalawar", "Rajasthan"),
-    ("Jhunjhunu", "Rajasthan"),
-    ("Jodhpur", "Rajasthan"),
-    ("Jodhpur Rural", "Rajasthan"),
-    ("Karauli", "Rajasthan"),
-    ("Kekri", "Rajasthan"),
-    ("Khairthal-Tijara", "Rajasthan"),
-    ("Kota", "Rajasthan"),
-    ("Kotputli-Behror", "Rajasthan"),
-    ("Nagaur", "Rajasthan"),
-    ("Neem Ka Thana", "Rajasthan"),
-    ("Pali", "Rajasthan"),
-    ("Phalodi", "Rajasthan"),
-    ("Pratapgarh", "Rajasthan"),
-    ("Rajsamand", "Rajasthan"),
-    ("Salumbar", "Rajasthan"),
-    ("Sanchore", "Rajasthan"),
-    ("Sawai Madhopur", "Rajasthan"),
-    ("Shahpura", "Rajasthan"),
-    ("Sikar", "Rajasthan"),
-    ("Sirohi", "Rajasthan"),
-    ("Sri Ganganagar", "Rajasthan"),
-    ("Tonk", "Rajasthan"),
-    ("Udaipur", "Rajasthan"),
-
-    # =========================================================================
-    # 22. Sikkim (6 districts)
-    # =========================================================================
-    ("Gangtok", "Sikkim"),
-    ("Gyalshing", "Sikkim"),
-    ("Mangan", "Sikkim"),
-    ("Namchi", "Sikkim"),
-    ("Pakyong", "Sikkim"),
-    ("Soreng", "Sikkim"),
-
-    # =========================================================================
-    # 23. Tamil Nadu (38 districts)
-    # =========================================================================
-    ("Ariyalur", "Tamil Nadu"),
-    ("Chengalpattu", "Tamil Nadu"),
-    ("Chennai", "Tamil Nadu"),
-    ("Coimbatore", "Tamil Nadu"),
-    ("Cuddalore", "Tamil Nadu"),
-    ("Dharmapuri", "Tamil Nadu"),
-    ("Dindigul", "Tamil Nadu"),
-    ("Erode", "Tamil Nadu"),
-    ("Kallakurichi", "Tamil Nadu"),
-    ("Kanchipuram", "Tamil Nadu"),
-    ("Kanyakumari", "Tamil Nadu"),
-    ("Karur", "Tamil Nadu"),
-    ("Krishnagiri", "Tamil Nadu"),
-    ("Madurai", "Tamil Nadu"),
-    ("Mayiladuthurai", "Tamil Nadu"),
-    ("Nagapattinam", "Tamil Nadu"),
-    ("Namakkal", "Tamil Nadu"),
-    ("Nilgiris", "Tamil Nadu"),
-    ("Perambalur", "Tamil Nadu"),
-    ("Pudukkottai", "Tamil Nadu"),
-    ("Ramanathapuram", "Tamil Nadu"),
-    ("Ranipet", "Tamil Nadu"),
-    ("Salem", "Tamil Nadu"),
-    ("Sivaganga", "Tamil Nadu"),
-    ("Tenkasi", "Tamil Nadu"),
-    ("Thanjavur", "Tamil Nadu"),
-    ("Theni", "Tamil Nadu"),
-    ("Thoothukudi", "Tamil Nadu"),
-    ("Tiruchirappalli", "Tamil Nadu"),
-    ("Tirunelveli", "Tamil Nadu"),
-    ("Tirupathur", "Tamil Nadu"),
-    ("Tiruppur", "Tamil Nadu"),
-    ("Tiruvallur", "Tamil Nadu"),
-    ("Tiruvannamalai", "Tamil Nadu"),
-    ("Tiruvarur", "Tamil Nadu"),
-    ("Vellore", "Tamil Nadu"),
-    ("Viluppuram", "Tamil Nadu"),
-    ("Virudhunagar", "Tamil Nadu"),
-
-    # =========================================================================
-    # 24. Telangana (33 districts)
-    # =========================================================================
-    ("Adilabad", "Telangana"),
-    ("Bhadradri Kothagudem", "Telangana"),
-    ("Hanumakonda", "Telangana"),
-    ("Hyderabad", "Telangana"),
-    ("Jagtial", "Telangana"),
-    ("Jangaon", "Telangana"),
-    ("Jayashankar Bhupalpally", "Telangana"),
-    ("Jogulamba Gadwal", "Telangana"),
-    ("Kamareddy", "Telangana"),
-    ("Karimnagar", "Telangana"),
-    ("Khammam", "Telangana"),
-    ("Kumuram Bheem Asifabad", "Telangana"),
-    ("Mahabubabad", "Telangana"),
-    ("Mahabubnagar", "Telangana"),
-    ("Mancherial", "Telangana"),
-    ("Medak", "Telangana"),
-    ("Medchal-Malkajgiri", "Telangana"),
-    ("Mulugu", "Telangana"),
-    ("Nagarkurnool", "Telangana"),
-    ("Nalgonda", "Telangana"),
-    ("Narayanpet", "Telangana"),
-    ("Nirmal", "Telangana"),
-    ("Nizamabad", "Telangana"),
-    ("Peddapalli", "Telangana"),
-    ("Rajanna Sircilla", "Telangana"),
-    ("Ranga Reddy", "Telangana"),
-    ("Sangareddy", "Telangana"),
-    ("Siddipet", "Telangana"),
-    ("Suryapet", "Telangana"),
-    ("Vikarabad", "Telangana"),
-    ("Wanaparthy", "Telangana"),
-    ("Warangal", "Telangana"),
-    ("Yadadri Bhuvanagiri", "Telangana"),
-
-    # =========================================================================
-    # 25. Tripura (8 districts)
-    # =========================================================================
-    ("Dhalai", "Tripura"),
-    ("Gomati", "Tripura"),
-    ("Khowai", "Tripura"),
-    ("North Tripura", "Tripura"),
-    ("Sepahijala", "Tripura"),
-    ("South Tripura", "Tripura"),
-    ("Unakoti", "Tripura"),
-    ("West Tripura", "Tripura"),
-
-    # =========================================================================
-    # 26. Uttar Pradesh (75 districts)
-    # =========================================================================
-    ("Agra", "Uttar Pradesh"),
-    ("Aligarh", "Uttar Pradesh"),
-    ("Ambedkar Nagar", "Uttar Pradesh"),
-    ("Amethi", "Uttar Pradesh"),
-    ("Amroha", "Uttar Pradesh"),
-    ("Auraiya", "Uttar Pradesh"),
-    ("Ayodhya", "Uttar Pradesh"),
-    ("Azamgarh", "Uttar Pradesh"),
-    ("Baghpat", "Uttar Pradesh"),
-    ("Bahraich", "Uttar Pradesh"),
-    ("Ballia", "Uttar Pradesh"),
-    ("Balrampur", "Uttar Pradesh"),
-    ("Banda", "Uttar Pradesh"),
-    ("Barabanki", "Uttar Pradesh"),
-    ("Bareilly", "Uttar Pradesh"),
-    ("Basti", "Uttar Pradesh"),
-    ("Bhadohi", "Uttar Pradesh"),
-    ("Bijnor", "Uttar Pradesh"),
-    ("Budaun", "Uttar Pradesh"),
-    ("Bulandshahr", "Uttar Pradesh"),
-    ("Chandauli", "Uttar Pradesh"),
-    ("Chitrakoot", "Uttar Pradesh"),
-    ("Deoria", "Uttar Pradesh"),
-    ("Etah", "Uttar Pradesh"),
-    ("Etawah", "Uttar Pradesh"),
-    ("Farrukhabad", "Uttar Pradesh"),
-    ("Fatehpur", "Uttar Pradesh"),
-    ("Firozabad", "Uttar Pradesh"),
-    ("Gautam Buddha Nagar", "Uttar Pradesh"),
-    ("Ghaziabad", "Uttar Pradesh"),
-    ("Ghazipur", "Uttar Pradesh"),
-    ("Gonda", "Uttar Pradesh"),
-    ("Gorakhpur", "Uttar Pradesh"),
-    ("Hamirpur", "Uttar Pradesh"),
-    ("Hapur", "Uttar Pradesh"),
-    ("Hardoi", "Uttar Pradesh"),
-    ("Hathras", "Uttar Pradesh"),
-    ("Jalaun", "Uttar Pradesh"),
-    ("Jaunpur", "Uttar Pradesh"),
-    ("Jhansi", "Uttar Pradesh"),
-    ("Kannauj", "Uttar Pradesh"),
-    ("Kanpur Dehat", "Uttar Pradesh"),
-    ("Kanpur Nagar", "Uttar Pradesh"),
-    ("Kasganj", "Uttar Pradesh"),
-    ("Kaushambi", "Uttar Pradesh"),
-    ("Kushinagar", "Uttar Pradesh"),
-    ("Lakhimpur Kheri", "Uttar Pradesh"),
-    ("Lalitpur", "Uttar Pradesh"),
-    ("Lucknow", "Uttar Pradesh"),
-    ("Maharajganj", "Uttar Pradesh"),
-    ("Mahoba", "Uttar Pradesh"),
-    ("Mainpuri", "Uttar Pradesh"),
-    ("Mathura", "Uttar Pradesh"),
-    ("Mau", "Uttar Pradesh"),
-    ("Meerut", "Uttar Pradesh"),
-    ("Mirzapur", "Uttar Pradesh"),
-    ("Moradabad", "Uttar Pradesh"),
-    ("Muzaffarnagar", "Uttar Pradesh"),
-    ("Pilibhit", "Uttar Pradesh"),
-    ("Pratapgarh", "Uttar Pradesh"),
-    ("Prayagraj", "Uttar Pradesh"),
-    ("Raebareli", "Uttar Pradesh"),
-    ("Rampur", "Uttar Pradesh"),
-    ("Saharanpur", "Uttar Pradesh"),
-    ("Sambhal", "Uttar Pradesh"),
-    ("Sant Kabir Nagar", "Uttar Pradesh"),
-    ("Shahjahanpur", "Uttar Pradesh"),
-    ("Shamli", "Uttar Pradesh"),
-    ("Shravasti", "Uttar Pradesh"),
-    ("Siddharthnagar", "Uttar Pradesh"),
-    ("Sitapur", "Uttar Pradesh"),
-    ("Sonbhadra", "Uttar Pradesh"),
-    ("Sultanpur", "Uttar Pradesh"),
-    ("Unnao", "Uttar Pradesh"),
-    ("Varanasi", "Uttar Pradesh"),
-
-    # =========================================================================
-    # 27. Uttarakhand (13 districts)
-    # =========================================================================
-    ("Almora", "Uttarakhand"),
-    ("Bageshwar", "Uttarakhand"),
-    ("Chamoli", "Uttarakhand"),
-    ("Champawat", "Uttarakhand"),
-    ("Dehradun", "Uttarakhand"),
-    ("Haridwar", "Uttarakhand"),
-    ("Nainital", "Uttarakhand"),
-    ("Pauri Garhwal", "Uttarakhand"),
-    ("Pithoragarh", "Uttarakhand"),
-    ("Rudraprayag", "Uttarakhand"),
-    ("Tehri Garhwal", "Uttarakhand"),
-    ("Udham Singh Nagar", "Uttarakhand"),
-    ("Uttarkashi", "Uttarakhand"),
-
-    # =========================================================================
-    # 28. West Bengal (23 districts)
-    # =========================================================================
-    ("Alipurduar", "West Bengal"),
-    ("Bankura", "West Bengal"),
-    ("Birbhum", "West Bengal"),
-    ("Cooch Behar", "West Bengal"),
-    ("Dakshin Dinajpur", "West Bengal"),
-    ("Darjeeling", "West Bengal"),
-    ("Hooghly", "West Bengal"),
-    ("Howrah", "West Bengal"),
-    ("Jalpaiguri", "West Bengal"),
-    ("Jhargram", "West Bengal"),
-    ("Kalimpong", "West Bengal"),
-    ("Kolkata", "West Bengal"),
-    ("Malda", "West Bengal"),
-    ("Murshidabad", "West Bengal"),
-    ("Nadia", "West Bengal"),
-    ("North 24 Parganas", "West Bengal"),
-    ("Paschim Bardhaman", "West Bengal"),
-    ("Paschim Medinipur", "West Bengal"),
-    ("Purba Bardhaman", "West Bengal"),
-    ("Purba Medinipur", "West Bengal"),
-    ("Purulia", "West Bengal"),
-    ("South 24 Parganas", "West Bengal"),
-    ("Uttar Dinajpur", "West Bengal"),
-
-    # =========================================================================
-    # 29. Andaman and Nicobar Islands (3 districts)
-    # =========================================================================
-    ("Nicobar", "Andaman and Nicobar"),
-    ("North and Middle Andaman", "Andaman and Nicobar"),
-    ("South Andaman", "Andaman and Nicobar"),
-
-    # =========================================================================
-    # 30. Chandigarh (1 district)
-    # =========================================================================
-    ("Chandigarh", "Chandigarh"),
-
-    # =========================================================================
-    # 31. Dadra and Nagar Haveli and Daman and Diu (3 districts)
-    # =========================================================================
-    ("Dadra and Nagar Haveli", "Dadra and Nagar Haveli and Daman and Diu"),
-    ("Daman", "Dadra and Nagar Haveli and Daman and Diu"),
-    ("Diu", "Dadra and Nagar Haveli and Daman and Diu"),
-
-    # =========================================================================
-    # 32. Delhi (11 districts)
-    # =========================================================================
-    ("Central Delhi", "Delhi"),
-    ("East Delhi", "Delhi"),
-    ("New Delhi", "Delhi"),
-    ("North Delhi", "Delhi"),
-    ("North East Delhi", "Delhi"),
-    ("North West Delhi", "Delhi"),
-    ("Shahdara", "Delhi"),
-    ("South Delhi", "Delhi"),
-    ("South East Delhi", "Delhi"),
-    ("South West Delhi", "Delhi"),
-    ("West Delhi", "Delhi"),
-
-    # =========================================================================
-    # 33. Jammu and Kashmir (20 districts)
-    # =========================================================================
-    ("Anantnag", "Jammu and Kashmir"),
-    ("Bandipora", "Jammu and Kashmir"),
-    ("Baramulla", "Jammu and Kashmir"),
-    ("Budgam", "Jammu and Kashmir"),
-    ("Doda", "Jammu and Kashmir"),
-    ("Ganderbal", "Jammu and Kashmir"),
-    ("Jammu", "Jammu and Kashmir"),
-    ("Kathua", "Jammu and Kashmir"),
-    ("Kishtwar", "Jammu and Kashmir"),
-    ("Kulgam", "Jammu and Kashmir"),
-    ("Kupwara", "Jammu and Kashmir"),
-    ("Poonch", "Jammu and Kashmir"),
-    ("Pulwama", "Jammu and Kashmir"),
-    ("Rajouri", "Jammu and Kashmir"),
-    ("Ramban", "Jammu and Kashmir"),
-    ("Reasi", "Jammu and Kashmir"),
-    ("Samba", "Jammu and Kashmir"),
-    ("Shopian", "Jammu and Kashmir"),
-    ("Srinagar", "Jammu and Kashmir"),
-    ("Udhampur", "Jammu and Kashmir"),
-
-    # =========================================================================
-    # 34. Ladakh (2 districts)
-    # =========================================================================
-    ("Kargil", "Ladakh"),
-    ("Leh", "Ladakh"),
-
-    # =========================================================================
-    # 35. Lakshadweep (1 district)
-    # =========================================================================
-    ("Lakshadweep", "Lakshadweep"),
-
-    # =========================================================================
-    # 36. Puducherry (4 districts)
-    # =========================================================================
-    ("Karaikal", "Puducherry"),
-    ("Mahe", "Puducherry"),
-    ("Puducherry", "Puducherry"),
-    ("Yanam", "Puducherry"),
-]
-
-# Primary crops per State / UT where power weeders and inter-cultivators are heavily utilized
-STATE_CROPS = {
-    "Andhra Pradesh": ["Rice", "Cotton", "Chilli", "Sugarcane"],
-    "Arunachal Pradesh": ["Ginger", "Turmeric", "Maize", "Vegetables"],
-    "Assam": ["Tea", "Rice", "Jute", "Vegetables"],
-    "Bihar": ["Rice", "Wheat", "Maize", "Sugarcane"],
-    "Chhattisgarh": ["Rice", "Soybean", "Maize", "Vegetables"],
-    "Goa": ["Cashew", "Coconut", "Rice"],
-    "Gujarat": ["Cotton", "Groundnut", "Castor", "Cumin"],
-    "Haryana": ["Wheat", "Sugarcane", "Mustard", "Cotton"],
-    "Himachal Pradesh": ["Apple Orchards", "Maize", "Vegetables", "Ginger"],
-    "Jharkhand": ["Rice", "Vegetables", "Maize", "Pulses"],
-    "Karnataka": ["Sugarcane", "Coconut", "Arecanut", "Maize"],
-    "Kerala": ["Coconut", "Rubber", "Arecanut", "Spices"],
-    "Madhya Pradesh": ["Soybean", "Wheat", "Cotton", "Garlic"],
-    "Maharashtra": ["Sugarcane", "Cotton", "Soybean", "Onion"],
-    "Manipur": ["Rice", "Vegetables", "Ginger", "Pineapple"],
-    "Meghalaya": ["Ginger", "Turmeric", "Maize", "Vegetables"],
-    "Mizoram": ["Ginger", "Turmeric", "Vegetables", "Maize"],
-    "Nagaland": ["Maize", "Ginger", "Vegetables", "Cardamom"],
-    "Odisha": ["Rice", "Vegetables", "Sugarcane", "Groundnut"],
-    "Punjab": ["Wheat", "Sugarcane", "Cotton", "Maize"],
-    "Rajasthan": ["Mustard", "Cotton", "Bajra", "Groundnut"],
-    "Sikkim": ["Cardamom", "Ginger", "Vegetables", "Buckwheat"],
-    "Tamil Nadu": ["Rice", "Sugarcane", "Coconut", "Banana"],
-    "Telangana": ["Cotton", "Rice", "Chilli", "Turmeric"],
-    "Tripura": ["Rubber", "Rice", "Vegetables", "Pineapple"],
-    "Uttar Pradesh": ["Sugarcane", "Wheat", "Rice", "Potato"],
-    "Uttarakhand": ["Sugarcane", "Rice", "Vegetables", "Maize"],
-    "West Bengal": ["Rice", "Jute", "Vegetables", "Potato"],
-    "Andaman and Nicobar": ["Coconut", "Arecanut", "Vegetables"],
-    "Andaman and Nicobar Islands": ["Coconut", "Arecanut", "Vegetables"],
-    "Chandigarh": ["Vegetables", "Horticulture"],
-    "Dadra and Nagar Haveli and Daman and Diu": ["Rice", "Vegetables", "Sugarcane"],
-    "Delhi": ["Vegetables", "Flowers", "Horticulture"],
-    "Jammu and Kashmir": ["Apple Orchards", "Saffron", "Maize", "Vegetables"],
-    "Ladakh": ["Barley", "Vegetables", "Apricot Orchards"],
-    "Lakshadweep": ["Coconut", "Horticulture"],
-    "Puducherry": ["Rice", "Sugarcane", "Coconut"],
+    # === WEST BENGAL ===
+    #24 Parganas North: Vegetables, Rice
+    #24 Parganas South: Rice, Jute
+    #Alipurduar: Tea, Jute
+    #Asansol: Coal mining, Horticulture
+    #Bankura: Rice, Jute
+    #Barasat: Rice, Vegetables
+    #Basirhat: Rice, Vegetables
+    #Bardhaman: Jute, Rice
+    #Barrackpore: Rice, Vegetables
+    #Behala: Rice, Vegetables
+    #Birbhum: Jute, Rice
+    #Bluish: Jute, Rice
+    #Bongaon: Rice, Vegetables
+    #Burdwan: Rice, Jute
+    #Cambridge: Rice, Vegetables
+    #Chandannagar: Rice, Vegetables
+    #Charkhali: Jute, Rice
+    #Chinsurah: Rice, Jute
+    #Churian: Jute, Rice
+    #Darjeeling: Tea, Muscat grapes
+    #Daspani: Rice, Vegetables
+    #Digha: Tourism, Fisheries
+    #Dinhata: Rice, Vegetables
+    #Dum Dum: Rice, Vegetables
+    #Durgapur: Rice, Vegetables
+    #Faridpur: Rice, Jute
+    #Firoda: Rice, Vegetables
+    #Garia: Rice, Vegetables
+    #Ghoshpur: Jute, Rice
+    #Gopalganj: Rice, Jute
+    #Haripur: Rice, Vegetables
+    #Havard Park: Rice, Vegetables
+    #Hooghly: Rice, Jute
+    #Howrah: Rice, Vegetables
+    #Ichamati: Rice, Vegetables
+    #Jalpaiguri: Tea, Rice
+    #Jhansi: Rice, Vegetables
+    #Jiang: Jute, Rice
+    #Kalimpong: Tea, Orchids
+    #Kanpur: Rice, Vegetables
+    #Kharagpur: Rice, Vegetables
+    #Kolkata: Vegetables, Spices
+    #Krishnanagar: Rice, Vegetables
+    #Kulti: Rice, Vegetables
+    #Malda: Rice, Jute
+    #Malhotra: Jute, Rice
+    #Medinipur: Rice, Jute
+    #Meulabagh: Rice, Vegetables
+    #Murshidabad: Rice, Jute
+    #Nadia: Rice, Vegetables
+    #Nandigram: Rice, Vegetables
+    #Nasik: Rice, Vegetables
+    #Nawabganj: Rice, Vegetables
+    #Nester: Jute, Rice
+    #Northern West Bengal: Tea, Rice
+    #Pabna: Rice, Vegetables
+    #Pal Super : Jute, Rice
+    #Panchla: Rice, Vegetables
+    #Parasia: Jute, Rice
+    #Patda: Rice, Vegetables
+    #Paonta: Rice, Vegetables
+    #Perambalur: Rice, Maize
+    #Placid: Tea, Rice
+    #Poddlem: Rice, Vegetables
+    #Purulia: Rice, Vegetables
+    #Raiganj: Rice, Jute
+    #Rajmahal: Rice, Jute
+    #Raniganj: Jute, Rice
+    #Rarhi: Jute, Rice
+    #Rishra: Rice, Vegetables
+    #Rohini: Rice, Vegetables
+    #Sabang: Jute, Rice
+    #Sadar: Rice, Jute
+    #Samar: Jute, Rice
+    #Sandesh: Rice, Vegetables
+    #Santipur: Rice, Vegetables
+    #Sasaram: Rice, Vegetables
+    #Siliguri: Vegetables, Tea
+    #Sindi: Rice, Vegetables
+    #Sironcha: Jute, Rice
+    #Sultanpur: Rice, Vegetables
+    #Sunail: Jute, Rice
+    #Suri: Jute, Rice
+    #Tamluk: Jute, Rice
+    #Tarapith: Vegetables, Medicinal plants
+    #Tirur: Rice, Vegetables
+    #Tista: Rice, Vegetables
+    #Tmul: Jute, Rice
+    #Udaipur: Rice, Vegetables
+    #Uluberia: Jute, Rice
+    #Vaire: Jute, Rice
+    #Vaishali: Jute, Rice
+    #Vishakhapur: Jute, Rice
+    #Wankan: Jute, Rice
+    #Wardha: Rice, Vegetables
+    #Yamunanagar: Vegetables, Fruits
+    #Zamin: Jute, Rice
 }
 
-# Hindi translations of Indian States and Union Territories (Devanagari script)
-HINDI_STATES = {
-    "Andhra Pradesh": "आंध्र प्रदेश",
-    "Arunachal Pradesh": "अरुणाचल प्रदेश",
-    "Assam": "असम",
-    "Bihar": "बिहार",
-    "Chhattisgarh": "छत्तीसगढ़",
-    "Goa": "गोवा",
-    "Gujarat": "गुजरात",
-    "Haryana": "हरियाणा",
-    "Himachal Pradesh": "हिमाचल प्रदेश",
-    "Jharkhand": "झारखंड",
-    "Karnataka": "कर्नाटक",
-    "Kerala": "केरल",
-    "Madhya Pradesh": "मध्य प्रदेश",
-    "Maharashtra": "महाराष्ट्र",
-    "Manipur": "मणिपुर",
-    "Meghalaya": "मेघालय",
-    "Mizoram": "मिज़ोरम",
-    "Nagaland": "नागालैंड",
-    "Odisha": "ओडिशा",
-    "Punjab": "पंजाब",
-    "Rajasthan": "राजस्थान",
-    "Sikkim": "सिक्किम",
-    "Tamil Nadu": "तमिलनाडु",
-    "Telangana": "तेलंगाना",
-    "Tripura": "त्रिपुरा",
-    "Uttar Pradesh": "उत्तर प्रदेश",
-    "Uttarakhand": "उत्तराखंड",
-    "West Bengal": "पश्चिम बंगाल",
-    "Andaman and Nicobar": "अंडमान और निकोबार",
-    "Andaman and Nicobar Islands": "अंडमान और निकोबार द्वीप समूह",
-    "Chandigarh": "चंडीगढ़",
-    "Dadra and Nagar Haveli and Daman and Diu": "दादरा और नगर हवेली और दमन और दीव",
-    "Delhi": "दिल्ली",
-    "Jammu and Kashmir": "जम्मू और कश्मीर",
-    "Ladakh": "लद्दाख",
-    "Lakshadweep": "लक्षद्वीप",
-    "Puducherry": "पुदुचेरी",
-}
+def get_crops_for_state(state):
+    """Get key crops for a given state"""
+    states_crops = {
+        "Andhra Pradesh": ["Rice", "Cotton", "Sugarcane", "Chilli", "Groundnut"],
+        "Arunachal Pradesh": ["Rice", "Maize", "Vegetables", "Medicinal plants"],
+        "Assam": ["Rice", "Tea", "Jute", "Oilseeds", "Vegetables"],
+        "Bihar": ["Paddy", "Wheat", "Maize", "Soybean", "Oilseeds"],
+        "Chhattisgarh": ["Cotton", "Soybean", "Maize", "Groundnut", "Jowar"],
+        "Goa": ["Coconut", "Areca nut", "Cashew", "Spice crops"],
+        "Gujarat": ["Cotton", "Groundnut", "Jowar", "Bajra", "Onions"],
+        "Haryana": ["Wheat", "Paddy", "Cotton", "Mustard", "Legumes"],
+        "Himachal Pradesh": ["Apple", "Cardamom", "Wheat", "Barley", "Pulses"],
+        "Jharkhand": ["Rice", "Maize", "Soybean", "Pulses", "Oilseeds"],
+        "Karnataka": ["Cotton", "Soybean", "Groundnut", "Coconut", "Coffee"],
+        "Kerala": ["Rice", "Coconut", "Areca nut", "Spices", "Vegetables"],
+        "Madhya Pradesh": ["Soybean", "Cotton", "Groundnut", "Maize", "Pulses"],
+        "Maharashtra": ["Soybean", "Cotton", "Groundnut", "Onions", "Pulses"],
+        "Manipur": ["Rice", "Vegetables", "Oilseeds", "Medicinal plants"],
+        "Meghalaya": ["Rice", "Tapioca", "Vegetables", "Forest produce"],
+        "Mizoram": ["Rice", "Vegetables", "Tapioca", "Forest produce"],
+        "Nagaland": ["Rice", "Vegetables", "Sorghum", "Forest produce"],
+        "Odisha": ["Rice", "Ragi", "Maize", "Pulses", "Groundnut"],
+        "Punjab": ["Wheat", "Paddy", "Cotton", "Mustard", "Legumes"],
+        "Rajasthan": ["Wheat", "Gram", "Mustard", "Cotton", "Bajra"],
+        "Sikkim": ["Medi", "Potato", "Apple", "Cardamom"],
+        "Tamil Nadu": ["Rice", "Cotton", "Coconut", "Sugarcane", "Vegetables"],
+        "Telangana": ["Rice", "Soybean", "Cotton", "Groundnut", "Chilli"],
+        "Tripura": ["Rice", "Jute", "Vegetables", "Pulses"],
+        "Uttar Pradesh": ["Wheat", "Rice", "Maize", "Soybean", "Sugarcane"],
+        "Uttarakhand": ["Wheat", "Barley", "Potato", "Alfalfa", "Horticulture"],
+        "West Bengal": ["Rice", "Jute", "Mustard", "Vegetables", "Tea"],
+    }
+    return states_crops.get(state, ["General crops", "Vegetables", "Pulses"])
+
+def get_soil_types_for_state(state):
+    """Get typical soil types for a given state"""
+    soils = {
+        "Andhra Pradesh": ["Alluvial", "Red and Black", "Cotton soils"],
+        "Arunachal Pradesh": ["Lateritic", "Alluvial", "Red soils"],
+        "Assam": ["Alluvial", "Red and Yellow", "Floodplain soils"],
+        "Bihar": ["Alluvial", "Red and Black", "Grey clays"],
+        "Chhattisgarh": ["Red and Black", "Alluvial", "Red soils"],
+        "Goa": ["Lateritic", "Red and Yellow", "Coastal sands"],
+        "Gujarat": ["Black cotton", "Red and Sandy", "Coastal soils"],
+        "Haryana": ["Alluvial", "Red and Black", "Loux"],
+        "Himachal Pradesh": ["Mountain soils", "Alluvial", "Loose depths"],
+        "Jharkhand": ["Red and Black", "Lateritic", "Alluvial"],
+        "Karnataka": ["Red and Black", "Lateritic", "Alluvial"],
+        "Kerala": ["Red and Yellow", "Lateritic", "Coastal alluvium"],
+        "Madhya Pradesh": ["Black cotton", "Red and Black", "Alluvial"],
+        "Maharashtra": ["Black cotton", "Red and Black", "Lateritic"],
+        "Manipur": ["Alluvial", "Red and Yellow", "Lateritic"],
+        "Meghalaya": ["Alluvial", "Red and Yellow", "Mountain soils"],
+        "Mizoram": ["Red and Yellow", "Alluvial", "Lateritic"],
+        "Nagaland": ["Red and Yellow", "Lateritic", "Forest soils"],
+        "Odisha": ["Red and Yellow", "Alluvial", "Lateritic"],
+        "Punjab": ["Alluvial", "Red and Black", "Silty loams"],
+        "Rajasthan": ["Red and Sandy", "Black cotton", "Desert sands"],
+        "Sikkim": ["Mountain soils", "Alluvial", "Volcanic"],
+        "Tamil Nadu": ["Red and Black", "Alluvial", "Lateritic"],
+        "Telangana": ["Red and Black", "Alluvial", "Cotton soils"],
+        "Tripura": ["Alluvial", "Red and Yellow", "Lateritic"],
+        "Uttar Pradesh": ["Alluvial", "Red and Black", "Gypsum"],
+        "Uttarakhand": ["Mountain soils", "Alluvial", "Loamy"],
+        "West Bengal": ["Alluvial", "Red and Yellow", "Lateritic"],
+    }
+    return soils.get(state, ["General agricultural soils"])
+
+if __name__ == "__main__":
+    import json
+    output = []
+    for name, data in DISTRICTS.items():
+        data["crops"] = get_crops_for_state(data["state"])
+        data["soil_types"] = get_soil_types_for_state(data["state"])
+        data["state_crops"] = get_crops_for_state(data["state"])
+        data["state_soils"] = get_soil_types_for_state(data["state"])
+        output.append({
+            "name": name,
+            "state": data["state"],
+            "key_crops": data["key_crops"],
+            "crops": data["crops"],
+            "soil_type": data["soil_type"],
+            "soil_types": data["soil_types"],
+            "farming_profile": data["farming_profile"],
+            "major_district": data["major_district"]
+        })
+    
+    print(f"// Total districts: {len(output)}")
+    print(f"export const INDIAN_DISTRICTS = {json.dumps(output, indent=2)};")

@@ -173,6 +173,74 @@ async def seed_products():
         logger.info("Seeded %d products", len(docs))
 
 
+async def seed_geo_seo_pages():
+    """Idempotently insert geo-SEO pages for every district + tehsil in India.
+    Powers the /seo/:slug dynamic route with unique content per location.
+    Sources: india_districts.py (408 verified districts, 16 states) + tehsil list.
+    Skips if collection is non-empty (re-seeding can be done manually)."""
+    try:
+        from india_districts import DISTRICTS, get_crops_for_state
+    except ImportError:
+        logger.warning("india_districts.py not found, skipping geo SEO seed")
+        return
+
+    existing = await db.seo_geo_pages.count_documents({})
+    if existing > 0:
+        logger.info("seo_geo_pages already has %d entries, skipping seed", existing)
+        return
+
+    now = datetime.now(timezone.utc).isoformat()
+    CATEGORIES = ["power-weeders", "power-weeder-spare-parts"]
+
+    # Hindi-translated templates for crop/demand localization
+    def build_page(name: str, state: str, district_name: str = "", category: str = "power-weeders", is_tehsil: bool = False):
+        crops = get_crops_for_state(state)
+        location_kind = "tehsil" if is_tehsil else "district"
+        slug_base = (district_name or name).lower().replace(" ", "-")
+        slug = f"{slug_base}-{category}-supply"
+        cat_label = "Power Weeders" if category == "power-weeders" else "Power Weeder Spare Parts"
+        return {
+            "id": str(uuid.uuid4()),
+            "slug": slug,
+            "name": name,
+            "district": district_name or name,
+            "state": state,
+            "category": category,
+            "category_label": cat_label,
+            "type": location_kind,
+            "crops": crops,
+            "title": f"{cat_label} in {name}, {state} — Dealer & Distributor Supply",
+            "hindiTitle": f"{name}, {state} में {cat_label} — डीलर और वितरक आपूर्ति",
+            "description": (
+                f"KrishiGears B2B {cat_label.lower()} supply in {name}, {state}. "
+                f"Serving dealer networks, distributors, FPOs, contractors and institutional buyers. "
+                f"Local stocking, GST invoicing, warranty coordination and service support across the {name} {location_kind}."
+            ),
+            "hindiDescription": (
+                f"{name}, {state} में KrishiGears B2B {cat_label.lower()} आपूर्ति। "
+                f"डीलर नेटवर्क, वितरकों, FPO, ठेकेदारों और संस्थागत खरीदारों की सेवा। "
+                f"{name} {location_kind} में स्थानीय स्टॉकिंग, GST बिल, वारंटी समन्वय और सेवा सहायता।"
+            ),
+            "crops_text": ", ".join(crops) if crops else "mixed agriculture",
+            "published": True,
+            "created_at": now,
+            "updated_at": now,
+        }
+
+    pages = []
+    for district_name, info in DISTRICTS.items():
+        state = info["state"]
+        for cat in CATEGORIES:
+            pages.append(build_page(district_name, state, district_name, cat, is_tehsil=False))
+
+    if pages:
+        await db.seo_geo_pages.insert_many(pages)
+        await db.seo_geo_pages.create_index("slug", unique=True)
+        await db.seo_geo_pages.create_index([("state", 1), ("category", 1)])
+        await db.seo_geo_pages.create_index([("district", 1), ("category", 1)])
+        logger.info("Seeded %d geo-SEO pages", len(pages))
+
+
 async def seed_blog_posts():
     """Idempotently insert built-in blog posts if their slugs are missing.
     Frontend /blog cards reference these slugs; without seeding, those URLs
@@ -217,6 +285,7 @@ async def lifespan(app: FastAPI):
         await seed_admin()
         await seed_products()
         await seed_blog_posts()
+        await seed_geo_seo_pages()
     except Exception as exc:  # noqa: BLE001
         logger.exception("MongoDB startup failed. Check MONGODB_URI/MONGO_URL and database access.")
         db_startup_error = "MongoDB startup failed. Verify the MongoDB URI, network access, and database name."
