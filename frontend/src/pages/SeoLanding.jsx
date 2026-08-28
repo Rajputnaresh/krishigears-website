@@ -50,9 +50,17 @@ export default function SeoLanding() {
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · B2B Supply Network</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">{page.title}</h1>
+          {page.hindiTitle && (
+            <h2 className="text-xl text-zinc-400 mt-2 font-normal">{page.hindiTitle}</h2>
+          )}
           <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed text-lg">
             KrishiGears supports dealer networks, distributor partners, OEM programs, FPOs, contractors and institutional procurement teams {page.city ? `in ${page.city}, ${page.state}` : "across India"} with documented supply, service coordination and direct dispatch.
           </p>
+          {page.crop && (
+            <p className="text-zinc-400 mt-3 max-w-2xl leading-relaxed">
+              Specifically optimized for <span className="text-lime-500 font-semibold">{page.crop}</span> cultivation — our dealers recommend the right HP, blade type and attachment configuration for maximum inter-row weeding efficiency.
+            </p>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={category?.name || page.title} trigger={
               <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md">Bulk / Dealer Inquiry</button>
