@@ -1,12 +1,12 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Check, ArrowRight, MapPin } from "lucide-react";
-import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
+import { CATEGORIES, SEO_PAGES_MAP, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function SeoLanding() {
   const { slug } = useParams();
-  const page = SEO_PAGES.find((p) => p.slug === slug);
+  const page = SEO_PAGES_MAP.get(slug);
   if (!page) return <Navigate to="/" replace />;
   const category = page.category ? CATEGORIES.find((c) => c.slug === page.category) : null;
   const supplyFocus = category?.name || "Agricultural Machinery";
@@ -77,6 +77,9 @@ export default function SeoLanding() {
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Partner Programs</div>
           <h2 className="kg-h2 mt-3 max-w-3xl">{supplyFocus} supply built for <span className="text-lime-500">B2B channels.</span></h2>
+          {page.hindiTitle && (
+            <h3 className="text-lg text-zinc-400 mt-2 font-normal">KrishiGears B2B चैनलों के लिए {supplyFocus} सप्लाई — डीलर, FPO और संस्थागत खरीद</h3>
+          )}
           <div className="mt-10 grid md:grid-cols-2 gap-4">
             {partnerTracks.map((b) => (
               <div key={b} className="flex items-start gap-3 text-zinc-300">
@@ -93,6 +96,9 @@ export default function SeoLanding() {
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">Supply Coverage</div>
           <h2 className="kg-h2 mt-3">Dealer and institutional support <span className="text-lime-500">across India.</span></h2>
+          {page.city && (
+            <h3 className="text-lg text-zinc-400 mt-2 font-normal">पूरे भारत में डीलर और संस्थागत सहायता</h3>
+          )}
           <div className="mt-8 flex flex-wrap gap-2">
             {["Maharashtra","Karnataka","Tamil Nadu","Andhra Pradesh","Telangana","Kerala","Gujarat","Madhya Pradesh","Uttar Pradesh","Punjab","Haryana","Rajasthan","West Bengal","Bihar","Odisha","Assam","Chhattisgarh"].map((s) => (
               <span key={s} className="text-sm px-4 py-2 border border-zinc-800 text-zinc-300 hover:border-lime-500 hover:text-lime-500 transition cursor-default inline-flex items-center gap-1.5">

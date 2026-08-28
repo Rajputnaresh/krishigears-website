@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import SEO from "@/components/SEO";
-import { CATEGORIES, PRODUCTS, SEO_PAGES, farmingtoolsProductUrl } from "@/data/catalog";
+import { CATEGORIES, PRODUCTS, SEO_PAGES_MAP, farmingtoolsProductUrl } from "@/data/catalog";
 
 const STATIC_META = {
   "/": {
@@ -176,7 +176,7 @@ export default function RouteSEO() {
 
   if (path.startsWith("/seo/")) {
     const slug = path.replace("/seo/", "");
-    const page = SEO_PAGES.find((item) => item.slug === slug);
+    const page = SEO_PAGES_MAP.get(slug);
     if (page) {
       const geoSuffix = page.city ? ` in ${page.city}, ${page.state}` : "";
       const cropSuffix = page.crop ? ` Optimized for ${page.crop} cultivation.` : "";
