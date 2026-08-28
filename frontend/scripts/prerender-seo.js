@@ -193,7 +193,11 @@ function renderHtml(baseHtml, meta) {
 
 function writeRoute(baseHtml, meta) {
   const outputPath = routeFile(meta.path);
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  try {
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err;
+  }
   fs.writeFileSync(outputPath, renderHtml(baseHtml, meta));
 }
 
