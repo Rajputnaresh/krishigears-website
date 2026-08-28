@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
@@ -83,26 +84,23 @@ function normalizePost(slug, post) {
 export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
-  const [notFound, setNotFound] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    apiClient.get(`/blog/${slug}`)
-      .then((res) => {
-        if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
-          setPost(normalizePost(slug, res.data));
-        } else if (SAMPLE[slug]) {
-          setPost(SAMPLE[slug]);
-        } else {
-          setNotFound(true);
-        }
-      })
-      .catch(() => {
+    async function load() {
+      if (!slug) return;
+      try {
+        const res = await apiClient.get(`/blog/${slug}`);
+        setPost(res.data);
+      } catch (err) {
         if (SAMPLE[slug]) setPost(SAMPLE[slug]);
-        else setNotFound(true);
-      });
+      }
+      setLoading(false);
+    }
+    load();
   }, [slug]);
 
-  if (notFound) {
+  if (!loading && !post) {
     return (
       <div className="kg-section text-center">
         <h1 className="kg-h2">Article not found</h1>
@@ -110,7 +108,7 @@ export default function BlogPost() {
       </div>
     );
   }
-  if (!post) return <div className="kg-section text-center text-zinc-500 dark:text-zinc-500">Loading…</div>;
+  if (loading) return <div className="kg-section text-center text-zinc-500 dark:text-zinc-500">Loading…</div>;
 
   return (
     <article data-testid="blog-post-page" className="kg-section">
@@ -130,14 +128,8 @@ export default function BlogPost() {
         <div className="mt-10 aspect-[16/9] overflow-hidden border border-zinc-200 dark:border-zinc-800">
           <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
         </div>
-        <div className="mt-10 prose prose-invert max-w-none">
-          {post.content.split("\n").map((line, i) => {
-            const key = `${i}-${line.slice(0, 20)}`;
-            if (line.startsWith("## ")) return <h2 key={key} className="font-display font-bold text-2xl mt-10 mb-3">{line.slice(3)}</h2>;
-            if (line.match(/^\d+\./)) return <p key={key} className="text-zinc-700 dark:text-zinc-300 leading-relaxed">{line}</p>;
-            if (!line.trim()) return null;
-            return <p key={key} className="text-zinc-700 dark:text-zinc-300 leading-relaxed mt-4">{line}</p>;
-          })}
+        <div className="mt-10 prose prose-invert max-w-none prose-lime prose-img:rounded-lg">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>
     </article>
