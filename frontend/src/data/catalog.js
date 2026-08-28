@@ -43,7 +43,7 @@ export const PLOWING = FIELD_TRACTOR;
 export const COMPANY = {
   name: "KrishiGears",
   tagline: "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
-  website: "KrishiGears.in",
+  website: "KrishiGears.com",
   email: "sales@krishigears.com",
   support: "service@krishigears.com",
   accounts: "accounts@krishigears.com",
@@ -55,7 +55,7 @@ export const COMPANY = {
 };
 
 // FarmingTools.in — sister B2C ecommerce site for consumer transactions.
-// KrishiGears.in is the B2B / dealer / OEM / institutional brand site.
+// KrishiGears.com is the B2B / dealer / OEM / institutional brand site.
 // All retail "buy" intent on KrishiGears redirects here.
 export const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
 

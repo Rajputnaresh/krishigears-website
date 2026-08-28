@@ -1,6 +1,6 @@
 # KrishiGears Website
 
-KrishiGears.in is the B2B brand, dealer network, bulk order, OEM/distributor and institutional lead-generation website for KrishiGears. Retail buying intent is routed to FarmingTools.in.
+KrishiGears.com is the B2B brand, dealer network, bulk order, OEM/distributor and institutional lead-generation website for KrishiGears. Retail buying intent is routed to FarmingTools.in.
 
 ## Framework
 
@@ -40,7 +40,7 @@ Backend:
 Frontend:
 
 - `REACT_APP_BACKEND_URL` leave empty on Vercel for same-origin `/api`
-- `REACT_APP_SITE_URL=https://krishigears.in`
+- `REACT_APP_SITE_URL=https://krishigears.com`
 - `REACT_APP_FARMINGTOOLS_URL=https://farmingtools.in`
 
 Optional:
@@ -89,19 +89,20 @@ Email delivery is not required for form capture. Google Sheets webhooks are opti
 
 Add both domains in Vercel:
 
-- `krishigears.in`
-- `www.krishigears.in`
+- `krishigears.com` (Set as Primary)
+- `krishigears.in` (Set to Redirect to krishigears.com)
+- `www.krishigears.com` (Set to Redirect to krishigears.com)
 
 Typical DNS records:
 
-- Apex `krishigears.in`: `A` record to `76.76.21.21`
-- `www.krishigears.in`: `CNAME` record to `cname.vercel-dns.com`
+- Apex `krishigears.com`: `A` record to `76.76.21.21`
+- `www.krishigears.com`: `CNAME` record to `cname.vercel-dns.com`
 
-After DNS verification, set `krishigears.in` as the primary production domain and redirect `www` to the apex domain in Vercel.
+After DNS verification, set `krishigears.com` as the primary production domain and redirect `krishigears.in` and `www` to the apex domain in Vercel.
 
 ## SEO Role
 
-- KrishiGears.in: B2B brand, dealer, bulk order, OEM/distributor and institutional lead-generation site.
+- KrishiGears.com: B2B brand, dealer, bulk order, OEM/distributor and institutional lead-generation site.
 - FarmingTools.in: primary ecommerce/retail purchase site.
 - Product/category pages remain on KrishiGears for B2B validation and lead capture.
 - Retail purchase CTAs point to FarmingTools.in.
