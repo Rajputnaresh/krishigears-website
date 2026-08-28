@@ -51,7 +51,7 @@ def required_env(*names: str) -> str:
 
 
 # MongoDB connection is created once per warm serverless instance and reused.
-mongo_url = first_env("MONGODB_URI", "MONGO_URL", "DATABASE_URL")
+mongo_url = first_env("MONGODB_URI", "MONGO_URL", "DATABASE_URL", default="")
 db_name = first_env("DB_NAME", "MONGODB_DB", default="krishigears")
 client = None
 db = None
