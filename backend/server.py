@@ -1162,3 +1162,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@api_router.get("/admin/force-purge-non-weeders")
+async def force_purge():
+    res = await db.products.delete_many({"category": {"$nin": ["power-weeders", "power-weeder-spare-parts"]}})
+    return {"success": True, "deleted_count": res.deleted_count}
