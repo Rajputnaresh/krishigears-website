@@ -66,7 +66,7 @@ export default function Header() {
             <NavLink
               key={item.to}
               to={item.to}
-              data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
+              data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-")}`}
               className={({ isActive }) =>
                 `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
               }
@@ -105,7 +105,7 @@ export default function Header() {
             <NavLink
               key={item.to}
               to={item.to}
-              data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
+              data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
               className={({ isActive }) =>
                 `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
               }
@@ -130,9 +130,7 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <a
-
-            target="_blank"
+          <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank"
             rel="noreferrer"
             onClick={() => trackWhatsAppClick("header_desktop")}
             data-testid="header-whatsapp-link"
@@ -189,7 +187,7 @@ export default function Header() {
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  data-testid={`m-nav-${item.label.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
+                  data-testid={`m-nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     `px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 ${isActive ? "text-lime-500" : "text-zinc-800 dark:text-zinc-200"}`
