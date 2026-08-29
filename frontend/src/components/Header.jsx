@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
+import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -10,17 +11,37 @@ import {
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/dealer-network", label: "Dealer Network" },
-  { to: "/blog", label: "Blog" },
-  { to: "/warranty-and-support", label: "Warranty & Support" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", labelKey: "nav.home" },
+  { to: "/about", labelKey: "nav.aboutUs" },
+  { to: "/dealer-network", labelKey: "nav.dealerNetwork" },
+  { to: "/blog", labelKey: "nav.blog" },
+  { to: "/warranty-and-support", labelKey: "nav.warranty" },
+  { to: "/contact", labelKey: "nav.contactUs" },
 ];
 
 export default function Header() {
-  
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [open, setOpen] = useState(false);
+
+  const switchLanguage = (langCode) => {
+    const currentPath = location.pathname;
+    const parts = currentPath.split('/').filter(Boolean);
+    
+    if (parts.length > 0 && ['hi', 'mr'].includes(parts[0])) {
+      if (langCode === 'en') {
+         navigate('/' + parts.slice(1).join('/') + location.search);
+      } else {
+         navigate('/' + langCode + '/' + parts.slice(1).join('/') + location.search);
+      }
+    } else {
+      if (langCode !== 'en') {
+         navigate('/' + langCode + currentPath + location.search);
+      }
+    }
+  };
+
 
   return (
     <header
@@ -50,7 +71,7 @@ export default function Header() {
                 `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
               }
             >
-              {item.label}
+              {t(item.labelKey)}
             </NavLink>
           ))}
 
@@ -59,7 +80,7 @@ export default function Header() {
               data-testid="nav-products-trigger"
               className="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white flex items-center gap-1 outline-none"
             >
-              Products <ChevronDown className="h-4 w-4" />
+              {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 w-80 max-h-[70vh] overflow-y-auto">
               <DropdownMenuItem asChild>
@@ -89,15 +110,28 @@ export default function Header() {
                 `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
               }
             >
-              {item.label}
+              {t(item.labelKey)}
             </NavLink>
           ))}
         </nav>
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
+
+          {/* Language Switcher */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 flex items-center gap-1 outline-none">
+              <Globe className="h-4 w-4" /> {i18n.language.toUpperCase()}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800">
+              <DropdownMenuItem onClick={() => switchLanguage('en')}>English (EN)</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('hi')}>हिंदी (HI)</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('mr')}>मराठी (MR)</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <a
-            href={`https://wa.me/${COMPANY.whatsapp}`}
+
             target="_blank"
             rel="noreferrer"
             onClick={() => trackWhatsAppClick("header_desktop")}
@@ -142,7 +176,16 @@ export default function Header() {
               </div>
             </div>
             <nav className="p-6 flex flex-col gap-1">
+
+              {/* Mobile Language Switcher */}
+              <div className="flex justify-around py-4 border-b border-zinc-100 dark:border-zinc-900">
+                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>EN</button>
+                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>HI</button>
+                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>MR</button>
+              </div>
+              
               {NAV.map((item) => (
+
                 <NavLink
                   key={item.to}
                   to={item.to}
@@ -152,10 +195,10 @@ export default function Header() {
                     `px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 ${isActive ? "text-lime-500" : "text-zinc-800 dark:text-zinc-200"}`
                   }
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </NavLink>
               ))}
-              <NavLink to="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 text-zinc-800 dark:text-zinc-200">Products</NavLink>
+              <NavLink to="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 text-zinc-800 dark:text-zinc-200">{t('nav.products', 'Products')}</NavLink>
               <Link
                 to="/become-a-dealer"
                 onClick={() => setOpen(false)}
