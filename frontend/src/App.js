@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route, useParams, Navigate, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams, Navigate, Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Toaster } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -45,6 +47,24 @@ const PageLoader = () => (
 // ==========================================
 // LAYOUT & ROUTING CONFIGURATION
 // ==========================================
+
+// Sync React Router language prefix with i18next
+const LanguageSync = () => {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+  
+  useEffect(() => {
+    const pathParts = location.pathname.split('/');
+    const firstPart = pathParts[1];
+    if (['hi', 'mr'].includes(firstPart)) {
+      if (i18n.language !== firstPart) i18n.changeLanguage(firstPart);
+    } else {
+      if (i18n.language !== 'en') i18n.changeLanguage('en');
+    }
+  }, [location.pathname, i18n]);
+  
+  return null;
+};
 
 // Centralized Layout Wrapper
 const PublicLayout = () => (
@@ -98,6 +118,7 @@ function App() {
   return (
     <div className="App min-h-screen bg-background text-foreground">
       <BrowserRouter>
+        <LanguageSync />
         <ScrollToTop />
         <RouteSEO />
         <GAListener />

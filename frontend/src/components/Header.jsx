@@ -121,7 +121,7 @@ export default function Header() {
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 flex items-center gap-1 outline-none">
-              <Globe className="h-4 w-4" /> {i18n.language.toUpperCase()}
+              <Globe className="h-4 w-4" /> {(i18n.language || "en").toUpperCase()}
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800">
               <DropdownMenuItem onClick={() => switchLanguage('en')}>English (EN)</DropdownMenuItem>
