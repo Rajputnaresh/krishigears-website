@@ -64,7 +64,7 @@ export default function CategoryPage() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <EnquiryDialog product={category.name} trigger={
-                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
+                <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
               } />
               <Link to="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Become Dealer
@@ -116,7 +116,7 @@ function ModelsSection({ items, category }) {
         <p className="text-zinc-700 dark:text-zinc-300">Multiple supply models are available in this category. Request the B2B catalogue and our team will share dealer, distributor, bulk and institutional supply details.</p>
         <div className="mt-6">
           <EnquiryDialog product={category.name} trigger={
-            <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
+            <button data-testid="cat-empty-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Request Catalogue</button>
           } />
         </div>
       </div>

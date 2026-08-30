@@ -96,7 +96,7 @@ export default function SpareParts() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={`Spare Parts Bulk Order in ${location}`} trigger={
-              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
+              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
             } />
             <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I need power weeder spare parts in ${location}. Looking for: `)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("spare_parts", slug)} className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Parts Counter</a>
           </div>

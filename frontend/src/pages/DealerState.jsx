@@ -83,7 +83,7 @@ export default function DealerState() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={`Dealer Application - ${stateName}`} trigger={
-              <button data-testid="dealer-apply" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Apply for Dealership</button>
+              <button data-testid="dealer-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Apply for Dealership</button>
             } />
             <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I want to become a KrishiGears dealer in ${stateName}. Please share details.`)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("dealer_state", state)} className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Territory Manager</a>
           </div>
@@ -153,7 +153,7 @@ export default function DealerState() {
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {DEALER_PROCESS.map((p) => (
               <div key={p.step} className="border border-zinc-200 dark:border-zinc-800 p-5 rounded-md relative">
-                <div className="absolute -top-3 -left-3 bg-lime-500 text-zinc-50 dark:text-black font-bold w-10 h-10 rounded-full flex items-center justify-center">{p.step}</div>
+                <div className="absolute -top-3 -left-3 bg-lime-500 text-black dark:text-black font-bold w-10 h-10 rounded-full flex items-center justify-center">{p.step}</div>
                 <h3 className="font-bold text-lg mb-2 mt-3">{p.title}</h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">{p.desc}</p>
               </div>
@@ -193,7 +193,7 @@ export default function DealerState() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <EnquiryDialog product={`Dealer Application - ${stateName}`} trigger={
-              <button className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">Apply Now <ArrowRight className="h-4 w-4"/></button>
+              <button className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">Apply Now <ArrowRight className="h-4 w-4"/></button>
             } />
             <Link to="/become-a-dealer" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">General Application</Link>
           </div>

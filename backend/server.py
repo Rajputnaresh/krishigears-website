@@ -22,6 +22,9 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo.errors import PyMongoError
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from contextlib import asynccontextmanager
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from seed_data import PRODUCTS as SEED_PRODUCTS
 from seed_blog import BLOG_POSTS as SEED_BLOG_POSTS
@@ -388,7 +391,10 @@ async def lifespan(app: FastAPI):
         client.close()
 
 
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(lifespan=lifespan)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 api_router = APIRouter(prefix="/api")
 
 
@@ -529,11 +535,11 @@ class BulkOrderCreate(BaseModel):
 
 class ContactCreate(BaseModel):
     model_config = ConfigDict(extra="ignore")
-    name: str
-    phone: str
-    email: Optional[str] = None
-    subject: Optional[str] = None
-    message: str
+    name: str = Field(..., min_length=2, max_length=100)
+    phone: str = Field(..., min_length=10, max_length=15, pattern=r'^[0-9\+\-\s]+$')
+    email: Optional[EmailStr] = None
+    subject: Optional[str] = Field(None, max_length=200)
+    message: str = Field(..., min_length=10, max_length=2000)
 
 
 class BlogPostCreate(BaseModel):
@@ -813,7 +819,8 @@ async def submit_bulk_order(payload: BulkOrderCreate):
 
 
 @api_router.post("/leads/contact")
-async def submit_contact(payload: ContactCreate):
+@limiter.limit("3/minute")
+async def submit_contact(request: Request, payload: ContactCreate):
     doc = lead_doc("contact", payload.model_dump())
     await db.leads.insert_one(doc)
     fire_sheet_forward("contact", doc)

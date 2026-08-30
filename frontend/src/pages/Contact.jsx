@@ -80,7 +80,7 @@ export default function Contact() {
               type="submit"
               disabled={loading}
               data-testid="contact-form-submit"
-              className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
+              className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
             >
               <Send className="h-4 w-4"/>{loading ? "Sending..." : "Send Message"}
             </button>

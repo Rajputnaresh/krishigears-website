@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Globe, Headphones } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
@@ -24,6 +24,21 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'd') {
+        e.preventDefault();
+        navigate('/become-a-dealer');
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+        e.preventDefault();
+        navigate('/products');
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [navigate]);
 
   const switchLanguage = (langCode) => {
     const currentPath = location.pathname;
@@ -116,11 +131,10 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-
+        <div className="hidden lg:flex items-center gap-2">
           {/* Language Switcher */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 flex items-center gap-1 outline-none">
+            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
               <Globe className="h-4 w-4" /> {(i18n.language || "en").toUpperCase()}
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800">
@@ -130,29 +144,32 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank"
-            rel="noreferrer"
-            onClick={() => trackWhatsAppClick("header_desktop")}
-            data-testid="header-whatsapp-link"
-            title="WhatsApp Chat"
-            className="h-9 w-9 grid place-items-center rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-zinc-900 dark:text-white transition"
-          >
-            <WhatsAppIcon className="h-4 w-4" />
-          </a>
-          <a
-            href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
-            onClick={() => trackPhoneClick("header_desktop")}
-            data-testid="header-call-link"
-            className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-lime-500 flex items-center gap-2"
-          >
-            <Phone className="h-4 w-4" /> {COMPANY.phone}
-          </a>
+          {/* Support Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
+              <Headphones className="h-4 w-4" /> Support
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 w-56">
+              <DropdownMenuItem asChild>
+                <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]">
+                  <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} onClick={() => trackPhoneClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-lime-500">
+                  <Phone className="h-4 w-4" /> {COMPANY.phone}
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link
             to="/become-a-dealer"
             data-testid="header-become-dealer-btn"
-            className="px-5 py-2.5 bg-lime-500 text-zinc-50 dark:text-black font-bold text-sm rounded-md hover:bg-lime-400 transition"
+            title="Become a Dealer (⌘D)"
+            className="ml-2 px-5 py-2.5 bg-lime-500 text-black dark:text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2"
           >
-            Become a Dealer
+            Become a Dealer <span className="opacity-50 text-[10px] hidden xl:inline">⌘D</span>
           </Link>
         </div>
 
@@ -201,7 +218,7 @@ export default function Header() {
                 to="/become-a-dealer"
                 onClick={() => setOpen(false)}
                 data-testid="m-nav-become-dealer"
-                className="mt-4 px-5 py-3 bg-lime-500 text-zinc-50 dark:text-black font-bold text-center rounded-md"
+                className="mt-4 px-5 py-3 bg-lime-500 text-black dark:text-black font-bold text-center rounded-md"
               >
                 Become a Dealer
               </Link>

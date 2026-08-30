@@ -85,7 +85,7 @@ export default function AdminProducts() {
         <button
           onClick={openNew}
           data-testid="admin-products-new"
-          className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2"
+          className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2"
         >
           <Plus className="h-4 w-4"/> Add Product
         </button>
@@ -157,13 +157,13 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
         </div>
       </div>
       <div className="col-span-2">
-        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
+        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
           {product.active ? <Eye className="h-3 w-3"/> : <EyeOff className="h-3 w-3"/>}
           {product.active ? "Active" : "Hidden"}
         </button>
       </div>
       <div className="col-span-1">
-        <button onClick={onToggleFeatured} data-testid={`admin-toggle-featured-${product.slug}`} title="Toggle featured" className={`h-7 w-7 grid place-items-center rounded ${product.featured ? "text-lime-500 bg-lime-500/10" : "text-zinc-600 hover:text-lime-500"}`}>
+        <button onClick={onToggleFeatured} data-testid={`admin-toggle-featured-${product.slug}`} title="Toggle featured" className={`h-7 w-7 grid place-items-center rounded ${product.featured ? "text-lime-500 bg-lime-500/10" : "text-black hover:text-lime-500"}`}>
           <Star className={`h-4 w-4 ${product.featured ? "fill-lime-500" : ""}`}/>
         </button>
       </div>
@@ -409,7 +409,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
             onClick={save}
             disabled={saving}
             data-testid="pe-save"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2"
           >
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : (isEdit ? "Update Product" : "Create Product")}

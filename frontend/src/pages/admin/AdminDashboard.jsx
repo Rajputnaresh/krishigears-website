@@ -168,7 +168,7 @@ function LeadsPanel({ onChange }) {
                 data-testid={`leads-filter-${t.value}`}
                 onClick={() => setType(t.value)}
                 className={`px-4 py-2 border text-sm font-medium inline-flex items-center gap-2 transition ${
-                  type === t.value ? "border-lime-500 text-lime-500 bg-lime-500/10" : "border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-zinc-600"
+                  type === t.value ? "border-lime-500 text-lime-500 bg-lime-500/10" : "border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-zinc-600 hover:text-white"
                 }`}
               >
                 <I className="h-3.5 w-3.5"/>{t.label}
@@ -188,7 +188,15 @@ function LeadsPanel({ onChange }) {
 
 function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
   if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading…</div>;
-  if (leads.length === 0) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12 border border-dashed border-zinc-200 dark:border-zinc-800">No leads in this category yet.</div>;
+  if (leads.length === 0) return (
+    <div className="text-center text-zinc-500 dark:text-zinc-500 py-16 border border-dashed border-zinc-200 dark:border-zinc-800 bg-[#0A0A0A] flex flex-col items-center justify-center">
+      <div className="h-12 w-12 rounded-full bg-zinc-900 flex items-center justify-center mb-3">
+        <span className="text-xl">📭</span>
+      </div>
+      <p className="font-medium text-zinc-400">No leads found</p>
+      <p className="text-xs mt-1 max-w-sm">There are no leads in this category yet. When users submit forms, they will appear here.</p>
+    </div>
+  );
   return (
     <div className="border border-zinc-200 dark:border-zinc-800 overflow-hidden">
       {leads.map((lead) => {
@@ -262,7 +270,7 @@ function BlogPanel({ onChange }) {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-display font-bold text-xl">Manage Blog Posts</h3>
-        <button data-testid="blog-new-btn" onClick={openNew} className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
+        <button data-testid="blog-new-btn" onClick={openNew} className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
           <Plus className="h-4 w-4"/> New Post
         </button>
       </div>
@@ -289,7 +297,7 @@ function BlogList({ loading, posts, onEdit, onDelete }) {
             <div className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">/blog/{p.slug}</div>
           </div>
           <div className="col-span-2">
-            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900"}`}>
+            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900"}`}>
               {p.published ? "PUBLISHED" : "DRAFT"}
             </span>
           </div>
@@ -401,7 +409,7 @@ function BlogEditor({ open, setOpen, post, onSaved }) {
             onClick={save}
             disabled={saving}
             data-testid="blog-form-save"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
           >
             {saving ? "Saving..." : (isEdit ? "Update Post" : "Create Post")}
           </button>

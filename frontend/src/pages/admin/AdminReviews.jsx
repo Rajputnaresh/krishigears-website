@@ -39,7 +39,7 @@ export default function AdminReviews() {
     <div data-testid="admin-reviews-panel">
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-display font-bold text-xl">Customer Reviews ({reviews.length})</h3>
-        <button onClick={() => { setEditing(null); setOpen(true); }} data-testid="admin-review-new" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
+        <button onClick={() => { setEditing(null); setOpen(true); }} data-testid="admin-review-new" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-5 py-2.5 rounded-md inline-flex items-center gap-2">
           <Plus className="h-4 w-4"/> Add Review
         </button>
       </div>
@@ -75,7 +75,7 @@ function ReviewList({ loading, reviews, onEdit, onDelete, onToggleActive }) {
           <p className="text-sm text-zinc-700 dark:text-zinc-300 mt-3 line-clamp-3">{r.text}</p>
           {r.product_slug && <div className="text-[10px] text-lime-500 font-mono mt-2">Linked: {r.product_slug}</div>}
           <div className="mt-4 flex items-center justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
-            <button onClick={() => onToggleActive(r)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${r.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-zinc-500 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
+            <button onClick={() => onToggleActive(r)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${r.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"}`}>
               {r.active ? "Visible" : "Hidden"}
             </button>
             <div className="flex gap-2">
@@ -159,7 +159,7 @@ function ReviewEditor({ open, setOpen, review, onSaved }) {
             <Switch data-testid="review-form-active" checked={form.active} onCheckedChange={(v) => setForm({...form, active: v})}/>
             <span className="text-sm">{form.active ? "Visible on homepage" : "Hidden"}</span>
           </div>
-          <button onClick={save} disabled={saving} data-testid="review-form-save" className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2">
+          <button onClick={save} disabled={saving} data-testid="review-form-save" className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2">
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : (isEdit ? "Update Review" : "Add Review")}
           </button>

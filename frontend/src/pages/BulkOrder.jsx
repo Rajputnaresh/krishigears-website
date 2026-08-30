@@ -94,7 +94,7 @@ export default function BulkOrder() {
             type="submit"
             disabled={loading}
             data-testid="bulk-submit-btn"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-4 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Submitting..." : "Request Quotation"}
           </button>

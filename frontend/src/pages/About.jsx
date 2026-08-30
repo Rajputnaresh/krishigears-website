@@ -70,7 +70,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h2 max-w-3xl mx-auto text-balance">Ready to bring KrishiGears to <span className="text-lime-500">your district?</span></h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/become-a-dealer" data-testid="about-become-dealer" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">
+            <Link to="/become-a-dealer" data-testid="about-become-dealer" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">
               Become a Dealer <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" data-testid="about-contact" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">

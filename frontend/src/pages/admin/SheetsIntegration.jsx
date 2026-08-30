@@ -186,7 +186,7 @@ export default function SheetsIntegration() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="open-new-sheet-enquiry"
-                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2"
+                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-4 py-2 rounded-md mt-2"
               >
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
@@ -245,7 +245,7 @@ export default function SheetsIntegration() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="open-new-sheet-dealer"
-                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2"
+                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-4 py-2 rounded-md mt-2"
               >
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
@@ -288,7 +288,7 @@ export default function SheetsIntegration() {
           >
             <Step>
               <p>Open a third blank Google Sheet:</p>
-              <a href="https://sheets.new" target="_blank" rel="noreferrer" data-testid="open-new-sheet-warranty" className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-4 py-2 rounded-md mt-2">
+              <a href="https://sheets.new" target="_blank" rel="noreferrer" data-testid="open-new-sheet-warranty" className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-4 py-2 rounded-md mt-2">
                 Open sheets.new <ExternalLink className="h-3.5 w-3.5"/>
               </a>
             </Step>
@@ -328,7 +328,7 @@ export default function SheetsIntegration() {
             onClick={save}
             disabled={saving}
             data-testid="save-sheets-btn"
-            className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3 rounded-md inline-flex items-center gap-2 disabled:opacity-50"
+            className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3 rounded-md inline-flex items-center gap-2 disabled:opacity-50"
           >
             {saving ? <Loader2 className="h-4 w-4 animate-spin"/> : <Save className="h-4 w-4"/>}
             {saving ? "Saving..." : "Save URLs"}
@@ -395,7 +395,7 @@ export default function SheetsIntegration() {
 
 function StatusPill({ ok, label }) {
   return (
-    <div data-testid={`status-${label.toLowerCase().replace(/\s/g, "-")}`} className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold tracking-wider uppercase ${ok ? "bg-lime-500/10 text-lime-400 border border-lime-500/30" : "bg-zinc-50 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-500 border border-zinc-200 dark:border-zinc-800"}`}>
+    <div data-testid={`status-${label.toLowerCase().replace(/\s/g, "-")}`} className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold tracking-wider uppercase ${ok ? "bg-lime-500/10 text-lime-400 border border-lime-500/30" : "bg-zinc-50 dark:bg-zinc-900 text-black dark:text-black border border-zinc-200 dark:border-zinc-800"}`}>
       {ok ? <CheckCircle2 className="h-3.5 w-3.5"/> : <AlertCircle className="h-3.5 w-3.5"/>}
       {label} {ok ? "Connected" : "Not connected"}
     </div>
@@ -407,7 +407,7 @@ function SetupStep({ value, num, title, done, children }) {
     <AccordionItem value={value} className="border-0">
       <AccordionTrigger className="px-6 py-5 hover:no-underline">
         <div className="flex items-center gap-4 text-left">
-          <div className={`h-9 w-9 grid place-items-center font-display font-black rounded-sm ${done ? "bg-lime-500 text-zinc-50 dark:text-black" : "bg-zinc-800 text-zinc-900 dark:text-white"}`}>
+          <div className={`h-9 w-9 grid place-items-center font-display font-black rounded-sm ${done ? "bg-lime-500 text-black dark:text-black" : "bg-zinc-800 text-black dark:text-black"}`}>
             {done ? <Check className="h-4 w-4"/> : num}
           </div>
           <div>

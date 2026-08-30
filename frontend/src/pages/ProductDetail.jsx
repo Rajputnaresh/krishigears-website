@@ -102,7 +102,7 @@ export default function ProductDetail() {
 
             <div className="mt-7 flex flex-wrap gap-3">
               <EnquiryDialog product={product.name} trigger={
-                <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
+                <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
               } />
               <Link to="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Become Dealer
@@ -189,7 +189,7 @@ export default function ProductDetail() {
           </div>
           <div className="flex flex-wrap gap-3 md:justify-end">
             <EnquiryDialog product={product.name} trigger={
-              <button data-testid="product-warranty-enquiry" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3.5 rounded-md">Get B2B Quote</button>
+              <button data-testid="product-warranty-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Get B2B Quote</button>
             } />
             <Link to="/bulk-order" data-testid="product-bulk-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
           </div>

@@ -47,7 +47,7 @@ export default function Products() {
             <p className="text-zinc-600 dark:text-zinc-400 mt-2 text-sm">FPOs, agri input stores, contractors and institutions — talk to us.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-6 py-3.5 rounded-md">Buy Online</a>
+            <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Buy Online</a>
             <Link to="/bulk-order" data-testid="products-bulk-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
             <Link to="/become-a-dealer" data-testid="products-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Become Dealer</Link>
           </div>

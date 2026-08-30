@@ -68,31 +68,34 @@ export default function Home() {
             <p className="mt-6 text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
               B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6">
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="hero-buy-online"
-                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md transition"
+                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/20"
               >
                 Buy Online
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
               </a>
-              <Link
-                to="/become-a-dealer"
-                data-testid="hero-dealer-btn"
-                className="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
-              >
-                Become Dealer
-              </Link>
-              <Link
-                to="/bulk-order"
-                data-testid="hero-bulk-btn"
-                className="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition"
-              >
-                Bulk Order Inquiry
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link
+                  to="/become-a-dealer"
+                  data-testid="hero-dealer-btn"
+                  className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-lime-500 text-sm font-medium transition"
+                >
+                  Become Dealer
+                </Link>
+                <span className="text-zinc-300 dark:text-zinc-700 hidden sm:inline">•</span>
+                <Link
+                  to="/bulk-order"
+                  data-testid="hero-bulk-btn"
+                  className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-lime-500 text-sm font-medium transition"
+                >
+                  Bulk Order Inquiry
+                </Link>
+              </div>
             </div>
 
             {/* Quick stats */}
@@ -113,7 +116,7 @@ export default function Home() {
 
         {/* Bottom marquee */}
         <div className="absolute bottom-0 left-0 right-0 border-t border-zinc-100 dark:border-zinc-900 bg-black/60 backdrop-blur-md py-3 overflow-hidden">
-          <div className="flex gap-12 whitespace-nowrap animate-marquee">
+          <div className="flex gap-12 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
             {[...TRUST_BADGES, ...TRUST_BADGES].map((b, i) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
               return (
@@ -216,7 +219,7 @@ export default function Home() {
               <img src={FARMER_FIELD} alt="Indian farmer" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent"></div>
             </div>
-            <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-zinc-50 dark:text-black p-6 max-w-xs lime-glow">
+            <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black dark:text-black p-6 max-w-xs lime-glow">
               <div className="font-display font-black text-4xl">10K+</div>
               <div className="text-sm font-bold uppercase tracking-wider mt-1">Farmers Served Across India</div>
             </div>
@@ -301,7 +304,7 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
+              <Link to="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
                 Apply as Dealer <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
@@ -335,10 +338,12 @@ export default function Home() {
 
 function ContactStrip() {
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
   const [form, setForm] = useState({ name: "", phone: "", email: "", subject: "General Enquiry", message: "" });
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const submit = async (e) => {
     e.preventDefault();
+    setErrorMsg(null);
     if (!form.name || !form.phone || !form.message) {
       toast.error("Name, phone and message are required");
       return;
@@ -349,7 +354,7 @@ function ContactStrip() {
       toast.success("Message sent! We will get back to you shortly.");
       setForm({ name: "", phone: "", email: "", subject: "General Enquiry", message: "" });
     } catch (err) {
-      toast.error(formatApiError(err));
+      setErrorMsg(formatApiError(err));
     } finally {
       setLoading(false);
     }
@@ -384,31 +389,37 @@ function ContactStrip() {
         <form onSubmit={submit} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-8 space-y-4">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
-              <Input data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
+              <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
+              <Input id="contact-name" name="name" required minLength={2} data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
             <div>
-              <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Phone*</Label>
-              <Input data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
+              <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Phone*</Label>
+              <Input id="contact-phone" type="tel" name="phone" required pattern="[0-9\+\-\s]+" data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
             </div>
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Email</Label>
-            <Input data-testid="home-contact-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
+            <Label htmlFor="contact-email" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Email</Label>
+            <Input id="contact-email" type="email" name="email" data-testid="home-contact-email" value={form.email} onChange={update("email")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Subject</Label>
-            <Input data-testid="home-contact-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
+            <Label htmlFor="contact-subject" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Subject</Label>
+            <Input id="contact-subject" name="subject" data-testid="home-contact-subject" value={form.subject} onChange={update("subject")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
           <div>
-            <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Message*</Label>
-            <Textarea data-testid="home-contact-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
+            <Label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Message*</Label>
+            <Textarea id="contact-message" name="message" required minLength={10} data-testid="home-contact-message" rows={4} value={form.message} onChange={update("message")} className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5" />
           </div>
+          {errorMsg && (
+            <div className="bg-red-500/10 border border-red-500/50 text-red-500 p-4 rounded-md flex items-center justify-between">
+              <span className="text-sm">{errorMsg}</span>
+              <button type="button" onClick={submit} className="text-sm font-bold underline hover:no-underline">Retry</button>
+            </div>
+          )}
           <button
             type="submit"
             disabled={loading}
             data-testid="home-contact-submit"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
@@ -474,7 +485,7 @@ function VideoCard({ video }) {
       {thumb && <img src={thumb} alt={video.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
       <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/80 via-white/40 dark:via-black/40 to-transparent"/>
       <div className="absolute inset-0 grid place-items-center">
-        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-zinc-50 dark:text-black rounded-full group-hover:scale-110 transition">
+        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition">
           <Play className="h-6 w-6 fill-black ml-1" />
         </div>
       </div>

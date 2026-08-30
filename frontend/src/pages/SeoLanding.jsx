@@ -127,7 +127,7 @@ export default function SeoLanding() {
           )}
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={category?.name || page.title} trigger={
-              <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Bulk / Dealer Inquiry</button>
+              <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Bulk / Dealer Inquiry</button>
             } />
             <Link to="/become-a-dealer" data-testid="seo-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Become Dealer</Link>
             <Link to="/bulk-order" data-testid="seo-institutional-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Institutional Supply</Link>
@@ -198,7 +198,7 @@ export default function SeoLanding() {
             {category && (
               <Link to={`/products/category/${category.slug}`} data-testid="seo-view-products" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md inline-flex items-center gap-2">View Supply Category <ArrowRight className="h-4 w-4"/></Link>
             )}
-            <Link to="/bulk-order" data-testid="seo-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-zinc-50 dark:text-black font-bold px-7 py-4 rounded-md">Bulk Order Inquiry</Link>
+            <Link to="/bulk-order" data-testid="seo-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Bulk Order Inquiry</Link>
             <Link to="/dealer-network" data-testid="seo-network-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Dealer Network</Link>
           </div>
         </div>

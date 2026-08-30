@@ -23,7 +23,7 @@ export default function FloatingActions() {
         href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
         onClick={() => trackPhoneClick("floating_button")}
         data-testid="floating-call-btn"
-        className="lg:hidden fixed bottom-6 left-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-lime-500 text-zinc-50 dark:text-black shadow-2xl hover:scale-110 transition"
+        className="lg:hidden fixed bottom-6 left-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-lime-500 text-black dark:text-black shadow-2xl hover:scale-110 transition"
         aria-label="Call KrishiGears"
       >
         <Phone className="h-6 w-6" />
