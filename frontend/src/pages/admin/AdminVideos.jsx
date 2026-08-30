@@ -69,10 +69,10 @@ function VideoList({ loading, videos, onEdit, onDelete, onToggleActive }) {
         const src = SOURCES.find((s) => s.value === v.source) || SOURCES[0];
         const Icon = src.icon;
         return (
-          <div key={v.id} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-4">
+          <div key={v.id} className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-4">
             <div className="flex items-start gap-3">
               <div className="h-20 w-32 bg-zinc-50 dark:bg-zinc-900 overflow-hidden shrink-0">
-                {v.thumbnail && <img src={v.thumbnail} alt="" className="w-full h-full object-cover"/>}
+                {v.thumbnail && <img src={v.thumbnail} alt="" loading="lazy" className="w-full h-full object-cover"/>}
               </div>
               <div className="flex-1 min-w-0">
                 <div className={`text-xs uppercase tracking-wider font-bold inline-flex items-center gap-1.5 ${src.color}`}>
@@ -147,7 +147,7 @@ function VideoEditor({ open, setOpen, video, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-2xl">
+      <DialogContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-2xl">
         <DialogHeader><DialogTitle className="font-display text-2xl">{isEdit ? "Edit Video" : "Add Video"}</DialogTitle></DialogHeader>
         <div className="space-y-4 mt-2">
           <div>
@@ -164,7 +164,7 @@ function VideoEditor({ open, setOpen, video, onSaved }) {
               <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Source</Label>
               <Select value={form.source} onValueChange={(v) => setForm({...form, source: v})}>
                 <SelectTrigger className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
-                <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white">
+                <SelectContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white">
                   {SOURCES.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
                 </SelectContent>
               </Select>
@@ -177,7 +177,7 @@ function VideoEditor({ open, setOpen, video, onSaved }) {
           <div>
             <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Thumbnail URL (optional — auto-fetched for YouTube)</Label>
             <Input data-testid="video-form-thumb" value={form.thumbnail} onChange={(e) => setForm({...form, thumbnail: e.target.value})} placeholder="https://…" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"/>
-            {form.thumbnail && <div className="mt-2 aspect-video w-40 overflow-hidden border border-zinc-200 dark:border-zinc-800"><img src={form.thumbnail} alt="" className="w-full h-full object-cover"/></div>}
+            {form.thumbnail && <div className="mt-2 aspect-video w-40 overflow-hidden border border-zinc-200 dark:border-zinc-800"><img src={form.thumbnail} alt="" loading="lazy" className="w-full h-full object-cover"/></div>}
           </div>
           <div>
             <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Short Description</Label>

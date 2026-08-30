@@ -95,7 +95,7 @@ export default function CategoryPage() {
           </div>
           <div className="lg:col-span-5">
             <div className="aspect-[4/3] overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white">
-              <img src={category.image} alt={category.name} className="w-full h-full object-contain p-4" />
+              <img src={category.image} alt={category.name} loading="lazy" className="w-full h-full object-contain p-4" />
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ function ModelsSection({ items, category }) {
   }
   if (items.length === 0) {
     return (
-      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-10 text-center">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-10 text-center">
         <p className="text-zinc-700 dark:text-zinc-300">Multiple supply models are available in this category. Request the B2B catalogue and our team will share dealer, distributor, bulk and institutional supply details.</p>
         <div className="mt-6">
           <EnquiryDialog product={category.name} trigger={

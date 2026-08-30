@@ -141,7 +141,7 @@ export default function BlogPost() {
           </div>
         )}
         <div className="mt-10 aspect-[16/9] overflow-hidden border border-zinc-200 dark:border-zinc-800">
-          <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
+          <img src={post.cover_image} alt={post.title} loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div className="mt-10 prose prose-invert max-w-none prose-lime prose-img:rounded-lg">
           <ReactMarkdown>{post.content}</ReactMarkdown>

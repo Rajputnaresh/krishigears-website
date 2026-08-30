@@ -31,9 +31,9 @@ export default function AdminLogin() {
 
   return (
     <div data-testid="admin-login-page" className="min-h-screen grid place-items-center bg-black p-6">
-      <div className="w-full max-w-md border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-8 md:p-10">
+      <div className="w-full max-w-md border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-8 md:p-10">
         <div className="flex items-center gap-3">
-          <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full"/>
+          <img src={LOGO_URL} alt="KrishiGears" loading="lazy" className="h-14 w-14 rounded-full"/>
           <div>
             <div className="font-display font-black text-xl">KRISHI<span className="text-lime-500">GEARS</span></div>
             <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">Admin Console</div>

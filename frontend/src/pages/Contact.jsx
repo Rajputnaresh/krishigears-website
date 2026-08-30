@@ -52,7 +52,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form onSubmit={submit} className="lg:col-span-7 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+          <form onSubmit={submit} className="lg:col-span-7 border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
             <h2 className="font-display font-bold text-2xl">Send us a message</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>

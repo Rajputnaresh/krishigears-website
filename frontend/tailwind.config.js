@@ -31,8 +31,20 @@ module.exports = {
                     400: '#a3e635', 500: '#84cc16', 600: '#65a30d', 700: '#4d7c0f',
                     800: '#3f6212', 900: '#365314',
                 },
-                surface: '#141414',
-                'surface-elev': '#1F1F1F',
+                
+                
+                whatsapp: {
+                    DEFAULT: '#25D366',
+                    hover: '#1ebe57'
+                },
+                surface: {
+                    DEFAULT: '#141414',
+                    elevated: '#1F1F1F',
+                    dark: '#0F0F0F',
+                    darker: '#080808',
+                    darkest: '#070707'
+                },
+
             },
             keyframes: {
                 'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },

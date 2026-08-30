@@ -145,7 +145,7 @@ export default function SheetsIntegration() {
   return (
     <div data-testid="sheets-integration-panel" className="space-y-8">
       {/* Hero / status */}
-      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-8">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-8">
         <div className="flex items-start gap-4">
           <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm shrink-0">
             <Sheet className="h-6 w-6" />
@@ -165,7 +165,7 @@ export default function SheetsIntegration() {
       </div>
 
       {/* Step-by-step guide */}
-      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark">
         <div className="p-6 border-b border-zinc-200 dark:border-zinc-800">
           <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">Setup Guide</div>
           <h3 className="font-display font-bold text-xl mt-2">10-minute walkthrough — follow once, never touch again.</h3>
@@ -366,7 +366,7 @@ export default function SheetsIntegration() {
       </div>
 
       {/* FAQ */}
-      <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+      <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark">
         <div className="p-6 border-b border-zinc-200 dark:border-zinc-800">
           <h3 className="font-display font-bold text-xl">Common questions</h3>
         </div>

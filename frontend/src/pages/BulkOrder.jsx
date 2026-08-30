@@ -58,7 +58,7 @@ export default function BulkOrder() {
           Farmer Producer Organizations, agri input stores, large contractors and government tender buyers — request a bulk quotation with institutional pricing, GST invoice and PAN India dispatch.
         </p>
 
-        <form onSubmit={submit} className="mt-12 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+        <form onSubmit={submit} className="mt-12 border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
           <div className="flex items-center gap-3">
             <Package className="h-6 w-6 text-lime-500" />
             <h2 className="font-display font-bold text-2xl">Bulk Order Form</h2>
@@ -78,7 +78,7 @@ export default function BulkOrder() {
               <SelectTrigger data-testid="bulk-product-select" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5">
                 <SelectValue placeholder="Select a product category" />
               </SelectTrigger>
-              <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
+              <SelectContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
                 {CATEGORIES.map((c) => (
                   <SelectItem key={c.slug} value={c.name}>{c.name}</SelectItem>
                 ))}

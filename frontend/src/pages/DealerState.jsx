@@ -90,7 +90,7 @@ export default function DealerState() {
         </div>
       </section>
 
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Market Opportunity</div>
           <h2 className="kg-h2 mt-3">Why {stateName} is a strong {stateData.tier} market.</h2>
@@ -132,7 +132,7 @@ export default function DealerState() {
         </div>
       </section>
 
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Requirements</div>
           <h2 className="kg-h2 mt-3">What we need from a {stateName} dealer.</h2>
@@ -163,7 +163,7 @@ export default function DealerState() {
       </section>
 
       {stateData.cities.length > 0 && (
-        <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+        <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
           <div className="max-w-[1200px] mx-auto">
             <div className="kg-eyebrow">Key Cities</div>
             <h2 className="kg-h2 mt-3">Active dealer recruitment in these {stateName} cities.</h2>

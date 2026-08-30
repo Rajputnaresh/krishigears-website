@@ -4,7 +4,7 @@ import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 
 export default function Footer() {
   return (
-    <footer data-testid="site-footer" className="bg-[#070707] border-t border-zinc-100 dark:border-zinc-900 mt-12">
+    <footer data-testid="site-footer" className="bg-surface-darkest border-t border-zinc-100 dark:border-zinc-900 mt-12">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
         {/* Brand */}
         <div className="md:col-span-4">

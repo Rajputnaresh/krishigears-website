@@ -72,11 +72,11 @@ export default function BecomeDealer() {
             ))}
           </ul>
           <div className="mt-10 aspect-[4/3] overflow-hidden border border-zinc-200 dark:border-zinc-800 hidden md:block">
-            <img src={FARMER_FIELD} alt="farmer" className="w-full h-full object-cover" />
+            <img src={FARMER_FIELD} alt="farmer" loading="lazy" className="w-full h-full object-cover" />
           </div>
         </div>
 
-        <form onSubmit={submit} className="lg:col-span-7 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+        <form onSubmit={submit} className="lg:col-span-7 border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
           <h2 className="font-display font-bold text-2xl">Application Form</h2>
           <p className="text-zinc-500 dark:text-zinc-500 text-sm">Please share accurate details. All fields marked with * are required.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

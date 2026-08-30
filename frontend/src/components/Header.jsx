@@ -97,7 +97,7 @@ export default function Header() {
             >
               {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 w-80 max-h-[70vh] overflow-y-auto">
+            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800 w-80 max-h-[70vh] overflow-y-auto">
               <DropdownMenuItem asChild>
                 <Link to="/products" className="font-bold text-lime-500" data-testid="nav-all-products">View All Categories →</Link>
               </DropdownMenuItem>
@@ -137,7 +137,7 @@ export default function Header() {
             <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
               <Globe className="h-4 w-4" /> {(i18n.language || "en").toUpperCase()}
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800">
+            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800">
               <DropdownMenuItem onClick={() => switchLanguage('en')}>English (EN)</DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('hi')}>हिंदी (HI)</DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('mr')}>मराठी (MR)</DropdownMenuItem>
@@ -149,7 +149,7 @@ export default function Header() {
             <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
               <Headphones className="h-4 w-4" /> Support
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 w-56">
+            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800 w-56">
               <DropdownMenuItem asChild>
                 <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]">
                   <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
@@ -176,18 +176,18 @@ export default function Header() {
         {/* Mobile */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <button data-testid="mobile-menu-trigger" className="lg:hidden p-2 text-zinc-900 dark:text-white">
+            <button data-testid="mobile-menu-trigger" aria-label="Open menu" className="lg:hidden p-3 text-zinc-900 dark:text-white">
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
+          <SheetContent side="right" className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
             <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img src={LOGO_URL} alt="KrishiGears" className="h-10 w-10 rounded-full" />
                 <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span></div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => setOpen(false)} data-testid="mobile-menu-close"><X className="h-5 w-5"/></button>
+                <button onClick={() => setOpen(false)} data-testid="mobile-menu-close" aria-label="Close menu" className="p-2"><X className="h-5 w-5"/></button>
               </div>
             </div>
             <nav className="p-6 flex flex-col gap-1">
@@ -236,7 +236,7 @@ export default function Header() {
                 rel="noreferrer"
                 onClick={() => trackWhatsAppClick("header_mobile")}
                 data-testid="m-nav-whatsapp"
-                className="mt-2 px-5 py-3 bg-[#25D366] hover:bg-[#1ebe57] text-zinc-900 dark:text-white text-center rounded-md inline-flex items-center justify-center gap-2"
+                className="mt-2 px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-zinc-900 dark:text-white text-center rounded-md inline-flex items-center justify-center gap-2"
               >
                 <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
               </a>

@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
         data-testid={`product-card-whatsapp-${product.slug}`}
         title={`WhatsApp enquiry for ${product.name}`}
         aria-label={`WhatsApp enquiry for ${product.name}`}
-        className="absolute bottom-[110px] right-3 z-10 h-11 w-11 grid place-items-center bg-[#25D366] hover:bg-[#1ebe57] text-zinc-900 dark:text-white rounded-full shadow-xl hover:scale-110 transition"
+        className="absolute bottom-[110px] right-3 z-10 h-11 w-11 grid place-items-center bg-whatsapp hover:bg-whatsapp-hover text-zinc-900 dark:text-white rounded-full shadow-xl hover:scale-110 transition"
       >
         <WhatsAppIcon className="h-5 w-5" />
       </a>

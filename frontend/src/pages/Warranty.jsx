@@ -32,7 +32,7 @@ export default function Warranty() {
         </div>
       </section>
 
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900 -mt-8">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900 -mt-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -118,7 +118,7 @@ function RegisterWarrantySection() {
 
   if (success) {
     return (
-      <section data-testid="warranty-register-success" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
+      <section data-testid="warranty-register-success" className="kg-section bg-surface-darker border-t border-zinc-100 dark:border-zinc-900">
         <div className="max-w-2xl mx-auto text-center border border-lime-500/30 bg-lime-500/5 p-12">
           <CheckCircle2 className="h-16 w-16 mx-auto text-lime-500" />
           <h2 className="kg-h2 mt-6">Warranty Registered.</h2>
@@ -129,7 +129,7 @@ function RegisterWarrantySection() {
   }
 
   return (
-    <section data-testid="warranty-register-section" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
+    <section data-testid="warranty-register-section" className="kg-section bg-surface-darker border-t border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1100px] mx-auto">
         <div className="kg-eyebrow">Activate your warranty</div>
         <h2 className="kg-h2 mt-3 text-balance">Register your machine in <span className="text-lime-500">2 minutes.</span></h2>
@@ -137,7 +137,7 @@ function RegisterWarrantySection() {
           Just bought a KrishiGears product? Register it below so we have your purchase on record. This activates your warranty coverage and helps us serve you faster when you need support.
         </p>
 
-        <form onSubmit={submit} className="mt-10 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-10 space-y-5">
+        <form onSubmit={submit} className="mt-10 border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
           <div className="flex items-center gap-3">
             <ShieldCheck className="h-6 w-6 text-lime-500" />
             <h3 className="font-display font-bold text-xl">Warranty Registration</h3>

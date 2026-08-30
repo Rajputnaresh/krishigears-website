@@ -23,7 +23,7 @@ export default function Products() {
                 className="kg-card group overflow-hidden flex flex-col"
               >
                 <div className="aspect-square bg-zinc-50 dark:bg-zinc-900 relative overflow-hidden">
-                  <img src={c.image} alt={c.name} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700" />
+                  <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-white/90 dark:from-black/90 via-white/40 dark:via-black/40 to-transparent"></div>
                   <Icon className="absolute top-4 left-4 h-6 w-6 text-lime-500" />
                   <div className="absolute bottom-4 left-4 right-4">

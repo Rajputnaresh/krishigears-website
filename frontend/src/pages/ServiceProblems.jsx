@@ -159,7 +159,7 @@ export default function ServiceProblems() {
       </section>
 
       {/* Internal Silo Links */}
-      <section className="kg-section bg-zinc-50 dark:bg-[#080808] border-t border-zinc-200 dark:border-zinc-800">
+      <section className="kg-section bg-zinc-50 dark:bg-surface-darker border-t border-zinc-200 dark:border-zinc-800">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {location} Resources</h2>
           <div className="flex flex-wrap justify-center gap-4">

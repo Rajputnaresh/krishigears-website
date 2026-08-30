@@ -56,12 +56,12 @@ export default function AdminDashboard() {
   if (!user) return <div className="min-h-screen grid place-items-center bg-black text-zinc-600 dark:text-zinc-400">Loading…</div>;
 
   return (
-    <div data-testid="admin-dashboard" className="min-h-screen bg-[#070707] text-zinc-900 dark:text-white">
+    <div data-testid="admin-dashboard" className="min-h-screen bg-surface-darkest text-zinc-900 dark:text-white">
       {/* Header */}
       <header className="sticky top-0 z-30 bg-black/80 backdrop-blur border-b border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="" className="h-10 w-10 rounded-full"/>
+            <img src={LOGO_URL} alt="" loading="lazy" className="h-10 w-10 rounded-full"/>
             <div>
               <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span> Admin</div>
               <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">{user.email}</div>
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
         )}
 
         <Tabs defaultValue="leads" className="w-full">
-          <TabsList className="bg-[#0F0F0F] border border-zinc-200 dark:border-zinc-800 flex-wrap h-auto">
+          <TabsList className="bg-surface-dark border border-zinc-200 dark:border-zinc-800 flex-wrap h-auto">
             <TabsTrigger data-testid="tab-leads" value="leads">Leads</TabsTrigger>
             <TabsTrigger data-testid="tab-products" value="products">Products</TabsTrigger>
             <TabsTrigger data-testid="tab-videos" value="videos">Videos</TabsTrigger>
@@ -122,7 +122,7 @@ export default function AdminDashboard() {
 
 function StatCard({ label, value }) {
   return (
-    <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-4">
+    <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-4">
       <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-500">{label}</div>
       <div className="font-display font-black text-3xl text-lime-500 mt-1">{value ?? "—"}</div>
     </div>
@@ -189,7 +189,7 @@ function LeadsPanel({ onChange }) {
 function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
   if (loading) return <div className="text-center text-zinc-500 dark:text-zinc-500 py-12">Loading…</div>;
   if (leads.length === 0) return (
-    <div className="text-center text-zinc-500 dark:text-zinc-500 py-16 border border-dashed border-zinc-200 dark:border-zinc-800 bg-[#0A0A0A] flex flex-col items-center justify-center">
+    <div className="text-center text-zinc-500 dark:text-zinc-500 py-16 border border-dashed border-zinc-200 dark:border-zinc-800 bg-background flex flex-col items-center justify-center">
       <div className="h-12 w-12 rounded-full bg-zinc-900 flex items-center justify-center mb-3">
         <span className="text-xl">📭</span>
       </div>
@@ -290,7 +290,7 @@ function BlogList({ loading, posts, onEdit, onDelete }) {
       {posts.map((p) => (
         <div key={p.slug} className="grid grid-cols-12 gap-4 p-4 items-center border-b border-zinc-200 dark:border-zinc-800 last:border-b-0">
           <div className="col-span-1">
-            {p.cover_image && <img src={p.cover_image} alt="" className="h-12 w-12 object-cover border border-zinc-200 dark:border-zinc-800"/>}
+            {p.cover_image && <img src={p.cover_image} alt="" loading="lazy" className="h-12 w-12 object-cover border border-zinc-200 dark:border-zinc-800"/>}
           </div>
           <div className="col-span-6">
             <div className="font-bold">{p.title}</div>
@@ -372,7 +372,7 @@ function BlogEditor({ open, setOpen, post, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">{isEdit ? "Edit Post" : "New Post"}</DialogTitle>
         </DialogHeader>

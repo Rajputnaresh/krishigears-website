@@ -37,7 +37,7 @@ export default function EnquiryDialog({ trigger, product = "" }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-lg">
+      <DialogContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-lg">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">Bulk / Dealer Inquiry</DialogTitle>
           <DialogDescription className="text-zinc-600 dark:text-zinc-400">

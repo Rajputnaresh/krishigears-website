@@ -106,7 +106,7 @@ export default function AdminProducts() {
           <SelectTrigger data-testid="admin-products-category-filter" className="w-[240px] bg-black border-zinc-200 dark:border-zinc-800">
             <SelectValue placeholder="All categories"/>
           </SelectTrigger>
-          <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
+          <SelectContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
             <SelectItem value="all">All categories</SelectItem>
             {CATEGORIES.map((c) => <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>)}
           </SelectContent>
@@ -146,7 +146,7 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
     <div className="grid grid-cols-12 gap-3 p-3 items-center hover:bg-white dark:bg-zinc-950 transition">
       <div className="col-span-1">
         <div className="aspect-square w-14 bg-white border border-zinc-200 dark:border-zinc-800 overflow-hidden">
-          {product.images?.[0] && <img src={product.images[0]} alt="" className="w-full h-full object-contain p-1"/>}
+          {product.images?.[0] && <img src={product.images[0]} alt="" loading="lazy" className="w-full h-full object-contain p-1"/>}
         </div>
       </div>
       <div className="col-span-4">
@@ -275,7 +275,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-4xl max-h-[92vh] overflow-y-auto">
+      <DialogContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-4xl max-h-[92vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">{isEdit ? `Edit · ${product.name}` : "Add New Product"}</DialogTitle>
         </DialogHeader>
@@ -291,7 +291,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
                 <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Category*</Label>
                 <Select value={form.category} onValueChange={(v) => setForm((f) => ({ ...f, category: v }))}>
                   <SelectTrigger data-testid="pe-category" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5"><SelectValue/></SelectTrigger>
-                  <SelectContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
+                  <SelectContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-h-72">
                     {CATEGORIES.map((c) => <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>)}
                   </SelectContent>
                 </Select>
@@ -422,7 +422,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
 
 function Section({ title, subtitle, children }) {
   return (
-    <div className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F]">
+    <div className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark">
       <div className="px-4 py-3 border-b border-zinc-200 dark:border-zinc-800">
         <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">{title}</div>
         {subtitle && <div className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">{subtitle}</div>}
@@ -448,7 +448,7 @@ function ArrayEditor({ values, placeholder, testidPrefix, onChange, onAdd, onRem
         <div key={i} className="flex items-center gap-2">
           {previewImages && v && (
             <div className="h-10 w-10 bg-white border border-zinc-200 dark:border-zinc-800 overflow-hidden shrink-0">
-              <img src={v} alt="" className="w-full h-full object-contain"/>
+              <img src={v} alt="" loading="lazy" className="w-full h-full object-contain"/>
             </div>
           )}
           <Input

@@ -153,9 +153,9 @@ export default function Home() {
                   key={c.slug}
                   to={`/products/category/${c.slug}`}
                   data-testid={`cat-card-${c.slug}`}
-                  className={`relative group overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-[#141414] hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
+                  className={`relative group overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-surface hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
                 >
-                  <img src={c.image} alt={c.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
+                  <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
                   <div className="relative h-full p-7 flex flex-col justify-between">
                     <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500">
@@ -182,7 +182,7 @@ export default function Home() {
                   key={c.slug}
                   to={`/products/category/${c.slug}`}
                   data-testid={`cat-tile-${c.slug}`}
-                  className="md:col-span-3 p-5 border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] hover:bg-[#141414] hover:border-lime-500/40 hover:-translate-y-1 transition-all"
+                  className="md:col-span-3 p-5 border border-zinc-200 dark:border-zinc-800 bg-surface-dark hover:bg-surface hover:border-lime-500/40 hover:-translate-y-1 transition-all"
                 >
                   <Icon className="h-5 w-5 text-lime-500 mb-3" />
                   <div className="font-display font-bold text-base leading-tight">{c.name}</div>
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* ========== FEATURED PRODUCTS ========== */}
-      <section data-testid="featured-products-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section data-testid="featured-products-section" className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
@@ -216,7 +216,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/5] overflow-hidden border border-zinc-200 dark:border-zinc-800 relative">
-              <img src={FARMER_FIELD} alt="Indian farmer" className="w-full h-full object-cover" />
+              <img src={FARMER_FIELD} alt="Indian farmer" loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black dark:text-black p-6 max-w-xs lime-glow">
@@ -240,7 +240,7 @@ export default function Home() {
                 { v: "FMTTI", l: "Tested Equipment" },
                 { v: "Genuine", l: "Spare Parts Only" },
               ].map((b) => (
-                <div key={b.l} className="border border-zinc-200 dark:border-zinc-800 p-4 bg-[#0F0F0F]">
+                <div key={b.l} className="border border-zinc-200 dark:border-zinc-800 p-4 bg-surface-dark">
                   <div className="text-lime-500 font-display font-black text-lg">{b.v}</div>
                   <div className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mt-1">{b.l}</div>
                 </div>
@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* ========== WHY CHOOSE US ========== */}
-      <section data-testid="why-choose-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900 relative overflow-hidden">
+      <section data-testid="why-choose-section" className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${ABSTRACT_TERRAIN})`, backgroundSize: "cover" }}></div>
         <div className="max-w-[1400px] mx-auto relative">
           <div className="text-center mb-14 max-w-2xl mx-auto">
@@ -286,7 +286,7 @@ export default function Home() {
       {/* ========== DEALER OPPORTUNITY ========== */}
       <section data-testid="dealer-cta-section" className="kg-section relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={INDIA_MAP} alt="" className="w-full h-full object-cover opacity-30" />
+          <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
@@ -361,7 +361,7 @@ function ContactStrip() {
   };
 
   return (
-    <section data-testid="home-contact-section" className="kg-section bg-[#080808] border-t border-zinc-100 dark:border-zinc-900">
+    <section data-testid="home-contact-section" className="kg-section bg-surface-darker border-t border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12">
         <div>
           <div className="kg-eyebrow">Get in touch</div>
@@ -386,7 +386,7 @@ function ContactStrip() {
             </div>
           </div>
         </div>
-        <form onSubmit={submit} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-6 md:p-8 space-y-4">
+        <form onSubmit={submit} className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-6 md:p-8 space-y-4">
           <div className="grid grid-cols-2 gap-3">
             <div>
               <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Name*</Label>
@@ -482,7 +482,7 @@ function VideoCard({ video }) {
       data-testid={`home-video-${video.id}`}
       className="relative aspect-video overflow-hidden border border-zinc-200 dark:border-zinc-800 group cursor-pointer block bg-zinc-50 dark:bg-zinc-900"
     >
-      {thumb && <img src={thumb} alt={video.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
+      {thumb && <img src={thumb} alt={video.title} loading="lazy" className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
       <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/80 via-white/40 dark:via-black/40 to-transparent"/>
       <div className="absolute inset-0 grid place-items-center">
         <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition">
@@ -500,7 +500,7 @@ function VideoCard({ video }) {
 function TestimonialsSection({ reviews }) {
   const list = reviews && reviews.length > 0 ? reviews : TESTIMONIALS;
   return (
-    <section data-testid="testimonials-section" className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+    <section data-testid="testimonials-section" className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
       <div className="max-w-[1400px] mx-auto">
         <div className="kg-eyebrow">Voices from the field</div>
         <h2 className="kg-h2 mt-3 max-w-2xl">What our <span className="text-lime-500">farmers & dealers</span> say.</h2>
@@ -509,7 +509,7 @@ function TestimonialsSection({ reviews }) {
             <div key={t.id || `t-${i}`} data-testid={`testimonial-${i}`} className="kg-card p-6">
               {t.photo_url && (
                 <div className="h-14 w-14 overflow-hidden border border-zinc-200 dark:border-zinc-800 mb-4 bg-white">
-                  <img src={t.photo_url} alt={t.name} className="w-full h-full object-cover"/>
+                  <img src={t.photo_url} alt={t.name} loading="lazy" className="w-full h-full object-cover"/>
                 </div>
               )}
               {!t.photo_url && <Quote className="h-6 w-6 text-lime-500 mb-4" />}

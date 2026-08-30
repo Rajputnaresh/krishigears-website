@@ -14,7 +14,7 @@ export default function FloatingActions() {
         rel="noreferrer"
         onClick={() => trackWhatsAppClick("floating_button")}
         data-testid="floating-whatsapp-btn"
-        className="fixed bottom-6 right-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-[#25D366] text-zinc-900 dark:text-white shadow-2xl hover:scale-110 transition animate-pulse-lime"
+        className="fixed bottom-6 right-6 z-40 h-14 w-14 grid place-items-center rounded-full bg-whatsapp text-zinc-900 dark:text-white shadow-2xl hover:scale-110 transition animate-pulse-lime"
         aria-label="WhatsApp Chat"
       >
         <WhatsAppIcon className="h-7 w-7" />

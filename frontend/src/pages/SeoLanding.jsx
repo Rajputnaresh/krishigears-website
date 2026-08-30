@@ -137,7 +137,7 @@ export default function SeoLanding() {
       </section>
 
       {/* Why KrishiGears */}
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Partner Programs</div>
           <h2 className="kg-h2 mt-3 max-w-3xl">{supplyFocus} supply built for <span className="text-lime-500">B2B channels.</span></h2>
@@ -156,7 +156,7 @@ export default function SeoLanding() {
 
       {/* Internal Silo Links */}
       {page.city && (
-        <section className="kg-section bg-zinc-50 dark:bg-[#080808] border-t border-zinc-200 dark:border-zinc-800">
+        <section className="kg-section bg-zinc-50 dark:bg-surface-darker border-t border-zinc-200 dark:border-zinc-800">
           <div className="max-w-[1200px] mx-auto text-center">
             <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {page.city} Services</h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -191,7 +191,7 @@ export default function SeoLanding() {
       </section>
 
       {/* CTA */}
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1100px] mx-auto text-center">
           <h2 className="kg-h2 max-w-2xl mx-auto text-balance">Build a B2B supply plan for <span className="text-lime-500">{supplyFocus.toLowerCase()}</span>.</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

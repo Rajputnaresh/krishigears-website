@@ -18,7 +18,7 @@ export default function About() {
       </section>
 
       {/* Mission / Story */}
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="kg-eyebrow">Our Mission</div>
@@ -32,7 +32,7 @@ export default function About() {
           </div>
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="aspect-[5/4] overflow-hidden border border-zinc-200 dark:border-zinc-800">
-              <img src={FIELD_TRACTOR} alt="Farm" className="w-full h-full object-cover" />
+              <img src={FIELD_TRACTOR} alt="Farm" loading="lazy" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h2 max-w-3xl mx-auto text-balance">Ready to bring KrishiGears to <span className="text-lime-500">your district?</span></h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

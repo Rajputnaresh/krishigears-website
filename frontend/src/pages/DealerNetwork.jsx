@@ -17,7 +17,7 @@ export default function DealerNetwork() {
       {/* Hero */}
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
-          <img src={INDIA_MAP} alt="" className="w-full h-full object-cover opacity-30" />
+          <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
@@ -72,7 +72,7 @@ export default function DealerNetwork() {
       </section>
 
       {/* Benefits */}
-      <section className="kg-section bg-[#080808] border-y border-zinc-100 dark:border-zinc-900">
+      <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <div className="kg-eyebrow">Network Promise</div>
           <h2 className="kg-h2 mt-3 max-w-3xl">What our PAN India network <span className="text-lime-500">guarantees.</span></h2>

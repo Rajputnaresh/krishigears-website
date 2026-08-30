@@ -57,11 +57,11 @@ function ReviewList({ loading, reviews, onEdit, onDelete, onToggleActive }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {reviews.map((r) => (
-        <div key={r.id} className="border border-zinc-200 dark:border-zinc-800 bg-[#0F0F0F] p-5">
+        <div key={r.id} className="border border-zinc-200 dark:border-zinc-800 bg-surface-dark p-5">
           <div className="flex items-start gap-3">
             {r.photo_url && (
               <div className="h-16 w-16 overflow-hidden border border-zinc-200 dark:border-zinc-800 shrink-0 bg-white">
-                <img src={r.photo_url} alt={r.name} className="w-full h-full object-cover"/>
+                <img src={r.photo_url} alt={r.name} loading="lazy" className="w-full h-full object-cover"/>
               </div>
             )}
             <div className="flex-1 min-w-0">
@@ -115,7 +115,7 @@ function ReviewEditor({ open, setOpen, review, onSaved }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="bg-[#0A0A0A] border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-2xl">
+      <DialogContent className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white max-w-2xl">
         <DialogHeader><DialogTitle className="font-display text-2xl">{isEdit ? "Edit Review" : "Add Customer Review"}</DialogTitle></DialogHeader>
         <div className="space-y-4 mt-2">
           <div className="grid grid-cols-2 gap-3">
@@ -143,7 +143,7 @@ function ReviewEditor({ open, setOpen, review, onSaved }) {
           <div>
             <Label className="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Delivered Product Photo URL (optional)</Label>
             <Input data-testid="review-form-photo" value={form.photo_url} onChange={(e) => setForm({...form, photo_url: e.target.value})} placeholder="https://… (photo of the customer with delivered product)" className="bg-black border-zinc-200 dark:border-zinc-800 mt-1.5 font-mono text-xs"/>
-            {form.photo_url && <div className="mt-2 h-24 w-24 overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white"><img src={form.photo_url} alt="" className="w-full h-full object-cover"/></div>}
+            {form.photo_url && <div className="mt-2 h-24 w-24 overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white"><img src={form.photo_url} alt="" loading="lazy" className="w-full h-full object-cover"/></div>}
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>

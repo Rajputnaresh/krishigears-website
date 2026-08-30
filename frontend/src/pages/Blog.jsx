@@ -72,7 +72,7 @@ export default function Blog() {
               className="kg-card overflow-hidden flex flex-col"
             >
               <div className="aspect-[5/3] overflow-hidden">
-                <img src={p.cover_image} alt={p.title} className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+                <img src={p.cover_image} alt={p.title} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <div className="text-xs text-zinc-500 dark:text-zinc-500 flex items-center gap-2">

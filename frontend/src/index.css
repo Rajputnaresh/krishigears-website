@@ -66,13 +66,9 @@ body {
 
 /* Hide default scrollbar styling for a sleeker look */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #f4f4f5; }
-::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
-
-.dark ::-webkit-scrollbar-track { background: #0A0A0A; }
-.dark ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 6px; }
-.dark ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #27272A; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
 
 .text-balance { text-wrap: balance; }
 
@@ -87,7 +83,7 @@ body {
 .kg-h3 { @apply font-display font-bold text-xl sm:text-2xl tracking-tight; }
 
 .kg-card {
-    @apply border border-zinc-800 bg-[#141414] transition-all duration-300;
+    @apply border border-zinc-800 bg-surface transition-all duration-300;
 }
 .kg-card:hover {
     @apply border-lime-500/50 -translate-y-1;

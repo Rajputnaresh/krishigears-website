@@ -60,7 +60,7 @@ export default function ProductDetail() {
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6">
             <div className="aspect-square overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white">
-              <img src={product.images[active]} alt={product.name} className="w-full h-full object-contain p-4" />
+              <img src={product.images[active]} alt={product.name} loading="lazy" className="w-full h-full object-contain p-4" />
             </div>
             {product.images.length > 1 && (
               <div className="grid grid-cols-5 gap-2 mt-3">
@@ -71,7 +71,7 @@ export default function ProductDetail() {
                     data-testid={`product-thumb-${i}`}
                     className={`aspect-square overflow-hidden border ${active === i ? "border-lime-500" : "border-zinc-200 dark:border-zinc-800"}`}
                   >
-                    <img src={src} alt="" className="w-full h-full object-cover" />
+                    <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>
