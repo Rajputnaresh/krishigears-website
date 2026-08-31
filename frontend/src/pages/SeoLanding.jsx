@@ -57,7 +57,23 @@ export default function SeoLanding() {
     }
   }
 
-  if (!page) return <Navigate to="/" replace />;
+  if (!page) {
+    // Graceful fallback for any slug - format readable title
+    const readable = slug
+      ?.split("-")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ");
+
+    page = {
+      slug,
+      title: `${readable} - KrishiGears Machinery & Spare Parts`,
+      category: "power-weeders",
+      city: "",
+      state: "",
+      crop: null,
+      hindiTitle: `${readable} - कृषि उपकरण एवं स्पेयर पार्ट्स`,
+    };
+  }
 
   const category = page.category ? CATEGORIES.find((c) => c.slug === page.category) : null;
   const supplyFocus = category?.name || "Agricultural Machinery";

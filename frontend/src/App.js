@@ -28,6 +28,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const Warranty = lazy(() => import("@/pages/Warranty"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
+const Locations = lazy(() => import("@/pages/Locations"));
 const SeoLanding = lazy(() => import("@/pages/SeoLanding"));
 const SpareParts = lazy(() => import("@/pages/SpareParts"));
 const ServiceProblems = lazy(() => import("@/pages/ServiceProblems"));
@@ -105,6 +106,7 @@ const publicRouteTree = (
     <Route path="warranty-and-support" element={<Warranty />} />
     <Route path="blog" element={<Blog />} />
     <Route path="blog/:slug" element={<BlogPost />} />
+    <Route path="locations" element={<Locations />} />
     <Route path="seo/:slug" element={<SeoLanding />} />
     <Route path="spare-parts/:slug" element={<SpareParts />} />
     <Route path="service/:slug" element={<ServiceProblems />} />
