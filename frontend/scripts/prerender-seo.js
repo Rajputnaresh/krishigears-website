@@ -7,6 +7,7 @@ const indexPath = path.join(buildDir, "index.html");
 const catalogPath = path.join(rootDir, "src", "data", "catalog.js");
 const routeSeoPath = path.join(rootDir, "src", "components", "RouteSEO.jsx");
 const seedBlogPath = path.resolve(rootDir, "..", "backend", "seed_blog.py");
+const geoSeoPath = path.join(rootDir, "src", "data", "geoSeoComprehensive.js");
 
 const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
 const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
@@ -140,6 +141,14 @@ function parseBlogSlugs(seedBlogSource) {
   return [...seedBlogSource.matchAll(/"slug":\s*"([^"]+)"/g)].map((match) => match[1]);
 }
 
+function parseGeoSeoData(geoSeoSource) {
+  const body = section(geoSeoSource, "export const geoSeoData = [", "];");
+  return [...body.matchAll(/slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)"/g)].map((match) => ({
+    slug: match[1],
+    title: match[2],
+  }));
+}
+
 function farmingtoolsProductUrl(slug, category, productHandles, collectionHandles) {
   const productHandle = productHandles[slug];
   if (productHandle) return `${FARMINGTOOLS_URL}/products/${productHandle}`;
@@ -209,6 +218,9 @@ function main() {
   const routeSeoSource = read(routeSeoPath);
   const seedBlogSource = fs.existsSync(seedBlogPath) ? read(seedBlogPath) : "";
 
+  const geoSeoSource = fs.existsSync(geoSeoPath) ? read(geoSeoPath) : "";
+  const geoSeoPages = geoSeoSource ? parseGeoSeoData(geoSeoSource) : [];
+
   const categories = parseCategories(catalogSource);
   const products = parseProducts(catalogSource);
   const seoPages = parseSeoPages(catalogSource);
@@ -253,6 +265,14 @@ function main() {
     });
   }
 
+  for (const geo of geoSeoPages) {
+    routes.push({
+      path: `/seo/${geo.slug}`,
+      title: geo.title,
+      description: geo.title + " — KrishiGears authorized dealer and supplier network.",
+    });
+  }
+
   for (const slug of blogSlugs) {
     routes.push({
       path: `/blog/${slug}`,
@@ -273,7 +293,7 @@ function main() {
   const noindexCount = products.filter((product) => noindexProductSlugs.has(product.slug)).length;
   console.log(
     `Prerendered SEO metadata for ${routes.length} public routes ` +
-      `(${products.length} products, ${categories.length} categories, ${seoPages.length} SEO pages, ${blogSlugs.length} blog posts; ` +
+      `(${products.length} products, ${categories.length} categories, ${seoPages.length} SEO pages, ${geoSeoPages.length} geo-SEO pages, ${blogSlugs.length} blog posts; ` +
       `${canonicalCount} product canonicals, ${noindexCount} noindex products).`
   );
 }
