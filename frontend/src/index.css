@@ -86,8 +86,20 @@ body {
     @apply border border-zinc-800 bg-surface transition-all duration-300;
 }
 .kg-card:hover {
-    @apply border-lime-500/50 -translate-y-1;
-    box-shadow: 0 10px 40px -10px rgba(132, 204, 22, 0.2);
+    @apply border-lime-500/60 -translate-y-1.5;
+    box-shadow: 0 16px 48px -12px rgba(132, 204, 22, 0.25);
+}
+
+.lime-btn {
+    @apply bg-lime-500 hover:bg-lime-400 text-black font-bold transition-all duration-200 shadow-lg shadow-lime-500/20 hover:shadow-lime-500/35 hover:-translate-y-0.5 active:translate-y-0;
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+.animate-float {
+    animation: float-slow 4s ease-in-out infinite;
 }
 
 [data-debug-wrapper="true"] { display: contents !important; }
