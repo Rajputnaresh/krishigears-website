@@ -55,6 +55,10 @@ const STATIC_META = {
     description:
       "Register product warranty and get KrishiGears support for agricultural machinery, genuine spare parts and dealer service coordination.",
   },
+    "/locations": {
+    title: "All Supply Locations & Dealer Network Across India",
+    description: "Explore KrishiGears dealer network, machinery supply, and spare parts across thousands of agricultural regions in India.",
+  },
   "/blog": {
     title: "Agricultural Machinery Blog",
     description:
@@ -210,7 +214,7 @@ function writeRoute(baseHtml, meta) {
   fs.writeFileSync(outputPath, renderHtml(baseHtml, meta));
 }
 
-function main() {
+async function main() {
   if (!fs.existsSync(indexPath)) throw new Error("Build index.html not found. Run craco build first.");
 
   const baseHtml = read(indexPath);
@@ -283,10 +287,17 @@ function main() {
   }
 
   const seen = new Set();
-  for (const route of routes) {
-    if (seen.has(route.path)) throw new Error(`Duplicate prerender route: ${route.path}`);
-    seen.add(route.path);
-    writeRoute(baseHtml, route);
+  const chunkSize = 1000;
+  for (let i = 0; i < routes.length; i += chunkSize) {
+    const chunk = routes.slice(i, i + chunkSize);
+    for (const route of chunk) {
+      if (seen.has(route.path)) throw new Error(`Duplicate prerender route: ${route.path}`);
+      seen.add(route.path);
+      writeRoute(baseHtml, route);
+    }
+    console.log(`Processed chunk ${Math.floor(i / chunkSize) + 1} of ${Math.ceil(routes.length / chunkSize)}`);
+    // Yield to event loop to prevent memory overflow and allow GC
+    await new Promise(resolve => setTimeout(resolve, 0));
   }
 
   const canonicalCount = products.filter((product) => canonicalProductSlugs.has(product.slug)).length;
@@ -298,4 +309,4 @@ function main() {
   );
 }
 
-main();
+main().catch(e => { console.error(e); process.exit(1); });
