@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== TRUST SIGNALS BAR ========== */
+      {/* ========== TRUST SIGNALS BAR ========== */}
       <section className="bg-surface border-y border-zinc-200 dark:border-zinc-800 py-8">
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center text-center gap-3">
