@@ -228,7 +228,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== FEATURED PRODUCTS ========== */
+      {/* ========== FEATURED PRODUCTS ========== */}
       <section data-testid="featured-products-section" className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
