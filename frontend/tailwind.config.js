@@ -66,5 +66,5 @@ module.exports = {
             backgroundSize: { 'grid': '40px 40px' },
         }
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

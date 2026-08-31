@@ -1,6 +1,4 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
 import { Check, ArrowRight, MapPin } from "lucide-react";
 import { CATEGORIES, SEO_PAGES, COMPANY, HERO_BG, INDIA_MAP } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
@@ -8,17 +6,7 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 import { CITY_STATE_MAP } from "@/data/cityStateMap";
 
 export default function SeoLanding() {
-
   const { slug } = useParams();
-  const [fetchedPage, setFetchedPage] = useState(null);
-
-  useEffect(() => {
-    fetch(`/seo-data/${slug}.json`)
-      .then(res => res.json())
-      .then(data => setFetchedPage(data))
-      .catch(e => console.log('No extra SEO data found for', slug));
-  }, [slug]);
-
   
   // First check if it's a hardcoded national SEO page
   let page = SEO_PAGES.find(p => p.slug === slug);
@@ -164,18 +152,7 @@ export default function SeoLanding() {
         </div>
       </section>
 
-
-      {/* Rich Markdown SEO Content */}
-      {page.content && (
-        <section className="kg-section bg-white dark:bg-black border-y border-zinc-100 dark:border-zinc-900">
-          <div className="max-w-[1000px] mx-auto prose prose-zinc dark:prose-invert prose-lg px-6">
-            <ReactMarkdown>{page.content}</ReactMarkdown>
-          </div>
-        </section>
-      )}
-
       {/* Why KrishiGears */}
-
       <section className="kg-section bg-surface-darker border-y border-zinc-100 dark:border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Partner Programs</div>
