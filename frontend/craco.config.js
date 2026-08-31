@@ -34,10 +34,7 @@ let webpackConfig = {
     },
     configure: (webpackConfig) => {
       // Externalize the massive geoSeoComprehensive data to prevent bundle bloat
-      webpackConfig.externals = {
-        ...(webpackConfig.externals || {}),
-        '@/data/geoSeoComprehensive': 'geoSeoData'
-      };
+      
 
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {

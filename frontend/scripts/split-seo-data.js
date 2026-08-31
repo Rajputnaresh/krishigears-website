@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const srcPath = path.join(__dirname, '../src/data/geoSeoComprehensive.js');
+const srcPath = path.join(__dirname, '../scripts/geoSeoComprehensive.js');
 if (!fs.existsSync(srcPath)) {
   console.log("No geoSeoComprehensive.js found, skipping.");
   process.exit(0);

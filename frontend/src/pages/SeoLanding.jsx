@@ -87,7 +87,13 @@ export default function SeoLanding() {
     };
   }
 
+
+  if (fetchedPage) {
+    page = { ...page, ...fetchedPage };
+  }
+
   const category = page.category ? CATEGORIES.find((c) => c.slug === page.category) : null;
+
   const supplyFocus = category?.name || "Agricultural Machinery";
   const partnerTracks = [
     "Dealer territory onboarding",
