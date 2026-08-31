@@ -24,6 +24,33 @@ export default function SEO({
   const fullTitle = title ? `${title} | KrishiGears` : "KrishiGears — Bulk Supply, Dealer Network & OEM Distribution of Farm Machinery";
   const robotsContent = robots || (noindex ? "noindex, follow" : "index, follow, max-image-preview:large");
 
+  // JSON-LD Organization schema for rich snippets across all pages
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KrishiGears",
+    "url": "https://krishigears.com",
+    "logo": `${SITE}/logo512.png`,
+    "sameAs": [
+      "https://www.facebook.com/krishigears",
+      "https://www.instagram.com/krishigears",
+      "https://www.youtube.com/@krishigears"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-60060-78815",
+      "contactType": "sales & support",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  };
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -45,6 +72,11 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {/* Global Organization JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
 
       {children}
     </Helmet>

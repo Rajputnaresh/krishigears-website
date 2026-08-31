@@ -65,6 +65,7 @@ export default function Home() {
               To the <span className="text-lime-500">Farmer.</span>
               <span className="block text-zinc-500 dark:text-zinc-500 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.3em]">HAMESHA.</span>
             </h1>
+            <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
             <p className="mt-6 text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
               B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
             </p>
