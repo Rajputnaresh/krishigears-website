@@ -1,4 +1,5 @@
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Check, ArrowRight, MapPin, TrendingUp, Award, Users } from "lucide-react";
 import { COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
@@ -173,7 +174,7 @@ export default function DealerState() {
                 return (
                   <Link 
                     key={c} 
-                    to={`/seo/power-weeders-supplier-${citySlug}`}
+                    href={`/seo/power-weeders-supplier-${citySlug}`}
                     className="text-sm px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-lime-500 hover:text-lime-500 transition inline-flex items-center gap-1.5 rounded-md"
                   >
                     <MapPin className="h-3 w-3"/> {c} Dealers
@@ -195,7 +196,7 @@ export default function DealerState() {
             <EnquiryDialog product={`Dealer Application - ${stateName}`} trigger={
               <button className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">Apply Now <ArrowRight className="h-4 w-4"/></button>
             } />
-            <Link to="/become-a-dealer" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">General Application</Link>
+            <Link href="/become-a-dealer" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">General Application</Link>
           </div>
         </div>
       </section>

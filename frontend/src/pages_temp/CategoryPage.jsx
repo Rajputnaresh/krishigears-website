@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { CATEGORIES, COMPANY, farmingtoolsCategoryUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
@@ -25,7 +26,7 @@ export default function CategoryPage() {
     return (
       <div className="kg-section text-center">
         <h1 className="kg-h2">Category not found</h1>
-        <Link to="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ChevronRight className="h-4 w-4"/> All products</Link>
+        <Link href="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ChevronRight className="h-4 w-4"/> All products</Link>
       </div>
     );
   }
@@ -38,9 +39,9 @@ export default function CategoryPage() {
     <div data-testid="category-page" className="kg-section">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-500 mb-8">
-          <Link to="/" className="hover:text-lime-500">Home</Link>
+          <Link href="/" className="hover:text-lime-500">Home</Link>
           <ChevronRight className="h-3 w-3" />
-          <Link to="/products" className="hover:text-lime-500">Products</Link>
+          <Link href="/products" className="hover:text-lime-500">Products</Link>
           <ChevronRight className="h-3 w-3" />
           <span className="text-lime-500">{category.name}</span>
         </div>
@@ -66,10 +67,10 @@ export default function CategoryPage() {
               <EnquiryDialog product={category.name} trigger={
                 <button data-testid="cat-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Bulk / Dealer Inquiry</button>
               } />
-              <Link to="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/become-a-dealer" data-testid="cat-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Become Dealer
               </Link>
-              <Link to="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/bulk-order" data-testid="cat-institutional-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Institutional Supply
               </Link>
               <a

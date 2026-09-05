@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { MapPin, Search, ChevronRight, Building, Wrench } from "lucide-react";
 import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import SEO from "@/components/SEO";
@@ -128,13 +128,13 @@ export default function Locations() {
                     </div>
                     <div className="flex flex-col gap-1 text-[11px] text-zinc-400">
                       <Link
-                        to={`/seo/power-weeders-supplier-${item.slug}`}
+                        href={`/seo/power-weeders-supplier-${item.slug}`}
                         className="hover:text-lime-400 transition flex items-center gap-1"
                       >
                         • Power Weeders
                       </Link>
                       <Link
-                        to={`/seo/power-weeder-spare-parts-supplier-${item.slug}`}
+                        href={`/seo/power-weeder-spare-parts-supplier-${item.slug}`}
                         className="hover:text-lime-400 transition flex items-center gap-1"
                       >
                         • Spare Parts

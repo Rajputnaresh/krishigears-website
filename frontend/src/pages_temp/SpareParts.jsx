@@ -1,4 +1,5 @@
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Check, ArrowRight, MapPin, Wrench, Package, Phone } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
@@ -66,11 +67,11 @@ export default function SpareParts() {
 
       {location && state && (
         <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-500 relative z-10">
-          <Link to="/" className="hover:text-lime-500 transition">Home</Link>
+          <Link href="/" className="hover:text-lime-500 transition">Home</Link>
           <span>/</span>
-          <Link to="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
+          <Link href="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
           <span>/</span>
-          <Link to={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
+          <Link href={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
           <span>/</span>
           <span className="text-zinc-900 dark:text-zinc-300">{location} Spare Parts</span>
         </div>
@@ -154,10 +155,10 @@ export default function SpareParts() {
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {location} Resources</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to={`/seo/power-weeders-supplier-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+            <Link href={`/seo/power-weeders-supplier-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
               Power Weeder Dealers in {location}
             </Link>
-            <Link to={`/service/power-weeder-repair-service-in-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+            <Link href={`/service/power-weeder-repair-service-in-${citySlug}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
               Power Weeder Repair Service in {location}
             </Link>
           </div>

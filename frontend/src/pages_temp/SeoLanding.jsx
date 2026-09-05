@@ -1,4 +1,5 @@
-import { Link, useParams, Navigate } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Check, ArrowRight, MapPin } from "lucide-react";
@@ -129,11 +130,11 @@ export default function SeoLanding() {
 
       {page.city && page.state && (
         <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
-          <Link to="/" className="hover:text-lime-500 transition">Home</Link>
+          <Link href="/" className="hover:text-lime-500 transition">Home</Link>
           <span>/</span>
-          <Link to="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
+          <Link href="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
           <span>/</span>
-          <Link to={`/dealer/${page.state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{page.state}</Link>
+          <Link href={`/dealer/${page.state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{page.state}</Link>
           <span>/</span>
           <span className="text-zinc-900 dark:text-zinc-300">{page.city} Power Weeders</span>
         </div>
@@ -163,8 +164,8 @@ export default function SeoLanding() {
             <EnquiryDialog product={category?.name || page.title} trigger={
               <button data-testid="seo-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Bulk / Dealer Inquiry</button>
             } />
-            <Link to="/become-a-dealer" data-testid="seo-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Become Dealer</Link>
-            <Link to="/bulk-order" data-testid="seo-institutional-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Institutional Supply</Link>
+            <Link href="/become-a-dealer" data-testid="seo-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Become Dealer</Link>
+            <Link href="/bulk-order" data-testid="seo-institutional-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Institutional Supply</Link>
             <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("seo_landing", slug)} data-testid="seo-whatsapp-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Supply Desk</a>
           </div>
         </div>
@@ -205,10 +206,10 @@ export default function SeoLanding() {
           <div className="max-w-[1200px] mx-auto text-center">
             <h2 className="kg-h3 mb-6 text-zinc-900 dark:text-zinc-100">Other {page.city} Services</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to={`/service/power-weeder-repair-service-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+              <Link href={`/service/power-weeder-repair-service-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
                 Power Weeder Repair Service in {page.city}
               </Link>
-              <Link to={`/spare-parts/power-weeder-spare-parts-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+              <Link href={`/spare-parts/power-weeder-spare-parts-in-${page.city.toLowerCase().replace(/\s+/g, "-")}`} className="px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
                 Power Weeder Spare Parts in {page.city}
               </Link>
             </div>
@@ -241,10 +242,10 @@ export default function SeoLanding() {
           <h2 className="kg-h2 max-w-2xl mx-auto text-balance">Build a B2B supply plan for <span className="text-lime-500">{supplyFocus.toLowerCase()}</span>.</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {category && (
-              <Link to={`/products/category/${category.slug}`} data-testid="seo-view-products" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md inline-flex items-center gap-2">View Supply Category <ArrowRight className="h-4 w-4"/></Link>
+              <Link href={`/products/category/${category.slug}`} data-testid="seo-view-products" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md inline-flex items-center gap-2">View Supply Category <ArrowRight className="h-4 w-4"/></Link>
             )}
-            <Link to="/bulk-order" data-testid="seo-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Bulk Order Inquiry</Link>
-            <Link to="/dealer-network" data-testid="seo-network-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Dealer Network</Link>
+            <Link href="/bulk-order" data-testid="seo-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Bulk Order Inquiry</Link>
+            <Link href="/dealer-network" data-testid="seo-network-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Dealer Network</Link>
           </div>
         </div>
       </section>

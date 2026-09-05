@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Check, ChevronRight, ShieldCheck, Award, Truck, Wrench, Phone, FileText } from "lucide-react";
 import { CATEGORIES, COMPANY, farmingtoolsProductUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
@@ -44,7 +45,7 @@ export default function ProductDetail() {
       <div className="kg-section text-center">
         <h1 className="kg-h2">Product not found</h1>
         <p className="text-zinc-500 mt-3">The product you're looking for doesn't exist or has been moved.</p>
-        <Link to="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500 font-bold">
+        <Link href="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500 font-bold">
           <ChevronRight className="h-4 w-4" /> Browse all products
         </Link>
       </div>
@@ -64,11 +65,11 @@ export default function ProductDetail() {
       <div className="max-w-[1400px] mx-auto">
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-500 mb-8 flex-wrap">
-          <Link to="/" className="hover:text-lime-500">Home</Link>
+          <Link href="/" className="hover:text-lime-500">Home</Link>
           <ChevronRight className="h-3 w-3" />
-          <Link to="/products" className="hover:text-lime-500">Products</Link>
+          <Link href="/products" className="hover:text-lime-500">Products</Link>
           <ChevronRight className="h-3 w-3" />
-          <Link to={`/products/category/${category?.slug || ""}`} className="hover:text-lime-500">{category?.name || "Category"}</Link>
+          <Link href={`/products/category/${category?.slug || ""}`} className="hover:text-lime-500">{category?.name || "Category"}</Link>
           <ChevronRight className="h-3 w-3" />
           <span className="text-lime-500">{product.name}</span>
         </div>
@@ -137,10 +138,10 @@ export default function ProductDetail() {
                   </button>
                 }
               />
-              <Link to="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Become Dealer
               </Link>
-              <Link to="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
                 Institutional Supply
               </Link>
               <a
@@ -269,7 +270,7 @@ export default function ProductDetail() {
                 return (
                   <Link
                     key={p.slug}
-                    to={`/products/${p.slug}`}
+                    href={`/products/${p.slug}`}
                     data-testid={`related-product-${p.slug}`}
                     className="group border border-zinc-200 dark:border-zinc-800 bg-surface hover:border-lime-500/60 transition-all duration-300 overflow-hidden flex flex-col"
                   >

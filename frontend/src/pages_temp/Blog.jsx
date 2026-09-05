@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
@@ -67,7 +67,7 @@ export default function Blog() {
           {posts.map((p) => (
             <Link
               key={p.slug}
-              to={`/blog/${p.slug}`}
+              href={`/blog/${p.slug}`}
               data-testid={`blog-card-${p.slug}`}
               className="kg-card overflow-hidden flex flex-col"
             >

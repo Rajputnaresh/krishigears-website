@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CATEGORIES, FARMINGTOOLS_URL } from "@/data/catalog";
 
@@ -20,7 +20,7 @@ export default function Products() {
             return (
               <Link
                 key={c.slug}
-                to={`/products/category/${c.slug}`}
+                href={`/products/category/${c.slug}`}
                 data-testid={`products-cat-${c.slug}`}
                 className="kg-card group overflow-hidden flex flex-col"
               >
@@ -50,8 +50,8 @@ export default function Products() {
           </div>
           <div className="flex flex-wrap gap-3">
             <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">Buy Online</a>
-            <Link to="/bulk-order" data-testid="products-bulk-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
-            <Link to="/become-a-dealer" data-testid="products-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Become Dealer</Link>
+            <Link href="/bulk-order" data-testid="products-bulk-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
+            <Link href="/become-a-dealer" data-testid="products-dealer-link" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">Become Dealer</Link>
           </div>
         </div>
       </div>

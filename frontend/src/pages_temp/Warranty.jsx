@@ -1,6 +1,6 @@
 import { ShieldCheck, Phone, Wrench, FileCheck, Clock, Headphones, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { toast } from "sonner";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
@@ -77,7 +77,7 @@ export default function Warranty() {
           <div className="mt-12 border border-lime-500/30 bg-lime-500/5 p-8 text-center">
             <h3 className="font-display font-bold text-2xl">Need help with a specific machine?</h3>
             <p className="text-zinc-600 dark:text-zinc-400 mt-2">Share your invoice number and we'll get back within 24 hours.</p>
-            <Link to="/contact" data-testid="warranty-contact-cta" className="mt-6 inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">
+            <Link href="/contact" data-testid="warranty-contact-cta" className="mt-6 inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">
               Contact Support
             </Link>
           </div>

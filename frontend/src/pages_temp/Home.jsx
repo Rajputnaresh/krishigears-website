@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
   Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight
@@ -82,7 +82,7 @@ export default function Home() {
               </a>
               <div className="flex items-center gap-4">
                 <Link
-                  to="/become-a-dealer"
+                  href="/become-a-dealer"
                   data-testid="hero-dealer-btn"
                   className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-lime-500 text-sm font-medium transition"
                 >
@@ -90,7 +90,7 @@ export default function Home() {
                 </Link>
                 <span className="text-zinc-300 dark:text-zinc-700 hidden sm:inline">•</span>
                 <Link
-                  to="/bulk-order"
+                  href="/bulk-order"
                   data-testid="hero-bulk-btn"
                   className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-lime-500 text-sm font-medium transition"
                 >
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="kg-eyebrow">Our Range</div>
               <h2 className="kg-h2 mt-3">Built for every <span className="text-lime-500">Indian farm.</span></h2>
             </div>
-            <Link to="/products" data-testid="all-products-link" className="text-sm text-lime-500 hover:text-lime-400 flex items-center gap-1 font-bold">
+            <Link href="/products" data-testid="all-products-link" className="text-sm text-lime-500 hover:text-lime-400 flex items-center gap-1 font-bold">
               View all products <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
               return (
                 <Link
                   key={c.slug}
-                  to={`/products/category/${c.slug}`}
+                  href={`/products/category/${c.slug}`}
                   data-testid={`cat-card-${c.slug}`}
                   className={`relative group overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-surface hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
                 >
@@ -181,7 +181,7 @@ export default function Home() {
               return (
                 <Link
                   key={c.slug}
-                  to={`/products/category/${c.slug}`}
+                  href={`/products/category/${c.slug}`}
                   data-testid={`cat-tile-${c.slug}`}
                   className="md:col-span-3 p-5 border border-zinc-200 dark:border-zinc-800 bg-surface-dark hover:bg-surface hover:border-lime-500/40 hover:-translate-y-1 transition-all"
                 >
@@ -282,7 +282,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <Link to="/about" data-testid="about-learn-more" className="mt-8 inline-flex items-center gap-2 text-lime-500 font-bold hover:gap-3 transition-all">
+            <Link href="/about" data-testid="about-learn-more" className="mt-8 inline-flex items-center gap-2 text-lime-500 font-bold hover:gap-3 transition-all">
               Learn more about us <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -340,10 +340,10 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
+              <Link href="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
                 Apply as Dealer <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link to="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
+              <Link href="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-300 dark:border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
                 View Network
               </Link>
             </div>

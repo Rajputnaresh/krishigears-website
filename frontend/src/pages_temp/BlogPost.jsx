@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
@@ -119,7 +120,7 @@ export default function BlogPost() {
     return (
       <div className="kg-section text-center">
         <h1 className="kg-h2">Article not found</h1>
-        <Link to="/blog" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ArrowLeft className="h-4 w-4"/> Back to Blog</Link>
+        <Link href="/blog" className="mt-6 inline-flex items-center gap-2 text-lime-500"><ArrowLeft className="h-4 w-4"/> Back to Blog</Link>
       </div>
     );
   }
@@ -128,7 +129,7 @@ export default function BlogPost() {
   return (
     <article data-testid="blog-post-page" className="kg-section">
       <div className="max-w-[800px] mx-auto">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><ArrowLeft className="h-4 w-4"/> All articles</Link>
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500"><ArrowLeft className="h-4 w-4"/> All articles</Link>
         <div className="mt-8 text-xs text-zinc-500 dark:text-zinc-500 flex items-center gap-2">
           <Calendar className="h-3.5 w-3.5"/> {new Date(post.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
         </div>
