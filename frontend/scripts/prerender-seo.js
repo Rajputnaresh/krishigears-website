@@ -7,7 +7,7 @@ const indexPath = path.join(buildDir, "index.html");
 const catalogPath = path.join(rootDir, "src", "data", "catalog.js");
 const routeSeoPath = path.join(rootDir, "src", "components", "RouteSEO.jsx");
 const seedBlogPath = path.resolve(rootDir, "..", "backend", "seed_blog.py");
-const geoSeoPath = path.join(rootDir, "src", "data", "geoSeoComprehensive.js");
+const geoSeoPath = path.join(rootDir, "scripts", "geoSeoComprehensive.js");
 
 const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
 const FARMINGTOOLS_URL = (process.env.REACT_APP_FARMINGTOOLS_URL || process.env.NEXT_PUBLIC_FARMINGTOOLS_URL || "https://farmingtools.in").replace(/\/$/, "");
