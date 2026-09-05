@@ -115,6 +115,13 @@
     h1, h2, h3, h4, h5, h6 {
         @apply font-display tracking-tight;
     }
+    input, textarea, select {
+        caret-color: #84cc16;
+    }
+    :focus-visible {
+        outline: 2px solid #84cc16;
+        outline-offset: 2px;
+    }
 }
 
 ::selection { background: #84cc16; color: #000; }

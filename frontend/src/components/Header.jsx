@@ -192,9 +192,21 @@ export default function Header() {
 
               {/* Mobile Language Switcher */}
               <div className="flex justify-around py-4 border-b border-zinc-800">
-                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>EN</button>
-                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>HI</button>
-                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>MR</button>
+                {(['en', 'hi', 'mr']).map((lang) => {
+                  const isActive = i18n.language === lang;
+                  return (
+                    <button
+                      key={lang}
+                      onClick={() => { switchLanguage(lang); setOpen(false); }}
+                      className={isActive
+                        ? "px-4 py-2 text-sm rounded bg-lime-500 text-black font-bold"
+                        : "px-4 py-2 text-sm rounded border border-zinc-700 bg-transparent text-zinc-100 hover:text-white"
+                      }
+                    >
+                      {lang.toUpperCase()}
+                    </button>
+                  );
+                })}
               </div>
 
               {NAV.map((item) => (
