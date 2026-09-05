@@ -1,14 +1,40 @@
 "use client";
-import { Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Phone, ArrowUp } from "lucide-react";
 import { COMPANY } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 export default function FloatingActions() {
-  const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hello KrishiGears, I am interested in your products.")}`;
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hello KrishiGears, I am interested in B2B machinery supply.")}&utm_source=krishigears_web&utm_medium=floating_cta&utm_campaign=direct_inquiry`;
 
   return (
     <>
+      {/* Scroll to top button */}
+      {showTop && (
+        <button
+          onClick={scrollToTop}
+          aria-label="Scroll back to top"
+          className="fixed bottom-24 md:bottom-24 right-5 z-40 h-10 w-10 grid place-items-center rounded-full bg-zinc-900/90 border border-zinc-700 text-lime-400 hover:text-white hover:bg-zinc-800 shadow-xl transition active:scale-95"
+        >
+          <ArrowUp className="h-4 w-4" />
+        </button>
+      )}
+
       {/* Desktop floating WhatsApp */}
       <a
         href={waLink}

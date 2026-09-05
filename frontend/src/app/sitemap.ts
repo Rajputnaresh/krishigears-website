@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import locationsData from '@/data/locations.json';
 import { BLOG_POSTS_ARRAY } from '@/data/blogPosts';
+import { PRODUCTS, CATEGORIES as ALL_CATEGORIES } from '@/data/catalog';
 
 const SITE_URL = 'https://krishigears.com';
 
@@ -69,6 +70,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ];
+
+  // Add individual product URLs
+  PRODUCTS.forEach((prod) => {
+    sitemapUrls.push({
+      url: `${SITE_URL}/products/${prod.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    });
+  });
+
+  // Add category URLs
+  ALL_CATEGORIES.forEach((cat) => {
+    sitemapUrls.push({
+      url: `${SITE_URL}/products/category/${cat.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+  });
+
+  // Add State Dealer Hub URLs
+  const STATES = [
+    'andhra-pradesh', 'assam', 'bihar', 'chhattisgarh', 'goa', 'gujarat',
+    'haryana', 'himachal-pradesh', 'jharkhand', 'karnataka', 'kerala',
+    'madhya-pradesh', 'maharashtra', 'odisha', 'punjab', 'rajasthan',
+    'tamil-nadu', 'telangana', 'uttar-pradesh', 'uttarakhand', 'west-bengal'
+  ];
+  STATES.forEach((st) => {
+    sitemapUrls.push({
+      url: `${SITE_URL}/dealer/${st}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+  });
 
   // Add all individual blog post URLs
   BLOG_POSTS_ARRAY.forEach((p) => {
