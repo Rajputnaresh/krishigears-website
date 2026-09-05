@@ -48,7 +48,7 @@ export default function BlogPost({ initialPost } = {}) {
   if (loading) {
     return (
       <div className="kg-section py-24 text-center">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-lime-500 mb-4"></div>
+        <div className="inline-block animate-spin h-8 w-8 border-t-2 border-lime-500 mb-4"></div>
         <p className="text-zinc-400 text-sm">Loading field guide…</p>
       </div>
     );
@@ -160,7 +160,7 @@ export default function BlogPost({ initialPost } = {}) {
                 <code className="text-xs font-mono bg-zinc-900 text-lime-400 px-1.5 py-0.5 rounded border border-zinc-800" {...props} />
               ),
               blockquote: ({ node, ...props }) => (
-                <blockquote className="my-6 p-4 rounded-r-lg bg-lime-500/5 border-l-4 border-lime-500 text-zinc-300 italic text-sm" {...props} />
+                <blockquote className="my-6 p-4 bg-lime-500/5 border-l-2 border-lime-500/50 text-zinc-300 italic text-sm" {...props} />
               ),
               table: ({ node, ...props }) => (
                 <div className="overflow-x-auto my-8 border border-zinc-800 rounded-xl bg-zinc-950/80 shadow-lg">
