@@ -8,6 +8,7 @@ import {
 import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, FARMINGTOOLS_URL, PRODUCTS } from "@/data/catalog";
 import locationsData from "@/data/locations.json";
 import ProductCard from "@/components/ProductCard";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { useEffect, useState, useMemo } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
@@ -80,38 +81,36 @@ export default function Home() {
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
             <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
-              Direct OEM machinery supply, dealer network distribution, bulk procurement and genuine spare parts across India.
+              सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6">
+            <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
               <Link
                 href="/products"
                 data-testid="hero-explore-products"
-                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/20"
+                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/25 active:scale-95 text-base"
               >
-                Explore Machinery Range
+                मशीनें देखें / Explore Range
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
               </Link>
-              <div className="flex items-center gap-3">
-                <Link
-                  href="/become-a-dealer"
-                  data-testid="hero-dealer-btn"
-                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/80 hover:border-lime-500/60 px-5 py-3.5 rounded-md"
-                >
-                  Become a Dealer
-                </Link>
-                <Link
-                  href="/bulk-order"
-                  data-testid="hero-bulk-btn"
-                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/80 hover:border-lime-500/60 px-5 py-3.5 rounded-md"
-                >
-                  Bulk Inquiry
-                </Link>
-              </div>
+              <Link
+                href="/become-a-dealer"
+                data-testid="hero-dealer-btn"
+                className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/90 hover:border-lime-500/60 px-6 py-4 rounded-md shadow-md"
+              >
+                डीलरशिप आवेदन / Become a Dealer
+              </Link>
+              <Link
+                href="/bulk-order"
+                data-testid="hero-bulk-btn"
+                className="inline-flex items-center gap-2 text-zinc-300 hover:text-white text-xs font-semibold transition border border-zinc-800 bg-zinc-950/60 hover:border-zinc-600 px-4 py-3.5 rounded-md"
+              >
+                Bulk / FPO Order
+              </Link>
             </div>
 
             {/* Clear retail handoff note */}
-            <div className="mt-5 inline-flex items-center gap-2 text-xs text-zinc-400 bg-black/60 border border-zinc-800 px-3.5 py-1.5 rounded-full">
-              <span>Individual farmer looking for 1 machine?</span>
+            <div className="mt-6 inline-flex items-center gap-2 text-xs text-zinc-300 bg-zinc-950/80 border border-zinc-800 px-4 py-2 rounded-full shadow-inner">
+              <span className="text-zinc-400">1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):</span>
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
@@ -119,7 +118,7 @@ export default function Home() {
                 data-testid="hero-buy-online"
                 className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2"
               >
-                Order retail online on FarmingTools.in <ArrowRight className="h-3 w-3" />
+                FarmingTools.in पर खरीदें <ArrowRight className="h-3 w-3" />
               </a>
             </div>
 
@@ -473,14 +472,30 @@ function ContactStrip() {
             </div>
           )}
 
-          <button
-            type="submit"
-            disabled={loading}
-            data-testid="home-contact-submit"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition shadow-lg shadow-lime-500/20 disabled:opacity-50 text-sm tracking-wide"
-          >
-            {loading ? "Sending..." : "Request Price & Specs"}
-          </button>
+          <div className="space-y-2 pt-1">
+            <button
+              type="submit"
+              disabled={loading}
+              data-testid="home-contact-submit"
+              className="w-full min-h-[48px] bg-lime-500 hover:bg-lime-400 text-black font-bold py-3 rounded-md transition shadow-lg shadow-lime-500/20 disabled:opacity-50 text-sm tracking-wide active:scale-[0.99]"
+            >
+              {loading ? "भेज रहे हैं / Sending..." : "कीमत व कोटेशन प्राप्त करें / Request Price & Specs"}
+            </button>
+            <div className="relative flex py-1 items-center">
+              <div className="flex-grow border-t border-zinc-800"></div>
+              <span className="flex-shrink mx-3 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">या सीधे व्हाट्सएप पर / Or on WhatsApp</span>
+              <div className="flex-grow border-t border-zinc-800"></div>
+            </div>
+            <a
+              href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और स्पेयर पार्ट्स की थोक कीमत / डीलरशिप जानकारी चाहिए।")}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackWhatsAppClick("contact_strip_quick")}
+              className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide"
+            >
+              <WhatsAppIcon className="h-4 w-4" /> 1-Tap WhatsApp Quotation Desk
+            </a>
+          </div>
         </form>
       </div>
     </section>

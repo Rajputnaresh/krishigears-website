@@ -165,3 +165,54 @@
 }
 
 [data-debug-wrapper="true"] { display: contents !important; }
+
+/* Sunlight / Outdoor High-Contrast Mode (धूप मोड) */
+html.sunlight {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 9%;
+    --border: 0 0% 88%;
+    --color-surface: #F4F4F5;
+    --color-surface-dark: #E4E4E7;
+    --color-surface-darker: #F4F4F5;
+    --color-surface-darkest: #E4E4E7;
+}
+
+html.sunlight body {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+}
+
+html.sunlight .kg-card {
+    background-color: #FAFAFA !important;
+    border-color: #E4E4E7 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+html.sunlight .bg-surface-darker,
+html.sunlight .bg-surface-darkest,
+html.sunlight .bg-surface-dark,
+html.sunlight .bg-zinc-950,
+html.sunlight .bg-zinc-900 {
+    background-color: #F8F9FA !important;
+    border-color: #E4E4E7 !important;
+}
+
+html.sunlight .text-zinc-100,
+html.sunlight .text-zinc-200,
+html.sunlight .text-zinc-50,
+html.sunlight .text-white {
+    color: #09090B !important;
+}
+
+html.sunlight .text-zinc-300,
+html.sunlight .text-zinc-400 {
+    color: #3F3F46 !important;
+}
+
+html.sunlight .border-zinc-800,
+html.sunlight .border-zinc-700,
+html.sunlight .border-zinc-900 {
+    border-color: #E4E4E7 !important;
+}

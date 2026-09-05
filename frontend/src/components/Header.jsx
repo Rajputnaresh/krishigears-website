@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown, Globe, Headphones } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Globe, Headphones, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
@@ -27,21 +27,27 @@ export default function Header() {
   const navigate = useRouter();
   const location = { pathname: usePathname(), search: "" };
   const [open, setOpen] = useState(false);
+  const [sunlight, setSunlight] = useState(false);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'd') {
-        e.preventDefault();
-        navigate('/become-a-dealer');
-      }
-      if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
-        e.preventDefault();
-        navigate('/products');
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [navigate]);
+    const isSun = localStorage.getItem("kg_sunlight_mode") === "true";
+    if (isSun) {
+      setSunlight(true);
+      document.documentElement.classList.add("sunlight");
+    }
+  }, []);
+
+  const toggleSunlight = () => {
+    const next = !sunlight;
+    setSunlight(next);
+    if (next) {
+      document.documentElement.classList.add("sunlight");
+      localStorage.setItem("kg_sunlight_mode", "true");
+    } else {
+      document.documentElement.classList.remove("sunlight");
+      localStorage.setItem("kg_sunlight_mode", "false");
+    }
+  };
 
   const switchLanguage = (langCode) => {
     const currentPath = location.pathname;
@@ -162,11 +168,26 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          {/* Sunlight / Outdoor Mode Toggle */}
+          <button
+            onClick={toggleSunlight}
+            data-testid="header-sunlight-toggle"
+            aria-label="Toggle Outdoor Sunlight Mode"
+            title={sunlight ? "Switch to Dark Mode" : "Switch to Outdoor Sunlight Mode (धूप मोड)"}
+            className={`px-3 py-2 text-xs font-bold rounded-md transition flex items-center gap-1.5 border ${
+              sunlight
+                ? "bg-amber-100 text-amber-950 border-amber-300 shadow-sm"
+                : "bg-zinc-900/90 text-zinc-300 border-zinc-700 hover:text-white hover:border-lime-500"
+            }`}
+          >
+            <Sun className={`h-4 w-4 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
+            <span>{sunlight ? "धूप मोड ON" : "धूप मोड"}</span>
+          </button>
+
           <Link
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"
-            title="Become a Dealer (⌘D)"
-            className="ml-2 px-5 py-2.5 bg-lime-500 text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2 shadow-lg shadow-lime-500/20"
+            className="ml-1 px-5 py-2.5 bg-lime-500 text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2 shadow-lg shadow-lime-500/20"
           >
             Become a Dealer
           </Link>
@@ -191,23 +212,39 @@ export default function Header() {
             </div>
             <nav className="p-6 flex flex-col gap-1">
 
-              {/* Mobile Language Switcher */}
-              <div className="flex justify-around py-4 border-b border-zinc-800">
-                {(['en', 'hi', 'mr']).map((lang) => {
-                  const isActive = i18n.language === lang;
-                  return (
-                    <button
-                      key={lang}
-                      onClick={() => { switchLanguage(lang); setOpen(false); }}
-                      className={isActive
-                        ? "px-4 py-2 text-sm rounded bg-lime-500 text-black font-bold"
-                        : "px-4 py-2 text-sm rounded border border-zinc-700 bg-transparent text-zinc-100 hover:text-white"
-                      }
-                    >
-                      {lang.toUpperCase()}
-                    </button>
-                  );
-                })}
+              {/* Mobile Controls: Language & Sunlight Mode */}
+              <div className="py-4 border-b border-zinc-800 space-y-3">
+                <div className="flex justify-between items-center gap-2">
+                  <div className="flex flex-1 justify-between gap-1">
+                    {(['en', 'hi', 'mr']).map((lang) => {
+                      const isActive = i18n.language === lang;
+                      return (
+                        <button
+                          key={lang}
+                          onClick={() => { switchLanguage(lang); setOpen(false); }}
+                          className={`flex-1 min-h-[44px] text-sm rounded font-bold transition ${
+                            isActive
+                              ? "bg-lime-500 text-black shadow-md shadow-lime-500/20"
+                              : "border border-zinc-700 bg-zinc-900 text-zinc-200 hover:text-white"
+                          }`}
+                        >
+                          {lang.toUpperCase()}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <button
+                    onClick={toggleSunlight}
+                    className={`px-3 min-h-[44px] text-xs font-bold rounded flex items-center gap-1.5 transition border ${
+                      sunlight
+                        ? "bg-amber-100 text-amber-950 border-amber-300"
+                        : "bg-zinc-900 text-zinc-200 border-zinc-700 hover:border-lime-500"
+                    }`}
+                  >
+                    <Sun className={`h-4 w-4 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
+                    <span>{sunlight ? "धूप ON" : "धूप मोड"}</span>
+                  </button>
+                </div>
               </div>
 
               {NAV.map((item) => (
