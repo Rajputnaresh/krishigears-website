@@ -34,7 +34,7 @@ const DEALER_BENEFITS = [
   { icon: "💰", title: "Direct Factory Economics", desc: "Industry-leading margins because we operate a zero-warehouse, factory-direct supply chain" },
   { icon: "📦", title: "On-Demand Dispatch", desc: "No dead stock. Order directly from our supplier network only when you have a confirmed sale" },
   { icon: "🚚", title: "Documented Supply Network", desc: "Full GST invoicing, e-way bills, and transit tracking directly to your showroom" },
-  { icon: "🛠️", title: "Technical Support", desc: "Access to our OEM parts network and technical troubleshooting for RK-series engines" },
+  { icon: "🛠️", title: "Technical Support", desc: "Access to our OEM parts network and technical troubleshooting for KG- engines" },
   { icon: "📢", title: "Local Geo-SEO Leads", desc: "We route inquiries generated from our digital platform directly to your dealership" },
   { icon: "📋", title: "Exclusive Territory Protection", desc: "Single authorized supply node per district. No overlap. Your customers, your business" },
 ];
@@ -44,7 +44,7 @@ const DEALER_REQUIREMENTS = [
   "Commitment to the On-Demand ordering model (No bulk speculative stocking required)",
   "GST registration and active PAN card",
   "Two-wheeler for local service calls and field demonstrations",
-  "Ability to handle basic RK-series engine and rotary maintenance",
+  "Ability to handle basic KG- engine and rotary maintenance",
   "Working capital for placing on-demand supplier orders",
 ];
 

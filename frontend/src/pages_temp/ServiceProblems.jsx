@@ -8,9 +8,9 @@ import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import { pickRandom } from "@/lib/random";
 
 const ALL_ENGINE_PROBLEMS = [
-  { issue: "RK-170F 7HP Petrol won't start in morning", causes: ["Choke not engaged", "Fuel valve closed", "Carburetor bowl dry", "Spark plug carbon fouled"] },
-  { issue: "RK-173F 5.5HP Diesel starting trouble (Cold)", causes: ["Decompression lever not used", "Air trapped in diesel line", "Fuel filter clogged with sludge", "Low compression"] },
-  { issue: "RK-ICD-UP186-SH 10HP engine stalls under load", causes: ["Fuel delivery restricted", "Air filter soaked in oil/dust", "Valve clearance too tight", "Governor spring weak"] },
+  { issue: "KG- 7HP Petrol won't start in morning", causes: ["Choke not engaged", "Fuel valve closed", "Carburetor bowl dry", "Spark plug carbon fouled"] },
+  { issue: "KG- 5.5HP Diesel starting trouble (Cold)", causes: ["Decompression lever not used", "Air trapped in diesel line", "Fuel filter clogged with sludge", "Low compression"] },
+  { issue: "KG- 10HP engine stalls under load", causes: ["Fuel delivery restricted", "Air filter soaked in oil/dust", "Valve clearance too tight", "Governor spring weak"] },
   { issue: "Black smoke from exhaust (Diesel models)", causes: ["Overloading in heavy wet soil", "Air filter blocked", "Fuel injector nozzle dripping", "Poor diesel quality"] },
   { issue: "White smoke / Blue smoke (Petrol models)", causes: ["Oil level too high", "Piston rings worn out", "Engine tilted too far during operation", "Head gasket failure"] },
   { issue: "Engine overheating after 30 mins", causes: ["Cooling fins blocked with mud/crop residue", "Low engine oil", "Running at max RPM continuously without load", "Lean fuel mixture"] },

@@ -285,7 +285,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
           <Section title="Basic Information">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <Field label="Product Name*" testid="pe-name" value={form.name} onChange={update("name")}/>
-              <Field label="Model Number" testid="pe-model" value={form.model} onChange={update("model")} placeholder="e.g. RK-170F"/>
+              <Field label="Model Number" testid="pe-model" value={form.model} onChange={update("model")} placeholder="e.g. KG-"/>
               <Field label="Slug (URL)" testid="pe-slug" value={form.slug} onChange={update("slug")} disabled={isEdit} placeholder={autoSlug(form.name) || "auto-from-name"}/>
               <div>
                 <Label className="text-xs uppercase tracking-wider text-zinc-300">Category*</Label>

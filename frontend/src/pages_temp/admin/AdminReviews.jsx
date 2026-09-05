@@ -148,7 +148,7 @@ function ReviewEditor({ open, setOpen, review, onSaved }) {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <Label className="text-xs uppercase tracking-wider text-zinc-300">Link to Product (slug, optional)</Label>
-              <Input data-testid="review-form-product" value={form.product_slug} onChange={(e) => setForm({...form, product_slug: e.target.value})} placeholder="e.g. rk-170f" className="bg-black border-zinc-800 mt-1.5"/>
+              <Input data-testid="review-form-product" value={form.product_slug} onChange={(e) => setForm({...form, product_slug: e.target.value})} placeholder="e.g. kg-170f" className="bg-black border-zinc-800 mt-1.5"/>
             </div>
             <div>
               <Label className="text-xs uppercase tracking-wider text-zinc-300">Sort Order</Label>

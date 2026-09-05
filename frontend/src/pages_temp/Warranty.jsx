@@ -146,7 +146,7 @@ function RegisterWarrantySection() {
             <Field label="Owner Name*" testid="warranty-owner" value={form.owner_name} onChange={update("owner_name")} />
             <Field label="Phone*" testid="warranty-phone" value={form.phone} onChange={update("phone")} />
             <Field label="Email" testid="warranty-email" value={form.email} onChange={update("email")} />
-            <Field label="Product Model*" testid="warranty-model" value={form.product_model} onChange={update("product_model")} placeholder="e.g. RK-170F"/>
+            <Field label="Product Model*" testid="warranty-model" value={form.product_model} onChange={update("product_model")} placeholder="e.g. KG-"/>
             <Field label="Serial Number" testid="warranty-serial" value={form.serial_number} onChange={update("serial_number")} />
             <Field label="Purchase Date" testid="warranty-date" type="date" value={form.purchase_date} onChange={update("purchase_date")} />
             <Field label="Dealer / Shop Name" testid="warranty-dealer" value={form.dealer_name} onChange={update("dealer_name")} />

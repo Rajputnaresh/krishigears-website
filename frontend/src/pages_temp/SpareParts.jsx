@@ -8,7 +8,7 @@ import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import { pickRandom } from "@/lib/random";
 
 const ALL_SPARE_CATEGORIES = [
-  { name: "Engine Core Components", icon: "⚙️", items: ["Piston & Ring Set (RK-170F/RK-177F)", "Cylinder Block Assembly", "Crankshaft with Bearings", "Camshaft Assembly", "Spark Plug (NGK BP6ES)", "Carburetor Assembly", "Fuel Injector Nozzle (Diesel)", "Flywheel", "Ignition Coil / Magneto"] },
+  { name: "Engine Core Components", icon: "⚙️", items: ["Piston & Ring Set (KG-/KG-)", "Cylinder Block Assembly", "Crankshaft with Bearings", "Camshaft Assembly", "Spark Plug (NGK BP6ES)", "Carburetor Assembly", "Fuel Injector Nozzle (Diesel)", "Flywheel", "Ignition Coil / Magneto"] },
   { name: "Transmission & Drivetrain", icon: "🔗", items: ["Cast Iron Gearbox Housing", "Clutch Shoe Friction Pads (Heavy Duty)", "V-Belt (B-Section)", "Drive Shaft (Hexagonal)", "Tensioner Pulley Set", "Bearing Set (6203/6205/6206)", "Chain & Sprocket (Baby Weeder)", "Clutch Cable Assembly"] },
   { name: "Blades & Tillage Attachments", icon: "🔪", items: ["Dry Land Blades (L-Type, High Carbon)", "Wetland Paddy Blades (C-Type)", "Serrated Deep Tilling Blades", "Rotary Tiller Hub", "Blade Carrier Plate", "Skid Plate / Depth Bar", "Ridger Attachment", "Ditcher Plow"] },
   { name: "Consumables & Maintenance", icon: "🛢️", items: ["Air Filter Element (Foam/Paper)", "Fuel Filter (Inline/Tank)", "Engine Oil Filter", "Recoil Starter Rope (Nylon)", "Recoil Spring", "SAE 90 Gear Oil (1L)", "20W40 Engine Oil", "Carburetor Cleaning Kit"] },
@@ -20,7 +20,7 @@ const SERVICE_OFFERINGS = [
   "OEM guaranteed fitment for KrishiGears models",
   "Next-day dispatch for critical breakdown parts",
   "Wholesale pricing for local dealers & mechanics",
-  "Genuine RK-series engine components",
+  "Genuine KG- engine components",
   "Field-tested high carbon rotary blades",
   "Direct factory-to-farm supply chain",
 ];
@@ -91,7 +91,7 @@ export default function SpareParts() {
             {vernacularHeadline}
           </h2>
           <p className="text-zinc-200 mt-6 max-w-2xl leading-relaxed text-lg">
-            Direct supply of genuine high-carbon blades, RK-series engine components, gearboxes, and
+            Direct supply of genuine high-carbon blades, KG- engine components, gearboxes, and
             maintenance kits for power weeders in {location}. We support local mechanics, dealers, and
             farmers with guaranteed OEM fitment.
           </p>
