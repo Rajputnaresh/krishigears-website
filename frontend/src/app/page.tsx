@@ -720,7 +720,7 @@ function DistrictLocator() {
 
         {filteredDistricts.length === 0 && (
           <div className="text-center py-12 border border-zinc-800 rounded-lg bg-zinc-950">
-            <p className="text-zinc-300 text-sm">No districts matched "{searchTerm}". KrishiGears delivers PAN India.</p>
+            <p className="text-zinc-300 text-sm">No districts matched &quot;{searchTerm}&quot;. KrishiGears delivers PAN India.</p>
             <Link
               href="/dealer-network"
               className="mt-3 inline-block text-xs text-lime-400 font-bold hover:underline"

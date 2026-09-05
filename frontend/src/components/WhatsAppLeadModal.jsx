@@ -36,7 +36,9 @@ export default function WhatsAppLeadModal({
         product: requirement,
         message: `Triggered WhatsApp Pre-flight Modal from ${source}`,
       }).catch(() => {});
-    } catch (_) {}
+    } catch {
+      // Ignore CRM lead logging errors on static client
+    }
 
     // 2. Track analytics conversion event
     trackWhatsAppClick(source, requirement);

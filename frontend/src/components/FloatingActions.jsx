@@ -4,7 +4,7 @@ import { Phone, ArrowUp } from "lucide-react";
 import { COMPANY } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
-import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
+import { trackPhoneClick } from "@/lib/analytics";
 
 export default function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
@@ -20,8 +20,6 @@ export default function FloatingActions() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hello KrishiGears, I am interested in B2B machinery supply.")}&utm_source=krishigears_web&utm_medium=floating_cta&utm_campaign=direct_inquiry`;
 
   return (
     <>

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BadgeCheck } from "lucide-react";
-import { CATEGORIES, COMPANY, LOGO_URL, TESTIMONIALS } from "@/data/catalog";
+import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
