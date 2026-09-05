@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ChevronRight } from "lucide-react";
-import { CATEGORIES, COMPANY, farmingtoolsCategoryUrl } from "@/data/catalog";
+import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsCategoryUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -17,9 +17,18 @@ export default function CategoryPage() {
   useEffect(() => {
     if (!category) return;
     setItems(null);
+    const localMatches = PRODUCTS.filter((p) => p.category === slug);
+
     apiClient.get(`/products?category=${slug}`)
-      .then((res) => setItems(Array.isArray(res.data) ? res.data : []))
-      .catch(() => setItems([]));
+      .then((res) => {
+        const list = Array.isArray(res.data) ? res.data : [];
+        if (list.length > 0) {
+          setItems(list);
+        } else {
+          setItems(localMatches);
+        }
+      })
+      .catch(() => setItems(localMatches));
   }, [slug, category]);
 
   if (!category) {

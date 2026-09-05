@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Check, ChevronRight, ShieldCheck, Award, Truck, Wrench, Phone, FileText } from "lucide-react";
-import { CATEGORIES, COMPANY, farmingtoolsProductUrl } from "@/data/catalog";
+import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsProductUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { apiClient } from "@/lib/api";
@@ -21,6 +21,10 @@ export default function ProductDetail() {
     setNotFound(false);
     setActive(0);
     setRelatedProducts([]);
+
+    // Check local catalog first or as instant fallback
+    const localProd = PRODUCTS.find((p) => p.slug === slug);
+
     apiClient.get(`/products/${slug}`)
       .then((res) => {
         if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
@@ -31,13 +35,28 @@ export default function ProductDetail() {
                 const list = Array.isArray(r.data) ? r.data : [];
                 setRelatedProducts(list.filter((p) => p.slug !== slug).slice(0, 3));
               })
-              .catch(() => setRelatedProducts([]));
+              .catch(() => {
+                const localRelated = PRODUCTS.filter((p) => p.category === res.data.category && p.slug !== slug);
+                setRelatedProducts(localRelated.slice(0, 3));
+              });
           }
+        } else if (localProd) {
+          setProduct(localProd);
+          const localRelated = PRODUCTS.filter((p) => p.category === localProd.category && p.slug !== slug);
+          setRelatedProducts(localRelated.slice(0, 3));
         } else {
           setNotFound(true);
         }
       })
-      .catch(() => setNotFound(true));
+      .catch(() => {
+        if (localProd) {
+          setProduct(localProd);
+          const localRelated = PRODUCTS.filter((p) => p.category === localProd.category && p.slug !== slug);
+          setRelatedProducts(localRelated.slice(0, 3));
+        } else {
+          setNotFound(true);
+        }
+      });
   }, [slug]);
 
   if (notFound) {
