@@ -28,11 +28,10 @@ export default function FloatingActions() {
           href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
           onClick={() => trackPhoneClick("floating_button")}
           data-testid="floating-call-btn"
-          className="flex-1 flex items-center justify-center gap-2 py-3 bg-zinc-900 border border-zinc-700 text-zinc-100 font-bold text-xs rounded-md uppercase tracking-wider"
-          aria-label="Call KrishiGears"
+          className="flex-1 flex items-center justify-center gap-2 py-3 bg-zinc-900 border border-zinc-700 text-zinc-100 font-bold text-xs rounded-md uppercase tracking-wider active:scale-95"
         >
           <Phone className="h-4 w-4 text-lime-400" />
-          Call Desk
+          <span>Call Desk</span>
         </a>
         <a
           href={waLink}
@@ -40,11 +39,10 @@ export default function FloatingActions() {
           rel="noreferrer"
           onClick={() => trackWhatsAppClick("floating_button")}
           data-testid="floating-whatsapp-mobile-btn"
-          className="flex-1 flex items-center justify-center gap-2 py-3 bg-whatsapp text-white font-bold text-xs rounded-md uppercase tracking-wider shadow-lg"
-          aria-label="WhatsApp Chat"
+          className="flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs rounded-md uppercase tracking-wider shadow-lg active:scale-95"
         >
-          <WhatsAppIcon className="h-4 w-4" />
-          WhatsApp Quote
+          <WhatsAppIcon className="h-4 w-4 fill-white" />
+          <span>WhatsApp Quote</span>
         </a>
       </div>
     </>

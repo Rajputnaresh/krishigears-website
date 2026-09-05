@@ -7,9 +7,9 @@ import {
 } from "lucide-react";
 
 export const LOGO_URL = "/logo512.png";
-export const HERO_BG = "/assets/brand/hero-bg.jpg";
-export const INDIA_MAP = "/assets/brand/india-map.jpg";
-export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.jpg";
+export const HERO_BG = "/assets/brand/hero-bg.webp";
+export const INDIA_MAP = "/assets/brand/india-map.webp";
+export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.webp";
 
 // Category cover images (Self-hosted WebP for high Core Web Vitals performance)
 const COVER = {

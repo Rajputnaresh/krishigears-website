@@ -97,14 +97,18 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground pb-24 md:pb-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-      />
       {/* ========== HERO ========== */}
       <section data-testid="hero-section" className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_BG} alt="KrishiGears Farm Machinery" className="w-full h-full object-cover opacity-45" />
+          <img
+            src={HERO_BG}
+            alt="KrishiGears Farm Machinery"
+            fetchPriority="high"
+            decoding="async"
+            width={1280}
+            height={896}
+            className="w-full h-full object-cover opacity-45"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black"></div>
           <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30"></div>
         </div>
@@ -613,6 +617,7 @@ function DistrictLocator() {
               <input
                 type="text"
                 placeholder="Search district or crop..."
+                aria-label="Search district or crop"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-lime-500"
@@ -620,6 +625,7 @@ function DistrictLocator() {
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm("")}
+                  aria-label="Clear search"
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-100"
                 >
                   <X className="h-4 w-4" />
@@ -628,6 +634,7 @@ function DistrictLocator() {
             </div>
             <select
               value={selectedState}
+              aria-label="Filter by state"
               onChange={(e) => setSelectedState(e.target.value)}
               className="px-3 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 focus:outline-none focus:border-lime-500"
             >

@@ -133,6 +133,7 @@ export default function RootLayout({
       className={`${outfit.variable} ${manrope.variable} h-full antialiased dark`}
     >
       <head>
+        <link rel="preload" as="image" href="/assets/brand/hero-bg.webp" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
