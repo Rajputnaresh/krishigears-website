@@ -201,10 +201,21 @@ export default function ProductDetail() {
 
         {/* Specifications */}
         <div className="mt-20">
-          <div className="kg-eyebrow">B2B Reference Specs</div>
-          <h2 className="kg-h2 mt-3">
-            Technical <span className="text-lime-500">Specifications.</span>
-          </h2>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="kg-eyebrow">B2B Reference Specs</div>
+              <h2 className="kg-h2 mt-3">
+                Technical <span className="text-lime-500">Specifications.</span>
+              </h2>
+            </div>
+            <button
+              onClick={() => window.print()}
+              className="px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-lime-400 border border-zinc-700 hover:border-lime-500/50 rounded-md text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 transition shrink-0"
+              title="Print or Save as PDF Spec Sheet"
+            >
+              <FileText className="h-4 w-4" /> Download Tech Spec PDF
+            </button>
+          </div>
           <div className="mt-8 border border-zinc-800">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {product.specs &&

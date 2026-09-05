@@ -243,7 +243,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
           <span>›</span>
           <Link href="/locations" className="hover:text-lime-500 transition-colors">Locations</Link>
           <span>›</span>
-          <span>{data.state}</span>
+          <Link href={`/dealer/${data.state.toLowerCase().replace(/ /g, '-')}`} className="hover:text-lime-500 transition-colors">{data.state}</Link>
           <span>›</span>
           <span className="text-lime-400 font-semibold">{locationName}</span>
         </div>
