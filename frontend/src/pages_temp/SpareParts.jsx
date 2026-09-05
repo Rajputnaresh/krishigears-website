@@ -73,14 +73,14 @@ export default function SpareParts() {
           <span>/</span>
           <Link href={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
           <span>/</span>
-          <span className="text-zinc-900 dark:text-zinc-300">{location} Spare Parts</span>
+          <span className="text-zinc-300">{location} Spare Parts</span>
         </div>
       )}
 
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Spares & Attachments</div>
@@ -113,7 +113,7 @@ export default function SpareParts() {
                 We maintain a comprehensive catalog of wear-and-tear parts and core components.
                 If a specific part for your 7HP or 9HP weeder is not listed, our parts desk can source it using your machine's serial number.
               </p>
-              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-800 rounded-md">
+              <div className="p-6 bg-zinc-900 border border-zinc-800 rounded-md">
                 <h3 className="font-bold text-white mb-4 flex items-center gap-2">
                   <Package className="h-5 w-5 text-lime-500" /> Supply Guarantees
                 </h3>
@@ -132,7 +132,7 @@ export default function SpareParts() {
               <div className="grid sm:grid-cols-2 gap-6">
                 {dynamicCategories.map((cat) => (
                   <div key={cat.name} className="border border-zinc-800 bg-black rounded-md overflow-hidden hover:border-zinc-600 transition-colors">
-                    <div className="bg-zinc-50 dark:bg-zinc-900 px-5 py-3 border-b border-zinc-800 font-bold text-white flex items-center gap-2">
+                    <div className="bg-zinc-900 px-5 py-3 border-b border-zinc-800 font-bold text-white flex items-center gap-2">
                       <span>{cat.icon}</span> {cat.name}
                     </div>
                     <ul className="p-5 space-y-2">

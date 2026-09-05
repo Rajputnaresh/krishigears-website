@@ -136,7 +136,7 @@ export default function SeoLanding() {
           <span>/</span>
           <Link href={`/dealer/${page.state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{page.state}</Link>
           <span>/</span>
-          <span className="text-zinc-900 dark:text-zinc-300">{page.city} Power Weeders</span>
+          <span className="text-zinc-300">{page.city} Power Weeders</span>
         </div>
       )}
       
@@ -144,7 +144,7 @@ export default function SeoLanding() {
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={category?.image || HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · B2B Supply Network</div>
@@ -174,8 +174,8 @@ export default function SeoLanding() {
 
       {/* Rich Markdown SEO Content */}
       {page.content && (
-        <section className="kg-section bg-white dark:bg-black border-y border-zinc-900">
-          <div className="max-w-[1000px] mx-auto prose prose-zinc dark:prose-invert prose-lg px-6">
+        <section className="kg-section bg-black border-y border-zinc-900">
+          <div className="max-w-[1000px] mx-auto prose prose-invert prose-lg px-6">
             <ReactMarkdown>{page.content}</ReactMarkdown>
           </div>
         </section>

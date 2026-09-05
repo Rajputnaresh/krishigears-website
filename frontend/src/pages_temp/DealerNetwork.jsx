@@ -18,7 +18,7 @@ export default function DealerNetwork() {
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
           <div>

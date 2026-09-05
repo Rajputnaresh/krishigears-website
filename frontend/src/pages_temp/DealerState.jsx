@@ -67,7 +67,7 @@ export default function DealerState() {
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Dealership Opportunity</div>

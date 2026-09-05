@@ -50,7 +50,7 @@ export default function Home() {
       <section data-testid="hero-section" className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black/40 via-black/60 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black"></div>
           <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-50"></div>
         </div>
 
@@ -157,7 +157,7 @@ export default function Home() {
                   className={`relative group overflow-hidden border border-zinc-800 bg-surface hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
                 >
                   <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
                   <div className="relative h-full p-7 flex flex-col justify-between">
                     <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500">
                       <Icon className="h-6 w-6" />
@@ -253,7 +253,7 @@ export default function Home() {
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/5] overflow-hidden border border-zinc-800 relative">
               <img src={FARMER_FIELD} alt="Indian farmer" loading="lazy" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black dark:text-black p-6 max-w-xs lime-glow">
               <div className="font-display font-black text-4xl">10K+</div>
@@ -323,7 +323,7 @@ export default function Home() {
       <section data-testid="dealer-cta-section" className="kg-section relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-black/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -519,7 +519,7 @@ function VideoCard({ video }) {
       className="relative aspect-video overflow-hidden border border-zinc-800 group cursor-pointer block bg-zinc-50 dark:bg-zinc-900"
     >
       {thumb && <img src={thumb} alt={video.title} loading="lazy" className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition"/>}
-      <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/80 via-white/40 dark:via-black/40 to-transparent"/>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"/>
       <div className="absolute inset-0 grid place-items-center">
         <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition">
           <Play className="h-6 w-6 fill-black ml-1" />

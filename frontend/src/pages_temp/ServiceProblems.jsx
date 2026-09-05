@@ -82,13 +82,13 @@ export default function ServiceProblems() {
           <span>/</span>
           <Link href={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
           <span>/</span>
-          <span className="text-zinc-900 dark:text-zinc-300">{location} Service Center</span>
+          <span className="text-zinc-300">{location} Service Center</span>
         </div>
       )}
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-black via-white/70 dark:via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Service & Troubleshooting</div>
@@ -119,7 +119,7 @@ export default function ServiceProblems() {
           <div className="grid md:grid-cols-3 gap-6">
             {DYNAMIC_CATEGORIES.map((cat) => (
               <div key={cat.category} className="border border-zinc-800 rounded-md overflow-hidden">
-                <div className={`bg-zinc-50 dark:bg-zinc-900 px-6 py-4 font-bold text-xl flex items-center gap-3 ${cat.color}`}>
+                <div className={`bg-zinc-900 px-6 py-4 font-bold text-xl flex items-center gap-3 ${cat.color}`}>
                   <span className="text-2xl">{cat.icon}</span> {cat.category}
                 </div>
                 <div className="divide-y divide-zinc-800">
@@ -149,7 +149,7 @@ export default function ServiceProblems() {
           <h2 className="kg-h2 mt-3">Service packages available for {location} dealers and farmers.</h2>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICE_OPTIONS.map((opt) => (
-              <div key={opt.name} className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-md border border-zinc-800">
+              <div key={opt.name} className="p-6 bg-zinc-900 rounded-md border border-zinc-800">
                 <div className="text-3xl mb-4">{opt.icon}</div>
                 <h4 className="font-bold text-xl text-white mb-2">{opt.name}</h4>
                 <p className="text-zinc-300">{opt.desc}</p>
