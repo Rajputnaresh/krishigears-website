@@ -167,7 +167,7 @@ export default function Header() {
             title="Become a Dealer (⌘D)"
             className="ml-2 px-5 py-2.5 bg-lime-500 text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2 shadow-lg shadow-lime-500/20"
           >
-            Become a Dealer <span className="opacity-50 text-[10px] hidden xl:inline">⌘D</span>
+            Become a Dealer
           </Link>
         </div>
 

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
-  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight
+  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X
 } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, FARMINGTOOLS_URL, PRODUCTS } from "@/data/catalog";
+import locationsData from "@/data/locations.json";
 import ProductCard from "@/components/ProductCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -79,35 +80,47 @@ export default function Home() {
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
             <p className="mt-6 text-zinc-200 dark:text-zinc-200 text-lg max-w-2xl leading-relaxed">
-              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
+              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6">
+              <Link
+                href="/products"
+                data-testid="hero-explore-products"
+                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/20"
+              >
+                Explore Machinery Range
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
+              </Link>
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/become-a-dealer"
+                  data-testid="hero-dealer-btn"
+                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/80 hover:border-lime-500/60 px-5 py-3.5 rounded-md"
+                >
+                  Become a Dealer
+                </Link>
+                <Link
+                  href="/bulk-order"
+                  data-testid="hero-bulk-btn"
+                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/80 hover:border-lime-500/60 px-5 py-3.5 rounded-md"
+                >
+                  Bulk Inquiry
+                </Link>
+              </div>
+            </div>
+
+            {/* Clear retail handoff note */}
+            <div className="mt-5 inline-flex items-center gap-2 text-xs text-zinc-400 bg-black/60 border border-zinc-800 px-3.5 py-1.5 rounded-full">
+              <span>Individual farmer looking for 1 machine?</span>
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="hero-buy-online"
-                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/20"
+                className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2"
               >
-                Buy Online (Retail)
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
+                Order retail online on FarmingTools.in <ArrowRight className="h-3 w-3" />
               </a>
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/become-a-dealer"
-                  data-testid="hero-dealer-btn"
-                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/60 px-4 py-2.5 rounded-md"
-                >
-                  Become Dealer
-                </Link>
-                <Link
-                  href="/bulk-order"
-                  data-testid="hero-bulk-btn"
-                  className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/60 px-4 py-2.5 rounded-md"
-                >
-                  Bulk Order Inquiry
-                </Link>
-              </div>
             </div>
 
             {/* Quick stats - High contrast sunlight ready */}
@@ -299,29 +312,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== WHY CHOOSE US ========== */}
-      <section data-testid="why-choose-section" className="kg-section bg-surface-darker border-y border-zinc-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${ABSTRACT_TERRAIN})`, backgroundSize: "cover" }}></div>
-        <div className="max-w-[1400px] mx-auto relative">
-          <div className="text-center mb-14 max-w-2xl mx-auto">
-            <div className="kg-eyebrow">Why KrishiGears</div>
-            <h2 className="kg-h2 mt-3 text-zinc-100">Eight reasons farmers <span className="text-lime-500">trust us.</span></h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {TRUST_BADGES.map((b) => {
-              const Icon = ICONS[b.icon] || ShieldCheck;
-              return (
-                <div key={b.icon} data-testid={`trust-${b.icon}`} className="kg-card p-6 text-center border-zinc-700">
-                  <div className="h-12 w-12 mx-auto grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-sm">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div className="mt-4 text-sm font-bold uppercase tracking-wider text-zinc-100">{b.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* ========== DISTRICT DEALER & SERVICE LOCATOR ========== */}
+      <DistrictLocator />
 
       {/* ========== VIDEO GALLERY ========== */}
       <VideoGallery videos={videos} />
@@ -385,20 +377,30 @@ export default function Home() {
 function ContactStrip() {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [form, setForm] = useState({ name: "", phone: "", email: "", subject: "General Enquiry", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", category: "Power Weeders", message: "" });
   const update = (k: string) => (e: any) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const submit = async (e: any) => {
     e.preventDefault();
     setErrorMsg(null);
-    if (!form.name || !form.phone || !form.message) {
-      toast.error("Name, phone and message are required");
+    const cleanPhone = form.phone.replace(/\D/g, "");
+    if (!form.name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+    if (cleanPhone.length < 10) {
+      toast.error("Please enter a valid 10-digit mobile number");
       return;
     }
     setLoading(true);
     try {
-      await apiClient.post("/leads/contact", form);
-      toast.success("Message sent! We will get back to you shortly.");
-      setForm({ name: "", phone: "", email: "", subject: "General Enquiry", message: "" });
+      await apiClient.post("/leads/contact", {
+        name: form.name,
+        phone: form.phone,
+        subject: `Quick Inquiry: ${form.category}`,
+        message: form.message.trim() || `Inquiry for ${form.category}`
+      });
+      toast.success("Inquiry received! Our team will call or WhatsApp you shortly.");
+      setForm({ name: "", phone: "", category: "Power Weeders", message: "" });
     } catch (err) {
       setErrorMsg(formatApiError(err));
     } finally {
@@ -408,12 +410,12 @@ function ContactStrip() {
 
   return (
     <section data-testid="home-contact-section" className="kg-section bg-surface-darker border-t border-zinc-800">
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="kg-eyebrow">Get in touch</div>
-          <h2 className="kg-h2 mt-3 text-balance text-zinc-100">Have a question? <span className="text-lime-500">Talk to us.</span></h2>
-          <p className="text-zinc-200 mt-6 leading-relaxed max-w-md">
-            Our team is ready to help you choose the right machine, place a bulk order, or join our dealer network. Fill the form and we'll get back within 24 hours.
+          <div className="kg-eyebrow">Quick Inquiry & WhatsApp Quote</div>
+          <h2 className="kg-h2 mt-3 text-balance text-zinc-100">Get pricing & specs <span className="text-lime-500">on WhatsApp.</span></h2>
+          <p className="text-zinc-200 mt-6 leading-relaxed max-w-md text-base">
+            Looking for wholesale supply, dealership rates, or machine fitment details? Enter your details for a quick quote within minutes.
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start gap-4">
@@ -426,48 +428,58 @@ function ContactStrip() {
             <div className="flex items-start gap-4">
               <Headphones className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">Customer Care</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">Instant Phone / WhatsApp Desk</div>
                 <div className="text-sm text-zinc-100 mt-0.5">{COMPANY.phone}</div>
               </div>
             </div>
           </div>
         </div>
-        <form onSubmit={submit} className="border border-zinc-700 bg-surface-dark p-6 md:p-8 space-y-4 rounded-lg">
-          <div className="grid grid-cols-2 gap-3">
+
+        <form onSubmit={submit} className="border border-zinc-700 bg-surface-dark p-6 md:p-8 space-y-4 rounded-xl shadow-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Name*</Label>
-              <Input id="contact-name" name="name" required minLength={2} data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+              <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Your Name*</Label>
+              <Input id="contact-name" name="name" placeholder="e.g. Ramesh Patel" required minLength={2} data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
             </div>
             <div>
-              <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Phone*</Label>
-              <Input id="contact-phone" type="tel" name="phone" required pattern="[0-9\+\-\s]+" data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+              <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Mobile Number (WhatsApp)*</Label>
+              <Input id="contact-phone" type="tel" name="phone" placeholder="10-digit number" required pattern="[0-9\+\-\s]{10,15}" data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
             </div>
           </div>
+
           <div>
-            <Label htmlFor="contact-email" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Email</Label>
-            <Input id="contact-email" type="email" name="email" data-testid="home-contact-email" value={form.email} onChange={update("email")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+            <Label htmlFor="contact-category" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Machinery / Parts Needed</Label>
+            <select
+              id="contact-category"
+              value={form.category}
+              onChange={update("category")}
+              className="w-full mt-1.5 px-3 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 focus:outline-none focus:border-lime-500"
+            >
+              {CATEGORIES.map((c) => (
+                <option key={c.slug} value={c.name} className="bg-zinc-950 text-zinc-100">{c.name}</option>
+              ))}
+            </select>
           </div>
+
           <div>
-            <Label htmlFor="contact-subject" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Subject</Label>
-            <Input id="contact-subject" name="subject" data-testid="home-contact-subject" value={form.subject} onChange={update("subject")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+            <Label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">District / Details (Optional)</Label>
+            <Textarea id="contact-message" name="message" placeholder="e.g. Need 5 units in Kolhapur, Maharashtra" data-testid="home-contact-message" rows={2} value={form.message} onChange={update("message")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
           </div>
-          <div>
-            <Label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Message*</Label>
-            <Textarea id="contact-message" name="message" required minLength={10} data-testid="home-contact-message" rows={4} value={form.message} onChange={update("message")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
-          </div>
+
           {errorMsg && (
-            <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-4 rounded-md flex items-center justify-between">
-              <span className="text-sm">{errorMsg}</span>
-              <button type="button" onClick={submit} className="text-sm font-bold underline hover:no-underline">Retry</button>
+            <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-3 rounded-md flex items-center justify-between text-xs">
+              <span>{errorMsg}</span>
+              <button type="button" onClick={submit} className="font-bold underline">Retry</button>
             </div>
           )}
+
           <button
             type="submit"
             disabled={loading}
             data-testid="home-contact-submit"
-            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition disabled:opacity-50"
+            className="w-full bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold py-3.5 rounded-md transition shadow-lg shadow-lime-500/20 disabled:opacity-50 text-sm tracking-wide"
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? "Sending..." : "Request Price & Specs"}
           </button>
         </form>
       </div>
@@ -496,13 +508,169 @@ function VideoGallery({ videos }: { videos: any[] }) {
   );
 }
 
+function DistrictLocator() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedState, setSelectedState] = useState<string>("All");
+
+  const locationEntries = useMemo(() => {
+    return Object.entries(locationsData as Record<string, any>);
+  }, []);
+
+  const states = useMemo(() => {
+    const s = new Set<string>();
+    locationEntries.forEach(([_, data]) => {
+      if (data.state) s.add(data.state);
+    });
+    return Array.from(s).sort();
+  }, [locationEntries]);
+
+  const filteredDistricts = useMemo(() => {
+    const q = searchTerm.toLowerCase().trim();
+    return locationEntries.filter(([districtName, data]) => {
+      const matchState = selectedState === "All" || data.state === selectedState;
+      if (!matchState) return false;
+      if (!q) return data.major_district;
+      return (
+        districtName.toLowerCase().includes(q) ||
+        (data.state && data.state.toLowerCase().includes(q)) ||
+        (data.key_crops && data.key_crops.some((c: string) => c.toLowerCase().includes(q)))
+      );
+    }).slice(0, 8);
+  }, [locationEntries, searchTerm, selectedState]);
+
+  return (
+    <section data-testid="district-locator-section" className="kg-section bg-surface-dark border-t border-zinc-800">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <div className="kg-eyebrow">Availability & Network</div>
+            <h2 className="kg-h2 mt-3 text-zinc-100">
+              Find Machinery & Dealers <span className="text-lime-500">in your District.</span>
+            </h2>
+            <p className="text-zinc-300 text-sm mt-2 max-w-xl">
+              Check localized equipment fitment, crops supported, and fast delivery timelines for your farming hub.
+            </p>
+          </div>
+          <div className="flex flex-wrap sm:flex-nowrap gap-3 w-full md:w-auto">
+            <div className="relative flex-1 sm:w-64">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
+              <input
+                type="text"
+                placeholder="Search district or crop..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-lime-500"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-100"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+            <select
+              value={selectedState}
+              onChange={(e) => setSelectedState(e.target.value)}
+              className="px-3 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 focus:outline-none focus:border-lime-500"
+            >
+              <option value="All">All States</option>
+              {states.map((st) => (
+                <option key={st} value={st} className="bg-zinc-950 text-zinc-100">
+                  {st}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {filteredDistricts.map(([districtName, data]) => {
+            const districtSlug = districtName.toLowerCase().replace(/ /g, "-").replace(/[()]/g, "");
+            return (
+              <div
+                key={districtName}
+                className="p-5 border border-zinc-800 bg-zinc-950 hover:border-lime-500/50 rounded-lg flex flex-col justify-between transition-all duration-300 group"
+              >
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-lime-400">
+                      {data.state}
+                    </span>
+                    <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-lime-500/10 text-lime-400 border border-lime-500/20">
+                      Active Hub
+                    </span>
+                  </div>
+                  <h3 className="font-display font-bold text-lg text-zinc-100 mt-2 group-hover:text-lime-400 transition-colors">
+                    {districtName}
+                  </h3>
+                  <div className="mt-2 text-xs text-zinc-400 line-clamp-2">
+                    {data.farming_profile || data.soil_type}
+                  </div>
+                  {data.key_crops && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {data.key_crops.slice(0, 3).map((crop: string) => (
+                        <span
+                          key={crop}
+                          className="px-2 py-0.5 text-[11px] bg-zinc-900 border border-zinc-800 text-zinc-300 rounded"
+                        >
+                          {crop}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                  <Link
+                    href={`/power-weeders-in-${districtSlug}`}
+                    className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1"
+                  >
+                    View Machinery <ChevronRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    href={`/dealer/${data.state ? data.state.toLowerCase().replace(/ /g, "-") : "all"}`}
+                    className="text-xs text-zinc-400 hover:text-zinc-200"
+                  >
+                    Dealer Info
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {filteredDistricts.length === 0 && (
+          <div className="text-center py-12 border border-zinc-800 rounded-lg bg-zinc-950">
+            <p className="text-zinc-300 text-sm">No districts matched "{searchTerm}". KrishiGears delivers PAN India.</p>
+            <Link
+              href="/dealer-network"
+              className="mt-3 inline-block text-xs text-lime-400 font-bold hover:underline"
+            >
+              Explore Full State Dealer Directory →
+            </Link>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function VideoCard({ video }: { video: any }) {
   const youtubeEmbed = getYoutubeEmbed(video.url);
   const [playing, setPlaying] = useState(false);
 
   if (youtubeEmbed && playing) {
     return (
-      <div className="aspect-video overflow-hidden border border-zinc-800 bg-black rounded-lg">
+      <div className="relative aspect-video overflow-hidden border border-zinc-800 bg-black rounded-lg">
+        <button
+          onClick={() => setPlaying(false)}
+          className="absolute top-2 right-2 z-10 p-1.5 bg-black/80 hover:bg-black text-zinc-200 hover:text-white rounded-full border border-zinc-700 transition"
+          aria-label="Close video"
+        >
+          <X className="h-4 w-4" />
+        </button>
         <iframe
           src={`${youtubeEmbed}?autoplay=1`}
           title={video.title}
