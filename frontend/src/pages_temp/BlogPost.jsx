@@ -1,4 +1,6 @@
+"use client";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -59,7 +61,7 @@ export default function BlogPost() {
         </Link>
         <div className="flex items-center gap-2 text-xs text-zinc-500">
           <Clock className="h-3.5 w-3.5 text-zinc-400" />
-          <span>4 min practical read</span>
+          <span>6 min technical read</span>
         </div>
       </div>
 
@@ -119,10 +121,11 @@ export default function BlogPost() {
         </div>
       )}
 
-      {/* Main Formatted Content - Clean typography, generous line-height, distinct headers */}
+      {/* Main Formatted Content - Clean typography, generous line-height, distinct headers, formatted tables */}
       <div className="mt-10 border-t border-zinc-800/80 pt-8">
         <div className="text-zinc-200 text-base leading-relaxed space-y-6">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               h2: ({ node, ...props }) => (
                 <h2 className="font-display font-bold text-xl sm:text-2xl text-lime-400 mt-10 mb-4 pb-2 border-b border-zinc-800 flex items-center gap-2" {...props} />
@@ -153,6 +156,23 @@ export default function BlogPost() {
               ),
               blockquote: ({ node, ...props }) => (
                 <blockquote className="my-6 p-4 rounded-r-lg bg-lime-500/5 border-l-4 border-lime-500 text-zinc-300 italic text-sm" {...props} />
+              ),
+              table: ({ node, ...props }) => (
+                <div className="overflow-x-auto my-8 border border-zinc-800 rounded-xl bg-zinc-950/80 shadow-lg">
+                  <table className="w-full text-left border-collapse text-xs sm:text-sm" {...props} />
+                </div>
+              ),
+              thead: ({ node, ...props }) => (
+                <thead className="bg-zinc-900/90 text-lime-400 border-b border-zinc-800 font-semibold" {...props} />
+              ),
+              tbody: ({ node, ...props }) => (
+                <tbody className="divide-y divide-zinc-800/60" {...props} />
+              ),
+              th: ({ node, ...props }) => (
+                <th className="px-4 py-3.5 font-bold tracking-wider text-lime-400" {...props} />
+              ),
+              td: ({ node, ...props }) => (
+                <td className="px-4 py-3 text-zinc-300 leading-normal" {...props} />
               )
             }}
           >
