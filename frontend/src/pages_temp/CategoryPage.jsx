@@ -12,24 +12,14 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function CategoryPage() {
   const { slug } = useParams();
-  const [items, setItems] = useState(null);
   const category = CATEGORIES.find((c) => c.slug === slug);
+  const localMatches = category ? PRODUCTS.filter((p) => p.category === slug) : [];
+  const [items, setItems] = useState(localMatches);
 
   useEffect(() => {
     if (!category) return;
-    setItems(null);
-    const localMatches = PRODUCTS.filter((p) => p.category === slug);
-
-    apiClient.get(`/products?category=${slug}`)
-      .then((res) => {
-        const list = Array.isArray(res.data) ? res.data : [];
-        if (list.length > 0) {
-          setItems(list);
-        } else {
-          setItems(localMatches);
-        }
-      })
-      .catch(() => setItems(localMatches));
+    const matches = PRODUCTS.filter((p) => p.category === slug);
+    setItems(matches);
   }, [slug, category]);
 
   if (!category) {

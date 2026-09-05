@@ -134,7 +134,6 @@ export default function RootLayout({
     >
       <head>
         <link rel="preconnect" href="https://api.krishigears.com" crossOrigin="anonymous" />
-        <link rel="preload" as="image" href="/assets/brand/hero-bg.webp" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
