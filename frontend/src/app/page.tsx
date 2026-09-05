@@ -61,9 +61,9 @@ export default function Home() {
       {/* ========== HERO ========== */}
       <section data-testid="hero-section" className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black/40 via-black/60 to-black"></div>
-          <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-50"></div>
+          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black"></div>
+          <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30"></div>
         </div>
 
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 py-20 lg:py-24 grid lg:grid-cols-12 gap-10 items-center">

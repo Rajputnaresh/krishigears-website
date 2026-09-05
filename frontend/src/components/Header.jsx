@@ -63,17 +63,17 @@ export default function Header() {
   return (
     <header
       data-testid="site-header"
-      className="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-black/70 backdrop-blur-xl border-b border-zinc-200 dark:border-white/10"
+      className="fixed top-0 inset-x-0 z-50 bg-black/85 backdrop-blur-xl border-b border-zinc-800"
     >
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group">
           <img src={LOGO_URL} alt="KrishiGears" className="h-12 w-12 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
           <div className="leading-tight hidden sm:block">
-            <div className="font-display font-black text-lg tracking-tight">
+            <div className="font-display font-black text-lg tracking-tight text-white">
               KRISHI<span className="text-lime-500">GEARS</span>
             </div>
-            <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">Farming Tools</div>
+            <div className="text-[10px] tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
           </div>
         </Link>
 
@@ -84,7 +84,7 @@ export default function Header() {
               key={item.to}
               href={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white"
             >
               {t(item.labelKey)}
             </Link>
@@ -93,13 +93,13 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger
               data-testid="nav-products-trigger"
-              className="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white flex items-center gap-1 outline-none"
+              className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none"
             >
-              {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4" />
+              {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4 text-lime-400" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800 w-80 max-h-[70vh] overflow-y-auto">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-80 max-h-[70vh] overflow-y-auto text-zinc-200">
               <DropdownMenuItem asChild>
-                <Link href="/products" className="font-bold text-lime-500" data-testid="nav-all-products">View All Categories →</Link>
+                <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300" data-testid="nav-all-products">View All Categories →</Link>
               </DropdownMenuItem>
               <div className="h-px bg-zinc-800 my-1" />
               {CATEGORIES.map((c) => (
@@ -107,7 +107,7 @@ export default function Header() {
                   <Link
                     href={`/products/category/${c.slug}`}
                     data-testid={`nav-cat-${c.slug}`}
-                    className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-lime-500"
+                    className="text-sm text-zinc-300 hover:text-lime-400"
                   >
                     {c.name}
                   </Link>
@@ -121,7 +121,7 @@ export default function Header() {
               key={item.to}
               href={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white"
             >
               {t(item.labelKey)}
             </Link>
@@ -132,10 +132,10 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-2">
           {/* Language Switcher */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
-              <Globe className="h-4 w-4" /> {(i18n.language || "en").toUpperCase()}
+            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
+              <Globe className="h-4 w-4 text-lime-400" /> {(i18n.language || "en").toUpperCase()}
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200">
               <DropdownMenuItem onClick={() => switchLanguage('en')}>English (EN)</DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('hi')}>हिंदी (HI)</DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('mr')}>मराठी (MR)</DropdownMenuItem>
@@ -144,17 +144,17 @@ export default function Header() {
 
           {/* Support Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
-              <Headphones className="h-4 w-4" /> Support
+            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
+              <Headphones className="h-4 w-4 text-lime-400" /> Support
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800 w-56">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-56 text-zinc-200">
               <DropdownMenuItem asChild>
                 <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]">
                   <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} onClick={() => trackPhoneClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-lime-500">
+                <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} onClick={() => trackPhoneClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-lime-400">
                   <Phone className="h-4 w-4" /> {COMPANY.phone}
                 </a>
               </DropdownMenuItem>
@@ -165,7 +165,7 @@ export default function Header() {
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"
             title="Become a Dealer (⌘D)"
-            className="ml-2 px-5 py-2.5 bg-lime-500 text-black dark:text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2"
+            className="ml-2 px-5 py-2.5 bg-lime-500 text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2 shadow-lg shadow-lime-500/20"
           >
             Become a Dealer <span className="opacity-50 text-[10px] hidden xl:inline">⌘D</span>
           </Link>
@@ -174,27 +174,27 @@ export default function Header() {
         {/* Mobile */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <button data-testid="mobile-menu-trigger" aria-label="Open menu" className="lg:hidden p-3 text-zinc-900 dark:text-white">
+            <button data-testid="mobile-menu-trigger" aria-label="Open menu" className="lg:hidden p-3 text-white">
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
-            <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+          <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
+            <div className="p-6 border-b border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img src={LOGO_URL} alt="KrishiGears" className="h-10 w-10 rounded-full" />
-                <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span></div>
+                <img src={LOGO_URL} alt="KrishiGears" className="h-10 w-10 rounded-full ring-1 ring-lime-500/40" />
+                <div className="font-display font-black text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => setOpen(false)} data-testid="mobile-menu-close" aria-label="Close menu" className="p-2"><X className="h-5 w-5"/></button>
+                <button onClick={() => setOpen(false)} data-testid="mobile-menu-close" aria-label="Close menu" className="p-2 text-zinc-400 hover:text-white"><X className="h-5 w-5"/></button>
               </div>
             </div>
             <nav className="p-6 flex flex-col gap-1">
 
               {/* Mobile Language Switcher */}
-              <div className="flex justify-around py-4 border-b border-zinc-100 dark:border-zinc-900">
-                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>EN</button>
-                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>HI</button>
-                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>MR</button>
+              <div className="flex justify-around py-4 border-b border-zinc-800">
+                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>EN</button>
+                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>HI</button>
+                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black font-bold' : 'border border-zinc-700 text-zinc-300'}`}>MR</button>
               </div>
 
               {NAV.map((item) => (
@@ -203,17 +203,17 @@ export default function Header() {
                   href={item.to}
                   data-testid={`m-nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
                   onClick={() => setOpen(false)}
-                  className={`px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 ${location.pathname === item.to ? "text-lime-500" : "text-zinc-800 dark:text-zinc-200"}`}
+                  className={`px-3 py-3 text-base border-b border-zinc-850 ${location.pathname === item.to ? "text-lime-400 font-bold" : "text-zinc-200 hover:text-white"}`}
                 >
                   {t(item.labelKey)}
                 </Link>
               ))}
-              <Link href="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 text-zinc-800 dark:text-zinc-200">{t('nav.products', 'Products')}</Link>
+              <Link href="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-850 text-zinc-200 hover:text-white">{t('nav.products', 'Products')}</Link>
               <Link
                 href="/become-a-dealer"
                 onClick={() => setOpen(false)}
                 data-testid="m-nav-become-dealer"
-                className="mt-4 px-5 py-3 bg-lime-500 text-black dark:text-black font-bold text-center rounded-md"
+                className="mt-4 px-5 py-3 bg-lime-500 text-black font-bold text-center rounded-md hover:bg-lime-400 transition"
               >
                 Become a Dealer
               </Link>
@@ -221,9 +221,9 @@ export default function Header() {
                 href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
                 onClick={() => trackPhoneClick("header_mobile")}
                 data-testid="m-nav-call"
-                className="mt-2 px-5 py-3 border border-zinc-300 dark:border-zinc-700 text-center rounded-md text-zinc-800 dark:text-zinc-200"
+                className="mt-2 px-5 py-3 border border-zinc-700 text-center rounded-md text-zinc-200 hover:border-lime-500"
               >
-                <Phone className="h-4 w-4 inline mr-2" /> {COMPANY.phone}
+                <Phone className="h-4 w-4 inline mr-2 text-lime-400" /> {COMPANY.phone}
               </a>
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}`}
@@ -231,7 +231,7 @@ export default function Header() {
                 rel="noreferrer"
                 onClick={() => trackWhatsAppClick("header_mobile")}
                 data-testid="m-nav-whatsapp"
-                className="mt-2 px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-zinc-900 dark:text-white text-center rounded-md inline-flex items-center justify-center gap-2"
+                className="mt-2 px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-semibold"
               >
                 <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
               </a>

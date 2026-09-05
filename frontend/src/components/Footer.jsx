@@ -36,15 +36,15 @@ function TwitterIcon(props) {
 
 export default function Footer() {
   return (
-    <footer data-testid="site-footer" className="bg-surface-darkest border-t border-zinc-100 dark:border-zinc-900 mt-12">
+    <footer data-testid="site-footer" className="bg-surface-darkest border-t border-zinc-800 mt-12 text-zinc-300">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
         {/* Brand */}
         <div className="md:col-span-4">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full" />
+            <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full ring-1 ring-lime-500/40" />
             <div>
-              <div className="font-display font-black text-xl">KRISHI<span className="text-lime-500">GEARS</span></div>
-              <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">Farming Tools</div>
+              <div className="font-display font-black text-xl text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
+              <div className="text-[10px] tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
             </div>
           </div>
           <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
@@ -64,99 +64,90 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Products */}
+        {/* Categories */}
         <div className="md:col-span-3">
-          <div className="text-xs font-bold tracking-[0.2em] uppercase text-zinc-300 mb-5">Product Range</div>
-          <ul className="grid grid-cols-1 gap-2.5">
-            {CATEGORIES.slice(0, 10).map((c) => (
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">Categories</div>
+          <ul className="space-y-2 text-sm text-zinc-400">
+            {CATEGORIES.slice(0, 7).map((c) => (
               <li key={c.slug}>
-                <Link
-                  href={`/products/category/${c.slug}`}
-                  className="text-sm text-zinc-200 hover:text-lime-400 transition"
-                  data-testid={`footer-cat-${c.slug}`}
-                >
-                  {c.name}
-                </Link>
+                <Link href={`/products/category/${c.slug}`} className="hover:text-lime-400 transition">{c.name}</Link>
               </li>
             ))}
+            <li>
+              <Link href="/products" className="text-lime-400 font-bold hover:text-lime-300 transition">View all categories →</Link>
+            </li>
           </ul>
         </div>
 
-        {/* SEO + Pages */}
+        {/* Quick Links */}
         <div className="md:col-span-2">
-          <div className="text-xs font-bold tracking-[0.2em] uppercase text-zinc-300 mb-5">Quick Links</div>
-          <ul className="space-y-2.5 text-sm text-zinc-200">
-            <li><Link href="/about" className="hover:text-lime-400">About Us</Link></li>
-            <li><Link href="/dealer-network" className="hover:text-lime-400">Dealer Network</Link></li>
-            <li><Link href="/locations" className="hover:text-lime-400">All Supply Locations</Link></li>
-            <li><Link href="/become-a-dealer" className="hover:text-lime-400">Become a Dealer</Link></li>
-            <li><Link href="/bulk-order" className="hover:text-lime-400">Bulk Order</Link></li>
-            <li><Link href="/warranty-and-support" className="hover:text-lime-400">Warranty</Link></li>
-            <li><Link href="/blog" className="hover:text-lime-400">Blog</Link></li>
-            <li><Link href="/contact" className="hover:text-lime-400">Contact Us</Link></li>
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">KrishiGears</div>
+          <ul className="space-y-2 text-sm text-zinc-400">
+            <li><Link href="/about" className="hover:text-lime-400 transition">About Us</Link></li>
+            <li><Link href="/dealer-network" className="hover:text-lime-400 transition">Dealer Network</Link></li>
+            <li><Link href="/become-a-dealer" className="hover:text-lime-400 transition">Become a Dealer</Link></li>
+            <li><Link href="/bulk-order" className="hover:text-lime-400 transition">Bulk Order</Link></li>
+            <li><Link href="/warranty-and-support" className="hover:text-lime-400 transition">Warranty</Link></li>
+            <li><Link href="/blog" className="hover:text-lime-400 transition">Blog</Link></li>
+            <li><Link href="/contact" className="hover:text-lime-400 transition">Contact Us</Link></li>
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Contact info */}
         <div className="md:col-span-3">
-          <div className="text-xs font-bold tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 mb-5">Get In Touch</div>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400">
-              <Mail className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <div className="space-y-1">
-                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-500 block">Sales — {COMPANY.email}</a>
-                <a href={`mailto:${COMPANY.support}`} className="hover:text-lime-500 block">Service — {COMPANY.support}</a>
-                <a href={`mailto:${COMPANY.dealers}`} className="hover:text-lime-500 block">Dealers — {COMPANY.dealers}</a>
-                <a href={`mailto:${COMPANY.accounts}`} className="hover:text-lime-500 block">Accounts — {COMPANY.accounts}</a>
-              </div>
-            </li>
-            <li className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400">
-              <Phone className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} className="hover:text-lime-500">{COMPANY.phone}</a>
-            </li>
-            <li className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400">
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">Contact</div>
+          <ul className="space-y-3 text-sm text-zinc-300">
+            <li className="flex items-start gap-3">
               <MapPin className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
               <span>{COMPANY.address}</span>
             </li>
-            <li className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400">
+            <li className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-lime-500 shrink-0" />
+              <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} className="hover:text-lime-400">{COMPANY.phone}</a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="h-4 w-4 text-lime-500 shrink-0" />
+              <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400">{COMPANY.email}</a>
+            </li>
+            <li className="flex items-start gap-3">
               <ShieldCheck className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <span>GSTIN: <span className="text-zinc-800 dark:text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
+              <span>GSTIN: <span className="text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
             </li>
           </ul>
         </div>
       </div>
 
       {/* B2B supply links */}
-      <div className="border-t border-zinc-200 dark:border-zinc-900">
+      <div className="border-t border-zinc-800">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 grid md:grid-cols-2 gap-8">
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">B2B Supply Programs</div>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
-              <Link href="/seo/power-weeders-supplier-india" className="hover:text-lime-500">Power Weeder Dealer Network</Link>
-              <Link href="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-500">Power Weeder Spare Parts OEM Supply</Link>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">B2B Supply Programs</div>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
+              <Link href="/seo/power-weeders-supplier-india" className="hover:text-lime-400">Power Weeder Dealer Network</Link>
+              <Link href="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-400">Power Weeder Spare Parts OEM Supply</Link>
             </div>
           </div>
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-600 mb-3">Top Dealer States</div>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-500">
-              <Link href="/dealer/maharashtra" className="hover:text-lime-500">Maharashtra</Link>
-              <Link href="/dealer/karnataka" className="hover:text-lime-500">Karnataka</Link>
-              <Link href="/dealer/tamil-nadu" className="hover:text-lime-500">Tamil Nadu</Link>
-              <Link href="/dealer/gujarat" className="hover:text-lime-500">Gujarat</Link>
-              <Link href="/dealer/madhya-pradesh" className="hover:text-lime-500">Madhya Pradesh</Link>
-              <Link href="/dealer/uttar-pradesh" className="hover:text-lime-500">Uttar Pradesh</Link>
-              <Link href="/dealer/rajasthan" className="hover:text-lime-500">Rajasthan</Link>
-              <Link href="/dealer/bihar" className="hover:text-lime-500">Bihar</Link>
-              <Link href="/dealer-network" className="hover:text-lime-500 font-bold">View All States →</Link>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">Top Dealer States</div>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
+              <Link href="/dealer/maharashtra" className="hover:text-lime-400">Maharashtra</Link>
+              <Link href="/dealer/karnataka" className="hover:text-lime-400">Karnataka</Link>
+              <Link href="/dealer/tamil-nadu" className="hover:text-lime-400">Tamil Nadu</Link>
+              <Link href="/dealer/gujarat" className="hover:text-lime-400">Gujarat</Link>
+              <Link href="/dealer/madhya-pradesh" className="hover:text-lime-400">Madhya Pradesh</Link>
+              <Link href="/dealer/uttar-pradesh" className="hover:text-lime-400">Uttar Pradesh</Link>
+              <Link href="/dealer/rajasthan" className="hover:text-lime-400">Rajasthan</Link>
+              <Link href="/dealer/bihar" className="hover:text-lime-400">Bihar</Link>
+              <Link href="/dealer-network" className="hover:text-lime-400 font-bold">View All States →</Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-zinc-100 dark:border-zinc-900">
+      <div className="border-t border-zinc-850">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-zinc-500 dark:text-zinc-500">© {new Date().getFullYear()} KrishiGears. All rights reserved.</div>
-          <div className="text-xs text-zinc-500 dark:text-zinc-500">{COMPANY.website}</div>
+          <div className="text-xs text-zinc-400">© {new Date().getFullYear()} KrishiGears. All rights reserved.</div>
+          <div className="text-xs text-zinc-400">{COMPANY.website}</div>
         </div>
       </div>
     </footer>
