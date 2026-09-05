@@ -4486,11 +4486,11 @@ A low initial purchase price is counterproductive if replacement tines, recoil s
 
 ## State-by-State DBT Portals
 
-- **Rajasthan:** RajKisan Sathi Portal (`rajkisan.rajasthan.gov.in`)
-- **Madhya Pradesh:** MP DBT Kisan Portal (`dbt.mpdage.org`)
-- **Uttar Pradesh:** UP Agriculture Portal (`upagriculture.com`)
-- **Bihar:** DBT Agriculture Bihar (`dbtagriculture.bihar.gov.in`)
-- **Maharashtra:** MahaDBT Portal (`mahadbt.maharashtra.gov.in`)
+- **Rajasthan:** RajKisan Sathi Portal (rajkisan.rajasthan.gov.in)
+- **Madhya Pradesh:** MP DBT Kisan Portal (dbt.mpdage.org)
+- **Uttar Pradesh:** UP Agriculture Portal (upagriculture.com)
+- **Bihar:** DBT Agriculture Bihar (dbtagriculture.bihar.gov.in)
+- **Maharashtra:** MahaDBT Portal (mahadbt.maharashtra.gov.in)
 
 Authorized KrishiGears dealers provide full paper trail and GST invoice validation to ensure seamless verification by block agricultural officers.
 `

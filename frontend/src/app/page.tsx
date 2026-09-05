@@ -747,6 +747,9 @@ function VideoCard({ video }: { video: any }) {
 
   const thumb = video.thumbnail || (youtubeEmbed ? `https://img.youtube.com/vi/${youtubeEmbed.split("/embed/")[1]}/hqdefault.jpg` : "");
   const onClick = (e: any) => {
+    if (youtubeEmbed) { e.preventDefault(); setPlaying(true); }
+  };
+
   const videoJsonLd = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
