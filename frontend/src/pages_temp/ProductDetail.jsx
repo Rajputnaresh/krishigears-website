@@ -174,9 +174,10 @@ export default function ProductDetail() {
                 Buy Online at FarmingTools
               </a>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`}
+                href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`WhatsApp Supply Enquiry for ${product.name}`}
                 onClick={() => trackWhatsAppClick("product_detail", product.slug)}
                 data-testid="product-whatsapp-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"

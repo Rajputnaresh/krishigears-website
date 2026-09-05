@@ -87,7 +87,7 @@ export default function DealerState() {
             <EnquiryDialog product={`Dealer Application - ${stateName}`} trigger={
               <button data-testid="dealer-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Apply for Dealership</button>
             } />
-            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I want to become a KrishiGears dealer in ${stateName}. Please share details.`)}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("dealer_state", state)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Territory Manager</a>
+            <a href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hi, I want to become a KrishiGears dealer in ${stateName}. Please share details.`)}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label={`WhatsApp Territory Manager for ${stateName}`} onClick={() => trackWhatsAppClick("dealer_state", state)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Territory Manager</a>
           </div>
         </div>
       </section>

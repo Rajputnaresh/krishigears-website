@@ -72,6 +72,18 @@ export default function Header() {
       data-testid="site-header"
       className="fixed top-0 inset-x-0 z-50 bg-black/85 backdrop-blur-xl border-b border-zinc-800"
     >
+      {/* Global B2B Trust Badge Bar */}
+      <div className="bg-zinc-950 border-b border-zinc-800/80 py-1 px-4 text-center text-[11px] md:text-xs text-zinc-300 font-medium tracking-wide flex items-center justify-center gap-2 md:gap-4 overflow-x-auto whitespace-nowrap">
+        <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
+          GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
+        </span>
+        <span className="text-zinc-600 hidden sm:inline">|</span>
+        <span className="text-zinc-200">FMTTI / SRFMTTI Tested Machinery</span>
+        <span className="text-zinc-600 hidden sm:inline">|</span>
+        <span className="text-zinc-300 hidden md:inline">Factory Dispatch 24–48h PAN India</span>
+      </div>
+
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group">
@@ -156,8 +168,15 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-56 text-zinc-200">
               <DropdownMenuItem asChild>
-                <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]">
-                  <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
+                <a
+                  href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp Enquiry for KrishiGears Machinery"
+                  onClick={() => trackWhatsAppClick("header_desktop")}
+                  className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]"
+                >
+                  <WhatsAppIcon className="h-4 w-4" /> WhatsApp Enquiry
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -276,14 +295,15 @@ export default function Header() {
                 <Phone className="h-4 w-4 inline mr-2 text-lime-400" /> {COMPANY.phone}
               </a>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}`}
+                href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="WhatsApp Enquiry for KrishiGears Machinery"
                 onClick={() => trackWhatsAppClick("header_mobile")}
                 data-testid="m-nav-whatsapp"
                 className="mt-2 px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-semibold"
               >
-                <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us
+                <WhatsAppIcon className="h-4 w-4" /> WhatsApp Enquiry
               </a>
             </nav>
           </SheetContent>

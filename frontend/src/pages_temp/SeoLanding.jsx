@@ -167,7 +167,7 @@ export default function SeoLanding() {
             } />
             <Link href="/become-a-dealer" data-testid="seo-dealer-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Become Dealer</Link>
             <Link href="/bulk-order" data-testid="seo-institutional-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Institutional Supply</Link>
-            <a href={`https://wa.me/${COMPANY.whatsapp}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick("seo_landing", slug)} data-testid="seo-whatsapp-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Supply Desk</a>
+            <a href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label="WhatsApp Supply Desk" onClick={() => trackWhatsAppClick("seo_landing", slug)} data-testid="seo-whatsapp-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Supply Desk</a>
           </div>
         </div>
       </section>

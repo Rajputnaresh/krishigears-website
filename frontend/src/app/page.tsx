@@ -532,9 +532,10 @@ function ContactStrip() {
               <div className="flex-grow border-t border-zinc-800"></div>
             </div>
             <a
-              href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और स्पेयर पार्ट्स की थोक कीमत / डीलरशिप जानकारी चाहिए।")}`}
+              href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और स्पेयर पार्ट्स की थोक कीमत / डीलरशिप जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
               target="_blank"
               rel="noreferrer"
+              aria-label="1-Tap WhatsApp Quotation Desk"
               onClick={() => trackWhatsAppClick("contact_strip_quick")}
               className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide"
             >

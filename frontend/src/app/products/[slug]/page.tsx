@@ -17,7 +17,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${product.name} | B2B Commercial Machinery — KrishiGears`;
+  const title = `${product.name} | B2B Factory Price — KrishiGears`;
   const description = `${product.name} (${product.model || "Commercial Grade"}). FMTTI-tested, ${product.specs?.Power || "Heavy duty"}, genuine OEM fitment, 24-48h dispatch from Jaipur HQ. Get wholesale dealer quote.`;
 
   return {

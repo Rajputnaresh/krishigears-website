@@ -142,7 +142,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
   const whatsappText = encodeURIComponent(
     `Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`
   );
-  const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${whatsappText}`;
+  const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${whatsappText}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const jsonLd = {
     '@context': 'https://schema.org',

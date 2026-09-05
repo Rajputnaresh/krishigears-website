@@ -44,7 +44,7 @@ export default function Contact() {
           {/* Channels */}
           <div className="lg:col-span-5 space-y-4">
             <ChannelCard icon={Phone} title="Call us" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" onClick={() => trackPhoneClick("contact_page")} />
-            <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://wa.me/${COMPANY.whatsapp}`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
+            <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
             <ChannelCard icon={Mail} title="Sales / Orders" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
             <ChannelCard icon={Mail} title="Service / Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
             <ChannelCard icon={Mail} title="Dealership" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />

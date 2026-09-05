@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
   const waMsg = encodeURIComponent(
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. [Ref: web_catalog_${product.slug}] Please share pricing.`
   );
-  const waHref = `https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`;
+  const waHref = `https://wa.me/${COMPANY.whatsapp}?text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const productJsonLd = {
     "@context": "https://schema.org",
