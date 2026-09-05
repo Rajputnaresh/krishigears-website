@@ -42,7 +42,15 @@ export const metadata: Metadata = {
     "power tiller dealer jaipur",
     "power weeder dealership kaise le",
     "7 hp diesel weeder price wholesale",
-    "power weeder subsidy portal registration"
+    "power weeder subsidy portal registration",
+    "diesel weeder price kya hai",
+    "krishi yantra dealership rajasthan",
+    "power weeder subsidy rajasthan 2026",
+    "power tiller wholesale market",
+    "back rotary weeder price maharashtra",
+    "honda engine weeder spare parts",
+    "पावर वीडर डीलरशिप",
+    "कृषि यंत्र सब्सिडी पोर्टल"
   ],
   authors: [{ name: "KrishiGears Engineering Desk", url: "https://krishigears.com" }],
   openGraph: {

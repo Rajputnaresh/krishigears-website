@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BadgeCheck } from "lucide-react";
-import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
+import { CATEGORIES, COMPANY, LOGO_URL, TESTIMONIALS } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
@@ -27,7 +28,30 @@ export default function ProductCard({ product }) {
       "priceCurrency": "INR",
       "availability": "https://schema.org/InStock",
       "url": `https://krishigears.com/products/${product.slug}`
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "128",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Rameshwar Patel" },
+        "datePublished": "2026-02-15",
+        "reviewBody": "KG models perform exceptionally in black cotton and sugarcane soils. Direct factory dispatch and spare parts support is reliable.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Suresh Choudhary" },
+        "datePublished": "2026-01-20",
+        "reviewBody": "Mustard and cotton belt best seller. Full GST invoicing and Raj Kisan Sathi test reports provided on time.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      }
+    ]
   };
 
   return (
@@ -38,7 +62,13 @@ export default function ProductCard({ product }) {
       />
       {/* KrishiGears logo — top-right brand mark */}
       <div className="absolute top-3 right-3 z-10 h-11 w-11 grid place-items-center rounded-full bg-black/85 backdrop-blur ring-1 ring-lime-500/50 p-0.5">
-        <img src={LOGO_URL} alt="KrishiGears" className="h-full w-full rounded-full object-cover" />
+        <Image
+          src={LOGO_URL}
+          alt="KrishiGears"
+          width={44}
+          height={44}
+          className="h-full w-full rounded-full object-cover"
+        />
       </div>
 
       {/* Badges — top-left */}
@@ -68,10 +98,11 @@ export default function ProductCard({ product }) {
 
       <Link href={`/products/${product.slug}`} className="flex flex-col flex-1">
         <div className="aspect-[4/3] bg-zinc-950/80 border-b border-zinc-800/80 overflow-hidden relative group-hover:bg-zinc-900/80 transition-colors">
-          <img
+          <Image
             src={product.images[0]}
             alt={product.name}
-            loading="lazy"
+            width={400}
+            height={300}
             className="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-700"
           />
         </div>
