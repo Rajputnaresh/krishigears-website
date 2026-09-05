@@ -1,3 +1,4 @@
+"use client";
 import { Phone } from "lucide-react";
 import { COMPANY } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -43,7 +44,7 @@ export default function ProductCard({ product }) {
         <WhatsAppIcon className="h-5 w-5" />
       </a>
 
-      <Link to={`/products/${product.slug}`} className="flex flex-col flex-1">
+      <Link href={`/products/${product.slug}`} className="flex flex-col flex-1">
         <div className="aspect-[4/3] bg-white overflow-hidden">
           <img
             src={product.images[0]}

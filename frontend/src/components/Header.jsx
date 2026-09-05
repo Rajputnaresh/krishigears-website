@@ -192,7 +192,18 @@ export default function Header() {
 
               {/* Mobile Language Switcher */}
               <div className="flex justify-around py-4 border-b border-zinc-100 dark:border-zinc-900">
-                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>EN</button>
+                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>HI</button>
+                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>MR</button>
+              </div>
+
+              {NAV.map((item) => (
+                <Link
+                  key={item.to}
+                  href={item.to}
+                  data-testid={`m-nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
+                  onClick={() => setOpen(false)}
+                  className={`px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 ${location.pathname === item.to ? "text-lime-500" : "text-zinc-800 dark:text-zinc-200"}`}
                 >
                   {t(item.labelKey)}
                 </Link>
