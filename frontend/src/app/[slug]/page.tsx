@@ -183,9 +183,11 @@ export default async function LocationCategoryPage({ params }: { params: Promise
               {locationName} is a prominent agricultural district characterized by {data.farming_profile.toLowerCase()}. 
               With predominant {data.soil_type.toLowerCase()}, farmers require robust mechanization to maximize yield.
             </p>
-            <div className="bg-surface-darker p-6 rounded-lg border border-zinc-800 border-l-4 border-l-lime-500">
-              <h3 className="text-lime-500 font-bold mb-2">Crop Focus: {primaryCrop}</h3>
-              <p className="text-zinc-300">{matchedCropGuide}</p>
+            <div className="bg-surface-darker p-6 rounded-lg border border-zinc-700/80 relative">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold tracking-wide uppercase bg-lime-500/15 text-lime-400 border border-lime-500/30 mb-3">
+                Crop Focus: {primaryCrop}
+              </div>
+              <p className="text-zinc-200 leading-relaxed">{matchedCropGuide}</p>
             </div>
           </div>
 

@@ -47,7 +47,7 @@ export default function Footer() {
               <div className="text-[10px] tracking-[0.25em] text-zinc-500 dark:text-zinc-500 uppercase">Farming Tools</div>
             </div>
           </div>
-          <p className="mt-6 text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+          <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
             B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.
           </p>
           <div className="mt-6 flex gap-3">
@@ -57,7 +57,7 @@ export default function Footer() {
             { Icon: YoutubeIcon, label: "YouTube" },
             { Icon: TwitterIcon, label: "Twitter" },
           ].map(({ Icon: I, label }) => (
-            <a key={label} href="#" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 text-zinc-600 dark:text-zinc-400 transition">
+            <a key={label} href="#" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-700 rounded-md hover:border-lime-500 hover:text-lime-400 text-zinc-300 transition">
               <I className="h-4 w-4" />
             </a>
           ))}
@@ -66,13 +66,13 @@ export default function Footer() {
 
         {/* Products */}
         <div className="md:col-span-3">
-          <div className="text-xs font-bold tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 mb-5">Product Range</div>
+          <div className="text-xs font-bold tracking-[0.2em] uppercase text-zinc-300 mb-5">Product Range</div>
           <ul className="grid grid-cols-1 gap-2.5">
             {CATEGORIES.slice(0, 10).map((c) => (
               <li key={c.slug}>
                 <Link
                   href={`/products/category/${c.slug}`}
-                  className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-lime-500 transition"
+                  className="text-sm text-zinc-200 hover:text-lime-400 transition"
                   data-testid={`footer-cat-${c.slug}`}
                 >
                   {c.name}
@@ -84,16 +84,16 @@ export default function Footer() {
 
         {/* SEO + Pages */}
         <div className="md:col-span-2">
-          <div className="text-xs font-bold tracking-[0.25em] uppercase text-zinc-500 dark:text-zinc-500 mb-5">Quick Links</div>
-          <ul className="space-y-2.5 text-sm text-zinc-600 dark:text-zinc-400">
-            <li><Link href="/about" className="hover:text-lime-500">About Us</Link></li>
-            <li><Link href="/dealer-network" className="hover:text-lime-500">Dealer Network</Link></li>
-            <li><Link href="/locations" className="hover:text-lime-500">All Supply Locations</Link></li>
-            <li><Link href="/become-a-dealer" className="hover:text-lime-500">Become a Dealer</Link></li>
-            <li><Link href="/bulk-order" className="hover:text-lime-500">Bulk Order</Link></li>
-            <li><Link href="/warranty-and-support" className="hover:text-lime-500">Warranty</Link></li>
-            <li><Link href="/blog" className="hover:text-lime-500">Blog</Link></li>
-            <li><Link href="/contact" className="hover:text-lime-500">Contact Us</Link></li>
+          <div className="text-xs font-bold tracking-[0.2em] uppercase text-zinc-300 mb-5">Quick Links</div>
+          <ul className="space-y-2.5 text-sm text-zinc-200">
+            <li><Link href="/about" className="hover:text-lime-400">About Us</Link></li>
+            <li><Link href="/dealer-network" className="hover:text-lime-400">Dealer Network</Link></li>
+            <li><Link href="/locations" className="hover:text-lime-400">All Supply Locations</Link></li>
+            <li><Link href="/become-a-dealer" className="hover:text-lime-400">Become a Dealer</Link></li>
+            <li><Link href="/bulk-order" className="hover:text-lime-400">Bulk Order</Link></li>
+            <li><Link href="/warranty-and-support" className="hover:text-lime-400">Warranty</Link></li>
+            <li><Link href="/blog" className="hover:text-lime-400">Blog</Link></li>
+            <li><Link href="/contact" className="hover:text-lime-400">Contact Us</Link></li>
           </ul>
         </div>
 
