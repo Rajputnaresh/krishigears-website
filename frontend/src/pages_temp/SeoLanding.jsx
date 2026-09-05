@@ -121,6 +121,24 @@ export default function SeoLanding() {
     }
   } : null;
 
+  const breadcrumbSchema = page.city && page.state ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://krishigears.com" },
+      { "@type": "ListItem", "position": 2, "name": "Dealer Network", "item": "https://krishigears.com/dealer-network" },
+      { "@type": "ListItem", "position": 3, "name": page.state, "item": `https://krishigears.com/dealer/${page.state.toLowerCase().replace(/\s+/g, "-")}` },
+      { "@type": "ListItem", "position": 4, "name": `${page.city} Power Weeders`, "item": `https://krishigears.com/seo/${page.slug}` }
+    ]
+  } : {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://krishigears.com" },
+      { "@type": "ListItem", "position": 2, "name": page.title || "SEO Program", "item": `https://krishigears.com/seo/${slug}` }
+    ]
+  };
+
   return (
     <div data-testid="seo-landing" className="min-h-screen">
       {localSchema && (
@@ -128,6 +146,9 @@ export default function SeoLanding() {
           {JSON.stringify(localSchema)}
         </script>
       )}
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
 
       {page.city && page.state && (
         <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-400">

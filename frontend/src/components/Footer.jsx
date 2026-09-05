@@ -52,10 +52,10 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
           {[
-            { Icon: FacebookIcon, label: "Facebook" },
-            { Icon: InstagramIcon, label: "Instagram" },
-            { Icon: YoutubeIcon, label: "YouTube" },
-            { Icon: TwitterIcon, label: "Twitter" },
+            { Icon: FacebookIcon, label: "KrishiGears Official Facebook Page" },
+            { Icon: InstagramIcon, label: "KrishiGears Instagram Machinery Showcase" },
+            { Icon: YoutubeIcon, label: "KrishiGears YouTube Demonstration Channel" },
+            { Icon: TwitterIcon, label: "KrishiGears Twitter Updates" },
           ].map(({ Icon: I, label }) => (
             <a key={label} href="#" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-700 rounded-md hover:border-lime-500 hover:text-lime-400 text-zinc-300 transition">
               <I className="h-4 w-4" />

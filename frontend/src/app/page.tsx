@@ -3,12 +3,13 @@
 import Link from "next/link";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
-  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X
+  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X, FileText
 } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, FARMINGTOOLS_URL, PRODUCTS } from "@/data/catalog";
 import locationsData from "@/data/locations.json";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import EnquiryDialog from "@/components/EnquiryDialog";
 import { useEffect, useState, useMemo } from "react";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
@@ -144,6 +145,18 @@ export default function Home() {
               >
                 डीलरशिप आवेदन / Become a Dealer
               </Link>
+              <EnquiryDialog
+                product="Wholesale B2B Machinery Catalog 2026"
+                trigger={
+                  <button
+                    data-testid="hero-catalog-modal-btn"
+                    className="inline-flex items-center gap-2 text-zinc-200 hover:text-white text-xs sm:text-sm font-bold transition border border-zinc-700 bg-zinc-950/80 hover:border-lime-500/80 px-5 py-4 rounded-md shadow-md"
+                  >
+                    <FileText className="h-4 w-4 text-lime-400" />
+                    Request Wholesale Catalog
+                  </button>
+                }
+              />
               <Link
                 href="/bulk-order"
                 data-testid="hero-bulk-btn"
