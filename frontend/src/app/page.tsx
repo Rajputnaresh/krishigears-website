@@ -605,7 +605,7 @@ function DistrictLocator() {
                   <h3 className="font-display font-bold text-lg text-zinc-100 mt-2 group-hover:text-lime-400 transition-colors">
                     {districtName}
                   </h3>
-                  <div className="mt-2 text-xs text-zinc-400 line-clamp-2">
+                  <div className="mt-2 text-xs text-zinc-300 line-clamp-2">
                     {data.farming_profile || data.soil_type}
                   </div>
                   {data.key_crops && (
@@ -613,7 +613,7 @@ function DistrictLocator() {
                       {data.key_crops.slice(0, 3).map((crop: string) => (
                         <span
                           key={crop}
-                          className="px-2 py-0.5 text-[11px] bg-zinc-900 border border-zinc-800 text-zinc-300 rounded"
+                          className="px-2 py-0.5 text-[11px] font-medium bg-zinc-900 border border-zinc-700 text-zinc-200 rounded"
                         >
                           {crop}
                         </span>
@@ -622,7 +622,7 @@ function DistrictLocator() {
                   )}
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                <div className="mt-5 pt-3 border-t border-zinc-800 flex items-center justify-between">
                   <Link
                     href={`/power-weeders-in-${districtSlug}`}
                     className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1"
@@ -631,9 +631,9 @@ function DistrictLocator() {
                   </Link>
                   <Link
                     href={`/dealer/${data.state ? data.state.toLowerCase().replace(/ /g, "-") : "all"}`}
-                    className="text-xs text-zinc-400 hover:text-zinc-200"
+                    className="text-xs font-semibold text-zinc-300 hover:text-lime-400 transition-colors"
                   >
-                    Dealer Info
+                    Dealer Info →
                   </Link>
                 </div>
               </div>
