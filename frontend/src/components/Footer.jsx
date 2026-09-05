@@ -84,6 +84,7 @@ export default function Footer() {
           <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">KrishiGears</div>
           <ul className="space-y-2 text-sm text-zinc-400">
             <li><Link href="/about" className="hover:text-lime-400 transition">About Us</Link></li>
+            <li><Link href="/locations" className="hover:text-lime-400 transition">Locations Directory</Link></li>
             <li><Link href="/dealer-network" className="hover:text-lime-400 transition">Dealer Network</Link></li>
             <li><Link href="/become-a-dealer" className="hover:text-lime-400 transition">Become a Dealer</Link></li>
             <li><Link href="/bulk-order" className="hover:text-lime-400 transition">Bulk Order</Link></li>

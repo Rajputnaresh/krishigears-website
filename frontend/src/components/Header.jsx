@@ -16,6 +16,7 @@ const NAV = [
   { to: "/", labelKey: "nav.home" },
   { to: "/about", labelKey: "nav.aboutUs" },
   { to: "/dealer-network", labelKey: "nav.dealerNetwork" },
+  { to: "/locations", labelKey: "nav.locations", fallback: "Locations" },
   { to: "/blog", labelKey: "nav.blog" },
   { to: "/warranty-and-support", labelKey: "nav.warranty" },
   { to: "/contact", labelKey: "nav.contactUs" },
@@ -123,7 +124,7 @@ export default function Header() {
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
               className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white"
             >
-              {t(item.labelKey)}
+              {t(item.labelKey, item.fallback || item.labelKey)}
             </Link>
           ))}
         </nav>
@@ -217,7 +218,7 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   className={`px-3 py-3 text-base border-b border-zinc-850 ${location.pathname === item.to ? "text-lime-400 font-bold" : "text-zinc-200 hover:text-white"}`}
                 >
-                  {t(item.labelKey)}
+                  {t(item.labelKey, item.fallback || item.labelKey)}
                 </Link>
               ))}
               <Link href="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-850 text-zinc-200 hover:text-white">{t('nav.products', 'Products')}</Link>
