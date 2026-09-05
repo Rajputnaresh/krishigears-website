@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import locationsData from '@/data/locations.json';
+import { BLOG_POSTS_ARRAY } from '@/data/blogPosts';
 
 const SITE_URL = 'https://krishigears.com';
 
@@ -68,6 +69,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ];
+
+  // Add all individual blog post URLs
+  BLOG_POSTS_ARRAY.forEach((p) => {
+    sitemapUrls.push({
+      url: `${SITE_URL}/blog/${p.slug}`,
+      lastModified: new Date(p.created_at),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
+  });
 
   // Dynamically generate all programmatic SEO URLs
   Object.keys(locationsData).forEach((locationName) => {

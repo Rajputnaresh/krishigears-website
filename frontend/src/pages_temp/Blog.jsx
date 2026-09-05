@@ -3,34 +3,7 @@ import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import { apiClient } from "@/lib/api";
 import { FARMER_FIELD, FIELD_TRACTOR, PLOWING } from "@/data/catalog";
-
-// Static fallback sample posts (used only when DB is empty)
-const SAMPLE_POSTS = [
-  {
-    slug: "power-weeder-buying-guide-2026",
-    title: "Power Weeder Buying Guide 2026: Petrol vs Diesel vs Electric Start",
-    excerpt: "A comprehensive 2026 procurement guide for agri-dealers, FPOs, and commercial contractors comparing petrol, diesel, and electric-start power weeders.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
-    created_at: "2026-01-15T10:00:00Z",
-    tags: ["Power Weeder", "Buying Guide", "B2B Procurement"],
-  },
-  {
-    slug: "rk-170f-vs-177f-vs-173f-comparison",
-    title: "RK-170F vs RK-177F vs RK-173F: Which Power Weeder is Right for You?",
-    excerpt: "Head-to-head technical comparison of KrishiGears top-selling power weeder models for Indian soil conditions.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/baby-weeder.webp",
-    created_at: "2026-01-10T10:00:00Z",
-    tags: ["Comparison", "Power Weeder", "Specs"],
-  },
-  {
-    slug: "power-weeder-government-subsidy-dbt-guide",
-    title: "Power Weeder Government Subsidy: How Dealers & FPOs Can Apply via DBT",
-    excerpt: "A step-by-step operational guide for agricultural dealers and FPOs to access 40% to 50% government subsidies on power weeders.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
-    created_at: "2026-01-05T10:00:00Z",
-    tags: ["Subsidy", "Government", "DBT Portal"],
-  },
-];
+import { BLOG_POSTS_ARRAY } from "@/data/blogPosts";
 
 const POST_OVERRIDES = {};
 
@@ -45,9 +18,9 @@ export default function Blog() {
     apiClient.get("/blog")
       .then((res) => {
         const list = Array.isArray(res.data) ? res.data : [];
-        setPosts((list.length ? list : SAMPLE_POSTS).map(normalizePost));
+        setPosts((list.length ? list : BLOG_POSTS_ARRAY).map(normalizePost));
       })
-      .catch(() => setPosts(SAMPLE_POSTS.map(normalizePost)));
+      .catch(() => setPosts(BLOG_POSTS_ARRAY.map(normalizePost)));
   }, []);
 
   if (posts === null) {
