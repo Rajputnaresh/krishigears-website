@@ -747,30 +747,44 @@ function VideoCard({ video }: { video: any }) {
 
   const thumb = video.thumbnail || (youtubeEmbed ? `https://img.youtube.com/vi/${youtubeEmbed.split("/embed/")[1]}/hqdefault.jpg` : "");
   const onClick = (e: any) => {
-    if (youtubeEmbed) { e.preventDefault(); setPlaying(true); }
+  const videoJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": video.title,
+    "description": `${video.title} - KrishiGears agricultural machinery demonstration.`,
+    "thumbnailUrl": [thumb || "https://krishigears.com/images/products/weeder.webp"],
+    "uploadDate": "2026-01-15T08:00:00+05:30",
+    "contentUrl": video.url,
+    "embedUrl": youtubeEmbed || video.url
   };
 
   return (
-    <a
-      href={video.url}
-      target={youtubeEmbed ? "_self" : "_blank"}
-      rel="noreferrer"
-      onClick={onClick}
-      data-testid={`home-video-${video.id}`}
-      className="relative aspect-video overflow-hidden border border-zinc-700 group cursor-pointer block bg-zinc-900 rounded-lg"
-    >
-      {thumb && <img src={thumb} alt={video.title} loading="lazy" className="w-full h-full object-cover opacity-75 group-hover:opacity-90 transition"/>}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"/>
-      <div className="absolute inset-0 grid place-items-center">
-        <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition shadow-lg shadow-lime-500/20">
-          <Play className="h-6 w-6 fill-black ml-1" />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+      />
+      <a
+        href={video.url}
+        target={youtubeEmbed ? "_self" : "_blank"}
+        rel="noreferrer"
+        onClick={onClick}
+        data-testid={`home-video-${video.id}`}
+        className="relative aspect-video overflow-hidden border border-zinc-700 group cursor-pointer block bg-zinc-900 rounded-lg"
+      >
+        {thumb && <img src={thumb} alt={video.title} loading="lazy" className="w-full h-full object-cover opacity-75 group-hover:opacity-90 transition"/>}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"/>
+        <div className="absolute inset-0 grid place-items-center">
+          <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition shadow-lg shadow-lime-500/20">
+            <Play className="h-6 w-6 fill-black ml-1" />
+          </div>
         </div>
-      </div>
-      <div className="absolute bottom-3 left-3 right-3">
-        <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
-        <div className="text-zinc-50 font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
-      </div>
-    </a>
+        <div className="absolute bottom-3 left-3 right-3">
+          <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
+          <div className="text-zinc-50 font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
+        </div>
+      </a>
+    </>
   );
 }
 

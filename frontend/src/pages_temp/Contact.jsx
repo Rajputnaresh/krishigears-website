@@ -99,7 +99,7 @@ export default function Contact() {
               <p className="text-zinc-400 text-sm mt-1">202, Mahima Shubh Nilay, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026</p>
             </div>
             <a
-              href="https://maps.google.com/?q=Mahima+Shubh+Nilay+Jaisinghpura+Jaipur"
+              href="https://www.google.com/maps/search/?api=1&query=26.8538,75.7196+(KrishiGears+Jaipur+HQ)"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-lime-400 border border-zinc-700 rounded-md text-xs uppercase tracking-wider font-bold transition inline-flex items-center gap-2"

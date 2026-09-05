@@ -4434,6 +4434,67 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How can agricultural machinery dealers increase their spare parts profitability?\n**Expert Resolution:** Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal.\n\n### Q: What are the main reasons state DBT subsidy applications get rejected?\n**Expert Resolution:** Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories.\n\n### Q: What warranty support does KrishiGears offer to authorized dealers?\n**Expert Resolution:** KrishiGears provides genuine OEM-spec components, strict fitment guarantees, marketing collateral, and expedited 24-48 hour courier dispatch from central logistics in Jaipur.\n\n`
   },
+
+  "power-weeder-price-in-india-2026-b2b-dealer-wholesale-guide": {
+    slug: "power-weeder-price-in-india-2026-b2b-dealer-wholesale-guide",
+    title: "Power Weeder Price in India 2026: Complete Wholesale & Dealer Price Guide",
+    excerpt: "Commercial price breakdown of 7HP petrol, 5.5HP diesel, and 9HP/10HP heavy-duty power weeders across India with subsidy margins and distributor discounts.",
+    cover_image: "/images/products/weeder.webp",
+    created_at: "2026-03-01T10:00:00Z",
+    tags: ["Power Weeder Price", "Wholesale", "Dealership Economics", "Commercial Quotations"],
+    content: `Understanding power weeder pricing in India requires evaluating engine horsepower, transmission drive (belt-pulley vs direct gear drive), and state subsidy billing compliance.
+
+## Wholesale & Retail Price Benchmarks across India
+
+| Power Weeder Model & Capacity | Wholesale Dealer Cost Range | Retail Farmer Price (Approx) | DBT Subsidy Benefit (40-50%) |
+| :--- | :--- | :--- | :--- |
+| **7 HP Petrol (Recoil Start, 212cc)** | ₹24,000 – ₹28,000 | ₹34,000 – ₹38,000 | ₹12,000 – ₹17,000 subsidy reimbursement |
+| **7 HP Petrol (Key Electric Start)** | ₹28,000 – ₹32,000 | ₹38,000 – ₹44,000 | ₹14,000 – ₹19,000 subsidy reimbursement |
+| **5.5 HP Diesel (173F Engine)** | ₹32,000 – ₹36,000 | ₹42,000 – ₹48,000 | ₹16,000 – ₹22,000 subsidy reimbursement |
+| **9 HP Petrol (Wolf Series, 270cc)** | ₹34,000 – ₹38,000 | ₹45,000 – ₹52,000 | ₹18,000 – ₹25,000 subsidy reimbursement |
+| **10 HP Diesel (186F Dual PTO)** | ₹42,000 – ₹48,000 | ₹56,000 – ₹65,000 | ₹22,000 – ₹30,000 subsidy reimbursement |
+
+## Factors Governing Commercial Machinery Pricing
+
+### 1. Transmission Mechanism
+- **Belt-Driven (Entry Tier):** Lower initial acquisition cost but prone to slip in heavy black cotton soils; higher annual maintenance.
+- **Direct Gear-Driven (Commercial Standard):** Zero power loss, hardened alloy gears, ideal for multi-acre contract tilling.
+
+### 2. State Subsidy Compatibility & Invoicing
+Farmers purchasing weeders through state portals (SMAM, DBT Agriculture) require official GST-compliant tax invoices, engine/chassis number verification, and FMTTI test reports. KrishiGears supplies complete documentation to dealers for swift claim approvals.
+
+### 3. Spare Parts Continuity
+A low initial purchase price is counterproductive if replacement tines, recoil springs, or carburetors cannot be sourced within 48 hours. KrishiGears guarantees 100% genuine fitment spares dispatched directly from central Jaipur logistics.
+`
+  },
+  "smam-subsidy-portal-registration-power-weeder-guide": {
+    slug: "smam-subsidy-portal-registration-power-weeder-guide",
+    title: "SMAM & DBT Agriculture Subsidy Portal Registration for Farm Machinery (2026)",
+    excerpt: "Step-by-step guide to applying for 40% to 50% government subsidy on power weeders and tillers through central SMAM and State DBT agriculture portals.",
+    cover_image: "/images/products/weeder.webp",
+    created_at: "2026-03-02T10:00:00Z",
+    tags: ["SMAM Subsidy", "DBT Agriculture", "Government Scheme", "Farmer Guide"],
+    content: `The Sub-Mission on Agricultural Mechanization (SMAM) and State DBT portals offer financial assistance between 40% (general category) and 50% (SC/ST/small and marginal farmers, women farmers) for purchasing power weeders, power tillers, and brush cutters.
+
+## Mandatory Documents for Subsidy Application
+
+1. **Aadhaar Card** linked with mobile number and bank account (Aadhaar Seeded Bank Account).
+2. **Land Records (Khatoni / 7/12 / ROR / Jamabandi):** Demonstrating agricultural land ownership.
+3. **Caste Certificate:** For SC/ST farmers seeking the 50% maximum allocation.
+4. **Cancelled Cheque / Bank Passbook Copy:** For direct benefit transfer credit.
+5. **Commercial Quotation & FMTTI Compliance Certificate:** Provided directly by authorized KrishiGears dealership counters.
+
+## State-by-State DBT Portals
+
+- **Rajasthan:** RajKisan Sathi Portal (`rajkisan.rajasthan.gov.in`)
+- **Madhya Pradesh:** MP DBT Kisan Portal (`dbt.mpdage.org`)
+- **Uttar Pradesh:** UP Agriculture Portal (`upagriculture.com`)
+- **Bihar:** DBT Agriculture Bihar (`dbtagriculture.bihar.gov.in`)
+- **Maharashtra:** MahaDBT Portal (`mahadbt.maharashtra.gov.in`)
+
+Authorized KrishiGears dealers provide full paper trail and GST invoice validation to ensure seamless verification by block agricultural officers.
+`
+  },
 };
 
 export const BLOG_POSTS_ARRAY: BlogPostData[] = Object.values(BLOG_POSTS);
