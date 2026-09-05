@@ -1,0 +1,5 @@
+yarn run v1.22.22
+warning ../../../../../../package.json: No license field
+$ node scripts/split-seo-data.js && rm -rf build && craco build && node scripts/prerender-seo.js
+Successfully generated 10 individual SEO JSON files.
+/bin/sh: line 1: 99904 Killed: 9               craco build

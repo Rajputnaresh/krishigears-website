@@ -1,7 +1,5 @@
-"use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Globe, Headphones } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -23,8 +21,8 @@ const NAV = [
 
 export default function Header() {
   const { t, i18n } = useTranslation();
-  const navigate = useRouter();
-  const location = { pathname: usePathname(), search: "" };
+  const navigate = useNavigate();
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -67,7 +65,7 @@ export default function Header() {
     >
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
         {/* Logo */}
-        <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group">
+        <Link to="/" data-testid="header-logo-link" className="flex items-center gap-3 group">
           <img src={LOGO_URL} alt="KrishiGears" className="h-12 w-12 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
           <div className="leading-tight hidden sm:block">
             <div className="font-display font-black text-lg tracking-tight">
@@ -80,14 +78,16 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.slice(0, 2).map((item) => (
-            <Link
+            <NavLink
               key={item.to}
-              href={item.to}
+              to={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+              className={({ isActive }) =>
+                `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
+              }
             >
               {t(item.labelKey)}
-            </Link>
+            </NavLink>
           ))}
 
           <DropdownMenu>
@@ -99,13 +99,13 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border-zinc-200 dark:border-zinc-800 w-80 max-h-[70vh] overflow-y-auto">
               <DropdownMenuItem asChild>
-                <Link href="/products" className="font-bold text-lime-500" data-testid="nav-all-products">View All Categories →</Link>
+                <Link to="/products" className="font-bold text-lime-500" data-testid="nav-all-products">View All Categories →</Link>
               </DropdownMenuItem>
               <div className="h-px bg-zinc-800 my-1" />
               {CATEGORIES.map((c) => (
                 <DropdownMenuItem key={c.slug} asChild>
                   <Link
-                    href={`/products/category/${c.slug}`}
+                    to={`/products/category/${c.slug}`}
                     data-testid={`nav-cat-${c.slug}`}
                     className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-lime-500"
                   >
@@ -117,14 +117,16 @@ export default function Header() {
           </DropdownMenu>
 
           {NAV.slice(2).map((item) => (
-            <Link
+            <NavLink
               key={item.to}
-              href={item.to}
+              to={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+              className={({ isActive }) =>
+                `px-4 py-2 text-sm font-medium transition ${isActive ? "text-lime-500" : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"}`
+              }
             >
               {t(item.labelKey)}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -162,7 +164,7 @@ export default function Header() {
           </DropdownMenu>
 
           <Link
-            href="/become-a-dealer"
+            to="/become-a-dealer"
             data-testid="header-become-dealer-btn"
             title="Become a Dealer (⌘D)"
             className="ml-2 px-5 py-2.5 bg-lime-500 text-black dark:text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2"
@@ -192,14 +194,28 @@ export default function Header() {
 
               {/* Mobile Language Switcher */}
               <div className="flex justify-around py-4 border-b border-zinc-100 dark:border-zinc-900">
-                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className="px-4 py-2 text-sm font-medium transition text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:text-white"
+                <button onClick={() => { switchLanguage('en'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'en' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>EN</button>
+                <button onClick={() => { switchLanguage('hi'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'hi' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>HI</button>
+                <button onClick={() => { switchLanguage('mr'); setOpen(false); }} className={`px-4 py-2 text-sm rounded ${i18n.language === 'mr' ? 'bg-lime-500 text-black' : 'border border-zinc-700'}`}>MR</button>
+              </div>
+              
+              {NAV.map((item) => (
+
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  data-testid={`m-nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 ${isActive ? "text-lime-500" : "text-zinc-800 dark:text-zinc-200"}`
+                  }
                 >
                   {t(item.labelKey)}
-                </Link>
+                </NavLink>
               ))}
-              <Link href="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 text-zinc-800 dark:text-zinc-200">{t('nav.products', 'Products')}</Link>
+              <NavLink to="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-100 dark:border-zinc-900 text-zinc-800 dark:text-zinc-200">{t('nav.products', 'Products')}</NavLink>
               <Link
-                href="/become-a-dealer"
+                to="/become-a-dealer"
                 onClick={() => setOpen(false)}
                 data-testid="m-nav-become-dealer"
                 className="mt-4 px-5 py-3 bg-lime-500 text-black dark:text-black font-bold text-center rounded-md"
