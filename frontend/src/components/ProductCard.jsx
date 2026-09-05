@@ -63,11 +63,16 @@ export default function ProductCard({ product }) {
               <BadgeCheck className="h-3 w-3 text-lime-500"/> {product.model}
             </div>
           )}
-          <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-900">
-            <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2.5 py-1">
-              B2B Supply
-            </span>
-            <ArrowRight className="h-4 w-4 text-lime-500" />
+          <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-800">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.15em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2 py-0.5 rounded">
+                B2B Supply
+              </span>
+              <span className="text-[10px] font-medium text-zinc-300 border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 rounded">
+                MOQ: 1 Lot
+              </span>
+            </div>
+            <ArrowRight className="h-4 w-4 text-lime-400 group-hover:translate-x-1 transition" />
           </div>
         </div>
       </Link>

@@ -72,15 +72,15 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.2em] uppercase text-lime-400 font-bold rounded-sm">
               <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> Premium Agricultural Machinery · GST Registered
             </div>
-            <h1 className="kg-h1 mt-6 text-balance text-zinc-100">
-              For the <span className="text-lime-500">Farmers,</span><br/>
-              With the <span className="text-lime-500">Farmer,</span><br/>
-              To the <span className="text-lime-500">Farmer.</span>
-              <span className="block text-zinc-300 dark:text-zinc-300 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.25em]">HAMESHA.</span>
+            <h1 className="kg-h1 mt-6 text-balance text-zinc-50">
+              For the <span className="text-lime-400">Farmers,</span><br/>
+              With the <span className="text-lime-400">Farmer,</span><br/>
+              To the <span className="text-lime-400">Farmer.</span>
+              <span className="block text-zinc-200 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.25em]">HAMESHA.</span>
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
-            <p className="mt-6 text-zinc-200 dark:text-zinc-200 text-lg max-w-2xl leading-relaxed">
-              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India.
+            <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
+              Direct OEM machinery supply, dealer network distribution, bulk procurement and genuine spare parts across India.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6">
               <Link
