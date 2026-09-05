@@ -3,7 +3,7 @@ import locationsData from '@/data/locations.json';
 
 const SITE_URL = 'https://krishigears.com';
 
-const CATEGORIES = ['power-weeders', 'power-weeder-spare-parts'];
+const CATEGORIES = ['power-weeders', 'power-weeder-spare-parts', 'brush-cutters', 'earth-augers'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapUrls: MetadataRoute.Sitemap = [

@@ -13,6 +13,14 @@ const CATEGORIES = {
   'power-weeder-spare-parts': {
     name: 'Power Weeder Spare Parts',
     singular: 'Power Weeder Spare Part',
+  },
+  'brush-cutters': {
+    name: 'Brush Cutters',
+    singular: 'Brush Cutter',
+  },
+  'earth-augers': {
+    name: 'Earth Augers',
+    singular: 'Earth Auger',
   }
 };
 
