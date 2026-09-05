@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
 import { toast } from "sonner";
@@ -85,6 +86,39 @@ export default function Contact() {
               <Send className="h-4 w-4"/>{loading ? "Sending..." : "Send Message"}
             </button>
           </form>
+        </div>
+
+        {/* Jaipur Headquarters Location & Google Map Embed */}
+        <div className="mt-12 rounded-xl overflow-hidden border border-zinc-800 bg-surface-dark p-6 md:p-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-500/10 border border-lime-500/30 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
+                <MapPin className="h-3.5 w-3.5" /> Central Office & Dispatch Godown
+              </div>
+              <h3 className="font-display font-bold text-xl text-white">KrishiGears Jaipur Headquarters</h3>
+              <p className="text-zinc-400 text-sm mt-1">202, Mahima Shubh Nilay, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026</p>
+            </div>
+            <a
+              href="https://maps.google.com/?q=Mahima+Shubh+Nilay+Jaisinghpura+Jaipur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-lime-400 border border-zinc-700 rounded-md text-xs uppercase tracking-wider font-bold transition inline-flex items-center gap-2"
+            >
+              Open in Google Maps →
+            </a>
+          </div>
+          <div className="w-full h-72 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-950">
+            <iframe
+              title="KrishiGears Jaipur HQ Map"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Mahima%20Shubh%20Nilay%20Jaisinghpura%20Jaipur&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Check, AlertTriangle, Wrench, Phone, ArrowRight } from "lucide-react";

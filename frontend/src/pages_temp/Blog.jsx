@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -12,7 +13,7 @@ function normalizePost(post) {
 }
 
 export default function Blog() {
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState(() => BLOG_POSTS_ARRAY.map(normalizePost));
   const [query, setQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState("All");
 
@@ -20,14 +21,12 @@ export default function Blog() {
     apiClient.get("/blog")
       .then((res) => {
         const list = Array.isArray(res.data) ? res.data : [];
-        setPosts((list.length ? list : BLOG_POSTS_ARRAY).map(normalizePost));
+        if (list.length) {
+          setPosts(list.map(normalizePost));
+        }
       })
-      .catch(() => setPosts(BLOG_POSTS_ARRAY.map(normalizePost)));
+      .catch(() => {});
   }, []);
-
-  if (posts === null) {
-    return <div className="kg-section text-zinc-400 text-center">Loading articles…</div>;
-  }
 
   const tags = ["All", "Power Weeder", "Troubleshooting", "Engine", "Diesel Engine", "Brush Cutter", "Earth Auger", "Maintenance", "Subsidy", "Dealership"];
 

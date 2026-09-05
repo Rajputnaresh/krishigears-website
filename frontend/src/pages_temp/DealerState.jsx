@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Check, ArrowRight, MapPin, TrendingUp, Award, Users } from "lucide-react";

@@ -8,12 +8,17 @@ import { Calendar, ArrowLeft, Tag, Clock, Wrench, ShieldCheck } from "lucide-rea
 import { apiClient } from "@/lib/api";
 import { BLOG_POSTS } from "@/data/blogPosts";
 
-export default function BlogPost() {
-  const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+export default function BlogPost({ initialPost } = {}) {
+  const params = useParams();
+  const slug = params?.slug;
+  const [post, setPost] = useState(initialPost || (slug && BLOG_POSTS[Array.isArray(slug) ? slug[0] : slug]) || null);
+  const [loading, setLoading] = useState(!post);
 
   useEffect(() => {
+    if (post) {
+      setLoading(false);
+      return;
+    }
     async function load() {
       if (!slug) return;
       const slugStr = Array.isArray(slug) ? slug[0] : slug;
@@ -26,7 +31,7 @@ export default function BlogPost() {
       setLoading(false);
     }
     load();
-  }, [slug]);
+  }, [slug, post]);
 
   if (!loading && !post) {
     return (

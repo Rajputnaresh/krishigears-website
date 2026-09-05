@@ -47,13 +47,22 @@ type DistrictData = {
 
 const locations = locationsData as Record<string, DistrictData>;
 
+const toLocationSlug = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/&amp;/g, 'and')
+    .replace(/&/g, 'and')
+    .replace(/ /g, '-')
+    .replace(/[()]/g, '')
+    .replace(/-+/g, '-');
+
 // Generate static params for ISR
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
   
   Object.entries(locations).forEach(([locationName, data]) => {
     if (data.major_district) {
-      const locationSlug = locationName.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
+      const locationSlug = toLocationSlug(locationName);
       Object.keys(CATEGORIES).forEach(categorySlug => {
         params.push({ slug: `${categorySlug}-in-${locationSlug}` });
       });
@@ -76,7 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!category) return {};
 
   const locationName = Object.keys(locations).find(
-    k => k.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '') === locationSlug
+    k => toLocationSlug(k) === locationSlug
   );
   
   if (!locationName) return {};
@@ -105,7 +114,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
   if (!category) notFound();
 
   const locationName = Object.keys(locations).find(
-    k => k.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '') === locationSlug
+    k => toLocationSlug(k) === locationSlug
   );
   
   if (!locationName) notFound();
@@ -137,22 +146,87 @@ export default async function LocationCategoryPage({ params }: { params: Promise
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WholesaleStore',
-    name: `KrishiGears ${category.name} - ${locationName}`,
-    description: `Authorized wholesale supplier of ${category.name} in ${locationName}, ${data.state}.`,
-    url: `https://krishigears.com/${slug}`,
-    areaServed: {
-      '@type': 'City',
-      name: locationName,
-      containedInPlace: {
-        '@type': 'State',
-        name: data.state
+    '@graph': [
+      {
+        '@type': 'WholesaleStore',
+        '@id': `https://krishigears.com/${slug}#store`,
+        name: `KrishiGears ${category.name} - ${locationName}`,
+        description: `Authorized wholesale supplier of ${category.name} in ${locationName}, ${data.state}.`,
+        url: `https://krishigears.com/${slug}`,
+        areaServed: {
+          '@type': 'City',
+          name: locationName,
+          containedInPlace: {
+            '@type': 'State',
+            name: data.state
+          }
+        },
+        brand: {
+          '@type': 'Brand',
+          name: 'KrishiGears'
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://krishigears.com/${slug}#breadcrumbs`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://krishigears.com'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Locations',
+            item: 'https://krishigears.com/locations'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.state,
+            item: `https://krishigears.com/locations`
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: `${category.name} in ${locationName}`,
+            item: `https://krishigears.com/${slug}`
+          }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://krishigears.com/${slug}#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: `Where can I buy original KrishiGears machinery and spare parts in ${locationName}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Genuine equipment and fitment-checked spares are supplied through authorized machinery dealers and service counters in ${locationName}. Bulk commercial shipments are dispatched directly from central Jaipur logistics with GST e-way bills.`
+            }
+          },
+          {
+            '@type': 'Question',
+            name: `What is the dispatch delivery timeframe for ${locationName}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Orders are processed within 24 hours. Express surface transport typically arrives at major transport godowns in ${locationName} within 48 to 72 hours, accompanied by transit insurance.`
+            }
+          },
+          {
+            '@type': 'Question',
+            name: `Is financing or subsidy support available for farmers in ${data.state}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Yes. Eligible farmers can apply through ${subsidyData.portalName}. Our dealer network provides official test compliance certificates and commercial quotations for subsidy approval.`
+            }
+          }
+        ]
       }
-    },
-    brand: {
-      '@type': 'Brand',
-      name: 'KrishiGears'
-    }
+    ]
   };
 
   return (

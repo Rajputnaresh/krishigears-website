@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { ShieldCheck, Award, Users, MapPin, Tractor, HeartHandshake, ArrowRight } from "lucide-react";
 import { COMPANY, ABSTRACT_TERRAIN, FIELD_TRACTOR, FARMER_FIELD } from "@/data/catalog";

@@ -16,7 +16,7 @@ export const BLOG_POSTS: Record<string, BlogPostData> = {
     slug: "power-weeder-not-starting-recoil-pull-troubleshooting",
     title: "Why Your Power Weeder Won't Start: 7 Field Fixes for Recoil Pull Resistance",
     excerpt: "Diagnose why your 7HP petrol or diesel power weeder won't start: hydro-lock, stiff recoil rope, flooded carburetor, spark plug fouling, and fuel cock blockage.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-01T10:00:00Z",
     tags: ["Troubleshooting", "Starting Issue", "Engine", "Field Fix"],
     content: `When a power weeder refuses to start in the field, 90% of farmers repeatedly jerk the recoil starter, often snapping the starter cord or damaging the pawl assembly.
@@ -143,7 +143,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "engine-starts-then-dies-after-few-minutes",
     title: "Why Power Weeder Starts but Shuts Down After 2 Minutes (Choke & Tank Cap Vacuum)",
     excerpt: "Diagnose mysterious engine shutdowns: fuel tank cap vent hole vacuum lock, choke lever positioning, and clogged pilot jets.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-04T10:00:00Z",
     tags: ["Engine Shuts Down", "Fuel Cap", "Vacuum Lock", "Choke"],
     content: `One of the most frustrating field problems is an engine that cranks easily, idles for 90 seconds, and abruptly dies the moment you engage the clutch or throttle.
@@ -361,7 +361,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "fuel-tap-strainer-cleaning-sediment-cup",
     title: "How to Clean Fuel Sediment Cup & Tank Strainer to Prevent Fuel Starvation",
     excerpt: "Clear dirt from the fuel tap sediment bowl, O-ring sealing, and tank neck mesh to ensure steady fuel delivery under load.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-09T10:00:00Z",
     tags: ["Fuel Strainer", "Sediment Bowl", "Maintenance", "Cleaning"],
     content: `When a power weeder works under load with blades buried 6 inches into the soil, fuel consumption triples compared to idling. If the fuel tap sediment cup is choked, the engine bogs down and starves of fuel under heavy tilling.
@@ -443,7 +443,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-gearbox-oil-leaking-axle-oil-seal-replacement",
     title: "Power Weeder Axle Oil Seal Replacement: Fixing Gearbox Oil Leaking on Blades",
     excerpt: "Stop gear oil leaking from the rotary blade hex axle. Step-by-step oil seal replacement, double-lip seal selection, and grass wrap prevention.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-11T10:00:00Z",
     tags: ["Gearbox Leak", "Axle Seal", "Oil Seal", "Repair"],
     content: `Gear oil leaking around the hex shaft of the rotary tines is the most common mechanical defect on weeders after 100 hours of field work.
@@ -490,7 +490,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-clutch-slipping-cable-adjustment",
     title: "Power Weeder Clutch Slipping: Cable Free-Play Adjustment & Plate Replacement",
     excerpt: "Fix blades stopping under heavy soil while engine revs high: adjust clutch cable free-play, clutch spring tension, and replace worn friction plates.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-12T10:00:00Z",
     tags: ["Clutch Slipping", "Cable Adjustment", "Friction Plates", "Transmission"],
     content: `When you release the clutch lever, the engine revs loudly but the tilling blades stop spinning the moment they touch firm soil. This is textbook clutch slippage.
@@ -536,7 +536,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-stuck-in-gear-hard-shifting",
     title: "Power Weeder Hard Gear Shifting: Why Gears Get Stuck & How to Shift Smoothly",
     excerpt: "Fix gears grinding or refusing to engage between Forward (1, 2), Reverse (R), and Neutral (N). Shift fork alignment, clutch drag, and transmission detent spring care.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-13T10:00:00Z",
     tags: ["Gear Shifting", "Transmission", "Stuck in Gear", "Field Fix"],
     content: `Unlike car transmissions, small agricultural weeders use dog-tooth sliding gears without synchromesh rings. Grinding or hard shifting is common if operated incorrectly.
@@ -577,7 +577,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "reverse-gear-safety-lock-mechanism-broken",
     title: "Power Weeder Reverse Gear Safety Lock: Importance, Repair & Operator Protection",
     excerpt: "Why you must never tie down or bypass the reverse gear safety interlock. Prevents operator leg injuries and runaway machine accidents.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-14T10:00:00Z",
     tags: ["Reverse Gear", "Safety", "Operator Safety", "Interlock"],
     content: `On all modern FMTTI-approved power weeders, the reverse gear requires a two-step dual-lever action: pulling the reverse lever while simultaneously disengaging the primary forward drive.
@@ -620,7 +620,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "worm-gear-vs-bevel-gear-transmission-weeder",
     title: "Worm Gear vs Bevel Gear Transmission in Power Weeders: Durability Comparison",
     excerpt: "Compare bronze worm gears vs steel spur/bevel gear transmissions: torque capacity, heat dissipation, lubrication needs, and longevity.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-15T10:00:00Z",
     tags: ["Worm Gear", "Bevel Gear", "Transmission", "Durability"],
     content: `When purchasing power weeders, dealers and farmers encounter two primary gearbox architectures: Bronze Worm Wheel Drives and Hardened Steel Bevel/Spur Drives.
@@ -750,7 +750,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-tiller-dog-clutch-engagement-teeth-wear",
     title: "Power Weeder Dog Clutch Wear: Symptoms of Slipping Out of Gear Under Load",
     excerpt: "Why your power weeder jumps out of gear when digging into hard soil: worn dog teeth, weak selector detent springs, and shift linkage adjustments.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-18T10:00:00Z",
     tags: ["Dog Clutch", "Jumping Gear", "Transmission", "Repair"],
     content: `If your power weeder violently pops out of 1st gear into Neutral every time the blades strike hard compacted clay, the engagement dog teeth inside the transmission are rounded.
@@ -788,7 +788,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "excessive-vibration-in-power-weeder-handlebar",
     title: "Why Your Power Weeder Vibrates Severely & How to Eliminate Handlebar Fatigue",
     excerpt: "Solve hand-numbing vibration: unbalanced rotary blades, loose engine mounting bolts, damaged rubber anti-vibration dampers, and bent hex axles.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-19T10:00:00Z",
     tags: ["Vibration", "Handlebar Comfort", "Blades", "Operator Health"],
     content: `Severe handlebar vibration causes intense operator fatigue, numbness in fingers (white finger disease), and loosens critical fasteners across the machine.
@@ -959,7 +959,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-blade-types-j-blades-vs-c-blades",
     title: "Power Weeder Blades Guide: Curved C-Blades vs L-Blades vs Deep Weeding Rotors",
     excerpt: "Select the right blade geometry for your soil: curved C-blades for wet sticky soil, L-blades for root cutting, and ditching ridger blades.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-23T10:00:00Z",
     tags: ["Blade Selection", "C-Blades", "L-Blades", "Soil Agronomy"],
     content: `Using the wrong rotary blades turns an efficient 7HP weeder into a fuel-wasting machine that skips over hard soil or gets bogged down in mud.
@@ -1005,7 +1005,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "how-to-set-depth-skid-for-perfect-tilling",
     title: "How to Adjust the Depth Skid (Hitch Bar) on Power Weeders for Effortless Control",
     excerpt: "The single most misunderstood adjustment on a power weeder: how the depth resistance rod controls forward speed and tilling depth without operator muscle strain.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-24T10:00:00Z",
     tags: ["Depth Skid", "Hitch Bar", "Tilling Depth", "Field Technique"],
     content: `Novice operators fight the power weeder by pushing down with their arms to force the blades into the ground, leading to exhausted shoulders within 15 minutes.
@@ -1048,7 +1048,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "sharpening-power-weeder-rotary-blades",
     title: "Should You Sharpen Power Weeder Blades? Field Testing Sharpness vs Blade Life",
     excerpt: "How blade sharpness impacts fuel efficiency by 20%, proper angle grinding techniques, and when to replace worn blades.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-25T10:00:00Z",
     tags: ["Blade Sharpening", "Fuel Efficiency", "Maintenance", "Tools"],
     content: `There is a widespread myth among farm mechanics that cultivator blades do not need sharp edges because 'engine torque breaks the dirt anyway'.
@@ -1127,7 +1127,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "sugarcane-earthing-up-ridger-setup-guide",
     title: "Sugarcane Earthing-Up with Power Weeder: Ridger Setup at 45 & 90 Days",
     excerpt: "Master sugarcane inter-cultivation: adjusting rotary rotor width to 3.5-4 ft trenches, mounting adjustable double-wing ridgers, and avoiding root pruning.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-27T10:00:00Z",
     tags: ["Sugarcane", "Earthing Up", "Ridger", "Crop Guide"],
     content: `Earthing-up (mounding soil around the base of sugarcane stalks) is essential to stimulate root development and prevent tall cane crops from lodging during monsoon storms.
@@ -1167,7 +1167,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "cotton-inter-row-weeding-without-root-damage",
     title: "Cotton Inter-Row Weeding: How to Protect Shallow Lateral Roots with Side Discs",
     excerpt: "How to weed cotton fields at 3-foot and 4-foot row spacing without tearing lateral feeder roots or knocking down developing bolls.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-01-28T10:00:00Z",
     tags: ["Cotton Farming", "Inter-Cultivation", "Side Discs", "Agronomy"],
     content: `Cotton has an expansive shallow lateral root network in the top 3–4 inches of soil. Deep tilling within 6 inches of the plant stem shears these vital feeder roots, causing boll drop and stunted growth.
@@ -1242,7 +1242,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "turmeric-ginger-ridge-weeding-and-mulch-care",
     title: "Weeding Turmeric & Ginger Ridges: Preventing Rhizome Injury During Monsoon",
     excerpt: "Specialized weeder attachments and blade depth settings for turmeric and ginger beds under drip irrigation and straw mulch.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-02-02T10:00:00Z",
     tags: ["Turmeric", "Ginger", "Rhizome Care", "Inter-Cultivation"],
     content: `Turmeric and ginger rhizomes grow horizontally close to the soil surface under organic straw mulch. Weed management requires extreme precision to avoid gouging developing rhizomes.
@@ -1279,7 +1279,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "paddy-field-wetland-weeding-cage-wheels-floatation",
     title: "Using Power Weeders in Wet Paddy: Cage Wheel Fitment & Mud Floatation",
     excerpt: "Convert standard dry-land weeders for wetland paddy weeding: installing anti-sink cage wheels, mud-shedding rotor tines, and waterproof axle protection.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-02-03T10:00:00Z",
     tags: ["Paddy Farming", "Cage Wheels", "Wetland", "Rice Cultivation"],
     content: `Standard rubber pneumatic tires sink instantly in flooded paddy fields, bogging the machine down to its engine block within 5 meters.
@@ -1684,7 +1684,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "how-dealers-prevent-subsidy-application-rejections",
     title: "How Agri Dealers Can Prevent Subsidy Application Rejections on State Portals",
     excerpt: "Avoid costly subsidy claim rejections: invoice name discrepancies, matching chassis serial numbers, bank passbook IFSC verification, and geo-tag photos.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/weeder-1.webp",
+    cover_image: "/images/products/weeder.webp",
     created_at: "2026-02-13T10:00:00Z",
     tags: ["Subsidy Approval", "DBT Portal", "Dealer Guide", "Compliance"],
     content: `Dealers frequently face locked capital when government subsidy claims get rejected after machinery has already been delivered to the farmer.

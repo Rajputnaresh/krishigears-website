@@ -82,7 +82,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamically generate all programmatic SEO URLs
   Object.keys(locationsData).forEach((locationName) => {
-    const locationSlug = locationName.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
+    const locationSlug = locationName
+      .toLowerCase()
+      .replace(/&amp;/g, 'and')
+      .replace(/&/g, 'and')
+      .replace(/ /g, '-')
+      .replace(/[()]/g, '')
+      .replace(/-+/g, '-');
     
     CATEGORIES.forEach((categorySlug) => {
       sitemapUrls.push({

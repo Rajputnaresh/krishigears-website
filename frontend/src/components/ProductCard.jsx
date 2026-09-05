@@ -8,12 +8,34 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 export default function ProductCard({ product }) {
   const category = CATEGORIES.find((c) => c.slug === product.category);
   const waMsg = encodeURIComponent(
-    `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`
+    `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. [Ref: web_catalog_${product.slug}] Please share pricing.`
   );
   const waHref = `https://wa.me/${COMPANY.whatsapp}?text=${waMsg}`;
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.images?.[0] ? `https://krishigears.com${product.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
+    "description": `${product.name} - genuine commercial agricultural equipment from KrishiGears. Available for dealer and bulk supply across India.`,
+    "brand": {
+      "@type": "Brand",
+      "name": "KrishiGears"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": `https://krishigears.com/products/${product.slug}`
+    }
+  };
+
   return (
     <div data-testid={`product-card-${product.slug}`} className="kg-card overflow-hidden flex flex-col relative group">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* KrishiGears logo — top-right brand mark */}
       <div className="absolute top-3 right-3 z-10 h-11 w-11 grid place-items-center rounded-full bg-black/85 backdrop-blur ring-1 ring-lime-500/50 p-0.5">
         <img src={LOGO_URL} alt="KrishiGears" className="h-full w-full rounded-full object-cover" />

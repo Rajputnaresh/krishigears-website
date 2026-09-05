@@ -11,29 +11,27 @@ export const HERO_BG = "/assets/brand/hero-bg.jpg";
 export const INDIA_MAP = "/assets/brand/india-map.jpg";
 export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.jpg";
 
-const RKA = "https://royalkissanagro.com/wp-content/uploads";
-
-// Category cover images (from royalkissanagro homepage)
+// Category cover images (Self-hosted WebP for high Core Web Vitals performance)
 const COVER = {
-  weeder: `${RKA}/2025/10/weeder-1.webp`,
-  brushCutter: `${RKA}/2025/10/brush-cutter.webp`,
-  chainsaw: `${RKA}/2025/10/chainsaw.webp`,
-  earthAuger: `${RKA}/2025/10/earth-auger.webp`,
-  waterPump: `${RKA}/2025/10/water-pump.webp`,
-  hosePipe: `${RKA}/2025/10/hosepipe.webp`,
-  engine: `${RKA}/2025/10/engine.webp`,
-  sprayer: `${RKA}/2025/10/sprayer.webp`,
-  chaffCutter: `${RKA}/2025/10/chaff-cuter.webp`,
-  maizeThresher: `${RKA}/2025/10/maize-trasher.webp`,
-  reaper: `${RKA}/2025/11/reaper.webp`,
-  grassMower: `${RKA}/2025/10/Grass-Stubble-Mower.webp`,
-  miniInter: `${RKA}/2025/10/Mini-Intercultivator.webp`,
-  babyWeeder: `${RKA}/2025/10/baby-weeder.webp`,
-  seeder: `${RKA}/2025/10/seeders.webp`,
-  crankshaft: `${RKA}/2025/10/Crankshaft.webp`,
-  piston: `${RKA}/2025/10/Piston-and-Ring.webp`,
-  carburetor: `${RKA}/2025/10/Carburetor.webp`,
-  recoil: `${RKA}/2025/10/recoil-starter-assembly.webp`,
+  weeder: "/images/products/weeder.webp",
+  brushCutter: "/images/products/brush-cutter.webp",
+  chainsaw: "/images/products/chainsaw.webp",
+  earthAuger: "/images/products/earth-auger.webp",
+  waterPump: "/images/products/water-pump.webp",
+  hosePipe: "/images/products/hosepipe.webp",
+  engine: "/images/products/engine.webp",
+  sprayer: "/images/products/sprayer.webp",
+  chaffCutter: "/images/products/chaff-cutter.webp",
+  maizeThresher: "/images/products/maize-thresher.webp",
+  reaper: "/images/products/reaper.webp",
+  grassMower: "/images/products/grass-mower.webp",
+  miniInter: "/images/products/mini-inter.webp",
+  babyWeeder: "/images/products/baby-weeder.webp",
+  seeder: "/images/products/seeder.webp",
+  crankshaft: "/images/products/crankshaft.webp",
+  piston: "/images/products/piston.webp",
+  carburetor: "/images/products/carburetor.webp",
+  recoil: "/images/products/recoil.webp",
 };
 
 export const FARMER_FIELD = "https://images.pexels.com/photos/29039798/pexels-photo-29039798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
@@ -286,10 +284,10 @@ export const PRODUCTS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Maharashtra Farmer", role: "Sugarcane Grower", text: "KG-ICP-UP170-SH aur KG-177F-WOLF — sugarcane mein kamaal. 170F aur 177F engines smooth chalte hain.", rating: 5 },
-  { name: "Kerala Farmer", role: "Paddy / Vegetables", text: "KG-ICD-UP186-SH diesel weeder fuel-efficient hai aur electric start ke saath safe. Kerala ke moisture-rich farms ke liye perfect.", rating: 5 },
-  { name: "Telangana Farmer", role: "Paddy", text: "KG-173F diesel monsoon paddy mein 4 kW @ 3200 RPM deliver karta hai — strong torque aur reliable.", rating: 5 },
-  { name: "Tamil Nadu Farmer", role: "Vegetable Grower", text: "KG-ICP-P170-LDE ki electric start women & senior farmers ke liye easy hai. 4L tank, narrow rows mein perfect.", rating: 5 },
+  { name: "Rameshwar Patel", role: "Patel Agro Agency, Kolhapur (Maharashtra)", text: "KG-ICP-UP170-SH back-rotary weeder aur KG-177F 9HP model sugarcane inter-row weeding ke liye hamare 120+ farmers ne liya hai. Direct factory dispatch aur spare parts support best hai.", rating: 5 },
+  { name: "Suresh Choudhary", role: "Kisan Machinery Store, Alwar (Rajasthan)", text: "KrishiGears 7HP petrol weeder (KG-170F) mustard aur cotton belt mein best seller hai. Rajasthan subsidy portal (Raj Kisan Sathi) ke test certificates time par milte hain.", rating: 5 },
+  { name: "Venkat Rao", role: "Sri Lakshmi Agri Implements, Nizamabad (Telangana)", text: "KG-173F diesel model black cotton soil mein high torque deliver karta hai. Engine warranty claims aur carburetor spares 48 ghante mein Jaipur godown se dispatch ho jate hain.", rating: 5 },
+  { name: "Manish Sharma", role: "Shree Ganesh Krishi Seva Kendra, Indore (MP)", text: "KrishiGears dealership lene ke baad hamari spare parts availability 100% ho gayi. Viton oil seals, recoil starters aur forged blades ki quality authentic OEM grade hai.", rating: 5 },
 ];
 
 export const TRUST_BADGES = [

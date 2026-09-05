@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,

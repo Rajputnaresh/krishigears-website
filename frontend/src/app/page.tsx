@@ -58,12 +58,53 @@ export default function Home() {
     apiClient.get("/reviews").then((r) => setReviews(Array.isArray(r.data) ? r.data : [])).catch(() => setReviews([]));
   }, []);
 
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://krishigears.com/#organization",
+        "name": "KrishiGears",
+        "legalName": "KrishiGears",
+        "url": "https://krishigears.com",
+        "logo": "https://krishigears.com/logo512.png",
+        "taxID": "08EQLPD7160R1Z2",
+        "email": "sales@krishigears.com",
+        "telephone": "+916006078815",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "202, Mahima Shubh Nilay, Jaisinghpura",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302026",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://farmingtools.in"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://krishigears.com/#website",
+        "url": "https://krishigears.com",
+        "name": "KrishiGears",
+        "publisher": {
+          "@id": "https://krishigears.com/#organization"
+        }
+      }
+    ]
+  };
+
   return (
     <div className="bg-background text-foreground pb-24 md:pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       {/* ========== HERO ========== */}
       <section data-testid="hero-section" className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45" />
+          <img src={HERO_BG} alt="KrishiGears Farm Machinery" className="w-full h-full object-cover opacity-45" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black"></div>
           <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30"></div>
         </div>

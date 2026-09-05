@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { MapPin, Truck, ShieldCheck, Headphones, ArrowRight } from "lucide-react";
 import { INDIA_MAP } from "@/data/catalog";
