@@ -129,42 +129,46 @@ export default function Home() {
             <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
               सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.
             </p>
-            {/* Prioritized CTA Hierarchy: 1 Primary, 2 Secondary */}
-            <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+            {/* Prioritized CTA Hierarchy: 1 Primary High-Contrast Action + 1 Secondary Action */}
+            <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
                 href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और डीलरशिप की पूरी जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_hero_primary`}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-primary-whatsapp-btn"
-                className="group inline-flex items-center gap-2.5 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 rounded-md transition shadow-xl shadow-lime-500/25 active:scale-95 text-base border-2 border-lime-400"
+                className="group inline-flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 min-h-[52px] rounded-md transition shadow-xl shadow-lime-500/25 active:scale-95 text-base border-2 border-lime-400"
               >
                 <WhatsAppIcon className="h-5 w-5 text-black fill-black" />
-                <span>व्हाट्सएप कोटेशन / Get WhatsApp Quote</span>
+                <span>व्हाट्सएप कोटेशन / WhatsApp Wholesale Quote</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
               </a>
               <Link
                 href="/become-a-dealer"
                 data-testid="hero-dealer-btn"
-                className="inline-flex items-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/90 hover:border-lime-500/60 px-6 py-4 rounded-md shadow-md"
+                className="inline-flex items-center justify-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/90 hover:border-lime-500/60 px-6 py-4 min-h-[52px] rounded-md shadow-md"
               >
                 डीलरशिप आवेदन / Become a Dealer
               </Link>
+            </div>
+
+            {/* Quick Secondary Utility Links */}
+            <div className="mt-4 flex flex-wrap items-center gap-3 text-xs">
               <Link
                 href="/products"
                 data-testid="hero-explore-products"
-                className="inline-flex items-center gap-2 text-zinc-200 hover:text-white text-sm font-semibold transition border border-zinc-800 bg-zinc-950/80 hover:border-zinc-600 px-5 py-4 rounded-md"
+                className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-950/60 hover:border-zinc-700"
               >
-                मशीनें देखें / Explore Range
+                <span>मशीनें देखें (Explore 19 Categories) →</span>
               </Link>
               <EnquiryDialog
                 product="Wholesale B2B Machinery Catalog 2026"
                 trigger={
                   <button
                     data-testid="hero-catalog-modal-btn"
-                    className="inline-flex items-center gap-2 text-zinc-300 hover:text-zinc-100 text-xs font-semibold transition hover:text-lime-400 px-3 py-3"
+                    className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-lime-400 transition px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-950/60 hover:border-zinc-700"
                   >
-                    <FileText className="h-4 w-4 text-lime-400" />
-                    Catalog PDF
+                    <FileText className="h-3.5 w-3.5 text-lime-400" />
+                    <span>Download Catalog (PDF)</span>
                   </button>
                 }
               />

@@ -96,8 +96,10 @@ export default function CategoryPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="aspect-[4/3] overflow-hidden border border-zinc-800 bg-white">
-              <img src={category.image} alt={category.name} loading="lazy" className="w-full h-full object-contain p-4" />
+            <div className="aspect-[4/3] overflow-hidden border border-zinc-800/80 rounded-xl bg-zinc-900/40 p-3">
+              <div className="w-full h-full rounded-lg bg-zinc-950/70 p-4 flex items-center justify-center border border-zinc-800/50">
+                <img src={category.image} alt={category.name} loading="lazy" className="w-full h-full object-contain" />
+              </div>
             </div>
           </div>
         </div>
