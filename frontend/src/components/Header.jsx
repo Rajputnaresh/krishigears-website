@@ -50,22 +50,24 @@ export default function Header() {
   };
 
   const switchLanguage = (langCode) => {
-    const currentPath = location.pathname;
+    i18n.changeLanguage(langCode);
+    const currentPath = location.pathname || "/";
     const parts = currentPath.split('/').filter(Boolean);
+    const search = location.search || "";
     
     if (parts.length > 0 && ['hi', 'mr'].includes(parts[0])) {
+      const rest = parts.slice(1).join('/');
       if (langCode === 'en') {
-         navigate('/' + parts.slice(1).join('/') + location.search);
+        navigate.push('/' + (rest ? rest : '') + search);
       } else {
-         navigate('/' + langCode + '/' + parts.slice(1).join('/') + location.search);
+        navigate.push('/' + langCode + (rest ? '/' + rest : '') + search);
       }
     } else {
       if (langCode !== 'en') {
-         navigate('/' + langCode + currentPath + location.search);
+        navigate.push('/' + langCode + (currentPath === '/' ? '' : currentPath) + search);
       }
     }
   };
-
 
   return (
     <header
@@ -73,9 +75,9 @@ export default function Header() {
       className="fixed top-0 inset-x-0 z-50 bg-black/85 backdrop-blur-xl border-b border-zinc-800"
     >
       {/* Global B2B Trust Badge Bar */}
-      <div className="bg-zinc-950 border-b border-zinc-800/80 py-1 px-4 text-center text-[11px] md:text-xs text-zinc-300 font-medium tracking-wide flex items-center justify-center gap-2 md:gap-4 overflow-x-auto whitespace-nowrap">
+      <div className="bg-zinc-950 border-b border-zinc-800/80 py-1.5 px-4 text-center text-xs text-zinc-300 font-medium tracking-wide flex items-center justify-center gap-2 md:gap-4 overflow-x-auto whitespace-nowrap">
         <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-lime-400 motion-safe:animate-pulse" />
           GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
         </span>
         <span className="text-zinc-600 hidden sm:inline">|</span>
@@ -86,7 +88,7 @@ export default function Header() {
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
         {/* Logo */}
-        <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group">
+        <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md">
           <img src={LOGO_URL} alt="KrishiGears" className="h-12 w-12 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
           <div className="leading-tight hidden sm:block">
             <div className="font-display font-black text-lg tracking-tight text-white">
@@ -103,7 +105,7 @@ export default function Header() {
               key={item.to}
               href={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white"
+              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
             >
               {t(item.labelKey)}
             </Link>
@@ -112,13 +114,13 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger
               data-testid="nav-products-trigger"
-              className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none"
+              className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
             >
               {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4 text-lime-400" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-80 max-h-[70vh] overflow-y-auto text-zinc-200">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-80 max-h-[70vh] overflow-y-auto text-zinc-200 shadow-2xl">
               <DropdownMenuItem asChild>
-                <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300" data-testid="nav-all-products">View All Categories →</Link>
+                <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300 cursor-pointer" data-testid="nav-all-products">View All Categories →</Link>
               </DropdownMenuItem>
               <div className="h-px bg-zinc-800 my-1" />
               {CATEGORIES.map((c) => (
@@ -126,7 +128,7 @@ export default function Header() {
                   <Link
                     href={`/products/category/${c.slug}`}
                     data-testid={`nav-cat-${c.slug}`}
-                    className="text-sm text-zinc-300 hover:text-lime-400"
+                    className="text-sm text-zinc-300 hover:text-lime-400 cursor-pointer"
                   >
                     {c.name}
                   </Link>
@@ -140,7 +142,7 @@ export default function Header() {
               key={item.to}
               href={item.to}
               data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white"
+              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
             >
               {t(item.labelKey, item.fallback || item.labelKey)}
             </Link>
@@ -153,7 +155,7 @@ export default function Header() {
           <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
             onClick={() => trackPhoneClick("header_desktop")}
-            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-zinc-300 hover:text-white transition rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40"
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-zinc-300 hover:text-white transition rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400"
             title="Direct Machinery Support Desk"
           >
             <Phone className="h-3.5 w-3.5 text-lime-400" />
@@ -164,24 +166,27 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Language & Display Options"
-              className="px-2.5 py-2 text-xs font-medium text-zinc-400 hover:text-white flex items-center gap-1.5 rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 outline-none transition"
+              className="px-2.5 py-2 text-xs font-medium text-zinc-300 hover:text-white flex items-center gap-1.5 rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
             >
               <Globe className="h-3.5 w-3.5 text-lime-400" />
               <span>{(i18n.language || "en").toUpperCase()}</span>
               <ChevronDown className="h-3 w-3 text-zinc-500" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-44">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-48 shadow-2xl">
               <div className="px-2 py-1.5 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
                 Language / भाषा
               </div>
-              <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer">
-                English (EN)
+              <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer flex justify-between">
+                <span>English</span>
+                <span className="text-zinc-500 text-xs">EN</span>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer">
-                हिंदी (HI)
+              <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer flex justify-between">
+                <span>हिंदी</span>
+                <span className="text-zinc-500 text-xs">HI</span>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer">
-                मराठी (MR)
+              <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer flex justify-between">
+                <span>मराठी</span>
+                <span className="text-zinc-500 text-xs">MR</span>
               </DropdownMenuItem>
               <div className="h-px bg-zinc-800 my-1" />
               <DropdownMenuItem
@@ -194,24 +199,24 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Primary Action 1: WhatsApp Quick Quote */}
+          {/* Secondary Action: WhatsApp RFQ (Refined Dark Pill with WhatsApp Green Accent) */}
           <a
             href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp Quick Quote"
             onClick={() => trackWhatsAppClick("header_desktop")}
-            className="px-4 py-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-xs rounded-md transition inline-flex items-center gap-2 shadow-md shadow-green-600/20 active:scale-95"
+            className="px-3.5 py-2 text-zinc-200 hover:text-white font-semibold text-xs rounded-md border border-zinc-700/80 bg-zinc-900/90 hover:bg-zinc-800 transition inline-flex items-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 active:scale-95"
           >
-            <WhatsAppIcon className="h-4 w-4" />
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
             <span>WhatsApp Quote</span>
           </a>
 
-          {/* Primary Action 2: Become a Dealer */}
+          {/* Primary Action: Become a Dealer (High-Impact Lime CTA) */}
           <Link
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"
-            className="px-4 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded-md transition inline-flex items-center gap-1.5 shadow-lg shadow-lime-500/20 active:scale-95 border border-lime-400"
+            className="px-4 py-2 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded-md transition inline-flex items-center gap-1.5 shadow-lg shadow-lime-500/20 active:scale-95 border border-lime-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             <span>Become a Dealer</span>
           </Link>
@@ -220,18 +225,25 @@ export default function Header() {
         {/* Mobile */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <button data-testid="mobile-menu-trigger" aria-label="Open menu" className="lg:hidden p-3 text-white">
+            <button data-testid="mobile-menu-trigger" aria-label="Open menu" className="lg:hidden p-3 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md">
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
-            <div className="p-6 border-b border-zinc-800 flex items-center justify-between">
+            <div className="p-5 border-b border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img src={LOGO_URL} alt="KrishiGears" className="h-10 w-10 rounded-full ring-1 ring-lime-500/40" />
                 <div className="font-display font-black text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => setOpen(false)} data-testid="mobile-menu-close" aria-label="Close menu" className="p-2 text-zinc-400 hover:text-white"><X className="h-5 w-5"/></button>
+                <button
+                  onClick={() => setOpen(false)}
+                  data-testid="mobile-menu-close"
+                  aria-label="Close menu"
+                  className="min-h-[44px] min-w-[44px] p-2.5 flex items-center justify-center text-zinc-400 hover:text-white rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400"
+                >
+                  <X className="h-5 w-5"/>
+                </button>
               </div>
             </div>
             <nav className="p-6 flex flex-col gap-1">
@@ -252,7 +264,7 @@ export default function Header() {
                               : "border border-zinc-700 bg-zinc-900 text-zinc-200 hover:text-white"
                           }`}
                         >
-                          {lang.toUpperCase()}
+                          {lang === 'en' ? 'EN' : lang === 'hi' ? 'हिंदी' : 'मराठी'}
                         </button>
                       );
                     })}
@@ -271,6 +283,32 @@ export default function Header() {
                 </div>
               </div>
 
+              {/* Machinery Categories Quick Nav for Mobile Dealers */}
+              <div className="py-3 border-b border-zinc-800">
+                <div className="text-[11px] font-bold text-lime-400 uppercase tracking-wider mb-2">
+                  Machinery Catalog
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <Link
+                    href="/products"
+                    onClick={() => setOpen(false)}
+                    className="p-2.5 bg-zinc-900/90 border border-zinc-800 rounded text-xs font-semibold text-zinc-200 hover:text-lime-400"
+                  >
+                    All Products →
+                  </Link>
+                  {CATEGORIES.map((cat) => (
+                    <Link
+                      key={cat.slug}
+                      href={`/products/category/${cat.slug}`}
+                      onClick={() => setOpen(false)}
+                      className="p-2.5 bg-zinc-900/90 border border-zinc-800 rounded text-xs font-semibold text-zinc-200 hover:text-lime-400 truncate"
+                    >
+                      {cat.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               {NAV.map((item) => (
                 <Link
                   key={item.to}
@@ -282,21 +320,9 @@ export default function Header() {
                   {t(item.labelKey, item.fallback || item.labelKey)}
                 </Link>
               ))}
+
               {/* Mobile Actions: WhatsApp Quote, Become a Dealer & Direct Call */}
               <div className="mt-6 pt-4 border-t border-zinc-850 flex flex-col gap-2.5">
-                <a
-                  href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="WhatsApp Quick Quote"
-                  onClick={() => trackWhatsAppClick("header_mobile")}
-                  data-testid="m-nav-whatsapp"
-                  className="w-full min-h-[48px] px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-bold text-sm shadow-md shadow-green-600/20 active:scale-98 transition"
-                >
-                  <WhatsAppIcon className="h-4 w-4" />
-                  <span>WhatsApp Quote</span>
-                </a>
-
                 <Link
                   href="/become-a-dealer"
                   onClick={() => setOpen(false)}
@@ -307,10 +333,23 @@ export default function Header() {
                 </Link>
 
                 <a
+                  href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp Quick Quote"
+                  onClick={() => trackWhatsAppClick("header_mobile")}
+                  data-testid="m-nav-whatsapp"
+                  className="w-full min-h-[48px] px-5 py-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-700 text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-bold text-sm shadow-sm active:scale-98 transition"
+                >
+                  <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
+                  <span>WhatsApp Quote</span>
+                </a>
+
+                <a
                   href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
                   onClick={() => trackPhoneClick("header_mobile")}
                   data-testid="m-nav-call"
-                  className="w-full min-h-[48px] px-5 py-3 border border-zinc-800 bg-zinc-900/60 text-center rounded-md text-zinc-300 hover:text-white hover:border-zinc-700 font-semibold text-xs flex items-center justify-center gap-2 transition"
+                  className="w-full min-h-[48px] px-5 py-3 border border-zinc-800 bg-zinc-950 text-center rounded-md text-zinc-300 hover:text-white hover:border-zinc-700 font-semibold text-xs flex items-center justify-center gap-2 transition"
                 >
                   <Phone className="h-4 w-4 text-lime-400" />
                   <span className="font-mono">{COMPANY.phone} (Support Desk)</span>
