@@ -75,9 +75,9 @@ export default function Header() {
       className="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-800"
     >
       {/* Global B2B Trust & Utility Bar */}
-      <div className="bg-zinc-950 border-b border-zinc-800/80 px-4 md:px-8 py-1 flex items-center justify-between text-xs text-zinc-300">
-        {/* Left: Trust Badges */}
-        <div className="flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap">
+      <div className="bg-zinc-950 border-b border-zinc-800/80 px-4 md:px-8 py-1.5 relative flex items-center justify-between text-xs text-zinc-300 min-h-[32px]">
+        {/* Centered Trust Badges */}
+        <div className="w-full flex items-center justify-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap px-2 md:px-28">
           <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-lime-400 motion-safe:animate-pulse" />
             GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
@@ -88,12 +88,12 @@ export default function Header() {
           <span className="text-zinc-400 hidden md:inline">Factory Dispatch 24–48h PAN India</span>
         </div>
 
-        {/* Right: Compact Language & Display Controls */}
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Right Pinned: Compact Language & Display Controls */}
+        <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 flex items-center gap-2 shrink-0 z-10">
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Language & Display Options"
-              className="px-2 py-1 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
+              className="px-2 py-0.5 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
             >
               <Globe className="h-3.5 w-3.5 text-lime-400" />
               <span>{(i18n.language || "en").toUpperCase()}</span>
@@ -122,7 +122,7 @@ export default function Header() {
           <button
             onClick={toggleSunlight}
             title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
-            className={`px-2 py-1 text-[11px] font-semibold rounded flex items-center gap-1 transition border ${
+            className={`px-2 py-0.5 text-[11px] font-semibold rounded flex items-center gap-1 transition border ${
               sunlight
                 ? "bg-amber-100 text-amber-950 border-amber-300"
                 : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
