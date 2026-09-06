@@ -147,74 +147,73 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <div className="hidden lg:flex items-center gap-2">
-          {/* Language Switcher */}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
-              <Globe className="h-4 w-4 text-lime-400" /> {(i18n.language || "en").toUpperCase()}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200">
-              <DropdownMenuItem onClick={() => switchLanguage('en')}>English (EN)</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('hi')}>हिंदी (HI)</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('mr')}>मराठी (MR)</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Support Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none">
-              <Headphones className="h-4 w-4 text-lime-400" /> Support
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-56 text-zinc-200">
-              <DropdownMenuItem asChild>
-                <a
-                  href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="WhatsApp Enquiry for KrishiGears Machinery"
-                  onClick={() => trackWhatsAppClick("header_desktop")}
-                  className="flex items-center gap-2 text-zinc-300 hover:text-[#25D366]"
-                >
-                  <WhatsAppIcon className="h-4 w-4" /> WhatsApp Enquiry
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} onClick={() => trackPhoneClick("header_desktop")} className="flex items-center gap-2 text-zinc-300 hover:text-lime-400">
-                  <Phone className="h-4 w-4" /> {COMPANY.phone}
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Sunlight / Outdoor Mode Toggle */}
-          <button
-            onClick={toggleSunlight}
-            data-testid="header-sunlight-toggle"
-            aria-label="Toggle Outdoor Sunlight Mode"
-            title={sunlight ? "Switch to Dark Mode" : "Switch to Outdoor Sunlight Mode (धूप मोड)"}
-            className={`px-3 py-2 text-xs font-bold rounded-md transition flex items-center gap-1.5 border ${
-              sunlight
-                ? "bg-amber-100 text-amber-950 border-amber-300 shadow-sm"
-                : "bg-zinc-900/90 text-zinc-300 border-zinc-700 hover:text-white hover:border-lime-500"
-            }`}
+        {/* Desktop CTA & Utilities */}
+        <div className="hidden lg:flex items-center gap-3">
+          {/* Quick Direct Call Affordance */}
+          <a
+            href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
+            onClick={() => trackPhoneClick("header_desktop")}
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-zinc-300 hover:text-white transition rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40"
+            title="Direct Machinery Support Desk"
           >
-            <Sun className={`h-4 w-4 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
-            <span>{sunlight ? "धूप मोड ON" : "धूप मोड"}</span>
-          </button>
+            <Phone className="h-3.5 w-3.5 text-lime-400" />
+            <span className="font-mono">{COMPANY.phone}</span>
+          </a>
 
-          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded bg-zinc-900 border border-zinc-800 text-xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
-            <span className="text-zinc-400 font-medium">GST:</span>
-            <span className="font-mono text-zinc-100 font-semibold">{COMPANY.gst}</span>
-          </div>
+          {/* Quick Utility Menu (Language & Outdoor Sunlight Mode) */}
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Language & Display Options"
+              className="px-2.5 py-2 text-xs font-medium text-zinc-400 hover:text-white flex items-center gap-1.5 rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 outline-none transition"
+            >
+              <Globe className="h-3.5 w-3.5 text-lime-400" />
+              <span>{(i18n.language || "en").toUpperCase()}</span>
+              <ChevronDown className="h-3 w-3 text-zinc-500" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-44">
+              <div className="px-2 py-1.5 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
+                Language / भाषा
+              </div>
+              <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer">
+                English (EN)
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer">
+                हिंदी (HI)
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer">
+                मराठी (MR)
+              </DropdownMenuItem>
+              <div className="h-px bg-zinc-800 my-1" />
+              <DropdownMenuItem
+                onClick={toggleSunlight}
+                className="flex items-center gap-2 cursor-pointer text-amber-300 hover:text-amber-200"
+              >
+                <Sun className="h-4 w-4 text-amber-400" />
+                <span>{sunlight ? "Dark Mode ON" : "धूप मोड (Outdoor)"}</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
+          {/* Primary Action 1: WhatsApp Quick Quote */}
+          <a
+            href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp Quick Quote"
+            onClick={() => trackWhatsAppClick("header_desktop")}
+            className="px-4 py-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-xs rounded-md transition inline-flex items-center gap-2 shadow-md shadow-green-600/20 active:scale-95"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+            <span>WhatsApp Quote</span>
+          </a>
+
+          {/* Primary Action 2: Become a Dealer */}
           <Link
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"
-            className="ml-1 px-5 py-2.5 bg-lime-500 text-black font-bold text-sm rounded-md hover:bg-lime-400 transition flex items-center gap-2 shadow-lg shadow-lime-500/20"
+            className="px-4 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded-md transition inline-flex items-center gap-1.5 shadow-lg shadow-lime-500/20 active:scale-95 border border-lime-400"
           >
-            Become a Dealer
+            <span>Become a Dealer</span>
           </Link>
         </div>
 
@@ -283,38 +282,40 @@ export default function Header() {
                   {t(item.labelKey, item.fallback || item.labelKey)}
                 </Link>
               ))}
-              <Link href="/products" onClick={() => setOpen(false)} data-testid="m-nav-products" className="px-3 py-3 text-base border-b border-zinc-850 text-zinc-200 hover:text-white">{t('nav.products', 'Products')}</Link>
-              <Link
-                href="/become-a-dealer"
-                onClick={() => setOpen(false)}
-                data-testid="m-nav-become-dealer"
-                className="mt-4 px-5 py-3 bg-lime-500 text-black font-bold text-center rounded-md hover:bg-lime-400 transition"
-              >
-                Become a Dealer
-              </Link>
-              <a
-                href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
-                onClick={() => trackPhoneClick("header_mobile")}
-                data-testid="m-nav-call"
-                className="mt-2 px-5 py-3 border border-zinc-700 text-center rounded-md text-zinc-200 hover:border-lime-500"
-              >
-                <Phone className="h-4 w-4 inline mr-2 text-lime-400" /> {COMPANY.phone}
-              </a>
-              <a
-                href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp Enquiry for KrishiGears Machinery"
-                onClick={() => trackWhatsAppClick("header_mobile")}
-                data-testid="m-nav-whatsapp"
-                className="mt-2 px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-semibold relative shadow-lg shadow-green-600/30"
-              >
-                <span className="relative flex h-2.5 w-2.5 mr-1">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-lime-300"></span>
-                </span>
-                <WhatsAppIcon className="h-4 w-4" /> WhatsApp Enquiry
-              </a>
+              {/* Mobile Actions: WhatsApp Quote, Become a Dealer & Direct Call */}
+              <div className="mt-6 pt-4 border-t border-zinc-850 flex flex-col gap-2.5">
+                <a
+                  href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp Quick Quote"
+                  onClick={() => trackWhatsAppClick("header_mobile")}
+                  data-testid="m-nav-whatsapp"
+                  className="w-full min-h-[48px] px-5 py-3 bg-whatsapp hover:bg-whatsapp-hover text-white text-center rounded-md inline-flex items-center justify-center gap-2 font-bold text-sm shadow-md shadow-green-600/20 active:scale-98 transition"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  <span>WhatsApp Quote</span>
+                </a>
+
+                <Link
+                  href="/become-a-dealer"
+                  onClick={() => setOpen(false)}
+                  data-testid="m-nav-become-dealer"
+                  className="w-full min-h-[48px] px-5 py-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm text-center rounded-md shadow-md shadow-lime-500/20 active:scale-98 transition flex items-center justify-center border border-lime-400"
+                >
+                  Become a Dealer
+                </Link>
+
+                <a
+                  href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
+                  onClick={() => trackPhoneClick("header_mobile")}
+                  data-testid="m-nav-call"
+                  className="w-full min-h-[48px] px-5 py-3 border border-zinc-800 bg-zinc-900/60 text-center rounded-md text-zinc-300 hover:text-white hover:border-zinc-700 font-semibold text-xs flex items-center justify-center gap-2 transition"
+                >
+                  <Phone className="h-4 w-4 text-lime-400" />
+                  <span className="font-mono">{COMPANY.phone} (Support Desk)</span>
+                </a>
+              </div>
             </nav>
           </SheetContent>
         </Sheet>
