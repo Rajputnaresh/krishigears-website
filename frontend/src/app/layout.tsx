@@ -148,6 +148,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://api.krishigears.com" crossOrigin="anonymous" />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem("kg_sunlight_mode");if(s==="true"){document.documentElement.classList.add("sunlight");document.documentElement.classList.remove("dark");}}catch(e){}})();`
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />

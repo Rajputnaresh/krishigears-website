@@ -34,6 +34,7 @@ export default function Header() {
     if (isSun) {
       setSunlight(true);
       document.documentElement.classList.add("sunlight");
+      document.documentElement.classList.remove("dark");
     }
 
     const savedLng = localStorage.getItem("i18nextLng");
@@ -51,9 +52,11 @@ export default function Header() {
     setSunlight(next);
     if (next) {
       document.documentElement.classList.add("sunlight");
+      document.documentElement.classList.remove("dark");
       localStorage.setItem("kg_sunlight_mode", "true");
     } else {
       document.documentElement.classList.remove("sunlight");
+      document.documentElement.classList.add("dark");
       localStorage.setItem("kg_sunlight_mode", "false");
     }
   };

@@ -216,7 +216,20 @@ html.sunlight [data-testid="hero-section"] img {
 }
 
 html.sunlight [data-testid="dealer-cta-section"] .bg-gradient-to-r {
-    background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.5)) !important;
+    background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7)) !important;
+}
+
+html.sunlight [data-testid="dealer-cta-section"] img {
+    opacity: 0.12 !important;
+}
+
+/* Category bento cards in Sunlight Mode */
+html.sunlight [data-testid="categories-section"] .bg-gradient-to-tr {
+    background: linear-gradient(to top right, #FFFFFF, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0.3)) !important;
+}
+
+html.sunlight [data-testid="categories-section"] img {
+    opacity: 0.25 !important;
 }
 
 html.sunlight [data-testid="floating-call-btn"] {
@@ -227,6 +240,8 @@ html.sunlight [data-testid="floating-call-btn"] {
 
 html.sunlight .bg-zinc-950,
 html.sunlight .bg-zinc-900,
+html.sunlight .bg-zinc-850,
+html.sunlight .bg-zinc-800,
 html.sunlight .bg-zinc-900\/90,
 html.sunlight .bg-zinc-900\/80,
 html.sunlight .bg-zinc-900\/60,
@@ -241,7 +256,7 @@ html.sunlight .bg-surface-elevated,
 html.sunlight .bg-surface-darker,
 html.sunlight .bg-surface-darkest,
 html.sunlight .bg-surface-dark {
-    background-color: #F4F4F5 !important;
+    background-color: #FFFFFF !important;
     border-color: #E4E4E7 !important;
 }
 
@@ -260,22 +275,27 @@ html.sunlight .text-zinc-400 {
 
 html.sunlight .text-zinc-500,
 html.sunlight .text-zinc-600 {
-    color: #52525B !important;
+    color: #4B5563 !important;
 }
 
 html.sunlight .border-zinc-800,
 html.sunlight .border-zinc-700,
 html.sunlight .border-zinc-850,
 html.sunlight .border-zinc-900,
-html.sunlight .border-zinc-600 {
+html.sunlight .border-zinc-600,
+html.sunlight .border-zinc-800\/80,
+html.sunlight .border-zinc-800\/60,
+html.sunlight .border-zinc-800\/40,
+html.sunlight .border-zinc-700\/80 {
     border-color: #D4D4D8 !important;
 }
 
 /* Lime text and accents — darkened to deep forest green for 7:1+ outdoor contrast on white */
 html.sunlight .text-lime-300,
 html.sunlight .text-lime-400,
-html.sunlight .text-lime-500 {
-    color: #166534 !important;
+html.sunlight .text-lime-500,
+html.sunlight .text-lime-600 {
+    color: #15803D !important;
 }
 
 html.sunlight .border-lime-500,
@@ -283,7 +303,7 @@ html.sunlight .border-lime-500\/30,
 html.sunlight .border-lime-500\/40,
 html.sunlight .border-lime-500\/50,
 html.sunlight .border-lime-500\/60 {
-    border-color: #22C55E !important;
+    border-color: #16A34A !important;
 }
 
 html.sunlight .bg-lime-500\/10,
@@ -311,6 +331,14 @@ html.sunlight .bg-whatsapp {
     color: #FFFFFF !important;
 }
 
+/* Badges in Sunlight Mode */
+html.sunlight .bg-black\/85,
+html.sunlight .bg-black\/80 {
+    background-color: #FFFFFF !important;
+    border-color: #D4D4D8 !important;
+    color: #09090B !important;
+}
+
 /* Inputs, Textareas, Selects in Sunlight Mode */
 html.sunlight input,
 html.sunlight textarea,
@@ -322,11 +350,12 @@ html.sunlight select {
 
 html.sunlight input::placeholder,
 html.sunlight textarea::placeholder {
-    color: #71717A !important;
+    color: #6B7280 !important;
 }
 
-/* Dropdown menus & Sheet drawers */
+/* Dropdown menus, Dialogs, Sheet drawers in Sunlight Mode */
 html.sunlight [role="menu"],
+html.sunlight [role="dialog"],
 html.sunlight [data-slot="sheet-content"] {
     background-color: #FFFFFF !important;
     color: #09090B !important;
