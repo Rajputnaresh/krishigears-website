@@ -11,6 +11,7 @@ import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { useEffect, useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { apiClient, formatApiError } from "@/lib/api";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -29,6 +30,7 @@ const ICONS: Record<string, any> = {
 };
 
 export default function Home() {
+  const { t } = useTranslation();
   const featured = CATEGORIES.filter((c) => c.featured);
   const [featuredProducts, setFeaturedProducts] = useState<any[]>(PRODUCTS.slice(0, 6));
 
@@ -117,17 +119,17 @@ export default function Home() {
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 py-20 lg:py-24 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8 animate-fade-up">
             <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.2em] uppercase text-lime-400 font-bold rounded-sm">
-              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> Premium Agricultural Machinery · GST Registered
+              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> {t('hero.badge', 'Premium Agricultural Machinery · GST Registered')}
             </div>
             <h1 className="kg-h1 mt-6 text-balance text-zinc-50">
-              For the <span className="text-lime-400">Farmers,</span><br/>
-              With the <span className="text-lime-400">Farmer,</span><br/>
-              To the <span className="text-lime-400">Farmer.</span>
-              <span className="block text-zinc-200 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.25em]">HAMESHA.</span>
+              {t('hero.titleLine1', 'For the')} <span className="text-lime-400">{t('hero.farmers', 'Farmers,')}</span><br/>
+              {t('hero.titleLine2', 'With the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer,')}</span><br/>
+              {t('hero.titleLine3', 'To the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer.')}</span>
+              <span className="block text-zinc-200 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.25em]">{t('hero.hamesha', 'HAMESHA.')}</span>
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
             <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
-              सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.
+              {t('hero.subtitle', 'सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.')}
             </p>
             {/* Prioritized CTA Hierarchy: 1 Primary High-Contrast Action + 1 Secondary Action */}
             <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -139,7 +141,7 @@ export default function Home() {
                 className="group inline-flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 min-h-[52px] rounded-md transition shadow-xl shadow-lime-500/25 active:scale-95 text-base border-2 border-lime-400"
               >
                 <WhatsAppIcon className="h-5 w-5 text-black fill-black" />
-                <span>व्हाट्सएप कोटेशन / WhatsApp Wholesale Quote</span>
+                <span>{t('hero.whatsappCta', 'WhatsApp Wholesale Quote')}</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
               </a>
               <Link
@@ -147,7 +149,7 @@ export default function Home() {
                 data-testid="hero-dealer-btn"
                 className="inline-flex items-center justify-center gap-2 text-zinc-100 hover:text-lime-400 text-sm font-semibold transition border border-zinc-700 bg-zinc-900/90 hover:border-lime-500/60 px-6 py-4 min-h-[52px] rounded-md shadow-md"
               >
-                डीलरशिप आवेदन / Become a Dealer
+                {t('hero.dealerCta', 'Become a Dealer')}
               </Link>
             </div>
 
@@ -158,7 +160,7 @@ export default function Home() {
                 data-testid="hero-explore-products"
                 className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-950/60 hover:border-zinc-700"
               >
-                <span>मशीनें देखें (Explore 19 Categories) →</span>
+                <span>{t('hero.exploreProducts', 'Explore 19 Categories →')}</span>
               </Link>
               <EnquiryDialog
                 product="Wholesale B2B Machinery Catalog 2026"
@@ -168,7 +170,7 @@ export default function Home() {
                     className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-lime-400 transition px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-950/60 hover:border-zinc-700"
                   >
                     <FileText className="h-3.5 w-3.5 text-lime-400" />
-                    <span>Download Catalog (PDF)</span>
+                    <span>{t('hero.downloadCatalog', 'Download Catalog (PDF)')}</span>
                   </button>
                 }
               />
@@ -176,7 +178,7 @@ export default function Home() {
 
             {/* Clear retail handoff note */}
             <div className="mt-6 inline-flex items-center gap-2 text-xs text-zinc-300 bg-zinc-950/80 border border-zinc-800 px-4 py-2 rounded-full shadow-inner">
-              <span className="text-zinc-400">1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):</span>
+              <span className="text-zinc-400">{t('hero.retailPrompt', '1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):')}</span>
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
@@ -184,16 +186,16 @@ export default function Home() {
                 data-testid="hero-buy-online"
                 className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2"
               >
-                FarmingTools.in पर खरीदें <ArrowRight className="h-3 w-3" />
+                {t('hero.retailLink', 'FarmingTools.in पर खरीदें')} <ArrowRight className="h-3 w-3" />
               </a>
             </div>
 
             {/* Quick stats - High contrast sunlight ready */}
             <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl">
               {[
-                { v: "7+", l: "Power Weeder Models" },
-                { v: "PAN India", l: "Supply Network" },
-                { v: "100%", l: "Genuine Parts" },
+                { v: "7+", l: t('hero.statsWeeders', 'Power Weeder Models') },
+                { v: "PAN India", l: t('hero.statsNetwork', 'Supply Network') },
+                { v: "100%", l: t('hero.statsSpares', 'Genuine OEM Parts') },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-lime-500 pl-4 bg-zinc-950/40 py-2">
                   <div className="font-display font-black text-2xl sm:text-3xl text-zinc-50">{s.v}</div>
@@ -224,11 +226,13 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
-              <div className="kg-eyebrow">Our Range</div>
-              <h2 className="kg-h2 mt-3 text-zinc-100">Built for every <span className="text-lime-500">Indian farm.</span></h2>
+              <div className="kg-eyebrow">{t('categories.eyebrow', 'Our Range')}</div>
+              <h2 className="kg-h2 mt-3 text-zinc-100">
+                {t('categories.title', 'Built for every')} <span className="text-lime-500">{t('categories.titleHighlight', 'Indian farm.')}</span>
+              </h2>
             </div>
             <Link href="/products" data-testid="all-products-link" className="text-sm text-lime-400 hover:text-lime-300 flex items-center gap-1 font-bold">
-              View all products <ChevronRight className="h-4 w-4" />
+              {t('categories.viewAll', 'View all products')} <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -256,7 +260,7 @@ export default function Home() {
                       <h3 className="font-display font-black text-2xl md:text-3xl mt-2 text-zinc-50">{c.name}</h3>
                       <p className="text-zinc-200 text-sm mt-2 max-w-md leading-relaxed">{c.short}</p>
                       <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-zinc-100 group-hover:text-lime-400 transition">
-                        Browse Range <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                        {t('categories.browseRange', 'Browse Range')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
                       </div>
                     </div>
                   </div>
@@ -276,7 +280,7 @@ export default function Home() {
                 >
                   <Icon className="h-5 w-5 text-lime-500 mb-3" />
                   <div className="font-display font-bold text-base leading-tight text-zinc-100">{c.name}</div>
-                  <div className="mt-2 text-xs text-lime-400 font-semibold">View Range →</div>
+                  <div className="mt-2 text-xs text-lime-400 font-semibold">{t('categories.viewRange', 'View Range →')}</div>
                 </Link>
               );
             })}
@@ -291,28 +295,28 @@ export default function Home() {
             <ShieldCheck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm text-zinc-100">FMTTI Tested</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">Quality Assured</div>
+              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.tested', 'Quality Assured')}</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <Truck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm text-zinc-100">PAN India Delivery</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">Fast Logistics</div>
+              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.delivery', 'Fast Logistics')}</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <BadgeCheck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm text-zinc-100">Genuine OEM</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">Original Spares</div>
+              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.spares', 'Original Spares')}</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <Headphones className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm text-zinc-100">24x7 Support</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">Expert Help</div>
+              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.support', 'Expert Help')}</div>
             </div>
           </div>
         </div>
@@ -323,8 +327,8 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
-              <div className="kg-eyebrow">Products We Supply</div>
-              <h2 className="kg-h2 mt-3 text-zinc-100">Featured B2B equipment.</h2>
+              <div className="kg-eyebrow">{t('products.eyebrow', 'Products We Supply')}</div>
+              <h2 className="kg-h2 mt-3 text-zinc-100">{t('products.title', 'Featured B2B equipment.')}</h2>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -349,20 +353,22 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-6">
-            <div className="kg-eyebrow">About KrishiGears</div>
-            <h2 className="kg-h2 mt-3 text-balance text-zinc-100">Built by farmers. <span className="text-lime-500">For farmers.</span></h2>
+            <div className="kg-eyebrow">{t('about.eyebrow', 'About KrishiGears')}</div>
+            <h2 className="kg-h2 mt-3 text-balance text-zinc-100">
+              {t('about.title', 'Built by farmers.')} <span className="text-lime-500">{t('about.titleHighlight', 'For farmers.')}</span>
+            </h2>
             <p className="text-zinc-200 mt-6 leading-relaxed">
-              KrishiGears is India's trusted B2B agricultural machinery brand for dealers, distributors, FPOs, contractors, institutions and OEM partners. Our range is built for rugged field use and backed by genuine warranty support.
+              {t('about.p1', "KrishiGears is India's trusted B2B agricultural machinery brand for dealers, distributors, FPOs, contractors, institutions and OEM partners. Our range is built for rugged field use and backed by genuine warranty support.")}
             </p>
             <p className="text-zinc-200 mt-4 leading-relaxed">
-              We support serious procurement with GST invoicing, bulk dispatch coordination, genuine spare parts and dealer enablement. Retail orders are fulfilled through FarmingTools.in.
+              {t('about.p2', 'We support serious procurement with GST invoicing, bulk dispatch coordination, genuine spare parts and dealer enablement. Retail orders are fulfilled through FarmingTools.in.')}
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
-                { v: "GST", l: "Registered Business" },
-                { v: "PAN India", l: "Delivery & Support" },
-                { v: "FMTTI", l: "Tested Equipment" },
-                { v: "Genuine", l: "Spare Parts Only" },
+                { v: "GST", l: t('about.gst', 'Registered Business') },
+                { v: "PAN India", l: t('about.deliverySupport', 'Delivery & Support') },
+                { v: "FMTTI", l: t('about.testedEquipment', 'Tested Equipment') },
+                { v: "Genuine", l: t('about.sparesOnly', 'Spare Parts Only') },
               ].map((b) => (
                 <div key={b.l} className="border border-zinc-700/80 p-4 bg-surface-dark">
                   <div className="text-lime-400 font-display font-black text-lg">{b.v}</div>
@@ -371,7 +377,7 @@ export default function Home() {
               ))}
             </div>
             <Link href="/about" data-testid="about-learn-more" className="mt-8 inline-flex items-center gap-2 text-lime-400 font-bold hover:gap-3 transition-all">
-              Learn more about us <ArrowRight className="h-4 w-4" />
+              {t('about.learnMore', 'Learn more about us')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -394,13 +400,20 @@ export default function Home() {
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="kg-eyebrow">Dealer Opportunity</div>
-            <h2 className="kg-h2 mt-3 text-balance text-zinc-100">Become a <span className="text-lime-500">KrishiGears</span> dealer in your district.</h2>
+            <div className="kg-eyebrow">{t('dealerCta.eyebrow', 'Dealer Opportunity')}</div>
+            <h2 className="kg-h2 mt-3 text-balance text-zinc-100">
+              {t('dealerCta.title', 'Become a KrishiGears dealer')} <span className="text-lime-500">{t('dealerCta.titleHighlight', 'in your district.')}</span>
+            </h2>
             <p className="text-zinc-200 mt-6 max-w-xl leading-relaxed">
-              Strong margins, dedicated dealer support, fast dispatch and authorized warranty — partner with India's most trusted agricultural machinery distributor and grow with us.
+              {t('dealerCta.subtitle', "Strong margins, dedicated dealer support, fast dispatch and authorized warranty — partner with India's most trusted agricultural machinery distributor and grow with us.")}
             </p>
             <ul className="mt-6 space-y-2.5">
-              {["Attractive dealer margins", "Co-branded marketing support", "Free dealer training", "Priority spare parts supply"].map((b) => (
+              {[
+                t('dealerCta.benefit1', 'Attractive dealer margins'),
+                t('dealerCta.benefit2', 'Co-branded marketing support'),
+                t('dealerCta.benefit3', 'Free dealer training'),
+                t('dealerCta.benefit4', 'Priority spare parts supply')
+              ].map((b) => (
                 <li key={b} className="flex items-center gap-3 text-zinc-100 text-sm font-medium">
                   <div className="h-1.5 w-1.5 bg-lime-500 rounded-full"></div>{b}
                 </li>
@@ -408,10 +421,10 @@ export default function Home() {
             </ul>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/become-a-dealer" data-testid="dealer-cta-apply" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md transition inline-flex items-center gap-2">
-                Apply as Dealer <ArrowRight className="h-4 w-4" />
+                {t('dealerCta.applyBtn', 'Apply as Dealer')} <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/dealer-network" data-testid="dealer-cta-network" className="border border-zinc-600 hover:border-lime-500 hover:text-lime-400 text-zinc-100 px-7 py-4 font-bold rounded-md transition inline-flex items-center gap-2">
-                View Network
+                {t('dealerCta.networkBtn', 'View Network')}
               </Link>
             </div>
           </div>
@@ -440,6 +453,7 @@ export default function Home() {
 }
 
 function ContactStrip() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", phone: "", category: "Power Weeders", message: "" });
@@ -477,23 +491,25 @@ function ContactStrip() {
     <section data-testid="home-contact-section" className="kg-section bg-surface-darker border-t border-zinc-800">
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="kg-eyebrow">Quick Inquiry & WhatsApp Quote</div>
-          <h2 className="kg-h2 mt-3 text-balance text-zinc-100">Get pricing & specs <span className="text-lime-500">on WhatsApp.</span></h2>
+          <div className="kg-eyebrow">{t('contact.eyebrow', 'Quick Inquiry & WhatsApp Quote')}</div>
+          <h2 className="kg-h2 mt-3 text-balance text-zinc-100">
+            {t('contact.title', 'Get pricing & specs')} <span className="text-lime-500">{t('contact.titleHighlight', 'on WhatsApp.')}</span>
+          </h2>
           <p className="text-zinc-200 mt-6 leading-relaxed max-w-md text-base">
-            Looking for wholesale supply, dealership rates, or machine fitment details? Enter your details for a quick quote within minutes.
+            {t('contact.subtitle', 'Looking for wholesale supply, dealership rates, or machine fitment details? Enter your details for a quick quote within minutes.')}
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">Head Office · PAN India Supply</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">{t('contact.headOffice', 'Head Office · PAN India Supply')}</div>
                 <div className="text-sm text-zinc-100 mt-0.5">{COMPANY.address}</div>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Headphones className="h-5 w-5 text-lime-500 mt-0.5 shrink-0" />
               <div>
-                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">Instant Phone / WhatsApp Desk</div>
+                <div className="text-xs uppercase tracking-wider text-zinc-300 font-semibold">{t('contact.desk', 'Instant Phone / WhatsApp Desk')}</div>
                 <div className="text-sm text-zinc-100 mt-0.5">{COMPANY.phone}</div>
               </div>
             </div>
@@ -503,17 +519,17 @@ function ContactStrip() {
         <form onSubmit={submit} className="border border-zinc-700 bg-surface-dark p-6 md:p-8 space-y-4 rounded-xl shadow-2xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Your Name*</Label>
-              <Input id="contact-name" name="name" placeholder="e.g. Ramesh Patel" required minLength={2} data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+              <Label htmlFor="contact-name" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">{t('contact.nameLabel', 'Your Name*')}</Label>
+              <Input id="contact-name" name="name" placeholder={t('contact.namePlaceholder', 'e.g. Ramesh Patel')} required minLength={2} data-testid="home-contact-name" value={form.name} onChange={update("name")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
             </div>
             <div>
-              <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Mobile Number (WhatsApp)*</Label>
-              <Input id="contact-phone" type="tel" name="phone" placeholder="10-digit number" required pattern="[0-9\+\-\s]{10,15}" data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+              <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">{t('contact.phoneLabel', 'Mobile Number (WhatsApp)*')}</Label>
+              <Input id="contact-phone" type="tel" name="phone" placeholder={t('contact.phonePlaceholder', '10-digit number')} required pattern="[0-9\+\-\s]{10,15}" data-testid="home-contact-phone" value={form.phone} onChange={update("phone")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
             </div>
           </div>
 
           <div>
-            <Label htmlFor="contact-category" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">Machinery / Parts Needed</Label>
+            <Label htmlFor="contact-category" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">{t('contact.categoryLabel', 'Machinery / Parts Needed')}</Label>
             <select
               id="contact-category"
               value={form.category}
@@ -527,8 +543,8 @@ function ContactStrip() {
           </div>
 
           <div>
-            <Label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">District / Details (Optional)</Label>
-            <Textarea id="contact-message" name="message" placeholder="e.g. Need 5 units in Kolhapur, Maharashtra" data-testid="home-contact-message" rows={2} value={form.message} onChange={update("message")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
+            <Label htmlFor="contact-message" className="text-xs uppercase tracking-wider text-zinc-200 font-semibold">{t('contact.messageLabel', 'District / Details (Optional)')}</Label>
+            <Textarea id="contact-message" name="message" placeholder={t('contact.messagePlaceholder', 'e.g. Need 5 units in Kolhapur, Maharashtra')} data-testid="home-contact-message" rows={2} value={form.message} onChange={update("message")} className="bg-zinc-950 border-zinc-700 text-zinc-100 mt-1.5" />
           </div>
 
           {errorMsg && (
@@ -545,11 +561,11 @@ function ContactStrip() {
               data-testid="home-contact-submit"
               className="w-full min-h-[48px] bg-lime-500 hover:bg-lime-400 text-black font-bold py-3 rounded-md transition shadow-lg shadow-lime-500/20 disabled:opacity-50 text-sm tracking-wide active:scale-[0.99]"
             >
-              {loading ? "भेज रहे हैं / Sending..." : "कीमत व कोटेशन प्राप्त करें / Request Price & Specs"}
+              {loading ? t('contact.submitting', 'Sending...') : t('contact.submitBtn', 'Request Price & Specs')}
             </button>
             <div className="relative flex py-1 items-center">
               <div className="flex-grow border-t border-zinc-800"></div>
-              <span className="flex-shrink mx-3 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">या सीधे व्हाट्सएप पर / Or on WhatsApp</span>
+              <span className="flex-shrink mx-3 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">{t('contact.orWhatsapp', 'Or on WhatsApp')}</span>
               <div className="flex-grow border-t border-zinc-800"></div>
             </div>
             <a
@@ -560,7 +576,7 @@ function ContactStrip() {
               onClick={() => trackWhatsAppClick("contact_strip_quick")}
               className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide"
             >
-              <WhatsAppIcon className="h-4 w-4" /> 1-Tap WhatsApp Quotation Desk
+              <WhatsAppIcon className="h-4 w-4" /> {t('contact.whatsappDirect', '1-Tap WhatsApp Quotation Desk')}
             </a>
           </div>
         </form>
@@ -591,6 +607,7 @@ function VideoGallery({ videos }: { videos: any[] }) {
 }
 
 function DistrictLocator() {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedState, setSelectedState] = useState<string>("All");
 
@@ -625,12 +642,12 @@ function DistrictLocator() {
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
-            <div className="kg-eyebrow">Availability & Network</div>
+            <div className="kg-eyebrow">{t('locator.eyebrow', 'Availability & Network')}</div>
             <h2 className="kg-h2 mt-3 text-zinc-100">
-              Find Machinery & Dealers <span className="text-lime-500">in your District.</span>
+              {t('locator.title', 'Find Machinery & Dealers')} <span className="text-lime-500">{t('locator.titleHighlight', 'in your District.')}</span>
             </h2>
             <p className="text-zinc-300 text-sm mt-2 max-w-xl">
-              Check localized equipment fitment, crops supported, and fast delivery timelines for your farming hub.
+              {t('locator.subtitle', 'Check localized equipment fitment, crops supported, and fast delivery timelines for your farming hub.')}
             </p>
           </div>
           <div className="flex flex-wrap sm:flex-nowrap gap-3 w-full md:w-auto">
@@ -638,8 +655,8 @@ function DistrictLocator() {
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
               <input
                 type="text"
-                placeholder="Search district or crop..."
-                aria-label="Search district or crop"
+                placeholder={t('locator.searchPlaceholder', 'Search district or crop...')}
+                aria-label={t('locator.searchPlaceholder', 'Search district or crop...')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-lime-500"
@@ -660,7 +677,7 @@ function DistrictLocator() {
               onChange={(e) => setSelectedState(e.target.value)}
               className="px-4 py-2.5 bg-zinc-950 border border-zinc-700 hover:border-lime-500/50 rounded-md text-sm font-semibold text-zinc-100 focus:outline-none focus:border-lime-500 transition-colors"
             >
-              <option value="All">🔍 All India States</option>
+              <option value="All">{t('locator.allStates', '🔍 All India States')}</option>
               <optgroup label="Active B2B Agri Zones">
                 {states.map((st) => (
                   <option key={st} value={st} className="bg-zinc-950 text-zinc-100">
@@ -686,7 +703,7 @@ function DistrictLocator() {
                       {data.state}
                     </span>
                     <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-lime-500/10 text-lime-400 border border-lime-500/20">
-                      Active Hub
+                      {t('locator.activeHub', 'Active Hub')}
                     </span>
                   </div>
                   <h3 className="font-display font-bold text-lg text-zinc-100 mt-2 group-hover:text-lime-400 transition-colors">
@@ -714,13 +731,13 @@ function DistrictLocator() {
                     href={`/power-weeders-in-${districtSlug}`}
                     className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1"
                   >
-                    View Machinery <ChevronRight className="h-3.5 w-3.5" />
+                    {t('locator.viewMachinery', 'View Machinery')} <ChevronRight className="h-3.5 w-3.5" />
                   </Link>
                   <Link
                     href={`/dealer/${data.state ? data.state.toLowerCase().replace(/ /g, "-") : "all"}`}
                     className="text-xs font-semibold text-zinc-300 hover:text-lime-400 transition-colors"
                   >
-                    Dealer Info →
+                    {t('locator.dealerInfo', 'Dealer Info →')}
                   </Link>
                 </div>
               </div>
@@ -730,12 +747,12 @@ function DistrictLocator() {
 
         {filteredDistricts.length === 0 && (
           <div className="text-center py-12 border border-zinc-800 rounded-lg bg-zinc-950">
-            <p className="text-zinc-300 text-sm">No districts matched &quot;{searchTerm}&quot;. KrishiGears delivers PAN India.</p>
+            <p className="text-zinc-300 text-sm">{t('locator.noResults', 'No districts matched your search. KrishiGears delivers PAN India.')}</p>
             <Link
               href="/dealer-network"
               className="mt-3 inline-block text-xs text-lime-400 font-bold hover:underline"
             >
-              Explore Full State Dealer Directory →
+              {t('locator.exploreStates', 'Explore Full State Dealer Directory →')}
             </Link>
           </div>
         )}

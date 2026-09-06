@@ -8,10 +8,124 @@
     "warranty": "Warranty",
     "blog": "Blog",
     "home": "Home",
-    "aboutUs": "About Us"
+    "aboutUs": "About Us",
+    "allProducts": "All Products →",
+    "dealers": "Dealers",
+    "locations": "Locations"
   },
-  "common": {
-    "search": "Search",
-    "language": "Language"
+  "trust": {
+    "gstin": "GSTIN",
+    "fmtti": "FMTTI / SRFMTTI Tested Machinery",
+    "dispatch": "Factory Dispatch 24–48h PAN India",
+    "tested": "Quality Assured",
+    "delivery": "Fast Logistics",
+    "spares": "Original Spares",
+    "support": "Expert Help",
+    "quality": "Quality Assured",
+    "panIndia": "PAN India Delivery",
+    "genuineOem": "Genuine OEM",
+    "helpDesk": "24x7 Support Desk"
+  },
+  "hero": {
+    "badge": "Premium Agricultural Machinery · GST Registered",
+    "titleLine1": "For the",
+    "titleLine2": "With the",
+    "titleLine3": "To the",
+    "farmers": "Farmers,",
+    "farmer": "Farmer,",
+    "hamesha": "HAMESHA.",
+    "subtitle": "Direct factory dispatch of agricultural machinery and fitment-checked spare parts for dealers, FPOs, and contractors across India.",
+    "whatsappCta": "WhatsApp Wholesale Quote",
+    "dealerCta": "Become a Dealer",
+    "exploreProducts": "Explore 19 Categories →",
+    "downloadCatalog": "Download Catalog (PDF)",
+    "retailPrompt": "Need 1 machine for personal farming?",
+    "retailLink": "Buy on FarmingTools.in",
+    "statsWeeders": "Power Weeder Models",
+    "statsNetwork": "Supply Network",
+    "statsSpares": "Genuine OEM Parts"
+  },
+  "categories": {
+    "eyebrow": "Our Range",
+    "title": "Built for every",
+    "titleHighlight": "Indian farm.",
+    "viewAll": "View all products",
+    "browseRange": "Browse Range",
+    "viewRange": "View Range →"
+  },
+  "products": {
+    "eyebrow": "Products We Supply",
+    "title": "Featured B2B equipment.",
+    "factorySupply": "Factory Supply",
+    "moq": "MOQ: 2 Units",
+    "viewSpecs": "View Specifications",
+    "shareWhatsapp": "Share on WhatsApp"
+  },
+  "about": {
+    "eyebrow": "About KrishiGears",
+    "title": "Built by farmers.",
+    "titleHighlight": "For farmers.",
+    "p1": "KrishiGears is India's trusted B2B agricultural machinery brand for dealers, distributors, FPOs, contractors, institutions and OEM partners. Our range is built for rugged field use and backed by genuine warranty support.",
+    "p2": "We support serious procurement with GST invoicing, bulk dispatch coordination, genuine spare parts and dealer enablement. Retail orders are fulfilled through FarmingTools.in.",
+    "gst": "Registered Business",
+    "deliverySupport": "Delivery & Support",
+    "testedEquipment": "Tested Equipment",
+    "sparesOnly": "Spare Parts Only",
+    "learnMore": "Learn more about us"
+  },
+  "locator": {
+    "eyebrow": "Availability & Network",
+    "title": "Find Machinery & Dealers",
+    "titleHighlight": "in your District.",
+    "subtitle": "Check localized equipment fitment, crops supported, and fast delivery timelines for your farming hub.",
+    "searchPlaceholder": "Search district or crop...",
+    "allStates": "🔍 All India States",
+    "activeHub": "Active Hub",
+    "viewMachinery": "View Machinery",
+    "dealerInfo": "Dealer Info →",
+    "noResults": "No districts matched your search. KrishiGears delivers PAN India.",
+    "exploreStates": "Explore Full State Dealer Directory →"
+  },
+  "dealerCta": {
+    "eyebrow": "Dealer Opportunity",
+    "title": "Become a KrishiGears dealer",
+    "titleHighlight": "in your district.",
+    "subtitle": "Strong margins, dedicated dealer support, fast dispatch and authorized warranty — partner with India's most trusted agricultural machinery distributor.",
+    "benefit1": "Attractive dealer margins",
+    "benefit2": "Co-branded marketing support",
+    "benefit3": "Free dealer technical training",
+    "benefit4": "Priority spare parts supply",
+    "applyBtn": "Apply as Dealer",
+    "networkBtn": "View Network"
+  },
+  "contact": {
+    "eyebrow": "Quick Inquiry & WhatsApp Quote",
+    "title": "Get pricing & specs",
+    "titleHighlight": "on WhatsApp.",
+    "subtitle": "Looking for wholesale supply, dealership rates, or machine fitment details? Enter your details for a quick quote within minutes.",
+    "headOffice": "Head Office · PAN India Supply",
+    "desk": "Instant Phone / WhatsApp Desk",
+    "nameLabel": "Your Name*",
+    "namePlaceholder": "e.g. Ramesh Patel",
+    "phoneLabel": "Mobile Number (WhatsApp)*",
+    "phonePlaceholder": "10-digit number",
+    "categoryLabel": "Machinery / Parts Needed",
+    "messageLabel": "District / Details (Optional)",
+    "messagePlaceholder": "e.g. Need 5 units in Kolhapur, Maharashtra",
+    "submitBtn": "Request Price & Specs",
+    "submitting": "Sending...",
+    "orWhatsapp": "Or on WhatsApp",
+    "whatsappDirect": "1-Tap WhatsApp Quotation Desk"
+  },
+  "footer": {
+    "description": "B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.",
+    "categories": "Categories",
+    "viewAll": "View all categories →",
+    "quickLinks": "KrishiGears",
+    "contact": "Contact",
+    "b2bSupply": "B2B Supply Programs",
+    "topStates": "Top Dealer States",
+    "viewAllStates": "View All States →",
+    "allRights": "All rights reserved."
   }
 }

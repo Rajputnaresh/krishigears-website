@@ -5,8 +5,10 @@ import { ArrowRight, BadgeCheck } from "lucide-react";
 import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { useTranslation } from "react-i18next";
 
 export default function ProductCard({ product }) {
+  const { t } = useTranslation();
   const category = CATEGORIES.find((c) => c.slug === product.category);
   const waMsg = encodeURIComponent(
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. [Ref: web_catalog_${product.slug}] Please share pricing.`
@@ -156,10 +158,10 @@ export default function ProductCard({ product }) {
       <div className="px-5 pb-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between gap-2 bg-zinc-950/40">
         <div className="flex items-center gap-1.5 flex-wrap">
           <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.15em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2 py-0.5 rounded">
-            Factory Supply
+            {t('products.factorySupply', 'Factory Supply')}
           </span>
           <span className="text-[10px] font-semibold text-zinc-300 border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 rounded">
-            MOQ: 2 Units
+            {t('products.moq', 'MOQ: 2 Units')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -169,8 +171,8 @@ export default function ProductCard({ product }) {
               const shareText = encodeURIComponent(`Check out ${product.name} at KrishiGears: https://krishigears.com/products/${product.slug}`);
               window.open(`https://api.whatsapp.com/send?text=${shareText}`, "_blank");
             }}
-            title="Forward specs to farmer client via WhatsApp"
-            aria-label="Share product specs on WhatsApp"
+            title={t('products.shareWhatsapp', 'Share on WhatsApp')}
+            aria-label={t('products.shareWhatsapp', 'Share on WhatsApp')}
             className="h-9 w-9 min-h-[36px] min-w-[36px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-[#25D366] hover:border-green-600 transition active:scale-95"
           >
             <WhatsAppIcon className="h-4 w-4" />

@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
+import { useTranslation } from "react-i18next";
 
 function FacebookIcon(props) {
   return (
@@ -35,6 +38,7 @@ function TwitterIcon(props) {
 }
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer data-testid="site-footer" className="bg-surface-darkest border-t border-zinc-800 mt-12 text-zinc-300">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
@@ -48,7 +52,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
-            B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.
+            {t('footer.description', 'B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.')}
           </p>
           <div className="mt-6 flex gap-3">
           {[
@@ -66,7 +70,9 @@ export default function Footer() {
 
         {/* Categories */}
         <div className="md:col-span-3">
-          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">Categories</div>
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">
+            {t('footer.categories', 'Categories')}
+          </div>
           <ul className="space-y-2 text-sm text-zinc-400">
             {CATEGORIES.slice(0, 7).map((c) => (
               <li key={c.slug}>
@@ -74,29 +80,35 @@ export default function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/products" className="text-lime-400 font-bold hover:text-lime-300 transition">View all categories →</Link>
+              <Link href="/products" className="text-lime-400 font-bold hover:text-lime-300 transition">
+                {t('footer.viewAll', 'View all categories →')}
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Quick Links */}
         <div className="md:col-span-2">
-          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">KrishiGears</div>
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">
+            {t('footer.quickLinks', 'KrishiGears')}
+          </div>
           <ul className="space-y-2 text-sm text-zinc-400">
-            <li><Link href="/about" className="hover:text-lime-400 transition">About Us</Link></li>
-            <li><Link href="/locations" className="hover:text-lime-400 transition">Locations Directory</Link></li>
-            <li><Link href="/dealer-network" className="hover:text-lime-400 transition">Dealer Network</Link></li>
-            <li><Link href="/become-a-dealer" className="hover:text-lime-400 transition">Become a Dealer</Link></li>
-            <li><Link href="/bulk-order" className="hover:text-lime-400 transition">Bulk Order</Link></li>
-            <li><Link href="/warranty-and-support" className="hover:text-lime-400 transition">Warranty</Link></li>
-            <li><Link href="/blog" className="hover:text-lime-400 transition">Blog</Link></li>
-            <li><Link href="/contact" className="hover:text-lime-400 transition">Contact Us</Link></li>
+            <li><Link href="/about" className="hover:text-lime-400 transition">{t('nav.aboutUs', 'About Us')}</Link></li>
+            <li><Link href="/locations" className="hover:text-lime-400 transition">{t('nav.locations', 'Locations Directory')}</Link></li>
+            <li><Link href="/dealer-network" className="hover:text-lime-400 transition">{t('nav.dealerNetwork', 'Dealer Network')}</Link></li>
+            <li><Link href="/become-a-dealer" className="hover:text-lime-400 transition">{t('nav.becomeDealer', 'Become a Dealer')}</Link></li>
+            <li><Link href="/bulk-order" className="hover:text-lime-400 transition">{t('nav.bulkOrder', 'Bulk Order')}</Link></li>
+            <li><Link href="/warranty-and-support" className="hover:text-lime-400 transition">{t('nav.warranty', 'Warranty')}</Link></li>
+            <li><Link href="/blog" className="hover:text-lime-400 transition">{t('nav.blog', 'Blog')}</Link></li>
+            <li><Link href="/contact" className="hover:text-lime-400 transition">{t('nav.contactUs', 'Contact Us')}</Link></li>
           </ul>
         </div>
 
         {/* Contact info */}
         <div className="md:col-span-3">
-          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">Contact</div>
+          <div className="font-display font-bold text-sm tracking-wider uppercase text-white mb-4">
+            {t('footer.contact', 'Contact')}
+          </div>
           <ul className="space-y-3 text-sm text-zinc-300">
             <li className="flex items-start gap-3">
               <MapPin className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
@@ -146,14 +158,18 @@ export default function Footer() {
       <div className="border-t border-zinc-800">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 grid md:grid-cols-2 gap-8">
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">B2B Supply Programs</div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">
+              {t('footer.b2bSupply', 'B2B Supply Programs')}
+            </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
               <Link href="/seo/power-weeders-supplier-india" className="hover:text-lime-400">Power Weeder Dealer Network</Link>
               <Link href="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-400">Power Weeder Spare Parts OEM Supply</Link>
             </div>
           </div>
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">Top Dealer States</div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">
+              {t('footer.topStates', 'Top Dealer States')}
+            </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
               <Link href="/dealer/maharashtra" className="hover:text-lime-400">Maharashtra</Link>
               <Link href="/dealer/karnataka" className="hover:text-lime-400">Karnataka</Link>
@@ -163,7 +179,9 @@ export default function Footer() {
               <Link href="/dealer/uttar-pradesh" className="hover:text-lime-400">Uttar Pradesh</Link>
               <Link href="/dealer/rajasthan" className="hover:text-lime-400">Rajasthan</Link>
               <Link href="/dealer/bihar" className="hover:text-lime-400">Bihar</Link>
-              <Link href="/dealer-network" className="hover:text-lime-400 font-bold">View All States →</Link>
+              <Link href="/dealer-network" className="hover:text-lime-400 font-bold">
+                {t('footer.viewAllStates', 'View All States →')}
+              </Link>
             </div>
           </div>
         </div>
@@ -171,7 +189,7 @@ export default function Footer() {
 
       <div className="border-t border-zinc-850">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-zinc-400">© {new Date().getFullYear()} KrishiGears. All rights reserved.</div>
+          <div className="text-xs text-zinc-400">© {new Date().getFullYear()} KrishiGears. {t('footer.allRights', 'All rights reserved.')}</div>
           <div className="text-xs text-zinc-400">{COMPANY.website}</div>
         </div>
       </div>

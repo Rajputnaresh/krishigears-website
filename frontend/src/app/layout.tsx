@@ -35,8 +35,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://krishigears.com",
     languages: {
-      "en-IN": "https://krishigears.com",
-      "hi-IN": "https://krishigears.com",
       "x-default": "https://krishigears.com",
     },
   },
