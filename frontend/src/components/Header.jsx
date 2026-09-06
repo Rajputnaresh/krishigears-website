@@ -72,25 +72,73 @@ export default function Header() {
   return (
     <header
       data-testid="site-header"
-      className="fixed top-0 inset-x-0 z-50 bg-black/85 backdrop-blur-xl border-b border-zinc-800"
+      className="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-800"
     >
-      {/* Global B2B Trust Badge Bar */}
-      <div className="bg-zinc-950 border-b border-zinc-800/80 py-1.5 px-4 text-center text-xs text-zinc-300 font-medium tracking-wide flex items-center justify-center gap-2 md:gap-4 overflow-x-auto whitespace-nowrap">
-        <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-lime-400 motion-safe:animate-pulse" />
-          GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
-        </span>
-        <span className="text-zinc-600 hidden sm:inline">|</span>
-        <span className="text-zinc-200">FMTTI / SRFMTTI Tested Machinery</span>
-        <span className="text-zinc-600 hidden sm:inline">|</span>
-        <span className="text-zinc-300 hidden md:inline">Factory Dispatch 24–48h PAN India</span>
+      {/* Global B2B Trust & Utility Bar */}
+      <div className="bg-zinc-950 border-b border-zinc-800/80 px-4 md:px-8 py-1 flex items-center justify-between text-xs text-zinc-300">
+        {/* Left: Trust Badges */}
+        <div className="flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap">
+          <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-lime-400 motion-safe:animate-pulse" />
+            GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
+          </span>
+          <span className="text-zinc-700 hidden sm:inline">|</span>
+          <span className="text-zinc-300 hidden sm:inline">FMTTI / SRFMTTI Tested Machinery</span>
+          <span className="text-zinc-700 hidden md:inline">|</span>
+          <span className="text-zinc-400 hidden md:inline">Factory Dispatch 24–48h PAN India</span>
+        </div>
+
+        {/* Right: Compact Language & Display Controls */}
+        <div className="flex items-center gap-2 shrink-0">
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Language & Display Options"
+              className="px-2 py-1 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
+            >
+              <Globe className="h-3.5 w-3.5 text-lime-400" />
+              <span>{(i18n.language || "en").toUpperCase()}</span>
+              <ChevronDown className="h-3 w-3 text-zinc-500" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-44 shadow-2xl z-[60]">
+              <div className="px-2 py-1.5 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
+                Language / भाषा
+              </div>
+              <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer flex justify-between text-xs">
+                <span>English</span>
+                <span className="text-zinc-500">EN</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer flex justify-between text-xs">
+                <span>हिंदी</span>
+                <span className="text-zinc-500">HI</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer flex justify-between text-xs">
+                <span>मराठी</span>
+                <span className="text-zinc-500">MR</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* Sunlight Mode Pill */}
+          <button
+            onClick={toggleSunlight}
+            title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
+            className={`px-2 py-1 text-[11px] font-semibold rounded flex items-center gap-1 transition border ${
+              sunlight
+                ? "bg-amber-100 text-amber-950 border-amber-300"
+                : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
+            }`}
+          >
+            <Sun className={`h-3 w-3 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
+            <span>{sunlight ? "धूप ON" : "धूप"}</span>
+          </button>
+        </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-6">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-18 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md">
-          <img src={LOGO_URL} alt="KrishiGears" className="h-12 w-12 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
-          <div className="leading-tight hidden sm:block">
+        <Link href="/" data-testid="header-logo-link" className="flex items-center gap-3 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md">
+          <img src={LOGO_URL} alt="KrishiGears" className="h-11 w-11 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
+          <div className="leading-tight hidden xl:block">
             <div className="font-display font-black text-lg tracking-tight text-white">
               KRISHI<span className="text-lime-500">GEARS</span>
             </div>
@@ -98,29 +146,29 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {NAV.slice(0, 2).map((item) => (
-            <Link
-              key={item.to}
-              href={item.to}
-              data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
-            >
-              {t(item.labelKey)}
-            </Link>
-          ))}
+        {/* Desktop nav — strictly single-line whitespace-nowrap */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 whitespace-nowrap">
+          <Link
+            href="/"
+            data-testid="nav-home"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            {t('nav.home', 'Home')}
+          </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger
               data-testid="nav-products-trigger"
-              className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+              className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
             >
-              {t('nav.products', 'Products')} <ChevronDown className="h-4 w-4 text-lime-400" />
+              <span>{t('nav.products', 'Products')}</span>
+              <ChevronDown className="h-3.5 w-3.5 text-lime-400" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-80 max-h-[70vh] overflow-y-auto text-zinc-200 shadow-2xl">
+            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-72 max-h-[70vh] overflow-y-auto text-zinc-200 shadow-2xl z-[60]">
               <DropdownMenuItem asChild>
-                <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300 cursor-pointer" data-testid="nav-all-products">View All Categories →</Link>
+                <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300 cursor-pointer" data-testid="nav-all-products">
+                  All Products →
+                </Link>
               </DropdownMenuItem>
               <div className="h-px bg-zinc-800 my-1" />
               {CATEGORIES.map((c) => (
@@ -137,86 +185,86 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {NAV.slice(2).map((item) => (
-            <Link
-              key={item.to}
-              href={item.to}
-              data-testid={`nav-${item.labelKey.split('.')[1].toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              className="px-4 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
-            >
-              {t(item.labelKey, item.fallback || item.labelKey)}
-            </Link>
-          ))}
+          <Link
+            href="/dealer-network"
+            data-testid="nav-dealers"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Dealers
+          </Link>
+
+          <Link
+            href="/about"
+            data-testid="nav-about"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            About
+          </Link>
+
+          <Link
+            href="/locations"
+            data-testid="nav-locations"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Locations
+          </Link>
+
+          <Link
+            href="/blog"
+            data-testid="nav-blog"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Blog
+          </Link>
+
+          <Link
+            href="/warranty-and-support"
+            data-testid="nav-warranty"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Warranty
+          </Link>
+
+          <Link
+            href="/contact"
+            data-testid="nav-contact"
+            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Contact
+          </Link>
         </nav>
 
-        {/* Desktop CTA & Utilities */}
-        <div className="hidden lg:flex items-center gap-3">
-          {/* Quick Direct Call Affordance */}
+        {/* Desktop Actions — strictly single-line, uniform height (h-10) */}
+        <div className="hidden lg:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+          {/* Direct Phone Dial (h-10) */}
           <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
             onClick={() => trackPhoneClick("header_desktop")}
-            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-zinc-300 hover:text-white transition rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400"
+            className="h-10 px-3.5 flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400"
             title="Direct Machinery Support Desk"
           >
-            <Phone className="h-3.5 w-3.5 text-lime-400" />
+            <Phone className="h-3.5 w-3.5 text-lime-400 shrink-0" />
             <span className="font-mono">{COMPANY.phone}</span>
           </a>
 
-          {/* Quick Utility Menu (Language & Outdoor Sunlight Mode) */}
-          <DropdownMenu>
-            <DropdownMenuTrigger
-              aria-label="Language & Display Options"
-              className="px-2.5 py-2 text-xs font-medium text-zinc-300 hover:text-white flex items-center gap-1.5 rounded-md border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
-            >
-              <Globe className="h-3.5 w-3.5 text-lime-400" />
-              <span>{(i18n.language || "en").toUpperCase()}</span>
-              <ChevronDown className="h-3 w-3 text-zinc-500" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-48 shadow-2xl">
-              <div className="px-2 py-1.5 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
-                Language / भाषा
-              </div>
-              <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer flex justify-between">
-                <span>English</span>
-                <span className="text-zinc-500 text-xs">EN</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer flex justify-between">
-                <span>हिंदी</span>
-                <span className="text-zinc-500 text-xs">HI</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer flex justify-between">
-                <span>मराठी</span>
-                <span className="text-zinc-500 text-xs">MR</span>
-              </DropdownMenuItem>
-              <div className="h-px bg-zinc-800 my-1" />
-              <DropdownMenuItem
-                onClick={toggleSunlight}
-                className="flex items-center gap-2 cursor-pointer text-amber-300 hover:text-amber-200"
-              >
-                <Sun className="h-4 w-4 text-amber-400" />
-                <span>{sunlight ? "Dark Mode ON" : "धूप मोड (Outdoor)"}</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Secondary Action: WhatsApp RFQ (Refined Dark Pill with WhatsApp Green Accent) */}
+          {/* WhatsApp RFQ Quote (h-10) */}
           <a
             href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp Quick Quote"
             onClick={() => trackWhatsAppClick("header_desktop")}
-            className="px-3.5 py-2 text-zinc-200 hover:text-white font-semibold text-xs rounded-md border border-zinc-700/80 bg-zinc-900/90 hover:bg-zinc-800 transition inline-flex items-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 active:scale-95"
+            className="h-10 px-3.5 text-zinc-200 hover:text-white font-semibold text-xs rounded-md border border-zinc-700/80 bg-zinc-900/90 hover:bg-zinc-800 transition inline-flex items-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 active:scale-95"
           >
-            <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
             <span>WhatsApp Quote</span>
           </a>
 
-          {/* Primary Action: Become a Dealer (High-Impact Lime CTA) */}
+          {/* Become a Dealer (h-10 Primary CTA) */}
           <Link
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"
-            className="px-4 py-2 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded-md transition inline-flex items-center gap-1.5 shadow-lg shadow-lime-500/20 active:scale-95 border border-lime-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="h-10 px-4 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded-md transition inline-flex items-center justify-center gap-1.5 shadow-lg shadow-lime-500/20 active:scale-95 border border-lime-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             <span>Become a Dealer</span>
           </Link>
