@@ -116,19 +116,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30"></div>
         </div>
 
-        <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 py-20 lg:py-24 grid lg:grid-cols-12 gap-10 items-center">
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16 lg:py-24 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           <div className="lg:col-span-8 animate-fade-up">
-            <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.2em] uppercase text-lime-400 font-bold rounded-sm">
+            <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-lime-400 font-bold rounded-sm">
               <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> {t('hero.badge', 'Premium Agricultural Machinery · GST Registered')}
             </div>
-            <h1 className="kg-h1 mt-6 text-balance text-zinc-50">
+            <h1 className="kg-h1 mt-4 sm:mt-6 text-balance text-zinc-50">
               {t('hero.titleLine1', 'For the')} <span className="text-lime-400">{t('hero.farmers', 'Farmers,')}</span><br/>
               {t('hero.titleLine2', 'With the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer,')}</span><br/>
               {t('hero.titleLine3', 'To the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer.')}</span>
-              <span className="block text-zinc-200 mt-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.25em]">{t('hero.hamesha', 'HAMESHA.')}</span>
+              <span className="block text-zinc-200 mt-1 sm:mt-2 text-xl sm:text-3xl lg:text-4xl tracking-[0.2em] sm:tracking-[0.25em]">{t('hero.hamesha', 'HAMESHA.')}</span>
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
-            <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
+            <p className="mt-4 sm:mt-6 text-zinc-100 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed font-normal">
               {t('hero.subtitle', 'सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.')}
             </p>
             {/* Prioritized CTA Hierarchy: 1 Primary High-Contrast Action + 1 Secondary Action */}
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
 
             {/* Clear retail handoff note */}
-            <div className="mt-6 inline-flex items-center gap-2 text-xs text-zinc-300 bg-zinc-950/80 border border-zinc-800 px-4 py-2 rounded-full shadow-inner">
+            <div className="mt-5 sm:mt-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-zinc-300 bg-zinc-950/80 border border-zinc-800 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-inner">
               <span className="text-zinc-400">{t('hero.retailPrompt', '1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):')}</span>
               <a
                 href={FARMINGTOOLS_URL}
@@ -191,15 +191,15 @@ export default function Home() {
             </div>
 
             {/* Quick stats - High contrast sunlight ready */}
-            <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl">
+            <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
               {[
                 { v: "7+", l: t('hero.statsWeeders', 'Power Weeder Models') },
                 { v: "PAN India", l: t('hero.statsNetwork', 'Supply Network') },
                 { v: "100%", l: t('hero.statsSpares', 'Genuine OEM Parts') },
               ].map((s) => (
-                <div key={s.l} className="border-l-2 border-lime-500 pl-4 bg-zinc-950/40 py-2">
-                  <div className="font-display font-black text-2xl sm:text-3xl text-zinc-50">{s.v}</div>
-                  <div className="text-xs uppercase tracking-[0.15em] text-zinc-300 mt-1 font-medium">{s.l}</div>
+                <div key={s.l} className="border-l-2 border-lime-500 pl-2.5 sm:pl-4 bg-zinc-950/40 py-1.5 sm:py-2">
+                  <div className="font-display font-black text-xl sm:text-3xl text-zinc-50">{s.v}</div>
+                  <div className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-300 mt-0.5 sm:mt-1 font-medium">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
 
         {/* Bottom marquee */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-zinc-800 bg-black/80 backdrop-blur-md py-3 overflow-hidden">
+        <div className="hidden sm:block absolute bottom-0 left-0 right-0 border-t border-zinc-800 bg-black/80 backdrop-blur-md py-3 overflow-hidden">
           <div className="flex gap-12 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
             {[...TRUST_BADGES, ...TRUST_BADGES].map((b, i) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
 
           {/* Bento grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4">
             {/* Featured large cards */}
             {featured.map((c, idx) => {
               const Icon = c.icon;
@@ -247,19 +247,19 @@ export default function Home() {
                   key={c.slug}
                   href={`/products/category/${c.slug}`}
                   data-testid={`cat-card-${c.slug}`}
-                  className={`relative group overflow-hidden border border-zinc-700 bg-surface hover:border-lime-500/60 transition-all duration-500 ${big ? "md:col-span-7 md:row-span-2 min-h-[480px]" : "md:col-span-5 min-h-[230px]"}`}
+                  className={`relative group overflow-hidden border border-zinc-700 bg-surface hover:border-lime-500/60 transition-all duration-500 rounded-lg ${big ? "md:col-span-7 md:row-span-2 min-h-[360px] sm:min-h-[480px]" : "md:col-span-5 min-h-[200px] sm:min-h-[230px]"}`}
                 >
                   <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
-                  <div className="relative h-full p-7 flex flex-col justify-between">
-                    <div className="h-12 w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500">
-                      <Icon className="h-6 w-6" />
+                  <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between">
+                    <div className="h-10 w-10 sm:h-12 sm:w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-md">
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
                     <div>
-                      <div className="text-xs tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
-                      <h3 className="font-display font-black text-2xl md:text-3xl mt-2 text-zinc-50">{c.name}</h3>
-                      <p className="text-zinc-200 text-sm mt-2 max-w-md leading-relaxed">{c.short}</p>
-                      <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-zinc-100 group-hover:text-lime-400 transition">
+                      <div className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
+                      <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl mt-1.5 sm:mt-2 text-zinc-50">{c.name}</h3>
+                      <p className="text-zinc-200 text-xs sm:text-sm mt-1.5 sm:mt-2 max-w-md leading-relaxed">{c.short}</p>
+                      <div className="mt-3.5 sm:mt-5 inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-bold text-zinc-100 group-hover:text-lime-400 transition">
                         {t('categories.browseRange', 'Browse Range')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
                       </div>
                     </div>
@@ -276,11 +276,11 @@ export default function Home() {
                   key={c.slug}
                   href={`/products/category/${c.slug}`}
                   data-testid={`cat-tile-${c.slug}`}
-                  className="md:col-span-3 p-5 border border-zinc-700 bg-surface-dark hover:bg-surface hover:border-lime-500/40 hover:-translate-y-1 transition-all"
+                  className="md:col-span-3 p-4 sm:p-5 border border-zinc-700 bg-surface-dark hover:bg-surface hover:border-lime-500/40 hover:-translate-y-1 transition-all rounded-lg"
                 >
-                  <Icon className="h-5 w-5 text-lime-500 mb-3" />
-                  <div className="font-display font-bold text-base leading-tight text-zinc-100">{c.name}</div>
-                  <div className="mt-2 text-xs text-lime-400 font-semibold">{t('categories.viewRange', 'View Range →')}</div>
+                  <Icon className="h-5 w-5 text-lime-500 mb-2 sm:mb-3" />
+                  <div className="font-display font-bold text-sm sm:text-base leading-tight text-zinc-100">{c.name}</div>
+                  <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs text-lime-400 font-semibold">{t('categories.viewRange', 'View Range →')}</div>
                 </Link>
               );
             })}
@@ -289,34 +289,34 @@ export default function Home() {
       </section>
 
       {/* ========== TRUST SIGNALS BAR ========== */}
-      <section className="bg-surface border-y border-zinc-800 py-8">
-        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center text-center gap-3">
-            <ShieldCheck className="h-8 w-8 text-lime-500" />
+      <section className="bg-surface border-y border-zinc-800 py-6 sm:py-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
+          <div className="flex flex-col items-center text-center gap-2 sm:gap-3 p-2">
+            <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-lime-500" />
             <div>
-              <div className="font-bold text-sm text-zinc-100">FMTTI Tested</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.tested', 'Quality Assured')}</div>
+              <div className="font-bold text-xs sm:text-sm text-zinc-100">FMTTI Tested</div>
+              <div className="text-[10px] sm:text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.tested', 'Quality Assured')}</div>
             </div>
           </div>
-          <div className="flex flex-col items-center text-center gap-3">
-            <Truck className="h-8 w-8 text-lime-500" />
+          <div className="flex flex-col items-center text-center gap-2 sm:gap-3 p-2">
+            <Truck className="h-6 w-6 sm:h-8 sm:w-8 text-lime-500" />
             <div>
-              <div className="font-bold text-sm text-zinc-100">PAN India Delivery</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.delivery', 'Fast Logistics')}</div>
+              <div className="font-bold text-xs sm:text-sm text-zinc-100">PAN India Delivery</div>
+              <div className="text-[10px] sm:text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.delivery', 'Fast Logistics')}</div>
             </div>
           </div>
-          <div className="flex flex-col items-center text-center gap-3">
-            <BadgeCheck className="h-8 w-8 text-lime-500" />
+          <div className="flex flex-col items-center text-center gap-2 sm:gap-3 p-2">
+            <BadgeCheck className="h-6 w-6 sm:h-8 sm:w-8 text-lime-500" />
             <div>
-              <div className="font-bold text-sm text-zinc-100">Genuine OEM</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.spares', 'Original Spares')}</div>
+              <div className="font-bold text-xs sm:text-sm text-zinc-100">Genuine OEM</div>
+              <div className="text-[10px] sm:text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.spares', 'Original Spares')}</div>
             </div>
           </div>
-          <div className="flex flex-col items-center text-center gap-3">
-            <Headphones className="h-8 w-8 text-lime-500" />
+          <div className="flex flex-col items-center text-center gap-2 sm:gap-3 p-2">
+            <Headphones className="h-6 w-6 sm:h-8 sm:w-8 text-lime-500" />
             <div>
-              <div className="font-bold text-sm text-zinc-100">24x7 Support</div>
-              <div className="text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.support', 'Expert Help')}</div>
+              <div className="font-bold text-xs sm:text-sm text-zinc-100">24x7 Support</div>
+              <div className="text-[10px] sm:text-[11px] text-zinc-300 uppercase tracking-wider font-semibold">{t('trust.support', 'Expert Help')}</div>
             </div>
           </div>
         </div>

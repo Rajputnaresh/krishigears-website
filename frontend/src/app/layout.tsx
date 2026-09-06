@@ -152,7 +152,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col pt-[104px] bg-background text-foreground font-body">
+      <body className="min-h-full flex flex-col pt-[86px] md:pt-[104px] bg-background text-foreground font-body">
         <Providers>
           <div id="google_translate_element" style={{ display: 'none' }} aria-hidden="true" />
           <Header />
