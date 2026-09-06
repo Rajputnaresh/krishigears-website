@@ -203,7 +203,20 @@ html.sunlight .bg-black\/80,
 html.sunlight [data-testid="site-header"],
 html.sunlight .fixed.bottom-0 {
     background-color: #FFFFFF !important;
-    border-color: #E4E4E7 !important;
+    border-color: #D4D4D8 !important;
+}
+
+/* Invert dark hero gradient overlays into clean high-contrast light backdrop */
+html.sunlight [data-testid="hero-section"] .bg-gradient-to-b {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94), #FFFFFF) !important;
+}
+
+html.sunlight [data-testid="hero-section"] img {
+    opacity: 0.18 !important;
+}
+
+html.sunlight [data-testid="dealer-cta-section"] .bg-gradient-to-r {
+    background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.5)) !important;
 }
 
 html.sunlight [data-testid="floating-call-btn"] {
@@ -215,16 +228,24 @@ html.sunlight [data-testid="floating-call-btn"] {
 html.sunlight .bg-zinc-950,
 html.sunlight .bg-zinc-900,
 html.sunlight .bg-zinc-900\/90,
+html.sunlight .bg-zinc-900\/80,
 html.sunlight .bg-zinc-900\/60,
+html.sunlight .bg-zinc-900\/50,
+html.sunlight .bg-zinc-900\/40,
+html.sunlight .bg-zinc-950\/80,
+html.sunlight .bg-zinc-950\/70,
 html.sunlight .bg-zinc-950\/60,
 html.sunlight .bg-zinc-950\/40,
+html.sunlight .bg-surface,
+html.sunlight .bg-surface-elevated,
 html.sunlight .bg-surface-darker,
 html.sunlight .bg-surface-darkest,
 html.sunlight .bg-surface-dark {
-    background-color: #F8F9FA !important;
+    background-color: #F4F4F5 !important;
     border-color: #E4E4E7 !important;
 }
 
+/* High-contrast text tokens for light mode */
 html.sunlight .text-zinc-100,
 html.sunlight .text-zinc-200,
 html.sunlight .text-zinc-50,
@@ -234,31 +255,82 @@ html.sunlight .text-white {
 
 html.sunlight .text-zinc-300,
 html.sunlight .text-zinc-400 {
-    color: #3F3F46 !important;
+    color: #27272A !important;
 }
 
 html.sunlight .text-zinc-500,
 html.sunlight .text-zinc-600 {
-    color: #71717A !important;
+    color: #52525B !important;
 }
 
 html.sunlight .border-zinc-800,
 html.sunlight .border-zinc-700,
 html.sunlight .border-zinc-850,
-html.sunlight .border-zinc-900 {
-    border-color: #E4E4E7 !important;
+html.sunlight .border-zinc-900,
+html.sunlight .border-zinc-600 {
+    border-color: #D4D4D8 !important;
 }
 
+/* Lime text and accents — darkened to deep forest green for 7:1+ outdoor contrast on white */
+html.sunlight .text-lime-300,
+html.sunlight .text-lime-400,
+html.sunlight .text-lime-500 {
+    color: #166534 !important;
+}
+
+html.sunlight .border-lime-500,
+html.sunlight .border-lime-500\/30,
+html.sunlight .border-lime-500\/40,
+html.sunlight .border-lime-500\/50,
+html.sunlight .border-lime-500\/60 {
+    border-color: #22C55E !important;
+}
+
+html.sunlight .bg-lime-500\/10,
+html.sunlight .bg-lime-500\/20 {
+    background-color: #DCFCE7 !important;
+    border-color: #86EFAC !important;
+}
+
+/* Lime CTAs in Sunlight Mode */
 html.sunlight .lime-btn,
 html.sunlight .bg-lime-500 {
-    background-color: #65A30D !important;
+    background-color: #15803D !important;
     color: #FFFFFF !important;
-    border-color: #4D7C0F !important;
+    border-color: #166534 !important;
+}
+
+html.sunlight .bg-lime-500:hover,
+html.sunlight .lime-btn:hover {
+    background-color: #166534 !important;
+    color: #FFFFFF !important;
 }
 
 html.sunlight .bg-whatsapp {
-    background-color: #16A34A !important;
+    background-color: #15803D !important;
     color: #FFFFFF !important;
+}
+
+/* Inputs, Textareas, Selects in Sunlight Mode */
+html.sunlight input,
+html.sunlight textarea,
+html.sunlight select {
+    background-color: #FFFFFF !important;
+    color: #09090B !important;
+    border-color: #D4D4D8 !important;
+}
+
+html.sunlight input::placeholder,
+html.sunlight textarea::placeholder {
+    color: #71717A !important;
+}
+
+/* Dropdown menus & Sheet drawers */
+html.sunlight [role="menu"],
+html.sunlight [data-slot="sheet-content"] {
+    background-color: #FFFFFF !important;
+    color: #09090B !important;
+    border-color: #E4E4E7 !important;
 }
 
 /* Google Translate Widget Overrides — seamless integration without banner */
