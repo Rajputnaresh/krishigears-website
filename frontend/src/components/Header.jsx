@@ -35,7 +35,12 @@ export default function Header() {
       setSunlight(true);
       document.documentElement.classList.add("sunlight");
     }
-  }, []);
+
+    const savedLng = localStorage.getItem("i18nextLng");
+    if (savedLng && ['en', 'hi', 'mr'].includes(savedLng) && i18n.language !== savedLng) {
+      i18n.changeLanguage(savedLng);
+    }
+  }, [i18n]);
 
   const toggleSunlight = () => {
     const next = !sunlight;
@@ -51,21 +56,10 @@ export default function Header() {
 
   const switchLanguage = (langCode) => {
     i18n.changeLanguage(langCode);
-    const currentPath = location.pathname || "/";
-    const parts = currentPath.split('/').filter(Boolean);
-    const search = location.search || "";
-    
-    if (parts.length > 0 && ['hi', 'mr'].includes(parts[0])) {
-      const rest = parts.slice(1).join('/');
-      if (langCode === 'en') {
-        navigate.push('/' + (rest ? rest : '') + search);
-      } else {
-        navigate.push('/' + langCode + (rest ? '/' + rest : '') + search);
-      }
-    } else {
-      if (langCode !== 'en') {
-        navigate.push('/' + langCode + (currentPath === '/' ? '' : currentPath) + search);
-      }
+    try {
+      localStorage.setItem("i18nextLng", langCode);
+    } catch (e) {
+      // ignore localstorage errors
     }
   };
 
