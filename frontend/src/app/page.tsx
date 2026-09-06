@@ -129,15 +129,19 @@ export default function Home() {
             <p className="mt-6 text-zinc-100 text-lg max-w-2xl leading-relaxed font-normal">
               सीधे फैक्ट्री से कृषि मशीनरी और स्पेयर पार्ट्स सप्लाई। Direct factory dispatch for dealers, FPOs, contractors, and machinery showrooms across India.
             </p>
+            {/* Prioritized CTA Hierarchy: 1 Primary, 2 Secondary */}
             <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
-              <Link
-                href="/products"
-                data-testid="hero-explore-products"
-                className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/25 active:scale-95 text-base"
+              <a
+                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और डीलरशिप की पूरी जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_hero_primary`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="hero-primary-whatsapp-btn"
+                className="group inline-flex items-center gap-2.5 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 rounded-md transition shadow-xl shadow-lime-500/25 active:scale-95 text-base border-2 border-lime-400"
               >
-                मशीनें देखें / Explore Range
+                <WhatsAppIcon className="h-5 w-5 text-black fill-black" />
+                <span>व्हाट्सएप कोटेशन / Get WhatsApp Quote</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
-              </Link>
+              </a>
               <Link
                 href="/become-a-dealer"
                 data-testid="hero-dealer-btn"
@@ -145,25 +149,25 @@ export default function Home() {
               >
                 डीलरशिप आवेदन / Become a Dealer
               </Link>
+              <Link
+                href="/products"
+                data-testid="hero-explore-products"
+                className="inline-flex items-center gap-2 text-zinc-200 hover:text-white text-sm font-semibold transition border border-zinc-800 bg-zinc-950/80 hover:border-zinc-600 px-5 py-4 rounded-md"
+              >
+                मशीनें देखें / Explore Range
+              </Link>
               <EnquiryDialog
                 product="Wholesale B2B Machinery Catalog 2026"
                 trigger={
                   <button
                     data-testid="hero-catalog-modal-btn"
-                    className="inline-flex items-center gap-2 text-zinc-200 hover:text-white text-xs sm:text-sm font-bold transition border border-zinc-700 bg-zinc-950/80 hover:border-lime-500/80 px-5 py-4 rounded-md shadow-md"
+                    className="inline-flex items-center gap-2 text-zinc-300 hover:text-zinc-100 text-xs font-semibold transition hover:text-lime-400 px-3 py-3"
                   >
                     <FileText className="h-4 w-4 text-lime-400" />
-                    Request Wholesale Catalog
+                    Catalog PDF
                   </button>
                 }
               />
-              <Link
-                href="/bulk-order"
-                data-testid="hero-bulk-btn"
-                className="inline-flex items-center gap-2 text-zinc-300 hover:text-white text-xs font-semibold transition border border-zinc-800 bg-zinc-950/60 hover:border-zinc-600 px-4 py-3.5 rounded-md"
-              >
-                Bulk / FPO Order
-              </Link>
             </div>
 
             {/* Clear retail handoff note */}
@@ -172,7 +176,7 @@ export default function Home() {
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-testid="hero-buy-online"
                 className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2"
               >
@@ -547,7 +551,7 @@ function ContactStrip() {
             <a
               href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और स्पेयर पार्ट्स की थोक कीमत / डीलरशिप जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="1-Tap WhatsApp Quotation Desk"
               onClick={() => trackWhatsAppClick("contact_strip_quick")}
               className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide"
@@ -648,16 +652,18 @@ function DistrictLocator() {
             </div>
             <select
               value={selectedState}
-              aria-label="Filter by state"
+              aria-label="Filter by State or Zone"
               onChange={(e) => setSelectedState(e.target.value)}
-              className="px-3 py-2.5 bg-zinc-950 border border-zinc-700 rounded-md text-sm text-zinc-100 focus:outline-none focus:border-lime-500"
+              className="px-4 py-2.5 bg-zinc-950 border border-zinc-700 hover:border-lime-500/50 rounded-md text-sm font-semibold text-zinc-100 focus:outline-none focus:border-lime-500 transition-colors"
             >
-              <option value="All">All States</option>
-              {states.map((st) => (
-                <option key={st} value={st} className="bg-zinc-950 text-zinc-100">
-                  {st}
-                </option>
-              ))}
+              <option value="All">🔍 All India States</option>
+              <optgroup label="Active B2B Agri Zones">
+                {states.map((st) => (
+                  <option key={st} value={st} className="bg-zinc-950 text-zinc-100">
+                    {st}
+                  </option>
+                ))}
+              </optgroup>
             </select>
           </div>
         </div>

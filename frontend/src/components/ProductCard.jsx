@@ -111,6 +111,27 @@ export default function ProductCard({ product }) {
             {category?.name}
           </div>
           <h3 className="font-display font-bold text-base mt-2 leading-tight line-clamp-2">{product.name}</h3>
+          {/* Comparative B2B spec summary */}
+          <div className="mt-3 flex flex-wrap gap-y-2 gap-x-4 border-y border-zinc-800/50 py-3 my-1">
+             {product.specs?.Engine && (
+               <div className="flex flex-col">
+                 <span className="text-[9px] uppercase tracking-tighter text-zinc-500 font-bold">Engine</span>
+                 <span className="text-[11px] text-zinc-200 font-semibold">{product.specs.Engine}</span>
+               </div>
+             )}
+             {product.specs?.Power && (
+               <div className="flex flex-col border-l border-zinc-800 pl-4">
+                 <span className="text-[9px] uppercase tracking-tighter text-zinc-500 font-bold">Power</span>
+                 <span className="text-[11px] text-lime-400 font-bold">{product.specs.Power}</span>
+               </div>
+             )}
+             {product.specs?.Start && (
+               <div className="flex flex-col border-l border-zinc-800 pl-4">
+                 <span className="text-[9px] uppercase tracking-tighter text-zinc-500 font-bold">Start</span>
+                 <span className="text-[11px] text-zinc-200 font-semibold">{product.specs.Start.replace(' / ', '/')}</span>
+               </div>
+             )}
+          </div>
           {product.model && (
             <div className="mt-2 inline-flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-400 font-mono">
               <BadgeCheck className="h-3 w-3 text-lime-500"/> {product.model}
