@@ -195,11 +195,24 @@ html.sunlight .kg-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
+html.sunlight .bg-black,
+html.sunlight .bg-black\/90,
+html.sunlight .bg-black\/85,
+html.sunlight .bg-black\/80,
+html.sunlight [data-testid="site-header"] {
+    background-color: #FFFFFF !important;
+    border-color: #E4E4E7 !important;
+}
+
+html.sunlight .bg-zinc-950,
+html.sunlight .bg-zinc-900,
+html.sunlight .bg-zinc-900\/90,
+html.sunlight .bg-zinc-900\/60,
+html.sunlight .bg-zinc-950\/60,
+html.sunlight .bg-zinc-950\/40,
 html.sunlight .bg-surface-darker,
 html.sunlight .bg-surface-darkest,
-html.sunlight .bg-surface-dark,
-html.sunlight .bg-zinc-950,
-html.sunlight .bg-zinc-900 {
+html.sunlight .bg-surface-dark {
     background-color: #F8F9FA !important;
     border-color: #E4E4E7 !important;
 }
@@ -216,8 +229,26 @@ html.sunlight .text-zinc-400 {
     color: #3F3F46 !important;
 }
 
+html.sunlight .text-zinc-500,
+html.sunlight .text-zinc-600 {
+    color: #71717A !important;
+}
+
 html.sunlight .border-zinc-800,
 html.sunlight .border-zinc-700,
+html.sunlight .border-zinc-850,
 html.sunlight .border-zinc-900 {
     border-color: #E4E4E7 !important;
+}
+
+html.sunlight .lime-btn,
+html.sunlight .bg-lime-500 {
+    background-color: #65A30D !important;
+    color: #FFFFFF !important;
+    border-color: #4D7C0F !important;
+}
+
+html.sunlight .bg-whatsapp {
+    background-color: #16A34A !important;
+    color: #FFFFFF !important;
 }
