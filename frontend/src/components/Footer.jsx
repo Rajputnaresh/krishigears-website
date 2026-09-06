@@ -100,7 +100,19 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-zinc-300">
             <li className="flex items-start gap-3">
               <MapPin className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <span>{COMPANY.address}</span>
+              <div>
+                <span>{COMPANY.address}</span>
+                <div className="mt-1">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=26.8538,75.7196+(KrishiGears+Jaipur+HQ)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-lime-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    View on Google Maps →
+                  </a>
+                </div>
+              </div>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 text-lime-500 shrink-0" />
@@ -112,7 +124,19 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <ShieldCheck className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
-              <span>GSTIN: <span className="text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
+              <div>
+                <span>GSTIN: <span className="text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
+                <div className="mt-1">
+                  <a
+                    href="https://services.gst.gov.in/services/searchtp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-zinc-400 hover:text-lime-400 transition"
+                  >
+                    Verify on GST Portal ↗
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

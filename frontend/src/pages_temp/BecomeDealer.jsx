@@ -72,7 +72,35 @@ export default function BecomeDealer() {
               </li>
             ))}
           </ul>
-          <div className="mt-10 aspect-[4/3] overflow-hidden border border-zinc-800 hidden md:block">
+
+          {/* Quick PDF Term Sheet & Audio Guide Card */}
+          <div className="mt-8 p-5 bg-zinc-900/70 border border-zinc-800 rounded-lg space-y-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-lime-400">Dealer Resources</span>
+                <h4 className="font-bold text-white text-sm mt-0.5">KrishiGears Dealership Terms (PDF)</h4>
+                <p className="text-xs text-zinc-400 mt-1">Download the 1-page summary of territory margins, MOQ terms, and warranty process.</p>
+              </div>
+              <a
+                href="/docs/krishigears-dealer-terms.pdf"
+                download
+                className="px-3 py-2 bg-lime-500 text-black text-xs font-bold rounded hover:bg-lime-400 shrink-0 transition"
+              >
+                Download PDF ↓
+              </a>
+            </div>
+
+            <div className="pt-3 border-t border-zinc-800">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">30-Second Audio Guide (हिंदी)</span>
+              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें और 15-22% मार्जिन कैसे प्राप्त करें — ऑडियो सुनें:</p>
+              <audio controls className="w-full h-8 text-xs">
+                <source src="/audio/dealer-guide-hindi.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+
+          <div className="mt-8 aspect-[4/3] overflow-hidden border border-zinc-800 hidden md:block">
             <img src={FARMER_FIELD} alt="farmer" loading="lazy" className="w-full h-full object-cover" />
           </div>
         </div>

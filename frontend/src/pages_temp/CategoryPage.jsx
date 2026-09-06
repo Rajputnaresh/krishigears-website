@@ -143,6 +143,65 @@ export default function CategoryPage() {
             </div>
           </div>
 
+          {/* State-by-State Agriculture Subsidy Eligibility Table */}
+          <div className="border border-zinc-800 bg-zinc-950/60 rounded-xl p-6 md:p-8 space-y-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+              <div>
+                <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Government Subsidies</span>
+                <h3 className="text-xl font-display font-bold text-white mt-1">State Subsidy Guidelines for {category.name} (DBT / SMAM)</h3>
+              </div>
+              <span className="text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded self-start md:self-auto">
+                FMTTI Commercial Test Compliant
+              </span>
+            </div>
+            <p className="text-xs text-zinc-300 leading-relaxed max-w-3xl">
+              KrishiGears agricultural power machinery qualifies for direct beneficiary subsidies under the Sub-Mission on Agricultural Mechanization (SMAM) and state agriculture portals. Authorized dealers are provided complete documentation to facilitate customer approvals:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-zinc-800 text-zinc-400 font-semibold bg-zinc-900/50">
+                    <th className="py-3 px-4">State / Portal</th>
+                    <th className="py-3 px-4">Scheme Name</th>
+                    <th className="py-3 px-4">Subsidy Percentage</th>
+                    <th className="py-3 px-4">Eligible Beneficiaries</th>
+                    <th className="py-3 px-4">Required Documents</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-850 text-zinc-300">
+                  <tr className="hover:bg-zinc-900/30">
+                    <td className="py-3 px-4 font-bold text-white">Rajasthan (Raj Kisan Sathi)</td>
+                    <td className="py-3 px-4">Krishi Yantra Anudan Yojana</td>
+                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% (Up to ₹25,000)</td>
+                    <td className="py-3 px-4">Small, marginal, SC/ST, women farmers</td>
+                    <td className="py-3 px-4">GST invoice, Jamabandi, Aadhaar/Jan Aadhaar</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-900/30">
+                    <td className="py-3 px-4 font-bold text-white">Madhya Pradesh (e-Krishi Yantra)</td>
+                    <td className="py-3 px-4">SMAM / Rashtriya Krishi Vikas Yojana</td>
+                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% DBT Grant</td>
+                    <td className="py-3 px-4">All registered landholding farmers</td>
+                    <td className="py-3 px-4">FMTTI Test Certificate, B1 Khasra, Bank Passbook</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-900/30">
+                    <td className="py-3 px-4 font-bold text-white">Maharashtra (MahaDBT)</td>
+                    <td className="py-3 px-4">Krishi Yantrikikaran Scheme</td>
+                    <td className="py-3 px-4 text-lime-400 font-semibold">Up to 50% (Fixed cap)</td>
+                    <td className="py-3 px-4">Individual farmers & FPOs</td>
+                    <td className="py-3 px-4">7/12 & 8A Extract, GST Bill, Caste Certificate</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-900/30">
+                    <td className="py-3 px-4 font-bold text-white">Uttar Pradesh (UP Agriculture)</td>
+                    <td className="py-3 px-4">Yantra Anudan Scheme (E-Lottery)</td>
+                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% Token Grant</td>
+                    <td className="py-3 px-4">Pre-registered portal farmers</td>
+                    <td className="py-3 px-4">Dealer bill, serial verification, Bank DBT link</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           {/* Category FAQs */}
           <div className="bg-zinc-950 border border-zinc-800 rounded-xl p-6 md:p-8 space-y-6">
             <div className="space-y-1">

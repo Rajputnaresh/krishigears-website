@@ -203,6 +203,12 @@ export default function Header() {
             <span>{sunlight ? "धूप मोड ON" : "धूप मोड"}</span>
           </button>
 
+          <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded bg-zinc-900 border border-zinc-800 text-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
+            <span className="text-zinc-400 font-medium">GST:</span>
+            <span className="font-mono text-zinc-100 font-semibold">{COMPANY.gst}</span>
+          </div>
+
           <Link
             href="/become-a-dealer"
             data-testid="header-become-dealer-btn"

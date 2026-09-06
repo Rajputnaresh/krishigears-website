@@ -146,7 +146,23 @@ export default function ProductCard({ product }) {
                 MOQ: 2 Units
               </span>
             </div>
-            <ArrowRight className="h-4 w-4 text-lime-400 group-hover:translate-x-1 transition" />
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const shareText = encodeURIComponent(`Check out ${product.name} at KrishiGears: https://krishigears.com/products/${product.slug}`);
+                  window.open(`https://api.whatsapp.com/send?text=${shareText}`, "_blank");
+                }}
+                title="Forward specs to farmer client via WhatsApp"
+                aria-label="Share product specs on WhatsApp"
+                className="p-1.5 rounded text-zinc-400 hover:text-[#25D366] hover:bg-zinc-800/80 transition"
+              >
+                <WhatsAppIcon className="h-3.5 w-3.5" />
+              </button>
+              <ArrowRight className="h-4 w-4 text-lime-400 group-hover:translate-x-1 transition" />
+            </div>
           </div>
         </div>
       </Link>

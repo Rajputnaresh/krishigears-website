@@ -134,6 +134,34 @@ export default function DealerState() {
         </div>
       </section>
 
+      {/* Logistics & Express Dispatch Hubs */}
+      <section className="kg-section">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="kg-eyebrow">Logistics & Supply Chain</div>
+          <h2 className="kg-h2 mt-3">Factory Dispatch & Transport Hubs serving {stateName}.</h2>
+          <p className="text-zinc-300 text-sm mt-2 max-w-2xl">
+            All machinery and OEM spare parts orders are dispatched from our central Jaipur logistics facility (VKI Area / Transport Nagar) directly to major regional freight depots across {stateName}:
+          </p>
+          <div className="mt-8 grid md:grid-cols-3 gap-4">
+            <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Primary Rail Freight</span>
+              <h4 className="font-bold text-white text-base">Container & Parcel Express</h4>
+              <p className="text-xs text-zinc-400">Direct booking via Western & North-Western Railway freight networks to {stateName} junction stations (24–48 hours transit).</p>
+            </div>
+            <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Road Logistics</span>
+              <h4 className="font-bold text-white text-base">VRL / TCI / SafeXpress</h4>
+              <p className="text-xs text-zinc-400">Doorstep delivery to dealer godowns across district headquarters with full e-way bill documentation and digital LR tracking.</p>
+            </div>
+            <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Urgent Spare Parts</span>
+              <h4 className="font-bold text-white text-base">Air Cargo & Speed Post</h4>
+              <p className="text-xs text-zinc-400">Critical warranty spares, carburetors, and electrical components dispatched same-day to minimize machine downtime during sowing season.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="kg-section bg-surface-darker border-y border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Requirements</div>
