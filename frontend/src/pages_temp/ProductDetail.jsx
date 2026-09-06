@@ -13,18 +13,22 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function ProductDetail() {
   const { slug } = useParams();
   const [active, setActive] = useState(0);
-  const [product, setProduct] = useState(null);
+  const localInitial = PRODUCTS.find((p) => p.slug === slug) || null;
+  const [product, setProduct] = useState(localInitial);
   const [notFound, setNotFound] = useState(false);
-  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [relatedProducts, setRelatedProducts] = useState(
+    localInitial ? PRODUCTS.filter((p) => p.category === localInitial.category && p.slug !== slug).slice(0, 3) : []
+  );
 
   useEffect(() => {
-    setProduct(null);
+    const localProd = PRODUCTS.find((p) => p.slug === slug);
+    if (!localProd) {
+      setProduct(null);
+    } else {
+      setProduct(localProd);
+    }
     setNotFound(false);
     setActive(0);
-    setRelatedProducts([]);
-
-    // Check local catalog first or as instant fallback
-    const localProd = PRODUCTS.find((p) => p.slug === slug);
 
     apiClient.get(`/products/${slug}`)
       .then((res) => {
