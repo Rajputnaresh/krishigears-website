@@ -62,16 +62,7 @@ export default function ProductCard({ product }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
-      {/* KrishiGears logo — top-right brand mark */}
-      <div className="absolute top-3 right-3 z-10 h-11 w-11 grid place-items-center rounded-full bg-black/85 backdrop-blur ring-1 ring-lime-500/50 p-0.5">
-        <Image
-          src={LOGO_URL}
-          alt="KrishiGears"
-          width={44}
-          height={44}
-          className="h-full w-full rounded-full object-cover"
-        />
-      </div>
+
 
       {/* Badges — top-left */}
       {product.badges?.length > 0 && (

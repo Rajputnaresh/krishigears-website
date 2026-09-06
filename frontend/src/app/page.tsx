@@ -689,6 +689,15 @@ function DistrictLocator() {
           </div>
         </div>
 
+        {/* Active filtered results indicator pill */}
+        {(searchTerm || selectedState !== "All") && (
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-lime-500/10 border border-lime-500/30 text-lime-400">
+              Showing {filteredDistricts.length} active hubs
+            </span>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredDistricts.map(([districtName, data]) => {
             const districtSlug = districtName.toLowerCase().replace(/ /g, "-").replace(/[()]/g, "");

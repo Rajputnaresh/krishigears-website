@@ -197,11 +197,19 @@ html.sunlight .kg-card {
 
 html.sunlight .bg-black,
 html.sunlight .bg-black\/90,
+html.sunlight .bg-black\/95,
 html.sunlight .bg-black\/85,
 html.sunlight .bg-black\/80,
-html.sunlight [data-testid="site-header"] {
+html.sunlight [data-testid="site-header"],
+html.sunlight .fixed.bottom-0 {
     background-color: #FFFFFF !important;
     border-color: #E4E4E7 !important;
+}
+
+html.sunlight [data-testid="floating-call-btn"] {
+    background-color: #F4F4F5 !important;
+    border-color: #D4D4D8 !important;
+    color: #18181B !important;
 }
 
 html.sunlight .bg-zinc-950,
