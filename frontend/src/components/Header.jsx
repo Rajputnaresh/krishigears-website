@@ -37,8 +37,12 @@ export default function Header() {
     }
 
     const savedLng = localStorage.getItem("i18nextLng");
-    if (savedLng && ['en', 'hi', 'mr'].includes(savedLng) && i18n.language !== savedLng) {
-      i18n.changeLanguage(savedLng);
+    // Check if googtrans cookie is set
+    const match = document.cookie.match(/googtrans=\/en\/([a-z]{2})/i);
+    const activeLng = (match && match[1]) || savedLng;
+
+    if (activeLng && ['en', 'hi', 'mr'].includes(activeLng) && i18n.language !== activeLng) {
+      i18n.changeLanguage(activeLng);
     }
   }, [i18n]);
 
@@ -58,8 +62,22 @@ export default function Header() {
     i18n.changeLanguage(langCode);
     try {
       localStorage.setItem("i18nextLng", langCode);
+      
+      // Synchronize with Google Translate engine for whole-page & blog translation
+      const googleSelect = document.querySelector(".goog-te-combo");
+      if (googleSelect) {
+        googleSelect.value = langCode;
+        googleSelect.dispatchEvent(new Event("change"));
+      } else {
+        // Set Google Translate cookie directly (/en/hi or /en/mr)
+        const pair = langCode === "en" ? "/en/en" : `/en/${langCode}`;
+        document.cookie = `googtrans=${pair}; path=/;`;
+        document.cookie = `googtrans=${pair}; path=/; domain=${window.location.hostname}`;
+        // Trigger page refresh if combo wasn't loaded yet to activate translation
+        window.location.reload();
+      }
     } catch (e) {
-      // ignore localstorage errors
+      // ignore localstorage/cookie errors
     }
   };
 

@@ -19,10 +19,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const vernacularKeywords = [
+    ...post.tags,
+    "power weeder repair guide",
+    "कृषि यंत्र रिपेयर",
+    "पावर वीडर समस्या समाधान",
+    "शेती अवजारे दुरुस्ती",
+    "KrishiGears service hub",
+    "krishi yantra troubleshooting"
+  ];
+
   return {
     title: `${post.title} | KrishiGears Engineering & Service Hub`,
-    description: post.excerpt,
-    keywords: post.tags,
+    description: `${post.excerpt} - KrishiGears official machinery repair and field service guide (हिंदी / मराठी उपलब्ध).`,
+    keywords: vernacularKeywords,
     alternates: {
       canonical: `https://krishigears.com/blog/${slug}`,
     },
@@ -67,6 +77,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     image: [post.cover_image],
     datePublished: post.created_at,
     dateModified: post.created_at,
+    inLanguage: ["en-IN", "hi-IN", "mr-IN"],
     author: {
       '@type': 'Organization',
       name: 'KrishiGears Engineering Desk',
@@ -85,7 +96,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       '@type': 'WebPage',
       '@id': `https://krishigears.com/blog/${slug}`,
     },
-    keywords: post.tags.join(', '),
+    keywords: [...post.tags, "कृषि यंत्र रिपेयर", "पावर वीडर समस्या"].join(', '),
   };
 
   return (

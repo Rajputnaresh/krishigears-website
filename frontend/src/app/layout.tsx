@@ -154,6 +154,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col pt-[104px] bg-background text-foreground font-body">
         <Providers>
+          <div id="google_translate_element" style={{ display: 'none' }} aria-hidden="true" />
           <Header />
           <main className="flex-1">
             {children}
@@ -161,6 +162,25 @@ export default function RootLayout({
           <Footer />
           <FloatingActions />
         </Providers>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              function googleTranslateElementInit() {
+                if (window.google && window.google.translate) {
+                  new window.google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,hi,mr',
+                    autoDisplay: false
+                  }, 'google_translate_element');
+                }
+              }
+            `,
+          }}
+        />
+        <script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          async
+        />
       </body>
     </html>
   );
