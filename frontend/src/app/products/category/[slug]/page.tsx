@@ -12,7 +12,7 @@ export async function generateMetadata({
 
   if (!category) {
     return {
-      title: "Commercial Farm Equipment Category | KrishiGears",
+      title: "Commercial Farm Equipment Category",
       description: "FMTTI-tested agricultural machinery and genuine OEM spare parts.",
     };
   }

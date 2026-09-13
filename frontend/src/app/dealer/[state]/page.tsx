@@ -35,13 +35,13 @@ export async function generateMetadata({
   const stateName = STATE_NAMES[stateSlug] || state.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   return {
-    title: `KrishiGears Dealership in ${stateName} | Wholesale Power Weeders & Spares`,
+    title: `Dealership in ${stateName} | Wholesale Power Weeders & Spares`,
     description: `Become an authorized KrishiGears dealer in ${stateName}. Factory-direct wholesale pricing on 7HP/9HP power weeders, genuine OEM spare parts, protected territory, and DBT subsidy support.`,
     alternates: {
       canonical: `https://krishigears.com/dealer/${stateSlug}`,
     },
     openGraph: {
-      title: `KrishiGears Farm Machinery Dealership in ${stateName}`,
+      title: `Farm Machinery Dealership in ${stateName}`,
       description: `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins and 48-hour parts dispatch.`,
       url: `https://krishigears.com/dealer/${stateSlug}`,
       siteName: "KrishiGears",

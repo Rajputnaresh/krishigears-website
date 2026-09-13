@@ -4,6 +4,9 @@ import { BLOG_POSTS_ARRAY } from '@/data/blogPosts';
 import { PRODUCTS, CATEGORIES as ALL_CATEGORIES } from '@/data/catalog';
 
 const SITE_URL = 'https://krishigears.com';
+// Date when static content (products/categories/states/geo pages) last materially changed.
+// Bump this when editing catalog or geo templates instead of letting every build stamp 'today'.
+const SITE_CONTENT_UPDATED = new Date('2026-09-13');
 
 const CATEGORIES = ['power-weeders', 'power-weeder-spare-parts', 'brush-cutters', 'earth-augers'];
 
@@ -11,61 +14,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapUrls: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: new Date(),
+      lastModified: new Date(),lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'daily',
       priority: 1,
     },
     {
       url: `${SITE_URL}/about`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/dealer-network`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/become-a-dealer`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/bulk-order`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/products`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/locations`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/warranty-and-support`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/blog`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
       url: `${SITE_URL}/contact`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -75,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   PRODUCTS.forEach((prod) => {
     sitemapUrls.push({
       url: `${SITE_URL}/products/${prod.slug}`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     });
@@ -85,7 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ALL_CATEGORIES.forEach((cat) => {
     sitemapUrls.push({
       url: `${SITE_URL}/products/category/${cat.slug}`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.8,
     });
@@ -101,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   STATES.forEach((st) => {
     sitemapUrls.push({
       url: `${SITE_URL}/dealer/${st}`,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.8,
     });
@@ -130,7 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     CATEGORIES.forEach((categorySlug) => {
       sitemapUrls.push({
         url: `${SITE_URL}/${categorySlug}-in-${locationSlug}`,
-        lastModified: new Date(),
+        lastModified: SITE_CONTENT_UPDATED,
         changeFrequency: 'weekly',
         priority: 0.7, // 0.7 for dynamic geo-pages
       });

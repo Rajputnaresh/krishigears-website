@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   ];
 
   return {
-    title: `${post.title} | KrishiGears Engineering & Service Hub`,
+    title: `${post.title} | Field Service Guide`,
     description: `${post.excerpt} - KrishiGears official machinery repair and field service guide (हिंदी / मराठी उपलब्ध).`,
     keywords: vernacularKeywords,
     alternates: {

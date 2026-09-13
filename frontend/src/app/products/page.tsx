@@ -2,13 +2,13 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Products.jsx";
 
 export const metadata: Metadata = {
-  title: "Commercial Farm Machinery & Spare Parts Catalog (19 Categories) | KrishiGears",
+  title: "Commercial Farm Machinery & Spare Parts Catalog (19 Categories)",
   description: "Browse KrishiGears B2B agricultural machinery: 7HP/9HP/10HP power weeders, power tillers, brush cutters, earth augers, and OEM spare parts with PAN-India dealer dispatch.",
   alternates: {
     canonical: "https://krishigears.com/products",
   },
   openGraph: {
-    title: "Commercial Farm Machinery & Genuine Spare Parts Catalog | KrishiGears",
+    title: "Commercial Farm Machinery & Genuine Spare Parts Catalog",
     description: "Wholesale equipment catalog for dealers, FPOs, and institutions across India. Direct factory dispatch with GST billing.",
     url: "https://krishigears.com/products",
     siteName: "KrishiGears",

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Blog.jsx";
 
 export const metadata: Metadata = {
-  title: "Agricultural Machinery Troubleshooting & Field Service Hub | KrishiGears",
+  title: "Agricultural Machinery Troubleshooting & Field Service Hub",
   description: "Access 100 practical troubleshooting and service guides for power weeders, diesel engines, carburetors, brush cutters, and dealership management in India.",
   alternates: {
     canonical: "https://krishigears.com/blog",

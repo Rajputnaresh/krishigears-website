@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
     default: "KrishiGears | B2B Agricultural Machinery & Genuine Spare Parts",
-    template: "%s | KrishiGears B2B",
+    template: "%s | KrishiGears",
   },
   description: "KrishiGears is a Jaipur-based B2B agricultural machinery brand providing FMTTI-tested power weeders, tillers, and OEM spare parts to dealers and FPOs across India.",
   alternates: {

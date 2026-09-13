@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/BecomeDealer.jsx";
 
 export const metadata: Metadata = {
-  title: "Apply for Agricultural Machinery Dealership (PAN India) | KrishiGears",
+  title: "Apply for Agricultural Machinery Dealership (PAN India)",
   description: "Become an authorized KrishiGears dealer in your district. Protected territory margins, 24-hour spare parts dispatch, direct factory pricing, and full DBT subsidy documentation support.",
   alternates: {
     canonical: "https://krishigears.com/become-a-dealer",

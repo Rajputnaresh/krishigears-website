@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Warranty.jsx";
 
 export const metadata: Metadata = {
-  title: "Machinery Warranty, OEM Spares Policy & Service Support | KrishiGears",
+  title: "Machinery Warranty, OEM Spares Policy & Service Support",
   description: "Review KrishiGears standard 12-month machinery warranty, genuine OEM spare parts dispatch guarantees, technical service helpline, and claim procedures.",
   alternates: {
     canonical: "https://krishigears.com/warranty-and-support",

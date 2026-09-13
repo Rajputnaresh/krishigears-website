@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const locationData = locations[locationName];
 
   return {
-    title: `${category.singular} Dealer & Supplier in ${locationName}, ${locationData.state} | KrishiGears`,
+    title: `${category.singular} Dealer & Supplier in ${locationName}, ${locationData.state}`,
     description: `Authorized B2B supply of KrishiGears ${category.name} in ${locationName}, ${locationData.state}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 3).join(', ')} crops with government DBT subsidy guidance.`,
     alternates: {
       canonical: `https://krishigears.com/${slug}`,
