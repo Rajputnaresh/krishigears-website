@@ -53,7 +53,7 @@ export default async function ProductDetailPage({
   const product = PRODUCTS.find((p) => p.slug === slug);
 
   // Clean schema: stripped fake aggregateRating / unverified reviews (Google manual action risk)
-  // Clean Offer: priceSpecification indicates RFQ/wholesale without invalid price omission
+  // Offer without price: B2B RFQ model - no published prices (Merchant-listing errors are Shopping-feature only, not organic)
   const productJsonLd = product ? {
     "@context": "https://schema.org",
     "@type": "Product",
