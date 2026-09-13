@@ -31,29 +31,6 @@ export default function ProductCard({ product }) {
       "availability": "https://schema.org/InStock",
       "url": `https://krishigears.com/products/${product.slug}`
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "128",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Rameshwar Patel" },
-        "datePublished": "2026-02-15",
-        "reviewBody": "KG models perform exceptionally in black cotton and sugarcane soils. Direct factory dispatch and spare parts support is reliable.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Suresh Choudhary" },
-        "datePublished": "2026-01-20",
-        "reviewBody": "Mustard and cotton belt best seller. Full GST invoicing and Raj Kisan Sathi test reports provided on time.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-      }
-    ]
   };
 
   return (
