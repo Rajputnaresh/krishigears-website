@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${post.title} | Field Service Guide`,
-    description: `${post.excerpt} - KrishiGears official machinery repair and field service guide (हिंदी / मराठी उपलब्ध).`,
+    description: `${post.title}: ${post.excerpt.slice(0, 110)}... Official KrishiGears machinery & field service guide.`,
     keywords: vernacularKeywords,
     alternates: {
       canonical: `https://krishigears.com/blog/${slug}`,
