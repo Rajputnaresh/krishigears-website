@@ -62,6 +62,7 @@ export default async function CategoryDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const isSpareParts = slug === "power-weeder-spare-parts";
   const category = CATEGORIES.find((c) => c.slug === slug);
   const items = PRODUCTS.filter((p) => p.category === slug);
 
