@@ -12,6 +12,77 @@ export interface BlogPostData {
 }
 
 export const BLOG_POSTS: Record<string, BlogPostData> = {
+  "power-weeder-spare-parts-wholesale-suppliers-price-list": {
+    slug: "power-weeder-spare-parts-wholesale-suppliers-price-list",
+    title: "Power Weeder Spare Parts Wholesale: Price List, MOQ & OEM Supply (2026)",
+    excerpt: "Direct factory wholesale supply of power weeder and tiller spare parts for repair shops, dealers & retailers in India. Carburetors, viton oil seals, recoil starters, gearboxes & rotary tines with 24-48hr Jaipur dispatch.",
+    cover_image: "/images/products/weeder.webp",
+    created_at: "2026-03-18T10:00:00Z",
+    tags: [
+      "Power Weeder Spare Parts Wholesale",
+      "Power Tiller Spare Parts Online",
+      "Agricultural Machinery Spare Parts Suppliers",
+      "Power Weeder Spare Parts Price List",
+      "Brush Cutter Spare Parts Wholesale"
+    ],
+    content: `Local machinery repair workshops, service centres, and retail dealerships often struggle with inconsistent quality and high failure rates from unbranded aftermarket spare parts. KrishiGears operates a dedicated OEM-spec spare parts supply hub out of Jaipur, Rajasthan, fulfilling bulk spare parts orders across India.
+
+## 1. Fast-Moving Wholesale Spare Parts Catalog
+
+KrishiGears supplies precision-machined, tested replacement assemblies across all standard 170F (7HP petrol), 177F (9HP petrol), 173F (5.5HP diesel), and 186F (10HP diesel) agricultural weeders:
+
+- **Carburetor Assemblies:** Genuine standard jetting assemblies for 170F/177F engines (preventing rich-fuel bogging and sediment clogging).
+- **Gearbox Oil Seals (Viton Grade):** High-heat resistant oil seals preventing axle shaft leaks during continuous wet-land paddy weeding.
+- **Recoil Starter Assemblies:** Heavy-duty reinforced nylon pull-cords and durable steel pawls designed for high-compression recoil pulls.
+- **Piston & Ring Kits:** Standard (STD) and oversize (+0.25 / +0.50) low-friction alloys restoring factory compression.
+- **Forged Rotary Tiller Blades:** Heat-treated manganese steel (HRC 45+) wet-land and dry-land tines (set of 24 and 32 blades).
+- **Control Cables & Levers:** Steel-braided clutch cables, throttle linkages, and safety engine shutoff assemblies.
+
+## 2. Wholesale Economics for Retailers & Repair Workshops
+
+- **Bulk Profit Margin:** 35% to 50% retail margin for local repair shops and agro-service stockists.
+- **Low Minimum Order Quantity (MOQ):** Mixed-carton orders starting at ₹15,000 to enable shops to stock fast-moving parts without tying up capital.
+- **Express Dispatch:** Packed and dispatched within 24 to 48 hours via surface cargo or Speed Post directly from our Jaipur central depot.
+- **GST Input Tax Credit (ITC):** 100% compliant GST tax invoices (GSTIN: 08EQLPD7160R1Z2) allowing full input credit claims.
+
+## 3. How to Request the 2026 Wholesale Price List PDF
+
+Wholesale buyers, dealer stockists, and agricultural service technicians can request the complete Excel/PDF wholesale price list by submitting our [Bulk Procurement Desk](/bulk-order) or contacting our Jaipur wholesale desk via WhatsApp at **+91 60060 78815** (Email: **sales@krishigears.com**).
+`
+  },
+
+  "power-weeder-dealership-guide-how-to-apply": {
+    slug: "power-weeder-dealership-guide-how-to-apply",
+    title: "Power Weeder Dealership Kaise Le: Margins, Investment & Registration (2026)",
+    excerpt: "Complete guide to starting an agricultural machinery dealership in India. Power weeder dealer margins, investment requirements, FMTTI compliance & direct factory dispatch from KrishiGears Jaipur.",
+    cover_image: "/images/products/weeder.webp",
+    created_at: "2026-03-15T10:00:00Z",
+    tags: ["Power Weeder Dealership", "Krishi Yantra Dealership", "Agri Machinery Business", "Dealer Margin", "Wholesale Power Weeder"],
+    content: `Starting an agricultural machinery and power weeder dealership in India offers substantial recurring returns as farm labor shortages accelerate mechanization. This guide outlines the exact requirements, margins, and setup procedure to become an authorized KrishiGears dealer.
+
+## 1. Business Economics & Profit Margins
+
+- **Gross Dealer Margin:** 18% to 25% on complete power weeder and tiller units.
+- **Spare Parts Margin:** 35% to 50% on fast-moving consumables (tines, gearbox oil seals, clutch cables, carburetor assemblies).
+- **Initial Working Capital:** ₹1,50,000 to ₹3,00,000 covering display inventory and critical spare assemblies.
+- **Payback Horizon:** Most district dealers break even within their first kharif/rabi cultivation cycle.
+
+## 2. Mandatory Eligibility Criteria
+
+1. **GST Registration:** Active GSTIN (Regular or Composition) with machinery distribution trade codes.
+2. **Physical Counter / Depot:** Minimum 200 sq.ft showroom or workshop with road access for farmer walk-ins.
+3. **Basic Technician Setup:** Ability to perform basic unboxing, oil filling (20W-40 / SAE 90), and blade attachment fitment.
+
+## 3. Why Partner with KrishiGears?
+
+- **FMTTI Compliance:** Machines tested to Central Farm Machinery Training & Testing Institute standards for state DBT subsidies.
+- **Zero Locked Stock (Dropship Option):** Direct factory-to-dealer dispatch from our Jaipur hub within 24-48 hours.
+- **100% Guaranteed Fitment Spares:** Instant spare parts dispatch to ensure zero downtime during active tilling season.
+
+To apply for an authorized district dealership, visit our [Dealer Application Portal](/become-a-dealer) or contact our wholesale desk directly at **+91 60060 78815** / **sales@krishigears.com**.
+`
+  },
+
   "power-weeder-not-starting-recoil-pull-troubleshooting": {
     slug: "power-weeder-not-starting-recoil-pull-troubleshooting",
     title: "Why Your Power Weeder Won't Start: 7 Field Fixes for Recoil Pull Resistance",
@@ -4469,11 +4540,11 @@ A low initial purchase price is counterproductive if replacement tines, recoil s
   },
   "smam-subsidy-portal-registration-power-weeder-guide": {
     slug: "smam-subsidy-portal-registration-power-weeder-guide",
-    title: "SMAM & DBT Agriculture Subsidy Portal Registration for Farm Machinery (2026)",
-    excerpt: "Step-by-step guide to applying for 40% to 50% government subsidy on power weeders and tillers through central SMAM and State DBT agriculture portals.",
+    title: "SMAM Registration & DBT Agriculture Subsidy Portal Guide (2026)",
+    excerpt: "Step-by-step guide to SMAM registration, eligibility & 40% to 50% subsidy on power weeders, tillers & farm machinery across state DBT portals.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-02T10:00:00Z",
-    tags: ["SMAM Subsidy", "DBT Agriculture", "Government Scheme", "Farmer Guide"],
+    tags: ["SMAM Registration", "SMAM Portal", "DBT Agriculture Subsidy", "Krishi Yantra Subsidy", "Power Weeder Subsidy"],
     content: `The Sub-Mission on Agricultural Mechanization (SMAM) and State DBT portals offer financial assistance between 40% (general category) and 50% (SC/ST/small and marginal farmers, women farmers) for purchasing power weeders, power tillers, and brush cutters.
 
 ## Mandatory Documents for Subsidy Application

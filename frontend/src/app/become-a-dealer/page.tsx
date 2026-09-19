@@ -2,14 +2,24 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/BecomeDealer.jsx";
 
 export const metadata: Metadata = {
-  title: "Apply for Agricultural Machinery Dealership (PAN India)",
-  description: "Become an authorized KrishiGears dealer in your district. Protected territory margins, 24-hour spare parts dispatch, direct factory pricing, and full DBT subsidy documentation support.",
+  title: "Power Weeder Dealership Kaise Le | Krishi Yantra Dealership PAN India",
+  description: "Apply for KrishiGears power weeder dealership (7HP petrol, 10HP diesel & attachments). 18%-25% dealer margin, direct factory wholesale pricing, FMTTI compliance & 24hr spare parts dispatch.",
+  keywords: [
+    "power weeder dealership kaise le",
+    "power weeder dealership",
+    "krishi yantra dealership",
+    "agricultural machinery wholesale",
+    "power weeder manufacturer india",
+    "7hp power weeder price wholesale",
+    "power weeder attachments wholesale",
+    "krishi yantra subsidy portal"
+  ],
   alternates: {
     canonical: "https://krishigears.com/become-a-dealer",
   },
   openGraph: {
-    title: "Apply for KrishiGears Dealership | High Margins & Territory Exclusivity",
-    description: "Join India's fastest-growing agricultural machinery network. Complete our quick dealer onboarding form today.",
+    title: "Power Weeder Dealership Kaise Le | KrishiGears Wholesale Network",
+    description: "Start a certified farm machinery dealership. High margins, protected territory & direct factory dispatch from Jaipur.",
     url: "https://krishigears.com/become-a-dealer",
     siteName: "KrishiGears",
     images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears Dealership" }],
