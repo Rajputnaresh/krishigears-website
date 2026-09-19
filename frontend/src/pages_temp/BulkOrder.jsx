@@ -100,6 +100,70 @@ export default function BulkOrder() {
             {loading ? "Submitting..." : "Request Quotation"}
           </button>
         </form>
+
+        {/* Wholesale Procurement Tiers & Policies */}
+        <div className="mt-16 pt-12 border-t border-zinc-800 space-y-12">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-950 space-y-3">
+              <span className="text-lime-400 font-bold text-xs uppercase tracking-widest">Retailers & Workshops</span>
+              <h3 className="text-white font-bold text-lg">Mixed Spare Parts Carton</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Small machinery repair shops and spare parts dealers can start with mixed-part cartons from ₹15,000. Combine carburetors, recoil starters, Viton oil seals, piston assemblies, and rotary tines.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-950 space-y-3">
+              <span className="text-lime-400 font-bold text-xs uppercase tracking-widest">Machinery Dealers</span>
+              <h3 className="text-white font-bold text-lg">Direct Machinery Consignments</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Batch orders starting at 2 to 5 power weeders or brush cutters with protected margins of 15% to 22%. Standard GST tax invoices with chassis serial matching for state DBT subsidies.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-950 space-y-3">
+              <span className="text-lime-400 font-bold text-xs uppercase tracking-widest">FPOs & Institutions</span>
+              <h3 className="text-white font-bold text-lg">Tender & Custom Specs</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Dedicated institutional quotations for Farmer Producer Organizations, custom hiring centers (CHCs), and government tenders with complete SRFMTTI/FMTTI testing certifications.
+              </p>
+            </div>
+          </div>
+
+          {/* Wholesale FAQ Section */}
+          <div className="bg-zinc-950 border border-zinc-800 p-8 rounded-xl space-y-6">
+            <div className="space-y-1">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Wholesale Procurement FAQ</span>
+              <h2 className="text-xl md:text-2xl font-display font-bold text-white">
+                Frequently Asked Questions for Bulk Buyers & Stockists
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 text-sm">
+              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+                <h3 className="font-bold text-white text-sm">How can machinery repair shops get the spare parts wholesale price list?</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">
+                  Submit this inquiry form or message our wholesale sales desk directly on WhatsApp at +91 60060 78815. We share the complete 2026 digital Excel/PDF catalog covering 170F/177F petrol and 173F/186F diesel components.
+                </p>
+              </div>
+              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+                <h3 className="font-bold text-white text-sm">What payment terms and GST invoicing are provided?</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">
+                  All consignments are billed with 100% compliant GST tax invoices (GSTIN: 08EQLPD7160R1Z2) allowing instant Input Tax Credit (ITC) claiming. Payment can be processed via NEFT, RTGS, or confirmed trade credit for verified network dealers.
+                </p>
+              </div>
+              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+                <h3 className="font-bold text-white text-sm">Are KrishiGears spares compatible with other machine brands?</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">
+                  Yes, our spare parts follow standard universal dimensions and metallurgical tolerances, ensuring drop-in compatibility with Balwaan, Royal Kissan, Neptune, and standard Honda-clone power tillers and weeders.
+                </p>
+              </div>
+              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+                <h3 className="font-bold text-white text-sm">What are the delivery timelines across Indian states?</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">
+                  Consignments are dispatched from our central Jaipur godown within 24 to 48 hours. Surface transit typically delivers to major transport godowns within 3 to 5 business days nationwide with live LR tracking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

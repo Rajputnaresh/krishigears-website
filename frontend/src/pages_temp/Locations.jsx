@@ -18,8 +18,14 @@ export default function Locations() {
     Object.entries(locationsData).forEach(([districtName, data]) => {
       const state = data.state || "Other";
       stateSet.add(state);
+      const slug = districtName
+        .toLowerCase()
+        .replace(/&amp;/g, 'and')
+        .replace(/&/g, 'and')
+        .replace(/ /g, '-')
+        .replace(/[()]/g, '')
+        .replace(/-+/g, '-');
       if (!groups[state]) groups[state] = [];
-      const slug = districtName.toLowerCase().replace(/ /g, "-").replace(/[()]/g, "");
       groups[state].push({
         districtName,
         slug,

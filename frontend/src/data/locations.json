@@ -2364,7 +2364,7 @@
     "farming_profile": "Regional food grain and horticulture cultivation",
     "major_district": false
   },
-  "North East  Delhi": {
+  "North East Delhi": {
     "state": "Delhi (NCT)",
     "key_crops": [
       "Rice",
@@ -2376,7 +2376,7 @@
     "farming_profile": "Regional food grain and horticulture cultivation",
     "major_district": false
   },
-  "North West  Delhi": {
+  "North West Delhi": {
     "state": "Delhi (NCT)",
     "key_crops": [
       "Rice",
@@ -2424,7 +2424,7 @@
     "farming_profile": "Regional food grain and horticulture cultivation",
     "major_district": false
   },
-  "South West  Delhi": {
+  "South West Delhi": {
     "state": "Delhi (NCT)",
     "key_crops": [
       "Rice",

@@ -120,6 +120,43 @@ export default function Contact() {
             />
           </div>
         </div>
+
+        {/* Operating Hours & B2B Wholesale Support FAQ */}
+        <div className="mt-12 bg-zinc-950 border border-zinc-800 p-8 rounded-xl space-y-6">
+          <div className="space-y-1">
+            <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Support & Logistics Directory</span>
+            <h2 className="text-xl md:text-2xl font-display font-bold text-white">
+              Visiting Jaipur HQ & Getting B2B Dealer Support
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 text-sm">
+            <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+              <h3 className="font-bold text-white text-sm">Working Hours & Walk-In Inquiries</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Our central sales and dealer coordination office operates Monday through Saturday, 9:00 AM to 7:00 PM IST. Dealers and FPO representatives wishing to visit our facility in Jaipur can book an appointment in advance via WhatsApp or phone.
+              </p>
+            </div>
+            <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+              <h3 className="font-bold text-white text-sm">Urgent Spare Parts Inquiries & Dispatches</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                For emergency mechanic or repair shop spare part dispatches, message our WhatsApp parts counter (+91 60060 78815) with the part photo and machine model. Dispatches operate daily via express parcel services.
+              </p>
+            </div>
+            <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+              <h3 className="font-bold text-white text-sm">GST Billing & Accounts Verification</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Need tax invoices, company GST verification certificates (GSTIN: 08EQLPD7160R1Z2), or e-way bills for state border crossings? Reach out directly to <span className="text-lime-400">accounts@krishigears.com</span>.
+              </p>
+            </div>
+            <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+              <h3 className="font-bold text-white text-sm">FMTTI & Subsidy Documentation Desk</h3>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                If you require test compliance certificates or dealer quotations for state subsidy portals (SMAM, MahaDBT, Raj Kisan Sathi, Krishi Yantrikaran), contact <span className="text-lime-400">sales@krishigears.com</span> for same-day documentation.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

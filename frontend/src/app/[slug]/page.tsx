@@ -550,7 +550,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             {nearbyDistricts.map(([distName]) => (
               <Link 
                 key={distName}
-                href={`/${categorySlug}-in-${distName.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '')}`}
+                href={`/${categorySlug}-in-${toLocationSlug(distName)}`}
                 className="p-3 rounded-lg bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/80 hover:border-lime-500/40 text-xs text-zinc-300 hover:text-lime-400 transition-all truncate"
               >
                 {category.name} in {distName}
