@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapUrls: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: new Date(),lastModified: SITE_CONTENT_UPDATED,
+      lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     },

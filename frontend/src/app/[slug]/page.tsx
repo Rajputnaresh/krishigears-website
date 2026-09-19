@@ -92,9 +92,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const locationData = locations[locationName];
 
+  const isSpareParts = categorySlug === 'power-weeder-spare-parts';
+  const pageTitle = isSpareParts
+    ? `Power Weeder Spare Parts Wholesale & Suppliers in ${locationName}, ${locationData.state} | Price List`
+    : `${category.singular} Dealer & Supplier in ${locationName}, ${locationData.state}`;
+  const pageDesc = isSpareParts
+    ? `Direct factory wholesale supply of OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters, Viton oil seals, 32-piece blade sets & gearbox components with express 24-48h dispatch.`
+    : `Authorized B2B supply of KrishiGears ${category.name} in ${locationName}, ${locationData.state}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 3).join(', ')} crops with government DBT subsidy guidance.`;
+
   return {
-    title: `${category.singular} Dealer & Supplier in ${locationName}, ${locationData.state}`,
-    description: `Authorized B2B supply of KrishiGears ${category.name} in ${locationName}, ${locationData.state}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 3).join(', ')} crops with government DBT subsidy guidance.`,
+    title: pageTitle,
+    description: pageDesc,
+    keywords: isSpareParts ? [
+      `power weeder spare parts wholesale ${locationName}`,
+      `power weeder spare parts price list ${locationName}`,
+      `power tiller spare parts suppliers ${locationName}`,
+      `krishigears spare parts ${locationData.state}`
+    ] : undefined,
     alternates: {
       canonical: `https://krishigears.com/${slug}`,
     }
@@ -112,6 +126,8 @@ export default async function LocationCategoryPage({ params }: { params: Promise
   
   const category = CATEGORIES[categorySlug];
   if (!category) notFound();
+
+  const isSpareParts = categorySlug === 'power-weeder-spare-parts';
 
   const locationName = Object.keys(locations).find(
     k => toLocationSlug(k) === locationSlug
@@ -139,9 +155,9 @@ export default async function LocationCategoryPage({ params }: { params: Promise
     .slice(0, 12);
 
   // Pre-filled WhatsApp message
-  const whatsappText = encodeURIComponent(
-    `Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`
-  );
+  const whatsappText = isSpareParts
+    ? encodeURIComponent(`Hello KrishiGears, I am a machinery repair shop / spare parts retailer in ${locationName}, ${data.state}. Please send the Power Weeder Spare Parts Wholesale Price List & MOQ details.`)
+    : encodeURIComponent(`Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`);
   const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${whatsappText}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const jsonLd = {
@@ -254,15 +270,23 @@ export default async function LocationCategoryPage({ params }: { params: Promise
         <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-500/10 border border-lime-500/30 text-lime-400 text-xs font-bold uppercase tracking-wider mb-4">
-            <MapPin className="h-3.5 w-3.5" /> {data.state} · Direct Supply & Dealership Hub
+            <MapPin className="h-3.5 w-3.5" /> {data.state} · {isSpareParts ? "Wholesale Spare Parts & OEM Depot" : "Direct Supply & Dealership Hub"}
           </div>
 
           <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight max-w-4xl text-balance">
-            {category.singular} Dealers & Supply in <span className="text-lime-500">{locationName}</span>
+            {isSpareParts ? (
+              <>Power Weeder <span className="text-lime-500">Spare Parts Wholesale</span> in {locationName}</>
+            ) : (
+              <>{category.singular} Dealers & Supply in <span className="text-lime-500">{locationName}</span></>
+            )}
           </h1>
 
           <p className="text-zinc-300 text-base md:text-lg max-w-3xl leading-relaxed mt-4">
-            Authorized B2B supply of KrishiGears {category.name.toLowerCase()} for commercial dealers, agro-service centers, and farming cooperatives in {locationName}. Spec-optimized for {data.soil_type.toLowerCase()} and local cultivation of {data.key_crops.join(', ')}.
+            {isSpareParts ? (
+              <>Direct factory wholesale supply of OEM power weeder and power tiller spare parts for repair shops, dealers & retail stockists in {locationName}, {data.state}. Carburetors, recoil starters, Viton oil seals, gearboxes, and HRC 45+ rotary tines with express 24-48h dispatch from Jaipur.</>
+            ) : (
+              <>Authorized B2B supply of KrishiGears {category.name.toLowerCase()} for commercial dealers, agro-service centers, and farming cooperatives in {locationName}. Spec-optimized for {data.soil_type.toLowerCase()} and local cultivation of {data.key_crops.join(', ')}.</>
+            )}
           </p>
 
           {/* Quick CTA Actions */}
@@ -273,13 +297,13 @@ export default async function LocationCategoryPage({ params }: { params: Promise
               rel="noopener noreferrer"
               className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-lg transition-all shadow-lg shadow-lime-500/20 text-sm inline-flex items-center gap-2"
             >
-              Request WhatsApp Quote
+              {isSpareParts ? "Request Spare Parts Price List PDF" : "Request WhatsApp Quote"}
             </a>
             <Link 
-              href="/become-a-dealer" 
+              href="/bulk-order" 
               className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-lime-500/50 text-white font-medium px-6 py-3.5 rounded-lg transition-all text-sm inline-flex items-center gap-2"
             >
-              Apply for Dealership in {locationName}
+              {isSpareParts ? `Order Spares in Bulk for ${locationName}` : `Apply for Dealership in ${locationName}`}
             </Link>
           </div>
 
@@ -435,24 +459,32 @@ export default async function LocationCategoryPage({ params }: { params: Promise
           </div>
         </section>
 
-        {/* B2B Exclusive Dealership Pitch */}
+        {/* B2B Exclusive Dealership / Spares Pitch */}
         <section className="p-8 md:p-10 rounded-2xl bg-gradient-to-r from-lime-500 via-lime-400 to-lime-500 text-black shadow-2xl relative overflow-hidden">
           <div className="relative z-10 max-w-3xl">
             <span className="inline-block px-3 py-1 bg-black text-lime-400 text-xs font-black uppercase tracking-wider rounded-md mb-3">
-              Commercial Dealership Opportunity
+              {isSpareParts ? "Wholesale Spares Supply & Workshop MOQ" : "Commercial Dealership Opportunity"}
             </span>
             <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-black leading-tight">
-              Establish the Authorized KrishiGears Showroom in {locationName}
+              {isSpareParts ? (
+                <>Stock OEM Spare Parts for Your Workshop in {locationName}</>
+              ) : (
+                <>Establish the Authorized KrishiGears Showroom in {locationName}</>
+              )}
             </h2>
             <p className="text-black/85 text-sm sm:text-base font-medium mt-3 leading-relaxed">
-              We are actively appointing exclusive machinery dealers, spare parts retailers, and service stockists in {locationName} and surrounding tehsils. Benefit from wholesale pricing, protected territory margins, and 24-hour spare parts dispatch.
+              {isSpareParts ? (
+                <>Are you a farm machinery mechanic, service center, or retail spare parts shop in {locationName}? Get direct factory pricing, mixed-carton minimum orders starting from ₹15,000, and 24-hour dispatch from our Jaipur central depot with 100% GST input tax credit.</>
+              ) : (
+                <>We are actively appointing exclusive machinery dealers, spare parts retailers, and service stockists in {locationName} and surrounding tehsils. Benefit from wholesale pricing, protected territory margins, and 24-hour spare parts dispatch.</>
+              )}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/become-a-dealer"
+                href="/bulk-order"
                 className="px-6 py-3 bg-black hover:bg-zinc-900 text-lime-400 font-bold text-xs uppercase tracking-wider rounded-lg transition-all"
               >
-                Apply as Dealer in {locationName}
+                {isSpareParts ? "Inquire Bulk Spares MOQ" : `Apply as Dealer in ${locationName}`}
               </Link>
               <a
                 href={whatsappUrl}

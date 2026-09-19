@@ -53,10 +53,10 @@ export default function BulkOrder() {
   return (
     <div data-testid="bulk-order-page" className="kg-section">
       <div className="max-w-[1100px] mx-auto">
-        <div className="kg-eyebrow">Bulk / Institutional Orders</div>
-        <h1 className="kg-h1 mt-4 text-balance">Bulk pricing for <span className="text-lime-500">FPOs, contractors & institutions.</span></h1>
+        <div className="kg-eyebrow">Bulk Machinery & Wholesale Spare Parts</div>
+        <h1 className="kg-h1 mt-4 text-balance">Wholesale Supply for <span className="text-lime-500">Dealers, Repair Workshops & Institutions.</span></h1>
         <p className="text-zinc-300 mt-6 leading-relaxed max-w-2xl">
-          Farmer Producer Organizations, agri input stores, large contractors and government tender buyers — request a bulk quotation with institutional pricing, GST invoice and PAN India dispatch.
+          Direct factory wholesale procurement of agricultural machinery (power weeders, tillers, brush cutters) and OEM spare parts (carburetors, recoil starters, Viton seals, rotary blades) for retailers, repair workshops, FPOs, and contractors with GST billing and PAN-India dispatch from Jaipur.
         </p>
 
         <form onSubmit={submit} className="mt-12 border border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
