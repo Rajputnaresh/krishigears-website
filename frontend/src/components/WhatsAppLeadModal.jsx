@@ -25,7 +25,7 @@ export default function WhatsAppLeadModal({
     setSubmitting(true);
 
     const fullMessage = `नमस्ते KrishiGears, मुझे ${district ? `${district} (ज़िला) के लिए ` : ""}${requirement} की फ़ैक्ट्री थोक दर / डीलरशिप कोटेशन चाहिए। [Phone: ${phone || "WhatsApp Direct"}]`;
-    const waUrl = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(fullMessage)}&utm_source=website&utm_medium=whatsapp_modal&utm_campaign=kg_catalog`;
+    const waUrl = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(fullMessage)}&utm_source=website&utm_medium=whatsapp_modal&utm_campaign=kg_catalog`;
 
     // 1. Asynchronously log intent to backend CRM lead collector (fails gracefully)
     try {

@@ -48,7 +48,7 @@ export default function Footer() {
             <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full ring-1 ring-lime-500/40" />
             <div>
               <div className="font-display font-black text-xl text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
-              <div className="text-[10px] tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
+              <div className="text-xs tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
             </div>
           </div>
           <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
@@ -158,7 +158,7 @@ export default function Footer() {
       <div className="border-t border-zinc-800">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 grid md:grid-cols-2 gap-8">
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">
+            <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 mb-3">
               {t('footer.b2bSupply', 'B2B Supply Programs')}
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
@@ -167,7 +167,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 mb-3">
+            <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 mb-3">
               {t('footer.topStates', 'Top Dealer States')}
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">

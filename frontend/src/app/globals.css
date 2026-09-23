@@ -29,7 +29,7 @@
 
 @theme {
     --font-display: var(--font-mukta), var(--font-outfit), sans-serif;
-    --font-body: var(--font-mukta), var(--font-manrope), sans-serif;
+    --font-body: var(--font-mukta), var(--font-outfit), sans-serif;
     
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);

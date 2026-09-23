@@ -178,7 +178,7 @@ export default function ProductDetail() {
                 Buy Online at FarmingTools
               </a>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`WhatsApp Supply Enquiry for ${product.name}`}
@@ -222,7 +222,7 @@ export default function ProductDetail() {
                 <FileText className="h-4 w-4" /> Download Tech Spec PDF
               </button>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(`Hello KrishiGears, please share the FMTTI / SRFMTTI Test Compliance Certificate copy for ${product.name} for tender/subsidy verification.`)}&utm_source=krishigears_web&utm_medium=fmtti_cert_btn`}
+                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hello KrishiGears, please share the FMTTI / SRFMTTI Test Compliance Certificate copy for ${product.name} for tender/subsidy verification.`)}&utm_source=krishigears_web&utm_medium=fmtti_cert_btn`}
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 hover:border-zinc-500 rounded-md text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 transition shrink-0"

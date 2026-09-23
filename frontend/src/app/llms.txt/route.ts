@@ -24,7 +24,7 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 ## Contact & Procurement
 - Head Office: 202, Mahima Shubh Nilay, Jaisinghpura, Bhankrota, Jaipur, Rajasthan 302026
 - Phone: +91 60060 78815
-- WhatsApp Wholesale Desk: https://wa.me/916006078815
+- WhatsApp Wholesale Desk: https://api.whatsapp.com/send?phone=916006078815
 - Email: sales@krishigears.com
 - Website: https://krishigears.com
 `;

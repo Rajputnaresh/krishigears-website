@@ -92,7 +92,7 @@ export default function Header() {
       {/* Global B2B Trust & Utility Bar */}
       <div className="bg-zinc-950 border-b border-zinc-800/80 px-3 md:px-8 py-1 relative flex items-center justify-between text-xs text-zinc-300 min-h-[28px] md:min-h-[32px]">
         {/* Centered Trust Badges - clean on mobile */}
-        <div className="flex items-center gap-2 md:gap-4 overflow-hidden text-[11px] md:text-xs">
+        <div className="flex items-center gap-2 md:gap-4 overflow-hidden text-sm md:text-xs">
           <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold truncate">
             <span className="w-1.5 h-1.5 rounded-full bg-lime-400 motion-safe:animate-pulse shrink-0" />
             GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
@@ -108,14 +108,14 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Language & Display Options"
-              className="px-2 py-0.5 text-[10px] md:text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
+              className="px-2 py-0.5 text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
             >
               <Globe className="h-3 w-3 md:h-3.5 md:w-3.5 text-lime-400" />
               <span>{(i18n.language || "en").toUpperCase()}</span>
               <ChevronDown className="h-2.5 w-2.5 text-zinc-500" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-40 shadow-2xl z-[60]">
-              <div className="px-2 py-1.5 text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
+              <div className="px-2 py-1.5 text-xs uppercase font-bold text-zinc-400 tracking-wider">
                 Language / भाषा
               </div>
               <DropdownMenuItem onClick={() => switchLanguage('en')} className="cursor-pointer flex justify-between text-xs">
@@ -137,7 +137,7 @@ export default function Header() {
           <button
             onClick={toggleSunlight}
             title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
-            className={`px-2 py-0.5 text-[10px] md:text-[11px] font-semibold rounded flex items-center gap-1 transition border ${
+            className={`px-2 py-0.5 text-xs md:text-sm font-semibold rounded flex items-center gap-1 transition border ${
               sunlight
                 ? "bg-amber-100 text-amber-950 border-amber-300"
                 : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
@@ -157,7 +157,7 @@ export default function Header() {
             <div className="font-display font-black text-base md:text-lg tracking-tight text-white">
               KRISHI<span className="text-lime-500">GEARS</span>
             </div>
-            <div className="text-[8px] md:text-[10px] tracking-[0.25em] text-zinc-400 uppercase hidden sm:block">Farming Tools</div>
+            <div className="text-[8px] md:text-xs tracking-[0.25em] text-zinc-400 uppercase hidden sm:block">Farming Tools</div>
           </div>
         </Link>
 
@@ -264,7 +264,7 @@ export default function Header() {
 
           {/* WhatsApp RFQ Quote (h-10) */}
           <a
-            href={`https://wa.me/${COMPANY.whatsapp}?utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+            href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp Quick Quote"
@@ -328,7 +328,7 @@ export default function Header() {
 
               {/* Machinery Categories Quick Nav for Mobile Dealers */}
               <div className="py-4 border-b border-zinc-900">
-                <div className="text-[11px] font-bold text-lime-400 uppercase tracking-wider mb-2.5">
+                <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-2.5">
                   Machinery Catalog
                 </div>
                 <div className="grid grid-cols-2 gap-2">

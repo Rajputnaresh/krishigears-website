@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
   const waMsg = encodeURIComponent(
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. [Ref: web_catalog_${product.slug}] Please share pricing.`
   );
-  const waHref = `https://wa.me/${COMPANY.whatsapp}?text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
+  const waHref = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -86,7 +86,7 @@ export default function ProductCard({ product }) {
         </div>
         <div className="p-5 flex-1 flex flex-col justify-between">
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">
+            <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">
               {category?.name}
             </div>
             <h3 className="font-display font-bold text-base mt-1.5 leading-tight line-clamp-2 text-zinc-100 group-hover:text-lime-400 transition-colors">
@@ -97,24 +97,24 @@ export default function ProductCard({ product }) {
               {product.specs?.Engine && (
                 <div className="flex flex-col">
                   <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Engine</span>
-                  <span className="text-[11px] text-zinc-100 font-semibold">{product.specs.Engine}</span>
+                  <span className="text-sm text-zinc-100 font-semibold">{product.specs.Engine}</span>
                 </div>
               )}
               {product.specs?.Power && (
                 <div className="flex flex-col border-l border-zinc-800 pl-4">
                   <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Power</span>
-                  <span className="text-[11px] text-lime-400 font-bold">{product.specs.Power}</span>
+                  <span className="text-sm text-lime-400 font-bold">{product.specs.Power}</span>
                 </div>
               )}
               {product.specs?.Start && (
                 <div className="flex flex-col border-l border-zinc-800 pl-4">
                   <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Start</span>
-                  <span className="text-[11px] text-zinc-100 font-semibold">{product.specs.Start.replace(' / ', '/')}</span>
+                  <span className="text-sm text-zinc-100 font-semibold">{product.specs.Start.replace(' / ', '/')}</span>
                 </div>
               )}
             </div>
             {product.model && (
-              <div className="mt-2 inline-flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-300 font-mono">
+              <div className="mt-2 inline-flex items-center gap-1.5 text-xs tracking-wider text-zinc-300 font-mono">
                 <BadgeCheck className="h-3 w-3 text-lime-500"/> {product.model}
               </div>
             )}
@@ -125,10 +125,10 @@ export default function ProductCard({ product }) {
       {/* Card Action Footer (Sibling container — isolated from Link navigation) */}
       <div className="px-5 pb-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between gap-2 bg-zinc-950/40">
         <div className="flex items-center gap-1.5 flex-wrap">
-          <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.15em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2 py-0.5 rounded">
+          <span className="inline-flex items-center gap-1 text-xs font-bold tracking-[0.15em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2 py-0.5 rounded">
             {t('products.factorySupply', 'Factory Supply')}
           </span>
-          <span className="text-[10px] font-semibold text-zinc-300 border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 rounded">
+          <span className="text-xs font-semibold text-zinc-300 border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 rounded">
             {t('products.moq', 'MOQ: 2 Units')}
           </span>
         </div>

@@ -83,7 +83,7 @@ export default function CategoryPage() {
                 Buy Online at FarmingTools
               </a>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`WhatsApp Enquiry for ${category.name}`}

@@ -158,7 +158,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
   const whatsappText = isSpareParts
     ? encodeURIComponent(`Hello KrishiGears, I am a machinery repair shop / spare parts retailer in ${locationName}, ${data.state}. Please send the Power Weeder Spare Parts Wholesale Price List & MOQ details.`)
     : encodeURIComponent(`Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`);
-  const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${whatsappText}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${whatsappText}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const jsonLd = {
     '@context': 'https://schema.org',

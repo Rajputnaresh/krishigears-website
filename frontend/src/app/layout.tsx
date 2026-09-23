@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Manrope, Mukta } from "next/font/google";
+import { Outfit, Mukta } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,16 +12,10 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const mukta = Mukta({
   variable: "--font-mukta",
   subsets: ["latin", "devanagari"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600", "800"],
   display: "swap",
 });
 
@@ -143,13 +137,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${manrope.variable} ${mukta.variable} h-full antialiased dark`}
+      className={`${outfit.variable} ${mukta.variable} h-full antialiased sunlight`}
     >
       <head>
         <link rel="preconnect" href="https://api.krishigears.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem("kg_sunlight_mode");if(s==="true"){document.documentElement.classList.add("sunlight");document.documentElement.classList.remove("dark");}}catch(e){}})();`
+            __html: `(function(){try{var s=localStorage.getItem("kg_dark_mode");if(s==="true"){document.documentElement.classList.add("dark");document.documentElement.classList.remove("sunlight");}}catch(e){}})();`
           }}
         />
         <script
@@ -159,7 +153,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col pt-[86px] md:pt-[104px] bg-background text-foreground font-body">
         <Providers>
-          <div id="google_translate_element" style={{ display: 'none' }} aria-hidden="true" />
           <Header />
           <main className="flex-1">
             {children}
@@ -167,25 +160,6 @@ export default function RootLayout({
           <Footer />
           <FloatingActions />
         </Providers>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function googleTranslateElementInit() {
-                if (window.google && window.google.translate) {
-                  new window.google.translate.TranslateElement({
-                    pageLanguage: 'en',
-                    includedLanguages: 'en,hi,mr',
-                    autoDisplay: false
-                  }, 'google_translate_element');
-                }
-              }
-            `,
-          }}
-        />
-        <script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          async
-        />
       </body>
     </html>
   );
