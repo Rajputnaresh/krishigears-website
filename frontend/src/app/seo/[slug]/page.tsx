@@ -25,8 +25,19 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   
   const geoPage = GEO_SEO_PAGES.find(p => p.slug === params.slug);
   if (geoPage) {
+    // Truncate title cleanly to 45 chars so it fits with " | KrishiGears" under 60
     title = geoPage.title;
-    description = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Get the best pricing for ${geoPage.category.replace("-", " ")}. ${geoPage.hindiTitle}`;
+    if (title.length > 42) {
+      title = title.substring(0, 42).trim() + "...";
+    }
+
+    // Truncate description cleanly to 150 chars
+    let rawDesc = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Get the best pricing for ${geoPage.category.replace("-", " ")}. ${geoPage.hindiTitle}`;
+    if (rawDesc.length > 150) {
+      description = rawDesc.substring(0, 147).trim() + "...";
+    } else {
+      description = rawDesc;
+    }
   } else {
     const natPage = SEO_PAGES.find(p => p.slug === params.slug);
     if (natPage) {

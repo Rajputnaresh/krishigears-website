@@ -2,7 +2,15 @@ import { Metadata } from "next";
 import Page from "@/pages_temp/CategoryPage.jsx";
 import { CATEGORIES, PRODUCTS } from "@/data/catalog";
 
+
+export async function generateStaticParams() {
+  return CATEGORIES.map((category) => ({
+    slug: category.slug,
+  }));
+}
+
 export async function generateMetadata({
+
   params,
 }: {
   params: Promise<{ slug: string }>;

@@ -128,7 +128,7 @@ export default function ServiceProblems() {
                     <div key={prob.issue} className="p-5">
                       <div className="flex items-start gap-3 mb-3">
                         <AlertTriangle className="h-5 w-5 text-yellow-500 shrink-0 mt-0.5" />
-                        <h4 className="font-bold text-zinc-800 dark:text-zinc-200">{prob.issue}</h4>
+                        <h3 className="font-bold text-zinc-800 dark:text-zinc-200">{prob.issue}</h3>
                       </div>
                       <ul className="ml-8 space-y-1.5 text-sm text-zinc-300">
                         {prob.causes.map((c) => (
@@ -152,7 +152,7 @@ export default function ServiceProblems() {
             {SERVICE_OPTIONS.map((opt) => (
               <div key={opt.name} className="p-6 bg-zinc-900 rounded-md border border-zinc-800">
                 <div className="text-3xl mb-4">{opt.icon}</div>
-                <h4 className="font-bold text-xl text-white mb-2">{opt.name}</h4>
+                <h3 className="font-bold text-xl text-white mb-2">{opt.name}</h3>
                 <p className="text-zinc-300">{opt.desc}</p>
               </div>
             ))}
