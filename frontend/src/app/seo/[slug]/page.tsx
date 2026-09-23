@@ -1,5 +1,49 @@
-"use client";
 import Page from "@/pages_temp/SeoLanding.jsx";
-export default function SeoLandingPage() {
+import { GEO_SEO_PAGES } from "@/data/geoSeo";
+import { SEO_PAGES } from "@/data/catalog";
+import { Metadata } from "next";
+
+export async function generateStaticParams() {
+  const params = [];
+  
+  // National pages
+  SEO_PAGES.forEach((page) => {
+    params.push({ slug: page.slug });
+  });
+
+  // Geo pages
+  GEO_SEO_PAGES.forEach((page) => {
+    params.push({ slug: page.slug });
+  });
+
+  return params;
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  let title = "Agricultural Machinery Dealer";
+  let description = "Wholesale supply of Power Weeders and Agricultural Machinery.";
+  
+  const geoPage = GEO_SEO_PAGES.find(p => p.slug === params.slug);
+  if (geoPage) {
+    title = geoPage.title;
+    description = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Get the best pricing for ${geoPage.category.replace("-", " ")}. ${geoPage.hindiTitle}`;
+  } else {
+    const natPage = SEO_PAGES.find(p => p.slug === params.slug);
+    if (natPage) {
+      title = natPage.title;
+      description = natPage.description || description;
+    }
+  }
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://krishigears.com/seo/${params.slug}`
+    }
+  };
+}
+
+export default function SeoLandingPage({ params }: { params: { slug: string } }) {
   return <Page />;
 }
