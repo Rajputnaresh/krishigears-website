@@ -1,6 +1,6 @@
+"use client";
 import CompetitorComparison from "@/components/CompetitorComparison";
 
-"use client";
 
 import Link from "next/link";
 import {
