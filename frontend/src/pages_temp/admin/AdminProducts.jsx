@@ -151,13 +151,13 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
       </div>
       <div className="col-span-4">
         <div className="font-bold text-sm leading-tight line-clamp-2">{product.name}</div>
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px] text-zinc-400">
+        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
           {product.model && <span className="font-mono">{product.model}</span>}
           <span className="text-lime-500">{category?.name}</span>
         </div>
       </div>
       <div className="col-span-2">
-        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
+        <button onClick={onToggleActive} data-testid={`admin-toggle-active-${product.slug}`} className={`text-xs tracking-[0.2em] uppercase font-bold px-2 py-1 inline-flex items-center gap-1 ${product.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
           {product.active ? <Eye className="h-3 w-3"/> : <EyeOff className="h-3 w-3"/>}
           {product.active ? "Active" : "Hidden"}
         </button>
@@ -170,7 +170,7 @@ function ProductRow({ product, onEdit, onDelete, onToggleActive, onToggleFeature
       <div className="col-span-2 flex items-center gap-1">
         <button onClick={() => onMove("up")} className="h-7 w-7 grid place-items-center text-zinc-400 hover:text-lime-500" title="Move up"><ChevronUp className="h-4 w-4"/></button>
         <button onClick={() => onMove("down")} className="h-7 w-7 grid place-items-center text-zinc-400 hover:text-lime-500" title="Move down"><ChevronDown className="h-4 w-4"/></button>
-        <span className="text-[10px] text-zinc-300 font-mono">#{product.sort_order ?? "—"}</span>
+        <span className="text-xs text-zinc-300 font-mono">#{product.sort_order ?? "—"}</span>
       </div>
       <div className="col-span-2 flex items-center justify-end gap-2">
         <a href={`/products/${product.slug}`} target="_blank" rel="noreferrer" className="text-zinc-300 hover:text-lime-500" title="View on site"><Eye className="h-4 w-4"/></a>
@@ -321,7 +321,7 @@ function ProductEditor({ open, setOpen, product, onSaved }) {
               onRemove={(i) => removeArrItem("images", i)}
               previewImages
             />
-            <div className="mt-2 text-[10px] text-zinc-400">Tip: Paste image URLs from your phone gallery, Google Drive, Unsplash, or any public image hosting.</div>
+            <div className="mt-2 text-xs text-zinc-400">Tip: Paste image URLs from your phone gallery, Google Drive, Unsplash, or any public image hosting.</div>
           </Section>
 
           {/* Badges */}
@@ -424,7 +424,7 @@ function Section({ title, subtitle, children }) {
   return (
     <div className="border border-zinc-800 bg-surface-dark">
       <div className="px-4 py-3 border-b border-zinc-800">
-        <div className="text-[10px] tracking-[0.25em] uppercase text-lime-500 font-bold">{title}</div>
+        <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">{title}</div>
         {subtitle && <div className="text-xs text-zinc-400 mt-1">{subtitle}</div>}
       </div>
       <div className="p-4">{children}</div>

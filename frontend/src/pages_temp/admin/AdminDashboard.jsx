@@ -64,7 +64,7 @@ export default function AdminDashboard() {
             <img src={LOGO_URL} alt="" loading="lazy" className="h-10 w-10 rounded-full"/>
             <div>
               <div className="font-display font-black">KRISHI<span className="text-lime-500">GEARS</span> Admin</div>
-              <div className="text-[10px] tracking-[0.25em] text-zinc-400 uppercase">{user.email}</div>
+              <div className="text-xs tracking-[0.25em] text-zinc-400 uppercase">{user.email}</div>
             </div>
           </div>
           <button onClick={logout} data-testid="admin-logout" className="text-sm text-zinc-300 hover:text-lime-500 inline-flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function AdminDashboard() {
 function StatCard({ label, value }) {
   return (
     <div className="border border-zinc-800 bg-surface-dark p-4">
-      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-400">{label}</div>
+      <div className="text-xs uppercase tracking-[0.2em] text-zinc-400">{label}</div>
       <div className="font-display font-black text-3xl text-lime-500 mt-1">{value ?? "—"}</div>
     </div>
   );
@@ -204,7 +204,7 @@ function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
         return (
           <div key={lead.id} className="border-b border-zinc-800 last:border-b-0">
             <div className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-surface transition">
-              <div className="col-span-2 text-[10px] tracking-[0.2em] uppercase text-lime-500 font-bold">{lead.type}</div>
+              <div className="col-span-2 text-xs tracking-[0.2em] uppercase text-lime-500 font-bold">{lead.type}</div>
               <div className="col-span-4 font-bold text-white">{lead.data?.name || lead.data?.full_name || "—"}</div>
               <div className="col-span-3 text-sm text-zinc-200">{lead.data?.phone || "—"}</div>
               <div className="col-span-2 text-xs text-zinc-400">{new Date(lead.created_at).toLocaleDateString()}</div>
@@ -222,7 +222,7 @@ function LeadsList({ loading, leads, expanded, setExpanded, onRemove }) {
                 <div className="grid sm:grid-cols-2 gap-3 text-sm">
                   {Object.entries(lead.data || {}).map(([k, v]) => (
                     <div key={k} className="border border-zinc-800 p-3 bg-black">
-                      <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-400">{k.replace(/_/g, " ")}</div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-zinc-400">{k.replace(/_/g, " ")}</div>
                       <div className="text-zinc-800 dark:text-zinc-200 break-words mt-1">{v || <span className="text-zinc-300">—</span>}</div>
                     </div>
                   ))}
@@ -297,7 +297,7 @@ function BlogList({ loading, posts, onEdit, onDelete }) {
             <div className="text-xs text-zinc-400 mt-1">/blog/{p.slug}</div>
           </div>
           <div className="col-span-2">
-            <span className={`text-[10px] tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900"}`}>
+            <span className={`text-xs tracking-[0.2em] uppercase font-bold px-2 py-1 ${p.published ? "text-lime-500 bg-lime-500/10" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900"}`}>
               {p.published ? "PUBLISHED" : "DRAFT"}
             </span>
           </div>

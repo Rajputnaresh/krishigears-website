@@ -116,7 +116,7 @@ export default function WhatsAppLeadModal({
             <span>व्हाट्सएप पर रेट देखें / Continue to WhatsApp</span>
           </button>
 
-          <p className="text-[10px] text-zinc-400 text-center">
+          <p className="text-xs text-zinc-400 text-center">
             🔒 KrishiGears Verified Factory Desk · No spam · Instant reply within 15 mins
           </p>
         </form>

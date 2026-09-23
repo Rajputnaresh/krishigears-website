@@ -178,7 +178,7 @@ export default function Locations() {
                         <h3 className="text-base font-bold text-zinc-100 group-hover:text-lime-400 transition-colors">
                           {item.districtName}
                         </h3>
-                        <span className="text-[10px] text-zinc-400 bg-zinc-800 px-1.5 py-0.5 rounded shrink-0">
+                        <span className="text-xs text-zinc-400 bg-zinc-800 px-1.5 py-0.5 rounded shrink-0">
                           {item.soil_type?.split(" ")[0] || "Alluvial"}
                         </span>
                       </div>
@@ -186,7 +186,7 @@ export default function Locations() {
                       {item.key_crops && item.key_crops.length > 0 && (
                         <div className="mt-2.5 flex flex-wrap gap-1">
                           {item.key_crops.slice(0, 3).map((c) => (
-                            <span key={c} className="text-[10px] px-2 py-0.5 rounded bg-zinc-950 text-zinc-300 border border-zinc-800">
+                            <span key={c} className="text-xs px-2 py-0.5 rounded bg-zinc-950 text-zinc-300 border border-zinc-800">
                               {c}
                             </span>
                           ))}
@@ -199,7 +199,7 @@ export default function Locations() {
                     </div>
 
                     {/* Quick Vertical Jump Links */}
-                    <div className="mt-4 pt-3 border-t border-zinc-800/70 grid grid-cols-2 gap-2 text-[11px]">
+                    <div className="mt-4 pt-3 border-t border-zinc-800/70 grid grid-cols-2 gap-2 text-xs">
                       <Link
                         href={`/power-weeders-in-${item.slug}`}
                         className="text-zinc-300 hover:text-lime-400 transition flex items-center gap-1 truncate"

@@ -169,7 +169,7 @@ function ChannelCard({ icon: Icon, title, value, href, testid, onClick }) {
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 font-bold">{title}</div>
+        <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">{title}</div>
         <div className="font-bold text-white mt-1">{value}</div>
       </div>
     </>

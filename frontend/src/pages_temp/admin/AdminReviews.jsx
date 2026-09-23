@@ -73,9 +73,9 @@ function ReviewList({ loading, reviews, onEdit, onDelete, onToggleActive }) {
             </div>
           </div>
           <p className="text-sm text-zinc-200 mt-3 line-clamp-3">{r.text}</p>
-          {r.product_slug && <div className="text-[10px] text-lime-500 font-mono mt-2">Linked: {r.product_slug}</div>}
+          {r.product_slug && <div className="text-xs text-lime-500 font-mono mt-2">Linked: {r.product_slug}</div>}
           <div className="mt-4 flex items-center justify-between border-t border-zinc-800 pt-3">
-            <button onClick={() => onToggleActive(r)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${r.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
+            <button onClick={() => onToggleActive(r)} className={`text-xs tracking-wider uppercase font-bold px-2 py-1 ${r.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
               {r.active ? "Visible" : "Hidden"}
             </button>
             <div className="flex gap-2">

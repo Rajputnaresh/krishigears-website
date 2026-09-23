@@ -79,11 +79,11 @@ function VideoList({ loading, videos, onEdit, onDelete, onToggleActive }) {
                   <Icon className="h-3.5 w-3.5"/> {src.label}
                 </div>
                 <div className="font-bold text-sm mt-1 line-clamp-2">{v.title}</div>
-                <a href={v.url} target="_blank" rel="noreferrer" className="text-[10px] text-zinc-400 font-mono break-all line-clamp-1 hover:text-lime-500">{v.url}</a>
+                <a href={v.url} target="_blank" rel="noreferrer" className="text-xs text-zinc-400 font-mono break-all line-clamp-1 hover:text-lime-500">{v.url}</a>
               </div>
             </div>
             <div className="mt-3 flex items-center justify-between border-t border-zinc-800 pt-3">
-              <button onClick={() => onToggleActive(v)} className={`text-[10px] tracking-wider uppercase font-bold px-2 py-1 ${v.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
+              <button onClick={() => onToggleActive(v)} className={`text-xs tracking-wider uppercase font-bold px-2 py-1 ${v.active ? "text-lime-400 bg-lime-500/10 border border-lime-500/30" : "text-black dark:text-black bg-zinc-50 dark:bg-zinc-900 border border-zinc-800"}`}>
                 {v.active ? "Visible" : "Hidden"}
               </button>
               <div className="flex gap-2">
@@ -157,7 +157,7 @@ function VideoEditor({ open, setOpen, video, onSaved }) {
           <div>
             <Label className="text-xs uppercase tracking-wider text-zinc-300">Video URL* (YouTube / Instagram / X / Facebook)</Label>
             <Input data-testid="video-form-url" value={form.url} onChange={(e) => setUrl(e.target.value)} placeholder="https://youtube.com/watch?v=… or https://instagram.com/reel/…" className="bg-black border-zinc-800 mt-1.5 font-mono text-xs"/>
-            <div className="text-[10px] text-zinc-400 mt-1">Source auto-detected. YouTube videos embed natively; Instagram/X/FB open in a new tab when clicked.</div>
+            <div className="text-xs text-zinc-400 mt-1">Source auto-detected. YouTube videos embed natively; Instagram/X/FB open in a new tab when clicked.</div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>

@@ -73,7 +73,7 @@ export default function BlogPost({ initialPost } = {}) {
       {/* Article Header */}
       <header className="mt-8">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-lime-500/10 text-lime-400 border border-lime-500/30">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-semibold uppercase tracking-wider bg-lime-500/10 text-lime-400 border border-lime-500/30">
             <Wrench className="h-3 w-3" /> Field Service Guide
           </span>
           <div className="text-xs text-zinc-400 flex items-center gap-1.5">
@@ -98,7 +98,7 @@ export default function BlogPost({ initialPost } = {}) {
             {post.tags.map((t) => (
               <span 
                 key={t} 
-                className="text-[11px] font-medium px-2.5 py-1 rounded bg-zinc-900/90 border border-zinc-800 text-zinc-300 inline-flex items-center gap-1"
+                className="text-xs font-medium px-2.5 py-1 rounded bg-zinc-900/90 border border-zinc-800 text-zinc-300 inline-flex items-center gap-1"
               >
                 <Tag className="h-2.5 w-2.5 text-lime-400"/>
                 {t}
@@ -119,7 +119,7 @@ export default function BlogPost({ initialPost } = {}) {
               className="max-h-full max-w-full object-contain rounded" 
             />
           </div>
-          <div className="px-4 py-2 bg-zinc-900/80 border-t border-zinc-800/80 text-[11px] text-zinc-400 flex items-center justify-between">
+          <div className="px-4 py-2 bg-zinc-900/80 border-t border-zinc-800/80 text-xs text-zinc-400 flex items-center justify-between">
             <span>Genuine KrishiGears machinery & spare parts fitment</span>
             <span className="text-lime-400 font-mono">B2B Standard</span>
           </div>

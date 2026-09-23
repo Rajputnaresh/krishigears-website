@@ -36,7 +36,7 @@ export default function AdminLogin() {
           <img src={LOGO_URL} alt="KrishiGears" loading="lazy" className="h-14 w-14 rounded-full"/>
           <div>
             <div className="font-display font-black text-xl">KRISHI<span className="text-lime-500">GEARS</span></div>
-            <div className="text-[10px] tracking-[0.25em] text-zinc-400 uppercase">Admin Console</div>
+            <div className="text-xs tracking-[0.25em] text-zinc-400 uppercase">Admin Console</div>
           </div>
         </div>
         <h1 className="font-display font-bold text-2xl mt-8">Sign in to manage</h1>

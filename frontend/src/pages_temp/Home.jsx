@@ -203,28 +203,28 @@ export default function Home() {
             <ShieldCheck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm">FMTTI Tested</div>
-              <div className="text-[10px] text-zinc-400 uppercase tracking-wider">Quality Assured</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider">Quality Assured</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <Truck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm">PAN India Delivery</div>
-              <div className="text-[10px] text-zinc-400 uppercase tracking-wider">Fast Logistics</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider">Fast Logistics</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <BadgeCheck className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm">Genuine OEM</div>
-              <div className="text-[10px] text-zinc-400 uppercase tracking-wider">Original Spares</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider">Original Spares</div>
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-3">
             <Headphones className="h-8 w-8 text-lime-500" />
             <div>
               <div className="font-bold text-sm">24x7 Support</div>
-              <div className="text-[10px] text-zinc-400 uppercase tracking-wider">Expert Help</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider">Expert Help</div>
             </div>
           </div>
         </div>
@@ -527,7 +527,7 @@ function VideoCard({ video }) {
         </div>
       </div>
       <div className="absolute bottom-3 left-3 right-3">
-        <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
+        <div className="text-xs tracking-[0.25em] uppercase text-lime-400 font-bold">{video.source}</div>
         <div className="text-white font-bold text-sm leading-tight mt-1 line-clamp-2">{video.title}</div>
       </div>
     </a>

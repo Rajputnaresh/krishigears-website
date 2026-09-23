@@ -342,7 +342,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
         {/* Agronomy & Local Soil Mechanization Matrix */}
         <section className="grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-7 bg-zinc-950 border border-zinc-800 p-6 md:p-8 rounded-2xl shadow-xl space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold tracking-wide uppercase bg-lime-500/10 text-lime-400 border border-lime-500/30">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-semibold tracking-wide uppercase bg-lime-500/10 text-lime-400 border border-lime-500/30">
               District Agricultural Profile
             </div>
             <h2 className="font-display font-bold text-2xl text-white">

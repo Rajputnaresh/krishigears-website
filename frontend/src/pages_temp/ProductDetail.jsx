@@ -240,7 +240,7 @@ export default function ProductDetail() {
                     key={k}
                     className={`p-5 border-b border-zinc-800 ${i % 2 === 0 ? "md:border-r" : ""}`}
                   >
-                    <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 font-bold">
+                    <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">
                       {k.replace(/_/g, " ")}
                     </div>
                     <div className="text-white font-bold mt-1">{v}</div>

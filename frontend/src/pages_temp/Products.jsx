@@ -30,7 +30,7 @@ export default function Products() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                   <Icon className="absolute top-4 left-4 h-6 w-6 text-lime-500" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="text-[10px] tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
+                    <div className="text-xs tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
                     <div className="font-display font-bold text-lg leading-tight mt-1 text-white">{c.name}</div>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Products() {
             {PRODUCTS.map((prod) => (
               <div key={prod.slug} className="kg-card p-5 border border-zinc-800 bg-surface rounded-lg flex flex-col justify-between group hover:border-lime-500/40 transition">
                 <div>
-                  <div className="flex items-center justify-between text-[11px] text-zinc-400 mb-2">
+                  <div className="flex items-center justify-between text-xs text-zinc-400 mb-2">
                     <span className="text-lime-400 font-bold uppercase tracking-wider">{prod.category.replace(/-/g, " ")}</span>
                     <span>{prod.model}</span>
                   </div>
@@ -79,7 +79,7 @@ export default function Products() {
                   </Link>
                   <Link
                     href={`/products/category/${prod.category}`}
-                    className="text-[11px] text-zinc-400 hover:text-white transition-colors"
+                    className="text-xs text-zinc-400 hover:text-white transition-colors"
                   >
                     Category Hub →
                   </Link>

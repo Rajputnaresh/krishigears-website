@@ -411,7 +411,7 @@ function SetupStep({ value, num, title, done, children }) {
             {done ? <Check className="h-4 w-4"/> : num}
           </div>
           <div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 font-bold">Step {num}</div>
+            <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">Step {num}</div>
             <div className="font-display font-bold text-lg">{title}</div>
           </div>
         </div>
@@ -436,7 +436,7 @@ function CodeBlock({ label, code, onCopy }) {
   return (
     <div className="mt-3 border border-zinc-800 bg-black overflow-hidden">
       <div className="flex items-center justify-between px-3 py-2 border-b border-zinc-800 bg-surface">
-        <span className="text-[10px] tracking-[0.25em] uppercase text-zinc-400 font-bold">{label}</span>
+        <span className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">{label}</span>
         <button
           onClick={onCopy}
           className="text-xs text-lime-500 hover:text-lime-400 inline-flex items-center gap-1.5 font-bold"

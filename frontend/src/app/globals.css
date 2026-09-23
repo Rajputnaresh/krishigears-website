@@ -191,7 +191,7 @@ html.sunlight body {
 
 html.sunlight .kg-card {
     background-color: #FAFAFA !important;
-    border-color: #E4E4E7 !important;
+    border-color: #000000 !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -203,7 +203,7 @@ html.sunlight .bg-black\/80,
 html.sunlight [data-testid="site-header"],
 html.sunlight .fixed.bottom-0 {
     background-color: #FFFFFF !important;
-    border-color: #D4D4D8 !important;
+    border-color: #000000 !important;
 }
 
 /* Invert dark hero gradient overlays into clean high-contrast light backdrop */
@@ -234,7 +234,7 @@ html.sunlight [data-testid="categories-section"] img {
 
 html.sunlight [data-testid="floating-call-btn"] {
     background-color: #F4F4F5 !important;
-    border-color: #D4D4D8 !important;
+    border-color: #000000 !important;
     color: #18181B !important;
 }
 
@@ -257,7 +257,7 @@ html.sunlight .bg-surface-darker,
 html.sunlight .bg-surface-darkest,
 html.sunlight .bg-surface-dark {
     background-color: #FFFFFF !important;
-    border-color: #E4E4E7 !important;
+    border-color: #000000 !important;
 }
 
 /* High-contrast text tokens for light mode */
@@ -269,16 +269,28 @@ html.sunlight .text-white {
 }
 
 html.sunlight .text-zinc-300,
-html.sunlight .text-zinc-400 {
-    color: #27272A !important;
+html.sunlight .text-gray-300,
+html.sunlight .text-slate-300,
+html.sunlight .text-zinc-400,
+html.sunlight .text-gray-400,
+html.sunlight .text-slate-400 {
+    color: #000000 !important;
+    font-weight: 600 !important;
 }
 
 html.sunlight .text-zinc-500,
-html.sunlight .text-zinc-600 {
-    color: #4B5563 !important;
+html.sunlight .text-gray-500,
+html.sunlight .text-slate-500,
+html.sunlight .text-zinc-600,
+html.sunlight .text-gray-600,
+html.sunlight .text-slate-600 {
+    color: #000000 !important;
+    font-weight: 500 !important;
 }
 
 html.sunlight .border-zinc-800,
+html.sunlight .border-gray-800,
+html.sunlight .border-slate-800,
 html.sunlight .border-zinc-700,
 html.sunlight .border-zinc-850,
 html.sunlight .border-zinc-900,
@@ -287,7 +299,7 @@ html.sunlight .border-zinc-800\/80,
 html.sunlight .border-zinc-800\/60,
 html.sunlight .border-zinc-800\/40,
 html.sunlight .border-zinc-700\/80 {
-    border-color: #D4D4D8 !important;
+    border-color: #000000 !important;
 }
 
 /* Lime text and accents — darkened to deep forest green for 7:1+ outdoor contrast on white */
@@ -295,7 +307,8 @@ html.sunlight .text-lime-300,
 html.sunlight .text-lime-400,
 html.sunlight .text-lime-500,
 html.sunlight .text-lime-600 {
-    color: #15803D !important;
+    color: #022C22 !important;
+    font-weight: 900 !important;
 }
 
 html.sunlight .border-lime-500,
@@ -335,7 +348,7 @@ html.sunlight .bg-whatsapp {
 html.sunlight .bg-black\/85,
 html.sunlight .bg-black\/80 {
     background-color: #FFFFFF !important;
-    border-color: #D4D4D8 !important;
+    border-color: #000000 !important;
     color: #09090B !important;
 }
 
@@ -345,7 +358,7 @@ html.sunlight textarea,
 html.sunlight select {
     background-color: #FFFFFF !important;
     color: #09090B !important;
-    border-color: #D4D4D8 !important;
+    border-color: #000000 !important;
 }
 
 html.sunlight input::placeholder,
@@ -359,7 +372,7 @@ html.sunlight [role="dialog"],
 html.sunlight [data-slot="sheet-content"] {
     background-color: #FFFFFF !important;
     color: #09090B !important;
-    border-color: #E4E4E7 !important;
+    border-color: #000000 !important;
 }
 
 /* Google Translate Widget Overrides — seamless integration without banner */
@@ -390,4 +403,48 @@ body {
 }
 #google_translate_element {
     display: none !important;
+}
+
+/* Fix Input Placeholders for extreme contrast */
+html.sunlight input::placeholder,
+html.sunlight textarea::placeholder {
+    color: #000000 !important;
+    opacity: 0.8 !important;
+    font-weight: 500 !important;
+}
+
+html.sunlight input,
+html.sunlight textarea {
+    color: #000000 !important;
+    border-color: #000000 !important;
+    background-color: #FFFFFF !important;
+}
+
+/* Fix gradients turning black over sunlight white backgrounds */
+html.sunlight .from-black {
+    --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.sunlight .via-black\/80,
+html.sunlight .via-black\/90,
+html.sunlight .via-black\/40,
+html.sunlight .via-black {
+    --tw-gradient-via-stops: var(--tw-gradient-from), rgba(255, 255, 255, 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+    --tw-gradient-stops: var(--tw-gradient-via-stops) !important;
+}
+
+html.sunlight .to-transparent {
+    --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
+}
+
+/* Fix hover states in sunlight mode */
+html.sunlight .hover\:text-white:hover,
+html.sunlight .hover\:text-zinc-200:hover {
+    color: #000000 !important;
+}
+html.sunlight .hover\:text-lime-400:hover,
+html.sunlight .hover\:text-lime-500:hover {
+    color: #022C22 !important;
 }
