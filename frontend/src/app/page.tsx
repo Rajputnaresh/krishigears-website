@@ -1,3 +1,5 @@
+import CompetitorComparison from "@/components/CompetitorComparison";
+
 "use client";
 
 import Link from "next/link";
@@ -197,6 +199,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CompetitorComparison />
 
       {/* ========== CATEGORY GRID (Bento) ========== */}
       <section data-testid="categories-section" className="kg-section">
