@@ -74,6 +74,19 @@ export const metadata: Metadata = {
     description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, contractors. 25-35% dealer margins, 24-hour spares dispatch, GST registered.",
     images: ["/logo512.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 const organizationJsonLd = {
