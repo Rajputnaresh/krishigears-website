@@ -126,7 +126,7 @@ export default function Home() {
             <h1 className="kg-h1 mt-4 sm:mt-6 text-balance text-zinc-50">
               {t('hero.titleLine1', 'For the')} <span className="text-lime-400">{t('hero.farmers', 'Farmers,')}</span><br/>
               {t('hero.titleLine2', 'With the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer,')}</span><br/>
-              {t('hero.titleLine3', 'To the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer.')}</span>
+              {t('hero.titleLine3', 'To the')} <span className="text-lime-400">{t('hero.farmer2', 'Farmer.')}</span>
               <span className="block text-zinc-200 mt-1 sm:mt-2 text-xl sm:text-3xl lg:text-4xl tracking-[0.2em] sm:tracking-[0.25em]">{t('hero.hamesha', 'HAMESHA.')}</span>
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
@@ -188,7 +188,7 @@ export default function Home() {
         {/* Bottom marquee */}
         <div className="hidden sm:block absolute bottom-0 left-0 right-0 border-t border-zinc-800 bg-black/80 backdrop-blur-md py-3 overflow-hidden">
           <div className="flex gap-12 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
-            {[...TRUST_BADGES, ...TRUST_BADGES].map((b, i) => {
+            {TRUST_BADGES.map((b, i) => {
               const Icon = ICONS[b.icon] || ShieldCheck;
               return (
                 <div key={`marquee-${i}-${b.icon}`} className="flex items-center gap-2 text-zinc-200 text-sm">
@@ -261,7 +261,6 @@ export default function Home() {
                 >
                   <Icon className="h-5 w-5 text-lime-500 mb-2 sm:mb-3" />
                   <div className="font-display font-bold text-sm sm:text-base leading-tight text-zinc-100">{c.name}</div>
-                  <div className="mt-1.5 sm:mt-2 text-sm sm:text-xs text-lime-400 font-semibold">{t('categories.viewRange', 'View Range →')}</div>
                 </Link>
               );
             })}
@@ -329,8 +328,8 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black dark:text-black p-6 max-w-xs lime-glow">
-              <div className="font-display font-black text-4xl">10K+</div>
-              <div className="text-sm font-bold uppercase tracking-wider mt-1">Farmers Served Across India</div>
+              <div className="font-display font-black text-4xl">500+</div>
+              <div className="text-sm font-bold uppercase tracking-wider mt-1">Active Dealer Network</div>
             </div>
           </div>
           <div className="lg:col-span-6">
@@ -658,7 +657,7 @@ function DistrictLocator() {
               onChange={(e) => setSelectedState(e.target.value)}
               className="px-4 py-2.5 bg-zinc-950 border border-zinc-700 hover:border-lime-500/50 rounded-md text-sm font-semibold text-zinc-100 focus:outline-none focus:border-lime-500 transition-colors"
             >
-              <option value="All">{t('locator.allStates', '🔍 All India States')}</option>
+              <option value="All">{t('locator.allStates', 'All India States')}</option>
               <optgroup label="Active B2B Agri Zones">
                 {states.map((st) => (
                   <option key={st} value={st} className="bg-zinc-950 text-zinc-100">

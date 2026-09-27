@@ -22,10 +22,10 @@ const mukta = Mukta({
 export const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
-    default: "KrishiGears | B2B Agricultural Machinery & Genuine Spare Parts",
+    default: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
     template: "%s | KrishiGears",
   },
-  description: "KrishiGears is a Jaipur-based B2B agricultural machinery brand providing FMTTI-tested power weeders, tillers, and OEM spare parts to dealers and FPOs across India.",
+  description: "Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers, FPOs, and contractors across India. 25-35% dealer margins, 24-hour express spare parts dispatch, GST invoicing, and direct WhatsApp video tech support. Retail via FarmingTools.in.",
   alternates: {
     canonical: "https://krishigears.com",
     languages: {
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://krishigears.com",
     siteName: "KrishiGears",
-    title: "KrishiGears | B2B Agricultural Machinery & Genuine Spare Parts",
-    description: "KrishiGears is a Jaipur-based B2B agricultural machinery brand providing FMTTI-tested power weeders, tillers, and OEM spare parts to dealers across India.",
+    title: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
+    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, contractors. 25-35% dealer margins, 24-hour express spares dispatch, GST invoicing, WhatsApp video support.",
     images: [
       {
         url: "/logo512.png",
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KrishiGears | B2B Agricultural Machinery & Genuine Spare Parts",
-    description: "Jaipur-based B2B agricultural machinery supplier for dealers, FPOs, and institutions across India.",
+    title: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
+    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, contractors. 25-35% dealer margins, 24-hour spares dispatch, GST registered.",
     images: ["/logo512.png"],
   },
 };

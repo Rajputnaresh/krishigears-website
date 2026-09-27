@@ -17,7 +17,7 @@ export default function CompetitorComparison() {
               <tr className="bg-zinc-900 border-b border-zinc-800 text-zinc-300 text-xs sm:text-sm uppercase tracking-wider">
                 <th className="p-4 sm:p-6 font-bold">Feature</th>
                 <th className="p-4 sm:p-6 font-bold text-center border-x border-zinc-800 w-1/3">Traditional Brands</th>
-                <th className="p-4 sm:p-6 font-black text-center bg-lime-500/10 text-lime-400 w-1/3">KrishiGears (B2B)</th>
+                <th className="p-4 sm:p-6 font-bold text-center border-x border-zinc-800 w-1/3">KrishiGears (B2B)</th>
               </tr>
             </thead>
             <tbody className="text-sm sm:text-base divide-y divide-zinc-800 bg-zinc-950">
@@ -39,7 +39,7 @@ export default function CompetitorComparison() {
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Wholesale Pricing (7HP Weeder)</td>
                 <td className="p-4 sm:p-6 text-center text-zinc-500">₹36,000 - ₹42,000</td>
-                <td className="p-4 sm:p-6 text-center text-lime-400 font-bold bg-lime-500/5">₹28,500 (Bulk MOQ)</td>
+                <td className="p-4 sm:p-6 text-center text-lime-400 font-bold bg-lime-500/5">₹28,500 <span className="block text-[10px] leading-none text-zinc-500 font-normal mt-0.5">Bulk MOQ · ex-factory · excl. GST</span></td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Warranty Support</td>
