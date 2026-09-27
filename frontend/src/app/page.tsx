@@ -1,7 +1,5 @@
 "use client";
 
-import WeederShowcase from "@/components/WeederShowcase";
-
 import CompetitorComparison from "@/components/CompetitorComparison";
 
 
@@ -209,7 +207,6 @@ export default function Home() {
       <CompetitorComparison />
 
       {/* ========== CATEGORY GRID (Bento) ========== */}
-      <WeederShowcase />
       <section data-testid="categories-section" className="kg-section">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
