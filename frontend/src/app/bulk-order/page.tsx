@@ -57,7 +57,7 @@ const bulkOrderFaqJsonLd = {
       "name": "Do you provide GST invoices for Input Tax Credit (ITC)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Every shipment includes a 100% compliant GST tax invoice (GSTIN: 08EQLPD7160R1Z2) and transport e-way bill for immediate input credit claim."
+        "text": "Yes. Every shipment includes a 100% compliant GST tax invoice (GSTIN: 08AANCK2216L1ZA) and transport e-way bill for immediate input credit claim."
       }
     }
   ]

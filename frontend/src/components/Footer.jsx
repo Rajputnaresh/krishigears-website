@@ -48,7 +48,7 @@ export default function Footer() {
             <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full ring-1 ring-lime-500/40" />
             <div>
               <div className="font-display font-black text-xl text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
-              <div className="text-xs tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
+              <div className="text-sm tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
             </div>
           </div>
           <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
@@ -56,12 +56,12 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
           {[
-            { Icon: FacebookIcon, label: "KrishiGears Official Facebook Page" },
-            { Icon: InstagramIcon, label: "KrishiGears Instagram Machinery Showcase" },
-            { Icon: YoutubeIcon, label: "KrishiGears YouTube Demonstration Channel" },
-            { Icon: TwitterIcon, label: "KrishiGears Twitter Updates" },
-          ].map(({ Icon: I, label }) => (
-            <a key={label} href="#" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-700 rounded-md hover:border-lime-500 hover:text-lime-400 text-zinc-300 transition">
+            { Icon: FacebookIcon, label: "KrishiGears Official Facebook Page", href: "https://www.facebook.com/krishigears" },
+            { Icon: InstagramIcon, label: "KrishiGears Instagram Machinery Showcase", href: "https://www.instagram.com/krishigears" },
+            { Icon: YoutubeIcon, label: "KrishiGears YouTube Demonstration Channel", href: "https://www.youtube.com/@krishigears" },
+            { Icon: TwitterIcon, label: "KrishiGears Twitter Updates", href: "https://twitter.com/krishigears" },
+          ].map(({ Icon: I, label, href }) => (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="h-9 w-9 grid place-items-center border border-zinc-700 rounded-md hover:border-lime-500 hover:text-lime-400 text-zinc-300 transition">
               <I className="h-4 w-4" />
             </a>
           ))}
@@ -119,7 +119,7 @@ export default function Footer() {
                     href="https://www.google.com/maps/search/?api=1&query=26.8538,75.7196+(KrishiGears+Jaipur+HQ)"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-lime-400 hover:underline inline-flex items-center gap-1"
+                    className="text-sm text-lime-400 hover:underline inline-flex items-center gap-1"
                   >
                     View on Google Maps →
                   </a>
@@ -132,12 +132,16 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 text-lime-500 shrink-0" />
-              <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400">{COMPANY.email}</a>
+              <div className="flex flex-col">
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400">{COMPANY.email}</a>
+                <a href={`mailto:${COMPANY.dealers}`} className="hover:text-lime-400 text-xs text-zinc-400">Dealers: {COMPANY.dealers}</a>
+              </div>
             </li>
             <li className="flex items-start gap-3">
               <ShieldCheck className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
               <div>
-                <span>GSTIN: <span className="text-zinc-200 font-mono text-xs">{COMPANY.gst}</span></span>
+                <div>GSTIN: <span className="text-zinc-200 font-mono text-sm">{COMPANY.gst}</span></div>
+                <div className="mt-0.5 text-xs text-zinc-400">CIN: <span className="text-zinc-300 font-mono">{COMPANY.cin}</span></div>
                 <div className="mt-1">
                   <a
                     href="https://services.gst.gov.in/services/searchtp"
@@ -158,19 +162,19 @@ export default function Footer() {
       <div className="border-t border-zinc-800">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 grid md:grid-cols-2 gap-8">
           <div>
-            <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 mb-3">
+            <div className="text-sm tracking-[0.25em] uppercase text-zinc-400 mb-3">
               {t('footer.b2bSupply', 'B2B Supply Programs')}
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-zinc-400">
               <Link href="/seo/power-weeders-supplier-india" className="hover:text-lime-400">Power Weeder Dealer Network</Link>
               <Link href="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-400">Power Weeder Spare Parts OEM Supply</Link>
             </div>
           </div>
           <div>
-            <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 mb-3">
+            <div className="text-sm tracking-[0.25em] uppercase text-zinc-400 mb-3">
               {t('footer.topStates', 'Top Dealer States')}
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-zinc-400">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-zinc-400">
               <Link href="/dealer/maharashtra" className="hover:text-lime-400">Maharashtra</Link>
               <Link href="/dealer/karnataka" className="hover:text-lime-400">Karnataka</Link>
               <Link href="/dealer/tamil-nadu" className="hover:text-lime-400">Tamil Nadu</Link>
@@ -189,8 +193,8 @@ export default function Footer() {
 
       <div className="border-t border-zinc-850">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-zinc-400">© {new Date().getFullYear()} KrishiGears. {t('footer.allRights', 'All rights reserved.')}</div>
-          <div className="text-xs text-zinc-400">{COMPANY.website}</div>
+          <div className="text-sm text-zinc-400">© {new Date().getFullYear()} {COMPANY.legalName}. {t('footer.allRights', 'All rights reserved.')}</div>
+          <div className="text-sm text-zinc-400">{COMPANY.website}</div>
         </div>
       </div>
     </footer>

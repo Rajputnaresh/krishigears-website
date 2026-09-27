@@ -3,7 +3,7 @@ import Page from "@/pages_temp/Contact.jsx";
 
 export const metadata: Metadata = {
   title: "Contact KrishiGears | Jaipur HQ, Wholesale Desk & Dealer Support",
-  description: "Contact KrishiGears Jaipur HQ for B2B machinery quotes, dealership onboarding, and genuine spare parts dispatch. Phone: +91 60060 78815. GSTIN: 08EQLPD7160R1Z2.",
+  description: "Contact KrishiGears Jaipur HQ for B2B machinery quotes, dealership onboarding, and genuine spare parts dispatch. Phone: +91 60060 78815. GSTIN: 08AANCK2216L1ZA.",
   alternates: {
     canonical: "https://krishigears.com/contact",
   },
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "KrishiGears",
-  "legalName": "KrishiGears",
-  "taxID": "08EQLPD7160R1Z2",
+  "name": "KRISHIGEARS INDIA PRIVATE LIMITED",
+  "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
+  "taxID": "08AANCK2216L1ZA",
   "image": "https://krishigears.com/logo512.png",
   "url": "https://krishigears.com",
   "telephone": "+916006078815",
   "email": "sales@krishigears.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "202, Mahima Shubh Nilay, Jaisinghpura",
+    "streetAddress": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
     "addressLocality": "Jaipur",
     "addressRegion": "Rajasthan",
     "postalCode": "302026",

@@ -96,32 +96,38 @@ const organizationJsonLd = {
       "@type": "Organization",
       "@id": "https://krishigears.com/#organization",
       "name": "KrishiGears",
-      "legalName": "KrishiGears",
-      "taxID": "08EQLPD7160R1Z2",
+      "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
+      "taxID": "08AANCK2216L1ZA",
+      "vatID": "08AANCK2216L1ZA",
+      "identifier": "U46539RJ2026PTC117758",
       "url": "https://krishigears.com",
       "logo": "https://krishigears.com/logo512.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+91-6006078815",
+        "email": "sales@krishigears.com",
         "contactType": "sales & dealer support",
         "areaServed": "IN",
         "availableLanguage": ["en", "hi", "mr"]
       },
       "sameAs": [
         "https://www.indiamart.com/krishigears/",
-        "https://farmingtools.in"
+        "https://farmingtools.in",
+        "https://www.facebook.com/krishigears",
+        "https://www.instagram.com/krishigears",
+        "https://www.youtube.com/@krishigears"
       ]
     },
     {
       "@type": "LocalBusiness",
       "@id": "https://krishigears.com/#localbusiness",
-      "name": "KrishiGears Central Machinery & Spares Depot",
+      "name": "KRISHIGEARS INDIA PRIVATE LIMITED — Central Machinery & Spares Depot",
       "image": "https://krishigears.com/logo512.png",
       "telephone": "+91-6006078815",
       "priceRange": "₹₹",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "202, Mahima Shubh Nilay, Jaisinghpura, Bhankrota",
+        "streetAddress": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
         "addressLocality": "Jaipur",
         "addressRegion": "Rajasthan",
         "postalCode": "302026",

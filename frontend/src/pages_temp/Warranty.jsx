@@ -41,7 +41,7 @@ export default function Warranty() {
               { i: Wrench, t: "Authorized Service", d: "Repairs through our authorized service centre network across 28+ states." },
               { i: FileCheck, t: "Genuine Spare Parts", d: "Only OEM-grade spare parts, dispatched PAN India within 48 hours." },
               { i: Clock, t: "Fast Resolution", d: "Warranty queries acknowledged within 24 hours of submission." },
-              { i: Headphones, t: "Dedicated Support", d: "Customer care available via phone, WhatsApp and email." },
+              { i: Headphones, t: "Dedicated Support", d: `Email: ${COMPANY.support} · Phone & WhatsApp support desk.`, link: `mailto:${COMPANY.support}` },
               { i: Phone, t: "Call Support", d: COMPANY.phone, link: `tel:${COMPANY.phone.replace(/\s+/g, "")}` },
             ].map((b) => {
               const I = b.i;
@@ -50,7 +50,11 @@ export default function Warranty() {
                   <I className="h-7 w-7 text-lime-500" />
                   <h3 className="font-display font-bold text-lg mt-4">{b.t}</h3>
                   <p className="text-zinc-300 text-sm mt-2 leading-relaxed">{b.d}</p>
-                  {b.link && <a href={b.link} className="mt-4 inline-block text-lime-500 text-sm font-bold">Call now →</a>}
+                  {b.link && (
+                    <a href={b.link} className="mt-4 inline-block text-lime-500 text-sm font-bold">
+                      {b.link.startsWith("mailto:") ? "Email support →" : "Call now →"}
+                    </a>
+                  )}
                 </div>
               );
             })}

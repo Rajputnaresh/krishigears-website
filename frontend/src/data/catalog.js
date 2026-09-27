@@ -40,16 +40,25 @@ export const PLOWING = FIELD_TRACTOR;
 
 export const COMPANY = {
   name: "KrishiGears",
+  legalName: "KRISHIGEARS INDIA PRIVATE LIMITED",
   tagline: "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
   website: "KrishiGears.com",
   email: "sales@krishigears.com",
-  support: "service@krishigears.com",
+  contact: "contact@krishigears.com",
+  support: "support@krishigears.com",
+  service: "service@krishigears.com",
   accounts: "accounts@krishigears.com",
   dealers: "dealers@krishigears.com",
   phone: "+91 60060 78815",
   whatsapp: "916006078815",
-  address: "Jaipur, Rajasthan, India",
-  gst: "08EQLPD7160R1Z2",
+  address: "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026",
+  city: "Jaipur",
+  state: "Rajasthan",
+  pincode: "302026",
+  gst: "08AANCK2216L1ZA",
+  cin: "U46539RJ2026PTC117758",
+  pan: "AANCK2216L",
+  tan: "JPRK10437A",
 };
 
 // FarmingTools.in — sister B2C ecommerce site for consumer transactions.

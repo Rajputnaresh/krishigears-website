@@ -1,14 +1,17 @@
 // JSON-LD structured data helpers — returned as a serialized <script> tag
 // inside a Helmet child. Each function returns a stringified JSON-LD blob.
 
-const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.in").replace(/\/$/, "");
+const SITE = (process.env.REACT_APP_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://krishigears.com").replace(/\/$/, "");
 
 export function organizationJsonLd() {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "KrishiGears",
-    legalName: "KrishiGears",
+    legalName: "KRISHIGEARS INDIA PRIVATE LIMITED",
+    taxID: "08AANCK2216L1ZA",
+    vatID: "08AANCK2216L1ZA",
+    identifier: "U46539RJ2026PTC117758",
     url: SITE,
     logo: {
       "@type": "ImageObject",
@@ -22,8 +25,10 @@ export function organizationJsonLd() {
     email: "sales@krishigears.com",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
       addressLocality: "Jaipur",
       addressRegion: "Rajasthan",
+      postalCode: "302026",
       addressCountry: "IN",
     },
     sameAs: [

@@ -1,6 +1,7 @@
 export async function GET() {
-  const content = `# KrishiGears — B2B Agricultural Machinery & Genuine Spare Parts
-> Jaipur, Rajasthan, India (GSTIN: 08EQLPD7160R1Z2)
+  const content = `# KRISHIGEARS INDIA PRIVATE LIMITED — B2B Farm Machinery & Genuine Spare Parts
+> Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
+> CIN: U46539RJ2026PTC117758 | GSTIN: 08AANCK2216L1ZA | PAN: AANCK2216L | TAN: JPRK10437A
 
 KrishiGears manufactures, distributes, and wholesales commercial farm machinery across all 740 Indian districts.
 All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with GST billing.
@@ -21,11 +22,12 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 - **Dealer Terms**: 15% to 22% gross margin, zero dead-stock on-demand ordering, exclusive district territory, 24-48h dispatch from Jaipur central warehouse.
 - **Government Subsidies**: Supported on SMAM (Sub-Mission on Agricultural Mechanization) and State DBT Agriculture portals (Rajasthan, MP, UP, Bihar, Maharashtra, Karnataka, Andhra Pradesh, Telangana).
 
-## Contact & Procurement
-- Head Office: 202, Mahima Shubh Nilay, Jaisinghpura, Bhankrota, Jaipur, Rajasthan 302026
+## Contact & Registered Office
+- Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
 - Phone: +91 60060 78815
 - WhatsApp Wholesale Desk: https://api.whatsapp.com/send?phone=916006078815
 - Email: sales@krishigears.com
+- Corporate Desk: contact@krishigears.com
 - Website: https://krishigears.com
 `;
 

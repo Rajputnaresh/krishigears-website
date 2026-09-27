@@ -43,7 +43,7 @@ KrishiGears supplies precision-machined, tested replacement assemblies across al
 - **Bulk Profit Margin:** 35% to 50% retail margin for local repair shops and agro-service stockists.
 - **Low Minimum Order Quantity (MOQ):** Mixed-carton orders starting at ₹15,000 to enable shops to stock fast-moving parts without tying up capital.
 - **Express Dispatch:** Packed and dispatched within 24 to 48 hours via surface cargo or Speed Post directly from our Jaipur central depot.
-- **GST Input Tax Credit (ITC):** 100% compliant GST tax invoices (GSTIN: 08EQLPD7160R1Z2) allowing full input credit claims.
+- **GST Input Tax Credit (ITC):** 100% compliant GST tax invoices (GSTIN: 08AANCK2216L1ZA) allowing full input credit claims.
 
 ## 3. How to Request the 2026 Wholesale Price List PDF
 

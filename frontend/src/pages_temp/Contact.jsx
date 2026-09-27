@@ -43,13 +43,14 @@ export default function Contact() {
         <div className="mt-12 grid lg:grid-cols-12 gap-10">
           {/* Channels */}
           <div className="lg:col-span-5 space-y-4">
-            <ChannelCard icon={Phone} title="Call us" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" onClick={() => trackPhoneClick("contact_page")} />
-            <ChannelCard icon={MessageCircle} title="WhatsApp" value={`+${COMPANY.whatsapp}`} href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
-            <ChannelCard icon={Mail} title="Sales / Orders" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
-            <ChannelCard icon={Mail} title="Service / Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
-            <ChannelCard icon={Mail} title="Dealership" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />
-            <ChannelCard icon={Mail} title="Accounts / Payments" value={COMPANY.accounts} href={`mailto:${COMPANY.accounts}`} testid="contact-email-accounts" />
-            <ChannelCard icon={MapPin} title="Coverage" value={COMPANY.address} testid="contact-address" />
+            <ChannelCard icon={Phone} title="Direct Hotline" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" onClick={() => trackPhoneClick("contact_page")} />
+            <ChannelCard icon={MessageCircle} title="WhatsApp Desk" value={`+${COMPANY.whatsapp}`} href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
+            <ChannelCard icon={Mail} title="General Desk" value={COMPANY.contact} href={`mailto:${COMPANY.contact}`} testid="contact-email-contact" />
+            <ChannelCard icon={Mail} title="Sales / Machinery Quotes" value={COMPANY.email} href={`mailto:${COMPANY.email}`} testid="contact-email-sales" />
+            <ChannelCard icon={Mail} title="Dealer Network" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />
+            <ChannelCard icon={Mail} title="Service & Technical Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
+            <ChannelCard icon={Mail} title="Accounts & GST Billing" value={COMPANY.accounts} href={`mailto:${COMPANY.accounts}`} testid="contact-email-accounts" />
+            <ChannelCard icon={MapPin} title="Jaipur Central Depot" value={COMPANY.address} testid="contact-address" />
           </div>
 
           {/* Form */}
@@ -81,7 +82,7 @@ export default function Contact() {
               type="submit"
               disabled={loading}
               data-testid="contact-form-submit"
-              className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2 shadow-lg shadow-lime-500/20"
+              className="w-full bg-lime-500 hover:bg-lime-400 text-black font-bold py-4 rounded-md transition disabled:opacity-50 inline-flex items-center justify-center gap-2 shadow-lg "
             >
               <Send className="h-4 w-4"/>{loading ? "Sending..." : "Send Message"}
             </button>
@@ -96,7 +97,7 @@ export default function Contact() {
                 <MapPin className="h-3.5 w-3.5" /> Central Office & Dispatch Godown
               </div>
               <h3 className="font-display font-bold text-xl text-white">KrishiGears Jaipur Headquarters</h3>
-              <p className="text-zinc-400 text-sm mt-1">202, Mahima Shubh Nilay, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026</p>
+              <p className="text-zinc-400 text-sm mt-1">{COMPANY.address}</p>
             </div>
             <a
               href="https://www.google.com/maps/search/?api=1&query=26.8538,75.7196+(KrishiGears+Jaipur+HQ)"
@@ -146,13 +147,13 @@ export default function Contact() {
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
               <h3 className="font-bold text-white text-sm">GST Billing & Accounts Verification</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                Need tax invoices, company GST verification certificates (GSTIN: 08EQLPD7160R1Z2), or e-way bills for state border crossings? Reach out directly to <span className="text-lime-400">accounts@krishigears.com</span>.
+                Need tax invoices, company GST verification certificates (GSTIN: {COMPANY.gst} | CIN: {COMPANY.cin}), or e-way bills for state border crossings? Reach out directly to <a href={`mailto:${COMPANY.accounts}`} className="text-lime-400 hover:underline">{COMPANY.accounts}</a>.
               </p>
             </div>
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
               <h3 className="font-bold text-white text-sm">FMTTI & Subsidy Documentation Desk</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                If you require test compliance certificates or dealer quotations for state subsidy portals (SMAM, MahaDBT, Raj Kisan Sathi, Krishi Yantrikaran), contact <span className="text-lime-400">sales@krishigears.com</span> for same-day documentation.
+                If you require test compliance certificates or dealer quotations for state subsidy portals (SMAM, MahaDBT, Raj Kisan Sathi, Krishi Yantrikaran), contact <a href={`mailto:${COMPANY.email}`} className="text-lime-400 hover:underline">{COMPANY.email}</a> for same-day documentation.
               </p>
             </div>
           </div>

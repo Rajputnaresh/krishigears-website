@@ -52,7 +52,7 @@ export default function AdminLogin() {
               autoComplete="email"
               required
               className="bg-black border-zinc-800 mt-1.5"
-              placeholder="admin@krishigears.in"
+              placeholder="admin@krishigears.com"
             />
           </div>
           <div>

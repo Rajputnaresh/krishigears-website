@@ -140,13 +140,13 @@ export default function BulkOrder() {
               <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
                 <h3 className="font-bold text-white text-sm">How can machinery repair shops get the spare parts wholesale price list?</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed">
-                  Submit this inquiry form or message our wholesale sales desk directly on WhatsApp at +91 60060 78815. We share the complete 2026 digital Excel/PDF catalog covering 170F/177F petrol and 173F/186F diesel components.
+                  Submit this inquiry form, message our wholesale sales desk directly on WhatsApp at +91 60060 78815, or email <a href="mailto:sales@krishigears.com" className="text-lime-400 hover:underline">sales@krishigears.com</a>. We share the complete 2026 digital Excel/PDF catalog covering 170F/177F petrol and 173F/186F diesel components.
                 </p>
               </div>
               <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
                 <h3 className="font-bold text-white text-sm">What payment terms and GST invoicing are provided?</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed">
-                  All consignments are billed with 100% compliant GST tax invoices (GSTIN: 08EQLPD7160R1Z2) allowing instant Input Tax Credit (ITC) claiming. Payment can be processed via NEFT, RTGS, or confirmed trade credit for verified network dealers.
+                  All consignments are billed with 100% compliant GST tax invoices (GSTIN: 08AANCK2216L1ZA) allowing instant Input Tax Credit (ITC) claiming. Payment can be processed via NEFT, RTGS, or confirmed trade credit for verified network dealers.
                 </p>
               </div>
               <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">

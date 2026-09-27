@@ -13,7 +13,7 @@ export default function About() {
           <div className="kg-eyebrow">About {COMPANY.name}</div>
           <h1 className="kg-h1 mt-4 max-w-3xl text-balance text-white">Standing with farmers, every season, <span className="text-lime-500">hamesha.</span></h1>
           <p className="mt-6 text-zinc-300 max-w-2xl leading-relaxed text-lg">
-            {COMPANY.name} is one of India's trusted names in premium agricultural machinery — a homegrown brand built to bring rugged, dependable equipment within reach of every Indian farmer, from small landholders to large contractors and institutions.
+            {COMPANY.name} (operated by {COMPANY.legalName}) is one of India's trusted B2B agricultural machinery enterprises — built to bring rugged, dependable equipment and genuine spare parts within reach of every Indian farmer, dealer network, and FPO institution.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h2 max-w-3xl mx-auto text-balance text-white">Ready to bring KrishiGears to <span className="text-lime-500">your district?</span></h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/become-a-dealer" data-testid="about-become-dealer" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2 shadow-lg shadow-lime-500/20">
+            <Link href="/become-a-dealer" data-testid="about-become-dealer" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2 shadow-lg ">
               Become a Dealer <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/contact" data-testid="about-contact" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-400 text-zinc-200 px-7 py-4 font-bold rounded-md">
