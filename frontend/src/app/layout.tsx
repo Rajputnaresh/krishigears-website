@@ -41,7 +41,7 @@ export function clampDescription(value: string, max = 160): string {
   return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim().replace(/[,;:.\s]+$/, "");
 }
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
     default: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
