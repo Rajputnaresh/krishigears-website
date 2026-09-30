@@ -3,7 +3,7 @@ import Page from "@/pages_temp/DealerNetwork.jsx";
 
 export const metadata: Metadata = {
   title: "PAN-India Agricultural Machinery Dealer Network",
-  description: "Find authorized KrishiGears dealers and service stockists across Rajasthan, Maharashtra, Karnataka, Gujarat, MP, UP, and Bihar. Genuine machinery and immediate parts.",
+  description: "Find authorized KrishiGears dealers and service stockists across Rajasthan, Maharashtra, Karnataka, Gujarat, MP, UP and Bihar.",
   alternates: {
     canonical: "https://krishigears.com/dealer-network",
   },

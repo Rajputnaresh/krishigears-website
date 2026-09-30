@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS, BLOG_POSTS_ARRAY } from '@/data/blogPosts';
+import { clampTitle, clampDescription } from '@/app/layout';
 import BlogPostClient from '@/pages_temp/BlogPost.jsx';
 
 export async function generateStaticParams() {
@@ -29,9 +30,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "krishi yantra troubleshooting"
   ];
 
+  // layout.tsx appends " | KrishiGears", so keep this short enough that the
+  // finished title still displays. "Field Service Guide" was pushing 114 blog
+  // titles past the ~60 character display limit.
   return {
-    title: `${post.title} | Field Service Guide`,
-    description: `${post.title}: ${post.excerpt.slice(0, 110)}... Official KrishiGears machinery & field service guide.`,
+    title: clampTitle(post.title, 44),
+    description: clampDescription(
+      `${post.title}: ${post.excerpt.slice(0, 110)}... Official KrishiGears machinery & field service guide.`
+    ),
     keywords: vernacularKeywords,
     alternates: {
       canonical: `https://krishigears.com/blog/${slug}`,

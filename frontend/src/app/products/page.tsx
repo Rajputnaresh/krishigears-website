@@ -3,7 +3,7 @@ import Page from "@/pages_temp/Products.jsx";
 
 export const metadata: Metadata = {
   title: "B2B Agricultural Machinery & Genuine Spare Parts Catalog",
-  description: "Browse KrishiGears B2B agricultural machinery: 7HP/9HP/10HP power weeders, power tillers, brush cutters, earth augers, and OEM spare parts with PAN-India dealer dispatch.",
+  description: "Browse KrishiGears B2B machinery: 7HP/9HP/10HP power weeders, power tillers, brush cutters, earth augers and OEM spare parts with PAN-India dispatch.",
   alternates: {
     canonical: "https://krishigears.com/products",
   },

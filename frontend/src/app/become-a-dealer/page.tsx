@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/BecomeDealer.jsx";
 
 export const metadata: Metadata = {
-  title: "Power Weeder Dealership Kaise Le | Krishi Yantra Dealership PAN India",
-  description: "Apply for KrishiGears power weeder dealership (7HP petrol, 10HP diesel & attachments). 18%-25% dealer margin, direct factory wholesale pricing, FMTTI compliance & 24hr spare parts dispatch.",
+  title: "Power Weeder Dealership Kaise Le: PAN India",
+  description: "Apply for a KrishiGears power weeder dealership. 18%-25% dealer margin, factory wholesale pricing & 24hr spare parts dispatch.",
   keywords: [
     "power weeder dealership kaise le",
     "power weeder dealership",

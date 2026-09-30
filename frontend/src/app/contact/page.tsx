@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Contact.jsx";
 
 export const metadata: Metadata = {
-  title: "Contact KrishiGears | Jaipur HQ, Wholesale Desk & Dealer Support",
-  description: "Contact KrishiGears Jaipur HQ for B2B machinery quotes, dealership onboarding, and genuine spare parts dispatch. Phone: +91 60060 78815. GSTIN: 08AANCK2216L1ZA.",
+  title: "Contact KrishiGears: Jaipur HQ & Dealer Support",
+  description: "B2B machinery quotes, dealership onboarding and spare parts dispatch. Phone +91 60060 78815, GSTIN 08AANCK2216L1ZA.",
   alternates: {
     canonical: "https://krishigears.com/contact",
   },

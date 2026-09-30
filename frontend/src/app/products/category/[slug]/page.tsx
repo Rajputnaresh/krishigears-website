@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Page from "@/pages_temp/CategoryPage.jsx";
 import { CATEGORIES, PRODUCTS } from "@/data/catalog";
 
@@ -20,18 +21,20 @@ export async function generateMetadata({
 
   if (!category) {
     return {
-      title: "Commercial Farm Equipment Category",
-      description: "FMTTI-tested agricultural machinery and genuine OEM spare parts.",
+      title: "Category Not Found",
+      robots: { index: false, follow: false },
     };
   }
 
   const isSpareParts = slug === "power-weeder-spare-parts";
+  // No brand inside the title: the layout template appends " | KrishiGears",
+  // so embedding it here produced "… | KrishiGears | KrishiGears".
   const title = isSpareParts
-    ? `Power Weeder Spare Parts Wholesale Suppliers & Price List | KrishiGears B2B`
-    : `${category.name} | B2B Factory Price & Wholesale Dealership — KrishiGears`;
+    ? "Power Weeder Spare Parts Wholesale Suppliers & Price List"
+    : `${category.name} B2B Factory Price & Wholesale Dealership`;
   const description = isSpareParts
-    ? `Direct factory wholesale supplier of genuine OEM power weeder and tiller spare parts in India. Carburetors, recoil starters, Viton oil seals, gearboxes & manganese tines. Mixed MOQ, GST ITC & 24-48h dispatch.`
-    : `Direct factory supply of KrishiGears ${category.name} at wholesale prices. FMTTI-tested durability, genuine OEM parts, protected dealer margins, and 24-48h dispatch across India.`;
+    ? "Wholesale supplier of genuine OEM power weeder and tiller spare parts: carburetors, recoil starters, Viton oil seals and gearboxes. Mixed MOQ, 24-48h dispatch."
+    : `Direct factory supply of KrishiGears ${category.name} at wholesale prices. FMTTI-tested durability, genuine OEM parts and protected dealer margins.`;
 
   return {
     title,
@@ -72,6 +75,12 @@ export default async function CategoryDetailPage({
   const { slug } = await params;
   const isSpareParts = slug === "power-weeder-spare-parts";
   const category = CATEGORIES.find((c) => c.slug === slug);
+
+  // Only two categories exist in the catalog. Without this, an unknown slug
+  // rendered a "Category not found" page that still returned 200, which reads
+  // to a crawler as a real page with very little content.
+  if (!category) notFound();
+
   const items = PRODUCTS.filter((p) => p.category === slug);
 
   const categoryJsonLd = category ? {

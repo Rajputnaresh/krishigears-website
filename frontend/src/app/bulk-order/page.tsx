@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/BulkOrder.jsx";
 
 export const metadata: Metadata = {
-  title: "Bulk Farm Machinery & Spare Parts Wholesale Supply | KrishiGears",
-  description: "Wholesale procurement of power weeders, tillers, brush cutters & OEM spare parts for dealers, repair shops, FPOs & government tenders. Tiered wholesale pricing with GST billing from Jaipur.",
+  title: "Bulk Farm Machinery & Spare Parts Wholesale",
+  description: "Wholesale power weeders, tillers & OEM spare parts for dealers, repair shops, FPOs and government tenders. GST billing from Jaipur.",
   keywords: [
     "power weeder spare parts wholesale",
     "agricultural machinery spare parts suppliers",

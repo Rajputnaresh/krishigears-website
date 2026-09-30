@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/About.jsx";
 
 export const metadata: Metadata = {
-  title: "About KrishiGears | FMTTI Standard Farm Machinery & B2B Values",
-  description: "Learn about KrishiGears: Jaipur-based agricultural machinery enterprise dedicated to farmer dignity, transparent dealer partnerships, and zero-compromise spare parts.",
+  title: "About KrishiGears: FMTTI Standard Farm Machinery",
+  description: "Jaipur-based agricultural machinery enterprise built on transparent dealer partnerships and zero-compromise spare parts.",
   alternates: {
     canonical: "https://krishigears.com/about",
   },

@@ -2,6 +2,8 @@ import Page from "@/pages_temp/SeoLanding.jsx";
 import { GEO_SEO_PAGES } from "@/data/geoSeo";
 import { SEO_PAGES } from "@/data/catalog";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { clampTitle, clampDescription } from "@/app/layout";
 
 export async function generateStaticParams() {
   const params = [];
@@ -27,24 +29,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const geoPage = GEO_SEO_PAGES.find(p => p.slug === slug);
   if (geoPage) {
-    // Truncate title cleanly to 45 chars so it fits with " | KrishiGears" under 60
-    title = geoPage.title;
-    if (title.length > 42) {
-      title = title.substring(0, 42).trim() + "...";
-    }
+    // The city name is the term these 374 pages rank for, so it must survive
+    // truncation. Clamping the whole string chopped the city off ("...Supply
+    // in"), so shorten the descriptive prefix to fit the budget instead and
+    // always append the city, state intact.
+    const cityPart = `${geoPage.city}, ${geoPage.state}`;
+    const budget = 46 - cityPart.length - 4; // room for " in " + brand suffix
+    const longPrefix = geoPage.crop
+      ? `Best Power Weeder for ${geoPage.crop} Farming in`
+      : "Power Weeder Dealer & Wholesale Supply in";
+    const shortPrefix = longPrefix.length > budget ? "Power Weeder Supply in" : longPrefix;
+    title = `${shortPrefix} ${cityPart}`;
 
-    // Truncate description cleanly to 150 chars
-    let rawDesc = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Get the best pricing for ${geoPage.category.replace("-", " ")}. ${geoPage.hindiTitle}`;
-    if (rawDesc.length > 150) {
-      description = rawDesc.substring(0, 147).trim() + "...";
-    } else {
-      description = rawDesc;
-    }
+    const rawDesc = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Best pricing for ${geoPage.category.replace(/-/g, " ")}. ${geoPage.hindiTitle}`;
+    description = clampDescription(rawDesc, 152);
   } else {
     const natPage = SEO_PAGES.find(p => p.slug === slug);
     if (natPage) {
-      title = natPage.title;
-      description = natPage.description || description;
+      title = clampTitle(natPage.title, 44);
+      description = clampDescription(natPage.description || description, 152);
     }
   }
 
@@ -57,6 +60,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default function SeoLandingPage() {
+// An unknown slug must 404, not render a page with the default title. Before
+// this, /seo/undefined returned 200 with the homepage title, so a canonical
+// pointing at it read as a valid duplicate rather than an obvious mistake.
+export default async function SeoLandingPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const isKnown =
+    SEO_PAGES.some((page) => page.slug === slug) ||
+    GEO_SEO_PAGES.some((page) => page.slug === slug);
+
+  if (!isKnown) notFound();
+
   return <Page />;
 }

@@ -19,13 +19,35 @@ const mukta = Mukta({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+// Search engines display roughly 60 characters of a title and 160 of a
+// description before truncating. Clamp here, at the template, so every route
+// inherits the limit instead of each page trimming for itself. The brand
+// suffix is stripped before clamping so the visible text is the useful part.
+export function clampTitle(value: string, max = 60): string {
+  if (typeof value !== "string") return value;
+  const suffix = " | KrishiGears";
+  const base = value.endsWith(suffix) ? value.slice(0, -suffix.length) : value;
+  if (base.length <= max) return base;
+  const cut = base.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim();
+}
+
+export function clampDescription(value: string, max = 160): string {
+  if (typeof value !== "string") return value;
+  if (value.length <= max) return value;
+  const cut = value.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim().replace(/[,;:.\s]+$/, "");
+}
+
+const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
     default: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
     template: "%s | KrishiGears",
   },
-  description: "Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers, FPOs, and contractors across India. 25-35% dealer margins, 24-hour express spare parts dispatch, GST invoicing, and direct WhatsApp video tech support. Retail via FarmingTools.in.",
+  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers, FPOs, and contractors across India. 25-35% dealer margins, 24-hour express spare parts dispatch, GST invoicing, and direct WhatsApp video tech support. Retail via FarmingTools.in."),
   alternates: {
     canonical: "https://krishigears.com",
     languages: {
