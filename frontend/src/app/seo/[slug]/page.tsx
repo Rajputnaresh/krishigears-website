@@ -19,11 +19,13 @@ export async function generateStaticParams() {
   return params;
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+
   let title = "Agricultural Machinery Dealer";
   let description = "Wholesale supply of Power Weeders and Agricultural Machinery.";
-  
-  const geoPage = GEO_SEO_PAGES.find(p => p.slug === params.slug);
+
+  const geoPage = GEO_SEO_PAGES.find(p => p.slug === slug);
   if (geoPage) {
     // Truncate title cleanly to 45 chars so it fits with " | KrishiGears" under 60
     title = geoPage.title;
@@ -39,7 +41,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description = rawDesc;
     }
   } else {
-    const natPage = SEO_PAGES.find(p => p.slug === params.slug);
+    const natPage = SEO_PAGES.find(p => p.slug === slug);
     if (natPage) {
       title = natPage.title;
       description = natPage.description || description;
@@ -50,11 +52,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title,
     description,
     alternates: {
-      canonical: `https://krishigears.com/seo/${params.slug}`
+      canonical: `https://krishigears.com/seo/${slug}`
     }
   };
 }
 
-export default function SeoLandingPage({ params }: { params: { slug: string } }) {
+export default function SeoLandingPage() {
   return <Page />;
 }
