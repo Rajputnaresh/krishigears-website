@@ -8,7 +8,9 @@ const SITE_URL = 'https://krishigears.com';
 // Bump this when editing catalog or geo templates instead of letting every build stamp 'today'.
 const SITE_CONTENT_UPDATED = new Date('2026-09-13');
 
-const CATEGORIES = ['power-weeders', 'power-weeder-spare-parts', 'brush-cutters', 'earth-augers'];
+// Valid category slugs for programmatic geo-landing pages ([slug]-in-[location])
+const GEO_CATEGORIES = ['power-weeders', 'power-weeder-spare-parts', 'brush-cutters', 'earth-augers'];
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapUrls: MetadataRoute.Sitemap = [
@@ -130,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .replace(/[()]/g, '')
       .replace(/-+/g, '-');
     
-    CATEGORIES.forEach((categorySlug) => {
+    GEO_CATEGORIES.forEach((categorySlug) => {
       sitemapUrls.push({
         url: `${SITE_URL}/${categorySlug}-in-${locationSlug}`,
         lastModified: SITE_CONTENT_UPDATED,
