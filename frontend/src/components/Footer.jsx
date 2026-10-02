@@ -166,7 +166,7 @@ export default function Footer() {
               {t('footer.b2bSupply', 'B2B Supply Programs')}
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-zinc-400">
-              <Link href="/seo/power-weeders-supplier-india" className="hover:text-lime-400">Power Weeder Dealer Network</Link>
+              <Link href="/seo/power-weeder-supplier-india" className="hover:text-lime-400">Power Weeder Dealer Network</Link>
               <Link href="/seo/power-weeder-spare-parts-supplier-india" className="hover:text-lime-400">Power Weeder Spare Parts OEM Supply</Link>
             </div>
           </div>
