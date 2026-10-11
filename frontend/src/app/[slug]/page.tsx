@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import locationsData from '@/data/locations.json';
 import { STATE_SUBSIDIES, CROP_GUIDES, DEFAULT_CROP_GUIDE, DEFAULT_SUBSIDY } from '@/data/enrichment';
 import { COMPANY } from '@/data/catalog';
+import { clampTitle, clampDescription } from '@/app/layout';
 import Link from 'next/link';
 import { 
   Tractor, Wrench, Scissors, Drill, ShieldCheck, MapPin, 
@@ -93,23 +94,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const locationData = locations[locationName];
 
   const isSpareParts = categorySlug === 'power-weeder-spare-parts';
-  let pageTitle = isSpareParts
-    ? `Power Weeder Spares Wholesale in ${locationName}, ${locationData.state}`
-    : `${category.singular} Dealer in ${locationName}, ${locationData.state}`;
+  const fullTitle = isSpareParts
+    ? `Power Weeder Spares in ${locationName}`
+    : `${category.singular} in ${locationName}, ${locationData.state}`;
+  const pageTitle = clampTitle(fullTitle, 44);
 
-  // Truncate cleanly to ~45 chars so it fits with " | KrishiGears" under 60
-  if (pageTitle.length > 42) {
-    pageTitle = pageTitle.substring(0, 42).trim() + "...";
-  }
-
-  let pageDesc = isSpareParts
+  const rawDesc = isSpareParts
     ? `Factory wholesale OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters & gearbox components with 24-48h dispatch.`
     : `B2B supply of KrishiGears ${category.name} in ${locationName}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 2).join(', ')} with DBT subsidy guidance.`;
-
-  // Truncate description cleanly to 150 chars
-  if (pageDesc.length > 150) {
-    pageDesc = pageDesc.substring(0, 147).trim() + "...";
-  }
+  const pageDesc = clampDescription(rawDesc, 155);
 
   return {
     title: pageTitle,

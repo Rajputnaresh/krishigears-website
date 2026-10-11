@@ -44,10 +44,10 @@ export function clampDescription(value: string, max = 160): string {
 export const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
-    default: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
+    default: "KrishiGears — B2B Farm Machinery & Spares: 25-35% Margins",
     template: "%s | KrishiGears",
   },
-  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers, FPOs, and contractors across India. 25-35% dealer margins, 24-hour express spare parts dispatch, GST invoicing, and direct WhatsApp video tech support. Retail via FarmingTools.in."),
+  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers & FPOs across India. 25-35% margins, 24h spares dispatch & GST invoicing."),
   alternates: {
     canonical: "https://krishigears.com",
     languages: {

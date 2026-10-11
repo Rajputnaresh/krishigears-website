@@ -9,6 +9,8 @@ export interface BlogPostData {
   created_at: string;
   tags: string[];
   content: string;
+  meta_title?: string;
+  meta_description?: string;
 }
 
 export const BLOG_POSTS: Record<string, BlogPostData> = {
@@ -132,11 +134,16 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
   "diesel-power-weeder-air-lock-removal-guide": {
     slug: "diesel-power-weeder-air-lock-removal-guide",
     title: "How to Remove Air Lock in Diesel Power Weeders (KG- & 186F)",
+    meta_title: "Remove Air Lock in Diesel Power Weeder",
+    meta_description: "Fast 5-step procedure to remove air lock in diesel power weeders (173F/178F/186F). Bleed fuel filter and high-pressure injector pipe to start engine instantly.",
     excerpt: "Step-by-step procedure to bleed air from fuel pipe, diesel injector pump, and high-pressure nozzle after running out of fuel in the field.",
     cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
     created_at: "2026-01-02T10:00:00Z",
     tags: ["Diesel Engine", "Air Lock", "Maintenance", "KG-"],
-    content: `Running a diesel power weeder completely out of fuel introduces air pockets into the high-pressure fuel injection circuit. Simply refilling the diesel tank will not start the engine until the air lock is bled.
+    content: `> **Quick Answer: How to Remove Air Lock in a Diesel Power Weeder**
+> To clear an airlock from a 173F/178F/186F diesel power weeder: 1) Fill the tank with clean diesel, 2) Loosen the 10mm fuel filter bleeder bolt until bubble-free fuel flows and retighten, 3) Loosen the 17mm steel delivery pipe union nut at the injector, 4) Pull down the decompression lever and crank 4–6 times until diesel spurts out, 5) Tighten the 17mm nut and pull the recoil to start.
+
+Running a diesel power weeder completely out of fuel introduces air pockets into the high-pressure fuel injection circuit. Simply refilling the diesel tank will not start the engine until the air lock is bled.
 
 ## Step-by-Step Air Bleeding Procedure
 1. **Fill the Tank with Clean Diesel:** Ensure minimum 3 liters of diesel is in the tank so gravity creates positive head pressure.
@@ -1432,11 +1439,16 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
   "brush-cutter-gearbox-grease-refill-procedure": {
     slug: "brush-cutter-gearbox-grease-refill-procedure",
     title: "How Often to Grease Brush Cutter Gearbox & Choosing the Right Gear Grease",
+    meta_title: "Brush Cutter Gearbox Greasing Guide",
+    meta_description: "How and when to grease brush cutter gearbox head: Use high-temp lithium/moly grease every 15-20 hours. Prevent stripped bevel gears and expensive shaft repairs.",
     excerpt: "Prevent gear teeth stripping on brush cutter heads: finding the grease port bolt, using lithium gear grease, and inspection intervals.",
     cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
     created_at: "2026-02-05T10:00:00Z",
     tags: ["Brush Cutter Gearbox", "Greasing", "Maintenance", "Field Care"],
-    content: `The 90-degree angle gearbox at the bottom of a brush cutter operates at extreme speeds in close contact with dirt and wet crop stalks.
+    content: `> **Quick Answer: How Often to Grease a Brush Cutter Gearbox?**
+> Grease the brush cutter gearbox head every **15 to 20 operating hours** (or daily during intensive crop harvesting). Always use high-temperature Lithium Complex EP-0 or Molybdenum Disulphide (MoS2) grease. Remove the 8mm side bolt, screw in the grease tube, and squeeze until grease emerges around the blade arbor collar. Never use liquid engine/gear oil as it leaks out immediately.
+
+The 90-degree angle gearbox at the bottom of a brush cutter operates at extreme speeds in close contact with dirt and wet crop stalks.
 
 ## How to Fill Gearbox Grease
 - Locate the small 8mm or Allen bolt on the side of the lower gearbox head.
@@ -1471,11 +1483,25 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
   "2-stroke-brush-cutter-petrol-oil-ratio-calculator": {
     slug: "2-stroke-brush-cutter-petrol-oil-ratio-calculator",
     title: "2T Oil Mixing Ratio for Brush Cutters: 1:25 vs 1:40 (Prevent Piston Seizure)",
+    meta_title: "Brush Cutter 2T Oil Ratio: 40ml / 1L Petrol",
+    meta_description: "Exact 2T oil ratio for brush cutters: Mix 40ml oil per 1L petrol (1:25) for standard 2-stroke engines; 25ml per 1L (1:40) for synthetic JASO-FD. Prevent seizures.",
     excerpt: "Why incorrect 2T oil mixing ruins 2-stroke brush cutter engines: measuring accurate oil ratios (40ml vs 25ml per liter), synthetic vs mineral 2T oil.",
     cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
     created_at: "2026-02-06T10:00:00Z",
     tags: ["2T Oil", "Fuel Mixing", "2-Stroke", "Engine Care"],
-    content: `Using the wrong oil ratio is the #1 cause of dead 2-stroke engines across India:
+    content: `> **Direct Answer: How Much 2T Oil for 1 Litre Petrol?**
+> For standard 2-stroke brush cutters (33cc, 43cc, 52cc), mix **40 ml of 2T oil per 1 Litre of petrol (1:25 ratio)** using standard mineral/semi-synthetic 2T oil. If using premium JASO-FD fully synthetic 2T oil, mix **25 ml per 1 Litre of petrol (1:40 ratio)**.
+
+### Quick Reference 2T Oil Mixing Table
+
+| Petrol (Gasoline) Volume | Mineral 2T Oil (1:25 Ratio) | Synthetic JASO-FD 2T Oil (1:40 Ratio) |
+| :--- | :--- | :--- |
+| **1 Litre Petrol** | **40 ml** (approx. 2 standard bottle caps) | **25 ml** |
+| **2 Litres Petrol** | **80 ml** | **50 ml** |
+| **3 Litres Petrol** | **120 ml** | **75 ml** |
+| **5 Litres Petrol** | **200 ml** | **125 ml** |
+
+Using the wrong oil ratio is the #1 cause of dead 2-stroke engines across India:
 - **Too Little Oil (under 20ml per liter):** Dry piston running causes high friction; the piston expands, melting aluminum onto the cylinder wall within 15 minutes of hard cutting.
 - **Too Much Oil (over 60ml per liter):** Heavy carbon buildup plugs the exhaust port, fouls the spark plug, and gums up piston rings.
 
@@ -4541,18 +4567,40 @@ A low initial purchase price is counterproductive if replacement tines, recoil s
   "smam-subsidy-portal-registration-power-weeder-guide": {
     slug: "smam-subsidy-portal-registration-power-weeder-guide",
     title: "SMAM Registration & DBT Agriculture Subsidy Portal Guide (2026)",
+    meta_title: "SMAM Registration & DBT Subsidy Portal 2026",
+    meta_description: "Complete 2026 SMAM registration guide: Get 40% to 50% DBT subsidy on power weeders & tillers. Check state portal links, required documents & online apply steps.",
     excerpt: "Step-by-step guide to SMAM registration, eligibility & 40% to 50% subsidy on power weeders, tillers & farm machinery across state DBT portals.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-02T10:00:00Z",
     tags: ["SMAM Registration", "SMAM Portal", "DBT Agriculture Subsidy", "Krishi Yantra Subsidy", "Power Weeder Subsidy"],
-    content: `The Sub-Mission on Agricultural Mechanization (SMAM) and State DBT portals offer financial assistance between 40% (general category) and 50% (SC/ST/small and marginal farmers, women farmers) for purchasing power weeders, power tillers, and brush cutters.
+    content: `The Sub-Mission on Agricultural Mechanization (SMAM) and central/state DBT agriculture portals offer financial assistance between 40% (general category) and 50% (SC/ST/small and marginal farmers, women farmers) for purchasing power weeders, power tillers, and brush cutters.
 
-## Mandatory Documents for Subsidy Application
+> **Quick Answer: How to Apply for SMAM Subsidy in 2026**
+> To register for SMAM farm machinery subsidy in 2026, visit your official state DBT agriculture portal (or central agrimachinery.nic.in), log in using your Aadhaar-linked mobile number, select "Sub-Mission on Agricultural Mechanization (SMAM)", choose your machinery category (Power Weeder / Power Tiller), and upload your land record (7/12 / Khatoni / Jamabandi) alongside an authorized dealer commercial quotation and FMTTI test report.
 
-1. **Aadhaar Card** linked with mobile number and bank account (Aadhaar Seeded Bank Account).
-2. **Land Records (Khatoni / 7/12 / ROR / Jamabandi):** Demonstrating agricultural land ownership.
-3. **Caste Certificate:** For SC/ST farmers seeking the 50% maximum allocation.
-4. **Cancelled Cheque / Bank Passbook Copy:** For direct benefit transfer credit.
+## Step-by-Step SMAM Online Registration Process
+
+1. **Aadhaar e-KYC & Mobile Authentication:** Visit your state DBT agricultural portal or agrimachinery.nic.in. Enter your 12-digit Aadhaar number and verify via the OTP sent to your linked mobile number.
+2. **Farmer Profile & Land Verification:** Input your revenue village, tehsil, and survey number. Upload your updated land ownership documents (Khatoni / 7/12 extract / Jamabandi).
+3. **Select Farm Machinery Category:** Navigate to the farm machinery subsidy tab and choose "Power Weeder (5HP–9HP)" or "Power Tiller / Brush Cutter".
+4. **Choose Manufacturer & Authorized Dealer:** Select KrishiGears or an authorized KrishiGears dealer in your district. Upload the proforma invoice and commercial quotation issued by the dealer.
+5. **Application Submission & Lottery/Direct Sanction:** Submit the application. Upon verification by the Block Agriculture Officer (AD/AO), you receive an Administrative Approval (प्रशासनिक स्वीकृति) letter permitting purchase.
+6. **Physical Inspection & Direct Bank Credit:** Purchase the machine, present the GST tax invoice and machine chassis/engine serial number for physical inspection, and the subsidy amount (40% to 50%) is directly transferred into your Aadhaar-seeded bank account via DBT.
+
+## Subsidy Slab Matrix (General vs SC/ST/Small Farmers)
+
+| Farmer Category | Subsidy Allocation Percentage | Maximum Financial Grant | Priority Allocation |
+| :--- | :--- | :--- | :--- |
+| **Small & Marginal Farmers (< 2 Hectares)** | **50% of Benchmark Cost** | Up to ₹25,000 – ₹35,000 | High Priority in Lottery |
+| **SC / ST / Women Farmers** | **50% of Benchmark Cost** | Up to ₹25,000 – ₹35,000 | Special Quota Allotment |
+| **General Category Farmers (> 2 Hectares)** | **40% of Benchmark Cost** | Up to ₹20,000 – ₹25,000 | Standard Allocation |
+
+## Mandatory Documents Checklist
+
+1. **Aadhaar Card:** Must be linked with an active mobile number and an Aadhaar-seeded bank account.
+2. **Land Records (Khatoni / 7/12 / ROR / Jamabandi):** Demonstrating agricultural land ownership in the applying district.
+3. **Caste Certificate:** Required for SC/ST farmers seeking the 50% maximum allocation.
+4. **Cancelled Cheque / Bank Passbook Copy:** Showing IFSC code and active account holder name for DBT credit.
 5. **Commercial Quotation & FMTTI Compliance Certificate:** Provided directly by authorized KrishiGears dealership counters.
 
 ## State-by-State DBT Portals
@@ -4562,13 +4610,33 @@ A low initial purchase price is counterproductive if replacement tines, recoil s
 - **Uttar Pradesh:** UP Agriculture Portal (upagriculture.com)
 - **Bihar:** DBT Agriculture Bihar (dbtagriculture.bihar.gov.in)
 - **Maharashtra:** MahaDBT Portal (mahadbt.maharashtra.gov.in)
+- **Gujarat:** i-Khedut Portal (ikhedut.gujarat.gov.in)
+- **Karnataka:** Raitha Siri / K-Kisan Portal (raitamitra.karnataka.gov.in)
+- **Tamil Nadu:** Uzhavan App & Agri Engineering Dept Portal (aed.tn.gov.in)
 
-Authorized KrishiGears dealers provide full paper trail and GST invoice validation to ensure seamless verification by block agricultural officers.
+Authorized KrishiGears dealers provide complete paper trails, machine serial matching, and GST invoice validation to ensure seamless verification by block agricultural officers.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is available for power weeders under SMAM 2026?
+**Expert Resolution:** Under SMAM 2026 guidelines, small, marginal, women, and SC/ST farmers receive up to 50% subsidy (typically ₹25,000 to ₹35,000 depending on machine horsepower), while general category farmers receive 40% subsidy on FMTTI-tested power weeders and tillers.
+
+### Q: What documents are required for SMAM portal online registration?
+**Expert Resolution:** Mandatory documents include: 1) Aadhaar card linked to mobile, 2) Land record copy (7/12, Khatoni, ROR, or Jamabandi), 3) Bank passbook copy or cancelled cheque for DBT credit, 4) Caste certificate (if claiming 50% SC/ST quota), and 5) Dealer quotation with FMTTI compliance test certificate.
+
+### Q: How do I register on the DBT agriculture subsidy portal?
+**Expert Resolution:** Visit your state DBT agriculture portal (e.g., RajKisan Sathi in Rajasthan, MahaDBT in Maharashtra, or agrimachinery.nic.in centrally), select 'Farmer Registration', authenticate using Aadhaar OTP, select 'Sub-Mission on Agricultural Mechanization (SMAM)', choose 'Power Weeder / Power Tiller', and upload your land record and dealer quotation.
+
+---
+
+**Need an official subsidy quotation?** KrishiGears issues verified proforma invoices and FMTTI compliance documents with 24-48 hour dispatch from Jaipur — GST invoicing and direct dealer support on request.
 `
   },
   "power-weeder-subsidy-rajasthan-2026": {
     slug: "power-weeder-subsidy-rajasthan-2026",
     title: "Power Weeder Subsidy in Rajasthan 2026: Raj Kisan Sathi Portal Guide",
+    meta_title: "Power Weeder Subsidy in Rajasthan 2026",
+    meta_description: "Raj Kisan Sathi power weeder subsidy guide 2026: 40% to 50% DBT grant (up to ₹25,000), eligibility, documents & KrishiGears dealer quotation process.",
     excerpt: "Complete eligibility, required documents, and subsidy calculation (up to ₹25,000) for power weeders and tillers in Rajasthan under SMAM and Raj Kisan Sathi.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4596,12 +4664,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Rajasthan in 2026?
+**Expert Resolution:** Eligible farmers in Rajasthan receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Rajasthan?
+**Expert Resolution:** Applications must be submitted through Raj Kisan Sathi (rajkisan.rajasthan.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Rajasthan subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-madhya-pradesh-2026": {
     slug: "power-weeder-subsidy-madhya-pradesh-2026",
     title: "Power Weeder Subsidy in Madhya Pradesh 2026: e-Krishi Yantra Anudan",
+    meta_title: "Power Weeder Subsidy in MP 2026",
+    meta_description: "MP e-Krishi Yantra Anudan power weeder subsidy 2026: 40% to 50% DBT grant, lottery registration, required documents & KrishiGears quotation.",
     excerpt: "How MP farmers and FPOs can claim up to 50% DBT subsidy on 7HP & 9HP petrol/diesel power weeders through e-Krishi Yantra Anudan portal.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4629,12 +4711,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Madhya Pradesh in 2026?
+**Expert Resolution:** Eligible farmers in Madhya Pradesh receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Madhya Pradesh?
+**Expert Resolution:** Applications must be submitted through e-Krishi Yantra Anudan (dbt.mpdage.org) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Madhya Pradesh subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-maharashtra-2026": {
     slug: "power-weeder-subsidy-maharashtra-2026",
     title: "Power Weeder Subsidy in Maharashtra 2026: MahaDBT Farmer Guide",
+    meta_title: "Power Weeder Subsidy in Maharashtra 2026",
+    meta_description: "MahaDBT power weeder subsidy guide 2026: 40% to 50% grant (up to ₹25,000), required 7/12 documents, lottery apply & KrishiGears dealer support.",
     excerpt: "Mahadbt agriculture lottery process, eligible farmer categories, and ₹15,000–₹25,000 subsidy reimbursement for power weeders and back-rotary tillers in Maharashtra.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4662,12 +4758,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Maharashtra in 2026?
+**Expert Resolution:** Eligible farmers in Maharashtra receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Maharashtra?
+**Expert Resolution:** Applications must be submitted through MahaDBT Portal (mahadbt.maharashtra.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Maharashtra subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-uttar-pradesh-2026": {
     slug: "power-weeder-subsidy-uttar-pradesh-2026",
     title: "Power Weeder Subsidy in Uttar Pradesh 2026: UP Agriculture DBT Token System",
+    meta_title: "Power Weeder Subsidy in UP 2026",
+    meta_description: "UP Agriculture portal power weeder subsidy 2026: 40% to 50% DBT grant token system, eligibility, documents & KrishiGears dealer quotation.",
     excerpt: "How to register and generate a token for power weeder and tiller subsidy on upagriculture.com under SMAM and Sub-Mission schemes in UP.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4695,12 +4805,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Uttar Pradesh in 2026?
+**Expert Resolution:** Eligible farmers in Uttar Pradesh receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Uttar Pradesh?
+**Expert Resolution:** Applications must be submitted through UP Agriculture Portal (upagriculture.com) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Uttar Pradesh subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-bihar-2026": {
     slug: "power-weeder-subsidy-bihar-2026",
     title: "Power Weeder Subsidy in Bihar 2026: OFMD DBT Portal Registration",
+    meta_title: "Power Weeder Subsidy in Bihar 2026",
+    meta_description: "Bihar DBT Agriculture power weeder subsidy 2026: OFMAS online application, 40% to 50% grant, required documents & KrishiGears quotation.",
     excerpt: "Bihar Online Farm Mechanization Dashboard (OFMD) subsidy scheme: get 40% to 50% grant on commercial power weeders and cultivators across all Bihar districts.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4728,12 +4852,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Bihar in 2026?
+**Expert Resolution:** Eligible farmers in Bihar receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Bihar?
+**Expert Resolution:** Applications must be submitted through DBT Agriculture Bihar (dbtagriculture.bihar.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Bihar subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-gujarat-2026": {
     slug: "power-weeder-subsidy-gujarat-2026",
     title: "Power Weeder Subsidy in Gujarat 2026: i-Khedut Portal Application",
+    meta_title: "Power Weeder Subsidy in Gujarat 2026",
+    meta_description: "i-Khedut portal power weeder subsidy 2026: 40% to 50% government assistance, 7/12 8-A land documents & KrishiGears dealer quotation.",
     excerpt: "Application timeline, quota, and documentation for agricultural machinery subsidy on i-Khedut portal for Gujarat farmers purchasing FMTTI-tested weeders.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4761,12 +4899,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Gujarat in 2026?
+**Expert Resolution:** Eligible farmers in Gujarat receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Gujarat?
+**Expert Resolution:** Applications must be submitted through i-Khedut Portal (ikhedut.gujarat.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Gujarat subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-haryana-2026": {
     slug: "power-weeder-subsidy-haryana-2026",
     title: "Power Weeder Subsidy in Haryana 2026: AgriHaryana CRM Portal Guide",
+    meta_title: "Power Weeder Subsidy in Haryana 2026",
+    meta_description: "AgriHaryana portal power weeder subsidy 2026: SMAM online registration, 40% to 50% grant, Meri Fasal Mera Byora & KrishiGears quotation.",
     excerpt: "Detailed guidelines on getting up to 50% subsidy on mini cultivators and 7HP weeders for paddy, cotton, and vegetable growers in Haryana.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4794,12 +4946,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Haryana in 2026?
+**Expert Resolution:** Eligible farmers in Haryana receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Haryana?
+**Expert Resolution:** Applications must be submitted through AgriHaryana Portal (agriharyana.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Haryana subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-karnataka-2026": {
     slug: "power-weeder-subsidy-karnataka-2026",
     title: "Power Weeder Subsidy in Karnataka 2026: K-Kisan Krishi Yantra Dhare",
+    meta_title: "Power Weeder Subsidy in Karnataka 2026",
+    meta_description: "Raitha Siri K-Kisan power weeder subsidy 2026: 40% to 50% DBT grant, RTC documents & KrishiGears authorized dealer quotation.",
     excerpt: "How Karnataka farmers and horticultural growers can avail financial assistance on power weeders through the K-Kisan and Krishi Yantra Dhare initiatives.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4827,12 +4993,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Karnataka in 2026?
+**Expert Resolution:** Eligible farmers in Karnataka receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Karnataka?
+**Expert Resolution:** Applications must be submitted through Raitha Siri / K-Kisan Portal (raitamitra.karnataka.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Karnataka subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-telangana-2026": {
     slug: "power-weeder-subsidy-telangana-2026",
     title: "Power Weeder Subsidy in Telangana 2026: TS Agros & Mechanization Scheme",
+    meta_title: "Power Weeder Subsidy in Telangana 2026",
+    meta_description: "Telangana DBT agri portal power weeder subsidy 2026: 40% to 50% farm mechanization grant, passbook documents & KrishiGears quotation.",
     excerpt: "TS Agros farm mechanization grant details for cotton, chilly, and horticulture farmers applying for commercial power weeders and fitment attachments.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4860,12 +5040,26 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Telangana in 2026?
+**Expert Resolution:** Eligible farmers in Telangana receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Telangana?
+**Expert Resolution:** Applications must be submitted through DBT Agriculture Portal (agri.telangana.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Telangana subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
   "power-weeder-subsidy-tamil-nadu-2026": {
     slug: "power-weeder-subsidy-tamil-nadu-2026",
     title: "Power Weeder Subsidy in Tamil Nadu 2026: Uzhavan App & AED Schemes",
+    meta_title: "Power Weeder Subsidy in Tamil Nadu 2026",
+    meta_description: "Uzhavan App & AED power weeder subsidy guide 2026: 40% to 50% grant, chitta adangal documents, priority booking & KrishiGears dealer quotation.",
     excerpt: "Step-by-step application on Uzhavan Mobile App for Agricultural Engineering Department (AED) subsidies on power weeders and paddy weeders.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-05T10:00:00Z",
@@ -4893,7 +5087,19 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
 - **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
 
-Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.`
+Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
+
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: How much subsidy is provided for power weeders in Tamil Nadu in 2026?
+**Expert Resolution:** Eligible farmers in Tamil Nadu receive 40% to 50% subsidy (up to ₹20,000–₹35,000 depending on machine HP) under the SMAM scheme on FMTTI-compliant power weeders and tillers.
+
+### Q: Which official portal is used to apply for power weeder subsidy in Tamil Nadu?
+**Expert Resolution:** Applications must be submitted through Uzhavan App & AED Portal (aed.tn.gov.in) using Aadhaar e-KYC, mobile OTP verification, and valid agricultural land records.
+
+### Q: How do I get an approved dealer quotation for Tamil Nadu subsidy approval?
+**Expert Resolution:** KrishiGears and authorized district dealers provide official commercial quotations, FMTTI test certificate compliance packs, and GST invoices for immediate block officer verification.
+`
   },
 
 };
