@@ -90,7 +90,7 @@ export default function Header() {
       className="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-800"
     >
       {/* Global B2B Trust & Utility Bar */}
-      <div className="bg-zinc-950 border-b border-zinc-800/80 px-3 md:px-8 py-1 relative flex items-center justify-between text-xs text-zinc-300 min-h-[28px] md:min-h-[32px]">
+      <div className="bg-zinc-950 border-b border-zinc-800/80 px-3 md:px-8 py-1.5 relative flex items-center justify-between text-xs text-zinc-300 min-h-[44px]">
         {/* Centered Trust Badges - clean on mobile */}
         <div className="flex items-center gap-2 md:gap-4 overflow-hidden text-sm md:text-xs">
           <span className="inline-flex items-center gap-1.5 text-lime-400 font-semibold truncate">
@@ -104,13 +104,13 @@ export default function Header() {
         </div>
 
         {/* Right Pinned: Language & Sunlight Controls */}
-        <div className="flex items-center gap-1.5 shrink-0 z-10">
+        <div className="flex items-center gap-2 shrink-0 z-10">
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Language & Display Options"
-              className="px-2 py-0.5 text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition"
+              className="px-3 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition cursor-pointer"
             >
-              <Globe className="h-3 w-3 md:h-3.5 md:w-3.5 text-lime-400" />
+              <Globe className="h-3.5 w-3.5 text-lime-400" />
               <span>{(i18n.language || "en").toUpperCase()}</span>
               <ChevronDown className="h-2.5 w-2.5 text-zinc-500" />
             </DropdownMenuTrigger>
@@ -137,13 +137,13 @@ export default function Header() {
           <button
             onClick={toggleSunlight}
             title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
-            className={`px-2 py-0.5 text-xs md:text-sm font-semibold rounded flex items-center gap-1 transition border ${
+            className={`px-3 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
               sunlight
                 ? "bg-amber-100 text-amber-950 border-amber-300"
                 : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
             }`}
           >
-            <Sun className={`h-3 w-3 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
+            <Sun className={`h-3.5 w-3.5 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
             <span>{sunlight ? "धूप ON" : "धूप"}</span>
           </button>
         </div>

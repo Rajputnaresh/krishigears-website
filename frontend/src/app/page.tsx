@@ -167,9 +167,9 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-buy-online"
-                className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2"
+                className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2 min-h-[44px] py-2 px-1"
               >
-                {t('hero.retailLink', 'FarmingTools.in पर खरीदें')} <ArrowRight className="h-3 w-3" />
+                {t('hero.retailLink', 'FarmingTools.in पर खरीदें')} <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
 
@@ -216,7 +216,7 @@ export default function Home() {
                 {t('categories.title', 'Built for every')} <span className="text-lime-500">{t('categories.titleHighlight', 'Indian farm.')}</span>
               </h2>
             </div>
-            <Link href="/products" data-testid="all-products-link" className="text-sm text-lime-400 hover:text-lime-300 flex items-center gap-1 font-bold">
+            <Link href="/products" data-testid="all-products-link" className="text-sm text-lime-400 hover:text-lime-300 inline-flex items-center gap-1 font-bold min-h-[44px] py-2 px-2.5 rounded-md">
               {t('categories.viewAll', 'View all products')} <ChevronRight className="h-4 w-4" />
             </Link>
           </div>

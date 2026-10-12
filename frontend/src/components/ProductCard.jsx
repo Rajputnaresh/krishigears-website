@@ -45,7 +45,7 @@ export default function ProductCard({ product }) {
       {product.badges?.length > 0 && (
         <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5 max-w-[60%] pointer-events-none">
           {product.badges.slice(0, 2).map((b) => (
-            <span key={b} className="text-[9px] font-bold tracking-wider uppercase px-2 py-1 bg-black/85 text-lime-400 border border-lime-500/40 backdrop-blur rounded">
+            <span key={b} className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 bg-black/85 text-lime-400 border border-lime-500/40 backdrop-blur rounded">
               {b}
             </span>
           ))}
@@ -96,26 +96,26 @@ export default function ProductCard({ product }) {
             <div className="mt-3 flex flex-wrap gap-y-2 gap-x-4 border-y border-zinc-800/60 py-2.5 my-1">
               {product.specs?.Engine && (
                 <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Engine</span>
+                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Engine</span>
                   <span className="text-sm text-zinc-100 font-semibold">{product.specs.Engine}</span>
                 </div>
               )}
               {product.specs?.Power && (
                 <div className="flex flex-col border-l border-zinc-800 pl-4">
-                  <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Power</span>
+                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Power</span>
                   <span className="text-sm text-lime-400 font-bold">{product.specs.Power}</span>
                 </div>
               )}
               {product.specs?.Start && (
                 <div className="flex flex-col border-l border-zinc-800 pl-4">
-                  <span className="text-[9px] uppercase tracking-tighter text-zinc-400 font-bold">Start</span>
+                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Start</span>
                   <span className="text-sm text-zinc-100 font-semibold">{product.specs.Start.replace(' / ', '/')}</span>
                 </div>
               )}
             </div>
             {product.model && (
               <div className="mt-2 inline-flex items-center gap-1.5 text-xs tracking-wider text-zinc-300 font-mono">
-                <BadgeCheck className="h-3 w-3 text-lime-500"/> {product.model}
+                <BadgeCheck className="h-3.5 w-3.5 text-lime-500"/> {product.model}
               </div>
             )}
           </div>
@@ -141,13 +141,13 @@ export default function ProductCard({ product }) {
             }}
             title={t('products.shareWhatsapp', 'Share on WhatsApp')}
             aria-label={t('products.shareWhatsapp', 'Share on WhatsApp')}
-            className="h-9 w-9 min-h-[36px] min-w-[36px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-[#25D366] hover:border-green-600 transition active:scale-95"
+            className="h-11 w-11 min-h-[44px] min-w-[44px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-[#25D366] hover:border-green-600 transition active:scale-95"
           >
             <WhatsAppIcon className="h-4 w-4" />
           </button>
           <Link
             href={`/products/${product.slug}`}
-            className="h-9 w-9 min-h-[36px] min-w-[36px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-lime-400 hover:text-white hover:border-lime-500 transition active:scale-95"
+            className="h-11 w-11 min-h-[44px] min-w-[44px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-lime-400 hover:text-white hover:border-lime-500 transition active:scale-95"
             aria-label={`View full specifications for ${product.name}`}
           >
             <ArrowRight className="h-4 w-4" />
