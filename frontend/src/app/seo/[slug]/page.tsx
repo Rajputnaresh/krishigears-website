@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { clampTitle, clampDescription } from "@/app/layout";
 
 export async function generateStaticParams() {
-  const params = [];
+  const params: Array<{ slug: string }> = [];
   
   // National pages
   SEO_PAGES.forEach((page) => {
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const rawDesc = `Authorized KrishiGears wholesale supplier in ${geoPage.city}, ${geoPage.state}. Best pricing for ${geoPage.category.replace(/-/g, " ")}. ${geoPage.hindiTitle}`;
     description = clampDescription(rawDesc, 152);
   } else {
-    const natPage = SEO_PAGES.find(p => p.slug === slug);
+    const natPage = (SEO_PAGES as any[]).find(p => p.slug === slug);
     if (natPage) {
       title = clampTitle(natPage.title, 44);
       description = clampDescription(natPage.description || description, 152);

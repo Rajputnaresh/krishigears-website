@@ -144,8 +144,22 @@ export const farmingtoolsProductUrl = (productOrSlug, categorySlug) => {
 };
 
 export const CATEGORIES = [
-  { slug: "power-weeders", name: "Power Weeders", icon: Tractor, image: COVER.weeder },
-  { slug: "power-weeder-spare-parts", name: "Power Weeder Spare Parts", icon: Wrench, image: COVER.crankshaft },
+  {
+    slug: "power-weeders",
+    name: "Power Weeders",
+    icon: Tractor,
+    image: COVER.weeder,
+    featured: true,
+    short: "High-performance petrol & diesel power weeders for intercultural farming.",
+  },
+  {
+    slug: "power-weeder-spare-parts",
+    name: "Power Weeder Spare Parts",
+    icon: Wrench,
+    image: COVER.crankshaft,
+    featured: false,
+    short: "Genuine replacement parts, blades, gearboxes, and fitment kits.",
+  },
 ];
 
 // ----------- Spec helpers -----------

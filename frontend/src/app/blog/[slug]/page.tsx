@@ -4,6 +4,8 @@ import { BLOG_POSTS, BLOG_POSTS_ARRAY } from '@/data/blogPosts';
 import { clampTitle, clampDescription } from '@/app/layout';
 import BlogPostClient from '@/pages_temp/BlogPost.jsx';
 
+const BlogPostView = BlogPostClient as React.ComponentType<{ initialPost?: any }>;
+
 export async function generateStaticParams() {
   return BLOG_POSTS_ARRAY.map((post) => ({
     slug: post.slug,
@@ -174,7 +176,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
-      <BlogPostClient initialPost={post} />
+      <BlogPostView initialPost={post} />
     </>
   );
 }
