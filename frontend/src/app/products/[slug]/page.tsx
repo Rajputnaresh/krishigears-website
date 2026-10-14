@@ -2,6 +2,12 @@ import { Metadata } from "next";
 import Page from "@/pages_temp/ProductDetail.jsx";
 import { PRODUCTS } from "@/data/catalog";
 
+export function generateStaticParams() {
+  return PRODUCTS.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: {
