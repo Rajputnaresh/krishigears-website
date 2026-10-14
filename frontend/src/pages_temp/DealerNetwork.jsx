@@ -8,8 +8,8 @@ const REGIONS = [
   { name: "South India", states: ["Karnataka", "Tamil Nadu", "Kerala", "Andhra Pradesh", "Telangana"] },
   { name: "West India", states: ["Maharashtra", "Gujarat", "Goa", "Madhya Pradesh"] },
   { name: "East India", states: ["West Bengal", "Bihar", "Jharkhand", "Odisha"] },
-  { name: "North-East", states: ["Assam", "Tripura", "Manipur", "Meghalaya", "Nagaland", "Arunachal", "Mizoram", "Sikkim"] },
-  { name: "Central India", states: ["Chhattisgarh", "Madhya Pradesh"] },
+  { name: "North-East", states: ["Assam", "Tripura", "Manipur", "Meghalaya", "Nagaland", "Arunachal Pradesh", "Mizoram", "Sikkim"] },
+  { name: "Central & UTs", states: ["Chhattisgarh", "Madhya Pradesh", "Jammu and Kashmir", "Chandigarh"] },
 ];
 
 export default function DealerNetwork() {
@@ -62,9 +62,18 @@ export default function DealerNetwork() {
                 <MapPin className="h-6 w-6 text-lime-500" />
                 <h3 className="font-display font-bold text-xl mt-4">{r.name}</h3>
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {r.states.map((s) => (
-                    <span key={s} className="text-xs px-3 py-1 border border-zinc-800 text-zinc-300">{s}</span>
-                  ))}
+                  {r.states.map((s) => {
+                    const slug = s.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return (
+                      <Link
+                        key={s}
+                        href={`/dealer/${slug}`}
+                        className="text-xs px-3 py-1 border border-zinc-800 text-zinc-300 hover:border-lime-500 hover:text-lime-400 transition rounded"
+                      >
+                        {s}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             ))}

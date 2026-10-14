@@ -2243,21 +2243,46 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
   },
   "brush-cutter-harvesting-trouble-51-guide": {
     slug: "brush-cutter-harvesting-trouble-51-guide",
-    title: "Brush Cutter Harvesting Problem #51: Preventative Maintenance Guide",
-    excerpt: "Solve brush cutter vibration, blade dulling, fuel starvation, and gearbox heating issues during peak grain harvesting shifts.",
+    title: "2-Stroke Engine Fuel Mix Ratio Guide: 25:1 vs 40:1 2T Oil Calculation Table for Farmers",
+    meta_title: "2-Stroke Fuel Mix Ratio Guide: 25:1 vs 40:1",
+    meta_description: "Accurate 2-stroke fuel mix ratio guide for brush cutters & farm machinery. Exact 25:1 vs 40:1 2T oil ml per liter calculation table to prevent piston seizure.",
+    excerpt: "Farmer guide to 2-stroke fuel mix ratio: 25:1 vs 40:1 2T oil calculations, measuring ml per liter table, and how to prevent brush cutter piston seizure.",
     cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
     created_at: "2026-02-23T10:00:00Z",
-    tags: ["Brush Cutter", "Harvesting", "Maintenance", "Field Fix"],
-    content: `## Brush Cutter Harvesting Challenge #51
+    tags: ["2 Stroke Oil Ratio", "Brush Cutter Fuel Mix", "2T Oil Calculation", "Brush Cutter Maintenance", "Piston Seizure Fix"],
+    content: `## 2-Stroke Engine Fuel Mix Ratio & 2T Oil Calculation Guide
 
-During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hours daily. Proper field maintenance prevents costly breakdown delays.
+> **Quick Answer: What is the correct 2-stroke brush cutter oil ratio?**
+> For standard Indian 2-stroke brush cutters (52cc, 58cc, 63cc), the recommended fuel mix ratio is **25:1 (40ml 2T oil per 1 Liter of petrol)** during the initial 10-hour engine break-in period. For regular ongoing field operations with high-grade semi-synthetic or fully synthetic JASO-FD / ISO-L-EGD 2T oil, use **40:1 (25ml 2T oil per 1 Liter of petrol)**. Running a leaner mix or pure petrol will destroy the cylinder liner and seize the piston within 10 minutes of load.
+
+---
+
+## 2-Stroke 2T Oil Pre-Mix Calculation Table (Petrol to Oil)
+
+Use this quick calculation table before mixing fuel for your 2-stroke brush cutter, chainsaw, or power earth auger:
+
+| Petrol Quantity (Liters) | 25:1 Ratio (Break-in / Heavy Work) | 40:1 Ratio (Standard JASO-FD Mix) | 50:1 Ratio (High-End Synthetic Only) |
+| :--- | :--- | :--- | :--- |
+| **1 Liter Petrol** | **40 ml** 2T Oil | **25 ml** 2T Oil | 20 ml 2T Oil |
+| **2 Liters Petrol** | **80 ml** 2T Oil | **50 ml** 2T Oil | 40 ml 2T Oil |
+| **3 Liters Petrol** | **120 ml** 2T Oil | **75 ml** 2T Oil | 60 ml 2T Oil |
+| **5 Liters Petrol** | **200 ml** 2T Oil | **125 ml** 2T Oil | 100 ml 2T Oil |
+| **10 Liters Petrol** | **400 ml** 2T Oil | **250 ml** 2T Oil | 200 ml 2T Oil |
+
+*Pro-Tip for Farmers:* Always shake the fuel container vigorously for 30 seconds before pouring the pre-mixed fuel into the machine tank. Stored pre-mix separates after 14 days, leading to unlubricated starts.
+
+---
+
+## Essential Field Maintenance Steps for 2-Stroke Machinery
+
+During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hours daily. Proper field maintenance prevents costly breakdown delays:
 
 ### 1. Drive Shaft & Gearbox Care
 - Lubricate the internal flexible steel drive shaft with high-temperature lithium complex grease every 25 hours.
 - Pump molybdenum disulphide grease into the 90-degree angle gearbox head to prevent bevel gear tooth stripping.
 
 ### 2. Fuel & Engine Health (2-Stroke & 4-Stroke)
-- For 2-stroke engines, use an exact 1:25 or 1:40 2T oil ratio. Never run pure petrol as this seizes the piston within 10 minutes.
+- For 2-stroke engines, use the exact 1:25 or 1:40 2T oil ratio specified above. Never run pure petrol as this seizes the piston within 10 minutes.
 - For 4-stroke models, check the dedicated engine oil sump daily and keep the machine upright during operation.
 
 ### 3. Blade & Harvester Safety
@@ -2272,11 +2297,11 @@ Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
 | :--- | :--- | :--- |
-| 2-Stroke Fuel Pre-Mix Ratio | 1:25 (40ml 2T oil per 1L petrol) for break-in; 1:40 with JASO-FD synthetic | Never run lean on 2T oil; use dedicated measuring bottle |
-| Gear Head Working Grease | High-Temperature Lithium Complex EP-0 / EP-2 Molybdenum Grease | Inject 15g into gearhead grease port every 15 working hours |
-| Drive Shaft Spline Lubrication | Moly disulfide chassis grease on 7-spline / 9-spline ends | Lubricate inner solid drive shaft every 40 hours |
-| Carburetor Metering Diaphragm | Walbro / Ruixing diaphragm flexibility test | Replace diaphragm kit if stiffened or ethanol-wrinkled |
-| Blade Attachment Nut | Left-Hand Thread (M10 x 1.25 LHF) | Torque to 30–35 Nm; replace flanged lock nut every 5 blade changes |
+| **2-Stroke Fuel Pre-Mix Ratio** | **1:25 (40ml 2T per 1L) break-in; 1:40 with JASO-FD** | Never run lean on 2T oil; use dedicated measuring bottle |
+| **Gear Head Working Grease** | High-Temperature Lithium Complex EP-0 / EP-2 Molybdenum Grease | Inject 15g into gearhead grease port every 15 working hours |
+| **Drive Shaft Spline Lubrication** | Moly disulfide chassis grease on 7-spline / 9-spline ends | Lubricate inner solid drive shaft every 40 hours |
+| **Carburetor Metering Diaphragm** | Walbro / Ruixing diaphragm flexibility test | Replace diaphragm kit if stiffened or ethanol-wrinkled |
+| **Blade Attachment Nut** | Left-Hand Thread (M10 x 1.25 LHF) | Torque to 30–35 Nm; replace flanged lock nut every 5 blade changes |
 
 ## OEM Spare Parts & Workshop Specifications
 
@@ -2286,7 +2311,18 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
 - **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n`
+## Frequently Asked Field Questions & Expert Answers
+
+### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?
+**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with excessive 2T carbon soot.
+
+### Q: Can I use ordinary 4-stroke 20W-40 engine oil as 2T oil in an emergency?
+**Expert Resolution:** Absolutely NOT. 4-stroke automotive engine oil contains heavy detergent additives and high ash content that will not burn cleanly in a 2-stroke combustion chamber. It causes severe carbon coking, sticky piston rings, and instant plug fouling within 30 minutes.
+
+### Q: What is the symptom of too much 2T oil in the fuel mix?
+**Expert Resolution:** Adding too much 2T oil (e.g. 15:1 ratio) causes excessive blue/white exhaust smoke, heavy oily carbon deposits on the spark plug, wet unburned oil dripping from the muffler outlet, and sluggish acceleration.
+
+`
   },
   "brush-cutter-harvesting-trouble-52-guide": {
     slug: "brush-cutter-harvesting-trouble-52-guide",
@@ -4566,10 +4602,10 @@ A low initial purchase price is counterproductive if replacement tines, recoil s
   },
   "smam-subsidy-portal-registration-power-weeder-guide": {
     slug: "smam-subsidy-portal-registration-power-weeder-guide",
-    title: "SMAM Registration & DBT Agriculture Subsidy Portal Guide (2026)",
-    meta_title: "SMAM Registration & DBT Subsidy Portal 2026",
-    meta_description: "Complete 2026 SMAM registration guide: Get 40% to 50% DBT subsidy on power weeders & tillers. Check state portal links, required documents & online apply steps.",
-    excerpt: "Step-by-step guide to SMAM registration, eligibility & 40% to 50% subsidy on power weeders, tillers & farm machinery across state DBT portals.",
+    title: "SMAM Portal Registration 2026: Direct Farm Machinery Subsidy Guide (Up to 50% DBT Subsidy)",
+    meta_title: "SMAM Portal Registration 2026: DBT Guide",
+    meta_description: "Complete 2026 SMAM portal registration guide for Indian farmers. Step-by-step DBT subsidy application (40% to 50% grant), state links, documents & authorized dealer quotation.",
+    excerpt: "Step-by-step 2026 guide to SMAM portal registration, eligibility & 40% to 50% DBT subsidy on power weeders, tillers & farm machinery across state portals.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-02T10:00:00Z",
     tags: ["SMAM Registration", "SMAM Portal", "DBT Agriculture Subsidy", "Krishi Yantra Subsidy", "Power Weeder Subsidy"],
