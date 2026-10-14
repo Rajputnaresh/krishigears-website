@@ -27,6 +27,27 @@ function extractFaqs(raw: string): Array<{ question: string; answer: string }> {
   return faqs;
 }
 
+function extractHowTo(raw: string, title: string): { name: string; steps: Array<{ name: string; text: string }> } | null {
+  if (!raw) return null;
+  const text = raw.replace(/\\n/g, '\n');
+  const stepRegex = /^\s*([0-9]+)\.\s*\*\*([^*]+)\*\*[:\s]*([^\n]+)/gm;
+  const steps: Array<{ name: string; text: string }> = [];
+  let match;
+  while ((match = stepRegex.exec(text)) !== null) {
+    steps.push({
+      name: match[2].trim(),
+      text: match[3].trim(),
+    });
+  }
+  if (steps.length >= 3) {
+    return {
+      name: title,
+      steps,
+    };
+  }
+  return null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS[slug];
@@ -94,6 +115,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const faqs = extractFaqs(post.content);
+  const howTo = extractHowTo(post.content, post.title);
 
   const jsonLdGraph = {
     '@context': 'https://schema.org',
@@ -163,6 +185,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   '@type': 'Answer',
                   text: f.answer,
                 },
+              })),
+            },
+          ]
+        : []),
+      ...(howTo
+        ? [
+            {
+              '@type': 'HowTo',
+              '@id': `https://krishigears.com/blog/${slug}#howto`,
+              name: howTo.name,
+              description: post.excerpt,
+              step: howTo.steps.map((s, idx) => ({
+                '@type': 'HowToStep',
+                position: idx + 1,
+                name: s.name,
+                itemListElement: [
+                  {
+                    '@type': 'HowToDirection',
+                    text: s.text,
+                  },
+                ],
               })),
             },
           ]

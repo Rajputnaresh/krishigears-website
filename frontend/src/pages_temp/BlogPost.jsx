@@ -159,8 +159,16 @@ export default function BlogPost({ initialPost } = {}) {
               code: ({ node, ...props }) => (
                 <code className="text-xs font-mono bg-zinc-900 text-lime-400 px-1.5 py-0.5 rounded border border-zinc-800" {...props} />
               ),
-              blockquote: ({ node, ...props }) => (
-                <blockquote className="my-6 p-4 bg-lime-500/5 border-l-2 border-lime-500/50 text-zinc-300 italic text-sm" {...props} />
+              blockquote: ({ node, children, ...props }) => (
+                <div className="my-6 p-5 rounded-xl bg-lime-950/20 border border-lime-500/30 border-l-4 border-l-lime-500 shadow-md">
+                  <div className="flex items-center gap-2 mb-2 text-xs font-extrabold uppercase tracking-wider text-lime-400">
+                    <span className="inline-block w-2 h-2 rounded-full bg-lime-400"></span>
+                    Field Technical Reference & Direct Resolution
+                  </div>
+                  <div className="text-zinc-100 text-[15px] sm:text-base leading-relaxed font-medium not-italic">
+                    {children}
+                  </div>
+                </div>
               ),
               table: ({ node, ...props }) => (
                 <div className="overflow-x-auto my-8 border border-zinc-800 rounded-xl bg-zinc-950/80 shadow-lg">
