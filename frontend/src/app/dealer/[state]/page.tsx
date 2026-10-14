@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Page from "@/pages_temp/DealerState.jsx";
 import locationsData from "@/data/locations.json";
+import { getStateAgronomy } from "@/data/stateAgronomy";
 
 const STATE_NAMES: Record<string, string> = {
   "andhra-pradesh": "Andhra Pradesh",
@@ -100,16 +101,17 @@ export async function generateMetadata({
   const { state } = await params;
   const stateSlug = state.toLowerCase();
   const stateName = STATE_NAMES[stateSlug] || state.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const agronomy = getStateAgronomy(stateSlug);
 
   return {
     title: `Dealership in ${stateName} | Wholesale Power Weeders & Spares`,
-    description: `Become an authorized KrishiGears dealer in ${stateName}. Factory-direct wholesale pricing on 7HP/9HP power weeders, genuine OEM spare parts, protected territory, and DBT subsidy support.`,
+    description: `Become an authorized KrishiGears dealer in ${stateName}. Factory-direct wholesale pricing on 7HP/9HP power weeders, genuine OEM spare parts, protected territory, and ${agronomy.subsidy_scheme} DBT support.`,
     alternates: {
       canonical: `https://krishigears.com/dealer/${stateSlug}`,
     },
     openGraph: {
       title: `Farm Machinery Dealership in ${stateName}`,
-      description: `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins and 48-hour parts dispatch.`,
+      description: `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins, ${agronomy.soil} fitment, and 48-hour parts dispatch.`,
       url: `https://krishigears.com/dealer/${stateSlug}`,
       siteName: "KrishiGears",
       images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: `KrishiGears ${stateName}` }],
@@ -126,6 +128,7 @@ export default async function DealerStatePage({
   const stateSlug = state.toLowerCase();
   const stateName = STATE_NAMES[stateSlug] || state.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const districts = getDistrictsForState(stateSlug);
+  const agronomy = getStateAgronomy(stateSlug);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -151,6 +154,19 @@ export default async function DealerStatePage({
     }))
   } : null;
 
+  const stateFaqJsonLd = agronomy.faqs && agronomy.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": agronomy.faqs.map((f) => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
+      }
+    }))
+  } : null;
+
   return (
     <>
       <script
@@ -163,7 +179,13 @@ export default async function DealerStatePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(districtItemListJsonLd) }}
         />
       )}
-      <Page districts={districts} stateSlug={stateSlug} stateName={stateName} />
+      {stateFaqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(stateFaqJsonLd) }}
+        />
+      )}
+      <Page districts={districts} stateSlug={stateSlug} stateName={stateName} agronomy={agronomy} />
     </>
   );
 }

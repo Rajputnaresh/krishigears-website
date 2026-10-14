@@ -79,12 +79,15 @@ const DEALER_PROCESS = [
   { step: 6, title: "Ongoing Business", desc: "Live inventory access, monthly review calls, dedicated territory manager, and quarterly performance bonuses." },
 ];
 
-export default function DealerState({ districts = [], stateName: propStateName, stateSlug: propStateSlug, tier: propTier } = {}) {
+import { getStateAgronomy } from "@/data/stateAgronomy";
+
+export default function DealerState({ districts = [], stateName: propStateName, stateSlug: propStateSlug, tier: propTier, agronomy: propAgronomy } = {}) {
   const params = useParams();
   const routeState = params?.state;
   const activeSlug = propStateSlug || routeState?.toLowerCase();
   const stateData = STATE_DATA[activeSlug] || { name: activeSlug?.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()), cities: [], tier: propTier || "Tier 2" };
   const stateName = propStateName || stateData.name;
+  const agronomy = propAgronomy || getStateAgronomy(activeSlug || "rajasthan");
   const [searchQuery, setSearchQuery] = useState("");
 
   const districtsList = districts && districts.length > 0
@@ -132,6 +135,38 @@ export default function DealerState({ districts = [], stateName: propStateName, 
         </div>
       </section>
 
+      {/* Regional Agronomy & Soil Fitment */}
+      <section className="kg-section bg-surface-dark border-b border-zinc-900">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="kg-eyebrow">Agronomy & Field Engineering · {stateName}</div>
+          <h2 className="kg-h2 mt-3">Machinery Engineered for <span className="text-lime-500">{stateName} Soils</span></h2>
+          <h3 className="text-lg text-zinc-300 mt-1 font-normal">{stateName} की मिट्टी और प्रमुख फसलों के लिए उपयुक्त कृषि यंत्र</h3>
+
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="p-5 border border-zinc-800 bg-surface-darker/70 rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Soil Classification</span>
+              <h4 className="font-bold text-white text-base">{agronomy.soil}</h4>
+              <p className="text-xs text-zinc-400">Specially configured rotary tines and gearbox seals prevent soil compaction and clay binding.</p>
+            </div>
+            <div className="p-5 border border-zinc-800 bg-surface-darker/70 rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Primary Crops Sized For</span>
+              <h4 className="font-bold text-white text-base">{agronomy.crops}</h4>
+              <p className="text-xs text-zinc-400">Adjustable rotor width (18"–36") protects standing root systems in high-density crop rows.</p>
+            </div>
+            <div className="p-5 border border-zinc-800 bg-surface-darker/70 rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Recommended Machinery</span>
+              <h4 className="font-bold text-white text-base">{agronomy.recommended_weeder}</h4>
+              <p className="text-xs text-zinc-400">Heavy-duty cast iron transmission with standard PTO shaft for water pump and ditcher attachments.</p>
+            </div>
+            <div className="p-5 border border-zinc-800 bg-surface-darker/70 rounded-lg space-y-2">
+              <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">DBT Subsidy Mechanism</span>
+              <h4 className="font-bold text-white text-base">{agronomy.subsidy_scheme}</h4>
+              <p className="text-xs text-lime-400 font-semibold">{agronomy.subsidy_pct}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="kg-section bg-surface-darker border-y border-zinc-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Market Opportunity</div>
@@ -146,7 +181,7 @@ export default function DealerState({ districts = [], stateName: propStateName, 
             <div className="border border-zinc-800 p-6 rounded-md">
               <Award className="h-8 w-8 text-lime-500 mb-3" />
               <h3 className="font-bold text-lg mb-2">Government subsidy programs</h3>
-              <p className="text-zinc-300 text-sm">SMAM and state schemes offer 40-50% subsidy on power weeders in {stateName}. Dealers benefit from subsidy-driven demand spikes.</p>
+              <p className="text-zinc-300 text-sm">{agronomy.subsidy_scheme} offers {agronomy.subsidy_pct} on power weeders in {stateName}. Dealers benefit from subsidy-driven demand spikes.</p>
             </div>
             <div className="border border-zinc-800 p-6 rounded-md">
               <Users className="h-8 w-8 text-lime-500 mb-3" />
@@ -312,6 +347,28 @@ export default function DealerState({ districts = [], stateName: propStateName, 
                 No districts matching "{searchQuery}". Clear your search to view all {districtsList.length} districts for {stateName}.
               </div>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* State Dealership & Subsidy FAQs */}
+      {agronomy.faqs && agronomy.faqs.length > 0 && (
+        <section className="kg-section bg-surface-darker border-y border-zinc-900" id="faqs">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="kg-eyebrow">Frequently Asked Questions · {stateName}</div>
+            <h2 className="kg-h2 mt-3">{stateName} Dealership & DBT Subsidy FAQs</h2>
+            <div className="mt-8 grid md:grid-cols-2 gap-5">
+              {agronomy.faqs.map((f, i) => (
+                <div key={i} className="p-6 border border-zinc-800 bg-surface-dark/70 rounded-lg space-y-3">
+                  <h3 className="font-bold text-white text-lg flex items-start gap-2">
+                    <span className="text-lime-500 font-black">Q:</span> {f.question}
+                  </h3>
+                  <p className="text-sm text-zinc-300 leading-relaxed pl-6 border-l-2 border-lime-500/30">
+                    {f.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
