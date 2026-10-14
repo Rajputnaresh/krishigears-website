@@ -99,6 +99,8 @@ export default function Footer() {
             <li><Link href="/become-a-dealer" className="hover:text-lime-400 transition">{t('nav.becomeDealer', 'Become a Dealer')}</Link></li>
             <li><Link href="/bulk-order" className="hover:text-lime-400 transition">{t('nav.bulkOrder', 'Bulk Order')}</Link></li>
             <li><Link href="/warranty-and-support" className="hover:text-lime-400 transition">{t('nav.warranty', 'Warranty')}</Link></li>
+            <li><Link href="/glossary" className="hover:text-lime-400 transition">Technical Glossary</Link></li>
+            <li><Link href="/dealer/rajasthan" className="hover:text-lime-400 transition">State Dealerships</Link></li>
             <li><Link href="/blog" className="hover:text-lime-400 transition">{t('nav.blog', 'Blog')}</Link></li>
             <li><Link href="/contact" className="hover:text-lime-400 transition">{t('nav.contactUs', 'Contact Us')}</Link></li>
           </ul>

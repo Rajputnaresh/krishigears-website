@@ -17,6 +17,7 @@ const NAV = [
   { to: "/about", labelKey: "nav.aboutUs" },
   { to: "/dealer-network", labelKey: "nav.dealerNetwork" },
   { to: "/locations", labelKey: "nav.locations", fallback: "Locations" },
+  { to: "/glossary", labelKey: "nav.glossary", fallback: "Specs" },
   { to: "/blog", labelKey: "nav.blog" },
   { to: "/warranty-and-support", labelKey: "nav.warranty" },
   { to: "/contact", labelKey: "nav.contactUs" },
