@@ -116,7 +116,7 @@ export default function ProductDetail() {
                     key={`thumb-${i}-${src}`}
                     onClick={() => setActive(i)}
                     data-testid={`product-thumb-${i}`}
-                    className={`aspect-square overflow-hidden border ${active === i ? "border-lime-500" : "border-zinc-800"}`}
+                    className={`aspect-square overflow-hidden rounded-lg border-2 transition-all duration-200 active:scale-95 cursor-pointer ${active === i ? "border-lime-500 shadow-md ring-2 ring-lime-500/30" : "border-zinc-800 hover:border-zinc-700"}`}
                   >
                     <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
                   </button>
@@ -141,7 +141,7 @@ export default function ProductDetail() {
                 {product.badges.map((b) => (
                   <span
                     key={b}
-                    className="text-xs font-bold tracking-wider uppercase px-3 py-1 bg-lime-500/10 text-lime-400 border border-lime-500/40"
+                    className="text-xs font-bold tracking-wider uppercase px-3 py-1 bg-lime-500/10 text-lime-400 border border-lime-500/40 rounded"
                   >
                     {b}
                   </span>
@@ -157,15 +157,15 @@ export default function ProductDetail() {
               <EnquiryDialog
                 product={product.name}
                 trigger={
-                  <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-md">
+                  <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-lg active:scale-95 transition-transform duration-100 shadow-lg shadow-lime-500/20">
                     Bulk / Dealer Inquiry
                   </button>
                 }
               />
-              <Link href="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100">
                 Become Dealer
               </Link>
-              <Link href="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md">
+              <Link href="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100">
                 Institutional Supply
               </Link>
               <a
@@ -173,7 +173,7 @@ export default function ProductDetail() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="product-buy-online-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
+                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100"
               >
                 Buy Online at FarmingTools
               </a>
@@ -184,7 +184,7 @@ export default function ProductDetail() {
                 aria-label={`WhatsApp Supply Enquiry for ${product.name}`}
                 onClick={() => trackWhatsAppClick("product_detail", product.slug)}
                 data-testid="product-whatsapp-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md inline-flex items-center gap-2"
+                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg inline-flex items-center gap-2 active:scale-95 transition-transform duration-100"
               >
                 <WhatsAppIcon className="h-4 w-4" /> WhatsApp Supply Enquiry
               </a>

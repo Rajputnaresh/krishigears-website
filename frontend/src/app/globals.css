@@ -169,6 +169,39 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.apple-glass-card {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.apple-glass-modal {
+    background: rgba(9, 9, 11, 0.94);
+    backdrop-filter: blur(32px) saturate(190%);
+    -webkit-backdrop-filter: blur(32px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
+}
+
+.optical-heading {
+    font-optical-sizing: auto;
+    letter-spacing: -0.028em;
+    line-height: 1.08;
+}
+
+.optical-subheading {
+    letter-spacing: -0.018em;
+    line-height: 1.15;
+}
+
+.optical-micro {
+    letter-spacing: 0.07em;
+}
+
 .kg-card {
     @apply border border-zinc-800 bg-surface;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
@@ -509,7 +542,9 @@ html.sunlight .hover\:text-lime-500:hover {
     .backdrop-blur-xl,
     .backdrop-blur-md,
     .backdrop-blur,
-    .apple-glass {
+    .apple-glass,
+    .apple-glass-card,
+    .apple-glass-modal {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
         background-color: #0A0A0A !important;

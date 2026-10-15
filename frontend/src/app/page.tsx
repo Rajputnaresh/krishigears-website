@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { motion } from "framer-motion";
 
 const ICONS: Record<string, any> = { 
   "shield-check": ShieldCheck, 
@@ -228,28 +229,35 @@ export default function Home() {
               const Icon = c.icon;
               const big = idx === 0;
               return (
-                <Link
+                <motion.div
                   key={c.slug}
-                  href={`/products/category/${c.slug}`}
-                  data-testid={`cat-card-${c.slug}`}
-                  className={`relative group overflow-hidden border border-zinc-700 bg-surface hover:border-lime-500/60 transition-all duration-500 rounded-lg ${big ? "md:col-span-7 md:row-span-2 min-h-[360px] sm:min-h-[480px]" : "md:col-span-5 min-h-[200px] sm:min-h-[230px]"}`}
+                  whileHover={{ y: -4 }}
+                  whileTap={{ scale: 0.985 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                  className={big ? "md:col-span-7 md:row-span-2 flex" : "md:col-span-5 flex"}
                 >
-                  <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
-                  <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-md">
-                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <div>
-                      <div className="text-sm sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
-                      <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl mt-1.5 sm:mt-2 text-zinc-50">{c.name}</h3>
-                      <p className="text-zinc-200 text-sm sm:text-sm mt-1.5 sm:mt-2 max-w-md leading-relaxed">{c.short}</p>
-                      <div className="mt-3.5 sm:mt-5 inline-flex items-center gap-2.5 sm:gap-2 text-sm sm:text-sm font-bold text-zinc-100 group-hover:text-lime-400 transition">
-                        {t('categories.browseRange', 'Browse Range')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                  <Link
+                    href={`/products/category/${c.slug}`}
+                    data-testid={`cat-card-${c.slug}`}
+                    className={`relative w-full group overflow-hidden border border-zinc-700/80 bg-surface hover:border-lime-500/60 transition-colors duration-300 rounded-xl shadow-lg hover:shadow-2xl flex flex-col justify-between ${big ? "min-h-[360px] sm:min-h-[480px]" : "min-h-[200px] sm:min-h-[230px]"}`}
+                  >
+                    <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
+                    <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-lg">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-lime-400 font-bold">Category</div>
+                        <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl mt-1.5 sm:mt-2 text-zinc-50">{c.name}</h3>
+                        <p className="text-zinc-200 text-sm sm:text-sm mt-1.5 sm:mt-2 max-w-md leading-relaxed">{c.short}</p>
+                        <div className="mt-3.5 sm:mt-5 inline-flex items-center gap-2.5 sm:gap-2 text-sm sm:text-sm font-bold text-zinc-100 group-hover:text-lime-400 transition">
+                          {t('categories.browseRange', 'Browse Range')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </motion.div>
               );
             })}
 
@@ -257,15 +265,22 @@ export default function Home() {
             {CATEGORIES.filter((c) => !c.featured).map((c) => {
               const Icon = c.icon;
               return (
-                <Link
+                <motion.div
                   key={c.slug}
-                  href={`/products/category/${c.slug}`}
-                  data-testid={`cat-tile-${c.slug}`}
-                  className="md:col-span-3 p-4 sm:p-5 border border-zinc-700 bg-surface-dark hover:bg-surface hover:border-lime-500/40 hover:-translate-y-1 transition-all rounded-lg"
+                  whileHover={{ y: -3 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                  className="md:col-span-3 flex"
                 >
-                  <Icon className="h-5 w-5 text-lime-500 mb-2 sm:mb-3" />
-                  <div className="font-display font-bold text-sm sm:text-base leading-tight text-zinc-100">{c.name}</div>
-                </Link>
+                  <Link
+                    href={`/products/category/${c.slug}`}
+                    data-testid={`cat-tile-${c.slug}`}
+                    className="w-full p-4 sm:p-5 border border-zinc-700/80 bg-surface-dark hover:bg-surface hover:border-lime-500/40 transition-colors rounded-xl flex flex-col justify-between shadow-md"
+                  >
+                    <Icon className="h-5 w-5 text-lime-500 mb-2 sm:mb-3" />
+                    <div className="font-display font-bold text-sm sm:text-base leading-tight text-zinc-100">{c.name}</div>
+                  </Link>
+                </motion.div>
               );
             })}
           </div>
@@ -692,9 +707,12 @@ function DistrictLocator() {
               .replace(/[()]/g, '')
               .replace(/-+/g, '-');
             return (
-              <div
+              <motion.div
                 key={districtName}
-                className="p-5 border border-zinc-800 bg-zinc-950 hover:border-lime-500/50 rounded-lg flex flex-col justify-between transition-all duration-300 group"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.985 }}
+                transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                className="p-5 border border-zinc-800/80 bg-zinc-950/90 backdrop-blur-xl hover:border-lime-500/50 rounded-xl flex flex-col justify-between shadow-md hover:shadow-xl transition-colors duration-250 group"
               >
                 <div>
                   <div className="flex items-center justify-between">
@@ -725,10 +743,10 @@ function DistrictLocator() {
                   )}
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-zinc-800 flex items-center justify-between">
+                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
                   <Link
                     href={`/power-weeders-in-${districtSlug}`}
-                    className="text-sm font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1"
+                    className="text-sm font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1 active:scale-95 transition-transform"
                   >
                     {t('locator.viewMachinery', 'View Machinery')} <ChevronRight className="h-3.5 w-3.5" />
                   </Link>
@@ -739,7 +757,7 @@ function DistrictLocator() {
                     {t('locator.dealerInfo', 'Dealer Info →')}
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
