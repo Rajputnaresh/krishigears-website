@@ -720,7 +720,7 @@ function DistrictLocator() {
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.985 }}
                 transition={{ type: "spring", stiffness: 400, damping: 28 }}
-                className="p-5 border border-zinc-800/80 bg-zinc-950/90 backdrop-blur-xl hover:border-lime-500/50 rounded-xl flex flex-col justify-between shadow-md hover:shadow-xl transition-colors duration-250 group"
+                className="p-5 border border-zinc-800 bg-surface hover:border-lime-500/50 rounded-xl flex flex-col justify-between shadow-md hover:shadow-xl transition-colors duration-250 group"
               >
                 <div>
                   <div className="flex items-center justify-between">

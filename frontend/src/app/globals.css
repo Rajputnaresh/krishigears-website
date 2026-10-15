@@ -307,26 +307,60 @@ html.sunlight [data-testid="floating-call-btn"] {
     color: #18181B !important;
 }
 
+html.sunlight [class*="bg-zinc-950"],
+html.sunlight [class*="bg-zinc-900"],
+html.sunlight [class*="bg-zinc-850"],
+html.sunlight [class*="bg-zinc-800"],
+html.sunlight [class*="bg-surface"],
 html.sunlight .bg-zinc-950,
 html.sunlight .bg-zinc-900,
 html.sunlight .bg-zinc-850,
 html.sunlight .bg-zinc-800,
-html.sunlight .bg-zinc-900\/90,
-html.sunlight .bg-zinc-900\/80,
-html.sunlight .bg-zinc-900\/60,
-html.sunlight .bg-zinc-900\/50,
-html.sunlight .bg-zinc-900\/40,
+html.sunlight .bg-zinc-950\/95,
+html.sunlight .bg-zinc-950\/90,
+html.sunlight .bg-zinc-950\/85,
 html.sunlight .bg-zinc-950\/80,
 html.sunlight .bg-zinc-950\/70,
 html.sunlight .bg-zinc-950\/60,
 html.sunlight .bg-zinc-950\/40,
+html.sunlight .bg-zinc-900\/95,
+html.sunlight .bg-zinc-900\/90,
+html.sunlight .bg-zinc-900\/80,
+html.sunlight .bg-zinc-900\/70,
+html.sunlight .bg-zinc-900\/60,
+html.sunlight .bg-zinc-900\/50,
+html.sunlight .bg-zinc-900\/40,
+html.sunlight .bg-zinc-900\/30,
+html.sunlight .bg-zinc-850\/60,
+html.sunlight .bg-zinc-800\/90,
+html.sunlight .bg-zinc-800\/80,
 html.sunlight .bg-surface,
 html.sunlight .bg-surface-elevated,
 html.sunlight .bg-surface-darker,
 html.sunlight .bg-surface-darkest,
-html.sunlight .bg-surface-dark {
+html.sunlight .bg-surface-dark,
+html.sunlight .bg-surface-dark\/70,
+html.sunlight .bg-surface-darker\/70,
+html.sunlight .bg-black\/85,
+html.sunlight .bg-black\/80,
+html.sunlight .bg-black\/75,
+html.sunlight .bg-black\/70,
+html.sunlight .bg-black\/60,
+html.sunlight .bg-black\/30 {
     background-color: #FFFFFF !important;
     border-color: #000000 !important;
+}
+
+/* Secondary tags / crop pills inside white cards in Sunlight Mode */
+html.sunlight .p-5 .bg-zinc-900,
+html.sunlight .p-5 .bg-zinc-950,
+html.sunlight .p-5 .bg-zinc-800,
+html.sunlight .rounded-xl .bg-zinc-900,
+html.sunlight .rounded-xl .bg-zinc-950,
+html.sunlight .rounded-xl .bg-zinc-800 {
+    background-color: #F4F4F5 !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
 }
 
 /* High-contrast text tokens for light mode */
@@ -357,6 +391,9 @@ html.sunlight .text-slate-600 {
     font-weight: 500 !important;
 }
 
+html.sunlight [class*="border-zinc-"],
+html.sunlight [class*="border-gray-"],
+html.sunlight [class*="border-slate-"],
 html.sunlight .border-zinc-800,
 html.sunlight .border-gray-800,
 html.sunlight .border-slate-800,
@@ -365,6 +402,7 @@ html.sunlight .border-zinc-850,
 html.sunlight .border-zinc-900,
 html.sunlight .border-zinc-600,
 html.sunlight .border-zinc-800\/80,
+html.sunlight .border-zinc-800\/70,
 html.sunlight .border-zinc-800\/60,
 html.sunlight .border-zinc-800\/40,
 html.sunlight .border-zinc-700\/80 {
@@ -372,6 +410,10 @@ html.sunlight .border-zinc-700\/80 {
 }
 
 /* Lime text and accents — darkened to deep forest green for 7:1+ outdoor contrast on white */
+html.sunlight .text-lime-50,
+html.sunlight .text-lime-100,
+html.sunlight .text-lime-200,
+html.sunlight .text-lime-200\/90,
 html.sunlight .text-lime-300,
 html.sunlight .text-lime-400,
 html.sunlight .text-lime-500,
@@ -390,9 +432,12 @@ html.sunlight .border-lime-500\/60 {
     border-color: #16A34A !important;
 }
 
+html.sunlight .bg-lime-500\/5,
 html.sunlight .bg-lime-500\/10,
 html.sunlight .bg-lime-500\/20 {
-    background-color: #DCFCE7 !important;
+    background-color: #F0FDF4 !important;
+    border-color: #86EFAC !important;
+}
     border-color: #86EFAC !important;
 }
 

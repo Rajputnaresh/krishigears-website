@@ -171,7 +171,7 @@ export default function Locations() {
                 {districts.map((item) => (
                   <div
                     key={item.slug}
-                    className="p-5 bg-zinc-900/40 hover:bg-zinc-900/80 border border-zinc-800/80 hover:border-lime-500/40 rounded-xl transition flex flex-col justify-between group"
+                    className="p-5 bg-surface hover:bg-surface-elevated border border-zinc-800 hover:border-lime-500/40 rounded-xl transition flex flex-col justify-between group"
                   >
                     <div>
                       <div className="flex items-start justify-between gap-2">
