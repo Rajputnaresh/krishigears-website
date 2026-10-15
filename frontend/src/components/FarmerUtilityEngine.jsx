@@ -83,9 +83,9 @@ export default function FarmerUtilityEngine() {
                   step="0.5"
                   value={petrolLiters}
                   onChange={(e) => setPetrolLiters(parseFloat(e.target.value))}
-                  className="w-full h-2.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-lime-500"
+                  className="kg-range-slider w-full h-2.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-lime-500 border border-zinc-700/60"
                 />
-                <div className="flex justify-between text-xs text-zinc-500 font-medium mt-1">
+                <div className="flex justify-between text-xs text-zinc-400 font-semibold mt-1.5">
                   <span>0.5L (Single tank)</span>
                   <span>5L (Canister)</span>
                   <span>10L</span>
@@ -137,9 +137,9 @@ export default function FarmerUtilityEngine() {
             </div>
 
             {/* Calculated Output Card */}
-            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 border border-zinc-800 shadow-2xl flex flex-col justify-between space-y-6">
+            <div className="kg-output-card lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl flex flex-col justify-between space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+                <span className="text-xs uppercase tracking-widest text-zinc-400 font-extrabold">
                   Accurate Measure Required
                 </span>
                 <div className="mt-2 flex items-baseline gap-2">
@@ -148,24 +148,24 @@ export default function FarmerUtilityEngine() {
                   </span>
                   <span className="text-2xl font-bold text-white">ml of 2T Oil</span>
                 </div>
-                <p className="mt-2 text-zinc-300 text-sm">
-                  Add exactly <strong>{oilMl} ml</strong> of quality 2-stroke engine oil into <strong>{petrolLiters} liters</strong> of fresh unleaded petrol.
+                <p className="mt-2 text-zinc-300 text-sm leading-relaxed">
+                  Add exactly <strong className="text-white font-bold">{oilMl} ml</strong> of quality 2-stroke engine oil into <strong className="text-white font-bold">{petrolLiters} liters</strong> of fresh unleaded petrol.
                 </p>
               </div>
 
               {/* Visual Dosing Aid */}
-              <div className="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800 space-y-2">
+              <div className="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2">
                 <div className="flex justify-between text-xs font-bold text-zinc-300">
                   <span>Dosing Cap Reference:</span>
-                  <span className="text-lime-400">~{Math.round(oilMl / 25)} standard caps (25ml each)</span>
+                  <span className="text-lime-400 font-extrabold">~{Math.round(oilMl / 25)} standard caps (25ml each)</span>
                 </div>
-                <div className="w-full bg-zinc-800 rounded-full h-3 overflow-hidden">
+                <div className="w-full bg-zinc-800 rounded-full h-3 overflow-hidden border border-zinc-700/50">
                   <div
                     className="bg-lime-500 h-3 rounded-full transition-all duration-300"
                     style={{ width: `${Math.min(100, (oilMl / 400) * 100)}%` }}
                   />
                 </div>
-                <span className="block text-[11px] text-zinc-500">
+                <span className="block text-[11px] text-zinc-400">
                   Calibrated for 2-stroke JASO FC / FD grade oil specifications.
                 </span>
               </div>
@@ -249,9 +249,9 @@ export default function FarmerUtilityEngine() {
             </div>
 
             {/* Fitment Compatibility Results */}
-            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl space-y-6">
+            <div className="kg-output-card lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+                <span className="text-xs uppercase tracking-widest text-zinc-400 font-extrabold">
                   Verified Fitment Specification
                 </span>
                 <h3 className="text-2xl font-black text-white mt-1">

@@ -535,7 +535,11 @@ html.sunlight textarea {
 }
 
 /* Fix gradients turning black over sunlight white backgrounds */
+html.sunlight [class*="bg-gradient-"],
+html.sunlight .from-zinc-900,
+html.sunlight .to-zinc-950,
 html.sunlight .from-black {
+    background-image: none !important;
     --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position) !important;
     --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
@@ -551,6 +555,43 @@ html.sunlight .via-black {
 
 html.sunlight .to-transparent {
     --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
+}
+
+/* Sunlight Mode Range Slider Track & Thumb */
+html.sunlight input[type="range"],
+html.sunlight .kg-range-slider {
+    background-color: #E4E4E7 !important;
+    border: 1.5px solid #000000 !important;
+    accent-color: #15803D !important;
+}
+
+/* Output / Result Cards in Sunlight Mode: High-Contrast Emerald Accent */
+html.sunlight .kg-output-card {
+    background-color: #F0FDF4 !important;
+    border: 2px solid #15803D !important;
+    color: #022C22 !important;
+}
+html.sunlight .kg-output-card .bg-zinc-950,
+html.sunlight .kg-output-card .bg-zinc-900 {
+    background-color: #FFFFFF !important;
+    border-color: #86EFAC !important;
+    color: #022C22 !important;
+}
+
+/* Amber badges and warning text in Sunlight Mode */
+html.sunlight .text-amber-200,
+html.sunlight .text-amber-300,
+html.sunlight .text-amber-400,
+html.sunlight .text-yellow-300,
+html.sunlight .text-yellow-400 {
+    color: #78350F !important;
+    font-weight: 800 !important;
+}
+html.sunlight .bg-amber-500\/10,
+html.sunlight .bg-amber-500\/20 {
+    background-color: #FEF3C7 !important;
+    border-color: #D97706 !important;
+    color: #78350F !important;
 }
 
 /* Fix hover states in sunlight mode */
