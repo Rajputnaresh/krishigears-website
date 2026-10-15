@@ -39,7 +39,7 @@ export default function CompetitorComparison() {
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Wholesale Pricing (7HP Weeder)</td>
                 <td className="p-4 sm:p-6 text-center text-zinc-500">₹36,000 - ₹42,000</td>
-                <td className="p-4 sm:p-6 text-center text-lime-400 font-bold bg-lime-500/5">₹28,500 <span className="block text-[10px] leading-none text-zinc-500 font-normal mt-0.5">Bulk MOQ · ex-factory · excl. GST</span></td>
+                <td className="p-4 sm:p-6 text-center text-lime-400 font-bold bg-lime-500/5">₹28,500 <span className="block text-[10px] leading-none text-lime-200/90 font-medium mt-0.5">Bulk MOQ · ex-factory · excl. GST</span></td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Warranty Support</td>

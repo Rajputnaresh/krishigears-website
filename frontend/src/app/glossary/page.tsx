@@ -160,8 +160,9 @@ export default function GlossaryPage() {
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed mb-4">
                   {item.definition}
                 </p>
-                <div className="bg-emerald-50/70 border-l-4 border-emerald-600 rounded-r-lg p-3 text-xs sm:text-sm text-emerald-900 font-medium">
-                  <strong>Field Impact:</strong> {item.impact}
+                <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-xl p-3 text-xs sm:text-sm text-emerald-950 font-medium flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-2">
+                  <span className="shrink-0 px-2 py-0.5 rounded bg-emerald-700 text-white text-[11px] font-bold tracking-wide uppercase inline-block w-fit">Field Impact</span>
+                  <span className="leading-relaxed">{item.impact}</span>
                 </div>
               </div>
             ))}

@@ -153,40 +153,46 @@ export default function ProductDetail() {
             </div>
             <p className="text-zinc-300 mt-5 leading-relaxed">{product.warranty}</p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            {/* Primary B2B Action Cluster (Max 3 clear choices) */}
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`WhatsApp Wholesale Quote for ${product.name}`}
+                onClick={() => trackWhatsAppClick("product_detail", product.slug)}
+                data-testid="product-whatsapp-btn"
+                className="bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-6 py-3.5 rounded-lg inline-flex items-center gap-2 active:scale-95 transition-transform duration-100 shadow-lg shadow-lime-500/20"
+              >
+                <WhatsAppIcon className="h-5 w-5" /> WhatsApp Wholesale Quote
+              </a>
               <EnquiryDialog
                 product={product.name}
                 trigger={
-                  <button data-testid="product-enquiry-btn" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-6 py-3.5 rounded-lg active:scale-95 transition-transform duration-100 shadow-lg shadow-lime-500/20">
-                    Bulk / Dealer Inquiry
+                  <button data-testid="product-enquiry-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-400 text-zinc-100 font-bold px-6 py-3.5 rounded-lg active:scale-95 transition-all duration-100 bg-zinc-900/60">
+                    Submit RFQ / Inquiry
                   </button>
                 }
               />
-              <Link href="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100">
-                Become Dealer
+              <Link href="/become-a-dealer" data-testid="product-dealer-btn" className="border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white px-5 py-3.5 font-semibold text-sm rounded-lg active:scale-95 transition-all duration-100">
+                Become a Dealer →
               </Link>
-              <Link href="/bulk-order" data-testid="product-institutional-btn" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100">
-                Institutional Supply
-              </Link>
+            </div>
+
+            {/* Separated Consumer Retail Card (Prevents B2B Hick's Law dilution) */}
+            <div className="mt-5 p-4 rounded-xl border border-zinc-800/80 bg-zinc-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <span className="text-[11px] font-bold text-lime-400 uppercase tracking-wider">Farmer Retail Purchase</span>
+                <p className="text-xs text-zinc-300 mt-0.5">Need a single machine for personal farming? Order with doorstep COD & subsidy invoice.</p>
+              </div>
               <a
                 href={retailUrl}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="product-buy-online-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg active:scale-95 transition-transform duration-100"
+                className="shrink-0 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold rounded-lg border border-zinc-700 hover:border-lime-400 transition inline-flex items-center justify-center gap-1.5"
               >
-                Buy Online at FarmingTools
-              </a>
-              <a
-                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`WhatsApp Supply Enquiry for ${product.name}`}
-                onClick={() => trackWhatsAppClick("product_detail", product.slug)}
-                data-testid="product-whatsapp-btn"
-                className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-lg inline-flex items-center gap-2 active:scale-95 transition-transform duration-100"
-              >
-                <WhatsAppIcon className="h-4 w-4" /> WhatsApp Supply Enquiry
+                Buy on FarmingTools.in →
               </a>
             </div>
 

@@ -160,7 +160,7 @@ export default function BlogPost({ initialPost } = {}) {
                 <code className="text-xs font-mono bg-zinc-900 text-lime-400 px-1.5 py-0.5 rounded border border-zinc-800" {...props} />
               ),
               blockquote: ({ node, children, ...props }) => (
-                <div className="my-6 p-5 rounded-xl bg-lime-950/20 border border-lime-500/30 border-l-4 border-l-lime-500 shadow-md">
+                <div className="my-6 p-5 rounded-xl bg-lime-950/20 border border-lime-500/40 shadow-md">
                   <div className="flex items-center gap-2 mb-2 text-xs font-extrabold uppercase tracking-wider text-lime-400">
                     <span className="inline-block w-2 h-2 rounded-full bg-lime-400"></span>
                     Field Technical Reference & Direct Resolution

@@ -210,36 +210,50 @@ export default function Header() {
             Dealers
           </Link>
 
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              data-testid="nav-resources-trigger"
+              className="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md cursor-pointer"
+            >
+              <span>Resources</span>
+              <ChevronDown className="h-3.5 w-3.5 text-lime-400" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-zinc-950/95 backdrop-blur-2xl backdrop-saturate-[180%] border-zinc-800/90 w-64 text-zinc-200 shadow-2xl z-[60]">
+              <DropdownMenuItem asChild>
+                <Link href="/locations" data-testid="nav-locations" className="text-sm text-zinc-300 hover:text-lime-400 cursor-pointer flex flex-col items-start py-2">
+                  <span className="font-semibold text-white">740 District Directory</span>
+                  <span className="text-[11px] text-zinc-400">All-India delivery & regional hubs</span>
+                </Link>
+              </DropdownMenuItem>
+              <div className="h-px bg-zinc-800/80 my-1" />
+              <DropdownMenuItem asChild>
+                <Link href="/blog" data-testid="nav-blog" className="text-sm text-zinc-300 hover:text-lime-400 cursor-pointer flex flex-col items-start py-2">
+                  <span className="font-semibold text-white">Knowledge Hub</span>
+                  <span className="text-[11px] text-zinc-400">Troubleshooting & field service</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/glossary" data-testid="nav-glossary" className="text-sm text-zinc-300 hover:text-lime-400 cursor-pointer flex flex-col items-start py-2">
+                  <span className="font-semibold text-white">Technical Glossary</span>
+                  <span className="text-[11px] text-zinc-400">FMTTI specs & machinery terms</span>
+                </Link>
+              </DropdownMenuItem>
+              <div className="h-px bg-zinc-800/80 my-1" />
+              <DropdownMenuItem asChild>
+                <Link href="/warranty-and-support" data-testid="nav-warranty" className="text-sm text-zinc-300 hover:text-lime-400 cursor-pointer flex flex-col items-start py-2">
+                  <span className="font-semibold text-white">Warranty & Support</span>
+                  <span className="text-[11px] text-zinc-400">Claims registration & parts support</span>
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link
             href="/about"
             data-testid="nav-about"
             className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
           >
             About
-          </Link>
-
-          <Link
-            href="/locations"
-            data-testid="nav-locations"
-            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
-          >
-            Locations
-          </Link>
-
-          <Link
-            href="/blog"
-            data-testid="nav-blog"
-            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
-          >
-            Blog
-          </Link>
-
-          <Link
-            href="/warranty-and-support"
-            data-testid="nav-warranty"
-            className="px-3 py-2 text-sm font-medium transition text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
-          >
-            Warranty
           </Link>
 
           <Link

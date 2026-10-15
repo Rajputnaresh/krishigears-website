@@ -168,7 +168,9 @@ function LeadsPanel({ onChange }) {
                 data-testid={`leads-filter-${t.value}`}
                 onClick={() => setType(t.value)}
                 className={`px-4 py-2 border text-sm font-medium inline-flex items-center gap-2 transition ${
-                  type === t.value ? "border-lime-500 text-lime-500 bg-lime-500/10" : "border-zinc-800 text-zinc-300 hover:border-zinc-600 hover:text-white"
+                  type === t.value
+                    ? "border-lime-500 text-lime-500 bg-lime-500/10"
+                    : "border-zinc-800 text-zinc-300 hover:border-zinc-600 hover:text-white"
                 }`}
               >
                 <I className="h-3.5 w-3.5"/>{t.label}
