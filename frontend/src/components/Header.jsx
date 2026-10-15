@@ -138,6 +138,7 @@ export default function Header() {
           <button
             onClick={toggleSunlight}
             title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
+            aria-label={sunlight ? "Switch to Normal Mode (सामान्य मोड)" : "Switch to Outdoor Sunlight High-Contrast Mode (धूप मोड)"}
             className={`px-3 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
               sunlight
                 ? "bg-amber-100 text-amber-950 border-amber-300"
