@@ -18,10 +18,32 @@ export const metadata: Metadata = {
 
 const aboutJsonLd = {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About KrishiGears",
-  "description": "Information about KrishiGears, Jaipur-based agricultural machinery brand and B2B supplier.",
-  "url": "https://krishigears.com/about"
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://krishigears.com/about#webpage",
+      "name": "About KrishiGears",
+      "description": "Information about KrishiGears, Jaipur-based agricultural machinery brand and B2B supplier.",
+      "url": "https://krishigears.com/about"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://krishigears.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://krishigears.com/about"
+        }
+      ]
+    }
+  ]
 };
 
 export default function RoutePage() {

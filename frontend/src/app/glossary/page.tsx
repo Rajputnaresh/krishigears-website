@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Agricultural Machinery Technical Glossary & Engineering Standards | KrishiGears",
+  title: "Agricultural Machinery Technical Glossary & Engineering Standards",
   description: "Official engineering reference for farm machinery terms: PTO splines, 2T JASO-FD ratios, FMTTI compliance, SMAM subsidies, and tillage mechanics.",
   alternates: {
     canonical: "https://krishigears.com/glossary",

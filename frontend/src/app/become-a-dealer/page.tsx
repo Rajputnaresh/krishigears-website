@@ -26,6 +26,25 @@ export const metadata: Metadata = {
   },
 };
 
+const becomeDealerBreadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://krishigears.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Become a Dealer",
+      "item": "https://krishigears.com/become-a-dealer"
+    }
+  ]
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -68,6 +87,10 @@ const faqJsonLd = {
 export default function RoutePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(becomeDealerBreadcrumbJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!post) {
     return {
-      title: 'Guide Not Found | KrishiGears',
+      title: 'Guide Not Found',
     };
   }
 

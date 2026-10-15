@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Page from "@/pages_temp/DealerState.jsx";
 import locationsData from "@/data/locations.json";
 import { getStateAgronomy } from "@/data/stateAgronomy";
+import { clampDescription } from "@/app/layout";
 
 const STATE_NAMES: Record<string, string> = {
   "andhra-pradesh": "Andhra Pradesh",
@@ -105,13 +106,19 @@ export async function generateMetadata({
 
   return {
     title: `Dealership in ${stateName} | Wholesale Power Weeders & Spares`,
-    description: `Become an authorized KrishiGears dealer in ${stateName}. Factory-direct wholesale pricing on 7HP/9HP power weeders, genuine OEM spare parts, protected territory, and ${agronomy.subsidy_scheme} DBT support.`,
+    description: clampDescription(
+      `Become an authorized KrishiGears dealer in ${stateName}. Factory-direct wholesale pricing on 7HP/9HP power weeders, genuine OEM spare parts, protected territory, and ${agronomy.subsidy_scheme} DBT support.`,
+      155
+    ),
     alternates: {
       canonical: `https://krishigears.com/dealer/${stateSlug}`,
     },
     openGraph: {
       title: `Farm Machinery Dealership in ${stateName}`,
-      description: `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins, ${agronomy.soil} fitment, and 48-hour parts dispatch.`,
+      description: clampDescription(
+        `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins, ${agronomy.soil} fitment, and 48-hour parts dispatch.`,
+        155
+      ),
       url: `https://krishigears.com/dealer/${stateSlug}`,
       siteName: "KrishiGears",
       images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: `KrishiGears ${stateName}` }],

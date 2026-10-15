@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Contact.jsx";
 
 export const metadata: Metadata = {
-  title: "Contact KrishiGears: Jaipur HQ & Dealer Support",
+  title: "Contact Jaipur HQ & Dealer Support Desk",
   description: "B2B machinery quotes, dealership onboarding and spare parts dispatch. Phone +91 60060 78815, GSTIN 08AANCK2216L1ZA.",
   alternates: {
     canonical: "https://krishigears.com/contact",
@@ -18,41 +18,63 @@ export const metadata: Metadata = {
 
 const contactJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "KRISHIGEARS INDIA PRIVATE LIMITED",
-  "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
-  "taxID": "08AANCK2216L1ZA",
-  "image": "https://krishigears.com/logo512.png",
-  "url": "https://krishigears.com",
-  "telephone": "+916006078815",
-  "email": "sales@krishigears.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
-    "addressLocality": "Jaipur",
-    "addressRegion": "Rajasthan",
-    "postalCode": "302026",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.8538,
-    "longitude": 75.7196
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:00",
-    "closes": "19:00"
-  },
-  "areaServed": "IN"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://krishigears.com/contact#localbusiness",
+      "name": "KRISHIGEARS INDIA PRIVATE LIMITED",
+      "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
+      "taxID": "08AANCK2216L1ZA",
+      "image": "https://krishigears.com/logo512.png",
+      "url": "https://krishigears.com",
+      "telephone": "+916006078815",
+      "email": "sales@krishigears.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "postalCode": "302026",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.8538,
+        "longitude": 75.7196
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "areaServed": "IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://krishigears.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://krishigears.com/contact"
+        }
+      ]
+    }
+  ]
 };
 
 export default function RoutePage() {

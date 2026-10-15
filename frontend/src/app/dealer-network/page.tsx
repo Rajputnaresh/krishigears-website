@@ -12,9 +12,41 @@ export const metadata: Metadata = {
     description: "Locate certified KrishiGears machinery distributors and service partners in your state.",
     url: "https://krishigears.com/dealer-network",
     siteName: "KrishiGears",
+    images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "Authorized KrishiGears Dealer Network" }],
   },
 };
 
+const dealerNetworkJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://krishigears.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dealer Network",
+          "item": "https://krishigears.com/dealer-network"
+        }
+      ]
+    }
+  ]
+};
+
 export default function RoutePage() {
-  return <Page />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dealerNetworkJsonLd) }}
+      />
+      <Page />
+    </>
+  );
 }

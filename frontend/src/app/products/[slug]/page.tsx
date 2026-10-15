@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Page from "@/pages_temp/ProductDetail.jsx";
 import { PRODUCTS } from "@/data/catalog";
+import { clampDescription } from "@/app/layout";
 
 export function generateStaticParams() {
   return PRODUCTS.map((product) => ({
@@ -25,7 +26,8 @@ export async function generateMetadata({
 
   // Clean title: layout.tsx template "%s | KrishiGears" appends brand suffix
   const title = `${product.name} | B2B Factory Price`;
-  const description = `${product.name} (${product.model || "Commercial Grade"}). FMTTI-tested, ${product.specs?.Power || "Heavy duty"}, genuine OEM fitment, 24-48h dispatch from Jaipur HQ. Get wholesale dealer quote.`;
+  const rawDescription = `${product.name} (${product.model || "Commercial Grade"}). FMTTI-tested, ${product.specs?.Power || "Heavy duty"}, genuine OEM fitment, 24-48h dispatch from Jaipur HQ. Get wholesale dealer quote.`;
+  const description = clampDescription(rawDescription, 155);
 
   return {
     title,

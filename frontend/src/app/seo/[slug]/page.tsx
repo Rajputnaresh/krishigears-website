@@ -58,7 +58,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description,
     alternates: {
       canonical: `https://krishigears.com/seo/${slug}`
-    }
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://krishigears.com/seo/${slug}`,
+      siteName: "KrishiGears",
+      images: [
+        {
+          url: "/images/products/weeder.webp",
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
+    },
   };
 }
 
