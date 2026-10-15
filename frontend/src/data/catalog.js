@@ -6,7 +6,8 @@ import {
   Trees, Sprout, Wheat, Cog, Settings, CircleDot, Package
 } from "lucide-react";
 
-export const LOGO_URL = "/logo512.png";
+export const LOGO_URL = "/logo-96.webp";
+export const LOGO_LARGE_URL = "/logo512.png";
 export const HERO_BG = "/assets/brand/hero-bg.webp";
 export const INDIA_MAP = "/assets/brand/india-map.webp";
 export const ABSTRACT_TERRAIN = "/assets/brand/abstract-terrain.webp";

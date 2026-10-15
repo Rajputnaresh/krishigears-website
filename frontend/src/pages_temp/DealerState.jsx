@@ -79,8 +79,15 @@ const DEALER_PROCESS = [
   { step: 6, title: "Ongoing Business", desc: "Live inventory access, monthly review calls, dedicated territory manager, and quarterly performance bonuses." },
 ];
 
-import { getStateAgronomy } from "@/data/stateAgronomy";
-
+/**
+ * @param {{
+ *   districts?: any[],
+ *   stateName?: string,
+ *   stateSlug?: string,
+ *   tier?: string,
+ *   agronomy?: any
+ * }} [props]
+ */
 export default function DealerState({ districts = [], stateName: propStateName, stateSlug: propStateSlug, tier: propTier, agronomy: propAgronomy } = {}) {
   const params = useParams();
   const routeState = params?.state;

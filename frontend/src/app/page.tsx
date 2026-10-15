@@ -4,6 +4,7 @@ import CompetitorComparison from "@/components/CompetitorComparison";
 
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
   Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X, FileText
@@ -241,7 +242,14 @@ export default function Home() {
                     data-testid={`cat-card-${c.slug}`}
                     className={`relative w-full group overflow-hidden border border-zinc-700/80 bg-surface hover:border-lime-500/60 transition-colors duration-300 rounded-xl shadow-lg hover:shadow-2xl flex flex-col justify-between ${big ? "min-h-[360px] sm:min-h-[480px]" : "min-h-[200px] sm:min-h-[230px]"}`}
                   >
-                    <img src={c.image} alt={c.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700" />
+                    <Image
+                      src={c.image}
+                      alt={c.name}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
                     <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between">
                       <div className="h-10 w-10 sm:h-12 sm:w-12 grid place-items-center bg-lime-500/10 border border-lime-500/40 text-lime-500 rounded-lg">
