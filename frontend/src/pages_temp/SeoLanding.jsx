@@ -9,16 +9,32 @@ import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { CITY_STATE_MAP } from "@/data/cityStateMap";
 
+const EXTRA_SEO_SLUGS = new Set([
+  "power-weeder-spare-parts-supplier-jaipur-amer",
+  "power-weeder-spare-parts-supplier-jaipur-sanganer",
+  "power-weeder-spare-parts-supplier-nagpur-kamptee",
+  "power-weeder-spare-parts-supplier-pune-haveli",
+  "power-weeder-spare-parts-supplier-pune-maval",
+  "power-weeders-supplier-jaipur-amer",
+  "power-weeders-supplier-jaipur-sanganer",
+  "power-weeders-supplier-nagpur-kamptee",
+  "power-weeders-supplier-pune-haveli",
+  "power-weeders-supplier-pune-maval",
+]);
+
 export default function SeoLanding() {
 
   const { slug } = useParams();
   const [fetchedPage, setFetchedPage] = useState(null);
 
   useEffect(() => {
+    if (!slug || !EXTRA_SEO_SLUGS.has(slug)) return;
     fetch(`/seo-data/${slug}.json`)
-      .then(res => res.json())
-      .then(data => setFetchedPage(data))
-      .catch(e => console.log('No extra SEO data found for', slug));
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (data) setFetchedPage(data);
+      })
+      .catch(() => {});
   }, [slug]);
 
   
