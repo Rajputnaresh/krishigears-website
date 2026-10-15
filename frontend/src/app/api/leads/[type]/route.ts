@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const CRM_WEBHOOK_URL =
   process.env.CRM_WEBHOOK_URL ||
-  "https://krishigears-whatsapp-crm-mvp.onrender.com/api/webhooks/website/lead";
+  "https://krishigears-crm.onrender.com/api/webhooks/website/lead";
 const CRM_WEBHOOK_SECRET =
   process.env.CRM_WEBHOOK_SECRET || process.env.CRON_SECRET || "";
 
@@ -20,6 +20,10 @@ export async function POST(
       id: leadId,
       type: type || "general",
       created_at: createdAt,
+      name: body.name || body.full_name || body.owner_name || body.business_name || "Website Lead",
+      phone: body.phone || body.mobile || body.whatsapp || "",
+      product: body.product || body.product_model || body.machine_model || type || "Website Enquiry",
+      location: body.location || body.city || body.district || body.state || "",
       ...body,
     };
 

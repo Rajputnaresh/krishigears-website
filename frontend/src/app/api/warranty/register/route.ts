@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const CRM_WEBHOOK_URL =
   process.env.CRM_WEBHOOK_URL ||
-  "https://krishigears-whatsapp-crm-mvp.onrender.com/api/webhooks/website/lead";
+  "https://krishigears-crm.onrender.com/api/webhooks/website/lead";
 const CRM_WEBHOOK_SECRET =
   process.env.CRM_WEBHOOK_SECRET || process.env.CRON_SECRET || "";
 
@@ -16,6 +16,12 @@ export async function POST(request: Request) {
       id: leadId,
       type: "warranty",
       created_at: createdAt,
+      name: body.owner_name || body.name || body.full_name || "Warranty Registrant",
+      phone: body.phone || body.mobile || "",
+      product: body.machine_model || body.product || "Power Weeder",
+      location: body.city || body.district || body.state || "",
+      serial_number: body.serial_number || "",
+      purchase_date: body.purchase_date || "",
       ...body,
     };
 
