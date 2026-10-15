@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { clampTitle, clampDescription } from "@/app/layout";
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const params: Array<{ slug: string }> = [];
   
@@ -13,8 +15,8 @@ export async function generateStaticParams() {
     params.push({ slug: page.slug });
   });
 
-  // Geo pages
-  GEO_SEO_PAGES.forEach((page) => {
+  // Top priority geo pages pre-rendered at build time; all other 1,380+ districts are served via on-demand ISR
+  GEO_SEO_PAGES.slice(0, 100).forEach((page) => {
     params.push({ slug: page.slug });
   });
 
