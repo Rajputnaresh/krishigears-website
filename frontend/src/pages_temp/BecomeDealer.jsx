@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { apiClient, formatApiError } from "@/lib/api";
 import { trackDealerSubmit } from "@/lib/analytics";
-import { FARMER_FIELD } from "@/data/catalog";
+import { FARMER_FIELD, COMPANY } from "@/data/catalog";
 
 export default function BecomeDealer() {
   const [loading, setLoading] = useState(false);
@@ -91,12 +91,16 @@ export default function BecomeDealer() {
             </div>
 
             <div className="pt-3 border-t border-zinc-800">
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">30-Second Audio Guide (हिंदी)</span>
-              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें और 15-22% मार्जिन कैसे प्राप्त करें — ऑडियो सुनें:</p>
-              <audio controls className="w-full h-8 text-xs">
-                <source src="/audio/dealer-guide-hindi.mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Audio Guide & Instant Consultation (हिंदी)</span>
+              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें और 15-22% मार्जिन कैसे प्राप्त करें — व्हाट्सएप पर ऑडियो गाइड व जानकारी पाएं:</p>
+              <a
+                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे डीलरशिप नियम, 15-22% मार्जिन विवरण और ऑडियो गाइड WhatsApp पर भेजें।")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-semibold transition"
+              >
+                <span>WhatsApp पर ऑडियो व नियम प्राप्त करें →</span>
+              </a>
             </div>
           </div>
 
