@@ -6,6 +6,7 @@ import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function ProductCard({ product }) {
   const { t } = useTranslation();
@@ -34,7 +35,13 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div data-testid={`product-card-${product.slug}`} className="kg-card overflow-hidden flex flex-col relative group">
+    <motion.div
+      data-testid={`product-card-${product.slug}`}
+      className="kg-card overflow-hidden flex flex-col relative group"
+      whileHover={{ y: -4 }}
+      whileTap={{ scale: 0.985 }}
+      transition={{ type: "spring", stiffness: 400, damping: 28 }}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
@@ -154,6 +161,6 @@ export default function ProductCard({ product }) {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

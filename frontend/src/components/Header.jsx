@@ -88,7 +88,7 @@ export default function Header() {
   return (
     <header
       data-testid="site-header"
-      className="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-800"
+      className="fixed top-0 inset-x-0 z-50 bg-black/80 backdrop-blur-2xl backdrop-saturate-[180%] border-b border-zinc-800/80 transition-colors"
     >
       {/* Global B2B Trust & Utility Bar */}
       <div className="bg-zinc-950 border-b border-zinc-800/80 px-3 md:px-8 py-1.5 relative flex items-center justify-between text-xs text-zinc-300 min-h-[44px]">
@@ -180,7 +180,7 @@ export default function Header() {
               <span>{t('nav.products', 'Products')}</span>
               <ChevronDown className="h-3.5 w-3.5 text-lime-400" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-zinc-950 border-zinc-800 w-72 max-h-[70vh] overflow-y-auto text-zinc-200 shadow-2xl z-[60]">
+            <DropdownMenuContent className="bg-zinc-950/95 backdrop-blur-2xl backdrop-saturate-[180%] border-zinc-800/90 w-72 max-h-[70vh] overflow-y-auto text-zinc-200 shadow-2xl z-[60]">
               <DropdownMenuItem asChild>
                 <Link href="/products" className="font-bold text-lime-400 hover:text-lime-300 cursor-pointer" data-testid="nav-all-products">
                   All Products →

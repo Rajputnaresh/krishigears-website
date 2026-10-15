@@ -95,6 +95,7 @@ def build_sitemap(geo_pages):
         {"loc": f"{SITE_URL}/contact", "priority": "0.7", "changefreq": "monthly"},
         {"loc": f"{SITE_URL}/warranty-and-support", "priority": "0.7", "changefreq": "monthly"},
         {"loc": f"{SITE_URL}/locations", "priority": "0.8", "changefreq": "weekly"},
+        {"loc": f"{SITE_URL}/glossary", "priority": "0.85", "changefreq": "weekly"},
         {"loc": f"{SITE_URL}/blog", "priority": "0.9", "changefreq": "daily"}
     ]
     
