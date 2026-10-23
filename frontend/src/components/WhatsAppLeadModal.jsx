@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -27,17 +28,16 @@ export default function WhatsAppLeadModal({
     const fullMessage = `नमस्ते KrishiGears, मुझे ${district ? `${district} (ज़िला) के लिए ` : ""}${requirement} की फ़ैक्ट्री थोक दर / डीलरशिप कोटेशन चाहिए। [Phone: ${phone || "WhatsApp Direct"}]`;
     const waUrl = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(fullMessage)}&utm_source=website&utm_medium=whatsapp_modal&utm_campaign=kg_catalog`;
 
-    // 1. Asynchronously log intent to backend CRM lead collector (fails gracefully)
+    // Save the contact before handing off to the separate Business app.
     try {
-      apiClient.post("/leads/enquiry", {
-        name: `WhatsApp Lead (${district || "Direct"})`,
-        phone: phone || "Via WhatsApp",
-        location: district,
-        product: requirement,
-        message: `Triggered WhatsApp Pre-flight Modal from ${source}`,
-      }).catch(() => {});
+      await apiClient.post("/leads/enquiry", {
+        name: "WhatsApp enquiry", phone, location: district, product: requirement,
+        message: `WhatsApp request from ${source}`,
+      });
     } catch {
-      // Ignore CRM lead logging errors on static client
+      toast.error("Could not save your enquiry. Please retry; your details are still here.");
+      setSubmitting(false);
+      return;
     }
 
     // 2. Track analytics conversion event
@@ -48,7 +48,7 @@ export default function WhatsAppLeadModal({
     setOpen(false);
 
     // 3. Open WhatsApp in new tab / mobile app
-    window.open(waUrl, "_blank", "noopener,noreferrer");
+    window.location.assign(waUrl);
   };
 
   return (
@@ -96,10 +96,10 @@ export default function WhatsAppLeadModal({
 
           <div className="space-y-1.5">
             <Label className="text-xs text-zinc-300 font-semibold">
-              मोबाइल नंबर / WhatsApp Phone (Optional)
+              मोबाइल नंबर / WhatsApp Phone *
             </Label>
             <Input
-              type="tel"
+              type="tel" required pattern="[6-9][0-9]{9}" maxLength={10}
               placeholder="10-digit mobile number"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
