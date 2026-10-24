@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import locationsData from '@/data/locations.json';
 import { STATE_SUBSIDIES, CROP_GUIDES, DEFAULT_CROP_GUIDE, DEFAULT_SUBSIDY } from '@/data/enrichment';
-import { COMPANY } from '@/data/catalog';
+import { COMPANY, farmingtoolsCategoryUrl } from '@/data/catalog';
 import { clampTitle, clampDescription } from '@/app/layout';
 import Link from 'next/link';
 import { 
@@ -434,6 +434,29 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             </div>
           </div>
         </section>
+
+        {/* Individual Farmer Retail Orders & COD Delivery Bridge */}
+        <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-emerald-950/70 via-zinc-900 to-zinc-950 border border-emerald-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              <span>🌾</span> Direct Retail Farmer Purchase
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-white">
+              Looking to Buy a Single Machine with Doorstep COD in {locationName}?
+            </h3>
+            <p className="text-zinc-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+              While KrishiGears manages commercial dealer distribution, bulk FPO supply, and OEM spare parts, individual farmers can order single units directly through our authorized retail storefront with cash on delivery, manufacturer test report, and state subsidy proforma invoice.
+            </p>
+          </div>
+          <a
+            href={farmingtoolsCategoryUrl(categorySlug)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all whitespace-nowrap shadow-lg shadow-emerald-950/50 shrink-0"
+          >
+            Order Retail on FarmingTools.in <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
 
         {/* State Government Subsidy Scheme Guidance */}
         <section className="bg-zinc-950 border border-zinc-800 p-8 rounded-2xl shadow-xl">
