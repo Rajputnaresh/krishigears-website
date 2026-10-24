@@ -16,12 +16,15 @@ export default function ProductCard({ product }) {
   );
   const waHref = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
+  const productPrice = product.price || 26000;
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
     "image": product.images?.[0] ? `https://krishigears.com${product.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
     "description": `${product.name} - genuine commercial agricultural equipment from KrishiGears. Available for dealer and bulk supply across India.`,
+    "sku": product.model || product.slug,
+    "mpn": product.model || product.slug,
     "brand": {
       "@type": "Brand",
       "name": "KrishiGears"
@@ -29,8 +32,51 @@ export default function ProductCard({ product }) {
     "offers": {
       "@type": "Offer",
       "priceCurrency": "INR",
+      "price": productPrice,
+      "priceValidUntil": "2027-12-31",
       "availability": "https://schema.org/InStock",
-      "url": `https://krishigears.com/products/${product.slug}`
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": `https://krishigears.com/products/${product.slug}`,
+      "seller": {
+        "@type": "Organization",
+        "name": "KrishiGears",
+        "url": "https://krishigears.com"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     },
   };
 

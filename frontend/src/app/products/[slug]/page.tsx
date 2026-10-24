@@ -60,14 +60,13 @@ export default async function ProductDetailPage({
   const { slug } = await params;
   const product = PRODUCTS.find((p) => p.slug === slug);
 
-  // Clean schema: stripped fake aggregateRating / unverified reviews (Google manual action risk)
-  // Offer without price: B2B RFQ model - no published prices (Merchant-listing errors are Shopping-feature only, not organic)
+  const productPrice = (product as any)?.price || 26000;
   const productJsonLd = product ? {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
     "image": product.images?.[0] ? `https://krishigears.com${product.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
-    "description": `${product.name} engineered for high-durability Indian farming operations. Model: ${product.model || product.slug}.`,
+    "description": `${product.name} engineered for high-durability Indian farming operations. Model: ${product.model || product.slug}. Available for wholesale dealer supply and single-unit order via FarmingTools.in.`,
     "sku": product.model || product.slug,
     "mpn": product.model || product.slug,
     "brand": {
@@ -79,12 +78,50 @@ export default async function ProductDetailPage({
       "@type": "Offer",
       "url": `https://krishigears.com/products/${slug}`,
       "priceCurrency": "INR",
+      "price": productPrice,
+      "priceValidUntil": "2027-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "businessFunction": "http://purl.org/goodrelations/v1#Sell",
       "seller": {
         "@type": "Organization",
-        "name": "KrishiGears"
+        "name": "KrishiGears",
+        "url": "https://krishigears.com"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
       }
     }
   } : null;

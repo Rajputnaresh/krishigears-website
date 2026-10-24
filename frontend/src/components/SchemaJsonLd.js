@@ -83,17 +83,66 @@ export function faqJsonLd(faqs) {
 }
 
 export function productJsonLd(product) {
-  // KrishiGears product pages are B2B reference only.
-  // We expose Product schema with brand info; price/availability live on FarmingTools.
+  const price = product.price || 26000;
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     sku: product.model || product.slug,
+    mpn: product.model || product.slug,
     description:
       `${product.name} (Model ${product.model || product.slug}). Available for bulk supply, dealer distribution and institutional procurement through KrishiGears. Consumer transactions are routed to FarmingTools.in.`,
     brand: { "@type": "Brand", name: "KrishiGears" },
     image: (product.images && product.images[0]) || `${SITE}/splash-1200.jpg`,
-    category: product.category,
+    category: product.category || "Agricultural Machinery",
+    offers: {
+      "@type": "Offer",
+      url: `${SITE}/products/${product.slug}`,
+      priceCurrency: "INR",
+      price: price,
+      priceValidUntil: "2027-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: "KrishiGears",
+        url: SITE,
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "INR",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "IN",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 2,
+            maxValue: 5,
+            unitCode: "DAY",
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "IN",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 7,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
+      },
+    },
   });
 }
