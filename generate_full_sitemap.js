@@ -46,36 +46,9 @@ const states = [
   'tamil-nadu', 'telangana', 'uttar-pradesh', 'uttarakhand', 'west-bengal'
 ];
 
-const blogSlugs = [
-  'power-weeder-buying-guide-2026',
-  'rk-170f-vs-177f-vs-173f-comparison',
-  'power-weeder-government-subsidy-dbt-guide',
-  'power-weeder-maintenance-spare-parts-guide',
-  'best-power-weeder-sugarcane-maharashtra',
-  'best-power-weeder-rice-paddy-tamil-nadu',
-  'power-weeder-rental-business-india',
-  'power-weeder-vs-power-tiller',
-  '10-hp-diesel-power-weeder-upgrade-guide',
-  'power-weeder-blade-replacement-guide',
-  'power-weeder-crankshaft-failure-diagnosis',
-  'power-weeder-recoil-starter-fix',
-  'best-power-weeder-cotton-farming-gujarat',
-  'power-weeder-coconut-arecanut-karnataka',
-  'fpo-bulk-order-power-weeder-subsidy',
-  'power-weeder-price-in-india-2026-b2b-dealer-wholesale-guide',
-  '2-stroke-brush-cutter-petrol-oil-ratio-calculator',
-  'smam-subsidy-portal-registration-power-weeder-guide',
-  'power-weeder-subsidy-karnataka-2026',
-  'power-weeder-subsidy-uttar-pradesh-2026',
-  'power-weeder-subsidy-gujarat-2026',
-  'power-weeder-not-starting-recoil-pull-troubleshooting',
-  'diesel-weeder-engine-hunting-rpm-fluctuation',
-  'power-weeder-gearbox-oil-leaking-axle-oil-seal-replacement',
-  'power-weeder-blade-types-j-blades-vs-c-blades',
-  'htp-sprayer-pump-pressure-unloader-valve-adjustment',
-  'battery-sprayer-pump-pressure-drop-diaphragm-repair',
-  'agri-machinery-dealer-operations-88-profitability'
-];
+const blogPostsContent = fs.readFileSync(path.join(__dirname, 'frontend/src/data/blogPosts.ts'), 'utf-8');
+const blogMatches = [...blogPostsContent.matchAll(/"([a-z0-9\-]+)": \{/g)];
+const blogSlugs = Array.from(new Set(blogMatches.map(m => m[1])));
 
 const geoCategories = [
   'power-weeders',
