@@ -16,6 +16,7 @@ const staticRoutes = [
   { path: '/blog', prio: '0.8', freq: 'weekly' },
   { path: '/glossary', prio: '0.85', freq: 'weekly' },
   { path: '/contact', prio: '0.8', freq: 'monthly' },
+  { path: '/spare-parts', prio: '0.95', freq: 'daily' },
   { path: '/seo/power-weeder-supplier-india', prio: '0.9', freq: 'weekly' },
   { path: '/seo/power-weeder-spare-parts-supplier-india', prio: '0.9', freq: 'weekly' }
 ];
