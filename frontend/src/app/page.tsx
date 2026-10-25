@@ -164,14 +164,17 @@ export default function Home() {
             </div>
 
             {/* Clear retail handoff note */}
-            <div className="mt-5 sm:mt-6 inline-flex flex-wrap items-center gap-2.5 sm:gap-2 text-sm sm:text-sm text-zinc-300 bg-zinc-950/80 border border-zinc-800 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-inner">
-              <span className="text-zinc-400">{t('hero.retailPrompt', '1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):')}</span>
+            <div className="mt-5 sm:mt-6 inline-flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-zinc-300 bg-zinc-950/90 border border-emerald-500/30 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-lg">
+              <span className="text-zinc-300 font-medium">{t('hero.retailPrompt', '1 मशीन व्यक्तिगत किसान के लिए? (Retail for 1 Machine):')}</span>
+              <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                ₹1,500 Token • Open-Crate Godown Inspection • Flat ₹28,500 All-Inclusive
+              </span>
               <a
                 href={FARMINGTOOLS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-buy-online"
-                className="text-lime-400 hover:text-lime-300 font-bold inline-flex items-center gap-1 underline underline-offset-2 min-h-[44px] py-2 px-1"
+                className="text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center gap-1 underline underline-offset-4 min-h-[44px] py-2 px-1"
               >
                 {t('hero.retailLink', 'FarmingTools.in पर खरीदें')} <ArrowRight className="h-3.5 w-3.5" />
               </a>

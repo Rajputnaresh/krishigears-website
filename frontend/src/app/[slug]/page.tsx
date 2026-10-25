@@ -436,26 +436,59 @@ export default async function LocationCategoryPage({ params }: { params: Promise
         </section>
 
         {/* Individual Farmer Retail Orders & COD Delivery Bridge */}
-        <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-emerald-950/70 via-zinc-900 to-zinc-950 border border-emerald-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
-          <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-              <span>🌾</span> Direct Retail Farmer Purchase
+        <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-emerald-950/80 via-zinc-900 to-zinc-950 border border-emerald-500/40 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl">
+          <div className="space-y-3 max-w-3xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                <span>🌾</span> Direct Retail Farmer Purchase
+              </div>
+              <span className="px-2.5 py-0.5 rounded text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                ₹1,500 Token Booking • Godown Open-Box Inspection Guarantee
+              </span>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white">
-              Looking to Buy a Single Machine with Doorstep COD in {locationName}?
+            <h3 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
+              Looking to Buy 1 Machine for Your Farm in {locationName}?
             </h3>
-            <p className="text-zinc-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              While KrishiGears manages commercial dealer distribution, bulk FPO supply, and OEM spare parts, individual farmers can order single units directly through our authorized retail storefront with cash on delivery, manufacturer test report, and state subsidy proforma invoice.
+            <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
+              While KrishiGears fulfills commercial dealership lots and bulk FPO tenders, individual farmers can order a single unit directly through our authorized retail storefront <span className="text-emerald-400 font-semibold">FarmingTools.in</span> with complete peace of mind:
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs text-zinc-300">
+              <div className="flex items-start gap-2 bg-zinc-900/90 border border-zinc-800 p-2.5 rounded-lg">
+                <span className="text-emerald-400 font-bold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <strong className="text-white block font-medium">Flat ₹28,500 All-Inclusive:</strong>
+                  <span>GST & transport godown freight included. Zero checkout shock.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2 bg-zinc-900/90 border border-zinc-800 p-2.5 rounded-lg">
+                <span className="text-emerald-400 font-bold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <strong className="text-white block font-medium">₹1,500 Token Guarantee:</strong>
+                  <span>Pay remaining balance only AFTER opening crate & inspecting at local godown.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2 bg-zinc-900/90 border border-zinc-800 p-2.5 rounded-lg">
+                <span className="text-emerald-400 font-bold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <strong className="text-white block font-medium">Free Ridger + Blades:</strong>
+                  <span>32-blade rotary tiller + furrow ridger attachment bundled free in the crate.</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <a
-            href={farmingtoolsCategoryUrl(categorySlug)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all whitespace-nowrap shadow-lg shadow-emerald-950/50 shrink-0"
-          >
-            Order Retail on FarmingTools.in <ArrowRight className="h-4 w-4" />
-          </a>
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 w-full lg:w-auto shrink-0">
+            <a
+              href={farmingtoolsCategoryUrl(categorySlug)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all whitespace-nowrap shadow-lg shadow-emerald-950/50"
+            >
+              Order Retail on FarmingTools.in <ArrowRight className="h-4 w-4" />
+            </a>
+            <span className="text-[11px] text-zinc-400 text-center lg:text-right">
+              Express dispatch to nearest VRL/TCI godown in {locationName}
+            </span>
+          </div>
         </div>
 
         {/* State Government Subsidy Scheme Guidance */}

@@ -180,17 +180,20 @@ export default function ProductDetail() {
             </div>
 
             {/* Separated Consumer Retail Card (Prevents B2B Hick's Law dilution) */}
-            <div className="mt-5 p-4 rounded-xl border border-zinc-800/80 bg-zinc-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="mt-5 p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <span className="text-[11px] font-bold text-lime-400 uppercase tracking-wider">Farmer Retail Purchase</span>
-                <p className="text-xs text-zinc-300 mt-0.5">Need a single machine for personal farming? Order with doorstep COD & subsidy invoice.</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Farmer Retail Purchase</span>
+                  <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">₹1,500 Token • Open-Box Godown Inspection</span>
+                </div>
+                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Flat ₹28,500 all-inclusive (GST + freight) with free 32-blade rotary & ridger bundle.</p>
               </div>
               <a
                 href={retailUrl}
                 target="_blank"
                 rel="noreferrer"
                 data-testid="product-buy-online-btn"
-                className="shrink-0 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold rounded-lg border border-zinc-700 hover:border-lime-400 transition inline-flex items-center justify-center gap-1.5"
+                className="shrink-0 px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold rounded-lg border border-emerald-600 hover:border-lime-400 transition inline-flex items-center justify-center gap-1.5 shadow-md shadow-emerald-950/40"
               >
                 Buy on FarmingTools.in →
               </a>
