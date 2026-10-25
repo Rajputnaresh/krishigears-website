@@ -112,6 +112,13 @@ Petrol stored in plastic jerry cans in the sun forms varnish within 3 weeks, clo
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -156,6 +163,13 @@ Running a diesel power weeder completely out of fuel introduces air pockets into
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -197,6 +211,13 @@ The carburetor needle valve regulates fuel entry. If fine rust particles from th
 ## Technical Engineering Context & Field Dynamics
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -241,6 +262,13 @@ Inside the carburetor body, the tiny idle pilot jet under the throttle stop scre
 ## Technical Engineering Context & Field Dynamics
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -288,6 +316,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -330,6 +365,13 @@ On diesel weeders, the injector tip has 4 or 5 microscopic spray holes (0.18mm).
 ## Technical Engineering Context & Field Dynamics
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -374,6 +416,13 @@ When tilling on hillside terraces, bund edges, or sloping potato beds, the engin
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -416,6 +465,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -455,6 +511,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -497,6 +560,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -544,6 +614,13 @@ Tough weeds (like Bermuda grass / Cynodon / Doob grass) wrap tightly around the 
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -590,6 +667,13 @@ If the cable has adequate free-play but the blades still slip:
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -630,6 +714,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -673,6 +764,13 @@ Some operators tie down the reverse lever with wire to save hand fatigue.
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -719,6 +817,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -763,6 +868,13 @@ Clean soil clods out of the V-groove. Never apply grease or oil to stop belt squ
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -804,6 +916,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -841,6 +960,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -886,6 +1012,13 @@ KrishiGears heavy weeders feature high-durometer rubber vibration isolators betw
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -930,6 +1063,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -973,6 +1113,13 @@ Screw a compression gauge into the spark plug hole. A healthy 7HP petrol engine 
 
 Small air-cooled single-cylinder petrol and diesel engines powering agricultural machinery demand strict attention to combustion timing, valve clearances, and clean filtration. Operating in high-dust harvest environments, small engines lose compression rapidly if air filters or fuel sediment systems are neglected.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Engine Maintenance Parameter | Standard Value (Petrol / Diesel) | Adjustment Frequency |
@@ -1012,6 +1159,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1059,6 +1213,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -1102,6 +1263,13 @@ The depth skid (the curved steel bar trailing behind the gearbox) is not a stand
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -1139,6 +1307,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1181,6 +1356,13 @@ Use **Grade 8.8 High-Tensile Zinc-Plated Locking Pins** with spring-steel linch 
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -1221,6 +1403,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -1257,6 +1446,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1296,6 +1492,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Specification / Inspection Parameter | Standard OEM Value | Tolerance Limit / Replacement Trigger |
@@ -1332,6 +1535,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1370,6 +1580,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1416,6 +1633,13 @@ Inside the outer aluminum tube, a flexible wound steel wire cable (or splined so
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -1459,6 +1683,13 @@ The 90-degree angle gearbox at the bottom of a brush cutter operates at extreme 
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1514,6 +1745,13 @@ Using the wrong oil ratio is the #1 cause of dead 2-stroke engines across India:
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -1532,7 +1770,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
 - **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears stocks [genuine brush cutter spare parts](/products/category/brush-cutters) with 24-48 hour dispatch from Jaipur — MOQ 2 units, GST invoicing, dealer wholesale pricing on request.`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: 1 liter petrol me kitna 2t oil padta hai?\n**Expert Resolution:** 1 liter petrol mein 40 ml standard 2T oil (1:25 ratio) milana chahiye 2-stroke brush cutter aur grass cutter machine ke liye. Agar aap high-grade fully synthetic JASO-FD 2T oil use kar rahe hain, toh 1 liter petrol mein 25 ml (1:40 ratio) dalein. Khet me bina 2T oil ke petrol chalane par piston 15 minute ke andar garam hokar cylinder me jaam (seize) ho jayega.\n\n### Q: 2 stroke brush cutter petrol oil ratio kya hona chahiye?\n**Expert Resolution:** Exact ratio 1:25 hota hai (40ml 2T oil prati 1 Litre petrol). Nayi machine ke break-in period aur heavy paddy/wheat harvesting ke dauran 1:25 ratio sabse safe hai. Synthetic JASO-FD oil ke saath 1:40 (25ml per liter) ratio use kiya jata hai.\n\n### Q: 2t oil ratio for grass cutter: kya seedhe petrol tank me oil daal sakte hain?\n**Expert Resolution:** Kabhi bhi 2T oil seedhe brush cutter ya grass cutter ke petrol tank me na daalein. 2T oil petrol se bhari hota hai aur tank ke tal me baith jata hai, jisse carburetor block ho jata hai aur spark plug foul ho jata hai. Hamesha alag can me petrol aur 2T oil ko 15 second shake karke pre-mix karein.\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears stocks [genuine brush cutter spare parts](/products/category/brush-cutters) with 24-48 hour dispatch from Jaipur — MOQ 2 units, GST invoicing, dealer wholesale pricing on request.`
   },
   "nylon-trimmer-line-breaking-and-jamming-in-bump-feed": {
     slug: "nylon-trimmer-line-breaking-and-jamming-in-bump-feed",
@@ -1555,6 +1793,13 @@ Nylon trimmer line loses its plasticizer moisture in hot dry weather, becoming b
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1594,6 +1839,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -1631,6 +1883,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1670,6 +1929,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1712,6 +1978,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Power weeders and intercultivators are the backbone of row-crop weed management in sugarcane, cotton, vegetables, ginger, and turmeric across India. Operating in harsh dusty fields under high ambient temperatures (35°C–45°C), these machines undergo heavy continuous thermal and mechanical stress. Addressing issues promptly with OEM-spec tolerances prevents catastrophic engine seizures and costly transmission gear fractures.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1758,6 +2031,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -1798,6 +2078,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1844,6 +2131,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1892,6 +2186,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -1938,6 +2239,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -1986,6 +2294,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2032,6 +2347,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2080,6 +2402,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2126,6 +2455,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2174,6 +2510,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2220,6 +2563,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2293,6 +2643,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2351,6 +2708,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2397,6 +2761,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2445,6 +2816,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2491,6 +2869,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2539,6 +2924,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2585,6 +2977,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2633,6 +3032,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2679,6 +3085,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 ## Technical Engineering Context & Field Dynamics
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2727,6 +3140,13 @@ During intense paddy and wheat harvesting seasons, brush cutters run 6 to 8 hour
 
 Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 to 9,500 RPM to cut tough fodder, thick brush, paddy, and wheat stubble. At these elevated RPMs, small imbalances in blades, lack of high-temperature gear grease, or incorrect fuel-oil ratios can cause instant piston seizure, transmission shaft spline stripping, or catastrophic bevel gear failure.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
@@ -2772,6 +3192,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2819,6 +3246,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -2864,6 +3298,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -2911,6 +3352,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -2956,6 +3404,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3003,6 +3458,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3048,6 +3510,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3095,6 +3564,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3140,6 +3616,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3187,6 +3670,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3232,6 +3722,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3279,6 +3776,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3324,6 +3828,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3371,6 +3882,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3416,6 +3934,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3463,6 +3988,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3508,6 +4040,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3555,6 +4094,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3600,6 +4146,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 ## Technical Engineering Context & Field Dynamics
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3647,6 +4200,13 @@ Digging plantation pits and solar fencing post holes requires high-torque machin
 
 Earth augers and post hole diggers generate immense rotational torque through compound planetary or dual-stage reduction gearboxes. Drilling holes for tree plantation (horticulture), solar plant fencing, or pole foundation requires operators and technicians to adhere strictly to safety clutch tolerances, drill bit pilot maintenance, and controlled throttle management.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Drilling Parameter / Mechanism | Standard Engineering Value | Safe Operating Practice |
@@ -3693,6 +4253,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -3737,6 +4304,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3783,6 +4357,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -3827,6 +4408,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3873,6 +4461,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -3917,6 +4512,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -3963,6 +4565,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4007,6 +4616,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4053,6 +4669,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4097,6 +4720,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4143,6 +4773,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4187,6 +4824,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4233,6 +4877,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4277,6 +4928,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4323,6 +4981,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4367,6 +5032,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4413,6 +5085,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4457,6 +5136,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
@@ -4503,6 +5189,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
 
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
+
 ## Factory Tolerance & Recommended Maintenance Matrix
 
 | Dealership Metric / Asset | Target Benchmark | Profitability Impact |
@@ -4547,6 +5240,13 @@ Running a successful agricultural equipment dealership requires balancing showro
 ## Technical Engineering Context & Field Dynamics
 
 Operating a profitable agricultural machinery showroom and service center requires sound inventory turnover ratios, streamlined state subsidy (DBT/SMAM) processing, and dependable access to fitment-checked spare parts. Dealers who master preventative service customer retention build resilient 35%+ gross margin businesses beyond one-time machine sales.
+
+## Step-by-Step 2T Fuel Mixing Procedure
+
+1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
+2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
+4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
 ## Factory Tolerance & Recommended Maintenance Matrix
 
