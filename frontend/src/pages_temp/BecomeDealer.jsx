@@ -56,16 +56,16 @@ export default function BecomeDealer() {
           <div className="kg-eyebrow">Dealer Application</div>
           <h1 className="kg-h1 mt-4 text-balance">Become a <span className="text-lime-500">KrishiGears</span> dealer.</h1>
           <p className="text-zinc-300 mt-6 leading-relaxed">
-            Join India's fastest-growing agricultural machinery dealer network. Strong margins, dedicated support and exclusive access to our authorized product range.
+            Join India's fastest-growing agricultural machinery dealer network. Enjoy industry-leading <strong className="text-lime-400 font-semibold">25%–35% direct margins</strong>, zero dead-stock risk with 2-unit MOQ, and a guaranteed 24h Jaipur spares dispatch SLA.
           </p>
           <ul className="mt-8 space-y-3">
             {[
-              "Attractive dealer margins on all products",
-              "Co-branded marketing & lead support",
-              "Free product training & onboarding",
-              "Priority spare parts supply",
-              "Authorized warranty service training",
-              "Government tender & subsidy support",
+              "Industry-leading 25%–35% direct dealer margins (vs 8%–12% industry standard)",
+              "Zero dead-stock working capital: Micro-batch ordering from just 2 units",
+              "24–48h Jaipur dispatch guarantee on all critical spares & belts",
+              "Free in-crate 'First-Aid Spares Kit' (filters, cables, belt) with every unit",
+              "Exclusive protected block/tehsil dealership territories",
+              "FPO & Custom Hiring Center (CHC) fleet packages & 100% DBT/SMAM subsidy readiness",
             ].map((b) => (
               <li key={b} className="flex items-start gap-3 text-zinc-200 text-sm">
                 <CheckCircle2 className="h-5 w-5 text-lime-500 shrink-0 mt-0.5" />{b}
@@ -92,9 +92,9 @@ export default function BecomeDealer() {
 
             <div className="pt-3 border-t border-zinc-800">
               <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Audio Guide & Instant Consultation (हिंदी)</span>
-              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें और 15-22% मार्जिन कैसे प्राप्त करें — व्हाट्सएप पर ऑडियो गाइड व जानकारी पाएं:</p>
+              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें, 25-35% मार्जिन और 24h स्पेयर पार्ट्स गारंटी — व्हाट्सएप पर ऑडियो गाइड व जानकारी पाएं:</p>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे डीलरशिप नियम, 15-22% मार्जिन विवरण और ऑडियो गाइड WhatsApp पर भेजें।")}`}
+                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे डीलरशिप नियम, 25-35% मार्जिन विवरण, 24h स्पेयर पार्ट्स गारंटी और ऑडियो गाइड WhatsApp पर भेजें।")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-semibold transition"

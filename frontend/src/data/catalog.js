@@ -326,14 +326,14 @@ export const TESTIMONIALS = [
 ];
 
 export const TRUST_BADGES = [
-  { icon: "shield-check", label: "GST Registered Business" },
-  { icon: "truck", label: "PAN India Delivery" },
-  { icon: "badge-check", label: "Genuine Products" },
-  { icon: "wrench", label: "Genuine Spare Parts" },
-  { icon: "shield", label: "FMTTI / SRFMTTI Tested" },
-  { icon: "zap", label: "Fast Dispatch" },
-  { icon: "headphones", label: "Customer Service" },
-  { icon: "handshake", label: "Dealer Assistance" },
+  { icon: "shield-check", label: "25% - 35% Factory Margin" },
+  { icon: "zap", label: "24-Hour Express Spares (Jaipur Hub)" },
+  { icon: "handshake", label: "Zero Dead-Stock (MOQ 2 Units)" },
+  { icon: "shield", label: "100% SMAM / State DBT Subsidy Ready" },
+  { icon: "truck", label: "PAN India Direct Logistics" },
+  { icon: "badge-check", label: "FMTTI / SRFMTTI Tested Standards" },
+  { icon: "wrench", label: "19 OEM Spare Part Categories" },
+  { icon: "headphones", label: "Direct WhatsApp Video Tech Support" },
 ];
 
 export const SEO_PAGES = [

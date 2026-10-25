@@ -8,7 +8,8 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ShieldCheck, Truck, BadgeCheck, Wrench, Shield, Zap, Headphones,
-  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X, FileText
+  Handshake, ArrowRight, MapPin, Star, Quote, Play, ChevronRight, Search, X, FileText,
+  Store, Tractor, Building2, CheckCircle2
 } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG, INDIA_MAP, ABSTRACT_TERRAIN, FARMER_FIELD, TESTIMONIALS, TRUST_BADGES, FARMINGTOOLS_URL, PRODUCTS } from "@/data/catalog";
 import locationsData from "@/data/locations.json";
@@ -177,15 +178,17 @@ export default function Home() {
             </div>
 
             {/* Quick stats - High contrast sunlight ready */}
-            <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
+            <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl">
               {[
-                { v: "7+", l: t('hero.statsWeeders', 'Power Weeder Models') },
-                { v: "PAN India", l: t('hero.statsNetwork', 'Supply Network') },
-                { v: "100%", l: t('hero.statsSpares', 'Genuine OEM Parts') },
+                { v: "25%–35%", l: "Dealer Margin", sub: "vs 8%–12% Traditional" },
+                { v: "24 Hours", l: "Jaipur Spares SLA", sub: "Express Dispatch Hub" },
+                { v: "2 Units", l: "Zero Dead-Stock MOQ", sub: "On-Demand Factory Order" },
+                { v: "100%", l: "SMAM / DBT Ready", sub: "Tested & Certified" },
               ].map((s) => (
-                <div key={s.l} className="border-l-2 border-lime-500 pl-2.5 sm:pl-4 bg-zinc-950/40 py-1.5 sm:py-2">
-                  <div className="font-display font-black text-xl sm:text-3xl text-zinc-50">{s.v}</div>
-                  <div className="text-sm sm:text-sm uppercase tracking-wider text-zinc-300 mt-0.5 sm:mt-1 font-medium">{s.l}</div>
+                <div key={s.l} className="border-l-2 border-lime-500 pl-2.5 sm:pl-3.5 bg-zinc-950/60 py-2 sm:py-2.5 rounded-r">
+                  <div className="font-display font-black text-xl sm:text-2xl text-zinc-50">{s.v}</div>
+                  <div className="text-xs uppercase tracking-wider text-lime-400 font-bold mt-0.5">{s.l}</div>
+                  <div className="text-[11px] text-zinc-400 font-normal">{s.sub}</div>
                 </div>
               ))}
             </div>
@@ -208,6 +211,137 @@ export default function Home() {
       </section>
 
       <CompetitorComparison />
+
+      {/* ========== ECOSYSTEM COMMERCIAL PROGRAMS (Dealers, CHCs, FPOs) ========== */}
+      <section data-testid="ecosystem-solutions" className="kg-section bg-gradient-to-b from-zinc-950 via-zinc-900/60 to-zinc-950 border-y border-zinc-800">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="kg-eyebrow">Targeted Commercial Programs</div>
+            <h2 className="kg-h2 mt-3 text-zinc-100">
+              Engineered for <span className="text-lime-500">Agri-Business Profitability.</span>
+            </h2>
+            <p className="text-zinc-400 mt-4 text-sm sm:text-base leading-relaxed">
+              Whether you run a regional machinery showroom, operate a Custom Hiring Center, or manage an FPO, KrishiGears eliminates working capital lock-in and field downtime.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* 1. Machinery Showrooms & Agri Dealers */}
+            <div className="border border-zinc-800 hover:border-lime-500/50 bg-zinc-900/60 p-7 rounded-xl flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-lime-500/5">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-lime-500/10 border border-lime-500/30 flex items-center justify-center text-lime-400 mb-5">
+                  <Store className="h-6 w-6" />
+                </div>
+                <div className="text-xs font-bold uppercase tracking-widest text-lime-400">For Machinery Dealers</div>
+                <h3 className="text-xl font-bold text-white mt-1">25%–35% Direct Margins with Zero Dead-Stock</h3>
+                <p className="text-zinc-400 text-sm mt-3 leading-relaxed">
+                  Break free from 8% legacy distributor quotas. Order in micro-batches from just 2 units on demand and protect your working capital.
+                </p>
+                <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0 mt-0.5" />
+                    <span><strong>Protected territory:</strong> Exclusive dealer reservation per block/tehsil.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0 mt-0.5" />
+                    <span><strong>24h Spares SLA:</strong> Critical parts dispatched from Jaipur central hub.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0 mt-0.5" />
+                    <span><strong>In-Crate Parts:</strong> Free starter consumables kit included with every machine.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-7 pt-5 border-t border-zinc-800">
+                <Link
+                  href="/become-a-dealer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs uppercase tracking-wider rounded-md transition"
+                >
+                  Apply For Dealership <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* 2. Custom Hiring Centers (CHCs) */}
+            <div className="border border-zinc-800 hover:border-lime-500/50 bg-zinc-900/60 p-7 rounded-xl flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-lime-500/5">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+                  <Tractor className="h-6 w-6" />
+                </div>
+                <div className="text-xs font-bold uppercase tracking-widest text-emerald-400">For Custom Hiring Centers</div>
+                <h3 className="text-xl font-bold text-white mt-1">Heavy-Duty Commercial Fleet Reliability</h3>
+                <p className="text-zinc-400 text-sm mt-3 leading-relaxed">
+                  Commercial operators require equipment that works 12+ hours daily during peak sowing. Built with Italian-spec gears and high-torque diesel engines.
+                </p>
+                <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>10 HP Dual-PTO:</strong> Simultaneous tilling and multi-implement power.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>Zero-Downtime Guarantee:</strong> Spares air-couriered within 24h during peak season.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span><strong>Fleet Pricing:</strong> Tiered discounts for 3+ unit commercial setups.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-7 pt-5 border-t border-zinc-800">
+                <a
+                  href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे Custom Hiring Center (CHC) के लिए 10 HP कमर्शियल टिलर फ्लीट कोटेशन और स्पेयर पार्ट्स सपोर्ट की जानकारी चाहिए।")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-emerald-500/40 transition"
+                >
+                  <WhatsAppIcon className="h-4 w-4 fill-current" />
+                  Request CHC Fleet Quote
+                </a>
+              </div>
+            </div>
+
+            {/* 3. FPOs & Agricultural Cooperatives */}
+            <div className="border border-zinc-800 hover:border-lime-500/50 bg-zinc-900/60 p-7 rounded-xl flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-lime-500/5">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5">
+                  <Building2 className="h-6 w-6" />
+                </div>
+                <div className="text-xs font-bold uppercase tracking-widest text-amber-400">For FPOs & Cooperatives</div>
+                <h3 className="text-xl font-bold text-white mt-1">100% DBT & SMAM Subsidy Ready Procurement</h3>
+                <p className="text-zinc-400 text-sm mt-3 leading-relaxed">
+                  Streamlined documentation for Farmer Producer Organizations. Direct factory billing with full GST credit and tested machinery specifications.
+                </p>
+                <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Direct Factory Invoicing:</strong> Clean GST invoices with test certs for DBT subsidy.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Farmer Training Modules:</strong> Video tutorials and field operation manuals provided.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Comprehensive Attachments:</strong> Ridgers, reapers, water pumps, and trenchers in one order.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-7 pt-5 border-t border-zinc-800">
+                <a
+                  href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, हमें FPO / सहकारी संस्था के लिए SMAM सब्सिडी अप्रूव्ड पावर वीडर व कोटेशन की आवश्यकता है।")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-amber-500/40 transition"
+                >
+                  <WhatsAppIcon className="h-4 w-4 fill-current" />
+                  FPO Subsidy Invoicing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <FarmerUtilityEngine />
 

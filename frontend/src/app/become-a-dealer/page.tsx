@@ -3,7 +3,7 @@ import Page from "@/pages_temp/BecomeDealer.jsx";
 
 export const metadata: Metadata = {
   title: "Power Weeder Dealership Kaise Le: PAN India",
-  description: "Apply for a KrishiGears power weeder dealership. 18%-25% dealer margin, factory wholesale pricing & 24hr spare parts dispatch.",
+  description: "Apply for a KrishiGears power weeder dealership. 25%-35% direct factory margin, zero dead-stock on-demand MOQ from 2 units & 24hr spare parts dispatch from Jaipur.",
   keywords: [
     "power weeder dealership kaise le",
     "power weeder dealership",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Power Weeder Dealership Kaise Le | KrishiGears Wholesale Network",
-    description: "Start a certified farm machinery dealership. High margins, protected territory & direct factory dispatch from Jaipur.",
+    description: "Start a certified farm machinery dealership. 25-35% direct factory margins, protected territory & 24-hour express spare parts dispatch from Jaipur.",
     url: "https://krishigears.com/become-a-dealer",
     siteName: "KrishiGears",
     images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears Dealership" }],
@@ -54,7 +54,7 @@ const faqJsonLd = {
       "name": "KrishiGears की Dealership लेने के लिए क्या योग्यता और न्यूनतम निवेश चाहिए?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट नहीं है। आप केवल 3 से 5 मशीनों के शुरुआती बैच से अपने जिले में डीलरशिप शुरू कर सकते हैं।"
+        "text": "KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट या 10 मशीनों का डेड-स्टॉक नहीं है। आप मात्र 2 से 3 मशीनों के शुरुआती बैच से अपने जिले में संरक्षित डीलरशिप शुरू कर सकते हैं और मांग के अनुसार सीधे जयपुर वेयरहाउस से री-ऑर्डर कर सकते हैं।"
       }
     },
     {
@@ -62,7 +62,7 @@ const faqJsonLd = {
       "name": "डीलर मार्जिन और प्रॉफिट शेयरिंग कैसी रहती है?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "KrishiGears डीलर्स को 15% से 22% तक का स्वस्थ ग्रॉस मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।"
+        "text": "KrishiGears डीलर्स को सीधे फैक्ट्री से 25% से 35% तक का उच्च ग्रॉस मार्जिन मिलता है, जो पारंपरिक ब्रांडों (10%-15%) की तुलना में दोगुना है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।"
       }
     },
     {
