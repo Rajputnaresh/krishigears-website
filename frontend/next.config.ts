@@ -17,6 +17,28 @@ const nextConfig: NextConfig = {
         destination: 'https://krishigears.com/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'krishigears.in',
+          },
+        ],
+        destination: 'https://krishigears.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.krishigears.in',
+          },
+        ],
+        destination: 'https://krishigears.com/:path*',
+        permanent: true,
+      },
     ];
   },
 };

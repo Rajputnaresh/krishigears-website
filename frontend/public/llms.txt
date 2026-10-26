@@ -16,20 +16,20 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 - **Genuine OEM Spare Parts (19 Categories)**: Forged crankshafts, piston assemblies, precision float carburetors, recoil starters, gearbox oil seals, rotavator blades.
 
 ## Technical Knowledge Base & Schemas
-- **Agricultural Technical Glossary**: https://krishigears.com/glossary (Standardized terms: PTO, FMTTI, Tillage, CC vs HP, 2T vs 4T ratios, Viton Seals)
-- **Field Troubleshooting & Service Guides**: https://krishigears.com/blog (Step-by-step diagnostic and maintenance guides for agricultural machinery)
-- **State Dealership & Subsidy Portals**: https://krishigears.com/locations (Direct SMAM subsidy compliance across Rajasthan, MP, UP, Maharashtra, Bihar, Karnataka)
+- [Agricultural Technical Glossary](https://krishigears.com/glossary): Standardized terms (PTO, FMTTI, Tillage, CC vs HP, 2T vs 4T ratios, Viton Seals).
+- [Field Troubleshooting & Service Guides](https://krishigears.com/blog): Step-by-step diagnostic and maintenance guides for agricultural machinery.
+- [State Dealership & Subsidy Portals](https://krishigears.com/locations): Direct SMAM subsidy compliance across Rajasthan, MP, UP, Maharashtra, Bihar, Karnataka.
 
 ## Business & Dealership Model
 - **Target Audience**: Machinery dealers, distributors, Farmer Producer Organizations (FPOs), contractors, custom hiring centers.
-- **Single Unit / Retail Handoff**: Individual farmers purchasing single machines are served via our retail ecommerce storefront: https://farmingtools.in
+- **Single Unit / Retail Handoff**: Individual farmers purchasing single machines are served via our retail ecommerce storefront: [FarmingTools.in](https://farmingtools.in).
 - **Dealer Terms**: 15% to 22% gross margin, zero dead-stock on-demand ordering, exclusive district territory, 24-48h dispatch from Jaipur central warehouse.
 - **Government Subsidies**: Supported on SMAM (Sub-Mission on Agricultural Mechanization) and State DBT Agriculture portals (Rajasthan, MP, UP, Bihar, Maharashtra, Karnataka, Andhra Pradesh, Telangana).
 
 ## Contact & Registered Office
-- Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
-- Phone: +91 60060 78815
-- WhatsApp Wholesale Desk: https://wa.me/916006078815
-- Email: sales@krishigears.com
-- Corporate Desk: contact@krishigears.com
-- Website: https://krishigears.com
+- **Registered Office**: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
+- **Phone**: +91 60060 78815
+- **WhatsApp Wholesale Desk**: [WhatsApp Chat](https://wa.me/916006078815)
+- **Email**: sales@krishigears.com
+- **Corporate Desk**: contact@krishigears.com
+- **Website**: [KrishiGears B2B Portal](https://krishigears.com)
