@@ -103,6 +103,17 @@ export default function Footer() {
             <li><Link href="/dealer/rajasthan" className="hover:text-lime-400 transition">State Dealerships</Link></li>
             <li><Link href="/blog" className="hover:text-lime-400 transition">{t('nav.blog', 'Blog')}</Link></li>
             <li><Link href="/contact" className="hover:text-lime-400 transition">{t('nav.contactUs', 'Contact Us')}</Link></li>
+            <li className="pt-2 border-t border-zinc-800">
+              <a
+                href="https://farmingtools.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lime-400 hover:text-lime-300 font-semibold transition inline-flex items-center gap-1.5 text-xs"
+              >
+                <span>🛒 Farmer Retail Store (COD)</span>
+                <span>↗</span>
+              </a>
+            </li>
           </ul>
         </div>
 
