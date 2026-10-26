@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
         destination: 'https://krishigears.com/:path*',
         permanent: true,
       },
+      {
+        source: '/blog/smam-portal-registration-guide-agricultural-machinery-subsidy',
+        destination: '/blog/smam-subsidy-portal-registration-power-weeder-guide',
+        permanent: true,
+      },
     ];
   },
 };
