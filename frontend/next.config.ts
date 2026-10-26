@@ -4,6 +4,17 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: '5.imimg.com' },
+      { protocol: 'https', hostname: '3.imimg.com' },
+      { protocol: 'https', hostname: '4.imimg.com' },
+      { protocol: 'https', hostname: 'bushraimpex.com' },
+      { protocol: 'https', hostname: 'reallyagritech.com' },
+      { protocol: 'https', hostname: 'images.pexels.com' },
+      { protocol: 'https', hostname: 'cdn.shopify.com' },
+    ],
+  },
   async redirects() {
     return [
       {
