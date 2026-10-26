@@ -38,7 +38,7 @@ const itemListJsonLd = {
     "position": idx + 1,
     "name": prod.name,
     "url": `https://krishigears.com/products/${prod.slug}`,
-    "image": prod.images?.[0] ? `https://krishigears.com${prod.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
+    "image": prod.images?.[0] ? (prod.images[0].startsWith("http") ? prod.images[0] : `https://krishigears.com${prod.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
   }))
 };
 

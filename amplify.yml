@@ -6,13 +6,14 @@ applications:
         preBuild:
           commands:
             - npm install
-            - env | grep -E "^CRM_WEBHOOK_(URL|SECRET)=" > .env.production
+            - env | grep -E "^CRM_WEBHOOK_(URL|SECRET)=" > .env.production || true
         build:
           commands:
             - npm run build
         postBuild:
           commands:
             - rm -rf .next/cache
+            - find .next -name "*.map" -delete
       artifacts:
         baseDirectory: .next
         files:

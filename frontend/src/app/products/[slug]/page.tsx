@@ -3,8 +3,12 @@ import Page from "@/pages_temp/ProductDetail.jsx";
 import { PRODUCTS } from "@/data/catalog";
 import { clampDescription } from "@/app/layout";
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
-  return PRODUCTS.map((product) => ({
+  // Pre-render top 30 flagship & featured machines at build time;
+  // all other 185+ catalog products are rendered on-demand via ISR and cached at CloudFront edge.
+  return PRODUCTS.slice(0, 30).map((product) => ({
     slug: product.slug,
   }));
 }
@@ -65,7 +69,7 @@ export default async function ProductDetailPage({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "image": product.images?.[0] ? `https://krishigears.com${product.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
+    "image": product.images?.[0] ? (product.images[0].startsWith("http") ? product.images[0] : `https://krishigears.com${product.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
     "description": `${product.name} engineered for high-durability Indian farming operations. Model: ${product.model || product.slug}. Available for wholesale dealer supply and single-unit order via FarmingTools.in.`,
     "sku": product.model || product.slug,
     "mpn": product.model || product.slug,

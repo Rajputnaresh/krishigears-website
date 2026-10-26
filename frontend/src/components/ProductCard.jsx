@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "image": product.images?.[0] ? `https://krishigears.com${product.images[0]}` : "https://krishigears.com/images/products/weeder.webp",
+    "image": product.images?.[0] ? (product.images[0].startsWith("http") ? product.images[0] : `https://krishigears.com${product.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
     "description": `${product.name} - genuine commercial agricultural equipment from KrishiGears. Available for dealer and bulk supply across India.`,
     "sku": product.model || product.slug,
     "mpn": product.model || product.slug,
