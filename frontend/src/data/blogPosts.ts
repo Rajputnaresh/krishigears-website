@@ -1713,9 +1713,9 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
   },
   "2-stroke-brush-cutter-petrol-oil-ratio-calculator": {
     slug: "2-stroke-brush-cutter-petrol-oil-ratio-calculator",
-    title: "2T Oil Mixing Ratio for Brush Cutters: 1:25 vs 1:40 (Prevent Piston Seizure)",
-    meta_title: "Brush Cutter 2T Oil Ratio: 40ml / 1L Petrol",
-    meta_description: "Exact 2T oil ratio for brush cutters: Mix 40ml oil per 1L petrol (1:25) for standard 2-stroke engines; 25ml per 1L (1:40) for synthetic JASO-FD. Prevent seizures.",
+    title: "1 Liter Petrol Me Kitna 2T Oil Padta Hai? 2-Stroke Brush Cutter Oil Ratio (1:25 vs 1:40)",
+    meta_title: "1 Liter Petrol Me Kitna 2T Oil Padta Hai? (40ml/L)",
+    meta_description: "1 liter petrol me kitna 2T oil padta hai? Exact ratio: 40ml per 1L petrol (1:25) for standard 2-stroke brush cutters; 25ml per 1L (1:40) for synthetic JASO-FD. Prevent seizures.",
     excerpt: "Why incorrect 2T oil mixing ruins 2-stroke brush cutter engines: measuring accurate oil ratios (40ml vs 25ml per liter), synthetic vs mineral 2T oil.",
     cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
     created_at: "2026-02-06T10:00:00Z",
@@ -5838,6 +5838,117 @@ Contact KrishiGears sales or your local authorized dealer for an official profor
 `
   },
 
+  "smam-portal-registration-guide-agricultural-machinery-subsidy": {
+    slug: "smam-portal-registration-guide-agricultural-machinery-subsidy",
+    title: "SMAM Portal Registration Guide 2026: Agricultural Machinery Subsidy Step-by-Step",
+    meta_title: "SMAM Portal Registration 2026: Step-by-Step Subsidy Guide",
+    meta_description: "Complete guide to SMAM portal registration (agrimachinery.nic.in). 40-50% subsidy on power weeders and farm tools, documents, eligibility & dealer quotation upload.",
+    excerpt: "Complete step-by-step guide to SMAM portal registration (agrimachinery.nic.in), farmer eligibility, DBT document verification, subsidy slabs (40-50%), and dealer quotation process for 2026.",
+    cover_image: "/images/products/weeder.webp",
+    created_at: "2026-10-26T10:00:00Z",
+    tags: [
+      "SMAM Portal Registration",
+      "SMAM Registration",
+      "Agricultural Machinery Subsidy",
+      "Power Weeder Subsidy",
+      "DBT Agriculture Portal",
+      "Farm Equipment Scheme 2026"
+    ],
+    content: `> **Direct Answer: How to Register on the SMAM Portal (agrimachinery.nic.in)?**
+> To register on the central SMAM portal (**Sub-Mission on Agricultural Mechanization**), visit [agrimachinery.nic.in](https://agrimachinery.nic.in), select **Registration > Farmer**, enter your **Aadhaar Number**, and complete mobile OTP e-KYC. Then upload your land record (7/12, Khasra/Khatauni), bank passbook copy, and caste certificate (if SC/ST/OBC). Once registered, select your desired agricultural machine (such as a 7 HP power weeder or brush cutter) and choose an authorized dealer like **KrishiGears** to receive an official proforma quotation.
+
+---
+
+## 1. What is the SMAM Scheme and Who is Eligible?
+
+The **Sub-Mission on Agricultural Mechanization (SMAM)** is the Government of India's premier agricultural scheme aimed at increasing farm power availability across all 740 districts. It provides direct DBT subsidies on agricultural implements:
+* **Small & Marginal Farmers, Women, and SC/ST Beneficiaries:** Receive **50% subsidy** (up to ₹35,000–₹50,000 depending on HP bracket).
+* **General Category Farmers:** Receive **40% subsidy** (up to ₹25,000–₹40,000).
+* **Custom Hiring Centers (CHCs) & FPOs:** Receive **40% to 80% project subsidies** for community farm machinery hubs.
+
+---
+
+## 2. Mandatory Documents Required for SMAM Registration
+
+Before starting your application on the portal, keep clear scanned copies (PDF or JPG under 200 KB) of the following:
+
+1. **Aadhaar Card:** Must be linked to an active mobile number for UIDAI OTP authentication.
+2. **Land Ownership Proof:** Current year Khasra / Khatauni / Jamabandi / 7-12 extract showing agricultural landholding.
+3. **Bank Passbook or Cancelled Cheque:** Nationalized or Gramin bank account linked with Aadhaar NPCI mapper for Direct Benefit Transfer (DBT).
+4. **Caste Certificate:** Required for SC/ST/OBC category applicants claiming 50% enhanced subsidy.
+5. **Passport Size Photograph** & Active Contact Details.
+6. **Dealer Proforma Quotation & FMTTI Commercial Test Report:** Issued by an authorized OEM distributor like KrishiGears.
+
+---
+
+## 3. Step-by-Step Online Registration Process on agrimachinery.nic.in
+
+### Step 1: Portal Access and Farmer Type Selection
+Navigate to [agrimachinery.nic.in](https://agrimachinery.nic.in) or your state-integrated DBT portal (such as **Rajkisan Sathi** in Rajasthan, **UP Agriculture Portal**, **MahaDBT** in Maharashtra, or **Uzhavan** in Tamil Nadu). Click on **"Registration"** and select **"Farmer"**.
+
+### Step 2: Aadhaar e-KYC Authentication
+Select your state, enter your 12-digit Aadhaar number, and click **"Generate OTP"**. Enter the OTP received on your Aadhaar-registered mobile number to verify your identity.
+
+### Step 3: Fill Agronomic & Landholding Details
+Enter your district, tehsil, block, and revenue village. Input your landholding in hectares (Marginal: < 1 ha, Small: 1–2 ha, Semi-medium: 2–4 ha, Large: > 4 ha). Accurately selecting your category determines your subsidy percentage.
+
+### Step 4: Upload Land and Bank Documents
+Upload the scanned copies of your Khasra/Khatauni and bank passbook. Ensure the account number and IFSC code are clearly legible to avoid DBT disbursement failure.
+
+### Step 5: Select Agricultural Implement & Machine Class
+Navigate to the equipment catalog:
+* **For Power Weeders / Inter-cultivators:** Select "Power Tiller / Weeder (Below 8 BHP or 8–10 BHP)".
+* **For Crop Harvesters / Brush Cutters:** Select "Brush Cutter / Multi-crop Harvester".
+
+### Step 6: Choose Manufacturer & Generate Quotation Token
+Select **KRISHIGEARS INDIA PRIVATE LIMITED** or your local authorized district dealership from the manufacturer drop-down. Generate your application reference number (ARN) and print the acknowledgement slip.
+
+---
+
+## 4. State-Wise Portal Integration Matrix
+
+| State | State Agricultural Portal | Login Method | Approval Timeline |
+| :--- | :--- | :--- | :--- |
+| **Rajasthan** | Rajkisan Sathi (rajkisan.rajasthan.gov.in) | Jan Aadhaar ID / SSO | 14–21 Days |
+| **Uttar Pradesh** | UP Krishi (upagriculture.com) | Farmer ID (Kisan Panjikaran) | 21–30 Days |
+| **Madhya Pradesh** | e-Krishi Yantra Anudan (dbt.mpdage.org) | Aadhaar Biometric / OTP | 10–15 Days |
+| **Maharashtra** | MahaDBT (mahadbt.maharashtra.gov.in) | Aadhaar / Farmer Profile | 21–28 Days |
+| **Bihar** | DBT Agriculture Bihar (dbtagriculture.bihar.gov.in) | Kisan Panjikaran Sankhya | 14–21 Days |
+| **Karnataka** | Raitha Siri / K-Kisan Portal | FID (Farmer Identification) | 14–20 Days |
+
+---
+
+## 5. How Authorized Dealers Upload Quotations and Claim DBT Subsidy
+
+For agricultural equipment dealers, processing SMAM applications efficiently creates a high-margin, zero-rejection business:
+
+1. **Dealer Portal Login:** Access the manufacturer/dealer login panel on the state DBT agriculture portal.
+2. **Enter Farmer Application Number:** Retrieve the approved farmer's subsidy token and verify district allotment.
+3. **Upload Commercial Invoice & Serial Numbers:** Input the machine chassis serial number, engine serial number, and verified GST invoice.
+4. **Attach SRFMTTI / FMTTI Test Certificate:** Attach KrishiGears commercial test certificate confirming Central Government compliance.
+5. **Physical Inspection & Geo-Tagged Delivery:** The Block Agricultural Extension Officer (AAO/ADO) conducts a physical verification and uploads a geo-tagged photo with the farmer and machine.
+6. **Direct Bank Transfer:** The state agriculture department releases the subsidy directly to the farmer's Aadhaar-linked bank account within 15–30 days.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### Q: What is the official website for SMAM portal registration?
+**Expert Resolution:** The official central government website for SMAM registration is agrimachinery.nic.in. Many states also operate state-specific DBT agriculture portals (such as Rajkisan Sathi in Rajasthan, e-Krishi Yantra Anudan in MP, and MahaDBT in Maharashtra) which sync directly with the central SMAM database.
+
+### Q: How much subsidy is provided under the SMAM scheme for power weeders?
+**Expert Resolution:** Under the SMAM scheme, small, marginal, women, and SC/ST farmers receive up to 50% subsidy (typically ₹25,000 to ₹50,000 depending on HP rating and state guidelines). General category farmers receive 40% subsidy on approved FMTTI-certified machines like KrishiGears petrol and diesel power weeders.
+
+### Q: Which documents are compulsory for SMAM portal farmer registration?
+**Expert Resolution:** The compulsory documents are: 1) Aadhaar Card linked to an active mobile number, 2) Current year land ownership record (Khasra/Khatauni or 7/12 extract), 3) Bank passbook copy showing IFSC and account number, 4) Caste certificate for SC/ST applicants, and 5) An official dealer proforma quotation with FMTTI compliance report.
+
+### Q: Why do SMAM subsidy applications get rejected?
+**Expert Resolution:** Common rejection reasons include: mismatched name between Aadhaar and bank passbook, illegible land records, bank account not mapped to NPCI for DBT transfer, or submitting a quotation from an unauthorized manufacturer lacking valid FMTTI commercial test reports.
+
+### Q: How can machinery dealers register on the SMAM portal?
+**Expert Resolution:** Dealers must register through their state agricultural engineering department by submitting their GSTIN, Trade License, Bank details, and an Authorization Letter from approved manufacturers like KrishiGears. Once approved, dealers can issue portal-recognized quotations and upload geo-tagged delivery proofs.
+`
+  },
 };
 
 export const BLOG_POSTS_ARRAY: BlogPostData[] = Object.values(BLOG_POSTS);
