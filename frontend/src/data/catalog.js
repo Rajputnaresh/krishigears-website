@@ -10050,7 +10050,7 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-mitsuyama-my-573d",
+    "slug": "rly-my-573d-pro",
     "category": "power-weeders",
     "name": "KrishiGears MY-573D Power Weeder | 247 CC Diesel",
     "model": "MY-573D",
@@ -10063,7 +10063,7 @@ export const PRODUCTS = [
     "price": 54000,
     "comparePrice": 64000,
     "images": [
-      "/images/catalog/rly-mitsuyama-my-573d.webp",
+      "/images/catalog/rly-my-573d-pro.webp",
       "https://reallyagritech.com/wp-content/uploads/2025/05/4fb639cde467267a62182524b72522f-scaled.jpg",
       "https://reallyagritech.com/wp-content/uploads/2025/05/4fd2610efb85d7e0881a4a4188c33d8-scaled.jpg",
       "https://reallyagritech.com/wp-content/uploads/2025/05/09cb5f6ca20c830f03f4f5ec07f3713-scaled.jpg",
@@ -10182,7 +10182,7 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-mitsuyama-my-585d",
+    "slug": "rly-my-585d-pro",
     "category": "power-weeders",
     "name": "KrishiGears MY-585D Diesel Power Weeder | 406cc, 40 Blades",
     "model": "MY-585D",
@@ -10195,7 +10195,7 @@ export const PRODUCTS = [
     "price": 56000,
     "comparePrice": 66000,
     "images": [
-      "/images/catalog/rly-mitsuyama-my-585d.webp",
+      "/images/catalog/rly-my-585d-pro.webp",
       "https://reallyagritech.com/wp-content/uploads/2025/05/95c0c50617bcd30b52cbaf01c1ddc69-scaled.jpg",
       "https://reallyagritech.com/wp-content/uploads/2025/05/97ea9792b6b6c0b3647781800404ad5-scaled.jpg"
     ],
