@@ -76,6 +76,11 @@ const toLocationSlug = (name: string) =>
     .replace(/[()]/g, '')
     .replace(/-+/g, '-');
 
+// Pre-render core commercial machinery geo-pages at build time to stay strictly
+// within AWS Amplify 220MB deployment artifact limits.
+// All other equipment categories and regional districts render on-demand via ISR and are cached at CloudFront edge.
+const PRE_RENDER_GEO_CATEGORIES = ['power-weeders', 'power-weeder-spare-parts'];
+
 // Generate static params for ISR
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
@@ -83,7 +88,7 @@ export async function generateStaticParams() {
   Object.entries(locations).forEach(([locationName, data]) => {
     if (data.major_district) {
       const locationSlug = toLocationSlug(locationName);
-      Object.keys(CATEGORIES).forEach(categorySlug => {
+      PRE_RENDER_GEO_CATEGORIES.forEach(categorySlug => {
         params.push({ slug: `${categorySlug}-in-${locationSlug}` });
       });
     }

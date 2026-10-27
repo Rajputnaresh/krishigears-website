@@ -6,9 +6,10 @@ import { clampDescription } from "@/app/layout";
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  // Pre-render all 215 verified catalog machines & genuine spare parts at build time
-  // for instant TTFB, zero crawl delay, and full edge caching.
-  return PRODUCTS.map((product) => ({
+  // Pre-render top 30 flagship & featured machines at build time to stay strictly
+  // within AWS Amplify 220MB deployment artifact limits.
+  // All other 185+ catalog products are rendered on-demand via ISR and cached at CloudFront edge.
+  return PRODUCTS.slice(0, 30).map((product) => ({
     slug: product.slug,
   }));
 }
