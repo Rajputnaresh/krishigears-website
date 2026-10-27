@@ -120,9 +120,9 @@ export default function ProductDetail() {
                 className="w-full h-full object-contain p-4"
               />
             </div>
-            {product.images && product.images.length > 1 && (
+            {product.images && Array.from(new Set(product.images)).length > 1 && (
               <div className="grid grid-cols-5 gap-2 mt-3">
-                {product.images.map((src, i) => (
+                {Array.from(new Set(product.images)).map((src, i) => (
                   <button
                     key={`thumb-${i}-${src}`}
                     onClick={() => setActive(i)}

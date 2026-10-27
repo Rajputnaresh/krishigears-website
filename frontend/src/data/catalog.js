@@ -74,6 +74,9 @@ const FARMINGTOOLS_COLLECTION_HANDLES = {
   "battery-sprayers": "battery-sprayers",
   "brush-cutter-spare-parts": "brush-cutter-spare-parts",
   "brush-cutters": "brush-cutters",
+  "crop-reapers": "power-reapers",
+  "farm-machinery": "farm-machinery",
+  "lawn-mowers": "grass-mowers",
   "chaff-cutters": "chaff-cutters",
   "chain-saws": "chainsaws",
   "earth-augers": "earth-augers",
@@ -144,6 +147,7 @@ export const farmingtoolsProductUrl = (productOrSlug, categorySlug) => {
   return FARMINGTOOLS_URL;
 };
 
+
 export const CATEGORIES = [
   {
     slug: "power-weeders",
@@ -151,23 +155,47 @@ export const CATEGORIES = [
     icon: Tractor,
     image: COVER.weeder,
     featured: true,
-    short: "Commercial petrol & diesel intercultivators, rotary tillers, and intercultural tractors for Indian farming.",
+    short: "Commercial petrol & diesel intercultivators, rotary tillers, chain cultivators, and walking tractors for Indian farming.",
   },
   {
-    slug: "power-weeder-spare-parts",
-    name: "Power Weeder & Tiller Spare Parts",
-    icon: Wrench,
-    image: COVER.crankshaft,
+    slug: "lawn-mowers",
+    name: "Commercial Lawn Mowers",
+    icon: CircleDot,
+    image: COVER.grassMower,
     featured: true,
-    short: "Genuine OEM replacement carburetors, recoil starters, gearboxes, rotary blades, clutch assemblies, and fitment kits.",
+    short: "Commercial walk-behind rotary mowers, heavy-duty roller mowers, and diesel ride-on grass cutters for farms, estates, and turf.",
+  },
+  {
+    slug: "brush-cutters",
+    name: "Brush Cutters & Crop Trimmers",
+    icon: Scissors,
+    image: COVER.brushCutter,
+    featured: true,
+    short: "Heavy-duty 2-stroke and 4-stroke backpack & side-pack brush cutters, multi-crop weed cutters, and cordless trimmers.",
+  },
+  {
+    slug: "crop-reapers",
+    name: "Crop Harvesters & Reapers",
+    icon: Wheat,
+    image: COVER.reaper,
+    featured: true,
+    short: "High-efficiency baffle crop reapers and paddy/wheat harvesters engineered for clean cutting and zero-grain loss.",
   },
   {
     slug: "farm-machinery",
-    name: "Farm Machinery & Attachments",
+    name: "Farm Machinery & Implements",
     icon: Settings,
-    image: COVER.reaper,
+    image: COVER.chaffCutter,
     featured: false,
-    short: "Heavy-duty chaff cutters, lawn & stubble mowers, crop harvesters, and multi-crop attachments.",
+    short: "Heavy-duty chaff cutters, post hole earth augers, agricultural water pumps, chainsaws, garden rollers, and stubble mowers.",
+  },
+  {
+    slug: "power-weeder-spare-parts",
+    name: "Genuine Spare Parts & Accessories",
+    icon: Wrench,
+    image: COVER.crankshaft,
+    featured: true,
+    short: "Genuine OEM replacement carburetors, recoil starters, crankshafts, piston rings, rotary tiller blades, and brush cutter blades.",
   },
 ];
 
@@ -192,162 +220,462 @@ const warranty6 = "6 months manufacturer warranty + KrishiGears after-sales serv
 
 // ----------- PRODUCT CATALOG -----------
 export const PRODUCTS = [
-{
-    brand: "KrishiGears",
-    slug: "kg-170f", category: "power-weeders",
-    name: "KrishiGears KG-170F Petrol Power Weeder (7 HP)",
-    model: "KG-170F", badges: ["Bestseller", "FMTTI Tested"],
-    price: 26000,
-    images: [COVER.weeder],
-    specs: { Engine: "4 Stroke Petrol", Power: "7 HP / 212cc", Start: "Recoil", Blades: "32 Dryland", PTO: "Yes" },
-    features: baseFeatures(["Heavy-duty rotary attachment", "Adjustable handlebar", "Deep tilling capability"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetable inter-cultivation"]),
-    benefits: baseBenefits(["Cuts labor costs by 70%", "Perfect for hard soil"]),
-    warranty: warrantyStd,
+  {
+    "brand": "KrishiGears",
+    "slug": "kg-170f",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-170F Petrol Power Weeder (7 HP)",
+    "model": "KG-170F",
+    "badges": [
+      "Bestseller",
+      "FMTTI Tested"
+    ],
+    "price": 26000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "4 Stroke Petrol",
+      "Power": "7 HP / 212cc",
+      "Start": "Recoil",
+      "Blades": "32 Dryland",
+      "PTO": "Yes"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Heavy-duty rotary attachment",
+      "Adjustable handlebar",
+      "Deep tilling capability"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetable inter-cultivation"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts labor costs by 70%",
+      "Perfect for hard soil"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-173f-diesel", category: "power-weeders",
-    name: "KrishiGears KG-173F Diesel Power Weeder (5.5 HP)",
-    model: "KG-173F", badges: ["High Torque"],
-    price: 34000,
-    images: [COVER.weeder],
-    specs: { Engine: "4 Stroke Diesel", Power: "5.5 HP", Start: "Recoil", WorkingWidth: "3.5 Feet" },
-    features: baseFeatures(["High torque at low RPM", "Fuel efficient diesel engine", "Rugged transmission"]),
-    applications: baseApps(["Heavy clay soil", "Orchards", "Large farms"]),
-    benefits: baseBenefits(["Low running cost", "Excellent for deep plowing"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-173f-diesel",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-173F Diesel Power Weeder (5.5 HP)",
+    "model": "KG-173F",
+    "badges": [
+      "High Torque"
+    ],
+    "price": 34000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "4 Stroke Diesel",
+      "Power": "5.5 HP",
+      "Start": "Recoil",
+      "WorkingWidth": "3.5 Feet"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "High torque at low RPM",
+      "Fuel efficient diesel engine",
+      "Rugged transmission"
+    ],
+    "applications": [
+      "Heavy clay soil",
+      "Orchards",
+      "Large farms"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Low running cost",
+      "Excellent for deep plowing"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-177f-wolf", category: "power-weeders",
-    name: "KrishiGears KG-177F WOLF Petrol Weeder (9 HP)",
-    model: "KG-177F", badges: ["Heavy Duty"],
-    price: 36000,
-    images: [COVER.weeder],
-    specs: { Engine: "4 Stroke Petrol", Power: "9 HP / 270cc", Start: "Recoil", WorkingDepth: "8-10 inches" },
-    features: baseFeatures(["9 HP massive power", "Direct drive transmission", "Wide tilling span"]),
-    applications: baseApps(["Commercial farming", "Hard terrain cultivation"]),
-    benefits: baseBenefits(["Replaces tractor for mid-size farms", "High acreage coverage"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-177f-wolf",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-177F Wolf Petrol Weeder (9 HP)",
+    "model": "KG-177F",
+    "badges": [
+      "Heavy Duty"
+    ],
+    "price": 36000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "4 Stroke Petrol",
+      "Power": "9 HP / 270cc",
+      "Start": "Recoil",
+      "WorkingDepth": "8-10 inches"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "9 HP massive power",
+      "Direct drive transmission",
+      "Wide tilling span"
+    ],
+    "applications": [
+      "Commercial farming",
+      "Hard terrain cultivation"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Replaces tractor for mid-size farms",
+      "High acreage coverage"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-icp-p170-lde", category: "power-weeders",
-    name: "KrishiGears KG-ICP-P170-LDE Electric Start Weeder",
-    model: "KG-ICP-P170-LDE", badges: ["Premium", "Self Start"],
-    price: 30000,
-    images: [COVER.weeder],
-    specs: { Engine: "Petrol", Power: "7 HP", Start: "Key / Electric Start", Weight: "85 kg" },
-    features: baseFeatures(["Electric Key Start", "LED Headlight for night work", "Anti-vibration mount"]),
-    applications: baseApps(["All crops", "Night operations"]),
-    benefits: baseBenefits(["Zero effort starting", "Highly comfortable operation"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-icp-p170-lde",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-ICP-P170-LDE Electric Start Weeder",
+    "model": "KG-ICP-P170-LDE",
+    "badges": [
+      "Premium",
+      "Self Start"
+    ],
+    "price": 30000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "Petrol",
+      "Power": "7 HP",
+      "Start": "Key / Electric Start",
+      "Weight": "85 kg"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Electric Key Start",
+      "LED Headlight for night work",
+      "Anti-vibration mount"
+    ],
+    "applications": [
+      "All crops",
+      "Night operations"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Zero effort starting",
+      "Highly comfortable operation"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-icp-up170-sh", category: "power-weeders",
-    name: "KrishiGears KG-ICP-UP170-SH Back-Rotary Weeder",
-    model: "KG-ICP-UP170-SH", badges: ["Back Rotary"],
-    price: 38000,
-    images: [COVER.weeder],
-    specs: { Engine: "Petrol", Power: "7 HP", Start: "Recoil", Transmission: "Gear Drive" },
-    features: baseFeatures(["Active back rotary action", "Perfectly balanced center of gravity"]),
-    applications: baseApps(["Weed control in narrow rows", "Soft soil tilling"]),
-    benefits: baseBenefits(["Leaves finely milled soil", "Operator fatigue reduced by 50%"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-icp-up170-sh",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-ICP-UP170-SH Back-Rotary Weeder",
+    "model": "KG-ICP-UP170-SH",
+    "badges": [
+      "Back Rotary"
+    ],
+    "price": 38000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "Petrol",
+      "Power": "7 HP",
+      "Start": "Recoil",
+      "Transmission": "Gear Drive"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Active back rotary action",
+      "Perfectly balanced center of gravity"
+    ],
+    "applications": [
+      "Weed control in narrow rows",
+      "Soft soil tilling"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Leaves finely milled soil",
+      "Operator fatigue reduced by 50%"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-icd-up186-sh", category: "power-weeders",
-    name: "KrishiGears KG-ICD-UP186-SH Diesel (10 HP)",
-    model: "KG-ICD-UP186-SH", badges: ["Professional", "10 HP"],
-    price: 46000,
-    images: [COVER.weeder],
-    specs: { Engine: "Diesel", Power: "10 HP", Start: "Recoil / Electric", PTO: "Dual PTO" },
-    features: baseFeatures(["Massive 10 HP diesel engine", "Multi-attachment ready (Reaper, Water Pump)"]),
-    applications: baseApps(["Contract farming", "Rental services", "Large estates"]),
-    benefits: baseBenefits(["Industrial grade durability", "Can power water pumps directly"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-icd-up186-sh",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-ICD-UP186-SH Diesel (10 HP)",
+    "model": "KG-ICD-UP186-SH",
+    "badges": [
+      "Professional",
+      "10 HP"
+    ],
+    "price": 46000,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Engine": "Diesel",
+      "Power": "10 HP",
+      "Start": "Recoil / Electric",
+      "PTO": "Dual PTO"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Massive 10 HP diesel engine",
+      "Multi-attachment ready (Reaper, Water Pump)"
+    ],
+    "applications": [
+      "Contract farming",
+      "Rental services",
+      "Large estates"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Industrial grade durability",
+      "Can power water pumps directly"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-baby-weeder", category: "power-weeders",
-    name: "KrishiGears KG Baby Weeder (Lightweight)",
-    model: "KG-BW", badges: ["Compact"],
-    price: 14500,
-    images: [COVER.babyWeeder],
-    specs: { Type: "Compact Baby Weeder", Weight: "Ultra Light" },
-    features: baseFeatures(["Lightweight & maneuverable", "Easy for women & senior farmers"]),
-    applications: baseApps(["Rice paddy", "Small kitchen gardens", "Greenhouses"]),
-    benefits: baseBenefits(["80% weed reduction in tight spaces"]),
-    warranty: warrantyStd,
+    "brand": "KrishiGears",
+    "slug": "kg-baby-weeder",
+    "category": "power-weeders",
+    "name": "KrishiGears KG Baby Weeder (Lightweight)",
+    "model": "KG-BW",
+    "badges": [
+      "Compact"
+    ],
+    "price": 14500,
+    "images": [
+      "/images/products/baby-weeder.webp"
+    ],
+    "specs": {
+      "Type": "Compact Baby Weeder",
+      "Weight": "Ultra Light"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Lightweight & maneuverable",
+      "Easy for women & senior farmers"
+    ],
+    "applications": [
+      "Rice paddy",
+      "Small kitchen gardens",
+      "Greenhouses"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "80% weed reduction in tight spaces"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-crankshaft", category: "power-weeder-spare-parts",
-    name: "KrishiGears Crankshaft Assembly (7 HP / 9 HP)",
-    model: "KG-CRANK-WEEDER", badges: ["Spare Part"],
-    price: 1850,
-    images: [COVER.crankshaft],
-    specs: { Type: "Crankshaft", Grade: "OEM", Compatibility: "KG-170F, KG-177F" },
-    features: baseFeatures(["Genuine OEM grade forged steel", "Precision machined"]),
-    applications: baseApps(["Engine overhaul", "Service center stock"]),
-    benefits: baseBenefits(["Restores factory engine performance"]),
-    warranty: "3 months replacement on manufacturing defects",
+    "brand": "KrishiGears",
+    "slug": "kg-crankshaft",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Crankshaft Assembly (7 HP / 9 HP)",
+    "model": "KG-CRANK-WEEDER",
+    "badges": [
+      "Spare Part"
+    ],
+    "price": 1850,
+    "images": [
+      "/images/products/crankshaft.webp"
+    ],
+    "specs": {
+      "Type": "Crankshaft",
+      "Grade": "OEM",
+      "Compatibility": "KG-170F, KG-177F"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine OEM grade forged steel",
+      "Precision machined"
+    ],
+    "applications": [
+      "Engine overhaul",
+      "Service center stock"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Restores factory engine performance"
+    ],
+    "warranty": "3 months replacement on manufacturing defects"
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-piston-ring", category: "power-weeder-spare-parts",
-    name: "KrishiGears Piston & Ring Set (Standard & Oversize)",
-    model: "KG-PISTON-WEEDER", badges: ["Spare Part"],
-    price: 750,
-    images: [COVER.piston],
-    specs: { Type: "Piston & Ring", Grade: "OEM", Compatibility: "All Petrol Weeders" },
-    features: baseFeatures(["Low friction alloy", "Heat resistant rings"]),
-    applications: baseApps(["Engine rebuilds", "Compression loss repair"]),
-    benefits: baseBenefits(["Eliminates oil burning", "Restores full compression"]),
-    warranty: "3 months replacement on manufacturing defects",
+    "brand": "KrishiGears",
+    "slug": "kg-piston-ring",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Piston & Ring Set (Standard & Oversize)",
+    "model": "KG-PISTON-WEEDER",
+    "badges": [
+      "Spare Part"
+    ],
+    "price": 750,
+    "images": [
+      "/images/products/piston.webp"
+    ],
+    "specs": {
+      "Type": "Piston & Ring",
+      "Grade": "OEM",
+      "Compatibility": "All Petrol Weeders"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Low friction alloy",
+      "Heat resistant rings"
+    ],
+    "applications": [
+      "Engine rebuilds",
+      "Compression loss repair"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Eliminates oil burning",
+      "Restores full compression"
+    ],
+    "warranty": "3 months replacement on manufacturing defects"
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-recoil-starter", category: "power-weeder-spare-parts",
-    name: "KrishiGears Recoil Starter Assembly (Pull Cord)",
-    model: "KG-RECOIL-WEEDER", badges: ["Spare Part"],
-    price: 650,
-    images: [COVER.recoil],
-    specs: { Type: "Recoil Starter Assembly", Compatibility: "KG-170F, KG-173F" },
-    features: baseFeatures(["Easy-pull ratcheting mechanism", "Heavy duty nylon cord"]),
-    applications: baseApps(["Broken pull cord repair"]),
-    benefits: baseBenefits(["Quick field replacement"]),
-    warranty: "3 months replacement on manufacturing defects",
+    "brand": "KrishiGears",
+    "slug": "kg-recoil-starter",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Recoil Starter Assembly (Pull Cord)",
+    "model": "KG-RECOIL-WEEDER",
+    "badges": [
+      "Spare Part"
+    ],
+    "price": 650,
+    "images": [
+      "/images/products/recoil.webp"
+    ],
+    "specs": {
+      "Type": "Recoil Starter Assembly",
+      "Compatibility": "KG-170F, KG-173F"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Easy-pull ratcheting mechanism",
+      "Heavy duty nylon cord"
+    ],
+    "applications": [
+      "Broken pull cord repair"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Quick field replacement"
+    ],
+    "warranty": "3 months replacement on manufacturing defects"
   },
   {
-    brand: "KrishiGears",
-    slug: "kg-rotary-blades", category: "power-weeder-spare-parts",
-    name: "KrishiGears Dryland / Wetland Tiller Blades (Set of 32)",
-    model: "KG-BLADES-32", badges: ["Fast Moving Spare"],
-    price: 1400,
-    images: [COVER.weeder],
-    specs: { Type: "Rotary Tine", Material: "High Carbon Steel", Hardness: "HRC 45+" },
-    features: baseFeatures(["Self-sharpening edge", "Rust resistant coating"]),
-    applications: baseApps(["Regular blade replacement"]),
-    benefits: baseBenefits(["Deeper cut with less engine strain"]),
-    warranty: "Guaranteed against breakage during transit",
+    "brand": "KrishiGears",
+    "slug": "kg-rotary-blades",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Dryland / Wetland Tiller Blades (Set of 32)",
+    "model": "KG-BLADES-32",
+    "badges": [
+      "Fast Moving Spare"
+    ],
+    "price": 1400,
+    "images": [
+      "/images/products/weeder.webp"
+    ],
+    "specs": {
+      "Type": "Rotary Tine",
+      "Material": "High Carbon Steel",
+      "Hardness": "HRC 45+"
+    },
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Self-sharpening edge",
+      "Rust resistant coating"
+    ],
+    "applications": [
+      "Regular blade replacement"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Deeper cut with less engine strain"
+    ],
+    "warranty": "Guaranteed against breakage during transit"
   },
-
-  // ================= 204 VERIFIED SUPPLIER PRODUCTS (Bushra Impex, Riga Italy, Leo, Really) =================
   {
-    slug: "bi-750-pto-kibao",
-    category: "power-weeders",
-    name: "KrishiGears 750 PTO Kibao Series (7.0 HP max, Petrol / 4 Litre)",
-    model: "750 PTO Kibao Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-750-pto-kibao.webp", "https://bushraimpex.com/machines/750-pto-kibao-series-2.png"],
-    specs: {
+    "slug": "bi-750-pto-kibao",
+    "category": "power-weeders",
+    "name": "KrishiGears 750 PTO Kibao Series (7.0 HP max, Petrol / 4 Litre)",
+    "model": "750 PTO Kibao Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-750-pto-kibao.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -361,25 +689,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-750-pro-series-orange",
-    category: "power-weeders",
-    name: "KrishiGears 750 Pro Series – Orange (7.0 HP max, Petrol / 4 Litre)",
-    model: "750 Pro Series – Orange",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-750-pro-series-orange.webp", "https://bushraimpex.com/machines/750-orange-2.png", "https://bushraimpex.com/machines/750-orange-3.png"],
-    specs: {
+    "slug": "bi-750-pro-series-orange",
+    "category": "power-weeders",
+    "name": "KrishiGears 750 Pro Series \u2013 Orange (7.0 HP max, Petrol / 4 Litre)",
+    "model": "750 Pro Series \u2013 Orange",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-750-pro-series-orange.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -393,25 +749,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-750-pro-series-yellow",
-    category: "power-weeders",
-    name: "KrishiGears 750 Pro Series – Yellow (7.0 HP max, Petrol / 4 Litre)",
-    model: "750 Pro Series – Yellow",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-750-pro-series-yellow.webp", "https://bushraimpex.com/machines/750-yellow-2.png", "https://bushraimpex.com/machines/750-yellow-3.png"],
-    specs: {
+    "slug": "bi-750-pro-series-yellow",
+    "category": "power-weeders",
+    "name": "KrishiGears 750 Pro Series \u2013 Yellow (7.0 HP max, Petrol / 4 Litre)",
+    "model": "750 Pro Series \u2013 Yellow",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-750-pro-series-yellow.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -425,25 +809,54 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-850-series",
-    category: "power-weeders",
-    name: "KrishiGears 850 Kibao Series (7.0 HP max, Petrol / 4 Litre)",
-    model: "850 Kibao Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-850-series.webp", "https://bushraimpex.com/machines/850%20Kibao%20Series%202.png", "https://bushraimpex.com/machines/850%20Kibao%20Series%203.png"],
-    specs: {
+    "slug": "bi-850-series",
+    "category": "power-weeders",
+    "name": "KrishiGears 850 Kibao Series (7.0 HP max, Petrol / 4 Litre)",
+    "model": "850 Kibao Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-850-series.webp",
+      "https://bushraimpex.com/machines/850%20Kibao%20Series%203.png"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3000",
       "Transmission": "Gear Drive",
@@ -457,25 +870,53 @@ export const PRODUCTS = [
       "Consumption": "400 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-950-series",
-    category: "power-weeders",
-    name: "KrishiGears 950 Kibao Series (7.0 HP max, Petrol / 4 Litre)",
-    model: "950 Kibao Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 45000,
-    comparePrice: 52000,
-    images: ["/images/catalog/bi-950-series.webp", "https://bushraimpex.com/machines/950%20Kibao%20Series%202.png"],
-    specs: {
+    "slug": "bi-950-series",
+    "category": "power-weeders",
+    "name": "KrishiGears 950 Kibao Series (7.0 HP max, Petrol / 4 Litre)",
+    "model": "950 Kibao Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 45000,
+    "comparePrice": 52000,
+    "images": [
+      "/images/catalog/bi-950-series.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -489,25 +930,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-1000d",
-    category: "power-weeders",
-    name: "KrishiGears Xi-1000D Kibao Series (7.0 HP max, Diesel)",
-    model: "Xi-1000D Kibao Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-x1-1000d.webp"],
-    specs: {
+    "slug": "bi-x1-1000d",
+    "category": "power-weeders",
+    "name": "KrishiGears Xi-1000D Kibao Series (7.0 HP max, Diesel)",
+    "model": "Xi-1000D Kibao Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-x1-1000d.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -521,25 +990,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-bi-1000",
-    category: "power-weeders",
-    name: "KrishiGears Bi-1000 Diesel Series (7.0 HP max, Diesel)",
-    model: "Bi-1000 Diesel Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-bi-1000.webp", "https://bushraimpex.com/machines/bi%201000%202.png"],
-    specs: {
+    "slug": "bi-bi-1000",
+    "category": "power-weeders",
+    "name": "KrishiGears Bi-1000 Diesel Series (7.0 HP max, Diesel)",
+    "model": "Bi-1000 Diesel Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-bi-1000.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -553,25 +1050,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1p-1050d",
-    category: "power-weeders",
-    name: "KrishiGears 1050 Kibao Series (7.0 HP max, Diesel / 4 Litre)",
-    model: "1050 Kibao Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-x1p-1050d.webp"],
-    specs: {
+    "slug": "bi-x1p-1050d",
+    "category": "power-weeders",
+    "name": "KrishiGears 1050 Kibao Series (7.0 HP max, Diesel / 4 Litre)",
+    "model": "1050 Kibao Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-x1p-1050d.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -585,25 +1110,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-1150d",
-    category: "power-weeders",
-    name: "KrishiGears Xi-1150 Diesel (Manual Start) (7 HP, Diesel)",
-    model: "Xi-1150 Diesel (Manual Start)",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-x1-1150d.webp"],
-    specs: {
+    "slug": "bi-x1-1150d",
+    "category": "power-weeders",
+    "name": "KrishiGears Xi-1150 Diesel (Manual Start) (7 HP, Diesel)",
+    "model": "Xi-1150 Diesel (Manual Start)",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-x1-1150d.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "Transmission": "Gear Drive",
       "Displacement": "406 cc",
@@ -616,25 +1169,53 @@ export const PRODUCTS = [
       "Tilling Width": "135 cms (48 inch) Adjustable",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1p-1150e",
-    category: "power-weeders",
-    name: "KrishiGears Xi-1150 Diesel (Electric Start) (7 HP, Diesel)",
-    model: "Xi-1150 Diesel (Electric Start)",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 68000,
-    comparePrice: 78000,
-    images: ["/images/catalog/bi-x1p-1150e.webp"],
-    specs: {
+    "slug": "bi-x1p-1150e",
+    "category": "power-weeders",
+    "name": "KrishiGears Xi-1150 Diesel (Electric Start) (7 HP, Diesel)",
+    "model": "Xi-1150 Diesel (Electric Start)",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 68000,
+    "comparePrice": 78000,
+    "images": [
+      "/images/catalog/bi-x1p-1150e.webp"
+    ],
+    "specs": {
       "Starting": "Electric",
       "Transmission": "Gear Drive",
       "Displacement": "406 cc",
@@ -647,25 +1228,53 @@ export const PRODUCTS = [
       "Tilling Width": "135 cms (48 inch) Adjustable",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-188d",
-    category: "power-weeders",
-    name: "KrishiGears Xi-188D Diesel (Recoil) (7.0 HP max, Diesel / 5.5 Litre)",
-    model: "Xi-188D Diesel (Recoil)",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 68000,
-    comparePrice: 78000,
-    images: ["/images/catalog/bi-x1-188d.webp"],
-    specs: {
+    "slug": "bi-x1-188d",
+    "category": "power-weeders",
+    "name": "KrishiGears Xi-188D Diesel (Recoil) (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "Xi-188D Diesel (Recoil)",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 68000,
+    "comparePrice": 78000,
+    "images": [
+      "/images/catalog/bi-x1-188d.webp"
+    ],
+    "specs": {
       "Starting": "Recoil",
       "Transmission": "Gear Drive",
       "Power": "7.0 HP max",
@@ -678,25 +1287,53 @@ export const PRODUCTS = [
       "Tilling Width": "135 cms (48 inch) Adjustable",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1p-188e",
-    category: "power-weeders",
-    name: "KrishiGears Xi-188D Diesel (Electric Start) (7.0 HP max, Diesel / 5.5 Litre)",
-    model: "Xi-188D Diesel (Electric Start)",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 68000,
-    comparePrice: 78000,
-    images: ["/images/catalog/bi-x1p-188e.webp"],
-    specs: {
+    "slug": "bi-x1p-188e",
+    "category": "power-weeders",
+    "name": "KrishiGears Xi-188D Diesel (Electric Start) (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "Xi-188D Diesel (Electric Start)",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 68000,
+    "comparePrice": 78000,
+    "images": [
+      "/images/catalog/bi-x1p-188e.webp"
+    ],
+    "specs": {
       "Starting": "Electric",
       "Transmission": "Gear Drive",
       "Power": "7.0 HP max",
@@ -709,25 +1346,53 @@ export const PRODUCTS = [
       "Tilling Width": "135 cms (48 inch) Adjustable",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-1250-pro",
-    category: "power-weeders",
-    name: "KrishiGears 1250 PRO Series (7.0 HP max, Petrol)",
-    model: "1250 PRO Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 45000,
-    comparePrice: 52000,
-    images: ["/images/catalog/bi-1250-pro.webp", "https://bushraimpex.com/machines/1250%20PRO%20Series%202.png"],
-    specs: {
+    "slug": "bi-1250-pro",
+    "category": "power-weeders",
+    "name": "KrishiGears 1250 PRO Series (7.0 HP max, Petrol)",
+    "model": "1250 PRO Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 45000,
+    "comparePrice": 52000,
+    "images": [
+      "/images/catalog/bi-1250-pro.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -741,25 +1406,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-1250",
-    category: "power-weeders",
-    name: "KrishiGears 1250 Series (7.0 HP max, Petrol)",
-    model: "1250 Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 45000,
-    comparePrice: 52000,
-    images: ["/images/catalog/bi-1250.webp"],
-    specs: {
+    "slug": "bi-1250",
+    "category": "power-weeders",
+    "name": "KrishiGears 1250 Series (7.0 HP max, Petrol)",
+    "model": "1250 Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 45000,
+    "comparePrice": 52000,
+    "images": [
+      "/images/catalog/bi-1250.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -773,25 +1466,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-750p",
-    category: "power-weeders",
-    name: "KrishiGears X1-750P Series (7.0 HP max, Diesel)",
-    model: "X1-750P Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-x1-750p.webp"],
-    specs: {
+    "slug": "bi-x1-750p",
+    "category": "power-weeders",
+    "name": "KrishiGears X1-750P Series (7.0 HP max, Diesel)",
+    "model": "X1-750P Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-x1-750p.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -805,25 +1526,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-186br",
-    category: "power-weeders",
-    name: "KrishiGears X1-186 Back Rotary Series (7.0 HP max, Diesel / 5.5 Litre)",
-    model: "X1-186 Back Rotary Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 58000,
-    comparePrice: 68000,
-    images: ["/images/catalog/bi-x1-186br.webp"],
-    specs: {
+    "slug": "bi-x1-186br",
+    "category": "power-weeders",
+    "name": "KrishiGears X1-186 Back Rotary Series (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "X1-186 Back Rotary Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 58000,
+    "comparePrice": 68000,
+    "images": [
+      "/images/catalog/bi-x1-186br.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3000",
       "Transmission": "Gear Drive",
@@ -837,25 +1586,53 @@ export const PRODUCTS = [
       "Consumption": "650 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-1350-4wd",
-    category: "power-weeders",
-    name: "KrishiGears X1-1350 4WD Series (7.0 HP max, Diesel)",
-    model: "X1-1350 4WD Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 145000,
-    comparePrice: 165000,
-    images: ["/images/catalog/bi-x1-1350-4wd.webp"],
-    specs: {
+    "slug": "bi-x1-1350-4wd",
+    "category": "power-weeders",
+    "name": "KrishiGears X1-1350 4WD Series (7.0 HP max, Diesel)",
+    "model": "X1-1350 4WD Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 145000,
+    "comparePrice": 165000,
+    "images": [
+      "/images/catalog/bi-x1-1350-4wd.webp"
+    ],
+    "specs": {
       "Starting": "Manual",
       "RPM": "3600",
       "Transmission": "Gear Drive",
@@ -869,25 +1646,53 @@ export const PRODUCTS = [
       "Consumption": "550 ml / hour",
       "Tilling Depth": "10 cm"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-bi-600",
-    category: "power-weeders",
-    name: "KrishiGears Bi-600 ATV Series (7 HP, Petrol)",
-    model: "Bi-600 ATV Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-bi-600.webp", "https://bushraimpex.com/machines/Bi-600%20ATV%20Series%202.png"],
-    specs: {
+    "slug": "bi-bi-600",
+    "category": "power-weeders",
+    "name": "KrishiGears Bi-600 ATV Series (7 HP, Petrol)",
+    "model": "Bi-600 ATV Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-bi-600.webp"
+    ],
+    "specs": {
       "Starting": "Recoil",
       "Transmission": "Gear Drive",
       "Gear": "1, 0, 2, R",
@@ -898,25 +1703,53 @@ export const PRODUCTS = [
       "Tyre": "4.0-8",
       "Blades (Dry)": "32 pcs"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-bi-600p-h-l",
-    category: "power-weeders",
-    name: "KrishiGears Bi-600P H/L Series (7 HP, Petrol)",
-    model: "Bi-600P H/L Series",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42000,
-    images: ["/images/catalog/bi-bi-600p-h-l.webp"],
-    specs: {
+    "slug": "bi-bi-600p-h-l",
+    "category": "power-weeders",
+    "name": "KrishiGears Bi-600P H/l Series (7 HP, Petrol)",
+    "model": "Bi-600P H/L Series",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42000,
+    "images": [
+      "/images/catalog/bi-bi-600p-h-l.webp"
+    ],
+    "specs": {
       "Transmission": "Gear Drive",
       "Starting": "Manual",
       "Displacement": "212 cc",
@@ -928,25 +1761,53 @@ export const PRODUCTS = [
       "Tyre": "4.0-8",
       "Blades (Dry)": "32 pcs"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "bi-x1-mw-70",
-    category: "power-weeders",
-    name: "KrishiGears X1-MW-70 Mini Weeder (7 HP, Petrol)",
-    model: "X1-MW-70 Mini Weeder",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "ISO 9001:2015", "Commercial Grade"],
-    price: 24000,
-    comparePrice: 28000,
-    images: ["/images/catalog/bi-x1-mw-70.webp"],
-    specs: {
+    "slug": "bi-x1-mw-70",
+    "category": "power-weeders",
+    "name": "KrishiGears X1-MW-70 Mini Weeder (7 HP, Petrol)",
+    "model": "X1-MW-70 Mini Weeder",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "ISO 9001:2015",
+      "Commercial Grade"
+    ],
+    "price": 24000,
+    "comparePrice": 28000,
+    "images": [
+      "/images/catalog/bi-x1-mw-70.webp"
+    ],
+    "specs": {
       "Engine Model": "1E48F-S",
       "Engine Power": "2.2 kW / 2.99 HP / 7000 r/min",
       "Engine Displacement": "74 cc",
@@ -955,103 +1816,215 @@ export const PRODUCTS = [
       "Tilling Depth": "45 cm (20 inch)",
       "Capacity": "0.3-0.6 Acre/Hour"
     },
-    features: baseFeatures(["Genuine X1 Power OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Vegetables (Tomato, Onion, Chilli)", "Maize"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Red Loamy Soil", "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/@bushraimpexx1power",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Vegetables (Tomato, Onion, Chilli)",
+      "Maize"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Red Loamy Soil",
+      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-gr-8002-7762",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder 9 Hp Model-GR 8002 - Petrol",
-    model: "GR-8002",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 52307,
-    comparePrice: 61722,
-    images: ["/images/catalog/ri-gr-8002-7762.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484172610/NC/NB/XX/3205316/riga-italy-power-weeder-rotary-7hp-model-gr-8002-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484172610/NC/NB/XX/3205316/riga-italy-power-weeder-rotary-7hp-model-gr-8002-250x250.png"],
-    specs: {
+    "slug": "ri-gr-8002-7762",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 9 Hp Model-GR 8002 - Petrol",
+    "model": "GR-8002",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 52307,
+    "comparePrice": 61722,
+    "images": [
+      "/images/catalog/ri-gr-8002-7762.webp"
+    ],
+    "specs": {
       "Power": "9 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Fully-Automatic",
       "Cutting Capacity": "400-600 kg/hr",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model Name/Number": "GR-8002"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-ba-021-2486",
-    category: "power-weeders",
-    name: "KrishiGears Italy Power Weeder 7hp Model No Ba-021 (7 Hp) - Petrol",
-    model: "BA-021",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 35000,
-    comparePrice: 41300,
-    images: ["/images/catalog/leo-ba-021-2486.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484147224/FL/BJ/PF/3205316/leo-italy-power-weeder-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484147224/FL/BJ/PF/3205316/leo-italy-power-weeder-250x250.png"],
-    specs: {
+    "slug": "leo-ba-021-2486",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 7hp Model No Ba-021 (7 Hp) - Petrol",
+    "model": "BA-021",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 35000,
+    "comparePrice": 41300,
+    "images": [
+      "/images/catalog/leo-ba-021-2486.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "LEO",
+      "Brand": "KrishiGears",
       "Model Name/Number": "BA-021"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpe-1000-17-2343",
-    category: "power-weeders",
-    name: "KrishiGears Model - Kpe- 1000 With Radial Tyre (7 Hp) - Petrol",
-    model: "KPE-1000  170F Gasoline Engine 4 Stroke",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 49232,
-    comparePrice: 58094,
-    images: ["/images/catalog/ri-kpe-1000-17-2343.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491244984/QU/HX/VW/3205316/riga-italy-model-kpe-1000-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491244984/QU/HX/VW/3205316/riga-italy-model-kpe-1000-250x250.jpg"],
-    specs: {
+    "slug": "ri-kpe-1000-17-2343",
+    "category": "power-weeders",
+    "name": "KrishiGears Model - Kpe- 1000 With Radial Tyre (7 Hp) - Petrol",
+    "model": "KPE-1000 170F Gasoline Engine 4 Stroke",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 49232,
+    "comparePrice": 58094,
+    "images": [
+      "/images/catalog/ri-kpe-1000-17-2343.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Fully-Automatic",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
-      "Model no": "KPE-1000  170F Gasoline Engine 4 Stroke"
+      "Brand": "KrishiGears",
+      "Model no": "KPE-1000 170F Gasoline Engine 4 Stroke"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-no-kpd-1350-2352",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder 10 Hp Model No Kpd-1350 E - Diesel",
-    model: "No Kpd-1350 E",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 80000,
-    comparePrice: 94400,
-    images: ["/images/catalog/ri-no-kpd-1350-2352.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491241628/YJ/LK/GQ/3205316/riga-italy-power-weeder-10-hp-model-no-kpd-1350-e-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491241628/YJ/LK/GQ/3205316/riga-italy-power-weeder-10-hp-model-no-kpd-1350-e-250x250.jpg"],
-    specs: {
+    "slug": "ri-no-kpd-1350-2352",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 10 Hp Model No Kpd-1350 E - Diesel",
+    "model": "No Kpd-1350 E",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 80000,
+    "comparePrice": 94400,
+    "images": [
+      "/images/catalog/ri-no-kpd-1350-2352.webp"
+    ],
+    "specs": {
       "Engine Power": "10 hp",
       "Working Width": "1350 mm",
       "Fuel Type": "Diesel",
@@ -1059,128 +2032,268 @@ export const PRODUCTS = [
       "Engine Type": "Diesel",
       "Starting System": "Recoil + Self"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpe-1000-2342",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model - Kpe - 1000 (7 Hp) - Diesel",
-    model: "KPE-1000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 43847,
-    comparePrice: 51739,
-    images: ["/images/catalog/ri-kpe-1000-2342.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491235721/OV/OW/MS/3205316/riga-italy-power-weeder-model-kpe-1000-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491235721/OV/OW/MS/3205316/riga-italy-power-weeder-model-kpe-1000-250x250.png"],
-    specs: {
+    "slug": "ri-kpe-1000-2342",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Kpe - 1000 (7 Hp) - Diesel",
+    "model": "KPE-1000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 43847,
+    "comparePrice": 51739,
+    "images": [
+      "/images/catalog/ri-kpe-1000-2342.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Grade Type": "Semi-Automatic",
       "Power Source": "Diesel",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KPE-1000"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kp-750-2344",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kp-750 (5 Hp) - Petrol",
-    model: "KP-750",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 32307,
-    comparePrice: 38122,
-    images: ["/images/catalog/ri-kp-750-2344.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491240165/XR/ZM/RH/3205316/riga-italy-power-weeder-model-kp-750-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491240165/XR/ZM/RH/3205316/riga-italy-power-weeder-model-kp-750-250x250.jpg"],
-    specs: {
+    "slug": "ri-kp-750-2344",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kp-750 (5 Hp) - Petrol",
+    "model": "KP-750",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 32307,
+    "comparePrice": 38122,
+    "images": [
+      "/images/catalog/ri-kp-750-2344.webp"
+    ],
+    "specs": {
       "Power": "5 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KP-750"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpd-1000-2347",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kpd - 1000 (7 Hp) - Diesel",
-    model: "KPD-1000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 52307,
-    comparePrice: 61722,
-    images: ["/images/catalog/ri-kpd-1000-2347.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491240966/BB/WW/EP/3205316/riga-italy-power-weeder-model-kpd-1000-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491240966/BB/WW/EP/3205316/riga-italy-power-weeder-model-kpd-1000-250x250.jpg"],
-    specs: {
+    "slug": "ri-kpd-1000-2347",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kpd - 1000 (7 Hp) - Diesel",
+    "model": "KPD-1000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 52307,
+    "comparePrice": 61722,
+    "images": [
+      "/images/catalog/ri-kpd-1000-2347.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Diesel",
       "Grade Type": "Manual",
       "Power Source": "Diesel",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KPD-1000"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpde-1000-2348",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kpde - 1000 (7 Hp) - Diesel",
-    model: "KPDE-1000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 66154,
-    comparePrice: 78062,
-    images: ["/images/catalog/ri-kpde-1000-2348.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491241147/EN/ZV/KJ/3205316/riga-italy-power-weeder-model-kpde-1000-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491241147/EN/ZV/KJ/3205316/riga-italy-power-weeder-model-kpde-1000-250x250.jpg"],
-    specs: {
+    "slug": "ri-kpde-1000-2348",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kpde - 1000 (7 Hp) - Diesel",
+    "model": "KPDE-1000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 66154,
+    "comparePrice": 78062,
+    "images": [
+      "/images/catalog/ri-kpde-1000-2348.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Diesel",
       "Grade Type": "Semi-Automatic",
       "Power Source": "Battery",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KPDE-1000"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpd-1350-2349",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kpd- 1350 (10 hp) - Diesel",
-    model: "Kpd- 1350",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 71000,
-    comparePrice: 83780,
-    images: ["/images/catalog/ri-kpd-1350-2349.webp", "https://5.imimg.com/data5/SELLER/Default/2026/6/617042364/GM/LU/FD/3205316/riga-italy-power-weeder-model-kpd-1350-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/6/617042364/GM/LU/FD/3205316/riga-italy-power-weeder-model-kpd-1350-250x250.jpeg"],
-    specs: {
+    "slug": "ri-kpd-1350-2349",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kpd- 1350 (10 hp) - Diesel",
+    "model": "Kpd- 1350",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 71000,
+    "comparePrice": 83780,
+    "images": [
+      "/images/catalog/ri-kpd-1350-2349.webp"
+    ],
+    "specs": {
       "Engine Power": "10 hp",
       "Working Width": "1350 mm",
       "Fuel Type": "Diesel",
@@ -1188,179 +2301,375 @@ export const PRODUCTS = [
       "Engine Type": "Diesel",
       "Starting System": "Recoil Start"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kp-1050-ae-2350",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder 7hp Model Kp-1050 AE (9 Hp) - Petrol",
-    model: "KP-1050 AE",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 66154,
-    comparePrice: 78062,
-    images: ["/images/catalog/ri-kp-1050-ae-2350.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/485942825/YA/RH/FW/3205316/riga-italy-power-weeder-model-no-kp-1050-ae-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/2/485942825/YA/RH/FW/3205316/riga-italy-power-weeder-model-no-kp-1050-ae-250x250.jpeg"],
-    specs: {
+    "slug": "ri-kp-1050-ae-2350",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 7hp Model Kp-1050 AE (9 Hp) - Petrol",
+    "model": "KP-1050 AE",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 66154,
+    "comparePrice": 78062,
+    "images": [
+      "/images/catalog/ri-kp-1050-ae-2350.webp"
+    ],
+    "specs": {
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Battery",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KP-1050 AE",
       "Power": "9 Hp"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpe-1050-a-2351",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder 10hp Model No Kpe-1050 A (10 Hp) - Diesel",
-    model: "KPE-1050 A",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 55385,
-    comparePrice: 65354,
-    images: ["/images/catalog/ri-kpe-1050-a-2351.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491236513/KA/EA/CZ/3205316/riga-italy-power-weeder-10hp-model-no-kpe-1050-a-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491236513/KA/EA/CZ/3205316/riga-italy-power-weeder-10hp-model-no-kpe-1050-a-250x250.png"],
-    specs: {
+    "slug": "ri-kpe-1050-a-2351",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 10hp Model No Kpe-1050 A (10 Hp) - Diesel",
+    "model": "KPE-1050 A",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 55385,
+    "comparePrice": 65354,
+    "images": [
+      "/images/catalog/ri-kpe-1050-a-2351.webp"
+    ],
+    "specs": {
       "Power": "10 Hp",
       "Grade Type": "Manual",
       "Power Source": "Diesel",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KPE-1050 A"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-820-6698",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder 7 Hp Sc -820 - Petrol",
-    model: "SC -820",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 34616,
-    comparePrice: 40847,
-    images: ["/images/catalog/ri-sc-820-6698.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491235955/UG/HD/MN/3205316/riga-italy-power-weeder-7-hp-sc-820-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491235955/UG/HD/MN/3205316/riga-italy-power-weeder-7-hp-sc-820-250x250.png"],
-    specs: {
+    "slug": "ri-sc-820-6698",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 7 Hp Sc -820 - Petrol",
+    "model": "SC -820",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 34616,
+    "comparePrice": 40847,
+    "images": [
+      "/images/catalog/ri-sc-820-6698.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model": "SC -820"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-55-6691",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Sc - 55 (7 Hp) - Petrol",
-    model: "SC -55",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 30000,
-    comparePrice: 35400,
-    images: ["/images/catalog/ri-sc-55-6691.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491243628/AZ/HF/YF/3205316/riga-italy-power-weeder-model-sc-55-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491243628/AZ/HF/YF/3205316/riga-italy-power-weeder-model-sc-55-250x250.jpg"],
-    specs: {
+    "slug": "ri-sc-55-6691",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Sc - 55 (7 Hp) - Petrol",
+    "model": "SC -55",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 30000,
+    "comparePrice": 35400,
+    "images": [
+      "/images/catalog/ri-sc-55-6691.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "MODEL": "SC -55"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-model-no-kp-2341",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model - Kp - 1000 (7 Hp) - Petrol",
-    model: "Model No KP-1000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 35000,
-    comparePrice: 41300,
-    images: ["/images/catalog/ri-model-no-kp-2341.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491246921/WP/ZX/UU/3205316/riga-italy-power-weeder-model-kp-1000-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491246921/WP/ZX/UU/3205316/riga-italy-power-weeder-model-kp-1000-250x250.jpg"],
-    specs: {
+    "slug": "ri-model-no-kp-2341",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Kp - 1000 (7 Hp) - Petrol",
+    "model": "Model No KP-1000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 35000,
+    "comparePrice": 41300,
+    "images": [
+      "/images/catalog/ri-model-no-kp-2341.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Semi-Automatic",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model": "Model No KP-1000"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-1150-6699",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Sc - 1150 (9 Hp) - Petrol",
-    model: "SC -1150",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 40000,
-    comparePrice: 47200,
-    images: ["/images/catalog/ri-sc-1150-6699.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491233928/KL/UN/NZ/3205316/riga-italy-power-weeder-model-sc-1150-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491233928/KL/UN/NZ/3205316/riga-italy-power-weeder-model-sc-1150-250x250.png"],
-    specs: {
+    "slug": "ri-sc-1150-6699",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Sc - 1150 (9 Hp) - Petrol",
+    "model": "SC -1150",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 40000,
+    "comparePrice": 47200,
+    "images": [
+      "/images/catalog/ri-sc-1150-6699.webp"
+    ],
+    "specs": {
       "Power": "9 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model": "SC -1150"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kpd-1350-e-2356",
-    category: "power-weeders",
-    name: "KrishiGears POWER WEEDER MODEL KPD- 1350-E (6 Hp) - OHV 4-Stroke",
-    model: "KPD- 1350-E",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 44000,
-    comparePrice: 51920,
-    images: ["/images/catalog/ri-kpd-1350-e-2356.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/485945391/LD/HC/CI/3205316/riga-italy-power-weeder-model-no-kp-850-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/2/485945391/LD/HC/CI/3205316/riga-italy-power-weeder-model-no-kp-850-250x250.jpeg"],
-    specs: {
+    "slug": "ri-kpd-1350-e-2356",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model KPD- 1350-E (6 Hp) - OHV 4-Stroke",
+    "model": "KPD- 1350-E",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 44000,
+    "comparePrice": 51920,
+    "images": [
+      "/images/catalog/ri-kpd-1350-e-2356.webp"
+    ],
+    "specs": {
       "Power": "6 Hp",
       "Grade Type": "Semi-Automatic",
       "Engine Type": "OHV 4-Stroke",
@@ -1368,25 +2677,53 @@ export const PRODUCTS = [
       "Tilling Width": "60 cm",
       "Fuel Tank Capacity": "3.6 L"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-1000-d-4542",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Sc - 1000-D (12 HP) - 4 Stroke",
-    model: "Sc - 1000-D",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 141538,
-    comparePrice: 167015,
-    images: ["/images/catalog/ri-sc-1000-d-4542.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484183879/LC/BI/SY/3205316/riga-italy-power-tiller-diesel-engine-model-10-hp-pto-shaft-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484183879/LC/BI/SY/3205316/riga-italy-power-tiller-diesel-engine-model-10-hp-pto-shaft-250x250.png"],
-    specs: {
+    "slug": "ri-sc-1000-d-4542",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Sc - 1000-D (12 HP) - 4 Stroke",
+    "model": "Sc - 1000-D",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 141538,
+    "comparePrice": 167015,
+    "images": [
+      "/images/catalog/ri-sc-1000-d-4542.webp"
+    ],
+    "specs": {
       "Engine Power": "12 HP",
       "Fuel": "Diesel",
       "Working Width": "4 feet",
@@ -1394,25 +2731,53 @@ export const PRODUCTS = [
       "Engine Type": "4 Stroke",
       "Grade Type": "Semi-Automatic"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kp-1050-a-e-5777",
-    category: "power-weeders",
-    name: "KrishiGears POWER WEEDER MODEL KP- 1050 A E (9 Hp) - Petrol",
-    model: "KP- 1050 A E",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 30000,
-    comparePrice: 35400,
-    images: ["/images/catalog/ri-kp-1050-a-e-5777.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491357208/DN/EO/JH/3205316/10-hp-model-1050-a-e-power-weeder-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491357208/DN/EO/JH/3205316/10-hp-model-1050-a-e-power-weeder-250x250.png"],
-    specs: {
+    "slug": "ri-kp-1050-a-e-5777",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model KP- 1050 A E (9 Hp) - Petrol",
+    "model": "KP- 1050 A E",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 30000,
+    "comparePrice": 35400,
+    "images": [
+      "/images/catalog/ri-kp-1050-a-e-5777.webp"
+    ],
+    "specs": {
       "Power": "9 Hp",
       "Material": "Metal",
       "Engine Type": "Petrol",
@@ -1420,77 +2785,161 @@ export const PRODUCTS = [
       "Usage/Application": "Office",
       "Color": "RED"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kp-500-2346",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kp- 500 (5 Hp) - Petrol",
-    model: "KP-500",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 52307,
-    comparePrice: 61722,
-    images: ["/images/catalog/ri-kp-500-2346.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491335971/JG/NY/BG/3205316/5hp-model-no-kp-500-riga-italy-power-weeder-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491335971/JG/NY/BG/3205316/5hp-model-no-kp-500-riga-italy-power-weeder-250x250.jpg"],
-    specs: {
+    "slug": "ri-kp-500-2346",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kp- 500 (5 Hp) - Petrol",
+    "model": "KP-500",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 52307,
+    "comparePrice": 61722,
+    "images": [
+      "/images/catalog/ri-kp-500-2346.webp"
+    ],
+    "specs": {
       "Power": "5 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model no": "KP-500"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-800-6692",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model - Sc- 800 (7 Hp) - Petrol",
-    model: "SC -800",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 29231,
-    comparePrice: 34493,
-    images: ["/images/catalog/ri-sc-800-6692.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491242462/CU/QM/EX/3205316/riga-italy-power-weeder-model-sc-800-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491242462/CU/QM/EX/3205316/riga-italy-power-weeder-model-sc-800-250x250.jpg"],
-    specs: {
+    "slug": "ri-sc-800-6692",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Sc- 800 (7 Hp) - Petrol",
+    "model": "SC -800",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 29231,
+    "comparePrice": 34493,
+    "images": [
+      "/images/catalog/ri-sc-800-6692.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY",
+      "Brand": "KrishiGears",
       "Model": "SC -800"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-fj-1200-0927",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Fj -1200",
-    model: "Fj -1200",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 150000,
-    comparePrice: 177000,
-    images: ["/images/catalog/ri-fj-1200-0927.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484621167/XI/VV/YE/3205316/petrol-bcs-tiller-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484621167/XI/VV/YE/3205316/petrol-bcs-tiller-250x250.jpeg"],
-    specs: {
+    "slug": "ri-fj-1200-0927",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Fj -1200",
+    "model": "Fj -1200",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 150000,
+    "comparePrice": 177000,
+    "images": [
+      "/images/catalog/ri-fj-1200-0927.webp"
+    ],
+    "specs": {
       "Fuel Tank Capacity": "1 L",
       "Fuel": "Petrol",
       "Usage/Application": "Agriculture",
@@ -1498,47 +2947,103 @@ export const PRODUCTS = [
       "Fuel Consumption": "2.4 L per hour, 3600 RPM",
       "Wheels": "4.00 x 8 Agricultural"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-fj-600-ho-2081",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Fj - 600 Honda Powered (7 Hp)",
-    model: "Fj - 600  Honda Powered",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 61539,
-    comparePrice: 72616,
-    images: ["/images/catalog/ri-fj-600-ho-2081.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/495246737/EZ/VF/XO/3205316/riga-italy-power-weeder-model-fj-600-honda-powered-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/495246737/EZ/VF/XO/3205316/riga-italy-power-weeder-model-fj-600-honda-powered-250x250.png"],
-    specs: {
+    "slug": "ri-fj-600-ho-2081",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Fj - 600 Honda Powered (7 Hp)",
+    "model": "Fj - 600 Honda Powered",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 61539,
+    "comparePrice": 72616,
+    "images": [
+      "/images/catalog/ri-fj-600-ho-2081.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
-      "Brand": "RIGA-ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-254022073-2073",
-    category: "power-weeders",
-    name: "KrishiGears Power Tiller Sc -90 7hp - 4 Stroke",
-    model: "254022073",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 30000,
-    comparePrice: 35400,
-    images: ["/images/catalog/ri-254022073-2073.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484182221/BC/IN/BB/3205316/riga-italy-power-tiller-7hp-belt-driven-sc-90-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484182221/BC/IN/BB/3205316/riga-italy-power-tiller-7hp-belt-driven-sc-90-250x250.png"],
-    specs: {
+    "slug": "ri-254022073-2073",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Tiller Sc -90 7hp - 4 Stroke",
+    "model": "254022073",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 30000,
+    "comparePrice": 35400,
+    "images": [
+      "/images/catalog/ri-254022073-2073.webp"
+    ],
+    "specs": {
       "Fuel Type": "Petrol, Petrol",
       "Engine Type": "4 Stroke",
       "Starting System": "Manual",
@@ -1546,25 +3051,53 @@ export const PRODUCTS = [
       "Number of Tynes": "6 tynes",
       "Displacement": "208 CC"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=Dk8QFoE-h2k",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=Dk8QFoE-h2k",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-gx-160-2719",
-    category: "power-weeders",
-    name: "KrishiGears POWER WEEDER 7 Hp Model Gx-160 - 4 Stroke",
-    model: "Gx-160",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 38000,
-    comparePrice: 44840,
-    images: ["/images/catalog/ri-gx-160-2719.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484184269/ZA/GW/YP/3205316/riga-italy-power-tiller-5-5hp-belt-driven-model-gx-160-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484184269/ZA/GW/YP/3205316/riga-italy-power-tiller-5-5hp-belt-driven-model-gx-160-250x250.png"],
-    specs: {
+    "slug": "ri-gx-160-2719",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder 7 Hp Model Gx-160 - 4 Stroke",
+    "model": "Gx-160",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 38000,
+    "comparePrice": 44840,
+    "images": [
+      "/images/catalog/ri-gx-160-2719.webp"
+    ],
+    "specs": {
       "Engine Power": "7 HP",
       "Fuel": "Petrol",
       "Fuel Type": "Petrol",
@@ -1572,25 +3105,53 @@ export const PRODUCTS = [
       "Engine Type": "4 Stroke",
       "Fuel Tank Capacity": "3 Litre"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-1000-8480",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model - Sc-1000 (7 HP) - 4 Stroke OHV Petrol Engine",
-    model: "Sc-1000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 33000,
-    comparePrice: 38940,
-    images: ["/images/catalog/ri-sc-1000-8480.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484175999/MU/SK/QO/3205316/riga-italy-power-tiller-petrol-engine-model-sc1000-7hp-pto-shaf-model-sc1000-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484175999/MU/SK/QO/3205316/riga-italy-power-tiller-petrol-engine-model-sc1000-7hp-pto-shaf-model-sc1000-250x250.png"],
-    specs: {
+    "slug": "ri-sc-1000-8480",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Sc-1000 (7 HP) - 4 Stroke OHV Petrol Engine",
+    "model": "Sc-1000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 33000,
+    "comparePrice": 38940,
+    "images": [
+      "/images/catalog/ri-sc-1000-8480.webp"
+    ],
+    "specs": {
       "Engine Power": "7 HP",
       "Fuel": "Petrol",
       "Fuel Type": "Petrol",
@@ -1598,25 +3159,53 @@ export const PRODUCTS = [
       "Engine Type": "4 Stroke OHV Petrol Engine",
       "Fuel Tank Capacity": "3.5 Litre"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-1000-s-7307",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears Power Weeder Model - Sc 1000-S (7 HP) - 170F Gasoline Engine 4 Stroke OHV Petrol Engine",
-    model: "Sc 1000-S",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 40000,
-    comparePrice: 47200,
-    images: ["/images/catalog/ri-sc-1000-s-7307.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484181801/XO/LX/HM/3205316/riga-italy-power-tiller-petrol-engine-model-sc1000s-7hp-pto-shaft-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484181801/XO/LX/HM/3205316/riga-italy-power-tiller-petrol-engine-model-sc1000s-7hp-pto-shaft-250x250.png"],
-    specs: {
+    "slug": "ri-sc-1000-s-7307",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Sc 1000-S (7 HP) - 170F Gasoline Engine 4 Stroke OHV Petrol Engine",
+    "model": "Sc 1000-S",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 40000,
+    "comparePrice": 47200,
+    "images": [
+      "/images/catalog/ri-sc-1000-s-7307.webp"
+    ],
+    "specs": {
       "Engine Power": "7 HP",
       "Fuel": "Petrol",
       "Fuel Type": "Petrol",
@@ -1624,50 +3213,106 @@ export const PRODUCTS = [
       "Engine Type": "170F Gasoline Engine 4 Stroke OHV Petrol Engine",
       "Fuel Tank Capacity": "3 Litre"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-kp-1250-8465",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model-Kp 1250 (7 Hp) - Petrol",
-    model: "Kp 1250",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 37000,
-    comparePrice: 43660,
-    images: ["/images/catalog/ri-kp-1250-8465.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/493496582/SS/FM/MO/3205316/riga-italy-power-weeder-model-kp-1250-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/493496582/SS/FM/MO/3205316/riga-italy-power-weeder-model-kp-1250-250x250.png"],
-    specs: {
+    "slug": "ri-kp-1250-8465",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model-Kp 1250 (7 Hp) - Petrol",
+    "model": "Kp 1250",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 37000,
+    "comparePrice": 43660,
+    "images": [
+      "/images/catalog/ri-kp-1250-8465.webp"
+    ],
+    "specs": {
       "Power": "7 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA-ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-cg-530-0002",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Cg - 530 (3 hp) - 2 stroke",
-    model: "Cg - 530",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13077,
-    comparePrice: 15431,
-    images: ["/images/catalog/ri-cg-530-0002.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484612770/WR/HT/SE/3205316/leo-mini-tiller-model-cg-530-2-4-hp-52-cc-cg-530-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484612770/WR/HT/SE/3205316/leo-mini-tiller-model-cg-530-2-4-hp-52-cc-cg-530-250x250.jpeg"],
-    specs: {
+    "slug": "ri-cg-530-0002",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Cg - 530 (3 hp) - 2 stroke",
+    "model": "Cg - 530",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13077,
+    "comparePrice": 15431,
+    "images": [
+      "/images/catalog/ri-cg-530-0002.webp"
+    ],
+    "specs": {
       "Engine Power": "3 hp",
       "Fuel": "Petrol",
       "Fuel Type": "Petrol",
@@ -1675,75 +3320,159 @@ export const PRODUCTS = [
       "Engine Type": "2 stroke",
       "Fuel Tank Capacity": "3 Litre"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-sc-1000-z-e-3146",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Sc 1000 Z- E (10 Hp) - Diesel",
-    model: "Sc 1000 Z- E",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 80000,
-    comparePrice: 94400,
-    images: ["/images/catalog/ri-sc-1000-z-e-3146.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/495361657/DV/QM/WB/3205316/riga-italy-power-weeder-model-sc-1000-z-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/495361657/DV/QM/WB/3205316/riga-italy-power-weeder-model-sc-1000-z-250x250.png"],
-    specs: {
+    "slug": "ri-sc-1000-z-e-3146",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Sc 1000 Z- E (10 Hp) - Diesel",
+    "model": "Sc 1000 Z- E",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 80000,
+    "comparePrice": 94400,
+    "images": [
+      "/images/catalog/ri-sc-1000-z-e-3146.webp"
+    ],
+    "specs": {
       "Power": "10 Hp",
       "Engine Type": "Diesel",
       "Grade Type": "Semi-Automatic",
       "Power Source": "Diesel",
-      "Brand": "RIGA ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "ri-cg-600-3322",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model - Cg - 600 (3 Hp) - Petrol",
-    model: "Cg - 600",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 22308,
-    comparePrice: 26323,
-    images: ["/images/catalog/ri-cg-600-3322.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/495364117/YU/HU/KU/3205316/riga-italy-power-weeder-model-cg-600-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/495364117/YU/HU/KU/3205316/riga-italy-power-weeder-model-cg-600-250x250.png"],
-    specs: {
+    "slug": "ri-cg-600-3322",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model - Cg - 600 (3 Hp) - Petrol",
+    "model": "Cg - 600",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 22308,
+    "comparePrice": 26323,
+    "images": [
+      "/images/catalog/ri-cg-600-3322.webp"
+    ],
+    "specs": {
       "Power": "3 Hp",
       "Engine Type": "Petrol",
       "Grade Type": "Manual",
       "Power Source": "Petrol",
-      "Brand": "RIGA ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-cg-520-4521",
-    category: "power-weeders",
-    name: "KrishiGears Mini Tiller Model Cg 520 (2.4 Hp / 52 Cc) Cg 530 - 2-Stroke",
-    model: "Cg 520",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13077,
-    comparePrice: 15431,
-    images: ["/images/catalog/leo-cg-520-4521.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484172291/WJ/IW/ZV/3205316/leo-mini-tiller-model-cg-530-2-4-hp-52-cc-cg-530-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484172291/WJ/IW/ZV/3205316/leo-mini-tiller-model-cg-530-2-4-hp-52-cc-cg-530-250x250.png"],
-    specs: {
+    "slug": "leo-cg-520-4521",
+    "category": "power-weeders",
+    "name": "KrishiGears Mini Tiller Model Cg 520 (2.4 Hp / 52 Cc) Cg 530 - 2-Stroke",
+    "model": "Cg 520",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13077,
+    "comparePrice": 15431,
+    "images": [
+      "/images/catalog/leo-cg-520-4521.webp"
+    ],
+    "specs": {
       "Tiller Type": "Mini",
       "Fuel Type": "Petrol",
       "Engine Type": "2-Stroke",
@@ -1751,25 +3480,53 @@ export const PRODUCTS = [
       "Starting System": "Manual",
       "Number of Gears": "2 + 2 forward"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-295837443-7443",
-    category: "power-weeders",
-    name: "KrishiGears SIDE PACK BRUSHCUTTER CG-530 (2.4 HP) - 2 Stroke",
-    model: "295837443",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 8924,
-    comparePrice: 10530,
-    images: ["/images/catalog/leo-295837443-7443.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496088844/RY/BW/DM/3205316/leo-side-pack-brushcutter-cg-530-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496088844/RY/BW/DM/3205316/leo-side-pack-brushcutter-cg-530-250x250.png"],
-    specs: {
+    "slug": "leo-295837443-7443",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brushcutter CG-530 (2.4 HP) - 2 Stroke",
+    "model": "295837443",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 8924,
+    "comparePrice": 10530,
+    "images": [
+      "/images/catalog/leo-295837443-7443.webp"
+    ],
+    "specs": {
       "Engine Displacement": "52 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Side Pack",
@@ -1777,25 +3534,53 @@ export const PRODUCTS = [
       "Power Output": "2.4 HP",
       "Handle Type": "Bike Handle (U)"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-cg-680-0294",
-    category: "power-weeders",
-    name: "KrishiGears Minni Tiller - MODEL CG-680 - 2-Stroke",
-    model: "CG-680",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 12000,
-    comparePrice: 14160,
-    images: ["/images/catalog/leo-cg-680-0294.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484176566/KR/SQ/BW/3205316/leo-mini-tiller-model-cg-630-3-5hp-63-cc-model-cg-630-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484176566/KR/SQ/BW/3205316/leo-mini-tiller-model-cg-630-3-5hp-63-cc-model-cg-630-250x250.png"],
-    specs: {
+    "slug": "leo-cg-680-0294",
+    "category": "power-weeders",
+    "name": "KrishiGears Minni Tiller - Model CG-680 - 2-Stroke",
+    "model": "CG-680",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 12000,
+    "comparePrice": 14160,
+    "images": [
+      "/images/catalog/leo-cg-680-0294.webp"
+    ],
+    "specs": {
       "Tiller Type": "Mini",
       "Fuel": "Gas, Petrol",
       "Engine Type": "2-Stroke",
@@ -1803,50 +3588,106 @@ export const PRODUCTS = [
       "Starting System": "Manual",
       "Number of Gears": "1 + 1 forward"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-253407350-7350",
-    category: "power-weeders",
-    name: "KrishiGears Chain Saw 62 Cc 2 Stroke (2.2 kW)",
-    model: "253407350",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-253407350-7350.webp", "https://5.imimg.com/data5/SELLER/Default/2026/6/614984452/DZ/DG/EX/3205316/leo-chain-saw-62-cc-2-stroke-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/6/614984452/DZ/DG/EX/3205316/leo-chain-saw-62-cc-2-stroke-250x250.jpeg"],
-    specs: {
+    "slug": "leo-253407350-7350",
+    "category": "farm-machinery",
+    "name": "KrishiGears Chain Saw 62 Cc 2 Stroke (2.2 kW)",
+    "model": "253407350",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-253407350-7350.webp"
+    ],
+    "specs": {
       "Engine Displacement": "62 cc",
       "Bar Length": "22 inch",
       "Engine Power": "2.2 kW",
       "Chain Pitch": "0.325 inch",
       "Fuel Mixture Ratio": "25:1"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-rover-850-sp-1843",
-    category: "farm-machinery",
-    name: "KrishiGears WALK BIHIND MOWERS MODEL ROVER-850 SP (5.5 HP)",
-    model: "ROVER-850 SP",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-rover-850-sp-1843.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/485851220/VT/QV/UL/3205316/walk-bihind-mowers-model-rover-850-sp-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/2/485851220/VT/QV/UL/3205316/walk-bihind-mowers-model-rover-850-sp-250x250.jpeg"],
-    specs: {
+    "slug": "leo-rover-850-sp-1843",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Walk Bihind Mowers Model ROVER-850 SP (5.5 HP)",
+    "model": "ROVER-850 SP",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-rover-850-sp-1843.webp"
+    ],
+    "specs": {
       "Cutting Width": "18\"",
       "Cutting Height": "25 mm",
       "Forward Speed": "Adjustable",
@@ -1854,51 +3695,107 @@ export const PRODUCTS = [
       "Color": "Red",
       "Size": "15 to 55 L"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-254165680-5680",
-    category: "power-weeders",
-    name: "KrishiGears Earth Auger Wheel Type 3.5hp / 68cc",
-    model: "254165680",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 28000,
-    comparePrice: 33040,
-    images: ["/images/catalog/leo-254165680-5680.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/485861149/TB/TA/MX/3205316/leo-earth-auger-wheel-type-3-5hp-68cc-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/2/485861149/TB/TA/MX/3205316/leo-earth-auger-wheel-type-3-5hp-68cc-250x250.jpeg"],
-    specs: {
+    "slug": "leo-254165680-5680",
+    "category": "farm-machinery",
+    "name": "KrishiGears Earth Auger Wheel Type 3.5hp / 68cc",
+    "model": "254165680",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 28000,
+    "comparePrice": 33040,
+    "images": [
+      "/images/catalog/leo-254165680-5680.webp"
+    ],
+    "specs": {
       "Drill Diameter": "More Than 18 inch",
-      "Material": "7 HP 4 Stroke Air Cooled Petrol  Engine",
+      "Material": "7 HP 4 Stroke Air Cooled Petrol Engine",
       "Color": "black/red",
       "Weight": "16kgs",
       "Digging Depth": "18kgs",
       "Capacity": "3 Ltrs"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-wp-15-2557",
-    category: "power-weeders",
-    name: "KrishiGears Water Pump Model Wp -15 (1 HP) - 4 Stroke",
-    model: "Wp -15",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 9923,
-    comparePrice: 11709,
-    images: ["/images/catalog/leo-wp-15-2557.webp", "https://5.imimg.com/data5/SELLER/Default/2025/4/499862382/NJ/BZ/CP/3205316/leo-water-pump-model-wp-10-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/4/499862382/NJ/BZ/CP/3205316/leo-water-pump-model-wp-10-250x250.png"],
-    specs: {
+    "slug": "leo-wp-15-2557",
+    "category": "farm-machinery",
+    "name": "KrishiGears Water Pump Model Wp -15 (1 HP) - 4 Stroke",
+    "model": "Wp -15",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 9923,
+    "comparePrice": 11709,
+    "images": [
+      "/images/catalog/leo-wp-15-2557.webp"
+    ],
+    "specs": {
       "Power": "1 HP",
       "Power Source": "Petrol",
       "Engine Type": "4 Stroke",
@@ -1906,50 +3803,106 @@ export const PRODUCTS = [
       "Pump Size": "25 mm",
       "Max Flow Rate": "170 Lpm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-303454139-4139",
-    category: "power-weeders",
-    name: "KrishiGears Rotary Slasher Shrub Master (10 hp) - Petrol",
-    model: "303454139",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 80000,
-    comparePrice: 94400,
-    images: ["/images/catalog/leo-303454139-4139.webp", "https://5.imimg.com/data5/SELLER/Default/2025/7/526492562/ZV/JH/DD/3205316/leo-shrub-master-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/7/526492562/ZV/JH/DD/3205316/leo-shrub-master-250x250.jpeg"],
-    specs: {
+    "slug": "leo-303454139-4139",
+    "category": "brush-cutters",
+    "name": "KrishiGears Rotary Slasher Shrub Master (10 hp) - Petrol",
+    "model": "303454139",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 80000,
+    "comparePrice": 94400,
+    "images": [
+      "/images/catalog/leo-303454139-4139.webp"
+    ],
+    "specs": {
       "Cutting Capacity": "400 kg/hr",
       "Power": "10 hp",
       "Grade Type": "Semi-Automatic",
       "Engine Type": "Petrol",
       "Country of Origin": "Made in India"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-392-9514",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 392 (7 HP) - Petrol",
-    model: "392",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 28461,
-    comparePrice: 33584,
-    images: ["/images/catalog/leo-392-9514.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/492504893/LO/CW/ME/3205316/leo-rotary-lawn-mower-model-392-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/492504893/LO/CW/ME/3205316/leo-rotary-lawn-mower-model-392-250x250.jpg"],
-    specs: {
+    "slug": "leo-392-9514",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 392 (7 HP) - Petrol",
+    "model": "392",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 28461,
+    "comparePrice": 33584,
+    "images": [
+      "/images/catalog/leo-392-9514.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Drive Type": "Push",
       "Cutting Width": "20 Inch",
@@ -1957,25 +3910,53 @@ export const PRODUCTS = [
       "Cutting Height": "50 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-393-9876",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 393 (7 HP) - Petrol",
-    model: "393",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 32308,
-    comparePrice: 38123,
-    images: ["/images/catalog/leo-393-9876.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/492504670/LB/AZ/WR/3205316/leo-rotary-lawn-mower-model-392-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/492504670/LB/AZ/WR/3205316/leo-rotary-lawn-mower-model-392-250x250.jpg"],
-    specs: {
+    "slug": "leo-393-9876",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 393 (7 HP) - Petrol",
+    "model": "393",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 32308,
+    "comparePrice": 38123,
+    "images": [
+      "/images/catalog/leo-393-9876.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Drive Type": "Self Propelled",
       "Cutting Width": "20 Inch",
@@ -1983,25 +3964,53 @@ export const PRODUCTS = [
       "Engine Power": "7 HP",
       "Cutting Height": "50 mm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0378-1872",
-    category: "farm-machinery",
-    name: "KrishiGears Wheel Type Manual Lawn Mower (steel Frame) (Model 0378 )",
-    model: "0378",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 4000,
-    comparePrice: 4720,
-    images: ["/images/catalog/leo-0378-1872.webp", "https://5.imimg.com/data5/SELLER/Default/2023/7/330453385/LL/JU/UY/3205316/10-11zon-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2023/7/330453385/LL/JU/UY/3205316/10-11zon-250x250.jpg"],
-    specs: {
+    "slug": "leo-0378-1872",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Wheel Type Manual Lawn Mower (steel Frame) (Model 0378 )",
+    "model": "0378",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 4000,
+    "comparePrice": 4720,
+    "images": [
+      "/images/catalog/leo-0378-1872.webp"
+    ],
+    "specs": {
       "Cutting Height": "75 mm",
       "Number Of Blades": "6 blades",
       "Cutting Width": "14\"",
@@ -2009,25 +4018,53 @@ export const PRODUCTS = [
       "Drive Type": "Push",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297634235-4235",
-    category: "farm-machinery",
-    name: "KrishiGears Chaff Cutter Machine - Electric",
-    model: "297634235",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 17500,
-    comparePrice: 20650,
-    images: ["/images/catalog/leo-297634235-4235.webp", "https://5.imimg.com/data5/SELLER/Default/2026/5/610242808/VF/ZY/ZU/3205316/leo-chaff-cutter-machine-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/5/610242808/VF/ZY/ZU/3205316/leo-chaff-cutter-machine-250x250.jpeg"],
-    specs: {
+    "slug": "leo-297634235-4235",
+    "category": "farm-machinery",
+    "name": "KrishiGears Chaff Cutter Machine - Electric",
+    "model": "297634235",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 17500,
+    "comparePrice": 20650,
+    "images": [
+      "/images/catalog/leo-297634235-4235.webp"
+    ],
+    "specs": {
       "Type": "Heavy Duty",
       "Power Source": "Electric",
       "Feed Material": "Corn Stalk",
@@ -2035,47 +4072,103 @@ export const PRODUCTS = [
       "Machine Feed": "Corn Stalk",
       "Transmission Type": "Gear"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-chain-saw-sh-6799",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears Electric Chain Sharpener",
-    model: "Chain Saw Sharpener",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 4308,
-    comparePrice: 5083,
-    images: ["/images/catalog/leo-chain-saw-sh-6799.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/499341759/VV/EA/VH/3205316/leo-electric-chain-sharpener-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/499341759/VV/EA/VH/3205316/leo-electric-chain-sharpener-250x250.jpg"],
-    specs: {
+    "slug": "leo-chain-saw-sh-6799",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Electric Chain Sharpener",
+    "model": "Chain Saw Sharpener",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 4308,
+    "comparePrice": 5083,
+    "images": [
+      "/images/catalog/leo-chain-saw-sh-6799.webp"
+    ],
+    "specs": {
       "Voltage": "250W",
       "Model Name/Number": "Chain Saw Sharpener"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586930-6930",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears CAST IRON CLUTCH BRUSH CUTTER - Petrol/Diesel",
-    model: "34586930",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 300,
-    comparePrice: 354,
-    images: ["/images/catalog/leo-34586930-6930.webp", "https://5.imimg.com/data5/BL/IU/GP/SELLER-3205316/cast-iron-clutch-500x500.jpg", "https://5.imimg.com/data5/BL/IU/GP/SELLER-3205316/cast-iron-clutch-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586930-6930",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Cast Iron Clutch Brush Cutter - Petrol/Diesel",
+    "model": "34586930",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 300,
+    "comparePrice": 354,
+    "images": [
+      "/images/catalog/leo-34586930-6930.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol/Diesel",
       "Material": "Cast Iron",
       "Usage/Application": "Brush Cutter",
@@ -2083,25 +4176,53 @@ export const PRODUCTS = [
       "Color": "Grey",
       "Pack Type": "Box"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586928-6928",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears CARBURETOR FOR BRUSH CUTTER PARTS - Electric",
-    model: "34586928",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 750,
-    comparePrice: 885,
-    images: ["/images/catalog/leo-34586928-6928.webp", "https://5.imimg.com/data5/NB/TI/OW/SELLER-3205316/brush-cutter-carburetor-500x500.jpg", "https://5.imimg.com/data5/NB/TI/OW/SELLER-3205316/brush-cutter-carburetor-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586928-6928",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Carburetor For Brush Cutter Parts - Electric",
+    "model": "34586928",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 750,
+    "comparePrice": 885,
+    "images": [
+      "/images/catalog/leo-34586928-6928.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Material": "Aluminium",
       "Usage/Application": "Brush Cutter",
@@ -2109,25 +4230,53 @@ export const PRODUCTS = [
       "Engine": "2-stroke / 4-stroke",
       "Pack Type": "Box"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586965-6965",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears TAP N GO BRUSH CUTTER - Petrol/Diesel",
-    model: "34586965",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 250,
-    comparePrice: 295,
-    images: ["/images/catalog/leo-34586965-6965.webp", "https://5.imimg.com/data5/UE/NQ/BS/SELLER-3205316/brush-cutter-tap-and-go-500x500.jpg", "https://5.imimg.com/data5/UE/NQ/BS/SELLER-3205316/brush-cutter-tap-and-go-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586965-6965",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Tap N GO Brush Cutter - Petrol/Diesel",
+    "model": "34586965",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 250,
+    "comparePrice": 295,
+    "images": [
+      "/images/catalog/leo-34586965-6965.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol/Diesel",
       "Material": "Plastic",
       "Usage/Application": "Brush Cutter",
@@ -2135,50 +4284,106 @@ export const PRODUCTS = [
       "Pack Type": "Box",
       "Width": "5inch"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-303454205-4205",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears Brush Cutter Trimmer Line",
-    model: "303454205",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 600,
-    comparePrice: 708,
-    images: ["/images/catalog/leo-303454205-4205.webp", "https://5.imimg.com/data5/SELLER/Default/2025/7/526495924/DU/PT/WF/3205316/brush-cutter-trimmer-line-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/7/526495924/DU/PT/WF/3205316/brush-cutter-trimmer-line-250x250.jpeg"],
-    specs: {
+    "slug": "leo-303454205-4205",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Brush Cutter Trimmer Line",
+    "model": "303454205",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 600,
+    "comparePrice": 708,
+    "images": [
+      "/images/catalog/leo-303454205-4205.webp"
+    ],
+    "specs": {
       "Size": "2.5 mm",
-      "Brand": "LEO",
+      "Brand": "KrishiGears",
       "Length": "52 METER",
       "Color": "GREEN",
       "Country of Origin": "Made in India"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586948-6948",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears CAST IRON SPARK PLUG CAP FOR BRUSH CUTTER - Electric",
-    model: "34586948",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 100,
-    comparePrice: 118,
-    images: ["/images/catalog/leo-34586948-6948.webp", "https://5.imimg.com/data5/LN/QG/LJ/SELLER-3205316/spark-plug-500x500.jpg", "https://5.imimg.com/data5/LN/QG/LJ/SELLER-3205316/spark-plug-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586948-6948",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Cast Iron Spark Plug Cap For Brush Cutter - Electric",
+    "model": "34586948",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 100,
+    "comparePrice": 118,
+    "images": [
+      "/images/catalog/leo-34586948-6948.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Material": "Cast Iron",
       "Usage/Application": "Brush Cutter",
@@ -2186,51 +4391,107 @@ export const PRODUCTS = [
       "Pack Type": "Box",
       "Weight": "1.6 ounces"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-26277631-7631",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears Brush Cutter Spare Parts",
-    model: "26277631",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 100,
-    comparePrice: 118,
-    images: ["/images/catalog/leo-26277631-7631.webp", "https://5.imimg.com/data5/VX/VK/CU/SELLER-3205316/brush-cutter-spare-parts-500x500.jpg", "https://5.imimg.com/data5/VX/VK/CU/SELLER-3205316/brush-cutter-spare-parts-250x250.jpg"],
-    specs: {
+    "slug": "leo-26277631-7631",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears Brush Cutter Spare Parts",
+    "model": "26277631",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 100,
+    "comparePrice": 118,
+    "images": [
+      "/images/catalog/leo-26277631-7631.webp"
+    ],
+    "specs": {
       "Part type": "Trimmer head",
-      "Compatible brand": "LEO",
+      "Compatible brand": "KrishiGears / Universal",
       "Suitable engine cc": "52 cc",
       "Material": "Alunimium",
       "Shaft size": "28 mm",
       "Model reference": "CG- 530"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586968-6968",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears 5 INCH 2 TOOTH BRUSH CUTTER BLADE - Electric",
-    model: "34586968",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 300,
-    comparePrice: 354,
-    images: ["/images/catalog/leo-34586968-6968.webp", "https://5.imimg.com/data5/DA/NT/HN/SELLER-3205316/2t-blade-500x500.jpg", "https://5.imimg.com/data5/DA/NT/HN/SELLER-3205316/2t-blade-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586968-6968",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears 5 INCH 2 Tooth Brush Cutter Blade - Electric",
+    "model": "34586968",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 300,
+    "comparePrice": 354,
+    "images": [
+      "/images/catalog/leo-34586968-6968.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Size": "5 Inch",
       "Usage/Application": "Brush Cutter",
@@ -2238,25 +4499,53 @@ export const PRODUCTS = [
       "Color": "Black",
       "Pack Type": "Box"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586974-6974",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears 10 INCH HSS BRUSH CUTTER BLADES",
-    model: "34586974",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 400,
-    comparePrice: 472,
-    images: ["/images/catalog/leo-34586974-6974.webp", "https://5.imimg.com/data5/BY/NP/ET/SELLER-3205316/80-t-blade-500x500.jpg", "https://5.imimg.com/data5/BY/NP/ET/SELLER-3205316/80-t-blade-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586974-6974",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears 10 INCH HSS Brush Cutter Blades",
+    "model": "34586974",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 400,
+    "comparePrice": 472,
+    "images": [
+      "/images/catalog/leo-34586974-6974.webp"
+    ],
+    "specs": {
       "Color": "Silver",
       "Material": "HSS",
       "Usage/Application": "Brush Cutter",
@@ -2264,25 +4553,53 @@ export const PRODUCTS = [
       "Number Of Teeth": "80 Teeth",
       "Packaging Type": "Box"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586983-6983",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears 10 INCH SILVER 100 T BRUSH CUTTER BLADE",
-    model: "34586983",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 400,
-    comparePrice: 472,
-    images: ["/images/catalog/leo-34586983-6983.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/486573158/RN/SW/CJ/3205316/10-inch-silver-100-t-brush-cutter-blade-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/486573158/RN/SW/CJ/3205316/10-inch-silver-100-t-brush-cutter-blade-250x250.png"],
-    specs: {
+    "slug": "leo-34586983-6983",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears 10 INCH Silver 100 T Brush Cutter Blade",
+    "model": "34586983",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 400,
+    "comparePrice": 472,
+    "images": [
+      "/images/catalog/leo-34586983-6983.webp"
+    ],
+    "specs": {
       "Usage/Application": "Brush Cutter",
       "Material": "Steel",
       "Color": "Silver",
@@ -2290,25 +4607,53 @@ export const PRODUCTS = [
       "Number Of Teeth": "100 Teeth",
       "Blade Diameter": "10 inch"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-34586972-6972",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears 2 Tooth Brush Cutter Blade",
-    model: "34586972",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 300,
-    comparePrice: 354,
-    images: ["/images/catalog/leo-34586972-6972.webp", "https://3.imimg.com/data3/EV/RR/MY-3205316/3t-blade-500x500.png", "https://3.imimg.com/data3/EV/RR/MY-3205316/3t-blade-250x250.png"],
-    specs: {
+    "slug": "leo-34586972-6972",
+    "category": "power-weeder-spare-parts",
+    "name": "KrishiGears 2 Tooth Brush Cutter Blade",
+    "model": "34586972",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 300,
+    "comparePrice": 354,
+    "images": [
+      "/images/catalog/leo-34586972-6972.webp"
+    ],
+    "specs": {
       "Blade type": "3 teeth",
       "Blade diameter": "255 mm",
       "Bore size": "25.4 mm",
@@ -2316,75 +4661,159 @@ export const PRODUCTS = [
       "Usage/Application": "Brush Cutter",
       "Material": "Steel"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-397-9478",
-    category: "farm-machinery",
-    name: "KrishiGears Wheel Type Lawn Mower Model- 397",
-    model: "397",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 7794,
-    comparePrice: 9197,
-    images: ["/images/catalog/leo-397-9478.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491349268/BC/OH/MU/3205316/leo-wheel-type-lawn-mower-model-397-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/491349268/BC/OH/MU/3205316/leo-wheel-type-lawn-mower-model-397-250x250.png"],
-    specs: {
+    "slug": "leo-397-9478",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Wheel Type Lawn Mower Model- 397",
+    "model": "397",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 7794,
+    "comparePrice": 9197,
+    "images": [
+      "/images/catalog/leo-397-9478.webp"
+    ],
+    "specs": {
       "Cutting Width": "14 Inch",
       "Cutting Height": "15 mm",
-      "Brand": "LEO",
+      "Brand": "KrishiGears",
       "Usage/Application": "Grass Cutting",
       "Structure": "Special Hardened Iron Frame"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-391-7692",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model 391 (5 hp 139 cc)",
-    model: "391",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 33846,
-    comparePrice: 39938,
-    images: ["/images/catalog/leo-391-7692.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498490092/BL/XI/EA/3205316/leo-rotary-lawn-mower-model-391-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498490092/BL/XI/EA/3205316/leo-rotary-lawn-mower-model-391-250x250.png"],
-    specs: {
+    "slug": "leo-391-7692",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 391 (5 hp 139 cc)",
+    "model": "391",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 33846,
+    "comparePrice": 39938,
+    "images": [
+      "/images/catalog/leo-391-7692.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Cutting Height": "50 mm",
       "Forward Speed": "Adjustable",
       "Power": "5 hp 139 cc",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-395-9215",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 395 - Petrol",
-    model: "395",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 36000,
-    comparePrice: 42480,
-    images: ["/images/catalog/leo-395-9215.webp", "https://5.imimg.com/data5/SELLER/Default/2026/4/597779105/AM/MW/AZ/3205316/leo-rotary-lawn-mower-model-395-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2026/4/597779105/AM/MW/AZ/3205316/leo-rotary-lawn-mower-model-395-250x250.jpg"],
-    specs: {
+    "slug": "leo-395-9215",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 395 - Petrol",
+    "model": "395",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 36000,
+    "comparePrice": 42480,
+    "images": [
+      "/images/catalog/leo-395-9215.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Drive Type": "Self Propelled",
       "Cutting Width": "20 Inch",
@@ -2392,25 +4821,53 @@ export const PRODUCTS = [
       "Cutting Height": "25 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-zf-6123-4367",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL ZF - 6123 (1600 W) - Electric",
-    model: "ZF - 6123",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13847,
-    comparePrice: 16339,
-    images: ["/images/catalog/leo-zf-6123-4367.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484160707/NU/KQ/FY/3205316/leo-electric-lawn-mower-model-zf6123-1600w-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484160707/NU/KQ/FY/3205316/leo-electric-lawn-mower-model-zf6123-1600w-250x250.png"],
-    specs: {
+    "slug": "leo-zf-6123-4367",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model ZF - 6123 (1600 W) - Electric",
+    "model": "ZF - 6123",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13847,
+    "comparePrice": 16339,
+    "images": [
+      "/images/catalog/leo-zf-6123-4367.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Drive Type": "Push",
       "Cutting Width": "380mm",
@@ -2418,25 +4875,53 @@ export const PRODUCTS = [
       "Forward Speed": "Adjustable",
       "Engine Power": "5 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-376-8052",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 376 (1600 W)",
-    model: "376",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-376-8052.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484161093/FM/CN/XR/3205316/leo-brand-rotary-lawn-mower-complete-model-0376-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484161093/FM/CN/XR/3205316/leo-brand-rotary-lawn-mower-complete-model-0376-250x250.jpg"],
-    specs: {
+    "slug": "leo-376-8052",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 376 (1600 W)",
+    "model": "376",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-376-8052.webp"
+    ],
+    "specs": {
       "Cutting Width": "14 Inch",
       "Cutting Height": "50 mm",
       "Forward Speed": "Adjustable",
@@ -2444,25 +4929,53 @@ export const PRODUCTS = [
       "Product Code": "0376",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0382-18-inc-2366",
-    category: "farm-machinery",
-    name: "KrishiGears ENGINE HEAVY DUTY ROLLER MODEL 0382 18 INCH LAWN MOWER",
-    model: "0382  18 INCH LAWN MOWER",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 21000,
-    comparePrice: 24780,
-    images: ["/images/catalog/leo-0382-18-inc-2366.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484171147/IJ/OI/EB/3205316/leo-engine-heavy-duty-roller-lawn-mower-0382-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484171147/IJ/OI/EB/3205316/leo-engine-heavy-duty-roller-lawn-mower-0382-250x250.png"],
-    specs: {
+    "slug": "leo-0382-18-inc-2366",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Engine Heavy Duty Roller Model 0382 18 INCH Lawn Mower",
+    "model": "0382 18 INCH LAWN MOWER",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 21000,
+    "comparePrice": 24780,
+    "images": [
+      "/images/catalog/leo-0382-18-inc-2366.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Cutting Height": "25 mm",
       "Forward Speed": "Adjustable",
@@ -2470,25 +4983,53 @@ export const PRODUCTS = [
       "Color": "Green",
       "Country of Origin": "Made in India"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-376-in-22-in-5239",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 376 in 22 inch - Electric",
-    model: "376 in 22 inch",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 37693,
-    comparePrice: 44478,
-    images: ["/images/catalog/leo-376-in-22-in-5239.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484147863/FQ/DN/CA/3205316/rotary-lawn-mower-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484147863/FQ/DN/CA/3205316/rotary-lawn-mower-250x250.png"],
-    specs: {
+    "slug": "leo-376-in-22-in-5239",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 376 in 22 inch - Electric",
+    "model": "376 in 22 inch",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 37693,
+    "comparePrice": 44478,
+    "images": [
+      "/images/catalog/leo-376-in-22-in-5239.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Drive Type": "Self Propelled",
       "Cutting Width": "21 Inch",
@@ -2496,51 +5037,107 @@ export const PRODUCTS = [
       "Cutting Height": "10 mm",
       "Grass Collector": "Without Collector"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-394-8942",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model 394 , - Petrol",
-    model: "394",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 41026,
-    comparePrice: 48411,
-    images: ["/images/catalog/ri-394-8942.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/492491702/BA/TJ/EW/3205316/leo-rotary-lawn-mower-model-394-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/492491702/BA/TJ/EW/3205316/leo-rotary-lawn-mower-model-394-250x250.png"],
-    specs: {
+    "slug": "ri-394-8942",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 394 , - Petrol",
+    "model": "394",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 41026,
+    "comparePrice": 48411,
+    "images": [
+      "/images/catalog/ri-394-8942.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Drive Type": "Push",
       "Cutting Width": "21 Inch",
       "Cutting Height": "25-75 mm",
       "Grass Collector": "With Collector",
-      "Brand": "RIGA -ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-376-in-17-7094",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model 376 in 17 (1200 W) - Electric",
-    model: "376 in 17",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 26300,
-    comparePrice: 31034,
-    images: ["/images/catalog/leo-376-in-17-7094.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484162196/FR/ZM/KX/3205316/leo-rotary-lawn-mower-model-440-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484162196/FR/ZM/KX/3205316/leo-rotary-lawn-mower-model-440-250x250.png"],
-    specs: {
+    "slug": "leo-376-in-17-7094",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 376 in 17 (1200 W) - Electric",
+    "model": "376 in 17",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 26300,
+    "comparePrice": 31034,
+    "images": [
+      "/images/catalog/leo-376-in-17-7094.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Drive Type": "Self Propelled",
       "Cutting Width": "18 Inch",
@@ -2548,25 +5145,53 @@ export const PRODUCTS = [
       "Power": "1200 W",
       "Engine Power": "2 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0385-8277",
-    category: "farm-machinery",
-    name: "KrishiGears POWER LAWN MOWER MODEL 0385 (50 W)",
-    model: "0385",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-0385-8277.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491248195/ED/HK/LJ/3205316/leo-power-lawn-mower-model-0385-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491248195/ED/HK/LJ/3205316/leo-power-lawn-mower-model-0385-250x250.jpg"],
-    specs: {
+    "slug": "leo-0385-8277",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Power Lawn Mower Model 0385 (50 W)",
+    "model": "0385",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-0385-8277.webp"
+    ],
+    "specs": {
       "Cutting Width": "6",
       "Cutting Height": "10 mm",
       "Forward Speed": "Adjustable",
@@ -2574,25 +5199,53 @@ export const PRODUCTS = [
       "Cutting Capacity": "large capacity",
       "Color": "Green"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-332541464-1464",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower (7 HP) - Petrol",
-    model: "332541464",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 41050,
-    comparePrice: 48439,
-    images: ["/images/catalog/ri-332541464-1464.webp", "https://5.imimg.com/data5/SELLER/Default/2026/9/640445563/QF/GS/QM/3205316/riga-italy-rotary-lawn-mower-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/9/640445563/QF/GS/QM/3205316/riga-italy-rotary-lawn-mower-250x250.jpeg"],
-    specs: {
+    "slug": "ri-332541464-1464",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower (7 HP) - Petrol",
+    "model": "332541464",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 41050,
+    "comparePrice": 48439,
+    "images": [
+      "/images/catalog/ri-332541464-1464.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Cutting Width": "600 mm",
       "Drive Type": "Push",
@@ -2600,49 +5253,105 @@ export const PRODUCTS = [
       "Cutting Height": "25-75 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-390-7210",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model 390 (5 HP 139cc)",
-    model: "390",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 22308,
-    comparePrice: 26323,
-    images: ["/images/catalog/leo-390-7210.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498488283/JV/BL/AI/3205316/leo-rotary-lawn-mower-model-390-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498488283/JV/BL/AI/3205316/leo-rotary-lawn-mower-model-390-250x250.png"],
-    specs: {
+    "slug": "leo-390-7210",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 390 (5 HP 139cc)",
+    "model": "390",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 22308,
+    "comparePrice": 26323,
+    "images": [
+      "/images/catalog/leo-390-7210.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Cutting Height": "25 mm",
       "Power": "5 HP 139cc",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-pro-cut-910-3461",
-    category: "farm-machinery",
-    name: "KrishiGears 50 mm Model Pro Cut-910 Walk Behind Mowers (2.04 HP)",
-    model: "Pro Cut-910 Walk Behind Mowers",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-pro-cut-910-3461.webp", "https://5.imimg.com/data5/SELLER/Default/2023/8/331957431/SB/LP/EN/3205316/25-11zon-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2023/8/331957431/SB/LP/EN/3205316/25-11zon-250x250.jpg"],
-    specs: {
+    "slug": "leo-pro-cut-910-3461",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 50 mm Model Pro Cut-910 Walk Behind Mowers (2.04 HP)",
+    "model": "Pro Cut-910 Walk Behind Mowers",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-pro-cut-910-3461.webp"
+    ],
+    "specs": {
       "Cutting Width": "21\"",
       "Cutting Height": "50 mm",
       "Forward Speed": "Adjustable",
@@ -2650,25 +5359,53 @@ export const PRODUCTS = [
       "Power": "2.04 HP",
       "Weight": "48 KG"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-zf-6127-7076",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL ZF - 6127 (1600 W)",
-    model: "ZF - 6127",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-zf-6127-7076.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484163112/PJ/ZT/EE/3205316/leo-electric-lawn-mower-model-zf6128-1800w-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484163112/PJ/ZT/EE/3205316/leo-electric-lawn-mower-model-zf6128-1800w-250x250.png"],
-    specs: {
+    "slug": "leo-zf-6127-7076",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model ZF - 6127 (1600 W)",
+    "model": "ZF - 6127",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-zf-6127-7076.webp"
+    ],
+    "specs": {
       "Cutting Width": "460mm",
       "Cutting Height": "50 mm",
       "Forward Speed": "Adjustable",
@@ -2676,25 +5413,53 @@ export const PRODUCTS = [
       "Product Code": "6127",
       "Cutting Capacity": "75 MM"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-zf-6124-1571",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model Zf - 6124 (1200 W)",
-    model: "Zf - 6124",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13334,
-    comparePrice: 15734,
-    images: ["/images/catalog/leo-zf-6124-1571.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484160326/OG/RQ/DD/3205316/leo-electric-lawn-mower-model-zf6122-1200w-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484160326/OG/RQ/DD/3205316/leo-electric-lawn-mower-model-zf6122-1200w-250x250.png"],
-    specs: {
+    "slug": "leo-zf-6124-1571",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model Zf - 6124 (1200 W)",
+    "model": "Zf - 6124",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13334,
+    "comparePrice": 15734,
+    "images": [
+      "/images/catalog/leo-zf-6124-1571.webp"
+    ],
+    "specs": {
       "Cutting Width": "320mm",
       "Cutting Height": "25 mm",
       "Forward Speed": "Adjustable",
@@ -2702,51 +5467,107 @@ export const PRODUCTS = [
       "Product Code": "6122",
       "Cutting Capacity": "3 Height Poastion 25/40/55mm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-bkr-ri-1800-3962",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model - 396 (1800 W)",
-    model: "BKR-RI-1800",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 25000,
-    comparePrice: 29500,
-    images: ["/images/catalog/ri-bkr-ri-1800-3962.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/485853926/AH/QD/TP/3205316/riga-italy-rotary-lawn-mower-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/2/485853926/AH/QD/TP/3205316/riga-italy-rotary-lawn-mower-250x250.jpeg"],
-    specs: {
+    "slug": "ri-bkr-ri-1800-3962",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model - 396 (1800 W)",
+    "model": "BKR-RI-1800",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 25000,
+    "comparePrice": 29500,
+    "images": [
+      "/images/catalog/ri-bkr-ri-1800-3962.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Voltage": "240 V",
       "Model": "BKR-RI-1800",
-      "Brand": "Riga - Italy",
+      "Brand": "KrishiGears",
       "Cutting Height": "75mm",
       "Power": "1800 W"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-pro-cut-910-8493",
-    category: "farm-machinery",
-    name: "KrishiGears 14 Inch Model Pro Cut-910 Walk Behind Lawn Mowers (2.1 hp)",
-    model: "Pro Cut-910 Walk Behind Lawn Mowers",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 21000,
-    comparePrice: 24780,
-    images: ["/images/catalog/leo-pro-cut-910-8493.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484669340/QU/DP/TI/3205316/walk-bihind-mowers-model-pro-cut-910-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484669340/QU/DP/TI/3205316/walk-bihind-mowers-model-pro-cut-910-250x250.jpeg"],
-    specs: {
+    "slug": "leo-pro-cut-910-8493",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 14 Inch Model Pro Cut-910 Walk Behind Lawn Mowers (2.1 hp)",
+    "model": "Pro Cut-910 Walk Behind Lawn Mowers",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 21000,
+    "comparePrice": 24780,
+    "images": [
+      "/images/catalog/leo-pro-cut-910-8493.webp"
+    ],
+    "specs": {
       "Cutting Width": "14 Inch",
       "Cutting Height": "50 mm",
       "Forward Speed": "Adjustable",
@@ -2754,25 +5575,53 @@ export const PRODUCTS = [
       "Weight": "25kg",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-332551977-1977",
-    category: "farm-machinery",
-    name: "KrishiGears 45cm 10mm Manual Cutting Lawn Mower (1 HP)",
-    model: "332551977",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 3800,
-    comparePrice: 4484,
-    images: ["/images/catalog/ri-332551977-1977.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/492999268/GC/UE/VV/3205316/10mm-manual-cutting-lawn-mower-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/492999268/GC/UE/VV/3205316/10mm-manual-cutting-lawn-mower-250x250.png"],
-    specs: {
+    "slug": "ri-332551977-1977",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 45cm 10mm Manual Cutting Lawn Mower (1 HP)",
+    "model": "332551977",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 3800,
+    "comparePrice": 4484,
+    "images": [
+      "/images/catalog/ri-332551977-1977.webp"
+    ],
+    "specs": {
       "Power Source": "Manual",
       "Cutting Width": "400 mm",
       "Drive Type": "Push",
@@ -2780,25 +5629,53 @@ export const PRODUCTS = [
       "Cutting Height": "20-60 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-model-rover-9908",
-    category: "farm-machinery",
-    name: "KrishiGears ROVER- MODEL- 850 SP WALK BEHIND LAWN MOWERS",
-    model: "Model Rover-850 SP",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 21000,
-    comparePrice: 24780,
-    images: ["/images/catalog/leo-model-rover-9908.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484623472/LR/HF/AV/3205316/walk-behind-mowers-model-rover-850-sp-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484623472/LR/HF/AV/3205316/walk-behind-mowers-model-rover-850-sp-250x250.jpeg"],
-    specs: {
+    "slug": "leo-model-rover-9908",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rover- Model- 850 SP Walk Behind Lawn Mowers",
+    "model": "Model Rover-850 SP",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 21000,
+    "comparePrice": 24780,
+    "images": [
+      "/images/catalog/leo-model-rover-9908.webp"
+    ],
+    "specs": {
       "Cutting Width": "20 Inch",
       "Cutting Height": "10 mm",
       "Forward Speed": "Adjustable",
@@ -2806,25 +5683,53 @@ export const PRODUCTS = [
       "Model": "Model Rover-850 SP",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-376-in-17-2952",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Lawn Mower Model 376 in 17 (2 HP) - Electric",
-    model: "376 in 17",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 26500,
-    comparePrice: 31270,
-    images: ["/images/catalog/ri-376-in-17-2952.webp", "https://5.imimg.com/data5/SELLER/Default/2026/9/640548368/ED/ZG/NH/3205316/riga-italy-rotary-lawn-mower-model-376-in-17-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2026/9/640548368/ED/ZG/NH/3205316/riga-italy-rotary-lawn-mower-model-376-in-17-250x250.jpg"],
-    specs: {
+    "slug": "ri-376-in-17-2952",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 376 in 17 (2 HP) - Electric",
+    "model": "376 in 17",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 26500,
+    "comparePrice": 31270,
+    "images": [
+      "/images/catalog/ri-376-in-17-2952.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Cutting Width": "330 mm",
       "Drive Type": "Push",
@@ -2832,25 +5737,53 @@ export const PRODUCTS = [
       "Cutting Height": "30-100 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-376-in-22-in-6681",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 376 in 22 inch (3 HP) - Electric",
-    model: "376 in 22 inch",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 37700,
-    comparePrice: 44486,
-    images: ["/images/catalog/ri-376-in-22-in-6681.webp", "https://5.imimg.com/data5/SELLER/Default/2026/9/640567969/JX/EL/QB/3205316/riga-italy-rotary-lawn-mower-model-376-in-22-inch-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2026/9/640567969/JX/EL/QB/3205316/riga-italy-rotary-lawn-mower-model-376-in-22-inch-250x250.jpg"],
-    specs: {
+    "slug": "ri-376-in-22-in-6681",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 376 in 22 inch (3 HP) - Electric",
+    "model": "376 in 22 inch",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 37700,
+    "comparePrice": 44486,
+    "images": [
+      "/images/catalog/ri-376-in-22-in-6681.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Cutting Width": "400 mm",
       "Drive Type": "Self Propelled",
@@ -2858,25 +5791,53 @@ export const PRODUCTS = [
       "Cutting Height": "20-60 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-392-7363",
-    category: "farm-machinery",
-    name: "KrishiGears ROTARY LAWN MOWER MODEL 392 (7 HP) - Petrol",
-    model: "392",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 28500,
-    comparePrice: 33630,
-    images: ["/images/catalog/ri-392-7363.webp", "https://5.imimg.com/data5/SELLER/Default/2026/9/640571563/HZ/UL/OM/3205316/riga-italy-rotary-lawn-mower-model-392-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/9/640571563/HZ/UL/OM/3205316/riga-italy-rotary-lawn-mower-model-392-250x250.jpeg"],
-    specs: {
+    "slug": "ri-392-7363",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Lawn Mower Model 392 (7 HP) - Petrol",
+    "model": "392",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 28500,
+    "comparePrice": 33630,
+    "images": [
+      "/images/catalog/ri-392-7363.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Cutting Width": "500 mm",
       "Drive Type": "Push",
@@ -2884,25 +5845,53 @@ export const PRODUCTS = [
       "Cutting Height": "20-60 mm",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0381-5052",
-    category: "farm-machinery",
-    name: "KrishiGears Diesel Ride On Lawn Mower Model - 0381 (5 HP)",
-    model: "0381",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 71500,
-    comparePrice: 84370,
-    images: ["/images/catalog/leo-0381-5052.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/491246343/KT/CQ/ZE/3205316/leo-diesel-ride-on-lawn-mower-model-0381-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/491246343/KT/CQ/ZE/3205316/leo-diesel-ride-on-lawn-mower-model-0381-250x250.jpg"],
-    specs: {
+    "slug": "leo-0381-5052",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Diesel Ride On Lawn Mower Model - 0381 (5 HP)",
+    "model": "0381",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 71500,
+    "comparePrice": 84370,
+    "images": [
+      "/images/catalog/leo-0381-5052.webp"
+    ],
+    "specs": {
       "Drive Type": "Ride On",
       "Engine Power": "5 HP",
       "Cutting Width": "20 Inch",
@@ -2910,51 +5899,107 @@ export const PRODUCTS = [
       "Starting System": "Recoil Start",
       "Cutting Height": "50 mm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-386-9195",
-    category: "farm-machinery",
-    name: "KrishiGears ROLLER TYPE PETROL LAWN MOWER MODEL - 386",
-    model: "386",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 42000,
-    comparePrice: 49560,
-    images: ["/images/catalog/leo-386-9195.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/493223636/UW/II/JV/3205316/41cm-grass-cutting-petrol-lawn-mower-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/493223636/UW/II/JV/3205316/41cm-grass-cutting-petrol-lawn-mower-250x250.jpg"],
-    specs: {
+    "slug": "leo-386-9195",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Petrol Lawn Mower Model - 386",
+    "model": "386",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 42000,
+    "comparePrice": 49560,
+    "images": [
+      "/images/catalog/leo-386-9195.webp"
+    ],
+    "specs": {
       "Cutting Width": "41 cm",
       "Displacement": "125 CC",
       "Forward Speed": "Adjustable",
       "Cutting Height": "70 mm",
-      "Brand": "Leo",
+      "Brand": "KrishiGears",
       "Weight": "26 kg"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-20402307-2307",
-    category: "power-weeders",
-    name: "KrishiGears Garden Roller",
-    model: "20402307",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 29500,
-    comparePrice: 34810,
-    images: ["/images/catalog/leo-20402307-2307.webp", "https://5.imimg.com/data5/SELLER/Default/2026/6/615134472/TT/SA/VJ/3205316/leo-garden-roller-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/6/615134472/TT/SA/VJ/3205316/leo-garden-roller-250x250.jpeg"],
-    specs: {
+    "slug": "leo-20402307-2307",
+    "category": "farm-machinery",
+    "name": "KrishiGears Garden Roller",
+    "model": "20402307",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 29500,
+    "comparePrice": 34810,
+    "images": [
+      "/images/catalog/leo-20402307-2307.webp"
+    ],
+    "specs": {
       "Roller Width": "24 inch",
       "Drum Capacity": "150 kg",
       "Operation": "Tow behind",
@@ -2962,25 +6007,53 @@ export const PRODUCTS = [
       "Filling Type": "Water filled",
       "Handle Type": "Fixed handle"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-382-8975",
-    category: "farm-machinery",
-    name: "KrishiGears Roller Type Petrol Lawn Mower Model - 382 (50 W)",
-    model: "382",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 26950,
-    comparePrice: 31801,
-    images: ["/images/catalog/leo-382-8975.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/492333491/IU/SL/AO/3205316/leo-roller-type-petrol-lawn-mower-model-382-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/2/492333491/IU/SL/AO/3205316/leo-roller-type-petrol-lawn-mower-model-382-250x250.jpg"],
-    specs: {
+    "slug": "leo-382-8975",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Petrol Lawn Mower Model - 382 (50 W)",
+    "model": "382",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 26950,
+    "comparePrice": 31801,
+    "images": [
+      "/images/catalog/leo-382-8975.webp"
+    ],
+    "specs": {
       "Cutting Width": "24 Inch",
       "Cutting Height": "25 mm",
       "Power": "50 W",
@@ -2988,25 +6061,53 @@ export const PRODUCTS = [
       "Product Code": "0382",
       "Cutting Capacity": "24inch"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-258558586-8586",
-    category: "farm-machinery",
-    name: "KrishiGears Cub Cadet - Lx46 Fab Lawn Mower (20 HP)",
-    model: "258558586",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 342000,
-    comparePrice: 403560,
-    images: ["/images/catalog/leo-258558586-8586.webp", "https://5.imimg.com/data5/SELLER/Default/2023/9/342843467/IR/NZ/JG/3205316/cub-cadet-46-1-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2023/9/342843467/IR/NZ/JG/3205316/cub-cadet-46-1-250x250.jpg"],
-    specs: {
+    "slug": "leo-258558586-8586",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Cub Cadet - Lx46 Fab Lawn Mower (20 HP)",
+    "model": "258558586",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 342000,
+    "comparePrice": 403560,
+    "images": [
+      "/images/catalog/leo-258558586-8586.webp"
+    ],
+    "specs": {
       "Engine Power": "20 HP",
       "Cutting Width": "46 inch",
       "Transmission": "Hydrostatic",
@@ -3014,51 +6115,107 @@ export const PRODUCTS = [
       "Fuel Type": "Petrol",
       "Cutting Height": "25 mm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0381-9107",
-    category: "farm-machinery",
-    name: "KrishiGears Roller Type Diesel Lawn Mower Model - 0381 (15 HP)",
-    model: "0381",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 118975,
-    comparePrice: 140390,
-    images: ["/images/catalog/leo-0381-9107.webp", "https://2.imimg.com/data2/PB/PQ/MY-3205316/leo-roller-type-diesel-engine-operated-heavy-duty-lawn-movers-500x500.jpg", "https://2.imimg.com/data2/PB/PQ/MY-3205316/leo-roller-type-diesel-engine-operated-heavy-duty-lawn-movers-250x250.jpg"],
-    specs: {
+    "slug": "leo-0381-9107",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Diesel Lawn Mower Model - 0381 (15 HP)",
+    "model": "0381",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 118975,
+    "comparePrice": 140390,
+    "images": [
+      "/images/catalog/leo-0381-9107.webp"
+    ],
+    "specs": {
       "Cutting Width": "20 Inch",
       "Power": "15 HP",
-      "Brand": "Leo",
+      "Brand": "KrishiGears",
       "Usage/Application": "Grass Cutting",
       "Model No": "0381",
       "Structure": "5mm Heavy Steel Frame For Long Life Of Machine"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-model-pro-cu-0732",
-    category: "farm-machinery",
-    name: "KrishiGears 18 Inch Model Pro Cut-720 Walk Behind Mowers",
-    model: "Model Pro Cut-720",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-model-pro-cu-0732.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484634801/HE/OJ/MA/3205316/walk-behind-mowers-model-pro-cut-720-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484634801/HE/OJ/MA/3205316/walk-behind-mowers-model-pro-cut-720-250x250.png"],
-    specs: {
+    "slug": "leo-model-pro-cu-0732",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 18 Inch Model Pro Cut-720 Walk Behind Mowers",
+    "model": "Model Pro Cut-720",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-model-pro-cu-0732.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Displacement": "173cc Petrol",
       "Model": "Model Pro Cut-720",
@@ -3066,25 +6223,53 @@ export const PRODUCTS = [
       "Cutting Height": "10 mm",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-296052269-2269",
-    category: "power-weeders",
-    name: "KrishiGears Wheel String Trimmer (1.0 kW) - Petrol",
-    model: "296052269",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 22500,
-    comparePrice: 26550,
-    images: ["/images/catalog/leo-296052269-2269.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496257476/EL/LS/JJ/3205316/leo-wheel-string-trimmer-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496257476/EL/LS/JJ/3205316/leo-wheel-string-trimmer-250x250.png"],
-    specs: {
+    "slug": "leo-296052269-2269",
+    "category": "brush-cutters",
+    "name": "KrishiGears Wheel String Trimmer (1.0 kW) - Petrol",
+    "model": "296052269",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 22500,
+    "comparePrice": 26550,
+    "images": [
+      "/images/catalog/leo-296052269-2269.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Power Output": "1.0 kW",
       "Cutting Width": "380 mm",
@@ -3092,47 +6277,103 @@ export const PRODUCTS = [
       "Shaft Type": "Straight Shaft",
       "Handle Type": "Loop Handle"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297386313-6313",
-    category: "farm-machinery",
-    name: "KrishiGears Rotary Mower Self Propelled 225cc",
-    model: "297386313",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 58461,
-    comparePrice: 68984,
-    images: ["/images/catalog/leo-297386313-6313.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498484146/AO/FX/MA/3205316/leo-rotary-mower-self-propelled-225cc-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498484146/AO/FX/MA/3205316/leo-rotary-mower-self-propelled-225cc-250x250.png"],
-    specs: {
+    "slug": "leo-297386313-6313",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Rotary Mower Self Propelled 225cc",
+    "model": "297386313",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 58461,
+    "comparePrice": 68984,
+    "images": [
+      "/images/catalog/leo-297386313-6313.webp"
+    ],
+    "specs": {
       "Cutting Width": "21 Inch",
       "Forward Speed": "Adjustable"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-0381-2663",
-    category: "farm-machinery",
-    name: "KrishiGears Roller Type Diesel Lawn Mower Model - 0381 (20 HP)",
-    model: "0381",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 65000,
-    comparePrice: 76700,
-    images: ["/images/catalog/leo-0381-2663.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496248218/HO/XX/HB/3205316/leo-roller-type-diesel-lawn-mower-model-0381-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496248218/HO/XX/HB/3205316/leo-roller-type-diesel-lawn-mower-model-0381-250x250.png"],
-    specs: {
+    "slug": "leo-0381-2663",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Diesel Lawn Mower Model - 0381 (20 HP)",
+    "model": "0381",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 65000,
+    "comparePrice": 76700,
+    "images": [
+      "/images/catalog/leo-0381-2663.webp"
+    ],
+    "specs": {
       "Cutting Width": "12 Inch",
       "Power": "20 HP",
       "Usage/Application": "Grass Cutting",
@@ -3140,25 +6381,53 @@ export const PRODUCTS = [
       "No of Stroke": "4 Stroke",
       "Fuel Tank Capacity": "5 Ltr"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-pro-cut-950-4145",
-    category: "farm-machinery",
-    name: "KrishiGears 15 Mm Model Pro Cut-950 Walk Bihind Mowers (2.24 HP)",
-    model: "Pro Cut-950 Walk Bihind Mowers",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 21000,
-    comparePrice: 24780,
-    images: ["/images/catalog/leo-pro-cut-950-4145.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484642573/WQ/QA/PW/3205316/walk-bihind-mowers-model-pro-cut-950-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484642573/WQ/QA/PW/3205316/walk-bihind-mowers-model-pro-cut-950-250x250.jpeg"],
-    specs: {
+    "slug": "leo-pro-cut-950-4145",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Bihind Mowers (2.24 HP)",
+    "model": "Pro Cut-950 Walk Bihind Mowers",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 21000,
+    "comparePrice": 24780,
+    "images": [
+      "/images/catalog/leo-pro-cut-950-4145.webp"
+    ],
+    "specs": {
       "Cutting Height": "15 mm",
       "Forward Speed": "Adjustable",
       "Power": "2.24 HP",
@@ -3166,25 +6435,53 @@ export const PRODUCTS = [
       "Color": "Red",
       "Size": "0.47\"-2.24\""
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-model-rover-7967",
-    category: "farm-machinery",
-    name: "KrishiGears 18 INCH MODEL ROVER-820 PATROL WALK BEHIND MOWERS",
-    model: "Model Rover-820",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-model-rover-7967.webp", "https://5.imimg.com/data5/BK/UW/TW/SELLER-3205316/lawn-mower3-500x500.png", "https://5.imimg.com/data5/BK/UW/TW/SELLER-3205316/lawn-mower3-250x250.png"],
-    specs: {
+    "slug": "leo-model-rover-7967",
+    "category": "lawn-mowers",
+    "name": "KrishiGears 18 INCH Model ROVER-820 Patrol Walk Behind Mowers",
+    "model": "Model Rover-820",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-model-rover-7967.webp"
+    ],
+    "specs": {
       "Cutting Width": "18 Inch",
       "Displacement": "159CC Petrol",
       "Model": "Model Rover-820",
@@ -3192,25 +6489,53 @@ export const PRODUCTS = [
       "Cutting Height": "10 mm",
       "Color": "Red"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-375-3993",
-    category: "farm-machinery",
-    name: "KrishiGears Green Mower Model - 375 (5.5 HP)",
-    model: "375",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 95000,
-    comparePrice: 112100,
-    images: ["/images/catalog/leo-375-3993.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498478589/JX/SX/RG/3205316/leo-green-mower-model-375-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/498478589/JX/SX/RG/3205316/leo-green-mower-model-375-250x250.jpg"],
-    specs: {
+    "slug": "leo-375-3993",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Green Mower Model - 375 (5.5 HP)",
+    "model": "375",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 95000,
+    "comparePrice": 112100,
+    "images": [
+      "/images/catalog/leo-375-3993.webp"
+    ],
+    "specs": {
       "Engine Power": "5.5 HP",
       "Drive Type": "Self Propelled",
       "Cutting Width": "22 inches (56 mm)",
@@ -3218,25 +6543,53 @@ export const PRODUCTS = [
       "Starting System": "Electric Start",
       "Cutting Height": "15 mm"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-322540525-0525",
-    category: "power-weeders",
-    name: "KrishiGears WHEEL STRING TRIMMER (4599 W) - Petrol",
-    model: "322540525",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 80000,
-    comparePrice: 94400,
-    images: ["/images/catalog/leo-322540525-0525.webp", "https://5.imimg.com/data5/SELLER/Default/2026/7/625751776/WY/CB/YD/3205316/leo-wheel-string-trimmer-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/7/625751776/WY/CB/YD/3205316/leo-wheel-string-trimmer-250x250.jpeg"],
-    specs: {
+    "slug": "leo-322540525-0525",
+    "category": "brush-cutters",
+    "name": "KrishiGears Wheel String Trimmer (4599 W) - Petrol",
+    "model": "322540525",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 80000,
+    "comparePrice": 94400,
+    "images": [
+      "/images/catalog/leo-322540525-0525.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Power Output": "4599 W",
       "Cutting Width": "22 - 24 inch",
@@ -3244,25 +6597,53 @@ export const PRODUCTS = [
       "Shaft Type": "Vertical Shaft",
       "Handle Type": "D Handle"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-386-8522",
-    category: "farm-machinery",
-    name: "KrishiGears ROLLER TYPE ELECTRIC LAWN MOWER MODEL - 386 - Corded Electric",
-    model: "386",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 60000,
-    comparePrice: 70800,
-    images: ["/images/catalog/leo-386-8522.webp", "https://5.imimg.com/data5/SELLER/Default/2025/2/490573441/NG/OF/XM/3205316/leo-roller-type-electric-lawn-mower-model-386-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/2/490573441/NG/OF/XM/3205316/leo-roller-type-electric-lawn-mower-model-386-250x250.png"],
-    specs: {
+    "slug": "leo-386-8522",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Electric Lawn Mower Model - 386 - Corded Electric",
+    "model": "386",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 60000,
+    "comparePrice": 70800,
+    "images": [
+      "/images/catalog/leo-386-8522.webp"
+    ],
+    "specs": {
       "Power Source": "Corded Electric",
       "Motor Power": "1600 W",
       "Cutting Width": "24 inches",
@@ -3270,25 +6651,53 @@ export const PRODUCTS = [
       "Grass Collector": "With Collector",
       "Drive Type": "Push"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-zf6127-leo-e-3513",
-    category: "farm-machinery",
-    name: "KrishiGears Model ZF6127 Electric Lawn Mower (1600 W)",
-    model: "ZF6127 LEO Electric Lawn Mower",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 22565,
-    comparePrice: 26627,
-    images: ["/images/catalog/leo-zf6127-leo-e-3513.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484121225/GD/TX/TX/3205316/leo-electric-lawn-mower-model-zf6127-1600w-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484121225/GD/TX/TX/3205316/leo-electric-lawn-mower-model-zf6127-1600w-250x250.png"],
-    specs: {
+    "slug": "leo-zf6127-leo-e-3513",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Model ZF6127 Electric Lawn Mower (1600 W)",
+    "model": "ZF6127 Electric Lawn Mower",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 22565,
+    "comparePrice": 26627,
+    "images": [
+      "/images/catalog/leo-zf6127-leo-e-3513.webp"
+    ],
+    "specs": {
       "Cutting Width": "400 min",
       "Cutting Height": "25 mm",
       "Power": "1600 W",
@@ -3296,25 +6705,53 @@ export const PRODUCTS = [
       "Product Code": "6127",
       "Cutting Capacity": "25-75 min"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-384-8837",
-    category: "farm-machinery",
-    name: "KrishiGears Roller Type Lawn Mower Model - 384",
-    model: "384",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-384-8837.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484161666/VD/II/YP/3205316/leo-brand-roller-type-manual-lawn-mower-model-0384-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484161666/VD/II/YP/3205316/leo-brand-roller-type-manual-lawn-mower-model-0384-250x250.png"],
-    specs: {
+    "slug": "leo-384-8837",
+    "category": "lawn-mowers",
+    "name": "KrishiGears Roller Type Lawn Mower Model - 384",
+    "model": "384",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-384-8837.webp"
+    ],
+    "specs": {
       "Cutting Height": "55 mm",
       "Number Of Blades": "6 blades",
       "Cutting Width": "heavy duty 6 blades running On ball bearings",
@@ -3322,25 +6759,53 @@ export const PRODUCTS = [
       "Drive Type": "Push",
       "Grass Collector": "With Collector"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-cg-530-9160",
-    category: "power-weeders",
-    name: "KrishiGears Brushcutter Model Cg-530 (2.4 hp 50cc) - 2 Stroke",
-    model: "Cg-530",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 8924,
-    comparePrice: 10530,
-    images: ["/images/catalog/leo-cg-530-9160.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498356204/YK/IJ/SZ/3205316/riga-italy-brushcutter-model-cg-530-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498356204/YK/IJ/SZ/3205316/riga-italy-brushcutter-model-cg-530-250x250.png"],
-    specs: {
+    "slug": "leo-cg-530-9160",
+    "category": "brush-cutters",
+    "name": "KrishiGears Brushcutter Model Cg-530 (2.4 hp 50cc) - 2 Stroke",
+    "model": "Cg-530",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 8924,
+    "comparePrice": 10530,
+    "images": [
+      "/images/catalog/leo-cg-530-9160.webp"
+    ],
+    "specs": {
       "Engine Displacement": "52 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Side Pack",
@@ -3348,25 +6813,53 @@ export const PRODUCTS = [
       "Fuel Tank Capacity": "0.7 L",
       "Power": "2.4 hp 50cc"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-cg-530-8458",
-    category: "power-weeders",
-    name: "KrishiGears Multi Tool Brush Cutter Model -Cg 530 (2.4 HP 52cc) - 2 Stroke",
-    model: "Cg 530",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 14616,
-    comparePrice: 17247,
-    images: ["/images/catalog/leo-cg-530-8458.webp", "https://5.imimg.com/data5/SELLER/Default/2026/7/625753086/DT/FW/SW/3205316/leo-multi-tool-brush-cutter-model-cg-530-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/7/625753086/DT/FW/SW/3205316/leo-multi-tool-brush-cutter-model-cg-530-250x250.jpeg"],
-    specs: {
+    "slug": "leo-cg-530-8458",
+    "category": "brush-cutters",
+    "name": "KrishiGears Multi Tool Brush Cutter Model -Cg 530 (2.4 HP 52cc) - 2 Stroke",
+    "model": "Cg 530",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 14616,
+    "comparePrice": 17247,
+    "images": [
+      "/images/catalog/leo-cg-530-8458.webp"
+    ],
+    "specs": {
       "Engine Displacement": "52 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Side Pack",
@@ -3374,25 +6867,53 @@ export const PRODUCTS = [
       "Fuel Tank Capacity": "0.6 L",
       "Power": "2.4 HP 52cc"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297263000-3000",
-    category: "power-weeders",
-    name: "KrishiGears Back Pack Brushcutter Gx- 50 (2.0 kW) - 4 stroke",
-    model: "297263000",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13230,
-    comparePrice: 15611,
-    images: ["/images/catalog/leo-297263000-3000.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498073070/HV/ZK/TL/3205316/leo-back-pack-brushcutter-gx-50-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498073070/HV/ZK/TL/3205316/leo-back-pack-brushcutter-gx-50-250x250.png"],
-    specs: {
+    "slug": "leo-297263000-3000",
+    "category": "brush-cutters",
+    "name": "KrishiGears Back Pack Brushcutter Gx- 50 (2.0 kW) - 4 stroke",
+    "model": "297263000",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13230,
+    "comparePrice": 15611,
+    "images": [
+      "/images/catalog/leo-297263000-3000.webp"
+    ],
+    "specs": {
       "Engine Type": "4 stroke",
       "Mounting Type": "Backpack",
       "Engine Displacement": "52 CC",
@@ -3400,76 +6921,160 @@ export const PRODUCTS = [
       "Fuel Tank Capacity": "1.0 L",
       "Cutting Attachment": "3 Tooth Blade"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297380561-0561",
-    category: "power-weeders",
-    name: "KrishiGears Cordless Brush Cutter (1.5 HP) - battery operated",
-    model: "297380561",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 23078,
-    comparePrice: 27232,
-    images: ["/images/catalog/leo-297380561-0561.webp", "https://5.imimg.com/data5/SELLER/Default/2026/7/625253235/VL/OI/XV/3205316/leo-cordless-brush-cutter-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/7/625253235/VL/OI/XV/3205316/leo-cordless-brush-cutter-250x250.jpeg"],
-    specs: {
-      "Engine Displacement": "LEO Cordless brush cutter",
+    "slug": "leo-297380561-0561",
+    "category": "brush-cutters",
+    "name": "KrishiGears Cordless Brush Cutter (1.5 HP) - battery operated",
+    "model": "297380561",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 23078,
+    "comparePrice": 27232,
+    "images": [
+      "/images/catalog/leo-297380561-0561.webp"
+    ],
+    "specs": {
+      "Engine Displacement": "KrishiGears Cordless brush cutter",
       "Engine Type": "battery operated",
       "Mounting Type": "Side Pack",
       "Power Source": "Battery (Cordless)",
       "Power Output": "1.5 HP",
       "Handle Type": "Loop Handle (D)"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-re-1400-6087",
-    category: "power-weeders",
-    name: "KrishiGears Electric Brush Cutter Model Re-1400 (1400 watts)",
-    model: "Re-1400",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-re-1400-6087.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484151063/IE/HL/MB/3205316/leo-electric-brush-cutter-re-1400-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/1/484151063/IE/HL/MB/3205316/leo-electric-brush-cutter-re-1400-250x250.png"],
-    specs: {
+    "slug": "leo-re-1400-6087",
+    "category": "brush-cutters",
+    "name": "KrishiGears Electric Brush Cutter Model Re-1400 (1400 watts)",
+    "model": "Re-1400",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-re-1400-6087.webp"
+    ],
+    "specs": {
       "Cutting Width": "30 cm",
       "Displacement": "35 cc",
       "Overall Length": "1928 mm",
       "Type": "Cordless",
       "Power": "1400 watts"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-re-2200-9709",
-    category: "power-weeders",
-    name: "KrishiGears Electric Brush Cutter Model Re-2200 (2.0 kW)",
-    model: "Re-2200",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 17500,
-    comparePrice: 20650,
-    images: ["/images/catalog/leo-re-2200-9709.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498359389/QA/VY/KO/3205316/leo-electric-brush-cutter-model-re-2200-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/498359389/QA/VY/KO/3205316/leo-electric-brush-cutter-model-re-2200-250x250.jpg"],
-    specs: {
+    "slug": "leo-re-2200-9709",
+    "category": "brush-cutters",
+    "name": "KrishiGears Electric Brush Cutter Model Re-2200 (2.0 kW)",
+    "model": "Re-2200",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 17500,
+    "comparePrice": 20650,
+    "images": [
+      "/images/catalog/leo-re-2200-9709.webp"
+    ],
+    "specs": {
       "Power Source": "Electric",
       "Power Output": "2.0 kW",
       "Cutting Width": "400 mm",
@@ -3477,25 +7082,53 @@ export const PRODUCTS = [
       "Shaft Type": "Straight Shaft",
       "Handle Type": "Bike Handle"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297279169-9169",
-    category: "power-weeders",
-    name: "KrishiGears Mitsubishi Powered Brushcutter - Tu-43 (2.1HP) - 2 Stroke",
-    model: "297279169",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 18462,
-    comparePrice: 21785,
-    images: ["/images/catalog/leo-297279169-9169.webp", "https://5.imimg.com/data5/SELLER/Default/2026/7/625420924/WX/MO/CN/3205316/mitsubishi-powered-brushcutter-tu-43-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/7/625420924/WX/MO/CN/3205316/mitsubishi-powered-brushcutter-tu-43-250x250.jpeg"],
-    specs: {
+    "slug": "leo-297279169-9169",
+    "category": "brush-cutters",
+    "name": "KrishiGears Mitsubishi Powered Brushcutter - Tu-43 (2.1hp) - 2 Stroke",
+    "model": "297279169",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 18462,
+    "comparePrice": 21785,
+    "images": [
+      "/images/catalog/leo-297279169-9169.webp"
+    ],
+    "specs": {
       "Engine Displacement": "43 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Side Pack",
@@ -3503,25 +7136,53 @@ export const PRODUCTS = [
       "Displacement": "43 CC",
       "Power Output": "2.1HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-332557074-7074",
-    category: "power-weeders",
-    name: "KrishiGears Wheeled String Trimmer (450 W) - Petrol",
-    model: "332557074",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 80000,
-    comparePrice: 94400,
-    images: ["/images/catalog/leo-332557074-7074.webp", "https://5.imimg.com/data5/SELLER/Default/2026/9/640521018/FZ/DM/ED/3205316/wheeled-string-trimmer-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/9/640521018/FZ/DM/ED/3205316/wheeled-string-trimmer-250x250.jpeg"],
-    specs: {
+    "slug": "leo-332557074-7074",
+    "category": "brush-cutters",
+    "name": "KrishiGears Wheeled String Trimmer (450 W) - Petrol",
+    "model": "332557074",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 80000,
+    "comparePrice": 94400,
+    "images": [
+      "/images/catalog/leo-332557074-7074.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Power Output": "450 W",
       "Cutting Width": "350 mm",
@@ -3529,25 +7190,53 @@ export const PRODUCTS = [
       "Shaft Type": "vertical shaft",
       "Handle Type": "D Handle"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-253009174-9174",
-    category: "power-weeders",
-    name: "KrishiGears Wheel Type Brushcutter Cg - 530 (2.4 HP) - 2 Stroke",
-    model: "253009174",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 20000,
-    comparePrice: 23600,
-    images: ["/images/catalog/leo-253009174-9174.webp", "https://5.imimg.com/data5/SELLER/Default/2026/7/625260185/QM/KE/MI/3205316/leo-wheel-type-brushcutter-cg-530-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2026/7/625260185/QM/KE/MI/3205316/leo-wheel-type-brushcutter-cg-530-250x250.jpeg"],
-    specs: {
+    "slug": "leo-253009174-9174",
+    "category": "brush-cutters",
+    "name": "KrishiGears Wheel Type Brushcutter Cg - 530 (2.4 HP) - 2 Stroke",
+    "model": "253009174",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 20000,
+    "comparePrice": 23600,
+    "images": [
+      "/images/catalog/leo-253009174-9174.webp"
+    ],
+    "specs": {
       "Power Source": "Petrol",
       "Engine Displacement": "52 CC",
       "Engine Type": "2 Stroke",
@@ -3555,25 +7244,53 @@ export const PRODUCTS = [
       "Number Of Wheels": "2 Wheel",
       "Power": "2.4 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-34586937-6937",
-    category: "power-weeders",
-    name: "KrishiGears IGNITION COIL FOR BRUSH CUTTER",
-    model: "34586937",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 450,
-    comparePrice: 531,
-    images: ["/images/catalog/leo-34586937-6937.webp", "https://5.imimg.com/data5/LR/GJ/JR/SELLER-3205316/rotor-and-ignition-coil-500x500.jpg", "https://5.imimg.com/data5/LR/GJ/JR/SELLER-3205316/rotor-and-ignition-coil-250x250.jpg"],
-    specs: {
+    "slug": "leo-34586937-6937",
+    "category": "brush-cutters",
+    "name": "KrishiGears Ignition Coil For Brush Cutter",
+    "model": "34586937",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 450,
+    "comparePrice": 531,
+    "images": [
+      "/images/catalog/leo-34586937-6937.webp"
+    ],
+    "specs": {
       "Vehicle Brand": "Maruti",
       "Part No.": "3",
       "Usage/Application": "Brush Cutter",
@@ -3581,25 +7298,53 @@ export const PRODUCTS = [
       "Displacement": "43 CC",
       "No of Stroke": "2 Stroke"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-94097441-7441",
-    category: "power-weeders",
-    name: "KrishiGears Side Pack Brushcutter Cg-530 (2.4 HP) - 2 stroke",
-    model: "94097441",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 8462,
-    comparePrice: 9985,
-    images: ["/images/catalog/leo-94097441-7441.webp", "https://4.imimg.com/data4/JJ/QB/ANDROID-3205316/product-500x500.jpeg", "https://4.imimg.com/data4/JJ/QB/ANDROID-3205316/product-250x250.jpeg"],
-    specs: {
+    "slug": "leo-94097441-7441",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brushcutter Cg-530 (2.4 HP) - 2 stroke",
+    "model": "94097441",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 8462,
+    "comparePrice": 9985,
+    "images": [
+      "/images/catalog/leo-94097441-7441.webp"
+    ],
+    "specs": {
       "Engine Type": "2 stroke",
       "Mounting Type": "Side Pack",
       "Engine Displacement": "52 CC",
@@ -3607,25 +7352,53 @@ export const PRODUCTS = [
       "Power Source": "Petrol",
       "Power Output": "2.4 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297280912-0912",
-    category: "power-weeders",
-    name: "KrishiGears Wheel Type Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
-    model: "297280912",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 13462,
-    comparePrice: 15885,
-    images: ["/images/catalog/leo-297280912-0912.webp", "https://5.imimg.com/data5/SELLER/PDFImage/2025/3/498590277/DM/IK/QE/3205316/leo-wheel-type-brushcutter-gx-35-500x500.png", "https://5.imimg.com/data5/SELLER/PDFImage/2025/3/498590277/DM/IK/QE/3205316/leo-wheel-type-brushcutter-gx-35-250x250.png"],
-    specs: {
+    "slug": "leo-297280912-0912",
+    "category": "brush-cutters",
+    "name": "KrishiGears Wheel Type Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
+    "model": "297280912",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 13462,
+    "comparePrice": 15885,
+    "images": [
+      "/images/catalog/leo-297280912-0912.webp"
+    ],
+    "specs": {
       "Engine Displacement": "35 cc",
       "Engine Type": "4 Stroke",
       "Mounting Type": "Trolley",
@@ -3633,25 +7406,53 @@ export const PRODUCTS = [
       "Power Source": "Petrol",
       "Power Output": "1.3 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-252814707-4707",
-    category: "power-weeders",
-    name: "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
-    model: "252814707",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 24000,
-    comparePrice: 28320,
-    images: ["/images/catalog/leo-252814707-4707.webp", "https://5.imimg.com/data5/SELLER/Default/2025/1/484675309/ZM/VE/RL/3205316/leo-cg-530-brush-cutter-2-stroke-backpack-500x500.jpeg", "https://5.imimg.com/data5/SELLER/Default/2025/1/484675309/ZM/VE/RL/3205316/leo-cg-530-brush-cutter-2-stroke-backpack-250x250.jpeg"],
-    specs: {
+    "slug": "leo-252814707-4707",
+    "category": "brush-cutters",
+    "name": "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
+    "model": "252814707",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 24000,
+    "comparePrice": 28320,
+    "images": [
+      "/images/catalog/leo-252814707-4707.webp"
+    ],
+    "specs": {
       "Engine Type": "2 Stroke",
       "Mounting Type": "Backpack",
       "Engine Displacement": "52 CC",
@@ -3659,49 +7460,105 @@ export const PRODUCTS = [
       "Power Source": "Petrol",
       "Power Output": "2.4 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-kpd-1350-8308",
-    category: "power-weeders",
-    name: "KrishiGears Power Weeder Model Kpd- 1350 (10 Hp) - Diesel",
-    model: "Kpd- 1350",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 35000,
-    comparePrice: 41300,
-    images: ["/images/catalog/ri-kpd-1350-8308.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/494119539/ZJ/TP/RW/3205316/riga-italy-power-weeder-model-kpd-1350-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/494119539/ZJ/TP/RW/3205316/riga-italy-power-weeder-model-kpd-1350-250x250.png"],
-    specs: {
+    "slug": "ri-kpd-1350-8308",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Model Kpd- 1350 (10 Hp) - Diesel",
+    "model": "Kpd- 1350",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 35000,
+    "comparePrice": 41300,
+    "images": [
+      "/images/catalog/ri-kpd-1350-8308.webp"
+    ],
+    "specs": {
       "Power": "10 Hp",
       "Engine Type": "Diesel",
       "Grade Type": "Manual",
-      "Brand": "RIGA-ITALY"
+      "Brand": "KrishiGears"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "leo-295837771-7771",
-    category: "power-weeders",
-    name: "KrishiGears BACK PACK BRUSHCUTTER CG-530 (52CC) - 2 Stroke",
-    model: "295837771",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 9846,
-    comparePrice: 11618,
-    images: ["/images/catalog/leo-295837771-7771.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496089950/YT/JJ/ER/3205316/leo-back-pack-brushcutter-cg-530-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496089950/YT/JJ/ER/3205316/leo-back-pack-brushcutter-cg-530-250x250.png"],
-    specs: {
+    "slug": "leo-295837771-7771",
+    "category": "brush-cutters",
+    "name": "KrishiGears Back Pack Brushcutter CG-530 (52cc) - 2 Stroke",
+    "model": "295837771",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 9846,
+    "comparePrice": 11618,
+    "images": [
+      "/images/catalog/leo-295837771-7771.webp"
+    ],
+    "specs": {
       "Engine Displacement": "52 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Backpack",
@@ -3709,68 +7566,152 @@ export const PRODUCTS = [
       "Power Output": "2.4 HP",
       "Power": "52CC"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "ri-297272678-2678",
-    category: "power-weeders",
-    name: "KrishiGears Side Pack Brush cutter Cg-400 (2.6 HP 56 cc) - 2 Stroke",
-    model: "297272678",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 18462,
-    comparePrice: 21785,
-    images: ["/images/catalog/ri-297272678-2678.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498121529/FP/CV/AV/3205316/riga-italy-side-pack-brush-cutter-cg-400-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498121529/FP/CV/AV/3205316/riga-italy-side-pack-brush-cutter-cg-400-250x250.png"],
-    specs: {
+    "slug": "ri-297272678-2678",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brush cutter Cg-400 (2.6 HP 56 cc) - 2 Stroke",
+    "model": "297272678",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 18462,
+    "comparePrice": 21785,
+    "images": [
+      "/images/catalog/ri-297272678-2678.webp"
+    ],
+    "specs": {
       "Engine Type": "2 Stroke",
       "Power": "2.6 HP 56 cc"
     },
-    features: baseFeatures(["Genuine Riga Italy OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297381357-1357",
-    category: "power-weeders",
-    name: "KrishiGears 20v Cordless Multi Tool Brush Cutter",
-    model: "297381357",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 15384,
-    comparePrice: 18153,
-    images: ["/images/catalog/leo-297381357-1357.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498463869/YW/NT/JL/3205316/leo-20v-cordless-multi-tool-brush-cutter-500x500.jpg", "https://5.imimg.com/data5/SELLER/Default/2025/3/498463869/YW/NT/JL/3205316/leo-20v-cordless-multi-tool-brush-cutter-250x250.jpg"],
-    specs: {
+    "slug": "leo-297381357-1357",
+    "category": "brush-cutters",
+    "name": "KrishiGears 20v Cordless Multi Tool Brush Cutter",
+    "model": "297381357",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 15384,
+    "comparePrice": 18153,
+    "images": [
+      "/images/catalog/leo-297381357-1357.webp"
+    ],
+    "specs": {
       "Power": "20V"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-gx-35-2041",
-    category: "power-weeders",
-    name: "KrishiGears Side Pack Brushcutter Model Gx - 35 (1.3 HP) - 4 Stroke",
-    model: "Gx - 35",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 8000,
-    comparePrice: 9440,
-    images: ["/images/catalog/leo-gx-35-2041.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498068763/VS/ES/GQ/3205316/leo-side-pack-brushcutter-model-gx-35-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498068763/VS/ES/GQ/3205316/leo-side-pack-brushcutter-model-gx-35-250x250.png"],
-    specs: {
+    "slug": "leo-gx-35-2041",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brushcutter Model Gx - 35 (1.3 HP) - 4 Stroke",
+    "model": "Gx - 35",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 8000,
+    "comparePrice": 9440,
+    "images": [
+      "/images/catalog/leo-gx-35-2041.webp"
+    ],
+    "specs": {
       "Engine Displacement": "35.8 cc",
       "Engine Type": "4 Stroke",
       "Mounting Type": "Side Pack",
@@ -3778,25 +7719,53 @@ export const PRODUCTS = [
       "Power Output": "1.5 HP",
       "Power": "1.3 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-296052723-2723",
-    category: "power-weeders",
-    name: "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
-    model: "296052723",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 9231,
-    comparePrice: 10893,
-    images: ["/images/catalog/leo-296052723-2723.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496259841/YQ/RZ/WV/3205316/leo-back-pack-brushcutter-cg-530-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496259841/YQ/RZ/WV/3205316/leo-back-pack-brushcutter-cg-530-250x250.png"],
-    specs: {
+    "slug": "leo-296052723-2723",
+    "category": "brush-cutters",
+    "name": "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
+    "model": "296052723",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 9231,
+    "comparePrice": 10893,
+    "images": [
+      "/images/catalog/leo-296052723-2723.webp"
+    ],
+    "specs": {
       "Engine Displacement": "52 cc",
       "Engine Type": "2 Stroke",
       "Mounting Type": "Backpack",
@@ -3804,93 +7773,210 @@ export const PRODUCTS = [
       "Power Source": "Petrol",
       "Power Output": "2.4 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297262606-2606",
-    category: "power-weeders",
-    name: "KrishiGears Side Pack Brushcutter Gx-50 (2 HP) - 4 Stroke",
-    model: "297262606",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 12308,
-    comparePrice: 14523,
-    images: ["/images/catalog/leo-297262606-2606.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498071911/DW/NH/OY/3205316/leo-side-pack-brushcutter-gx-50-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498071911/DW/NH/OY/3205316/leo-side-pack-brushcutter-gx-50-250x250.png"],
-    specs: {
+    "slug": "leo-297262606-2606",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brushcutter Gx-50 (2 HP) - 4 Stroke",
+    "model": "297262606",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 12308,
+    "comparePrice": 14523,
+    "images": [
+      "/images/catalog/leo-297262606-2606.webp"
+    ],
+    "specs": {
       "Engine Type": "4 Stroke",
       "Power": "2 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-297262381-2381",
-    category: "power-weeders",
-    name: "KrishiGears Back Pack Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
-    model: "297262381",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 10924,
-    comparePrice: 12890,
-    images: ["/images/catalog/leo-297262381-2381.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/498070467/NN/DV/VL/3205316/leo-back-pack-brushcutter-gx-35-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/498070467/NN/DV/VL/3205316/leo-back-pack-brushcutter-gx-35-250x250.png"],
-    specs: {
+    "slug": "leo-297262381-2381",
+    "category": "brush-cutters",
+    "name": "KrishiGears Back Pack Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
+    "model": "297262381",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 10924,
+    "comparePrice": 12890,
+    "images": [
+      "/images/catalog/leo-297262381-2381.webp"
+    ],
+    "specs": {
       "Engine Type": "4 Stroke",
       "Power": "1.3 HP"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "leo-gx-35-8104",
-    category: "power-weeders",
-    name: "KrishiGears SIDE PACK BRUSHCUTTER MODEL GX - 35 (35.8CC) - 4 Stroke",
-    model: "GX - 35",
-    brand: "KrishiGears",
-    badges: ["Industrial Standard Quality", "Commercial Agro Tested", "Commercial Grade"],
-    price: 10000,
-    comparePrice: 11800,
-    images: ["/images/catalog/leo-gx-35-8104.webp", "https://5.imimg.com/data5/SELLER/Default/2025/3/496093185/VY/PU/IN/3205316/leo-side-pack-brushcutter-model-gx-35-500x500.png", "https://5.imimg.com/data5/SELLER/Default/2025/3/496093185/VY/PU/IN/3205316/leo-side-pack-brushcutter-model-gx-35-250x250.png"],
-    specs: {
+    "slug": "leo-gx-35-8104",
+    "category": "brush-cutters",
+    "name": "KrishiGears Side Pack Brushcutter Model GX - 35 (35.8cc) - 4 Stroke",
+    "model": "GX - 35",
+    "brand": "KrishiGears",
+    "badges": [
+      "Industrial Standard Quality",
+      "Commercial Agro Tested",
+      "Commercial Grade"
+    ],
+    "price": 10000,
+    "comparePrice": 11800,
+    "images": [
+      "/images/catalog/leo-gx-35-8104.webp"
+    ],
+    "specs": {
       "Engine Type": "4 Stroke",
       "Power": "35.8CC",
       "Country of Origin": "Made in India"
     },
-    features: baseFeatures(["Genuine Leo OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Cotton", "Sugarcane", "Wheat", "Paddy"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Cotton fields", "High-torque de-weeding and soil aeration in Black Cotton Soil", "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    hsn: "8433",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Cotton",
+      "Sugarcane",
+      "Wheat",
+      "Paddy"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
+    "hsn": "8433",
+    "gst": 12
   },
   {
-    slug: "rly-173f",
-    category: "power-weeders",
-    name: "KrishiGears RAPL-MC-173D Chain Cultivator | 247cc Diesel",
-    model: "173F",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-173f.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/Picture-1-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/Picture-2-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/008-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/006-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/001-4-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/002-2-scaled.jpg"],
-    specs: {
-      "Product Name": "REALLY RAPL-MC-173D Chain Cultivator",
+    "slug": "rly-173f",
+    "category": "power-weeders",
+    "name": "KrishiGears RAPL-MC-173D Chain Cultivator | 247cc Diesel",
+    "model": "173F",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-173f.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/Picture-2-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/008-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/006-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/001-4-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/002-2-scaled.jpg"
+    ],
+    "specs": {
+      "Product Name": "KrishiGears RAPL-MC-173D Chain Cultivator",
       "Engine Model": "173F",
       "Engine Type": "4-Stroke Diesel",
       "Engine Displacement": "247cc",
@@ -3901,26 +7987,60 @@ export const PRODUCTS = [
       "Standard Implements": "Leveler, Flip Plow, Ditcher, 3-Tyne Hoe",
       "Optional Accessory": "Seeder Fertilizer"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-170f",
-    category: "power-weeders",
-    name: "KrishiGears RAPL-MC-170G Chain Cultivator | 212cc Petrol",
-    model: "170F",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-170f.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/picture-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/picture-5-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/picture-1-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/0011-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/007-5-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/001-3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/002-1-scaled.jpg"],
-    specs: {
-      "Product Name": "REALLY RAPL-MC-170G Chain Cultivator",
+    "slug": "rly-170f",
+    "category": "power-weeders",
+    "name": "KrishiGears RAPL-MC-170G Chain Cultivator | 212cc Petrol",
+    "model": "170F",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-170f.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/picture-5-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/picture-1-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/0011-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/007-5-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/001-3-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/002-1-scaled.jpg"
+    ],
+    "specs": {
+      "Product Name": "KrishiGears RAPL-MC-170G Chain Cultivator",
       "Engine Model": "170F",
       "Engine Type": "4-Stroke Petrol",
       "Engine Displacement": "212cc",
@@ -3931,26 +8051,57 @@ export const PRODUCTS = [
       "Standard Implements": "Leveler, Flip Plow, Ditcher, 3-Tyne Hoe",
       "Optional Accessory": "Seeder Fertilizer"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r50-b",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R50-B Baffle Crop Reaper | 50cc 4-Stroke Petrol Paddy Harvester",
-    model: "CR-R50-B",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r50-b.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160128.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160130.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160132.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160134.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-cr-r50-b",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R50-B Baffle Crop Reaper | 50cc 4-Stroke Petrol Paddy Harvester",
+    "model": "CR-R50-B",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r50-b.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160130.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160132.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160134.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "CR-R50-B",
       "Product Type": "Baffle Crop Reaper / Brush Cutter",
       "Engine Model": "JX50 / 4-Stroke",
@@ -3958,26 +8109,54 @@ export const PRODUCTS = [
       "Fuel Type": "Petrol",
       "Carry Type": "Backpack"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r52-b",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R52-B Baffle Crop Reaper | 52cc 2-Stroke Backpack Paddy Harvester",
-    model: "CR-R52-B",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r52-b.webp"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-cr-r52-b",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R52-B Baffle Crop Reaper | 52cc 2-Stroke Backpack Paddy Harvester",
+    "model": "CR-R52-B",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r52-b.webp"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "CR-R52-B",
       "Product Type": "Baffle Crop Reaper / Backpack Brush Cutter",
       "Approval": "FMTTI Approved",
@@ -3986,26 +8165,57 @@ export const PRODUCTS = [
       "Fuel Type": "Oil Mix Petrol (1:25 Ratio)",
       "Carry Type": "Backpack"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r52-s",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R52-S Baffle Crop Reaper | 52cc 2-Stroke Petrol Paddy Harvester",
-    model: "CR-R52-S",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r52-s.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160249.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160251.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160253.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160255.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-cr-r52-s",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R52-S Baffle Crop Reaper | 52cc 2-Stroke Petrol Paddy Harvester",
+    "model": "CR-R52-S",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r52-s.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160251.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160253.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160255.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "CR-R52-S",
       "Product Type": "Baffle Crop Reaper / Heavy-Duty Brush Cutter",
       "Approval": "FMTTI Approved",
@@ -4014,26 +8224,55 @@ export const PRODUCTS = [
       "Fuel Type": "Oil Mix Petrol (1:25 Ratio)",
       "Carry Type": "Side Pack"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r35-b",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R35-B Baffle Crop Reaper | 35cc 4-Stroke Petrol Paddy Harvester",
-    model: "CR-R35-B",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r35-b.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09073-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09074-scaled.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-cr-r35-b",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R35-B Baffle Crop Reaper | 35cc 4-Stroke Petrol Paddy Harvester",
+    "model": "CR-R35-B",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r35-b.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09074-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "CR-R35-B",
       "Product Type": "Baffle Crop Reaper / Brush Cutter",
       "Approval": "FMTTI Approved",
@@ -4042,26 +8281,57 @@ export const PRODUCTS = [
       "Fuel Type": "Petrol",
       "Carry Type": "Backpack"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r35-s",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R35-S Baffle Crop Reaper | 35cc 4-Stroke Petrol",
-    model: "CR-R35-S",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r35-s.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09057-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09060-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09061-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/SID09062-scaled.jpg"],
-    specs: {
-      "Product Name": "Really CR-R35-S Baffle Crop Reaper",
+    "slug": "rly-cr-r35-s",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R35-S Baffle Crop Reaper | 35cc 4-Stroke Petrol",
+    "model": "CR-R35-S",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r35-s.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09060-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09061-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09062-scaled.jpg"
+    ],
+    "specs": {
+      "Product Name": "KrishiGears CR-R35-S Baffle Crop Reaper",
       "Engine Type": "4-Stroke Petrol Engine",
       "Engine Displacement": "35cc",
       "Engine Power": "1 kW",
@@ -4070,26 +8340,57 @@ export const PRODUCTS = [
       "Cutting Accessories": "Trimmer Head, 2mm 2T Blade, 80T TCT Blade, Paddy Harvester",
       "Approval": "FMTTI Approved"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-1e40f-2",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R43W-S Baffle Crop Reaper | 43cc 2-Stroke Agricultural Cutter",
-    model: "1E40F-2",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-1e40f-2.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2497.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2430.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2431.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2432.jpg"],
-    specs: {
-      "Product Name": "Really CR-R43W-S Baffle Crop Reaper",
+    "slug": "rly-1e40f-2",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R43W-S Baffle Crop Reaper | 43cc 2-Stroke Agricultural Cutter",
+    "model": "1E40F-2",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-1e40f-2.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2430.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2431.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2432.jpg"
+    ],
+    "specs": {
+      "Product Name": "KrishiGears CR-R43W-S Baffle Crop Reaper",
       "Engine Model": "1E40F-2",
       "Engine Type": "2-Stroke Petrol Engine",
       "Engine Displacement": "43cc",
@@ -4100,26 +8401,60 @@ export const PRODUCTS = [
       "Carrying Type": "Side Pack",
       "Cutting Accessories": "Trimmer Head, 2mm 2T Blade, 80T TCT Blade, Paddy Harvester"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-cr-r50-s",
-    category: "farm-machinery",
-    name: "KrishiGears CR-R50-S Baffle Crop Reaper | 50 CC",
-    model: "CR-R50-S",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-cr-r50-s.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535252395.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535447598.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535477817.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535479064.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535512147.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/02-9-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/14-2-scaled.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-cr-r50-s",
+    "category": "crop-reapers",
+    "name": "KrishiGears CR-R50-S Baffle Crop Reaper | 50 CC",
+    "model": "CR-R50-S",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-cr-r50-s.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535447598.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535477817.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535479064.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535512147.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/02-9-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/14-2-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "CR-R50-S",
       "Product Type": "Baffle Crop Reaper",
       "Engine Model": "J50",
@@ -4130,26 +8465,56 @@ export const PRODUCTS = [
       "Carry Type": "Backpack",
       "Accessories": "Trimmer Head, 2 mm 2T Blade, 80T CT Blade, Paddy Harvester"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-tb-52",
-    category: "farm-machinery",
-    name: "KrishiGears RAPL-TB-52 Wheel Type Baffle Crop Reaper | 52 CC",
-    model: "RAPL-TB-52",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-rapl-tb-52.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6707.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6708.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6709.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-rapl-tb-52",
+    "category": "crop-reapers",
+    "name": "KrishiGears RAPL-TB-52 Wheel Type Baffle Crop Reaper | 52 CC",
+    "model": "RAPL-TB-52",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-rapl-tb-52.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6708.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6709.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "RAPL-TB-52",
       "Product Type": "Wheel Type Baffle Crop Reaper",
       "Engine Model": "144F",
@@ -4164,25 +8529,58 @@ export const PRODUCTS = [
       "Accessories": "Trimmer Head, 2 mm 2T Blade, Oil Can, Tool Kit",
       "Applications": "Grass Cutting, Crop Cutting, Lawn Cutting, Bush Cutting"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-m-52",
-    category: "farm-machinery",
-    name: "KrishiGears (by ) M-52 Baffle Crop Reaper | 52 CC 2 HP",
-    model: "M-52",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-m-52.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398415101.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398417648.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398420089.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398422988.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398434873.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398439683.jpg"],
-    specs: {
+    "slug": "rly-m-52",
+    "category": "crop-reapers",
+    "name": "KrishiGears M-52 Baffle Crop Reaper | 52 CC 2 HP",
+    "model": "M-52",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-m-52.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398417648.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398420089.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398422988.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398434873.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398439683.jpg"
+    ],
+    "specs": {
       "Model": "M-52",
       "Product Type": "Baffle Crop Reaper",
       "Displacement": "52 CC",
@@ -4195,25 +8593,58 @@ export const PRODUCTS = [
       "Additional Blade": "80T TCT Blade",
       "Trimmer Head": "Easy Refill Trimmer Head"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-m-35s",
-    category: "farm-machinery",
-    name: "KrishiGears (by ) M-35S Baffle Crop Reaper | 35 CC 4-Stroke",
-    model: "M-35S",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-m-35s.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643437061.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643818241.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643473001.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643556991.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643617151.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643739141.jpg"],
-    specs: {
+    "slug": "rly-m-35s",
+    "category": "crop-reapers",
+    "name": "KrishiGears M-35S Baffle Crop Reaper | 35 CC 4-Stroke",
+    "model": "M-35S",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-m-35s.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643818241.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643473001.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643556991.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643617151.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643739141.jpg"
+    ],
+    "specs": {
       "Model": "M-35S",
       "Product Type": "Baffle Crop Reaper",
       "Displacement": "35 CC",
@@ -4230,26 +8661,57 @@ export const PRODUCTS = [
       "Trimmer Head": "Easy Refill Trimmer Head",
       "Safety Feature": "Safety Guard"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-3800d-sp",
-    category: "power-weeders",
-    name: "KrishiGears SEO Title: RH-3800D-SP Front Rotary Mini Tiller | 247 CC",
-    model: "RH-3800D-SP",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 36000,
-    comparePrice: 44000,
-    images: ["/images/catalog/rly-rh-3800d-sp.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/02-5-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/07-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/09-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/05-7-scaled.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-rh-3800d-sp",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-3800D-SP Front Rotary Mini Tiller | 247 CC",
+    "model": "RH-3800D-SP",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 36000,
+    "comparePrice": 44000,
+    "images": [
+      "/images/catalog/rly-rh-3800d-sp.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/07-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/09-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/05-7-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "RH-3800D-SP",
       "Product Type": "Front Rotary Mini Tiller",
       "Drive Type": "Self Propelled",
@@ -4263,26 +8725,56 @@ export const PRODUCTS = [
       "Switch": "On / Off Switch",
       "Attachment": "Rotary Blades"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-3800d",
-    category: "power-weeders",
-    name: "KrishiGears RH-3800D Front Rotary Mini Tiller | 247 CC",
-    model: "RH-3800D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 36000,
-    comparePrice: 44000,
-    images: ["/images/catalog/rly-rh-3800d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/6576d3f19adfa63c67cd378a4ddd052-2.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/abe9e8230360c29d8f9c7493ee32555.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013-2.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-rh-3800d",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-3800D Front Rotary Mini Tiller | 247 CC",
+    "model": "RH-3800D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 36000,
+    "comparePrice": 44000,
+    "images": [
+      "/images/catalog/rly-rh-3800d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/abe9e8230360c29d8f9c7493ee32555.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013-2.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "RH-3800D",
       "Product Type": "Front Rotary Mini Tiller",
       "Operation": "Hand Push",
@@ -4296,26 +8788,55 @@ export const PRODUCTS = [
       "Switch": "On / Off Switch",
       "Attachment": "Rotary Blades"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-3800g-sp",
-    category: "power-weeders",
-    name: "KrishiGears RH-3800G-SP Front Rotary Mini Tiller",
-    model: "RH-3800G-SP",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 36000,
-    comparePrice: 44000,
-    images: ["/images/catalog/rly-rh-3800g-sp.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9900-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9901-scaled.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-rh-3800g-sp",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-3800G-SP Front Rotary Mini Tiller",
+    "model": "RH-3800G-SP",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 36000,
+    "comparePrice": 44000,
+    "images": [
+      "/images/catalog/rly-rh-3800g-sp.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9901-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "RH-3800G-SP",
       "Product Type": "Front Rotary Mini Tiller",
       "Drive Type": "Self Propelled",
@@ -4329,25 +8850,54 @@ export const PRODUCTS = [
       "Switch": "On / Off Switch",
       "Free Attachment": "Rotary Blades"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-3800g",
-    category: "power-weeders",
-    name: "KrishiGears RH-3800G Front Rotary Mini Tiller | 212 CC 4 KW",
-    model: "RH-3800G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 36000,
-    comparePrice: 44000,
-    images: ["/images/catalog/rly-rh-3800g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/6576d3f19adfa63c67cd378a4ddd052-1.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013.jpg"],
-    specs: {
+    "slug": "rly-rh-3800g",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-3800G Front Rotary Mini Tiller | 212 CC 4 KW",
+    "model": "RH-3800G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 36000,
+    "comparePrice": 44000,
+    "images": [
+      "/images/catalog/rly-rh-3800g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013.jpg"
+    ],
+    "specs": {
       "Model": "RH-3800G",
       "Product Type": "Front Rotary Mini Tiller",
       "Engine": "170F, 4 Stroke",
@@ -4364,25 +8914,58 @@ export const PRODUCTS = [
       "Free Attachments": "Ridger, 7 Blades &amp; Rotary Blades",
       "Additional Feature": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-2600",
-    category: "power-weeders",
-    name: "KrishiGears RH-2600 Front Rotary Mini Tiller | 212 CC 4 KW",
-    model: "RH-2600",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 28500,
-    comparePrice: 34500,
-    images: ["/images/catalog/rly-rh-2600.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9904-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9905-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/006-3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/003-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/002-3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/001-5-scaled.jpg"],
-    specs: {
+    "slug": "rly-rh-2600",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-2600 Front Rotary Mini Tiller | 212 CC 4 KW",
+    "model": "RH-2600",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 28500,
+    "comparePrice": 34500,
+    "images": [
+      "/images/catalog/rly-rh-2600.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9905-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/006-3-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/003-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/002-3-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/001-5-scaled.jpg"
+    ],
+    "specs": {
       "Model": "RH-2600",
       "Product Type": "Front Rotary Mini Tiller",
       "Engine": "170F, 4 Stroke",
@@ -4398,26 +8981,59 @@ export const PRODUCTS = [
       "Attachments": "Ridger &amp; 7 Blades",
       "Additional Feature": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rh-2000",
-    category: "power-weeders",
-    name: "KrishiGears RH-2000 Front Rotary Mini Tiller",
-    model: "RH-2000",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 28500,
-    comparePrice: 34500,
-    images: ["/images/catalog/rly-rh-2000.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9898.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9899-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/009-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/007-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/004-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/001-scaled.jpg"],
-    specs: {
-      "Brand": "Really",
+    "slug": "rly-rh-2000",
+    "category": "power-weeders",
+    "name": "KrishiGears RH-2000 Front Rotary Mini Tiller",
+    "model": "RH-2000",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 28500,
+    "comparePrice": 34500,
+    "images": [
+      "/images/catalog/rly-rh-2000.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9899-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/009-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/007-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/004-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/001-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "RH-2000",
       "Machine Type": "Front Rotary Mini Tiller",
       "Engine": "170F / 4 Stroke",
@@ -4431,26 +9047,57 @@ export const PRODUCTS = [
       "Attachments": "Ridger &amp; 7-Blade Weeding Attachment",
       "Packing": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rap-l-rh-6301",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears RAPL-RH-6301 63CC Petrol Mini Weeder | Buy Online",
-    model: "RAP-L-RH-6301",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 18500,
-    comparePrice: 22500,
-    images: ["/images/catalog/rly-rap-l-rh-6301.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/001b76f3e45844980d70e62f9ed3c86-1.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/1833d2c5f3eacb01e9739b97b883126.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/6395c25d9201d25a76d79296ce3b29c.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/466893d8fbf968e541bbf7be05b407e.jpg"],
-    specs: {
-      "Product Name": "Really Mini Weeder",
+    "slug": "rly-rap-l-rh-6301",
+    "category": "power-weeders",
+    "name": "KrishiGears RAPL-RH-6301 63CC Petrol Mini Weeder | Buy Online",
+    "model": "RAP-L-RH-6301",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 18500,
+    "comparePrice": 22500,
+    "images": [
+      "/images/catalog/rly-rap-l-rh-6301.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/1833d2c5f3eacb01e9739b97b883126.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/6395c25d9201d25a76d79296ce3b29c.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/466893d8fbf968e541bbf7be05b407e.jpg"
+    ],
+    "specs": {
+      "Product Name": "KrishiGears Mini Weeder",
       "Model": "RAP-L-RH-6301",
       "Engine Model": "1E48F / 2 Stroke",
       "Engine Power": "63cc / 2.2 kW",
@@ -4459,28 +9106,58 @@ export const PRODUCTS = [
       "Type": "Carry Type Trolley",
       "Application": "Weeding"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-300g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-300G Mini Power Tiller | 63cc",
-    model: "MY-300G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 28500,
-    comparePrice: 34500,
-    images: ["/images/catalog/rly-my-300g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/b681f7448494687311c12fcccebb6c7.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/d63b68ca79c9c3d530efd157dee4d1d.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/4ef6bfcae8ac4de8fa99336b79c15fe.jpg"],
-    specs: {
+    "slug": "rly-my-300g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-300G Mini Power Tiller | 63cc",
+    "model": "MY-300G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 28500,
+    "comparePrice": 34500,
+    "images": [
+      "/images/catalog/rly-my-300g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/d63b68ca79c9c3d530efd157dee4d1d.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/4ef6bfcae8ac4de8fa99336b79c15fe.jpg"
+    ],
+    "specs": {
       "Model": "MY-300G",
       "Product Type": "Mini Power Tiller",
-      "Brand": "Mitsuyama",
+      "Brand": "KrishiGears",
       "Engine Model": "1E48F / 2 Stroke",
       "Engine Power": "63cc / 2.3 kW",
       "Fuel": "Oil Mix Petrol 1:25",
@@ -4489,25 +9166,54 @@ export const PRODUCTS = [
       "Switch": "On-Off Switch",
       "Mobility": "Wheels for Easy Movement"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-573d-upgraded",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-573D Upgraded Diesel Power Weeder | 247 CC",
-    model: "MY-573D (Upgraded)",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-my-573d-upgraded.webp", "https://reallyagritech.com/wp-content/uploads/2026/08/05-3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/04-5-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-573d-upgraded",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-573D Upgraded Diesel Power Weeder | 247 CC",
+    "model": "MY-573D (Upgraded)",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-my-573d-upgraded.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/04-5-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-573D (Upgraded)",
       "Engine": "173F 4 Stroke Diesel",
       "Displacement": "247 cc",
@@ -4520,73 +9226,166 @@ export const PRODUCTS = [
       "Tilling Depth": "100-300 mm",
       "Handle": "Adjustable"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-550g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-550G Upgraded Petrol Power Weeder | 212 CC, 4 KW",
-    model: "MY-550G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-550g.webp", "https://reallyagritech.com/wp-content/uploads/2026/08/15-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/11-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/07-2-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-550g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-550G Upgraded Petrol Power Weeder | 212 CC, 4 KW",
+    "model": "MY-550G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-550g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/11-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/07-2-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-470g-hl",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-470G-HL Upgraded Petrol Power Weeder | 212 CC",
-    model: "MY-470G-HL",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-470g-hl.webp", "https://reallyagritech.com/wp-content/uploads/2026/08/15-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/17-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/07-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/13-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/11-1-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-470g-hl",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-470G-HL Upgraded Petrol Power Weeder | 212 CC",
+    "model": "MY-470G-HL",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-470g-hl.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/17-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/07-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/13-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/11-1-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-473d-upgraded",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-473D Upgraded Diesel Power Weeder | 247 CC",
-    model: "MY-473D Upgraded",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-473d-upgraded.webp", "https://reallyagritech.com/wp-content/uploads/2026/08/15-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/17-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/09-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/08/10-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-473d-upgraded",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-473D Upgraded Diesel Power Weeder | 247 CC",
+    "model": "MY-473D Upgraded",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-473d-upgraded.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/17-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/09-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/08/10-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-473D Upgraded",
       "Engine Model": "173F",
       "Engine Type": "4 Stroke Diesel",
@@ -4600,25 +9399,55 @@ export const PRODUCTS = [
       "Tilling Depth": "100-300 mm",
       "Weight": "104 kg"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-800gh",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-800GH Petrol Power Weeder | 212 CC",
-    model: "MY-800GH",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-800gh.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132400-1.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132357-1.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132334-1.jpg"],
-    specs: {
+    "slug": "rly-my-800gh",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-800GH Petrol Power Weeder | 212 CC",
+    "model": "MY-800GH",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-800gh.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132357-1.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132334-1.jpg"
+    ],
+    "specs": {
       "Model": "MY-800GH",
       "Engine Model": "170F",
       "Fuel Type": "Petrol",
@@ -4632,25 +9461,58 @@ export const PRODUCTS = [
       "Blades": "32 Pcs",
       "Packaging": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-rh-773d-premium",
-    category: "power-weeders",
-    name: "KrishiGears RAPL-RH-773D Premium Power Weeder | 247 CC Diesel",
-    model: "RAPL-RH-773D Premium",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-rapl-rh-773d-premium.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.00-PM-1.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.00-PM-2.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.01-PM-1.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.01-PM.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/02-8-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/07-4-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/06-5-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/09-3-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-rh-773d-premium",
+    "category": "power-weeders",
+    "name": "KrishiGears RAPL-RH-773D Premium Power Weeder | 247 CC Diesel",
+    "model": "RAPL-RH-773D Premium",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-rapl-rh-773d-premium.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.01-PM-1.jpeg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/02-8-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/07-4-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/06-5-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/09-3-scaled.jpg"
+    ],
+    "specs": {
       "Model": "RAPL-RH-773D Premium",
       "Engine Model": "173F Engine",
       "Displacement / Fuel": "247 CC / Diesel",
@@ -4664,25 +9526,55 @@ export const PRODUCTS = [
       "Blades": "32 Pcs",
       "Accessories": "Easy Gear System, Side Disc, Adjustable Ridger Attachment"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-750gh",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-750GH Petrol Power Weeder | 212 CC",
-    model: "MY-750GH",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-750gh.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313152935.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313152957.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313153000.jpg"],
-    specs: {
+    "slug": "rly-my-750gh",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-750GH Petrol Power Weeder | 212 CC",
+    "model": "MY-750GH",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-750gh.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313152957.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313153000.jpg"
+    ],
+    "specs": {
       "Model": "MY-750GH",
       "Engine Model": "170F &#8211; Petrol",
       "Engine Type": "4-Stroke",
@@ -4697,25 +9589,59 @@ export const PRODUCTS = [
       "Blade Configuration": "32 Blades with Disc",
       "Packaging": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-rh-700g",
-    category: "power-weeders",
-    name: "KrishiGears RAPL-RH-700G Petrol Power Weeder | 212 CC",
-    model: "RAPL-RH-700G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-rapl-rh-700g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/4af96388a150d8047aba941394fcc295-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.06-PM-1.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.06-PM-2.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.07-PM-1.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.07-PM.jpeg", "https://reallyagritech.com/wp-content/uploads/2025/05/03-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/06-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/04-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/01-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-rh-700g",
+    "category": "power-weeders",
+    "name": "KrishiGears RAPL-RH-700G Petrol Power Weeder | 212 CC",
+    "model": "RAPL-RH-700G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-rapl-rh-700g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.06-PM-1.jpeg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.07-PM-1.jpeg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/03-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/06-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/04-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/01-scaled.jpg"
+    ],
+    "specs": {
       "Model": "RAPL-RH-700G",
       "Engine": "170 Engine, 4 Stroke",
       "Displacement": "212 CC",
@@ -4727,25 +9653,53 @@ export const PRODUCTS = [
       "Starting System": "Recoil",
       "Fuel": "Petrol"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-600g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-600G Power Weeder | Petrol Power Weeder",
-    model: "MY-600G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-600g.webp"],
-    specs: {
+    "slug": "rly-my-600g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-600G Power Weeder | Petrol Power Weeder",
+    "model": "MY-600G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-600g.webp"
+    ],
+    "specs": {
       "Model": "MY-600G",
       "Engine Model": "170F Engine",
       "Fuel / Displacement": "Petrol / 212 CC",
@@ -4758,25 +9712,57 @@ export const PRODUCTS = [
       "Blades": "32 Pcs",
       "Tilling Depth": "100 &#8211; 300 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-673d-kama-engine",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-673D Power Weeder | Diesel Power Weeder",
-    model: "MY-673D KAMA Engine",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-my-673d-kama-engine.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646977326738.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595671276.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595675793.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595814928-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647596141350-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-673d-kama-engine",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-673D Power Weeder | Diesel Power Weeder",
+    "model": "MY-673D KAMA Engine",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-my-673d-kama-engine.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595671276.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595675793.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595814928-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647596141350-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-673D KAMA Engine",
       "Engine Model": "173F Engine",
       "Displacement / Fuel": "247 CC / Diesel",
@@ -4788,49 +9774,109 @@ export const PRODUCTS = [
       "Tyre": "4.0-8 Tubeless",
       "Blades": "32 Pcs"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-685d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-685D Power Weeder | 406 CC Diesel",
-    model: "MY-685D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 56000,
-    comparePrice: 66000,
-    images: ["/images/catalog/rly-my-685d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245878702.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245884170.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245888868.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245895279.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245899774.jpg"],
-    specs: {
+    "slug": "rly-my-685d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-685D Power Weeder | 406 CC Diesel",
+    "model": "MY-685D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 56000,
+    "comparePrice": 66000,
+    "images": [
+      "/images/catalog/rly-my-685d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245884170.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245888868.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245895279.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245899774.jpg"
+    ],
+    "specs": {
       "Engine": "Diesel",
       "Power": "",
       "Fuel": "Diesel",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-685d-de-kama-engine",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-685D-DE Power Weeder | 406 CC Diesel",
-    model: "MY-685D-DE KAMA Engine",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 88000,
-    comparePrice: 99000,
-    images: ["/images/catalog/rly-my-685d-de-kama-engine.webp"],
-    specs: {
+    "slug": "rly-my-685d-de-kama-engine",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-685D-DE Power Weeder | 406 CC Diesel",
+    "model": "MY-685D-DE KAMA Engine",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 88000,
+    "comparePrice": 99000,
+    "images": [
+      "/images/catalog/rly-my-685d-de-kama-engine.webp"
+    ],
+    "specs": {
       "Model": "MY-685D-DE KAMA Engine",
       "Engine Model": "186F Engine",
       "Engine Type": "Diesel",
@@ -4844,25 +9890,57 @@ export const PRODUCTS = [
       "Blades (Dry Land)": "40 Pcs",
       "Special Feature": "Adjustable Ridger Attachment"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-550g-167",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-550G Power Weeder | 212 CC Petrol",
-    model: "MY-550G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-550g-167.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637746879.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646638279279.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637729457.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637732819.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637737560.jpg"],
-    specs: {
+    "slug": "rly-my-550g-167",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-550G Power Weeder | 212 CC Petrol",
+    "model": "MY-550G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-550g-167.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646638279279.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637729457.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637732819.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637737560.jpg"
+    ],
+    "specs": {
       "Model": "MY-550G",
       "Engine Model": "170F Engine",
       "Fuel Type": "Petrol",
@@ -4877,25 +9955,56 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "800 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-570g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-570G Power Weeder | 212 CC Petrol",
-    model: "MY-570G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-570g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/653a4ea4a4b18a934b87e5ef3b0debe-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/2318ade256ad308f566a75824eb6cdc-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/96459b301afe071333a67fe3d78aec5-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/885770cc42abfc5a5ed384136aef594-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-570g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-570G Power Weeder | 212 CC Petrol",
+    "model": "MY-570G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-570g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/2318ade256ad308f566a75824eb6cdc-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/96459b301afe071333a67fe3d78aec5-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/885770cc42abfc5a5ed384136aef594-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-570G",
       "Engine Model": "170F Engine",
       "Fuel Type": "Petrol",
@@ -4910,26 +10019,58 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "1050 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-mitsuyama-my-573d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-573D Power Weeder | 247 CC Diesel",
-    model: "Mitsuyama MY-573D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-mitsuyama-my-573d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/1b74b97665a92210ca3fe70f817f492-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/4fb639cde467267a62182524b72522f-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/4fd2610efb85d7e0881a4a4188c33d8-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/09cb5f6ca20c830f03f4f5ec07f3713-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/42c984cf5ced2608e7ec25c7a61268c-scaled.jpg"],
-    specs: {
-      "Model": "Mitsuyama MY-573D",
+    "slug": "rly-mitsuyama-my-573d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-573D Power Weeder | 247 CC Diesel",
+    "model": "MY-573D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-mitsuyama-my-573d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/4fb639cde467267a62182524b72522f-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/4fd2610efb85d7e0881a4a4188c33d8-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/09cb5f6ca20c830f03f4f5ec07f3713-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/42c984cf5ced2608e7ec25c7a61268c-scaled.jpg"
+    ],
+    "specs": {
+      "Model": "KrishiGears MY-573D",
       "Machine Type": "Diesel Power Weeder",
       "Engine Model": "173F Engine",
       "Fuel": "Diesel",
@@ -4944,26 +10085,58 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "1050 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-578d",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears (by ) MY-578D Diesel Power Weeder | 296cc, 32 Blades",
-    model: "MY-578D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-578d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/78f55cf38a7af5f817ee865356121ef-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/2dedda7d738a5f2c44bff28749c18ba-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/3f2dab70d3c9131e62d637581832aa4-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/4c355b6ae6f23501160529aff91d537-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/9f10c35bf6ac9f2186c533ba841a354-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-578d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-578D Diesel Power Weeder | 296cc, 32 Blades",
+    "model": "MY-578D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-578d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/2dedda7d738a5f2c44bff28749c18ba-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/3f2dab70d3c9131e62d637581832aa4-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/4c355b6ae6f23501160529aff91d537-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/9f10c35bf6ac9f2186c533ba841a354-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-578D",
       "Engine Model": "178F Engine",
       "Fuel Type": "Diesel",
@@ -4978,26 +10151,56 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "1350 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-mitsuyama-my-585d",
-    category: "power-weeder-spare-parts",
-    name: "KrishiGears (by ) MY-585D Diesel Power Weeder | 406cc, 40 Blades",
-    model: "Mitsuyama MY-585D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 56000,
-    comparePrice: 66000,
-    images: ["/images/catalog/rly-mitsuyama-my-585d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/86c3393f9765f157e699d13e09447bf-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/95c0c50617bcd30b52cbaf01c1ddc69-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/97ea9792b6b6c0b3647781800404ad5-scaled.jpg"],
-    specs: {
-      "Model": "Mitsuyama MY-585D",
+    "slug": "rly-mitsuyama-my-585d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-585D Diesel Power Weeder | 406cc, 40 Blades",
+    "model": "MY-585D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 56000,
+    "comparePrice": 66000,
+    "images": [
+      "/images/catalog/rly-mitsuyama-my-585d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/95c0c50617bcd30b52cbaf01c1ddc69-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/97ea9792b6b6c0b3647781800404ad5-scaled.jpg"
+    ],
+    "specs": {
+      "Model": "KrishiGears MY-585D",
       "Engine": "186F Diesel Engine",
       "Displacement / Fuel": "406 cc / Diesel",
       "Maximum Power": "5.5 kW @ 3600 RPM",
@@ -5010,26 +10213,62 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "1350 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-585d-de",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-585D-DE Diesel Power Weeder | 406 CC, 5.5 kW",
-    model: "MY-585D-DE",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 62000,
-    comparePrice: 72000,
-    images: ["/images/catalog/rly-my-585d-de.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/d2c7e9c4b577226690969bceafa67a9-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/44bf36821e73185d7f73ca7581c8c52-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/642ac2904bd8d6521f72fd7fac500be-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/2677cbffc1a089f1d6b2190719cbc69-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/8639d68144c738bfb4206aa8cf90430-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/9145bbfcca766f6963b63b7f239e7b0-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/28740fe48e1f06dce5d5c23bff3b548-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/74335b7267be876058bd2980761717a-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/062239478a29c24fb5f3fb217f3a1cb-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-585d-de",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-585D-DE Diesel Power Weeder | 406 CC, 5.5 kW",
+    "model": "MY-585D-DE",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 62000,
+    "comparePrice": 72000,
+    "images": [
+      "/images/catalog/rly-my-585d-de.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/44bf36821e73185d7f73ca7581c8c52-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/642ac2904bd8d6521f72fd7fac500be-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/2677cbffc1a089f1d6b2190719cbc69-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/8639d68144c738bfb4206aa8cf90430-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/9145bbfcca766f6963b63b7f239e7b0-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/28740fe48e1f06dce5d5c23bff3b548-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/74335b7267be876058bd2980761717a-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/062239478a29c24fb5f3fb217f3a1cb-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-585D-DE",
       "Product Type": "Diesel Power Weeder",
       "Engine Model": "186F Engine",
@@ -5046,26 +10285,57 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tilling Width": "1350 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-470g-hl-173",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-470G-HL Petrol Power Weeder | Premium Farm Machine",
-    model: "MY-470G-HL",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-470g-hl-173.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7856-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7857-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7858-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7859-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-470g-hl-173",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-470G-HL Petrol Power Weeder | Premium Farm Machine",
+    "model": "MY-470G-HL",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-470g-hl-173.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7857-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7858-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7859-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-470G-HL",
       "Product Type": "Petrol Power Weeder",
       "Engine Quality": "Premium",
@@ -5081,26 +10351,57 @@ export const PRODUCTS = [
       "Air Filter &#038; Muffler": "Improved",
       "Packing": "7 mm Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-480g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-480G Petrol Power Weeder | 212 CC, 4 kW",
-    model: "MY-480G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-480g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/4deb627438c62ac503b8eeb18739820c.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/3247fe42ec5f775f6936afb967f8e7c4.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/9119b5694f009caa23acf8cc2f6ca41a.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/dde4f4065d11b68e2802e67deff146e8.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-480g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-480G Petrol Power Weeder | 212 CC, 4 kW",
+    "model": "MY-480G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-480g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/3247fe42ec5f775f6936afb967f8e7c4.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/9119b5694f009caa23acf8cc2f6ca41a.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/dde4f4065d11b68e2802e67deff146e8.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-480G",
       "Product Type": "Petrol Power Weeder",
       "Engine Model": "170F / 4 Stroke",
@@ -5114,26 +10415,56 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tyre Size": "4.0-8"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-478d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-478D Diesel Power Weeder | 296CC Gear Drive",
-    model: "MY-478D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-478d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/14b9461fdafdd414832718ba3615da8c.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/232a15acb73c3029fa12a5c1740392a5.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/254c18042c063ff1109b68ac48e0d7ec.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-478d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-478D Diesel Power Weeder | 296CC Gear Drive",
+    "model": "MY-478D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-478d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/232a15acb73c3029fa12a5c1740392a5.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/254c18042c063ff1109b68ac48e0d7ec.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-478D",
       "Product Type": "Diesel Power Weeder",
       "Engine Model": "178F, 4-Stroke Diesel Engine",
@@ -5148,26 +10479,56 @@ export const PRODUCTS = [
       "Tilling Depth": "100\u2013300 mm",
       "Tyre Size": "4.0-8"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-473d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-473D Diesel Power Weeder | 247 CC Gear Drive",
-    model: "MY-473D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-473d.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/a1e26bc020410460a8e71a8148210e17.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/8ee78ba67a4c6403f2db8c10b2cba807.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/0fe6d762e19b48647db02b5b46b697a5.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-473d",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-473D Diesel Power Weeder | 247 CC Gear Drive",
+    "model": "MY-473D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-473d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/8ee78ba67a4c6403f2db8c10b2cba807.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/0fe6d762e19b48647db02b5b46b697a5.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-473D",
       "Product Type": "Diesel Power Weeder",
       "Engine Model": "173F Diesel Engine",
@@ -5182,26 +10543,56 @@ export const PRODUCTS = [
       "Blade Quantity": "32 Heavy-Duty Blades",
       "Additional Features": "Easy Gear System, Side Disc"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-470g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-470G Petrol Power Weeder | Heavy Duty Farm Machine",
-    model: "MY-470G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-470g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7850-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7849-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7851-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-470g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-470G Petrol Power Weeder | Heavy Duty Farm Machine",
+    "model": "MY-470G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-470g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7849-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7851-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-470G",
       "Product Type": "Petrol Power Weeder",
       "Engine Quality": "Premium",
@@ -5218,26 +10609,57 @@ export const PRODUCTS = [
       "Air Filter &#038; Muffler": "Improved",
       "Packing": "7 mm Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-450g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-450G Petrol Power Weeder | 212 CC Gear Drive Machine",
-    model: "MY-450G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-450g.webp", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7898-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7896.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7895-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7899-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-450g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-450G Petrol Power Weeder | 212 CC Gear Drive Machine",
+    "model": "MY-450G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-450g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7896.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7895-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7899-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-450G",
       "Product Type": "Petrol Power Weeder",
       "Engine Model": "170F, 4-Stroke Petrol Engine",
@@ -5251,26 +10673,56 @@ export const PRODUCTS = [
       "Tilling Width": "800 mm",
       "Tilling Depth": "100\u2013300 mm"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-380g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-380G Petrol Power Weeder | 212 CC Gear Drive",
-    model: "MY-380G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-380g.webp", "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115653-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115516-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115733-1-scaled.jpg"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-380g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-380G Petrol Power Weeder | 212 CC Gear Drive",
+    "model": "MY-380G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-380g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115516-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115733-1-scaled.jpg"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-380G",
       "Product Type": "Petrol Power Weeder",
       "Engine Type": "170F 4-Stroke Petrol Engine",
@@ -5285,25 +10737,56 @@ export const PRODUCTS = [
       "Handle": "Adjustable",
       "Suitable For": "Rotary Tillage, Trenching, Weeding, Ridging"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-370g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) MY-370G Petrol Power Weeder | Agricultural Power Weeder |",
-    model: "MY-370G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-370g.webp", "https://reallyagritech.com/wp-content/uploads/2025/07/04-12-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/08-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/01-9-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/06-6-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-370g",
+    "category": "power-weeders",
+    "name": "KrishiGears MY-370G Petrol Power Weeder | Agricultural Power Weeder",
+    "model": "MY-370G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-370g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/08-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/01-9-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/06-6-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-370G",
       "Engine Model": "170F Petrol",
       "Engine Type": "4-Stroke",
@@ -5316,26 +10799,54 @@ export const PRODUCTS = [
       "Blades": "32 PCS with Disc",
       "Packing": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-360g",
-    category: "power-weeders",
-    name: "KrishiGears (by ) Power Weeder MY-360G | 212 CC Petrol Weeder",
-    model: "MY-360G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-360g.webp"],
-    specs: {
-      "Brand": "Mitsuyama",
+    "slug": "rly-my-360g",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-360G | 212 CC Petrol Weeder",
+    "model": "MY-360G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-360g.webp"
+    ],
+    "specs": {
+      "Brand": "KrishiGears",
       "Model": "MY-360G",
       "Product Type": "Petrol Power Weeder",
       "Engine Type": "170F, 4-Stroke Petrol Engine",
@@ -5349,25 +10860,56 @@ export const PRODUCTS = [
       "Handle": "Adjustable",
       "Applications": "Rotary Tillage, Weeding, Trenching &amp; Ridging"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-373d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) Power Weeder MY-373D | 173F Diesel Power Weeder",
-    model: "MY-373D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-373d.webp", "https://reallyagritech.com/wp-content/uploads/2025/07/10-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/14-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/13-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/07/01-10-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-373d",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-373D | 173F Diesel Power Weeder",
+    "model": "MY-373D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-373d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/14-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/13-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/07/01-10-scaled.jpg"
+    ],
+    "specs": {
       "Model": "MY-373D",
       "Engine Model": "173F Diesel",
       "Engine Type": "4-Stroke",
@@ -5380,145 +10922,332 @@ export const PRODUCTS = [
       "Blades": "32 PCS Rotary Blades with Disc",
       "Packing": "Wooden Box"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-sm-g90",
-    category: "farm-machinery",
-    name: "KrishiGears STUBBLE MOWER RAPL-SM-G90 -",
-    model: "RAPL-SM-G90",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-rapl-sm-g90.webp", "https://reallyagritech.com/wp-content/uploads/2026/06/DSC00132-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-sm-g90",
+    "category": "farm-machinery",
+    "name": "KrishiGears Stubble Mower RAPL-SM-G90",
+    "model": "RAPL-SM-G90",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-rapl-sm-g90.webp"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-sm-g50",
-    category: "farm-machinery",
-    name: "KrishiGears STUBBLE MOWER RAPL-SM-G50 -",
-    model: "RAPL-SM-G50",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-rapl-sm-g50.webp", "https://reallyagritech.com/wp-content/uploads/2026/06/04-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/06/03-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/06/02-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/06/01-3-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-sm-g50",
+    "category": "farm-machinery",
+    "name": "KrishiGears Stubble Mower RAPL-SM-G50",
+    "model": "RAPL-SM-G50",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-rapl-sm-g50.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/06/03-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/06/02-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/06/01-3-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-apw-7000d",
-    category: "farm-machinery",
-    name: "KrishiGears POWER WEEDER CUM STUBBLE MOWER RAPL-APW-7000D -",
-    model: "RAPL-APW-7000D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 85000,
-    comparePrice: 98000,
-    images: ["/images/catalog/rly-rapl-apw-7000d.webp", "https://reallyagritech.com/wp-content/uploads/2026/05/09-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/11-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/12-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/13-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-apw-7000d",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Cum Stubble Mower RAPL-APW-7000D",
+    "model": "RAPL-APW-7000D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 85000,
+    "comparePrice": 98000,
+    "images": [
+      "/images/catalog/rly-rapl-apw-7000d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/11-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/12-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/13-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Diesel",
       "Power": "",
       "Fuel": "Diesel",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-apw-6000g",
-    category: "farm-machinery",
-    name: "KrishiGears POWER WEEDER CUM STUBBLE MOWER RAPL-APW-6000G -",
-    model: "RAPL-APW-6000G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 85000,
-    comparePrice: 98000,
-    images: ["/images/catalog/rly-rapl-apw-6000g.webp", "https://reallyagritech.com/wp-content/uploads/2026/05/e76b5cf51f82bc62985a1bb06042677e-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/4e8551f40829f00b8628c8528a03a2f0-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/13-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/08-3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/04-14-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/01-13-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-apw-6000g",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Cum Stubble Mower RAPL-APW-6000G",
+    "model": "RAPL-APW-6000G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 85000,
+    "comparePrice": 98000,
+    "images": [
+      "/images/catalog/rly-rapl-apw-6000g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/4e8551f40829f00b8628c8528a03a2f0-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/13-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/08-3-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/04-14-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/01-13-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-rapl-apw-5000g",
-    category: "farm-machinery",
-    name: "KrishiGears POWER WEEDER CUM STUBBLE MOWER RAPL-APW-5000G -",
-    model: "RAPL-APW-5000G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 85000,
-    comparePrice: 98000,
-    images: ["/images/catalog/rly-rapl-apw-5000g.webp", "https://reallyagritech.com/wp-content/uploads/2026/05/94f1a4ff71c2920e3ebd3abe0e1239a3-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/72f65b9573eb08db139abf27037b665e-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/13-1-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/09-5-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/04-13-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2026/05/01-12-scaled.jpg"],
-    specs: {
+    "slug": "rly-rapl-apw-5000g",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder Cum Stubble Mower RAPL-APW-5000G",
+    "model": "RAPL-APW-5000G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 85000,
+    "comparePrice": 98000,
+    "images": [
+      "/images/catalog/rly-rapl-apw-5000g.webp",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/72f65b9573eb08db139abf27037b665e-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/13-1-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/09-5-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/04-13-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2026/05/01-12-scaled.jpg"
+    ],
+    "specs": {
       "Engine": "Petrol",
       "Power": "",
       "Fuel": "Petrol",
       "Start": "Recoil"
     },
-    features: baseFeatures(["Genuine Really OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-573d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-573D -",
-    model: "MY-573D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-my-573d.webp", "https://reallyagritech.com/wp-content/uploads/2025/03/01-11-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/03/09-4-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/03/10-2-scaled.jpg", "https://reallyagritech.com/wp-content/uploads/2025/03/12-1-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-573d",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-573D",
+    "model": "MY-573D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-my-573d.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/03/09-4-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/03/10-2-scaled.jpg",
+      "https://reallyagritech.com/wp-content/uploads/2025/03/12-1-scaled.jpg"
+    ],
+    "specs": {
       "ENGINE": "173F DIESEL ENGINE",
       "DISPLACEMENT": "247CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5528,25 +11257,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-470-gh",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-470-GH -",
-    model: "MY-470-GH",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-470-gh.webp", "https://reallyagritech.com/wp-content/uploads/2025/03/MY-470G-1-scaled.jpg"],
-    specs: {
+    "slug": "rly-my-470-gh",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-470-GH",
+    "model": "MY-470-GH",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-470-gh.webp"
+    ],
+    "specs": {
       "ENGINE": "170F PETROL",
       "DISPLACEMENT": "212CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5556,25 +11313,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START WITH HEADLAMP"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-550g-es",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-550G-ES -",
-    model: "MY-550G-ES",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-550g-es.webp"],
-    specs: {
+    "slug": "rly-my-550g-es",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-550G-ES",
+    "model": "MY-550G-ES",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-550g-es.webp"
+    ],
+    "specs": {
       "ENGINE MODEL": "170F ENGINE",
       "DISPLACEMENT/FUEL": "212CC/PETROL",
       "MAX POWER/RPM": "4KW/3600RPM",
@@ -5588,25 +11373,53 @@ export const PRODUCTS = [
       "TILLING WIDTH (MM)": "800MM",
       "FUEL CONSUMPTION PER HOUR": "374G/KW. H"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-550g-191",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-550G -",
-    model: "MY-550G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-550g-191.webp"],
-    specs: {
+    "slug": "rly-my-550g-191",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-550G",
+    "model": "MY-550G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-550g-191.webp"
+    ],
+    "specs": {
       "ENGINE MODEL": "170F ENGINE",
       "DISPLACEMENT/FUEL": "212CC/PETROL",
       "MAX POWER/RPM": "4KW/3600RPM",
@@ -5620,25 +11433,54 @@ export const PRODUCTS = [
       "TILLING WIDTH (MM)": "800MM",
       "FUEL CONSUMPTION PER HOUR": "374G/KW. H"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-600g-192",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-600G -",
-    model: "MY-600G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 42000,
-    comparePrice: 49000,
-    images: ["/images/catalog/rly-my-600g-192.webp", "https://reallyagritech.com/wp-content/uploads/2025/03/MY-600G-1-1.jpg", "https://reallyagritech.com/wp-content/uploads/2025/03/MY-600G-1.jpg"],
-    specs: {
+    "slug": "rly-my-600g-192",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-600G",
+    "model": "MY-600G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 42000,
+    "comparePrice": 49000,
+    "images": [
+      "/images/catalog/rly-my-600g-192.webp",
+      "https://reallyagritech.com/wp-content/uploads/2025/03/MY-600G-1.jpg"
+    ],
+    "specs": {
       "ENGINE MODEL": "170F ENGINE",
       "DISPLACEMENT/FUEL": "212CC/PETROL",
       "MAX POWER/RPM": "4KW/3600RPM",
@@ -5652,25 +11494,53 @@ export const PRODUCTS = [
       "TILLING WIDTH (MM)": "1000MM",
       "FUEL CONSUMPTION PER HOUR": "374G/KW. H"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-673d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-673D -",
-    model: "MY-673D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 54000,
-    comparePrice: 64000,
-    images: ["/images/catalog/rly-my-673d.webp"],
-    specs: {
+    "slug": "rly-my-673d",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-673D",
+    "model": "MY-673D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 54000,
+    "comparePrice": 64000,
+    "images": [
+      "/images/catalog/rly-my-673d.webp"
+    ],
+    "specs": {
       "ENGINE MODEL": "173F KAMA ENGINE",
       "DISPLACEMENT/FUEL": "247CC/DIESEL",
       "MAX POWER/RPM": "4KW/3600RPM",
@@ -5684,25 +11554,53 @@ export const PRODUCTS = [
       "TILLING WIDTH (MM)": "1000MM",
       "FUEL CONSUMPTION PER HOUR": "240G/KW. H"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-685d-194",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-685D -",
-    model: "MY-685D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 56000,
-    comparePrice: 66000,
-    images: ["/images/catalog/rly-my-685d-194.webp"],
-    specs: {
+    "slug": "rly-my-685d-194",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-685D",
+    "model": "MY-685D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 56000,
+    "comparePrice": 66000,
+    "images": [
+      "/images/catalog/rly-my-685d-194.webp"
+    ],
+    "specs": {
       "ENGINE MODEL": "186F KAMA ENGINE",
       "DISPLACEMENT/FUEL": "406 CC/DIESEL",
       "MAX POWER/RPM": "5. 5KW/3600RPM",
@@ -5716,25 +11614,53 @@ export const PRODUCTS = [
       "TILLING WIDTH (MM)": "1350MM",
       "FUEL CONSUMPTION PER HOUR": "280G/KW. H"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-450g-195",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-450G -",
-    model: "MY-450G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-450g-195.webp"],
-    specs: {
+    "slug": "rly-my-450g-195",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-450G",
+    "model": "MY-450G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-450g-195.webp"
+    ],
+    "specs": {
       "ENGINE": "170F PETROL",
       "DIESEL": "212CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5744,25 +11670,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-470g-196",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-470G -",
-    model: "MY-470G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-470g-196.webp"],
-    specs: {
+    "slug": "rly-my-470g-196",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-470G",
+    "model": "MY-470G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-470g-196.webp"
+    ],
+    "specs": {
       "ENGINE": "170F PETROL",
       "DISPLACEMENT": "212CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5772,25 +11726,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-480g-197",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-480G -",
-    model: "MY-480G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 38000,
-    comparePrice: 45000,
-    images: ["/images/catalog/rly-my-480g-197.webp"],
-    specs: {
+    "slug": "rly-my-480g-197",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-480G",
+    "model": "MY-480G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 38000,
+    "comparePrice": 45000,
+    "images": [
+      "/images/catalog/rly-my-480g-197.webp"
+    ],
+    "specs": {
       "ENGINE": "170F PETROL",
       "DISPLACEMENT": "212CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5800,25 +11782,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START WITH HEADLAMP"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-473d-198",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-473D -",
-    model: "MY-473D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-473d-198.webp"],
-    specs: {
+    "slug": "rly-my-473d-198",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-473D",
+    "model": "MY-473D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-473d-198.webp"
+    ],
+    "specs": {
       "ENGINE": "173F DIESEL ENGINE",
       "DISPLACEMENT": "247CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5828,25 +11838,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-478d-199",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-478D -",
-    model: "MY-478D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 48000,
-    comparePrice: 56000,
-    images: ["/images/catalog/rly-my-478d-199.webp"],
-    specs: {
+    "slug": "rly-my-478d-199",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-478D",
+    "model": "MY-478D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 48000,
+    "comparePrice": 56000,
+    "images": [
+      "/images/catalog/rly-my-478d-199.webp"
+    ],
+    "specs": {
       "ENGINE": "178F DIESEL ENGINE",
       "DISPLACEMENT": "296CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5856,25 +11894,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-570g-200",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-570G -",
-    model: "MY-570G",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-570g-200.webp"],
-    specs: {
+    "slug": "rly-my-570g-200",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-570G",
+    "model": "MY-570G",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-570g-200.webp"
+    ],
+    "specs": {
       "ENGINE": "170F PETROL",
       "DISPLACEMENT": "212CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5884,25 +11950,53 @@ export const PRODUCTS = [
       "TYRE": "4-0-8",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-578d-201",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-578D -",
-    model: "MY-578D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-578d-201.webp"],
-    specs: {
+    "slug": "rly-my-578d-201",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-578D",
+    "model": "MY-578D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-578d-201.webp"
+    ],
+    "specs": {
       "ENGINE": "178F DIESEL ENGINE",
       "DISPLACEMENT": "296CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5912,25 +12006,53 @@ export const PRODUCTS = [
       "TYRE": "5-0-12",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-585d",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-585D -",
-    model: "MY-585D",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 56000,
-    comparePrice: 66000,
-    images: ["/images/catalog/rly-my-585d.webp"],
-    specs: {
+    "slug": "rly-my-585d",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-585D",
+    "model": "MY-585D",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 56000,
+    "comparePrice": 66000,
+    "images": [
+      "/images/catalog/rly-my-585d.webp"
+    ],
+    "specs": {
       "ENGINE": "186F DIESEL ENGINE",
       "DISPLACEMENT": "406CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5940,25 +12062,53 @@ export const PRODUCTS = [
       "TYRE": "5-0-12",
       "START TYPE": "RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-585-de",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER MY-585-DE -",
-    model: "MY-585-DE",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 39000,
-    comparePrice: 46000,
-    images: ["/images/catalog/rly-my-585-de.webp"],
-    specs: {
+    "slug": "rly-my-585-de",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder MY-585-DE",
+    "model": "MY-585-DE",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 39000,
+    "comparePrice": 46000,
+    "images": [
+      "/images/catalog/rly-my-585-de.webp"
+    ],
+    "specs": {
       "ENGINE": "186F DIESEL ENGINE",
       "DISPLACEMENT": "406CC ,4 STROKE",
       "TRANSMISSION": "GEAR DRIVE",
@@ -5966,27 +12116,55 @@ export const PRODUCTS = [
       "BLADES": "40 PCS DRY LAND",
       "ATTACHMENTS": "SIDE DISC",
       "TYRE": "5-0-12",
-      "START TYPE": "SELF START (WITHOUT\nBATTERY )/RECOIL START"
+      "START TYPE": "SELF START (WITHOUT BATTERY )/RECOIL START"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   },
   {
-    slug: "rly-my-685d-de",
-    category: "power-weeders",
-    name: "KrishiGears (by ) POWER WEEDER – MY-685D-DE -",
-    model: "MY-685D-DE",
-    brand: "KrishiGears",
-    badges: ["FMTTI Tested", "Commercial Grade", "Industrial Quality Standards"],
-    price: 88000,
-    comparePrice: 99000,
-    images: ["/images/catalog/rly-my-685d-de.webp"],
-    specs: {
+    "slug": "rly-my-685d-de",
+    "category": "power-weeders",
+    "name": "KrishiGears Power Weeder \u2013 MY-685D-DE",
+    "model": "MY-685D-DE",
+    "brand": "KrishiGears",
+    "badges": [
+      "FMTTI Tested",
+      "Commercial Grade",
+      "Industrial Quality Standards"
+    ],
+    "price": 88000,
+    "comparePrice": 99000,
+    "images": [
+      "/images/catalog/rly-my-685d-de.webp"
+    ],
+    "specs": {
       "ENGINE": "186F",
       "DIESEL": "KAMA",
       "DISPLACEMENT": "406CC ,4 STROKE",
@@ -5997,21 +12175,43 @@ export const PRODUCTS = [
       "TYRE": "4-0-8 TUBELESS",
       "START TYPE": "SELF START (WITHOUT BATTERY )/RECOIL START ,WITH HEADLAMP"
     },
-    features: baseFeatures(["Genuine Mitsuyama (by Really Agritech) OEM agricultural machinery", "FMTTI-tested commercial durability standard", "Precision-engineered transmission case for tough Indian soil", "PAN India direct drop-ship dispatch from KrishiGears Express Network", "24-48 hour dispatch with genuine replacement spare parts guarantee"]),
-    applications: baseApps(["Sugarcane", "Cotton", "Soybean", "Onion"]),
-    benefits: baseBenefits(["Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields", "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)", "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"]),
-    warranty: warrantyStd,
-    video: "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    hsn: "8432",
-    gst: 12,
+    "features": [
+      "Genuine KrishiGears branded product",
+      "Backed by manufacturer warranty",
+      "PAN India delivery from KrishiGears",
+      "Genuine spare parts availability",
+      "Genuine KrishiGears commercial agricultural machinery",
+      "FMTTI-tested commercial durability standard",
+      "Precision-engineered transmission case for tough Indian soil",
+      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
+      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+    ],
+    "applications": [
+      "Sugarcane",
+      "Cotton",
+      "Soybean",
+      "Onion"
+    ],
+    "benefits": [
+      "Saves significant manual labour",
+      "Reduces operating cost over time",
+      "FMTTI-tested durability",
+      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
+      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
+      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
+    "hsn": "8432",
+    "gst": 12
   }
 ];
 
 export const TESTIMONIALS = [
-  { name: "KrishiGears Rameshwar Patel", role: "Patel Agro Agency, Kolhapur (Maharashtra)", text: "KG-ICP-UP170-SH back-rotary weeder aur KG-177F 9HP model sugarcane inter-row weeding ke liye hamare 120+ farmers ne liya hai. Direct factory dispatch aur spare parts support best hai.", rating: 5 },
-  { name: "KrishiGears Suresh Choudhary", role: "Kisan Machinery Store, Alwar (Rajasthan)", text: "FMTTI-tested commercial durability standard", rating: 5 },
-  { name: "KrishiGears Venkat Rao", role: "Sri Lakshmi Agri Implements, Nizamabad (Telangana)", text: "KG-173F diesel model black cotton soil mein high torque deliver karta hai. Engine warranty claims aur carburetor spares 48 ghante mein Jaipur godown se dispatch ho jate hain.", rating: 5 },
-  { name: "KrishiGears Manish Sharma", role: "Shree Ganesh Krishi Seva Kendra, Indore (MP)", text: "KrishiGears dealership lene ke baad hamari spare parts availability 100% ho gayi. Viton oil seals, recoil starters aur forged blades ki quality authentic OEM grade hai.", rating: 5 },
+  { name: "Rameshwar Patel", role: "Patel Agro Agency, Kolhapur (Maharashtra)", text: "KG-ICP-UP170-SH back-rotary weeder aur KG-177F 9HP model sugarcane inter-row weeding ke liye hamare 120+ farmers ne liya hai. Direct factory dispatch aur spare parts support best hai.", rating: 5 },
+  { name: "Suresh Choudhary", role: "Kisan Machinery Store, Alwar (Rajasthan)", text: "KrishiGears machines ki build quality aur FMTTI testing standards se farmers ko pura trust milta hai. Commercial grade durability hai.", rating: 5 },
+  { name: "Venkat Rao", role: "Sri Lakshmi Agri Implements, Nizamabad (Telangana)", text: "KG-173F diesel model black cotton soil mein high torque deliver karta hai. Engine warranty claims aur carburetor spares 48 ghante mein Jaipur godown se dispatch ho jate hain.", rating: 5 },
+  { name: "Manish Sharma", role: "Shree Ganesh Krishi Seva Kendra, Indore (MP)", text: "KrishiGears dealership lene ke baad hamari spare parts availability 100% ho gayi. Viton oil seals, recoil starters aur forged blades ki quality authentic OEM grade hai.", rating: 5 },
 ];
 
 export const TRUST_BADGES = [
@@ -6021,7 +12221,7 @@ export const TRUST_BADGES = [
   { icon: "shield", label: "FMTTI-tested commercial durability standard" },
   { icon: "truck", label: "PAN India Direct Logistics" },
   { icon: "badge-check", label: "FMTTI / SRFMTTI Tested Standards" },
-  { icon: "wrench", label: "19 OEM Spare Part Categories" },
+  { icon: "wrench", label: "OEM Spare Part Distribution" },
   { icon: "headphones", label: "Direct WhatsApp Video Tech Support" },
 ];
 
@@ -6030,5 +12230,4 @@ export const SEO_PAGES = [
   { slug: "power-weeder-spare-parts-supplier-india", title: "Power Weeder Spare Parts Distributor & OEM Supply", category: "power-weeder-spare-parts" }
 ];
 
-// O(1) lookup Map for thousands of geo pages — used by SeoLanding and RouteSEO
 export const SEO_PAGES_MAP = new Map(SEO_PAGES.map((p) => [p.slug, p]));

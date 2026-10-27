@@ -9,10 +9,10 @@ export default function Products() {
       <div className="max-w-[1400px] mx-auto">
         <div className="kg-eyebrow">Products We Supply</div>
         <h1 className="kg-h1 mt-4 max-w-3xl text-white">
-          Our 19 product categories for <span className="text-lime-500">dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution.</span>
+          Certified Commercial Farm Machinery & Genuine Spares for <span className="text-lime-500">dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution.</span>
         </h1>
         <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed">
-          Explore our 19 product categories for dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution. Retail buyers should purchase online through FarmingTools.in.
+          Explore our certified product categories for dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution. Retail buyers can purchase single units online through FarmingTools.in with COD.
         </p>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
