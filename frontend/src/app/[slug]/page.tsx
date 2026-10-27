@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import locationsData from '@/data/locations.json';
 import { STATE_SUBSIDIES, CROP_GUIDES, DEFAULT_CROP_GUIDE, DEFAULT_SUBSIDY } from '@/data/enrichment';
-import { COMPANY, farmingtoolsCategoryUrl } from '@/data/catalog';
+import { COMPANY, PRODUCTS, farmingtoolsCategoryUrl } from '@/data/catalog';
 import { clampTitle, clampDescription } from '@/app/layout';
 import Link from 'next/link';
 import { 
@@ -170,6 +170,9 @@ export default async function LocationCategoryPage({ params }: { params: Promise
   const nearbyDistricts = Object.entries(locations)
     .filter(([name, d]) => d.state === data.state && name !== locationName)
     .slice(0, 12);
+
+  // Filter products matching this category for dynamic district inventory presentation
+  const districtProducts = PRODUCTS.filter((p) => p.category === categorySlug).slice(0, 4);
 
   // Pre-filled WhatsApp message
   const whatsappText = isSpareParts
@@ -434,6 +437,63 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             </div>
           </div>
         </section>
+
+        {/* Dynamic District Machinery Inventory */}
+        {districtProducts.length > 0 && (
+          <section className="space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-semibold tracking-wide uppercase bg-lime-500/10 text-lime-400 border border-lime-500/30">
+                  Direct Dispatch Available
+                </div>
+                <h2 className="font-display font-bold text-2xl text-white mt-2">
+                  {category.name} Models for Delivery in {locationName}
+                </h2>
+              </div>
+              <Link href={`/products/category/${categorySlug}`} className="text-lime-400 hover:text-lime-300 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1">
+                Browse Full {category.name} Catalog →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {districtProducts.map((p) => (
+                <div key={p.slug} className="group border border-zinc-800 bg-zinc-950/70 hover:border-lime-500/60 transition-all duration-200 rounded-xl overflow-hidden flex flex-col justify-between p-4 shadow-lg">
+                  <Link href={`/products/${p.slug}`}>
+                    <div className="aspect-[4/3] bg-zinc-900/50 rounded-lg p-3 flex items-center justify-center border border-zinc-800/40 mb-3 overflow-hidden">
+                      <img
+                        src={p.images?.[0] || "/images/products/weeder.webp"}
+                        alt={`${p.name} in ${locationName}`}
+                        loading="lazy"
+                        className="w-full h-full object-contain group-hover:scale-105 transition duration-300"
+                      />
+                    </div>
+                    <div className="text-[10px] uppercase font-bold tracking-wider text-lime-400 mb-1">{p.brand || "KrishiGears"}</div>
+                    <h4 className="font-display font-bold text-sm text-white group-hover:text-lime-400 line-clamp-2 leading-tight">
+                      {p.name}
+                    </h4>
+                    {p.specs?.Power && (
+                      <div className="mt-2 text-xs text-zinc-400">Power: <span className="text-zinc-200 font-semibold">{p.specs.Power}</span></div>
+                    )}
+                  </Link>
+                  <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between">
+                    <div>
+                      <div className="text-[10px] text-zinc-400 uppercase">Wholesale B2B</div>
+                      <div className="font-mono text-sm font-bold text-white">₹{p.price.toLocaleString("en-IN")}</div>
+                    </div>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hello KrishiGears, I am inquiring about delivery and dealer price for ${p.name} in ${locationName}, ${data.state}.`)}&utm_source=krishigears_web&utm_medium=geo_district_catalog`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-xs rounded transition shadow-md shadow-lime-500/20"
+                    >
+                      Get Quote
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Individual Farmer Retail Orders & COD Delivery Bridge */}
         <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-emerald-950/80 via-zinc-900 to-zinc-950 border border-emerald-500/40 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl">

@@ -2,13 +2,19 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Check, ChevronRight, ShieldCheck, Award, Truck, Wrench, Phone, FileText } from "lucide-react";
+import { Check, ChevronRight, ShieldCheck, Award, Truck, Wrench, Phone, FileText, Play, Video, ExternalLink } from "lucide-react";
 import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsProductUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { apiClient } from "@/lib/api";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { Skeleton } from "@/components/ui/skeleton";
+
+function getYouTubeId(url) {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+  return match ? match[1] : null;
+}
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -83,6 +89,11 @@ export default function ProductDetail() {
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`
   );
   const retailUrl = farmingtoolsProductUrl(product);
+  const isMachine = product.category === "power-weeders" || product.category === "power-tillers";
+  const compatibleSpares = isMachine
+    ? PRODUCTS.filter((p) => p.category === "power-weeder-spare-parts").slice(0, 4)
+    : [];
+  const ytVideoId = product.video ? getYouTubeId(product.video) : null;
 
   return (
     <div data-testid="product-detail-page" className="kg-section">
@@ -258,6 +269,96 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
+
+        {/* Video & Machinery Field Demonstration */}
+        {product.video && (
+          <div className="mt-16 bg-zinc-950/80 border border-zinc-800 p-6 md:p-8 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-10 w-10 grid place-items-center bg-red-600/20 text-red-500 rounded-lg border border-red-500/30">
+                <Video className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-lime-400 font-bold">Field Verification & Working Footage</div>
+                <h3 className="font-display font-bold text-xl text-white">Machinery Operation Demo</h3>
+              </div>
+            </div>
+            {ytVideoId ? (
+              <div className="aspect-video w-full rounded-lg overflow-hidden border border-zinc-800 bg-black mt-4">
+                <iframe
+                  src={`https://www.youtube.com/embed/${ytVideoId}`}
+                  title={`${product.name} Video Demonstration`}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <div className="mt-4 p-6 rounded-lg bg-zinc-900/60 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="h-14 w-14 shrink-0 rounded-full bg-red-600/10 border border-red-500/30 flex items-center justify-center text-red-500">
+                    <Play className="h-7 w-7 fill-current ml-0.5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-base">Watch Official Field Operations & Tiller Demo</h4>
+                    <p className="text-xs text-zinc-400 mt-1">
+                      Verified supplier footage showing real soil cultivation, gearbox testing, and recoil starting for {product.name}.
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href={product.video}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="shrink-0 px-5 py-3 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg inline-flex items-center gap-2 transition active:scale-95 shadow-lg shadow-red-950/40"
+                >
+                  <ExternalLink className="h-4 w-4" /> Watch On YouTube →
+                </a>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Compatible Attachments & OEM Spares */}
+        {compatibleSpares.length > 0 && (
+          <div className="mt-16">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="kg-eyebrow">Genuine OEM Fitment</div>
+                <h2 className="kg-h2 mt-3">
+                  Compatible <span className="text-lime-500">Attachments & Spares.</span>
+                </h2>
+              </div>
+              <Link href="/products/category/power-weeder-spare-parts" className="text-lime-500 hover:text-lime-400 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5">
+                View All Spares Catalog →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+              {compatibleSpares.map((spare) => (
+                <div key={spare.slug} className="group border border-zinc-800 bg-zinc-900/40 hover:border-lime-500/60 transition p-4 rounded-lg flex flex-col justify-between">
+                  <Link href={`/products/${spare.slug}`}>
+                    <div className="aspect-square bg-zinc-950/80 rounded-md p-3 flex items-center justify-center border border-zinc-800/40 mb-3 overflow-hidden">
+                      <img src={spare.images?.[0] || "/images/products/weeder.webp"} alt={spare.name} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition" />
+                    </div>
+                    <div className="text-[10px] uppercase font-bold text-lime-400 mb-1">{spare.category === "power-weeder-spare-parts" ? "OEM Spare Part" : "Attachment"}</div>
+                    <h4 className="font-bold text-sm text-zinc-100 group-hover:text-lime-400 line-clamp-2 leading-tight">{spare.name}</h4>
+                  </Link>
+                  <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold text-white">₹{spare.price.toLocaleString("en-IN")}</span>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hello KrishiGears, I need the ${spare.name} compatible with ${product.name}. Please share availability.`)}&utm_source=krishigears_web&utm_medium=spares_crossell`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-xs bg-zinc-800 hover:bg-lime-500 hover:text-black font-bold p-1.5 rounded text-zinc-300 transition"
+                      title="Inquire via WhatsApp"
+                    >
+                      Order Spare →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Applications + Benefits */}
         <div className="mt-16 grid md:grid-cols-2 gap-6">

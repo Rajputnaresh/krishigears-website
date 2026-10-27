@@ -439,7 +439,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 36000,
     comparePrice: 42000,
-    images: ["https://bushraimpex.com/machines/850 Kibao Series.png", "https://bushraimpex.com/machines/850 Kibao Series 2.png", "https://bushraimpex.com/machines/850 Kibao Series 3.png"],
+    images: ["https://bushraimpex.com/machines/850%20Kibao%20Series.png", "https://bushraimpex.com/machines/850%20Kibao%20Series%202.png", "https://bushraimpex.com/machines/850%20Kibao%20Series%203.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3000",
@@ -471,7 +471,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 45000,
     comparePrice: 52000,
-    images: ["https://bushraimpex.com/machines/950 Kibao Series.png", "https://bushraimpex.com/machines/950 Kibao Series 2.png"],
+    images: ["https://bushraimpex.com/machines/950%20Kibao%20Series.png", "https://bushraimpex.com/machines/950%20Kibao%20Series%202.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -535,7 +535,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 58000,
     comparePrice: 68000,
-    images: ["https://bushraimpex.com/machines/bi-1000.png", "https://bushraimpex.com/machines/bi 1000 2.png"],
+    images: ["https://bushraimpex.com/machines/bi-1000.png", "https://bushraimpex.com/machines/bi%201000%202.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -567,7 +567,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 58000,
     comparePrice: 68000,
-    images: ["https://bushraimpex.com/machines/1050 Kibao Series.png"],
+    images: ["https://bushraimpex.com/machines/1050%20Kibao%20Series.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -599,7 +599,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 58000,
     comparePrice: 68000,
-    images: ["https://bushraimpex.com/machines/Xi-1150 Diesel (Manual Start).png"],
+    images: ["https://bushraimpex.com/machines/Xi-1150%20Diesel%20(Manual%20Start).png"],
     specs: {
       "Starting": "Manual",
       "Transmission": "Gear Drive",
@@ -630,7 +630,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 68000,
     comparePrice: 78000,
-    images: ["https://bushraimpex.com/machines/Xi-1150 Diesel (Manual Start).png"],
+    images: ["https://bushraimpex.com/machines/Xi-1150%20Diesel%20(Manual%20Start).png"],
     specs: {
       "Starting": "Electric",
       "Transmission": "Gear Drive",
@@ -661,7 +661,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 68000,
     comparePrice: 78000,
-    images: ["https://bushraimpex.com/machines/Xi-188D Diesel .png"],
+    images: ["https://bushraimpex.com/machines/Xi-188D%20Diesel%20.png"],
     specs: {
       "Starting": "Recoil",
       "Transmission": "Gear Drive",
@@ -692,7 +692,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 68000,
     comparePrice: 78000,
-    images: ["https://bushraimpex.com/machines/Xi-188D Diesel .png"],
+    images: ["https://bushraimpex.com/machines/Xi-188D%20Diesel%20.png"],
     specs: {
       "Starting": "Electric",
       "Transmission": "Gear Drive",
@@ -723,7 +723,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 45000,
     comparePrice: 52000,
-    images: ["https://bushraimpex.com/machines/1250 PRO Series.png", "https://bushraimpex.com/machines/1250 PRO Series 2.png"],
+    images: ["https://bushraimpex.com/machines/1250%20PRO%20Series.png", "https://bushraimpex.com/machines/1250%20PRO%20Series%202.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -755,7 +755,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 45000,
     comparePrice: 52000,
-    images: ["https://bushraimpex.com/machines/1250 Series.png"],
+    images: ["https://bushraimpex.com/machines/1250%20Series.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -787,7 +787,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 58000,
     comparePrice: 68000,
-    images: ["https://bushraimpex.com/machines/X1-750P Series.png"],
+    images: ["https://bushraimpex.com/machines/X1-750P%20Series.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -819,7 +819,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 58000,
     comparePrice: 68000,
-    images: ["https://bushraimpex.com/machines/X1-186 Back Rotary Series.png"],
+    images: ["https://bushraimpex.com/machines/X1-186%20Back%20Rotary%20Series.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3000",
@@ -851,7 +851,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 145000,
     comparePrice: 165000,
-    images: ["https://bushraimpex.com/machines/X1-1350 4WD Series.png"],
+    images: ["https://bushraimpex.com/machines/X1-1350%204WD%20Series.png"],
     specs: {
       "Starting": "Manual",
       "RPM": "3600",
@@ -883,7 +883,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 36000,
     comparePrice: 42000,
-    images: ["https://bushraimpex.com/machines/Bi-600 ATV Series.png", "https://bushraimpex.com/machines/Bi-600 ATV Series 2.png"],
+    images: ["https://bushraimpex.com/machines/Bi-600%20ATV%20Series.png", "https://bushraimpex.com/machines/Bi-600%20ATV%20Series%202.png"],
     specs: {
       "Starting": "Recoil",
       "Transmission": "Gear Drive",
@@ -912,7 +912,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 36000,
     comparePrice: 42000,
-    images: ["https://bushraimpex.com/machines/Bi-600P HL Series.png"],
+    images: ["https://bushraimpex.com/machines/Bi-600P%20HL%20Series.png"],
     specs: {
       "Transmission": "Gear Drive",
       "Starting": "Manual",
@@ -942,7 +942,7 @@ export const PRODUCTS = [
     badges: ["FMTTI Tested", "ISO 9001:2015", "Govt. Subsidy Eligible"],
     price: 24000,
     comparePrice: 28000,
-    images: ["https://bushraimpex.com/machines/X1-MW-70 Mini Weeder.png"],
+    images: ["https://bushraimpex.com/machines/X1-MW-70%20Mini%20Weeder.png"],
     specs: {
       "Engine Model": "1E48F-S",
       "Engine Power": "2.2 kW / 2.99 HP / 7000 r/min",

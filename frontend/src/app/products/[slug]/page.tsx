@@ -75,7 +75,7 @@ export default async function ProductDetailPage({
     "mpn": product.model || product.slug,
     "brand": {
       "@type": "Brand",
-      "name": "KrishiGears"
+      "name": (product as any).brand || "KrishiGears"
     },
     "category": product.category || "Agricultural Machinery",
     "offers": {

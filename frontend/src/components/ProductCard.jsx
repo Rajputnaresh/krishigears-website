@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
     "mpn": product.model || product.slug,
     "brand": {
       "@type": "Brand",
-      "name": "KrishiGears"
+      "name": product.brand || "KrishiGears"
     },
     "offers": {
       "@type": "Offer",
