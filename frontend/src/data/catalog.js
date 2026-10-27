@@ -3567,7 +3567,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-cg-680-0294",
     "category": "power-weeders",
-    "name": "KrishiGears Minni Tiller - Model CG-680 - 2-Stroke",
+    "name": "KrishiGears Mini Tiller - Model CG-680 - 2-Stroke",
     "model": "CG-680",
     "brand": "KrishiGears",
     "badges": [
@@ -3674,7 +3674,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-rover-850-sp-1843",
     "category": "lawn-mowers",
-    "name": "KrishiGears Walk Bihind Mowers Model ROVER-850 SP (5.5 HP)",
+    "name": "KrishiGears Walk Behind Mowers Model ROVER-850 SP (5.5 HP)",
     "model": "ROVER-850 SP",
     "brand": "KrishiGears",
     "badges": [
@@ -6414,8 +6414,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-pro-cut-950-4145",
     "category": "lawn-mowers",
-    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Bihind Mowers (2.24 HP)",
-    "model": "Pro Cut-950 Walk Bihind Mowers",
+    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Behind Mowers (2.24 HP)",
+    "model": "Pro Cut-950 Walk Behind Mowers",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
