@@ -193,6 +193,7 @@ const warranty6 = "6 months manufacturer warranty + KrishiGears after-sales serv
 // ----------- PRODUCT CATALOG -----------
 export const PRODUCTS = [
 {
+    brand: "KrishiGears",
     slug: "kg-170f", category: "power-weeders",
     name: "KrishiGears KG-170F Petrol Power Weeder (7 HP)",
     model: "KG-170F", badges: ["Bestseller", "FMTTI Tested"],
@@ -205,6 +206,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-173f-diesel", category: "power-weeders",
     name: "KrishiGears KG-173F Diesel Power Weeder (5.5 HP)",
     model: "KG-173F", badges: ["High Torque"],
@@ -217,6 +219,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-177f-wolf", category: "power-weeders",
     name: "KrishiGears KG-177F WOLF Petrol Weeder (9 HP)",
     model: "KG-177F", badges: ["Heavy Duty"],
@@ -229,6 +232,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-icp-p170-lde", category: "power-weeders",
     name: "KrishiGears KG-ICP-P170-LDE Electric Start Weeder",
     model: "KG-ICP-P170-LDE", badges: ["Premium", "Self Start"],
@@ -241,6 +245,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-icp-up170-sh", category: "power-weeders",
     name: "KrishiGears KG-ICP-UP170-SH Back-Rotary Weeder",
     model: "KG-ICP-UP170-SH", badges: ["Back Rotary"],
@@ -253,6 +258,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-icd-up186-sh", category: "power-weeders",
     name: "KrishiGears KG-ICD-UP186-SH Diesel (10 HP)",
     model: "KG-ICD-UP186-SH", badges: ["Professional", "10 HP"],
@@ -265,6 +271,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-baby-weeder", category: "power-weeders",
     name: "KrishiGears KG Baby Weeder (Lightweight)",
     model: "KG-BW", badges: ["Compact"],
@@ -277,6 +284,7 @@ export const PRODUCTS = [
     warranty: warrantyStd,
   },
   {
+    brand: "KrishiGears",
     slug: "kg-crankshaft", category: "power-weeder-spare-parts",
     name: "KrishiGears Crankshaft Assembly (7 HP / 9 HP)",
     model: "KG-CRANK-WEEDER", badges: ["Spare Part"],
@@ -289,6 +297,7 @@ export const PRODUCTS = [
     warranty: "3 months replacement on manufacturing defects",
   },
   {
+    brand: "KrishiGears",
     slug: "kg-piston-ring", category: "power-weeder-spare-parts",
     name: "KrishiGears Piston & Ring Set (Standard & Oversize)",
     model: "KG-PISTON-WEEDER", badges: ["Spare Part"],
@@ -301,6 +310,7 @@ export const PRODUCTS = [
     warranty: "3 months replacement on manufacturing defects",
   },
   {
+    brand: "KrishiGears",
     slug: "kg-recoil-starter", category: "power-weeder-spare-parts",
     name: "KrishiGears Recoil Starter Assembly (Pull Cord)",
     model: "KG-RECOIL-WEEDER", badges: ["Spare Part"],
@@ -313,6 +323,7 @@ export const PRODUCTS = [
     warranty: "3 months replacement on manufacturing defects",
   },
   {
+    brand: "KrishiGears",
     slug: "kg-rotary-blades", category: "power-weeder-spare-parts",
     name: "KrishiGears Dryland / Wetland Tiller Blades (Set of 32)",
     model: "KG-BLADES-32", badges: ["Fast Moving Spare"],
