@@ -232,7 +232,7 @@ export const PRODUCTS = [
     ],
     "price": 26000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-170f.webp"
     ],
     "specs": {
       "Engine": "4 Stroke Petrol",
@@ -275,7 +275,7 @@ export const PRODUCTS = [
     ],
     "price": 34000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-173f-diesel.webp"
     ],
     "specs": {
       "Engine": "4 Stroke Diesel",
@@ -317,7 +317,7 @@ export const PRODUCTS = [
     ],
     "price": 36000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-177f-wolf.webp"
     ],
     "specs": {
       "Engine": "4 Stroke Petrol",
@@ -359,7 +359,7 @@ export const PRODUCTS = [
     ],
     "price": 30000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-icp-p170-lde.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -400,7 +400,7 @@ export const PRODUCTS = [
     ],
     "price": 38000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-icp-up170-sh.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -441,7 +441,7 @@ export const PRODUCTS = [
     ],
     "price": 46000,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-icd-up186-sh.webp"
     ],
     "specs": {
       "Engine": "Diesel",
@@ -482,7 +482,7 @@ export const PRODUCTS = [
     ],
     "price": 14500,
     "images": [
-      "/images/products/baby-weeder.webp"
+      "/images/catalog/kg-baby-weeder.webp"
     ],
     "specs": {
       "Type": "Compact Baby Weeder",
@@ -633,7 +633,7 @@ export const PRODUCTS = [
     ],
     "price": 1400,
     "images": [
-      "/images/products/weeder.webp"
+      "/images/catalog/kg-rotary-blades.webp"
     ],
     "specs": {
       "Type": "Rotary Tine",
@@ -854,7 +854,7 @@ export const PRODUCTS = [
     "comparePrice": 42000,
     "images": [
       "/images/catalog/bi-850-series.webp",
-      "https://bushraimpex.com/machines/850%20Kibao%20Series%203.png"
+      "/images/catalog/bi-850-series-1.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -3567,7 +3567,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-cg-680-0294",
     "category": "power-weeders",
-    "name": "KrishiGears Mini Tiller - Model CG-680 - 2-Stroke",
+    "name": "KrishiGears Minni Tiller - Model CG-680 - 2-Stroke",
     "model": "CG-680",
     "brand": "KrishiGears",
     "badges": [
@@ -3674,7 +3674,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-rover-850-sp-1843",
     "category": "lawn-mowers",
-    "name": "KrishiGears Walk Behind Mowers Model ROVER-850 SP (5.5 HP)",
+    "name": "KrishiGears Walk Bihind Mowers Model ROVER-850 SP (5.5 HP)",
     "model": "ROVER-850 SP",
     "brand": "KrishiGears",
     "badges": [
@@ -6414,8 +6414,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-pro-cut-950-4145",
     "category": "lawn-mowers",
-    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Behind Mowers (2.24 HP)",
-    "model": "Pro Cut-950 Walk Behind Mowers",
+    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Bihind Mowers (2.24 HP)",
+    "model": "Pro Cut-950 Walk Bihind Mowers",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7969,11 +7969,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-173f.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/Picture-2-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/008-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/006-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/001-4-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/002-2-scaled.jpg"
+      "/images/catalog/rly-173f-1.webp",
+      "/images/catalog/rly-173f-2.webp",
+      "/images/catalog/rly-173f-3.webp"
     ],
     "specs": {
       "Product Name": "KrishiGears RAPL-MC-173D Chain Cultivator",
@@ -8032,12 +8030,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-170f.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/picture-5-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/picture-1-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/0011-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/007-5-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/001-3-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/002-1-scaled.jpg"
+      "/images/catalog/rly-170f-1.webp",
+      "/images/catalog/rly-170f-2.webp",
+      "/images/catalog/rly-170f-3.webp"
     ],
     "specs": {
       "Product Name": "KrishiGears RAPL-MC-170G Chain Cultivator",
@@ -8095,10 +8090,7 @@ export const PRODUCTS = [
     "price": 39000,
     "comparePrice": 46000,
     "images": [
-      "/images/catalog/rly-cr-r50-b.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160130.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160132.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160134.jpg"
+      "/images/catalog/rly-cr-r50-b.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8209,10 +8201,7 @@ export const PRODUCTS = [
     "price": 39000,
     "comparePrice": 46000,
     "images": [
-      "/images/catalog/rly-cr-r52-s.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160251.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160253.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20231227160255.jpg"
+      "/images/catalog/rly-cr-r52-s.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8269,7 +8258,7 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-cr-r35-b.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09074-scaled.jpg"
+      "/images/catalog/rly-cr-r35-b-1.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8326,9 +8315,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-cr-r35-s.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09060-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09061-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/SID09062-scaled.jpg"
+      "/images/catalog/rly-cr-r35-s-1.webp",
+      "/images/catalog/rly-cr-r35-s-2.webp",
+      "/images/catalog/rly-cr-r35-s-3.webp"
     ],
     "specs": {
       "Product Name": "KrishiGears CR-R35-S Baffle Crop Reaper",
@@ -8385,9 +8374,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-1e40f-2.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2430.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2431.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_2432.jpg"
+      "/images/catalog/rly-1e40f-2-1.webp",
+      "/images/catalog/rly-1e40f-2-2.webp",
+      "/images/catalog/rly-1e40f-2-3.webp"
     ],
     "specs": {
       "Product Name": "KrishiGears CR-R43W-S Baffle Crop Reaper",
@@ -8446,12 +8435,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-cr-r50-s.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535447598.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535477817.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535479064.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1634535512147.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/02-9-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/14-2-scaled.jpg"
+      "/images/catalog/rly-cr-r50-s-1.webp",
+      "/images/catalog/rly-cr-r50-s-2.webp",
+      "/images/catalog/rly-cr-r50-s-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8510,8 +8496,8 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-rapl-tb-52.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6708.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_6709.jpg"
+      "/images/catalog/rly-rapl-tb-52-1.webp",
+      "/images/catalog/rly-rapl-tb-52-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8574,11 +8560,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-m-52.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398417648.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398420089.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398422988.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398434873.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1661398439683.jpg"
+      "/images/catalog/rly-m-52-1.webp",
+      "/images/catalog/rly-m-52-2.webp",
+      "/images/catalog/rly-m-52-3.webp"
     ],
     "specs": {
       "Model": "M-52",
@@ -8638,11 +8622,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-m-35s.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643818241.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643473001.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643556991.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643617151.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport16611643739141.jpg"
+      "/images/catalog/rly-m-35s-1.webp",
+      "/images/catalog/rly-m-35s-2.webp",
+      "/images/catalog/rly-m-35s-3.webp"
     ],
     "specs": {
       "Model": "M-35S",
@@ -8706,9 +8688,9 @@ export const PRODUCTS = [
     "comparePrice": 44000,
     "images": [
       "/images/catalog/rly-rh-3800d-sp.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/07-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/09-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/05-7-scaled.jpg"
+      "/images/catalog/rly-rh-3800d-sp-1.webp",
+      "/images/catalog/rly-rh-3800d-sp-2.webp",
+      "/images/catalog/rly-rh-3800d-sp-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8770,8 +8752,8 @@ export const PRODUCTS = [
     "comparePrice": 44000,
     "images": [
       "/images/catalog/rly-rh-3800d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/abe9e8230360c29d8f9c7493ee32555.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013-2.jpg"
+      "/images/catalog/rly-rh-3800d-1.webp",
+      "/images/catalog/rly-rh-3800d-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8833,7 +8815,7 @@ export const PRODUCTS = [
     "comparePrice": 44000,
     "images": [
       "/images/catalog/rly-rh-3800g-sp.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9901-scaled.jpg"
+      "/images/catalog/rly-rh-3800g-sp-1.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -8895,7 +8877,7 @@ export const PRODUCTS = [
     "comparePrice": 44000,
     "images": [
       "/images/catalog/rly-rh-3800g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/c935756b78b2f0f98a67b4b78d04013.jpg"
+      "/images/catalog/rly-rh-3800g-1.webp"
     ],
     "specs": {
       "Model": "RH-3800G",
@@ -8959,11 +8941,9 @@ export const PRODUCTS = [
     "comparePrice": 34500,
     "images": [
       "/images/catalog/rly-rh-2600.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9905-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/006-3-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/003-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/002-3-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/001-5-scaled.jpg"
+      "/images/catalog/rly-rh-2600-1.webp",
+      "/images/catalog/rly-rh-2600-2.webp",
+      "/images/catalog/rly-rh-2600-3.webp"
     ],
     "specs": {
       "Model": "RH-2600",
@@ -9026,11 +9006,9 @@ export const PRODUCTS = [
     "comparePrice": 34500,
     "images": [
       "/images/catalog/rly-rh-2000.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_9899-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/009-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/007-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/004-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/001-scaled.jpg"
+      "/images/catalog/rly-rh-2000-1.webp",
+      "/images/catalog/rly-rh-2000-2.webp",
+      "/images/catalog/rly-rh-2000-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -9092,9 +9070,9 @@ export const PRODUCTS = [
     "comparePrice": 22500,
     "images": [
       "/images/catalog/rly-rap-l-rh-6301.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/1833d2c5f3eacb01e9739b97b883126.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/6395c25d9201d25a76d79296ce3b29c.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/466893d8fbf968e541bbf7be05b407e.jpg"
+      "/images/catalog/rly-rap-l-rh-6301-1.webp",
+      "/images/catalog/rly-rap-l-rh-6301-2.webp",
+      "/images/catalog/rly-rap-l-rh-6301-3.webp"
     ],
     "specs": {
       "Product Name": "KrishiGears Mini Weeder",
@@ -9151,8 +9129,8 @@ export const PRODUCTS = [
     "comparePrice": 34500,
     "images": [
       "/images/catalog/rly-my-300g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/d63b68ca79c9c3d530efd157dee4d1d.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/4ef6bfcae8ac4de8fa99336b79c15fe.jpg"
+      "/images/catalog/rly-my-300g-1.webp",
+      "/images/catalog/rly-my-300g-2.webp"
     ],
     "specs": {
       "Model": "MY-300G",
@@ -9211,7 +9189,7 @@ export const PRODUCTS = [
     "comparePrice": 64000,
     "images": [
       "/images/catalog/rly-my-573d-upgraded.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/04-5-scaled.jpg"
+      "/images/catalog/rly-my-573d-upgraded-1.webp"
     ],
     "specs": {
       "Model": "MY-573D (Upgraded)",
@@ -9271,8 +9249,8 @@ export const PRODUCTS = [
     "comparePrice": 49000,
     "images": [
       "/images/catalog/rly-my-550g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/11-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/07-2-scaled.jpg"
+      "/images/catalog/rly-my-550g-1.webp",
+      "/images/catalog/rly-my-550g-2.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -9325,10 +9303,9 @@ export const PRODUCTS = [
     "comparePrice": 45000,
     "images": [
       "/images/catalog/rly-my-470g-hl.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/17-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/07-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/13-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/11-1-scaled.jpg"
+      "/images/catalog/rly-my-470g-hl-1.webp",
+      "/images/catalog/rly-my-470g-hl-2.webp",
+      "/images/catalog/rly-my-470g-hl-3.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -9381,9 +9358,9 @@ export const PRODUCTS = [
     "comparePrice": 56000,
     "images": [
       "/images/catalog/rly-my-473d-upgraded.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/17-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/09-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/08/10-scaled.jpg"
+      "/images/catalog/rly-my-473d-upgraded-1.webp",
+      "/images/catalog/rly-my-473d-upgraded-2.webp",
+      "/images/catalog/rly-my-473d-upgraded-3.webp"
     ],
     "specs": {
       "Model": "MY-473D Upgraded",
@@ -9443,9 +9420,7 @@ export const PRODUCTS = [
     "price": 48000,
     "comparePrice": 56000,
     "images": [
-      "/images/catalog/rly-my-800gh.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132357-1.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250319132334-1.jpg"
+      "/images/catalog/rly-my-800gh.webp"
     ],
     "specs": {
       "Model": "MY-800GH",
@@ -9506,11 +9481,9 @@ export const PRODUCTS = [
     "comparePrice": 64000,
     "images": [
       "/images/catalog/rly-rapl-rh-773d-premium.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.01-PM-1.jpeg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/02-8-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/07-4-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/06-5-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/09-3-scaled.jpg"
+      "/images/catalog/rly-rapl-rh-773d-premium-1.webp",
+      "/images/catalog/rly-rapl-rh-773d-premium-2.webp",
+      "/images/catalog/rly-rapl-rh-773d-premium-3.webp"
     ],
     "specs": {
       "Model": "RAPL-RH-773D Premium",
@@ -9570,9 +9543,7 @@ export const PRODUCTS = [
     "price": 48000,
     "comparePrice": 56000,
     "images": [
-      "/images/catalog/rly-my-750gh.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313152957.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/\u5fae\u4fe1\u56fe\u7247_20250313153000.jpg"
+      "/images/catalog/rly-my-750gh.webp"
     ],
     "specs": {
       "Model": "MY-750GH",
@@ -9634,12 +9605,9 @@ export const PRODUCTS = [
     "comparePrice": 49000,
     "images": [
       "/images/catalog/rly-rapl-rh-700g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.06-PM-1.jpeg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-05-31-at-11.21.07-PM-1.jpeg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/03-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/06-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/04-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/01-scaled.jpg"
+      "/images/catalog/rly-rapl-rh-700g-1.webp",
+      "/images/catalog/rly-rapl-rh-700g-2.webp",
+      "/images/catalog/rly-rapl-rh-700g-3.webp"
     ],
     "specs": {
       "Model": "RAPL-RH-700G",
@@ -9757,10 +9725,9 @@ export const PRODUCTS = [
     "comparePrice": 64000,
     "images": [
       "/images/catalog/rly-my-673d-kama-engine.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595671276.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595675793.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647595814928-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647596141350-scaled.jpg"
+      "/images/catalog/rly-my-673d-kama-engine-1.webp",
+      "/images/catalog/rly-my-673d-kama-engine-2.webp",
+      "/images/catalog/rly-my-673d-kama-engine-3.webp"
     ],
     "specs": {
       "Model": "MY-673D KAMA Engine",
@@ -9819,10 +9786,9 @@ export const PRODUCTS = [
     "comparePrice": 66000,
     "images": [
       "/images/catalog/rly-my-685d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245884170.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245888868.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245895279.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1647245899774.jpg"
+      "/images/catalog/rly-my-685d-1.webp",
+      "/images/catalog/rly-my-685d-2.webp",
+      "/images/catalog/rly-my-685d-3.webp"
     ],
     "specs": {
       "Engine": "Diesel",
@@ -9935,10 +9901,9 @@ export const PRODUCTS = [
     "comparePrice": 49000,
     "images": [
       "/images/catalog/rly-my-550g-167.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646638279279.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637729457.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637732819.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/mmexport1646637737560.jpg"
+      "/images/catalog/rly-my-550g-167-1.webp",
+      "/images/catalog/rly-my-550g-167-2.webp",
+      "/images/catalog/rly-my-550g-167-3.webp"
     ],
     "specs": {
       "Model": "MY-550G",
@@ -10000,9 +9965,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-my-570g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/2318ade256ad308f566a75824eb6cdc-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/96459b301afe071333a67fe3d78aec5-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/885770cc42abfc5a5ed384136aef594-scaled.jpg"
+      "/images/catalog/rly-my-570g-1.webp",
+      "/images/catalog/rly-my-570g-2.webp",
+      "/images/catalog/rly-my-570g-3.webp"
     ],
     "specs": {
       "Model": "MY-570G",
@@ -10050,7 +10015,7 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-my-573d-pro",
+    "slug": "rly-mitsuyama-my-573d",
     "category": "power-weeders",
     "name": "KrishiGears MY-573D Power Weeder | 247 CC Diesel",
     "model": "MY-573D",
@@ -10063,11 +10028,10 @@ export const PRODUCTS = [
     "price": 54000,
     "comparePrice": 64000,
     "images": [
-      "/images/catalog/rly-my-573d-pro.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/4fb639cde467267a62182524b72522f-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/4fd2610efb85d7e0881a4a4188c33d8-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/09cb5f6ca20c830f03f4f5ec07f3713-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/42c984cf5ced2608e7ec25c7a61268c-scaled.jpg"
+      "/images/catalog/rly-mitsuyama-my-573d.webp",
+      "/images/catalog/rly-mitsuyama-my-573d-1.webp",
+      "/images/catalog/rly-mitsuyama-my-573d-2.webp",
+      "/images/catalog/rly-mitsuyama-my-573d-3.webp"
     ],
     "specs": {
       "Model": "KrishiGears MY-573D",
@@ -10130,10 +10094,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-my-578d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/2dedda7d738a5f2c44bff28749c18ba-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/3f2dab70d3c9131e62d637581832aa4-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/4c355b6ae6f23501160529aff91d537-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/9f10c35bf6ac9f2186c533ba841a354-scaled.jpg"
+      "/images/catalog/rly-my-578d-1.webp",
+      "/images/catalog/rly-my-578d-2.webp",
+      "/images/catalog/rly-my-578d-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10182,7 +10145,7 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-my-585d-pro",
+    "slug": "rly-mitsuyama-my-585d",
     "category": "power-weeders",
     "name": "KrishiGears MY-585D Diesel Power Weeder | 406cc, 40 Blades",
     "model": "MY-585D",
@@ -10195,9 +10158,9 @@ export const PRODUCTS = [
     "price": 56000,
     "comparePrice": 66000,
     "images": [
-      "/images/catalog/rly-my-585d-pro.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/95c0c50617bcd30b52cbaf01c1ddc69-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/97ea9792b6b6c0b3647781800404ad5-scaled.jpg"
+      "/images/catalog/rly-mitsuyama-my-585d.webp",
+      "/images/catalog/rly-mitsuyama-my-585d-1.webp",
+      "/images/catalog/rly-mitsuyama-my-585d-2.webp"
     ],
     "specs": {
       "Model": "KrishiGears MY-585D",
@@ -10258,14 +10221,9 @@ export const PRODUCTS = [
     "comparePrice": 72000,
     "images": [
       "/images/catalog/rly-my-585d-de.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/44bf36821e73185d7f73ca7581c8c52-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/642ac2904bd8d6521f72fd7fac500be-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/2677cbffc1a089f1d6b2190719cbc69-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/8639d68144c738bfb4206aa8cf90430-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/9145bbfcca766f6963b63b7f239e7b0-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/28740fe48e1f06dce5d5c23bff3b548-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/74335b7267be876058bd2980761717a-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/062239478a29c24fb5f3fb217f3a1cb-scaled.jpg"
+      "/images/catalog/rly-my-585d-de-1.webp",
+      "/images/catalog/rly-my-585d-de-2.webp",
+      "/images/catalog/rly-my-585d-de-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10330,9 +10288,9 @@ export const PRODUCTS = [
     "comparePrice": 45000,
     "images": [
       "/images/catalog/rly-my-470g-hl-173.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7857-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7858-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7859-scaled.jpg"
+      "/images/catalog/rly-my-470g-hl-173-1.webp",
+      "/images/catalog/rly-my-470g-hl-173-2.webp",
+      "/images/catalog/rly-my-470g-hl-173-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10396,9 +10354,9 @@ export const PRODUCTS = [
     "comparePrice": 45000,
     "images": [
       "/images/catalog/rly-my-480g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/3247fe42ec5f775f6936afb967f8e7c4.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/9119b5694f009caa23acf8cc2f6ca41a.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/dde4f4065d11b68e2802e67deff146e8.jpg"
+      "/images/catalog/rly-my-480g-1.webp",
+      "/images/catalog/rly-my-480g-2.webp",
+      "/images/catalog/rly-my-480g-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10460,8 +10418,8 @@ export const PRODUCTS = [
     "comparePrice": 56000,
     "images": [
       "/images/catalog/rly-my-478d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/232a15acb73c3029fa12a5c1740392a5.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/254c18042c063ff1109b68ac48e0d7ec.jpg"
+      "/images/catalog/rly-my-478d-1.webp",
+      "/images/catalog/rly-my-478d-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10524,8 +10482,8 @@ export const PRODUCTS = [
     "comparePrice": 56000,
     "images": [
       "/images/catalog/rly-my-473d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/8ee78ba67a4c6403f2db8c10b2cba807.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/0fe6d762e19b48647db02b5b46b697a5.jpg"
+      "/images/catalog/rly-my-473d-1.webp",
+      "/images/catalog/rly-my-473d-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10588,8 +10546,8 @@ export const PRODUCTS = [
     "comparePrice": 45000,
     "images": [
       "/images/catalog/rly-my-470g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7849-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7851-scaled.jpg"
+      "/images/catalog/rly-my-470g-1.webp",
+      "/images/catalog/rly-my-470g-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10654,9 +10612,9 @@ export const PRODUCTS = [
     "comparePrice": 45000,
     "images": [
       "/images/catalog/rly-my-450g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7896.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7895-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/05/IMG_7899-scaled.jpg"
+      "/images/catalog/rly-my-450g-1.webp",
+      "/images/catalog/rly-my-450g-2.webp",
+      "/images/catalog/rly-my-450g-3.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10718,8 +10676,8 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-my-380g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115516-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/06/IMG_20260302_115733-1-scaled.jpg"
+      "/images/catalog/rly-my-380g-1.webp",
+      "/images/catalog/rly-my-380g-2.webp"
     ],
     "specs": {
       "Brand": "KrishiGears",
@@ -10782,9 +10740,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-my-370g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/08-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/01-9-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/06-6-scaled.jpg"
+      "/images/catalog/rly-my-370g-1.webp",
+      "/images/catalog/rly-my-370g-2.webp",
+      "/images/catalog/rly-my-370g-3.webp"
     ],
     "specs": {
       "Model": "MY-370G",
@@ -10905,9 +10863,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-my-373d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/14-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/13-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/07/01-10-scaled.jpg"
+      "/images/catalog/rly-my-373d-1.webp",
+      "/images/catalog/rly-my-373d-2.webp",
+      "/images/catalog/rly-my-373d-3.webp"
     ],
     "specs": {
       "Model": "MY-373D",
@@ -11019,9 +10977,9 @@ export const PRODUCTS = [
     "comparePrice": 46000,
     "images": [
       "/images/catalog/rly-rapl-sm-g50.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/06/03-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/06/02-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/06/01-3-scaled.jpg"
+      "/images/catalog/rly-rapl-sm-g50-1.webp",
+      "/images/catalog/rly-rapl-sm-g50-2.webp",
+      "/images/catalog/rly-rapl-sm-g50-3.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -11074,9 +11032,9 @@ export const PRODUCTS = [
     "comparePrice": 98000,
     "images": [
       "/images/catalog/rly-rapl-apw-7000d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/11-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/12-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/13-scaled.jpg"
+      "/images/catalog/rly-rapl-apw-7000d-1.webp",
+      "/images/catalog/rly-rapl-apw-7000d-2.webp",
+      "/images/catalog/rly-rapl-apw-7000d-3.webp"
     ],
     "specs": {
       "Engine": "Diesel",
@@ -11129,11 +11087,9 @@ export const PRODUCTS = [
     "comparePrice": 98000,
     "images": [
       "/images/catalog/rly-rapl-apw-6000g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/4e8551f40829f00b8628c8528a03a2f0-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/13-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/08-3-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/04-14-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/01-13-scaled.jpg"
+      "/images/catalog/rly-rapl-apw-6000g-1.webp",
+      "/images/catalog/rly-rapl-apw-6000g-2.webp",
+      "/images/catalog/rly-rapl-apw-6000g-3.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -11186,11 +11142,9 @@ export const PRODUCTS = [
     "comparePrice": 98000,
     "images": [
       "/images/catalog/rly-rapl-apw-5000g.webp",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/72f65b9573eb08db139abf27037b665e-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/13-1-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/09-5-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/04-13-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2026/05/01-12-scaled.jpg"
+      "/images/catalog/rly-rapl-apw-5000g-1.webp",
+      "/images/catalog/rly-rapl-apw-5000g-2.webp",
+      "/images/catalog/rly-rapl-apw-5000g-3.webp"
     ],
     "specs": {
       "Engine": "Petrol",
@@ -11243,9 +11197,9 @@ export const PRODUCTS = [
     "comparePrice": 64000,
     "images": [
       "/images/catalog/rly-my-573d.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/03/09-4-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/03/10-2-scaled.jpg",
-      "https://reallyagritech.com/wp-content/uploads/2025/03/12-1-scaled.jpg"
+      "/images/catalog/rly-my-573d-1.webp",
+      "/images/catalog/rly-my-573d-2.webp",
+      "/images/catalog/rly-my-573d-3.webp"
     ],
     "specs": {
       "ENGINE": "173F DIESEL ENGINE",
@@ -11478,7 +11432,7 @@ export const PRODUCTS = [
     "comparePrice": 49000,
     "images": [
       "/images/catalog/rly-my-600g-192.webp",
-      "https://reallyagritech.com/wp-content/uploads/2025/03/MY-600G-1.jpg"
+      "/images/catalog/rly-my-600g-192-1.webp"
     ],
     "specs": {
       "ENGINE MODEL": "170F ENGINE",

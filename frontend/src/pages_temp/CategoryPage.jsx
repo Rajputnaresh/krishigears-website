@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Search, X, SlidersHorizontal, RotateCcw } from "lucide-react";
 import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsCategoryUrl } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
@@ -264,6 +264,60 @@ export default function CategoryPage() {
 }
 
 function ModelsSection({ items, category }) {
+  const [search, setSearch] = useState("");
+  const [fuel, setFuel] = useState("all");
+  const [hpRange, setHpRange] = useState("all");
+
+  const extractHp = (product) => {
+    const text = `${product.name} ${product.specs?.Power || ""} ${product.specs?.Engine || ""}`;
+    const match = text.match(/(\d+(?:\.\d+)?)\s*HP/i);
+    return match ? parseFloat(match[1]) : null;
+  };
+
+  const extractFuel = (product) => {
+    const text = `${product.name} ${product.specs?.Fuel || ""} ${product.specs?.Engine || ""}`.toLowerCase();
+    if (text.includes("petrol") || text.includes("gasoline") || text.includes("gas")) return "petrol";
+    if (text.includes("diesel")) return "diesel";
+    if (text.includes("electric") || text.includes("battery") || text.includes("cordless")) return "electric";
+    return "other";
+  };
+
+  const isSpareParts = category?.slug === "power-weeder-spare-parts";
+
+  const filteredItems = useMemo(() => {
+    if (!items) return [];
+    return items.filter((p) => {
+      if (search.trim()) {
+        const q = search.toLowerCase();
+        const matchName = p.name?.toLowerCase().includes(q);
+        const matchModel = p.model?.toLowerCase().includes(q);
+        const matchSpec = Object.values(p.specs || {}).some((v) => String(v).toLowerCase().includes(q));
+        if (!matchName && !matchModel && !matchSpec) return false;
+      }
+      if (fuel !== "all") {
+        const f = extractFuel(p);
+        if (f !== fuel) return false;
+      }
+      if (hpRange !== "all") {
+        const hp = extractHp(p);
+        if (hp === null) return false;
+        if (hpRange === "under-5" && hp >= 5) return false;
+        if (hpRange === "5-7" && (hp < 5 || hp > 7.5)) return false;
+        if (hpRange === "8-10" && (hp < 8 || hp > 10.5)) return false;
+        if (hpRange === "10-plus" && hp < 10) return false;
+      }
+      return true;
+    });
+  }, [items, search, fuel, hpRange]);
+
+  const hasActiveFilters = search.trim() !== "" || fuel !== "all" || hpRange !== "all";
+
+  const resetFilters = () => {
+    setSearch("");
+    setFuel("all");
+    setHpRange("all");
+  };
+
   if (items === null) {
     return <div className="text-center text-zinc-400 py-12">Loading models…</div>;
   }
@@ -279,14 +333,127 @@ function ModelsSection({ items, category }) {
       </div>
     );
   }
+
   return (
-    <>
-      <h2 className="kg-h2 mb-6">Supply <span className="text-lime-500">Models ({items.length})</span></h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {items.map((p) => (
-          <ProductCard key={p.slug} product={p} />
-        ))}
+    <div className="space-y-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2 border-b border-zinc-800">
+        <div>
+          <h2 className="kg-h2">
+            Supply <span className="text-lime-500">Models</span> ({filteredItems.length}
+            {filteredItems.length !== items.length ? ` of ${items.length}` : ""})
+          </h2>
+          <p className="text-xs text-zinc-400 mt-1">
+            Factory-spec models available for direct B2B supply, dealership allocation, and bulk dispatch.
+          </p>
+        </div>
+
+        {/* Search input */}
+        <div className="relative w-full md:w-72">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search model or spec..."
+            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg pl-9 pr-8 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-lime-500"
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          )}
+        </div>
       </div>
-    </>
+
+      {/* Filter Chips Bar */}
+      <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-4 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-xs font-semibold text-zinc-400 flex items-center gap-1.5 mr-1">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-lime-400" /> Filters:
+          </span>
+
+          {/* Fuel Filter Pills (only for machinery, not pure spare parts) */}
+          {!isSpareParts && (
+            <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
+              {[
+                { id: "all", label: "All Fuel" },
+                { id: "petrol", label: "Petrol" },
+                { id: "diesel", label: "Diesel" },
+                { id: "electric", label: "Electric" }
+              ].map((f) => (
+                <button
+                  key={f.id}
+                  onClick={() => setFuel(f.id)}
+                  className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
+                    fuel === f.id
+                      ? "bg-lime-500 text-black font-bold"
+                      : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Power Range Filter Pills */}
+          {!isSpareParts && (
+            <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
+              {[
+                { id: "all", label: "All HP" },
+                { id: "under-5", label: "< 5 HP" },
+                { id: "5-7", label: "5 – 7.5 HP" },
+                { id: "8-10", label: "8 – 10 HP" },
+                { id: "10-plus", label: "10+ HP" }
+              ].map((hp) => (
+                <button
+                  key={hp.id}
+                  onClick={() => setHpRange(hp.id)}
+                  className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
+                    hpRange === hp.id
+                      ? "bg-lime-500 text-black font-bold"
+                      : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+                  }`}
+                >
+                  {hp.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {hasActiveFilters && (
+          <button
+            onClick={resetFilters}
+            className="text-xs text-zinc-400 hover:text-lime-400 flex items-center gap-1 transition-colors ml-auto"
+          >
+            <RotateCcw className="h-3 w-3" /> Reset Filters
+          </button>
+        )}
+      </div>
+
+      {/* Results Grid */}
+      {filteredItems.length === 0 ? (
+        <div className="border border-zinc-800 bg-surface-dark p-12 text-center rounded-xl">
+          <p className="text-zinc-300 font-semibold">No models match your selected filter criteria.</p>
+          <p className="text-xs text-zinc-500 mt-1">Try clearing your filters or contact our B2B desk for custom configurations.</p>
+          <button
+            onClick={resetFilters}
+            className="mt-5 bg-zinc-800 hover:bg-zinc-700 text-white font-medium px-5 py-2.5 rounded-md text-xs inline-flex items-center gap-2"
+          >
+            <RotateCcw className="h-3.5 w-3.5" /> Clear All Filters
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filteredItems.map((p) => (
+            <ProductCard key={p.slug} product={p} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

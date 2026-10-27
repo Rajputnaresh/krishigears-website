@@ -7,7 +7,8 @@ import { clampTitle, clampDescription } from '@/app/layout';
 import Link from 'next/link';
 import { 
   Tractor, Wrench, Scissors, Drill, ShieldCheck, MapPin, 
-  Phone, ArrowRight, CheckCircle2, ChevronRight, Truck, FileText 
+  Phone, ArrowRight, CheckCircle2, ChevronRight, Truck, FileText,
+  Trees, Wheat, Cog
 } from 'lucide-react';
 
 // Define the valid categories
@@ -29,6 +30,24 @@ const CATEGORIES: Record<string, { name: string; singular: string; icon: any; de
     singular: 'Brush Cutter',
     icon: Scissors,
     desc: 'High-RPM 2-stroke & 4-stroke crop harvesters with paddy crop collector attachments and 80T carbide blades.'
+  },
+  'lawn-mowers': {
+    name: 'Lawn Mowers',
+    singular: 'Lawn Mower',
+    icon: Trees,
+    desc: 'Commercial petrol, electric, and ride-on grass mowers for farm estates, orchards, and turf maintenance.'
+  },
+  'crop-reapers': {
+    name: 'Crop Reapers',
+    singular: 'Crop Reaper',
+    icon: Wheat,
+    desc: 'Baffle crop reapers and multi-crop harvesters engineered for paddy, wheat, soybean, and fodder harvesting.'
+  },
+  'farm-machinery': {
+    name: 'Farm Machinery',
+    singular: 'Farm Machinery',
+    icon: Cog,
+    desc: 'Chaff cutters, post hole diggers, water pumps, chainsaws, and heavy agricultural equipment for modern farming.'
   },
   'earth-augers': {
     name: 'Earth Augers',

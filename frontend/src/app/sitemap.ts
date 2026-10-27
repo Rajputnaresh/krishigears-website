@@ -9,7 +9,15 @@ const SITE_URL = 'https://krishigears.com';
 const SITE_CONTENT_UPDATED = new Date('2026-09-13');
 
 // Valid category slugs for programmatic geo-landing pages ([slug]-in-[location])
-const GEO_CATEGORIES = ['power-weeders', 'power-weeder-spare-parts', 'brush-cutters', 'earth-augers'];
+const GEO_CATEGORIES = [
+  'power-weeders',
+  'power-weeder-spare-parts',
+  'brush-cutters',
+  'lawn-mowers',
+  'crop-reapers',
+  'farm-machinery',
+  'earth-augers',
+];
 
 
 export default function sitemap(): MetadataRoute.Sitemap {
