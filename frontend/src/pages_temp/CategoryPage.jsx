@@ -268,6 +268,44 @@ function ModelsSection({ items, category }) {
   const [fuel, setFuel] = useState("all");
   const [hpRange, setHpRange] = useState("all");
 
+  // Read URL search params on client mount for shareable B2B deep links
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q") || "";
+    const f = params.get("fuel") || "all";
+    const hp = params.get("hp") || "all";
+    if (q) setSearch(q);
+    if (["all", "petrol", "diesel", "electric"].includes(f)) setFuel(f);
+    if (["all", "under-5", "5-7", "8-10", "10-plus"].includes(hp)) setHpRange(hp);
+  }, []);
+
+  const updateUrl = (newSearch, newFuel, newHp) => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams();
+    if (newSearch.trim()) params.set("q", newSearch.trim());
+    if (newFuel !== "all") params.set("fuel", newFuel);
+    if (newHp !== "all") params.set("hp", newHp);
+    const qs = params.toString();
+    const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    window.history.replaceState(null, "", newUrl);
+  };
+
+  const handleSearchChange = (val) => {
+    setSearch(val);
+    updateUrl(val, fuel, hpRange);
+  };
+
+  const handleFuelChange = (val) => {
+    setFuel(val);
+    updateUrl(search, val, hpRange);
+  };
+
+  const handleHpChange = (val) => {
+    setHpRange(val);
+    updateUrl(search, fuel, val);
+  };
+
   const extractHp = (product) => {
     const text = `${product.name} ${product.specs?.Power || ""} ${product.specs?.Engine || ""}`;
     const match = text.match(/(\d+(?:\.\d+)?)\s*HP/i);
@@ -316,6 +354,7 @@ function ModelsSection({ items, category }) {
     setSearch("");
     setFuel("all");
     setHpRange("all");
+    updateUrl("", "all", "all");
   };
 
   if (items === null) {
@@ -353,13 +392,13 @@ function ModelsSection({ items, category }) {
           <input
             type="text"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             placeholder="Search model or spec..."
             className="w-full bg-zinc-900 border border-zinc-800 rounded-lg pl-9 pr-8 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-lime-500"
           />
           {search && (
             <button
-              onClick={() => setSearch("")}
+              onClick={() => handleSearchChange("")}
               className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
             >
               <X className="h-3.5 w-3.5" />
@@ -386,7 +425,7 @@ function ModelsSection({ items, category }) {
               ].map((f) => (
                 <button
                   key={f.id}
-                  onClick={() => setFuel(f.id)}
+                  onClick={() => handleFuelChange(f.id)}
                   className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
                     fuel === f.id
                       ? "bg-lime-500 text-black font-bold"
@@ -411,7 +450,7 @@ function ModelsSection({ items, category }) {
               ].map((hp) => (
                 <button
                   key={hp.id}
-                  onClick={() => setHpRange(hp.id)}
+                  onClick={() => handleHpChange(hp.id)}
                   className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
                     hpRange === hp.id
                       ? "bg-lime-500 text-black font-bold"

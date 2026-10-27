@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Check, ChevronRight, ShieldCheck, Award, Truck, Wrench, Phone, FileText, Play, Video, ExternalLink } from "lucide-react";
 import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsProductUrl } from "@/data/catalog";
@@ -89,11 +90,12 @@ export default function ProductDetail() {
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`
   );
   const retailUrl = farmingtoolsProductUrl(product);
-  const isMachine = product.category === "power-weeders" || product.category === "power-tillers";
+  const isMachine = ["power-weeders", "lawn-mowers", "brush-cutters", "crop-reapers", "farm-machinery"].includes(product.category);
   const compatibleSpares = isMachine
     ? PRODUCTS.filter((p) => p.category === "power-weeder-spare-parts").slice(0, 4)
     : [];
   const ytVideoId = product.video ? getYouTubeId(product.video) : null;
+  const uniqueImages = Array.from(new Set(product.images || []));
 
   return (
     <div data-testid="product-detail-page" className="kg-section">
@@ -112,24 +114,26 @@ export default function ProductDetail() {
         {/* Gallery + Info */}
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6">
-            <div className="aspect-square overflow-hidden border border-zinc-800 bg-white">
-              <img
-                src={product.images?.[active]}
+            <div className="aspect-square overflow-hidden border border-zinc-800/80 rounded-xl bg-zinc-950/70 p-6 flex items-center justify-center relative shadow-inner">
+              <Image
+                src={uniqueImages[active] || "/images/products/weeder.webp"}
                 alt={product.name}
-                loading="lazy"
-                className="w-full h-full object-contain p-4"
+                width={600}
+                height={600}
+                priority
+                className="w-full h-full object-contain drop-shadow-2xl transition duration-500"
               />
             </div>
-            {product.images && Array.from(new Set(product.images)).length > 1 && (
-              <div className="grid grid-cols-5 gap-2 mt-3">
-                {Array.from(new Set(product.images)).map((src, i) => (
+            {uniqueImages.length > 1 && (
+              <div className="grid grid-cols-5 gap-2.5 mt-4">
+                {uniqueImages.map((src, i) => (
                   <button
                     key={`thumb-${i}-${src}`}
                     onClick={() => setActive(i)}
                     data-testid={`product-thumb-${i}`}
-                    className={`aspect-square overflow-hidden rounded-lg border-2 transition-all duration-200 active:scale-95 cursor-pointer ${active === i ? "border-lime-500 shadow-md ring-2 ring-lime-500/30" : "border-zinc-800 hover:border-zinc-700"}`}
+                    className={`aspect-square overflow-hidden rounded-lg border-2 p-1 bg-zinc-950/60 transition-all duration-200 active:scale-95 cursor-pointer ${active === i ? "border-lime-500 shadow-md ring-2 ring-lime-500/30" : "border-zinc-800/80 hover:border-zinc-700 opacity-75 hover:opacity-100"}`}
                   >
-                    <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
+                    <Image src={src} alt="" width={100} height={100} className="w-full h-full object-contain" />
                   </button>
                 ))}
               </div>

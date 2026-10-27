@@ -961,10 +961,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-1000d",
+    "slug": "kg-1000d-kibao",
     "category": "power-weeders",
-    "name": "KrishiGears Xi-1000D Kibao Series (7.0 HP max, Diesel)",
-    "model": "Xi-1000D Kibao Series",
+    "name": "KrishiGears KG-1000D Kibao Series (7.0 HP max, Diesel)",
+    "model": "KG-1000D Kibao Series",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -974,7 +974,7 @@ export const PRODUCTS = [
     "price": 58000,
     "comparePrice": 68000,
     "images": [
-      "/images/catalog/bi-x1-1000d.webp"
+      "/images/catalog/kg-1000d-kibao.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1081,10 +1081,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1p-1050d",
+    "slug": "kg-1050d-kibao",
     "category": "power-weeders",
-    "name": "KrishiGears 1050 Kibao Series (7.0 HP max, Diesel / 4 Litre)",
-    "model": "1050 Kibao Series",
+    "name": "KrishiGears KG-1050D Kibao Series (7.0 HP max, Diesel / 4 Litre)",
+    "model": "KG-1050D Kibao Series",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1094,7 +1094,7 @@ export const PRODUCTS = [
     "price": 58000,
     "comparePrice": 68000,
     "images": [
-      "/images/catalog/bi-x1p-1050d.webp"
+      "/images/catalog/kg-1050d-kibao.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1141,10 +1141,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-1150d",
+    "slug": "kg-1150d-manual",
     "category": "power-weeders",
-    "name": "KrishiGears Xi-1150 Diesel (Manual Start) (7 HP, Diesel)",
-    "model": "Xi-1150 Diesel (Manual Start)",
+    "name": "KrishiGears KG-1150D Diesel (Manual Start) (7 HP, Diesel)",
+    "model": "KG-1150D Diesel (Manual Start)",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1154,7 +1154,7 @@ export const PRODUCTS = [
     "price": 58000,
     "comparePrice": 68000,
     "images": [
-      "/images/catalog/bi-x1-1150d.webp"
+      "/images/catalog/kg-1150d-manual.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1200,10 +1200,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1p-1150e",
+    "slug": "kg-1150d-electric",
     "category": "power-weeders",
-    "name": "KrishiGears Xi-1150 Diesel (Electric Start) (7 HP, Diesel)",
-    "model": "Xi-1150 Diesel (Electric Start)",
+    "name": "KrishiGears KG-1150D Diesel (Electric Start) (7 HP, Diesel)",
+    "model": "KG-1150D Diesel (Electric Start)",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1213,7 +1213,7 @@ export const PRODUCTS = [
     "price": 68000,
     "comparePrice": 78000,
     "images": [
-      "/images/catalog/bi-x1p-1150e.webp"
+      "/images/catalog/kg-1150d-electric.webp"
     ],
     "specs": {
       "Starting": "Electric",
@@ -1259,10 +1259,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-188d",
+    "slug": "kg-188d-recoil",
     "category": "power-weeders",
-    "name": "KrishiGears Xi-188D Diesel (Recoil) (7.0 HP max, Diesel / 5.5 Litre)",
-    "model": "Xi-188D Diesel (Recoil)",
+    "name": "KrishiGears KG-188D Diesel (Recoil) (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "KG-188D Diesel (Recoil)",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1272,7 +1272,7 @@ export const PRODUCTS = [
     "price": 68000,
     "comparePrice": 78000,
     "images": [
-      "/images/catalog/bi-x1-188d.webp"
+      "/images/catalog/kg-188d-recoil.webp"
     ],
     "specs": {
       "Starting": "Recoil",
@@ -1318,10 +1318,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1p-188e",
+    "slug": "kg-188d-electric",
     "category": "power-weeders",
-    "name": "KrishiGears Xi-188D Diesel (Electric Start) (7.0 HP max, Diesel / 5.5 Litre)",
-    "model": "Xi-188D Diesel (Electric Start)",
+    "name": "KrishiGears KG-188D Diesel (Electric Start) (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "KG-188D Diesel (Electric Start)",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1331,7 +1331,7 @@ export const PRODUCTS = [
     "price": 68000,
     "comparePrice": 78000,
     "images": [
-      "/images/catalog/bi-x1p-188e.webp"
+      "/images/catalog/kg-188d-electric.webp"
     ],
     "specs": {
       "Starting": "Electric",
@@ -1497,10 +1497,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-750p",
+    "slug": "kg-750p-diesel",
     "category": "power-weeders",
-    "name": "KrishiGears X1-750P Series (7.0 HP max, Diesel)",
-    "model": "X1-750P Series",
+    "name": "KrishiGears KG-750P Series (7.0 HP max, Diesel)",
+    "model": "KG-750P Series",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1510,7 +1510,7 @@ export const PRODUCTS = [
     "price": 58000,
     "comparePrice": 68000,
     "images": [
-      "/images/catalog/bi-x1-750p.webp"
+      "/images/catalog/kg-750p-diesel.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1557,10 +1557,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-186br",
+    "slug": "kg-186-backrotary",
     "category": "power-weeders",
-    "name": "KrishiGears X1-186 Back Rotary Series (7.0 HP max, Diesel / 5.5 Litre)",
-    "model": "X1-186 Back Rotary Series",
+    "name": "KrishiGears KG-186 Back Rotary Series (7.0 HP max, Diesel / 5.5 Litre)",
+    "model": "KG-186 Back Rotary Series",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1570,7 +1570,7 @@ export const PRODUCTS = [
     "price": 58000,
     "comparePrice": 68000,
     "images": [
-      "/images/catalog/bi-x1-186br.webp"
+      "/images/catalog/kg-186-backrotary.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1617,10 +1617,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-1350-4wd",
+    "slug": "kg-1350-4wd",
     "category": "power-weeders",
-    "name": "KrishiGears X1-1350 4WD Series (7.0 HP max, Diesel)",
-    "model": "X1-1350 4WD Series",
+    "name": "KrishiGears KG-1350 4WD Series (7.0 HP max, Diesel)",
+    "model": "KG-1350 4WD Series",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1630,7 +1630,7 @@ export const PRODUCTS = [
     "price": 145000,
     "comparePrice": 165000,
     "images": [
-      "/images/catalog/bi-x1-1350-4wd.webp"
+      "/images/catalog/kg-1350-4wd.webp"
     ],
     "specs": {
       "Starting": "Manual",
@@ -1792,10 +1792,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "bi-x1-mw-70",
+    "slug": "kg-mw-70-mini",
     "category": "power-weeders",
-    "name": "KrishiGears X1-MW-70 Mini Weeder (7 HP, Petrol)",
-    "model": "X1-MW-70 Mini Weeder",
+    "name": "KrishiGears KG-MW-70 Mini Weeder (7 HP, Petrol)",
+    "model": "KG-MW-70 Mini Weeder",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -1805,7 +1805,7 @@ export const PRODUCTS = [
     "price": 24000,
     "comparePrice": 28000,
     "images": [
-      "/images/catalog/bi-x1-mw-70.webp"
+      "/images/catalog/kg-mw-70-mini.webp"
     ],
     "specs": {
       "Engine Model": "1E48F-S",
@@ -10015,10 +10015,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-mitsuyama-my-573d",
+    "slug": "kg-my-573d",
     "category": "power-weeders",
-    "name": "KrishiGears MY-573D Power Weeder | 247 CC Diesel",
-    "model": "MY-573D",
+    "name": "KrishiGears KG-MY-573D Power Weeder | 247 CC Diesel",
+    "model": "KG-MY-573D",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -10028,10 +10028,10 @@ export const PRODUCTS = [
     "price": 54000,
     "comparePrice": 64000,
     "images": [
-      "/images/catalog/rly-mitsuyama-my-573d.webp",
-      "/images/catalog/rly-mitsuyama-my-573d-1.webp",
-      "/images/catalog/rly-mitsuyama-my-573d-2.webp",
-      "/images/catalog/rly-mitsuyama-my-573d-3.webp"
+      "/images/catalog/kg-my-573d.webp",
+      "/images/catalog/kg-my-573d-1.webp",
+      "/images/catalog/kg-my-573d-2.webp",
+      "/images/catalog/kg-my-573d-3.webp"
     ],
     "specs": {
       "Model": "KrishiGears MY-573D",
@@ -10145,10 +10145,10 @@ export const PRODUCTS = [
     "gst": 12
   },
   {
-    "slug": "rly-mitsuyama-my-585d",
+    "slug": "kg-my-585d",
     "category": "power-weeders",
-    "name": "KrishiGears MY-585D Diesel Power Weeder | 406cc, 40 Blades",
-    "model": "MY-585D",
+    "name": "KrishiGears KG-MY-585D Diesel Power Weeder | 406cc, 40 Blades",
+    "model": "KG-MY-585D",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -10158,9 +10158,9 @@ export const PRODUCTS = [
     "price": 56000,
     "comparePrice": 66000,
     "images": [
-      "/images/catalog/rly-mitsuyama-my-585d.webp",
-      "/images/catalog/rly-mitsuyama-my-585d-1.webp",
-      "/images/catalog/rly-mitsuyama-my-585d-2.webp"
+      "/images/catalog/kg-my-585d.webp",
+      "/images/catalog/kg-my-585d-1.webp",
+      "/images/catalog/kg-my-585d-2.webp"
     ],
     "specs": {
       "Model": "KrishiGears MY-585D",
