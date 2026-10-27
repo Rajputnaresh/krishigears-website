@@ -97,8 +97,14 @@ export default function SpareParts() {
             farmers with guaranteed OEM fitment.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/products/category/power-weeder-spare-parts"
+              className="bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-7 py-4 rounded-md inline-flex items-center gap-2 transition shadow-lg shadow-lime-500/20"
+            >
+              Browse 70+ In-Stock Spares →
+            </Link>
             <EnquiryDialog product={`Spare Parts Bulk Order in ${location}`} trigger={
-              <button data-testid="parts-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Order Spare Parts</button>
+              <button data-testid="parts-enquiry" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Submit RFQ / Bulk Order</button>
             } />
             <a href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hi, I need power weeder spare parts in ${location}. Looking for: `)}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label={`WhatsApp Parts Counter for ${location}`} onClick={() => trackWhatsAppClick("spare_parts", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Parts Counter</a>
           </div>

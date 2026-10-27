@@ -14,7 +14,8 @@ import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 const NAV = [
   { to: "/", labelKey: "nav.home" },
-  { to: "/about", labelKey: "nav.aboutUs" },
+  { to: "/products", labelKey: "nav.products", fallback: "Products" },
+  { to: "/products/category/power-weeder-spare-parts", labelKey: "nav.spareParts", fallback: "Spare Parts" },
   { to: "/dealer-network", labelKey: "nav.dealerNetwork" },
   { to: "/locations", labelKey: "nav.locations", fallback: "Locations" },
   { to: "/glossary", labelKey: "nav.glossary", fallback: "Specs" },
@@ -201,6 +202,14 @@ export default function Header() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Link
+            href="/products/category/power-weeder-spare-parts"
+            data-testid="nav-spare-parts"
+            className="px-3 py-2 text-sm font-semibold transition text-lime-400 hover:text-lime-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md"
+          >
+            Spare Parts
+          </Link>
 
           <Link
             href="/dealer-network"

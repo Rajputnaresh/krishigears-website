@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/products/category/power-tillers',
+        destination: '/products/category/power-weeders',
+        permanent: true,
+      },
+      {
         source: '/:path*',
         has: [
           {
