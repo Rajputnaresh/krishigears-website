@@ -207,9 +207,12 @@ export default function Footer() {
       <div className="border-t border-zinc-850">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="text-sm text-zinc-400">© {new Date().getFullYear()} {COMPANY.legalName}. {t('footer.allRights', 'All rights reserved.')}</div>
-          <nav aria-label="Privacy" className="flex flex-wrap gap-4 text-sm text-zinc-400">
+          <nav aria-label="Legal & Policies" className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-400">
             <Link href="/privacy-policy" className="hover:text-lime-400 underline underline-offset-4">Privacy</Link>
-            <Link href="/data-deletion" className="hover:text-lime-400 underline underline-offset-4">Data deletion</Link>
+            <Link href="/terms-and-conditions" className="hover:text-lime-400 underline underline-offset-4">Terms &amp; Conditions</Link>
+            <Link href="/refund-policy" className="hover:text-lime-400 underline underline-offset-4">Refund Policy</Link>
+            <Link href="/cancellation-policy" className="hover:text-lime-400 underline underline-offset-4">Cancellation Policy</Link>
+            <Link href="/data-deletion" className="hover:text-lime-400 underline underline-offset-4">Data Deletion</Link>
           </nav>
         </div>
       </div>

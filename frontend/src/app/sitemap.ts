@@ -88,6 +88,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: SITE_CONTENT_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/terms-and-conditions`,
+      lastModified: SITE_CONTENT_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/refund-policy`,
+      lastModified: SITE_CONTENT_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/cancellation-policy`,
+      lastModified: SITE_CONTENT_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
   ];
 
   // Add individual product URLs
