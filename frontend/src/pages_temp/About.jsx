@@ -39,6 +39,62 @@ export default function About() {
         </div>
       </section>
 
+      {/* Brands & Corporate Structure (Razorpay KYC & Operational Disclosure) */}
+      <section className="kg-section bg-zinc-950 border-b border-zinc-800">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="kg-eyebrow">Corporate Structure &amp; Operating Brands</div>
+          <h2 className="kg-h2 mt-3 text-white">Two focused brands, <span className="text-lime-500">one legal entity.</span></h2>
+          <p className="mt-4 text-zinc-300 max-w-3xl leading-relaxed">
+            <strong>{COMPANY.legalName}</strong> operates two dedicated, synergistic brands to serve the agricultural community across both wholesale commercial and retail consumer sectors:
+          </p>
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <div className="kg-card p-6 border-zinc-800 bg-zinc-900/40 rounded-xl">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-display font-bold text-xl text-white">KrishiGears (B2B Division)</h3>
+                <span className="px-2.5 py-1 text-xs font-semibold rounded bg-lime-500/10 text-lime-400 border border-lime-500/20">B2B &amp; Dealerships</span>
+              </div>
+              <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                Our core B2B machinery brand dedicated to machinery dealership networks, district distributors, FPO bulk procurement, institutional tenders, and OEM spare parts supply across India. Supported by direct GST billing, transport logistics, and technical field engineers.
+              </p>
+              <div className="text-xs text-zinc-400 font-mono space-y-1 pt-3 border-t border-zinc-800/80">
+                <div>Portals: <span className="text-zinc-200">krishigears.com</span> · <span className="text-zinc-200">erp.krishigears.in</span></div>
+                <div>Focus: 7HP &amp; 9HP Power Weeders, Tillers, Heavy Augers &amp; Wholesale Spares</div>
+              </div>
+            </div>
+
+            <div className="kg-card p-6 border-zinc-800 bg-zinc-900/40 rounded-xl">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-display font-bold text-xl text-white">FarmingTools.in (B2C Retail Storefront)</h3>
+                <span className="px-2.5 py-1 text-xs font-semibold rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">Direct-to-Farmer Retail</span>
+              </div>
+              <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                Our direct-to-consumer e-commerce storefront owned and operated by {COMPANY.legalName}. Enables individual farmers, smallholders, and hobbyists to purchase agricultural tools, sprayers, harvesters, brush cutter attachments, and accessories online with transparent pricing, online payments, and doorstep delivery.
+              </p>
+              <div className="text-xs text-zinc-400 font-mono space-y-1 pt-3 border-t border-zinc-800/80 mb-4">
+                <div>Storefront: <a href="https://farmingtools.in" target="_blank" rel="noopener noreferrer" className="text-sky-400 underline">https://farmingtools.in</a></div>
+                <div>Focus: Direct retail orders, parcel delivery, farmer COD &amp; prepaid checkout</div>
+              </div>
+              <a href="https://farmingtools.in" target="_blank" rel="noopener noreferrer" className="text-xs text-lime-400 font-bold hover:underline inline-flex items-center gap-1">
+                Visit FarmingTools.in Retail Storefront →
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-300 font-mono leading-relaxed">
+            <div className="font-semibold text-white mb-1.5 flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4 text-lime-400" />
+              Corporate Incorporation &amp; Payment Gateway Underwriting Details:
+            </div>
+            <div><strong>Company Name:</strong> {COMPANY.legalName}</div>
+            <div><strong>CIN:</strong> {COMPANY.cin} · <strong>GSTIN:</strong> {COMPANY.gst} · <strong>PAN:</strong> {COMPANY.pan}</div>
+            <div><strong>Registered Office:</strong> {COMPANY.address}</div>
+            <div className="mt-2 text-zinc-400 border-t border-zinc-800/80 pt-2">
+              Both KrishiGears and FarmingTools.in operate under unified financial, billing, and regulatory governance of KRISHIGEARS INDIA PRIVATE LIMITED. Payment collections via Razorpay for both KrishiGears machinery token advances and FarmingTools.in orders settle into the registered corporate bank account of KRISHIGEARS INDIA PRIVATE LIMITED.
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="kg-section">
         <div className="max-w-[1200px] mx-auto">

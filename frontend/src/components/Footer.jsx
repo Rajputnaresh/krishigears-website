@@ -51,8 +51,11 @@ export default function Footer() {
               <div className="text-sm tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>
             </div>
           </div>
-          <p className="mt-6 text-zinc-300 leading-relaxed text-sm">
+          <p className="mt-4 text-zinc-300 leading-relaxed text-sm">
             {t('footer.description', 'B2B agricultural machinery brand for dealer networks, distributor partners, institutional procurement, OEM programs and service-backed supply across India.')}
+          </p>
+          <p className="mt-2 text-zinc-400 text-xs leading-relaxed">
+            KrishiGears is the B2B machinery division of <strong>{COMPANY.legalName}</strong>. Retail farmer orders are fulfilled online via <a href="https://farmingtools.in" target="_blank" rel="noopener noreferrer" className="text-lime-400 font-semibold hover:underline">FarmingTools.in</a>.
           </p>
           <div className="mt-6 flex gap-3">
           {[
@@ -204,6 +207,19 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Corporate Entity & Operating Brands Disclosure (Razorpay / Compliance) */}
+      <div className="border-t border-zinc-800 bg-zinc-950/70 py-4 px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto text-xs text-zinc-400 leading-relaxed flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+          <div>
+            <span className="font-semibold text-zinc-200">Corporate Identity &amp; Operating Brands:</span>{" "}
+            <strong>{COMPANY.legalName}</strong> (CIN: {COMPANY.cin} · GSTIN: {COMPANY.gst}) owns and operates both <strong>KrishiGears</strong> (B2B Machinery, Dealerships &amp; OEM Supply) and <strong>FarmingTools.in</strong> (Direct-to-Farmer Retail E-Commerce Storefront). All commercial invoices, payments via Razorpay, and warranties are legally issued under {COMPANY.legalName}.
+          </div>
+          <div className="shrink-0 font-mono text-[11px] text-zinc-400 border border-zinc-800 px-2.5 py-1 rounded bg-zinc-900">
+            Razorpay Merchant Verified
+          </div>
+        </div>
+      </div>
+
       <div className="border-t border-zinc-850">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="text-sm text-zinc-400">© {new Date().getFullYear()} {COMPANY.legalName}. {t('footer.allRights', 'All rights reserved.')}</div>
@@ -213,6 +229,7 @@ export default function Footer() {
             <Link href="/refund-policy" className="hover:text-lime-400 underline underline-offset-4">Refund Policy</Link>
             <Link href="/cancellation-policy" className="hover:text-lime-400 underline underline-offset-4">Cancellation Policy</Link>
             <Link href="/data-deletion" className="hover:text-lime-400 underline underline-offset-4">Data Deletion</Link>
+            <a href="https://farmingtools.in" target="_blank" rel="noopener noreferrer" className="text-lime-400 hover:text-lime-300 font-semibold underline underline-offset-4">FarmingTools.in (Retail Store) ↗</a>
           </nav>
         </div>
       </div>

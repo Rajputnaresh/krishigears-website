@@ -14,34 +14,52 @@ export default function TermsAndConditionsPage() {
       <p className="mt-3 text-sm text-zinc-400">Last updated: 28 October 2026</p>
 
       <section className="mt-8 space-y-3">
-        <h2 className="text-xl font-semibold">1. Corporate Identity &amp; Legal Entity</h2>
+        <h2 className="text-xl font-semibold">1. Corporate Identity &amp; Operating Brands</h2>
         <p className="leading-relaxed text-zinc-300">
-          These Terms and Conditions constitute a legally binding agreement between you (&ldquo;Customer&rdquo;, &ldquo;Buyer&rdquo;, or &ldquo;User&rdquo;) and <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong> (&ldquo;KrishiGears&rdquo;, &ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a private limited company incorporated under the laws of India.
+          These Terms and Conditions constitute a legally binding agreement between you (&ldquo;Customer&rdquo;, &ldquo;Buyer&rdquo;, or &ldquo;User&rdquo;) and <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong> (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a private limited company incorporated under the laws of India.
         </p>
+        <p className="leading-relaxed text-zinc-300">
+          <strong>Operating Brands &amp; Portals:</strong> KRISHIGEARS INDIA PRIVATE LIMITED operates two specialized agricultural machinery channels:
+        </p>
+        <ul className="list-disc pl-5 space-y-1.5 text-zinc-300 text-sm">
+          <li><strong>KrishiGears</strong> (<code>https://krishigears.com</code> &amp; <code>https://erp.krishigears.in</code>): The B2B machinery manufacturing, wholesale dealer distribution, institutional procurement, and OEM spare parts division.</li>
+          <li><strong>FarmingTools.in</strong> (<code>https://farmingtools.in</code>): The official consumer / direct-to-farmer retail e-commerce storefront for retail purchase of farm equipment, tools, sprayers, and accessories.</li>
+        </ul>
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-xs text-zinc-300 space-y-1 font-mono">
-          <div><strong>Company Name:</strong> KRISHIGEARS INDIA PRIVATE LIMITED</div>
+          <div><strong>Corporate Name:</strong> KRISHIGEARS INDIA PRIVATE LIMITED</div>
+          <div><strong>Operating Brands:</strong> KrishiGears &amp; FarmingTools.in</div>
           <div><strong>CIN:</strong> U46539RJ2026PTC117758</div>
-          <div><strong>GSTIN:</strong> 08AANCK2216L1ZA · PAN: AANCK2216L</div>
+          <div><strong>GSTIN:</strong> 08AANCK2216L1ZA · PAN: AANCK2216L · TAN: JPRK10437A</div>
           <div><strong>Registered Office:</strong> Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026, India</div>
-          <div><strong>Official Email:</strong> billing@krishigears.com / founder@krishigears.com</div>
-          <div><strong>Phone / Helpline:</strong> +91 60060 78815</div>
+          <div><strong>Corporate Emails:</strong> billing@krishigears.com / founder@krishigears.com / support@farmingtools.in</div>
+          <div><strong>Customer Helpline:</strong> +91 60060 78815 (Mon–Sat, 9:30 AM – 6:30 PM IST)</div>
         </div>
       </section>
 
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">2. Scope of Services &amp; Products</h2>
         <p className="leading-relaxed text-zinc-300">
-          KrishiGears operates the online portals <strong>https://krishigears.com</strong> and <strong>https://farmingtools.in</strong>, supplying heavy-duty agricultural machinery, including 7HP and 9HP Power Weeders, tillers, brush cutters, sprayers, attachments, and genuine replacement spare parts. Equipment is manufactured and factory-tested at our associate manufacturing facility, SourceIndia Industries, Jaipur, Rajasthan, prior to dispatch.
+          KRISHIGEARS INDIA PRIVATE LIMITED provides agricultural machinery and implements through its brand portals:
+        </p>
+        <ul className="list-disc pl-5 space-y-1.5 text-zinc-300 text-sm">
+          <li><strong>B2B Wholesale &amp; Dealerships (KrishiGears):</strong> Serving machinery dealerships, district distributors, FPOs, and custom hiring centres with 7HP/9HP power weeders, back-rotary tillers, post hole diggers, and bulk OEM spares. Orders are supported by formal GST invoices, transit e-way bills, and dealer agreements.</li>
+          <li><strong>Consumer &amp; Retail E-Commerce (FarmingTools.in):</strong> Serving individual farmers, landscapers, and orchardists across India with direct parcel dispatches, genuine attachments, handheld sprayers, and brush cutter components.</li>
+        </ul>
+        <p className="leading-relaxed text-zinc-300 text-sm">
+          All machines undergo factory quality checks at our associate manufacturing facility, SourceIndia Industries, Jaipur, Rajasthan, prior to boxing and dispatch.
         </p>
       </section>
 
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">3. Order Booking &amp; Payment Gateway Terms</h2>
         <p className="leading-relaxed text-zinc-300">
-          Storefront and tele-sales machinery orders operate on a standard token advance model. Customers pay a nominal advance deposit (e.g. ₹2,500) online to allocate chassis and engine serial numbers at the factory. The remaining balance is payable upon delivery at the destination transport hub or authorized dealer location.
+          Machinery orders placed via KrishiGears or tele-sales operate on a standard token advance booking model (typically ₹2,500 advance deposit online) or proforma invoice, with remaining balance payable upon delivery at the destination transport hub or authorized dealer location. Retail orders on FarmingTools.in may be paid online in full or via booking token.
         </p>
         <p className="leading-relaxed text-zinc-300">
-          All online payments (including UPI, NetBanking, Debit/Credit Cards) are processed securely through RBI-authorized payment aggregators, including <strong>Razorpay</strong>. We do not store or capture your raw credit card numbers, CVVs, or banking passwords on our servers. All transactions are encrypted with 256-bit SSL technology.
+          All online payments across both <strong>KrishiGears</strong> and <strong>FarmingTools.in</strong> (including UPI, NetBanking, Debit/Credit Cards, and Wallets) are processed securely through RBI-authorized payment aggregators, specifically <strong>Razorpay</strong>, under the verified corporate merchant account of <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong>.
+        </p>
+        <p className="leading-relaxed text-zinc-300 text-sm">
+          We do not capture, record, or store raw payment card credentials, CVVs, or internet banking credentials on our application servers. All transactions are protected by end-to-end 256-bit SSL encryption.
         </p>
       </section>
 

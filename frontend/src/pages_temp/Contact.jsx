@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Send, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -43,6 +43,7 @@ export default function Contact() {
         <div className="mt-12 grid lg:grid-cols-12 gap-10">
           {/* Channels */}
           <div className="lg:col-span-5 space-y-4">
+            <ChannelCard icon={ShoppingBag} title="Consumer Retail Storefront" value="FarmingTools.in (Direct-to-Farmer)" href="https://farmingtools.in" testid="contact-farmingtools" />
             <ChannelCard icon={Phone} title="Direct Hotline" value={COMPANY.phone} href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} testid="contact-call" onClick={() => trackPhoneClick("contact_page")} />
             <ChannelCard icon={MessageCircle} title="WhatsApp Desk" value={`+${COMPANY.whatsapp}`} href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} testid="contact-whatsapp" onClick={() => trackWhatsAppClick("contact_page")} />
             <ChannelCard icon={Mail} title="General Desk" value={COMPANY.contact} href={`mailto:${COMPANY.contact}`} testid="contact-email-contact" />

@@ -79,9 +79,10 @@ export default function CancellationPolicyPage() {
         </p>
         <div className="text-sm text-zinc-300 space-y-1 font-mono">
           <div>KRISHIGEARS INDIA PRIVATE LIMITED</div>
+          <div>Operating Brands: <strong>KrishiGears</strong> (B2B) &amp; <strong>FarmingTools.in</strong> (B2C)</div>
           <div>CIN: U46539RJ2026PTC117758 · GSTIN: 08AANCK2216L1ZA</div>
           <div>Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026</div>
-          <div>Email: billing@krishigears.com · Phone: +91 60060 78815</div>
+          <div>Email: billing@krishigears.com / support@farmingtools.in · Phone: +91 60060 78815</div>
         </div>
       </section>
 

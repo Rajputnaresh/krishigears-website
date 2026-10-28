@@ -60,6 +60,8 @@ export const COMPANY = {
   cin: "U46539RJ2026PTC117758",
   pan: "AANCK2216L",
   tan: "JPRK10437A",
+  retailBrand: "FarmingTools.in",
+  retailWebsite: "https://farmingtools.in",
 };
 
 // FarmingTools.in — sister B2C ecommerce site for consumer transactions.

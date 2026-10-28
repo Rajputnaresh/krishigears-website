@@ -32,6 +32,7 @@ export function organizationJsonLd() {
       addressCountry: "IN",
     },
     sameAs: [
+      "https://farmingtools.in",
       "https://www.facebook.com/krishigears",
       "https://www.instagram.com/krishigears",
       "https://www.youtube.com/@krishigears",

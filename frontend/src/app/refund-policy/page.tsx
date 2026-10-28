@@ -16,14 +16,14 @@ export default function RefundPolicyPage() {
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">1. Overview and Core Principle</h2>
         <p className="leading-relaxed text-zinc-300">
-          At <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong> (&ldquo;KrishiGears&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), we stand behind the durability and performance of our agricultural machinery. We maintain a clear, fair, and transparent policy regarding refunds and returns for our farmers, dealers, and institutional partners across India.
+          At <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong> (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), we stand behind the durability and performance of our agricultural machinery. We maintain a clear, fair, and transparent refund and return policy governing both our B2B commercial platform <strong>KrishiGears</strong> (<code>https://krishigears.com</code>) and our consumer retail storefront <strong>FarmingTools.in</strong> (<code>https://farmingtools.in</code>).
         </p>
       </section>
 
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">2. Pre-Dispatch Advance Token Refunds (100% Refundable)</h2>
         <p className="leading-relaxed text-zinc-300">
-          When you place a booking for machinery (such as a 7HP or 9HP Power Weeder) via our website or authorized sales desk, an advance token deposit (standard ₹2,500) is paid online via Razorpay to reserve factory allocation at SourceIndia Industries, Jaipur.
+          When you place an order or booking for machinery (such as a 7HP or 9HP Power Weeder) via KrishiGears, FarmingTools.in, or our authorized sales desk, an advance token deposit (standard ₹2,500) or full order amount is paid online via Razorpay to reserve factory allocation at SourceIndia Industries, Jaipur.
         </p>
         <p className="leading-relaxed text-zinc-300">
           <strong>If you choose to cancel your booking prior to factory dispatch and bilty issuance, you are entitled to a full 100% refund of your advance deposit.</strong> No cancellation charges or processing penalties will be deducted.
@@ -62,7 +62,7 @@ export default function RefundPolicyPage() {
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-sm text-zinc-300 space-y-2">
           <div><strong>• Initiation:</strong> Refunds are initiated by our billing department within <strong>2 business days</strong> of approval.</div>
           <div><strong>• Processing Time:</strong> Funds are credited back to the customer&rsquo;s original payment method (Bank Account, UPI, or Debit/Credit Card) within <strong>5 to 7 business days</strong>, subject to standard banking settlement cycles.</div>
-          <div><strong>• Payment Channel:</strong> Online refunds are settled automatically through our RBI-regulated payment gateway partner, <strong>Razorpay</strong>. Direct NEFT/RTGS refunds are credited to the verified account from which funds were transferred.</div>
+          <div><strong>• Payment Channel:</strong> Online refunds are settled automatically through our RBI-regulated payment gateway partner, <strong>Razorpay</strong>, to the customer&rsquo;s original payment method under merchant account <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong>. Direct NEFT/RTGS refunds are credited to the verified account from which funds were transferred.</div>
         </div>
       </section>
 
@@ -86,7 +86,8 @@ export default function RefundPolicyPage() {
         </p>
         <div className="text-sm text-zinc-300 space-y-1">
           <div><strong>Billing &amp; Refunds Desk:</strong> KRISHIGEARS INDIA PRIVATE LIMITED</div>
-          <div>Email: <a href="mailto:billing@krishigears.com" className="underline text-lime-400">billing@krishigears.com</a></div>
+          <div>Operating Brands: <strong>KrishiGears</strong> &amp; <strong>FarmingTools.in</strong></div>
+          <div>Email: <a href="mailto:billing@krishigears.com" className="underline text-lime-400">billing@krishigears.com</a> / <a href="mailto:support@farmingtools.in" className="underline text-lime-400">support@farmingtools.in</a></div>
           <div>Customer Support: <a href="tel:+916006078815" className="underline text-lime-400">+91 60060 78815</a></div>
           <div>Address: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026, India</div>
         </div>
