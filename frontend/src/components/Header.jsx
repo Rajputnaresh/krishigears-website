@@ -100,9 +100,19 @@ export default function Header() {
             GSTIN: <span className="font-mono text-zinc-100">{COMPANY.gst}</span>
           </span>
           <span className="text-zinc-700 hidden sm:inline">|</span>
-          <span className="text-zinc-300 hidden sm:inline">FMTTI Tested Machinery</span>
+          <a
+            href="https://farmingtools.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lime-400 hover:text-lime-300 hover:underline font-semibold hidden sm:inline-flex items-center gap-1"
+          >
+            <span>🛒 Retail Store: FarmingTools.in</span>
+            <span className="text-[10px]">↗</span>
+          </a>
           <span className="text-zinc-700 hidden md:inline">|</span>
-          <span className="text-zinc-400 hidden md:inline">Factory Dispatch 24–48h PAN India</span>
+          <span className="text-zinc-300 hidden md:inline">FMTTI Tested Machinery</span>
+          <span className="text-zinc-700 hidden lg:inline">|</span>
+          <span className="text-zinc-400 hidden lg:inline">Factory Dispatch 24–48h PAN India</span>
         </div>
 
         {/* Right Pinned: Language & Sunlight Controls */}
@@ -276,6 +286,19 @@ export default function Header() {
 
         {/* Desktop Actions — strictly single-line, uniform height (h-10) */}
         <div className="hidden lg:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+          {/* Direct Link to B2C Retail Storefront */}
+          <a
+            href="https://farmingtools.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="nav-farmingtools-store"
+            className="h-10 px-3 flex items-center gap-1.5 text-xs font-bold text-sky-400 border border-sky-500/40 bg-sky-500/10 hover:bg-sky-500/20 hover:text-sky-300 rounded-md transition"
+            title="FarmingTools.in — Official Farmer B2C Retail Storefront"
+          >
+            <span>🛒 FarmingTools.in</span>
+            <span className="text-[10px]">↗</span>
+          </a>
+
           {/* Direct Phone Dial (h-10) */}
           <a
             href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`}
@@ -335,6 +358,25 @@ export default function Header() {
               </div>
             </div>
             <nav className="p-5 flex flex-col gap-1">
+              {/* FarmingTools Retail Storefront Callout */}
+              <div className="p-3.5 mb-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-xs">
+                <div className="font-bold text-sky-400 flex items-center justify-between">
+                  <span>Farmer Retail Storefront</span>
+                  <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300">B2C Retail</span>
+                </div>
+                <p className="text-zinc-300 text-[11px] mt-1.5 leading-relaxed">
+                  Individual farmers &amp; consumers can purchase agricultural machines &amp; spare parts directly online.
+                </p>
+                <a
+                  href="https://farmingtools.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2.5 inline-flex items-center gap-1 text-lime-400 font-bold hover:underline"
+                >
+                  Visit FarmingTools.in Store ↗
+                </a>
+              </div>
+
               {/* Primary Navigation Links */}
               <div className="flex flex-col">
                 {NAV.map((item) => (

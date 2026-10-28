@@ -57,8 +57,8 @@ export default function Home() {
 
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 py-24 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8 animate-fade-up">
-            <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.25em] uppercase text-lime-400 font-bold rounded-sm">
-              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> Premium Agricultural Machinery · GST Registered
+            <div className="inline-flex items-center gap-2 border border-lime-500/40 bg-lime-500/10 px-3 py-1.5 text-xs tracking-[0.2em] uppercase text-lime-400 font-bold rounded-sm">
+              <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> KRISHIGEARS INDIA PRIVATE LIMITED · B2B MACHINERY &amp; FARMINGTOOLS.IN
             </div>
             <h1 className="kg-h1 mt-6 text-balance">
               For the <span className="text-lime-500">Farmers,</span><br/>
@@ -68,7 +68,7 @@ export default function Home() {
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
             <p className="mt-6 text-zinc-300 text-lg max-w-2xl leading-relaxed">
-              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India. Retail buyers can purchase online through FarmingTools.in.
+              B2B agricultural machinery supply, dealer network development, OEM distribution and institutional procurement support across India by <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong>. Individual farmer &amp; consumer retail orders are fulfilled online via <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" className="text-lime-400 font-semibold underline">FarmingTools.in</a>.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6">
               <a
@@ -78,7 +78,7 @@ export default function Home() {
                 data-testid="hero-buy-online"
                 className="group inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-8 py-4 rounded-md transition shadow-lg shadow-lime-500/20"
               >
-                Buy Online
+                Buy on FarmingTools.in
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
               </a>
               <div className="flex items-center gap-4">
