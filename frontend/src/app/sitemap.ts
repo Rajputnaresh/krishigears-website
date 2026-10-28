@@ -35,6 +35,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/terms-and-conditions`,
+      lastModified: new Date('2026-10-28'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/refund-policy`,
+      lastModified: new Date('2026-10-28'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/cancellation-policy`,
+      lastModified: new Date('2026-10-28'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: new Date('2026-10-28'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/dealer-network`,
       lastModified: SITE_CONTENT_UPDATED,
       changeFrequency: 'weekly',
