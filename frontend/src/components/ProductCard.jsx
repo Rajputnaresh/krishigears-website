@@ -194,6 +194,38 @@ export default function ProductCard({ product }) {
                 <BadgeCheck className="h-3.5 w-3.5 text-lime-500"/> {product.model}
               </div>
             )}
+
+            {/* Smart Pricing Block (B2C Retail Benchmark + Wholesale MOQ Indicator) */}
+            {product.price ? (
+              <div className="mt-3 pt-2.5 border-t border-zinc-800/70 flex items-center justify-between gap-2">
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] uppercase tracking-wider text-zinc-400 font-bold">
+                      Direct B2C Price
+                    </span>
+                    <span className="text-[9px] font-bold text-lime-400 bg-lime-500/10 border border-lime-500/30 px-1 py-0.2 rounded">
+                      Incl. 12% GST
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-0.5">
+                    <span className="text-base sm:text-lg font-black text-lime-400 font-display">
+                      ₹{Number(product.price).toLocaleString("en-IN")}
+                    </span>
+                    <span className="text-[10px] text-zinc-400 font-medium">
+                      / unit
+                    </span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="text-[10px] uppercase tracking-wider text-amber-400 font-bold block">
+                    Dealer Wholesale
+                  </span>
+                  <span className="text-[11px] font-semibold text-zinc-300 block">
+                    Slab on MOQ 2+
+                  </span>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </Link>

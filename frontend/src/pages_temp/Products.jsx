@@ -70,7 +70,22 @@ export default function Products() {
                     {prod.features?.[0] || "Heavy-duty commercial agricultural machine built to FMTTI standards."}
                   </p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                {prod.price ? (
+                  <div className="mt-3 pt-2.5 border-t border-zinc-800/70 flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold block">Retail / Direct</span>
+                      <div className="flex items-baseline gap-1 mt-0.5">
+                        <span className="text-sm font-bold text-lime-400">₹{Number(prod.price).toLocaleString("en-IN")}</span>
+                        <span className="text-[10px] text-zinc-400">(Incl. GST)</span>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[10px] text-amber-400 uppercase tracking-wider font-semibold block">Wholesale</span>
+                      <span className="text-[11px] text-zinc-300 font-medium">MOQ 2+</span>
+                    </div>
+                  </div>
+                ) : null}
+                <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
                   <Link
                     href={`/products/${prod.slug}`}
                     className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1"

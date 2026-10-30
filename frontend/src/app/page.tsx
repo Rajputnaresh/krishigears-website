@@ -476,7 +476,16 @@ export default function Home() {
             <div>
               <div className="kg-eyebrow">{t('products.eyebrow', 'Products We Supply')}</div>
               <h2 className="kg-h2 mt-3 text-zinc-100">{t('products.title', 'Featured B2B equipment.')}</h2>
+              <p className="text-zinc-400 text-sm mt-2 max-w-2xl">
+                Transparent factory pricing with GST included for direct single-unit farmer orders, plus wholesale quantity slabs for dealers and institutions.
+              </p>
             </div>
+            <Link
+              href="/products"
+              className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1.5 border border-zinc-800 hover:border-lime-500/40 bg-zinc-900/60 px-4 py-2.5 rounded-lg transition"
+            >
+              Browse Complete Catalog ({PRODUCTS.length} Models) <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
             {featuredProducts.map((p) => (

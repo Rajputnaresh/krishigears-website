@@ -168,6 +168,61 @@ export default function ProductDetail() {
             </div>
             <p className="text-zinc-300 mt-5 leading-relaxed">{product.warranty}</p>
 
+            {/* Smart Pricing & Transaction Transparency Box (Payment Gateway & B2B Compliance) */}
+            <div className="mt-6 p-5 rounded-xl bg-zinc-900/90 border border-zinc-800 shadow-xl">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800">
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-xs uppercase tracking-wider text-zinc-400 font-bold">
+                      Direct B2C / Single Unit Price
+                    </span>
+                    <span className="text-[10px] font-bold bg-lime-500/20 text-lime-400 px-2 py-0.5 rounded border border-lime-500/40">
+                      Inclusive of 12% GST
+                    </span>
+                    <span className="text-[10px] font-semibold bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded border border-zinc-700">
+                      PAN-India Delivery Included
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-3 mt-2">
+                    <span className="text-3xl md:text-4xl font-display font-black text-lime-400">
+                      ₹{Number(product.price || 26000).toLocaleString("en-IN")}
+                    </span>
+                    <span className="text-sm text-zinc-400 line-through">
+                      ₹{Math.round((product.price || 26000) * 1.15).toLocaleString("en-IN")}
+                    </span>
+                    <span className="text-xs font-bold text-emerald-400">
+                      Save ~15% Factory Direct
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-400 mt-1">
+                    Complete commercial machine ready to operate. Includes warranty, tool kit, and tax invoice under GSTIN 08AANCK2216L1ZA.
+                  </p>
+                </div>
+                <div className="sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-3 sm:pt-0 sm:pl-5">
+                  <span className="text-xs uppercase tracking-wider text-amber-400 font-bold block">
+                    Wholesale Dealer Supply
+                  </span>
+                  <div className="text-sm font-bold text-white mt-1">
+                    Tiered Slab Rates
+                  </div>
+                  <div className="text-xs text-zinc-400 mt-0.5">
+                    MOQ: 2 Units • Proforma &amp; Bilty
+                  </div>
+                </div>
+              </div>
+              <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-zinc-400">
+                <span className="flex items-center gap-1.5">
+                  <Check className="h-3.5 w-3.5 text-lime-500" /> ₹1,500 – ₹2,500 Token Advance Booking
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Check className="h-3.5 w-3.5 text-lime-500" /> Balance at Destination Transport Godown
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Check className="h-3.5 w-3.5 text-lime-500" /> Razorpay Secured Payment
+                </span>
+              </div>
+            </div>
+
             {/* Primary B2B Action Cluster (Max 3 clear choices) */}
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
@@ -201,7 +256,7 @@ export default function ProductDetail() {
                   <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Farmer Retail Purchase</span>
                   <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">₹1,500 Token • Open-Box Godown Inspection</span>
                 </div>
-                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Flat ₹28,500 all-inclusive (GST + freight) with free 32-blade rotary & ridger bundle.</p>
+                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Flat ₹{Number(product.price || 26000).toLocaleString("en-IN")} all-inclusive (GST + freight) with full standard accessories bundle.</p>
               </div>
               <a
                 href={retailUrl}
