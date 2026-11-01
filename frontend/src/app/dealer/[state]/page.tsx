@@ -157,7 +157,7 @@ export default async function DealerStatePage({
       "@type": "ListItem",
       "position": index + 1,
       "name": `${d.city} Power Weeder & Spares Supply Hub`,
-      "url": `https://krishigears.com/seo/power-weeders-supplier-${d.slug}`
+      "url": `https://krishigears.com/power-weeders-in-${d.slug}`
     }))
   } : null;
 

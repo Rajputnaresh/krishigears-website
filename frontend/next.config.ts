@@ -21,6 +21,16 @@ const nextConfig: NextConfig = {
         destination: '/products/category/power-weeders',
         permanent: true,
       },
+      {
+        source: '/seo/power-weeders-supplier-:slug',
+        destination: '/power-weeders-in-:slug',
+        permanent: true,
+      },
+      {
+        source: '/seo/power-weeder-spare-parts-supplier-:slug',
+        destination: '/power-weeder-spare-parts-in-:slug',
+        permanent: true,
+      },
       { source: '/products/rly-mitsuyama-my-573d', destination: '/products/kg-my-573d', permanent: true },
       { source: '/products/rly-mitsuyama-my-585d', destination: '/products/kg-my-585d', permanent: true },
       { source: '/products/bi-x1-1000d', destination: '/products/kg-1000d-kibao', permanent: true },

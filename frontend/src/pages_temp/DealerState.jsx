@@ -333,13 +333,13 @@ export default function DealerState({ districts = [], stateName: propStateName, 
 
                   <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-xs font-medium">
                     <Link
-                      href={`/seo/power-weeders-supplier-${d.slug}`}
+                      href={`/power-weeders-in-${d.slug}`}
                       className="text-lime-400 hover:text-lime-300 transition flex items-center gap-1"
                     >
                       Power Weeders &rarr;
                     </Link>
                     <Link
-                      href={`/seo/power-weeder-spare-parts-supplier-${d.slug}`}
+                      href={`/power-weeder-spare-parts-in-${d.slug}`}
                       className="text-zinc-400 hover:text-white transition flex items-center gap-1"
                     >
                       <Wrench className="h-3 w-3" /> Spares

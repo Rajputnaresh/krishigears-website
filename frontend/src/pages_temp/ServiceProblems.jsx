@@ -165,7 +165,7 @@ export default function ServiceProblems() {
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="kg-h3 mb-6 text-white">Other {location} Resources</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href={`/seo/power-weeders-supplier-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+            <Link href={`/power-weeders-in-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
               Power Weeder Dealers in {location}
             </Link>
             <Link href={`/spare-parts/power-weeder-spare-parts-in-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
