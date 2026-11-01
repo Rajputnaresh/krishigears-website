@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 
 export default function FarmerUtilityEngine() {
   const [activeTab, setActiveTab] = useState("fuel"); // "fuel" | "fitment"
@@ -170,17 +171,21 @@ export default function FarmerUtilityEngine() {
                 </span>
               </div>
 
-              <a
-                href={`https://wa.me/916006078815?text=${waFuelText}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm sm:text-base shadow-lg transition-transform active:scale-95"
-              >
-                <span>Ask Technician on WhatsApp</span>
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
-                </svg>
-              </a>
+              <WhatsAppLeadModal
+                source="farmer_utility_fuel_calc"
+                defaultProduct={`2-Stroke Oil Ratio Consultation (${oilMl}ml oil for ${petrolLiters}L petrol @ ${ratio}:1)`}
+                trigger={
+                  <button
+                    type="button"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm sm:text-base shadow-lg transition-transform active:scale-95 cursor-pointer"
+                  >
+                    <span>Ask Technician on WhatsApp</span>
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+                    </svg>
+                  </button>
+                }
+              />
             </div>
           </div>
         ) : (
@@ -301,17 +306,21 @@ export default function FarmerUtilityEngine() {
                 </div>
               </div>
 
-              <a
-                href={`https://wa.me/916006078815?text=${waFitmentText}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm sm:text-base shadow-lg transition-transform active:scale-95"
-              >
-                <span>Confirm Fitment with Engineer</span>
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
-                </svg>
-              </a>
+              <WhatsAppLeadModal
+                source="farmer_utility_fitment_calc"
+                defaultProduct={`Attachment Fitment Consultation (${shaftDiameter} shaft, ${splineTeeth} spline)`}
+                trigger={
+                  <button
+                    type="button"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm sm:text-base shadow-lg transition-transform active:scale-95 cursor-pointer"
+                  >
+                    <span>Confirm Fitment with Engineer</span>
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+                    </svg>
+                  </button>
+                }
+              />
             </div>
           </div>
         )}

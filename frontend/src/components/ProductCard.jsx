@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -11,12 +12,8 @@ import { motion } from "framer-motion";
 export default function ProductCard({ product }) {
   const { t } = useTranslation();
   const category = CATEGORIES.find((c) => c.slug === product.category);
-  const waMsg = encodeURIComponent(
-    `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. [Ref: web_catalog_${product.slug}] Please share pricing.`
-  );
-  const waHref = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
-  const productPrice = product.price || 26000;
+  const productPrice = product.price;
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -29,78 +26,57 @@ export default function ProductCard({ product }) {
       "@type": "Brand",
       "name": product.brand || "KrishiGears"
     },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": productPrice,
-      "priceValidUntil": "2027-12-31",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition",
-      "url": `https://krishigears.com/products/${product.slug}`,
-      "seller": {
-        "@type": "Organization",
-        "name": "KrishiGears",
-        "url": "https://krishigears.com"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0",
-          "currency": "INR"
+    ...(productPrice ? {
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": productPrice,
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": `https://krishigears.com/products/${product.slug}`,
+        "seller": {
+          "@type": "Organization",
+          "name": "KrishiGears",
+          "url": "https://krishigears.com"
         },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "IN"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 1,
-            "unitCode": "DAY"
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
           },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 2,
-            "maxValue": 5,
-            "unitCode": "DAY"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 5,
+              "unitCode": "DAY"
+            }
           }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
         }
-      },
-      "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "IN",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 7,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/FreeReturn"
       }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": product.rating || "4.8",
-      "reviewCount": product.reviewCount || "48",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Verified Farm Equipment Dealer"
-        },
-        "datePublished": "2026-02-15",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Heavy-duty commercial gearbox and tested fuel efficiency for wet paddy and dryland cultivation."
-      }
-    ]
+    } : {})
   };
 
   return (
@@ -108,39 +84,52 @@ export default function ProductCard({ product }) {
       data-testid={`product-card-${product.slug}`}
       className="kg-card overflow-hidden flex flex-col relative group"
       whileHover={{ y: -4 }}
-      whileTap={{ scale: 0.985 }}
-      transition={{ type: "spring", stiffness: 400, damping: 28 }}
+      transition={{ duration: 0.2 }}
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
+      {/* Category and Badges Header */}
+      <div className="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[70%]">
+        {category && (
+          <span className="text-[10px] font-bold tracking-wider uppercase bg-black/85 text-lime-400 px-2 py-0.5 rounded border border-lime-500/30 backdrop-blur-sm shadow-md">
+            {category.name}
+          </span>
+        )}
+      </div>
 
-
-      {/* Badges — top-left */}
-      {product.badges?.length > 0 && (
-        <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5 max-w-[60%] pointer-events-none">
+      {product.badges && product.badges.length > 0 && (
+        <div className="absolute bottom-3 left-3 z-10 flex flex-wrap gap-1 max-w-[80%] pointer-events-none">
           {product.badges.slice(0, 2).map((b) => (
-            <span key={b} className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 bg-black/85 text-lime-400 border border-lime-500/40 backdrop-blur rounded">
+            <span
+              key={b}
+              className="text-[9px] font-bold bg-zinc-950/90 text-zinc-300 border border-zinc-800 px-1.5 py-0.5 rounded backdrop-blur-sm"
+            >
               {b}
             </span>
           ))}
         </div>
       )}
 
-      {/* WhatsApp quick-quote top-right float button (standalone clickable element) */}
-      <a
-        href={waHref}
-        target="_blank"
-        rel="noreferrer"
-        onClick={() => trackWhatsAppClick("product_card", product.slug)}
-        data-testid={`product-card-whatsapp-${product.slug}`}
-        title={`WhatsApp enquiry for ${product.name}`}
-        aria-label={`WhatsApp enquiry for ${product.name}`}
-        className="absolute top-3 right-3 z-20 h-12 w-12 min-h-[48px] min-w-[48px] grid place-items-center bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-xl hover:scale-110 active:scale-95 transition"
-      >
-        <WhatsAppIcon className="h-5 w-5" />
-      </a>
+      {/* WhatsApp quick-quote top-right float button (with committed preflight intake) */}
+      <div className="absolute top-3 right-3 z-20">
+        <WhatsAppLeadModal
+          source="product_card"
+          defaultProduct={product.name}
+          trigger={
+            <button
+              type="button"
+              data-testid={`product-card-whatsapp-${product.slug}`}
+              title={`WhatsApp enquiry for ${product.name}`}
+              aria-label={`WhatsApp enquiry for ${product.name}`}
+              className="h-12 w-12 min-h-[48px] min-w-[48px] grid place-items-center bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-xl hover:scale-110 active:scale-95 transition cursor-pointer"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+            </button>
+          }
+        />
+      </div>
 
       {/* Primary Product Card Link (navigates to PDP) */}
       <Link
@@ -153,49 +142,58 @@ export default function ProductCard({ product }) {
               <Image
                 src={product.images[0]}
                 alt={product.name}
-                width={400}
-                height={300}
-                className="w-full h-full object-contain group-hover:scale-105 transition duration-700"
+                width={320}
+                height={240}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
+
         <div className="p-5 flex-1 flex flex-col justify-between">
           <div>
-            <div className="text-xs tracking-[0.25em] uppercase text-lime-500 font-bold">
-              {category?.name}
+            <div className="flex items-center justify-between gap-2 mb-1.5">
+              <span className="text-xs font-mono font-bold text-lime-400 bg-lime-950/40 border border-lime-800/50 px-1.5 py-0.5 rounded">
+                {product.model || product.slug.toUpperCase()}
+              </span>
+              {product.power && (
+                <span className="text-xs font-semibold text-zinc-300 border border-zinc-800 bg-zinc-900 px-2 py-0.5 rounded">
+                  {product.power}
+                </span>
+              )}
             </div>
-            <h3 className="font-display font-bold text-base mt-1.5 leading-tight line-clamp-2 text-zinc-100 group-hover:text-lime-400 transition-colors">
+
+            <h3 className="font-display font-bold text-base sm:text-lg text-white group-hover:text-lime-400 transition-colors line-clamp-2">
               {product.name}
             </h3>
-            {/* Comparative B2B spec summary */}
-            <div className="mt-3 flex flex-wrap gap-y-2 gap-x-4 border-y border-zinc-800/60 py-2.5 my-1">
-              {product.specs?.Engine && (
-                <div className="flex flex-col">
-                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Engine</span>
-                  <span className="text-sm text-zinc-100 font-semibold">{product.specs.Engine}</span>
-                </div>
+
+            {/* Key Specs Pills */}
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {product.engine && (
+                <span className="text-[11px] font-medium text-zinc-300 bg-zinc-900/80 border border-zinc-800 px-2 py-0.5 rounded">
+                  {product.engine}
+                </span>
               )}
-              {product.specs?.Power && (
-                <div className="flex flex-col border-l border-zinc-800 pl-4">
-                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Power</span>
-                  <span className="text-sm text-lime-400 font-bold">{product.specs.Power}</span>
-                </div>
+              {product.drive && (
+                <span className="text-[11px] font-medium text-zinc-300 bg-zinc-900/80 border border-zinc-800 px-2 py-0.5 rounded">
+                  {product.drive}
+                </span>
               )}
-              {product.specs?.Start && (
-                <div className="flex flex-col border-l border-zinc-800 pl-4">
-                  <span className="text-[11px] uppercase tracking-tighter text-zinc-400 font-bold">Start</span>
-                  <span className="text-sm text-zinc-100 font-semibold">{product.specs.Start.replace(' / ', '/')}</span>
-                </div>
+              {product.gear && (
+                <span className="text-[11px] font-medium text-zinc-300 bg-zinc-900/80 border border-zinc-800 px-2 py-0.5 rounded">
+                  {product.gear}
+                </span>
+              )}
+              {product.tillingWidth && (
+                <span className="text-[11px] font-medium text-zinc-300 bg-zinc-900/80 border border-zinc-800 px-2 py-0.5 rounded">
+                  Width: {product.tillingWidth}
+                </span>
               )}
             </div>
-            {product.model && (
-              <div className="mt-2 inline-flex items-center gap-1.5 text-xs tracking-wider text-zinc-300 font-mono">
-                <BadgeCheck className="h-3.5 w-3.5 text-lime-500"/> {product.model}
-              </div>
-            )}
 
-            {/* Smart Pricing Block (B2C Retail Benchmark + Wholesale MOQ Indicator) */}
+            {/* Direct B2C Price and Dealer Margin Strip */}
             {product.price ? (
               <div className="mt-3 pt-2.5 border-t border-zinc-800/70 flex items-center justify-between gap-2">
                 <div>
@@ -240,27 +238,16 @@ export default function ProductCard({ product }) {
             {t('products.moq', 'MOQ: 2 Units')}
           </span>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => {
-              const shareText = encodeURIComponent(`Check out ${product.name} at KrishiGears: https://krishigears.com/products/${product.slug}`);
-              window.open(`https://api.whatsapp.com/send?text=${shareText}`, "_blank");
-            }}
-            title={t('products.shareWhatsapp', 'Share on WhatsApp')}
-            aria-label={t('products.shareWhatsapp', 'Share on WhatsApp')}
-            className="h-11 w-11 min-h-[44px] min-w-[44px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-[#25D366] hover:border-green-600 transition active:scale-95"
-          >
-            <WhatsAppIcon className="h-4 w-4" />
-          </button>
-          <Link
-            href={`/products/${product.slug}`}
-            className="h-11 w-11 min-h-[44px] min-w-[44px] grid place-items-center rounded bg-zinc-900 border border-zinc-700 text-lime-400 hover:text-white hover:border-lime-500 transition active:scale-95"
-            aria-label={`View full specifications for ${product.name}`}
-          >
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+
+        <Link
+          href={`/products/${product.slug}`}
+          data-testid={`product-card-cta-${product.slug}`}
+          aria-label={`View full specifications and quotation for ${product.name}`}
+          className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform min-h-[36px] py-1 pl-2"
+        >
+          <span>{t('products.specsCta', 'Specs & Quote')}</span>
+          <ArrowRight className="h-3.5 w-3.5" />
+        </Link>
       </div>
     </motion.div>
   );

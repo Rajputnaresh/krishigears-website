@@ -181,10 +181,9 @@ export default function RootLayout({
       className={`${outfit.variable} ${mukta.variable} h-full antialiased sunlight`}
     >
       <head>
-        <link rel="preconnect" href="https://api.krishigears.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem("kg_dark_mode");if(s==="true"){document.documentElement.classList.add("dark");document.documentElement.classList.remove("sunlight");}}catch(e){}})();`
+            __html: `(function(){try{var isDark=localStorage.getItem("kg_dark_mode")==="true"||localStorage.getItem("kg_sunlight_mode")==="false";if(isDark){document.documentElement.classList.add("dark");document.documentElement.classList.remove("sunlight");}}catch(e){}})();`
           }}
         />
         <script

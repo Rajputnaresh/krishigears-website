@@ -152,14 +152,14 @@ export default function BecomeDealer() {
           <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
             <h3 className="font-display font-bold text-base text-lime-400">Q: KrishiGears की Dealership लेने के लिए क्या योग्यता और न्यूनतम निवेश चाहिए?</h3>
             <p className="text-zinc-300 text-sm leading-relaxed">
-              KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट नहीं है। आप केवल 3 से 5 मशीनों के शुरुआती बैच से अपने जिले में डीलरशिप शुरू कर सकते हैं।
+              KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट नहीं है। आप केवल 2 मशीनों के न्यूनतम शुरुआती बैच (MOQ: 2 Units) से अपने जिले में डीलरशिप शुरू कर सकते हैं।
             </p>
           </div>
 
           <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
             <h3 className="font-display font-bold text-base text-lime-400">Q: डीलर मार्जिन और प्रॉफिट शेयरिंग कैसी रहती है?</h3>
             <p className="text-zinc-300 text-sm leading-relaxed">
-              KrishiGears डीलर्स को 15% से 22% तक का स्वस्थ ग्रॉस मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।
+              KrishiGears डीलर्स को 25% से 35% तक का स्वस्थ ग्रॉस मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।
             </p>
           </div>
 

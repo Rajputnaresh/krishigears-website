@@ -74,10 +74,10 @@
     --color-whatsapp: #25D366;
     --color-whatsapp-hover: #1ebe57;
 
-    --color-surface: #141414;
+    --color-surface: #0F1010;
     --color-surface-elevated: #1F1F1F;
-    --color-surface-dark: #0F0F0F;
-    --color-surface-darker: #080808;
+    --color-surface-dark: #0F1010;
+    --color-surface-darker: #191919;
     --color-surface-darkest: #070707;
 
     --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -211,7 +211,7 @@
 }
 .kg-card:hover {
     @apply border-lime-500/60 -translate-y-1;
-    box-shadow: 0 12px 28px -6px rgba(132, 204, 22, 0.22);
+    box-shadow: 0 12px 28px -6px rgba(163, 230, 53, 0.25);
 }
 
 .lime-btn {

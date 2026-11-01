@@ -115,7 +115,7 @@ function RegisterWarrantySection() {
       await apiClient.post("/warranty/register", form);
       trackWarrantySubmit();
       setSuccess(true);
-      toast.success("Warranty registered. We'll send a confirmation soon.");
+      toast.success("Warranty request saved for review.");
     } catch (err) {
       toast.error(formatApiError(err));
     } finally { setLoading(false); }
@@ -126,8 +126,8 @@ function RegisterWarrantySection() {
       <section data-testid="warranty-register-success" className="kg-section bg-surface-darker border-t border-zinc-900">
         <div className="max-w-2xl mx-auto text-center border border-lime-500/30 bg-lime-500/5 p-12">
           <CheckCircle2 className="h-16 w-16 mx-auto text-lime-500" />
-          <h2 className="kg-h2 mt-6">Warranty Registered.</h2>
-          <p className="text-zinc-300 mt-4">Your product is now on our records. Keep your invoice safe — for any service request, just WhatsApp us at <strong className="text-lime-500">{COMPANY.phone}</strong>.</p>
+          <h2 className="kg-h2 mt-6">Warranty Request Saved for Review.</h2>
+          <p className="text-zinc-300 mt-4">Your warranty registration has been submitted for review against factory invoice records. For any urgent service support, message us on WhatsApp at <strong className="text-lime-500">{COMPANY.phone}</strong>.</p>
         </div>
       </section>
     );

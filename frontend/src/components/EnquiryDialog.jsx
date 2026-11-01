@@ -16,13 +16,26 @@ export default function EnquiryDialog({ trigger, product = "" }) {
 
   const submit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.phone) {
+    const trimmedName = (form.name || "").trim();
+    const trimmedPhone = (form.phone || "").trim();
+    if (!trimmedName || !trimmedPhone) {
       toast.error("Please enter your name and phone number");
+      return;
+    }
+    const digitsOnly = trimmedPhone.replace(/\D/g, "");
+    if (digitsOnly.length < 10) {
+      toast.error("Please enter a valid 10-digit Indian mobile number");
       return;
     }
     setLoading(true);
     try {
-      await apiClient.post("/leads/enquiry", form);
+      await apiClient.post("/leads/enquiry", {
+        ...form,
+        name: trimmedName,
+        phone: trimmedPhone,
+        location: (form.location || "").trim(),
+        email: (form.email || "").trim(),
+      });
       trackEnquirySubmit(product);
       toast.success("Enquiry sent! Our team will call you within 24 hours.");
       setForm({ name: "", phone: "", email: "", location: "", product, message: "" });

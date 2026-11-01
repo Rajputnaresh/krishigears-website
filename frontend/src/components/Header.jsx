@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, ChevronRight, Globe, Headphones, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 import { LOGO_URL, COMPANY, CATEGORIES } from "@/data/catalog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -310,18 +311,21 @@ export default function Header() {
             <span className="font-mono">{COMPANY.phone}</span>
           </a>
 
-          {/* WhatsApp RFQ Quote (h-10) */}
-          <a
-            href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp Quick Quote"
-            onClick={() => trackWhatsAppClick("header_desktop")}
-            className="h-10 px-3.5 text-zinc-200 hover:text-white font-semibold text-xs rounded-md border border-zinc-700/80 bg-zinc-900/90 hover:bg-zinc-800 transition inline-flex items-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 active:scale-95"
-          >
-            <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
-            <span>WhatsApp Quote</span>
-          </a>
+          {/* WhatsApp RFQ Quote (h-10) with committed preflight intake */}
+          <WhatsAppLeadModal
+            source="header_desktop"
+            defaultProduct="Machinery Wholesale Quote"
+            trigger={
+              <button
+                type="button"
+                aria-label="WhatsApp Quick Quote"
+                className="h-10 px-3.5 text-zinc-200 hover:text-white font-semibold text-xs rounded-md border border-zinc-700/80 bg-zinc-900/90 hover:bg-zinc-800 transition inline-flex items-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 active:scale-95 cursor-pointer"
+              >
+                <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                <span>WhatsApp Quote</span>
+              </button>
+            }
+          />
 
           {/* Become a Dealer (h-10 Primary CTA) */}
           <Link

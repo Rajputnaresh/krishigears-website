@@ -16,6 +16,7 @@ import locationsData from "@/data/locations.json";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 import { useEffect, useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { apiClient, formatApiError } from "@/lib/api";
@@ -143,17 +144,21 @@ export default function Home() {
             </p>
             {/* Prioritized CTA Hierarchy: 1 Primary High-Contrast Action + 1 Secondary Action */}
             <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <a
-                href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और डीलरशिप की पूरी जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_hero_primary`}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="hero-primary-whatsapp-btn"
-                className="group inline-flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 min-h-[52px] rounded-md transition shadow-xl  active:scale-95 text-base border-2 border-lime-400"
-              >
-                <WhatsAppIcon className="h-5 w-5 text-black fill-black" />
-                <span>{t('hero.whatsappCta', 'WhatsApp Wholesale Quote')}</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
-              </a>
+              <WhatsAppLeadModal
+                source="homepage_hero_primary"
+                defaultProduct="Agricultural Machinery Wholesale Quote"
+                trigger={
+                  <button
+                    type="button"
+                    data-testid="hero-primary-whatsapp-btn"
+                    className="group inline-flex items-center justify-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-8 py-4 min-h-[52px] rounded-md transition shadow-xl active:scale-95 text-base border-2 border-lime-400 cursor-pointer"
+                  >
+                    <WhatsAppIcon className="h-5 w-5 text-black fill-black" />
+                    <span>{t('hero.whatsappCta', 'WhatsApp Wholesale Quote')}</span>
+                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition" />
+                  </button>
+                }
+              />
               <Link
                 href="/become-a-dealer"
                 data-testid="hero-dealer-btn"
@@ -292,15 +297,19 @@ export default function Home() {
                 </ul>
               </div>
               <div className="mt-7 pt-5 border-t border-zinc-800">
-                <a
-                  href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे Custom Hiring Center (CHC) के लिए 10 HP कमर्शियल टिलर फ्लीट कोटेशन और स्पेयर पार्ट्स सपोर्ट की जानकारी चाहिए।")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-emerald-500/40 transition"
-                >
-                  <WhatsAppIcon className="h-4 w-4 fill-current" />
-                  Request CHC Fleet Quote
-                </a>
+                <WhatsAppLeadModal
+                  source="chc_fleet_quote"
+                  defaultProduct="10 HP Commercial Tiller CHC Fleet"
+                  trigger={
+                    <button
+                      type="button"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-emerald-500/40 transition cursor-pointer"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 fill-current" />
+                      Request CHC Fleet Quote
+                    </button>
+                  }
+                />
               </div>
             </div>
 
@@ -331,15 +340,19 @@ export default function Home() {
                 </ul>
               </div>
               <div className="mt-7 pt-5 border-t border-zinc-800">
-                <a
-                  href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, हमें FPO / सहकारी संस्था के लिए SMAM सब्सिडी अप्रूव्ड पावर वीडर व कोटेशन की आवश्यकता है।")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-amber-500/40 transition"
-                >
-                  <WhatsAppIcon className="h-4 w-4 fill-current" />
-                  FPO Subsidy Invoicing
-                </a>
+                <WhatsAppLeadModal
+                  source="fpo_subsidy_invoicing"
+                  defaultProduct="FPO / SMAM Subsidy Approved Machinery"
+                  trigger={
+                    <button
+                      type="button"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-amber-500/40 transition cursor-pointer"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 fill-current" />
+                      FPO Subsidy Invoicing
+                    </button>
+                  }
+                />
               </div>
             </div>
           </div>
@@ -724,16 +737,19 @@ function ContactStrip() {
               <span className="flex-shrink mx-3 text-sm uppercase font-bold text-zinc-400 tracking-wider">{t('contact.orWhatsapp', 'Or on WhatsApp')}</span>
               <div className="flex-grow border-t border-zinc-800"></div>
             </div>
-            <a
-              href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent("नमस्ते KrishiGears, मुझे कृषि मशीनरी और स्पेयर पार्ट्स की थोक कीमत / डीलरशिप जानकारी चाहिए।")}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="1-Tap WhatsApp Quotation Desk"
-              onClick={() => trackWhatsAppClick("contact_strip_quick")}
-              className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide"
-            >
-              <WhatsAppIcon className="h-4 w-4" /> {t('contact.whatsappDirect', '1-Tap WhatsApp Quotation Desk')}
-            </a>
+            <WhatsAppLeadModal
+              source="contact_strip_quick"
+              defaultProduct="Machinery & Spare Parts Wholesale"
+              trigger={
+                <button
+                  type="button"
+                  aria-label="1-Tap WhatsApp Quotation Desk"
+                  className="w-full min-h-[48px] border border-zinc-700 bg-zinc-900/90 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 font-bold py-3 rounded-md transition flex items-center justify-center gap-2 text-sm tracking-wide cursor-pointer active:scale-95"
+                >
+                  <WhatsAppIcon className="h-4 w-4" /> {t('contact.whatsappDirect', '1-Tap WhatsApp Quotation Desk')}
+                </button>
+              }
+            />
           </div>
         </form>
       </div>

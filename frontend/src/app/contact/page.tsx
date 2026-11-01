@@ -21,7 +21,7 @@ const contactJsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://krishigears.com/contact#localbusiness",
+      "@id": "https://krishigears.com/#localbusiness",
       "name": "KRISHIGEARS INDIA PRIVATE LIMITED",
       "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
       "taxID": "08AANCK2216L1ZA",
