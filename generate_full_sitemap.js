@@ -18,7 +18,8 @@ const staticRoutes = [
   { path: '/contact', prio: '0.8', freq: 'monthly' },
   { path: '/spare-parts', prio: '0.95', freq: 'daily' },
   { path: '/seo/power-weeder-supplier-india', prio: '0.9', freq: 'weekly' },
-  { path: '/seo/power-weeder-spare-parts-supplier-india', prio: '0.9', freq: 'weekly' }
+  { path: '/power-weeder-spare-parts-in-india', prio: '0.9', freq: 'weekly' },
+  { path: '/power-weeders-in-india', prio: '0.9', freq: 'weekly' }
 ];
 
 const products = [
@@ -84,6 +85,7 @@ blogSlugs.forEach(b => {
 
 let geoCount = 0;
 Object.keys(locs).forEach(name => {
+  if (name === 'India') return;
   const slug = name
     .toLowerCase()
     .replace(/&amp;/g, 'and')

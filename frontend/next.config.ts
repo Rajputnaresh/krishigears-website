@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/seo/power-weeder-spare-parts-supplier-india',
+        destination: '/power-weeder-spare-parts-in-india',
+        permanent: true,
+      },
+      {
         source: '/products/category/power-tillers',
         destination: '/products/category/power-weeders',
         permanent: true,

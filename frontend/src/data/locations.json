@@ -8879,5 +8879,18 @@
     "soil_type": "Deltaic alluvium, red and coastal soils",
     "farming_profile": "Intensive double/triple crop paddy and potato farming",
     "major_district": false
+  },
+  "India": {
+    "state": "Pan-India",
+    "key_crops": [
+      "Cotton",
+      "Sugarcane",
+      "Paddy",
+      "Wheat",
+      "Soybean"
+    ],
+    "soil_type": "Alluvial, black cotton, red, and loamy soils",
+    "farming_profile": "Pan-India commercial agricultural machinery supply and OEM spare parts distribution network",
+    "major_district": true
   }
 }

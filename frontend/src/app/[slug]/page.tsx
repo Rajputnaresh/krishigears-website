@@ -118,14 +118,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const locationData = locations[locationName];
 
   const isSpareParts = categorySlug === 'power-weeder-spare-parts';
+  const isIndia = locationName === 'India';
   const fullTitle = isSpareParts
-    ? `Power Weeder Spares in ${locationName}`
-    : `${category.singular} in ${locationName}, ${locationData.state}`;
+    ? (isIndia ? 'Power Weeder Spare Parts in India' : `Power Weeder Spares in ${locationName}`)
+    : (isIndia ? `${category.singular} in India - KrishiGears Wholesale Supply` : `${category.singular} in ${locationName}, ${locationData.state}`);
   const pageTitle = clampTitle(fullTitle, 44);
 
   const rawDesc = isSpareParts
-    ? `Factory wholesale OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters & gearbox components with 24-48h dispatch.`
-    : `B2B supply of KrishiGears ${category.name} in ${locationName}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 2).join(', ')} with DBT subsidy guidance.`;
+    ? (isIndia
+        ? `Factory wholesale OEM power weeder spare parts across India. Carburetors, recoil starters, gearboxes & blades with express 24-48h dispatch from Jaipur.`
+        : `Factory wholesale OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters & gearbox components with 24-48h dispatch.`)
+    : (isIndia
+        ? `Pan-India B2B supply of KrishiGears ${category.name}. Heavy-duty commercial farm machinery engineered for Indian soils with SMAM subsidy guidance.`
+        : `B2B supply of KrishiGears ${category.name} in ${locationName}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 2).join(', ')} with DBT subsidy guidance.`);
   const pageDesc = clampDescription(rawDesc, 155);
 
   return {
@@ -190,9 +195,11 @@ export default async function LocationCategoryPage({ params }: { params: Promise
     }
   }
 
-  // Find nearby districts in the same state
+  const isIndia = locationName === 'India';
+
+  // Find nearby districts in the same state (or major hubs across India)
   const nearbyDistricts = Object.entries(locations)
-    .filter(([name, d]) => d.state === data.state && name !== locationName)
+    .filter(([name, d]) => (isIndia ? d.major_district : d.state === data.state) && name !== locationName)
     .slice(0, 12);
 
   // Filter products matching this category for dynamic district inventory presentation
@@ -200,8 +207,12 @@ export default async function LocationCategoryPage({ params }: { params: Promise
 
   // Pre-filled WhatsApp message
   const whatsappText = isSpareParts
-    ? encodeURIComponent(`Hello KrishiGears, I am a machinery repair shop / spare parts retailer in ${locationName}, ${data.state}. Please send the Power Weeder Spare Parts Wholesale Price List & MOQ details.`)
-    : encodeURIComponent(`Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`);
+    ? encodeURIComponent(isIndia
+        ? `Hello KrishiGears, I am a machinery repair shop / spare parts retailer in India. Please send the Power Weeder Spare Parts Wholesale Price List & MOQ details.`
+        : `Hello KrishiGears, I am a machinery repair shop / spare parts retailer in ${locationName}, ${data.state}. Please send the Power Weeder Spare Parts Wholesale Price List & MOQ details.`)
+    : encodeURIComponent(isIndia
+        ? `Hello KrishiGears, I am looking for ${category.name} dealer quotation and bulk supply across India. Please share pricing.`
+        : `Hello KrishiGears, I am looking for ${category.name} dealer quotation and supply in ${locationName}, ${data.state} for ${primaryCrop} cultivation. Please share pricing.`);
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${whatsappText}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`;
 
   const jsonLd = {
@@ -211,9 +222,14 @@ export default async function LocationCategoryPage({ params }: { params: Promise
         '@type': 'WholesaleStore',
         '@id': `https://krishigears.com/${slug}#store`,
         name: `KrishiGears ${category.name} - ${locationName}`,
-        description: `Authorized wholesale supplier of ${category.name} in ${locationName}, ${data.state}.`,
+        description: isIndia
+          ? `Authorized wholesale supplier of ${category.name} across India.`
+          : `Authorized wholesale supplier of ${category.name} in ${locationName}, ${data.state}.`,
         url: `https://krishigears.com/${slug}`,
-        areaServed: {
+        areaServed: isIndia ? {
+          '@type': 'Country',
+          name: 'India'
+        } : {
           '@type': 'City',
           name: locationName,
           containedInPlace: {
@@ -245,8 +261,8 @@ export default async function LocationCategoryPage({ params }: { params: Promise
           {
             '@type': 'ListItem',
             position: 3,
-            name: data.state,
-            item: `https://krishigears.com/locations`
+            name: isIndia ? 'Pan-India' : data.state,
+            item: isIndia ? 'https://krishigears.com/dealer-network' : `https://krishigears.com/locations`
           },
           {
             '@type': 'ListItem',
@@ -303,7 +319,11 @@ export default async function LocationCategoryPage({ params }: { params: Promise
           <span>›</span>
           <Link href="/locations" className="hover:text-lime-500 transition-colors">Locations</Link>
           <span>›</span>
-          <Link href={`/dealer/${data.state.toLowerCase().replace(/ /g, '-')}`} className="hover:text-lime-500 transition-colors">{data.state}</Link>
+          {isIndia ? (
+            <Link href="/dealer-network" className="hover:text-lime-500 transition-colors">Pan-India Network</Link>
+          ) : (
+            <Link href={`/dealer/${data.state.toLowerCase().replace(/ /g, '-')}`} className="hover:text-lime-500 transition-colors">{data.state}</Link>
+          )}
           <span>›</span>
           <span className="text-lime-400 font-semibold">{locationName}</span>
         </div>
