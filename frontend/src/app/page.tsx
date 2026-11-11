@@ -133,9 +133,15 @@ export default function Home() {
               <span className="h-1.5 w-1.5 bg-lime-500 rounded-full animate-pulse"></span> {t('hero.badge', 'Premium Agricultural Machinery · GST Registered')}
             </div>
             <h1 className="kg-h1 mt-4 sm:mt-6 text-balance text-zinc-50">
-              {t('hero.titleLine1', 'For the')} <span className="text-lime-400">{t('hero.farmers', 'Farmers,')}</span><br/>
-              {t('hero.titleLine2', 'With the')} <span className="text-lime-400">{t('hero.farmer', 'Farmer,')}</span><br/>
-              {t('hero.titleLine3', 'To the')} <span className="text-lime-400">{t('hero.farmer2', 'Farmer.')}</span>
+              <span className="block text-lime-400 text-lg sm:text-2xl font-bold tracking-tight mb-2">
+                B2B Farm Machinery &amp; Genuine Spares Wholesale India
+              </span>
+              {t('hero.titleLine1', 'For the')}{' '}
+              <span className="text-lime-400">{t('hero.farmers', 'Farmers,')}</span><br/>
+              {t('hero.titleLine2', 'With the')}{' '}
+              <span className="text-lime-400">{t('hero.farmer', 'Farmer,')}</span><br/>
+              {t('hero.titleLine3', 'To the')}{' '}
+              <span className="text-lime-400">{t('hero.farmer2', 'Farmer.')}</span>
               <span className="block text-zinc-200 mt-1 sm:mt-2 text-xl sm:text-3xl lg:text-4xl tracking-[0.2em] sm:tracking-[0.25em]">{t('hero.hamesha', 'HAMESHA.')}</span>
             </h1>
             <h2 className="sr-only">B2B Agricultural Machinery Supply, Dealer Network & OEM Distribution in India</h2>
