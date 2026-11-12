@@ -46,7 +46,7 @@ export default function CompetitorComparison() {
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Direct B2C / Commercial Price Transparency</td>
                 <td className="p-4 sm:p-6 text-center text-zinc-500">Opaque quotation markups by local distributors</td>
-                <td className="p-4 sm:p-6 text-center text-white font-bold bg-lime-500/5">Published Factory Base Prices with 12% GST Bills</td>
+                <td className="p-4 sm:p-6 text-center text-white font-bold bg-lime-500/5">Published Factory Base Prices with Verified GST Bills</td>
               </tr>
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Technical & Warranty Support</td>

@@ -224,7 +224,7 @@ export default function ProductCard({ product }) {
                       Direct B2C Price
                     </span>
                     <span className="text-[9px] font-bold text-lime-400 bg-lime-500/10 border border-lime-500/30 px-1 py-0.2 rounded">
-                      Incl. 12% GST
+                      Incl. {product.gst || 5}% GST
                     </span>
                   </div>
                   <div className="flex items-baseline gap-1 mt-0.5">

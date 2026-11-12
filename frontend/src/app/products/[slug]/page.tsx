@@ -29,8 +29,9 @@ export async function generateMetadata({
       : `https://krishigears.com${product.images[0]}`
     : 'https://krishigears.com/images/products/weeder.webp';
 
+  const gstRate = (product as { gst?: number }).gst ?? 5;
   const title = `${product.name} Wholesale & Dealership Price | KrishiGears`;
-  const description = `${product.name} (Model: ${product.model || product.slug}). Direct factory supply, tested fuel efficiency, 12% GST invoice, and 24-hr Jaipur spare parts dispatch.`;
+  const description = `${product.name} (Model: ${product.model || product.slug}). Direct factory supply, tested fuel efficiency, ${gstRate}% GST invoice, and 24-hr Jaipur spare parts dispatch.`;
 
   return {
     title,

@@ -264,7 +264,9 @@ export const PRODUCTS = [
       "Cuts labor costs by 70%",
       "Perfect for hard soil"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -306,7 +308,9 @@ export const PRODUCTS = [
       "Low running cost",
       "Excellent for deep plowing"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -347,7 +351,9 @@ export const PRODUCTS = [
       "Replaces tractor for mid-size farms",
       "High acreage coverage"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -389,7 +395,9 @@ export const PRODUCTS = [
       "Zero effort starting",
       "Highly comfortable operation"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -429,7 +437,9 @@ export const PRODUCTS = [
       "Leaves finely milled soil",
       "Operator fatigue reduced by 50%"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -471,7 +481,9 @@ export const PRODUCTS = [
       "Industrial grade durability",
       "Can power water pumps directly"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -509,7 +521,9 @@ export const PRODUCTS = [
       "FMTTI-tested durability",
       "80% weed reduction in tight spaces"
     ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network."
+    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "brand": "KrishiGears",
@@ -547,7 +561,9 @@ export const PRODUCTS = [
       "FMTTI-tested durability",
       "Restores factory engine performance"
     ],
-    "warranty": "3 months replacement on manufacturing defects"
+    "warranty": "3 months replacement on manufacturing defects",
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "brand": "KrishiGears",
@@ -586,7 +602,9 @@ export const PRODUCTS = [
       "Eliminates oil burning",
       "Restores full compression"
     ],
-    "warranty": "3 months replacement on manufacturing defects"
+    "warranty": "3 months replacement on manufacturing defects",
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "brand": "KrishiGears",
@@ -622,7 +640,9 @@ export const PRODUCTS = [
       "FMTTI-tested durability",
       "Quick field replacement"
     ],
-    "warranty": "3 months replacement on manufacturing defects"
+    "warranty": "3 months replacement on manufacturing defects",
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "brand": "KrishiGears",
@@ -659,7 +679,9 @@ export const PRODUCTS = [
       "FMTTI-tested durability",
       "Deeper cut with less engine strain"
     ],
-    "warranty": "Guaranteed against breakage during transit"
+    "warranty": "Guaranteed against breakage during transit",
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "slug": "bi-750-pto-kibao",
@@ -719,13 +741,13 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-750-pro-series-orange",
     "category": "power-weeders",
-    "name": "KrishiGears 750 Pro Series \u2013 Orange (7.0 HP max, Petrol / 4 Litre)",
-    "model": "750 Pro Series \u2013 Orange",
+    "name": "KrishiGears 750 Pro Series – Orange (7.0 HP max, Petrol / 4 Litre)",
+    "model": "750 Pro Series – Orange",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -779,13 +801,13 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-750-pro-series-yellow",
     "category": "power-weeders",
-    "name": "KrishiGears 750 Pro Series \u2013 Yellow (7.0 HP max, Petrol / 4 Litre)",
-    "model": "750 Pro Series \u2013 Yellow",
+    "name": "KrishiGears 750 Pro Series – Yellow (7.0 HP max, Petrol / 4 Litre)",
+    "model": "750 Pro Series – Yellow",
     "brand": "KrishiGears",
     "badges": [
       "FMTTI Tested",
@@ -839,7 +861,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-850-series",
@@ -900,7 +922,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-950-series",
@@ -960,7 +982,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-1000d-kibao",
@@ -1020,7 +1042,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-bi-1000",
@@ -1080,7 +1102,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-1050d-kibao",
@@ -1140,7 +1162,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-1150d-manual",
@@ -1199,7 +1221,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-1150d-electric",
@@ -1258,7 +1280,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-188d-recoil",
@@ -1317,7 +1339,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-188d-electric",
@@ -1376,7 +1398,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-1250-pro",
@@ -1436,7 +1458,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-1250",
@@ -1496,7 +1518,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-750p-diesel",
@@ -1556,7 +1578,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-186-backrotary",
@@ -1616,7 +1638,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-1350-4wd",
@@ -1676,7 +1698,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-bi-600",
@@ -1733,7 +1755,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "bi-bi-600p-h-l",
@@ -1791,7 +1813,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-mw-70-mini",
@@ -1846,7 +1868,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-gr-8002-7762",
@@ -1900,7 +1922,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-ba-021-2486",
@@ -1954,7 +1976,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpe-1000-17-2343",
@@ -2008,7 +2030,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-no-kpd-1350-2352",
@@ -2062,7 +2084,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpe-1000-2342",
@@ -2115,7 +2137,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kp-750-2344",
@@ -2169,7 +2191,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpd-1000-2347",
@@ -2223,7 +2245,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpde-1000-2348",
@@ -2277,7 +2299,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpd-1350-2349",
@@ -2331,7 +2353,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kp-1050-ae-2350",
@@ -2385,7 +2407,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpe-1050-a-2351",
@@ -2438,7 +2460,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-820-6698",
@@ -2491,7 +2513,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-55-6691",
@@ -2545,7 +2567,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-model-no-kp-2341",
@@ -2599,7 +2621,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-1150-6699",
@@ -2653,7 +2675,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kpd-1350-e-2356",
@@ -2707,7 +2729,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-1000-d-4542",
@@ -2761,7 +2783,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kp-1050-a-e-5777",
@@ -2815,7 +2837,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kp-500-2346",
@@ -2869,7 +2891,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-800-6692",
@@ -2923,7 +2945,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-fj-1200-0927",
@@ -2977,7 +2999,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-fj-600-ho-2081",
@@ -3027,7 +3049,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-254022073-2073",
@@ -3081,7 +3103,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=Dk8QFoE-h2k",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-gx-160-2719",
@@ -3135,7 +3157,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-1000-8480",
@@ -3189,7 +3211,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-1000-s-7307",
@@ -3243,7 +3265,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-kp-1250-8465",
@@ -3296,7 +3318,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-cg-530-0002",
@@ -3350,7 +3372,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-sc-1000-z-e-3146",
@@ -3403,7 +3425,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-cg-600-3322",
@@ -3456,7 +3478,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-cg-520-4521",
@@ -3510,7 +3532,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-295837443-7443",
@@ -3563,8 +3585,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-cg-680-0294",
@@ -3618,7 +3640,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-253407350-7350",
@@ -3670,8 +3692,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-rover-850-sp-1843",
@@ -3725,7 +3747,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-254165680-5680",
@@ -3778,8 +3800,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "slug": "leo-wp-15-2557",
@@ -3832,8 +3854,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8413",
+    "gst": 18
   },
   {
     "slug": "leo-303454139-4139",
@@ -3886,7 +3908,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-392-9514",
@@ -3940,7 +3962,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-393-9876",
@@ -3994,7 +4016,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0378-1872",
@@ -4048,7 +4070,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-297634235-4235",
@@ -4101,8 +4123,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8436",
+    "gst": 5
   },
   {
     "slug": "leo-chain-saw-sh-6799",
@@ -4151,8 +4173,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-34586930-6930",
@@ -4205,8 +4227,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "slug": "leo-34586928-6928",
@@ -4259,8 +4281,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "slug": "leo-34586965-6965",
@@ -4313,8 +4335,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-303454205-4205",
@@ -4366,8 +4388,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-34586948-6948",
@@ -4420,8 +4442,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8407",
+    "gst": 18
   },
   {
     "slug": "leo-26277631-7631",
@@ -4474,8 +4496,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-34586968-6968",
@@ -4528,8 +4550,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8202",
+    "gst": 18
   },
   {
     "slug": "leo-34586974-6974",
@@ -4582,8 +4604,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8202",
+    "gst": 18
   },
   {
     "slug": "leo-34586983-6983",
@@ -4636,8 +4658,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8202",
+    "gst": 18
   },
   {
     "slug": "leo-34586972-6972",
@@ -4690,8 +4712,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8202",
+    "gst": 18
   },
   {
     "slug": "leo-397-9478",
@@ -4744,7 +4766,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-391-7692",
@@ -4797,7 +4819,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-395-9215",
@@ -4851,7 +4873,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-zf-6123-4367",
@@ -4905,7 +4927,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-376-8052",
@@ -4959,7 +4981,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0382-18-inc-2366",
@@ -5013,7 +5035,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-376-in-22-in-5239",
@@ -5067,7 +5089,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-394-8942",
@@ -5121,7 +5143,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-376-in-17-7094",
@@ -5175,7 +5197,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0385-8277",
@@ -5229,7 +5251,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-332541464-1464",
@@ -5283,7 +5305,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-390-7210",
@@ -5335,7 +5357,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-pro-cut-910-3461",
@@ -5389,7 +5411,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-zf-6127-7076",
@@ -5443,7 +5465,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-zf-6124-1571",
@@ -5497,7 +5519,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-bkr-ri-1800-3962",
@@ -5551,7 +5573,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-pro-cut-910-8493",
@@ -5605,7 +5627,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-332551977-1977",
@@ -5659,7 +5681,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-model-rover-9908",
@@ -5713,7 +5735,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-376-in-17-2952",
@@ -5767,7 +5789,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-376-in-22-in-6681",
@@ -5821,7 +5843,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "ri-392-7363",
@@ -5875,7 +5897,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0381-5052",
@@ -5929,7 +5951,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-386-9195",
@@ -5983,7 +6005,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-20402307-2307",
@@ -6036,8 +6058,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8432",
+    "gst": 5
   },
   {
     "slug": "leo-382-8975",
@@ -6091,7 +6113,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-258558586-8586",
@@ -6145,7 +6167,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0381-9107",
@@ -6199,7 +6221,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-model-pro-cu-0732",
@@ -6253,7 +6275,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-296052269-2269",
@@ -6306,8 +6328,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297386313-6313",
@@ -6357,7 +6379,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-0381-2663",
@@ -6411,7 +6433,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-pro-cut-950-4145",
@@ -6465,7 +6487,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-model-rover-7967",
@@ -6519,7 +6541,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-375-3993",
@@ -6573,7 +6595,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-322540525-0525",
@@ -6626,8 +6648,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-386-8522",
@@ -6681,7 +6703,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-zf6127-leo-e-3513",
@@ -6735,7 +6757,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-384-8837",
@@ -6789,7 +6811,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
     "hsn": "8433",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-cg-530-9160",
@@ -6842,8 +6864,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-cg-530-8458",
@@ -6896,8 +6918,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297263000-3000",
@@ -6950,8 +6972,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297380561-0561",
@@ -7004,8 +7026,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-re-1400-6087",
@@ -7057,8 +7079,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-re-2200-9709",
@@ -7111,8 +7133,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297279169-9169",
@@ -7165,8 +7187,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-332557074-7074",
@@ -7219,8 +7241,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-253009174-9174",
@@ -7273,8 +7295,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-34586937-6937",
@@ -7327,8 +7349,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-94097441-7441",
@@ -7381,8 +7403,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297280912-0912",
@@ -7435,8 +7457,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-252814707-4707",
@@ -7489,8 +7511,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "ri-kpd-1350-8308",
@@ -7542,7 +7564,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "leo-295837771-7771",
@@ -7595,8 +7617,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "ri-297272678-2678",
@@ -7645,8 +7667,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297381357-1357",
@@ -7694,8 +7716,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-gx-35-2041",
@@ -7748,8 +7770,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-296052723-2723",
@@ -7802,8 +7824,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297262606-2606",
@@ -7852,8 +7874,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-297262381-2381",
@@ -7902,8 +7924,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "leo-gx-35-8104",
@@ -7953,8 +7975,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
-    "hsn": "8433",
-    "gst": 12
+    "hsn": "8467",
+    "gst": 18
   },
   {
     "slug": "rly-173f",
@@ -8015,7 +8037,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-170f",
@@ -8076,7 +8098,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-cr-r50-b",
@@ -8130,8 +8152,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-cr-r52-b",
@@ -8186,8 +8208,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-cr-r52-s",
@@ -8242,8 +8264,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-cr-r35-b",
@@ -8299,8 +8321,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-cr-r35-s",
@@ -8358,8 +8380,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-1e40f-2",
@@ -8419,8 +8441,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-cr-r50-s",
@@ -8480,8 +8502,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-rapl-tb-52",
@@ -8544,8 +8566,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-m-52",
@@ -8606,8 +8628,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-m-35s",
@@ -8672,8 +8694,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-rh-3800d-sp",
@@ -8737,7 +8759,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rh-3800d",
@@ -8800,7 +8822,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rh-3800g-sp",
@@ -8862,7 +8884,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rh-3800g",
@@ -8926,7 +8948,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rh-2600",
@@ -8991,7 +9013,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rh-2000",
@@ -9055,7 +9077,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rap-l-rh-6301",
@@ -9114,7 +9136,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-300g",
@@ -9174,7 +9196,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-573d-upgraded",
@@ -9234,7 +9256,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-550g",
@@ -9288,7 +9310,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-470g-hl",
@@ -9343,7 +9365,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-473d-upgraded",
@@ -9406,7 +9428,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-800gh",
@@ -9466,7 +9488,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rapl-rh-773d-premium",
@@ -9529,7 +9551,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-750gh",
@@ -9590,7 +9612,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rapl-rh-700g",
@@ -9651,7 +9673,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-600g",
@@ -9710,7 +9732,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-673d-kama-engine",
@@ -9771,7 +9793,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-685d",
@@ -9826,7 +9848,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-685d-de-kama-engine",
@@ -9886,7 +9908,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-550g-167",
@@ -9917,9 +9939,9 @@ export const PRODUCTS = [
       "Transmission": "Gear",
       "Handlebar System": "Up / Down",
       "Tyre": "4.0-8",
-      "Blades": "24 Pcs \u2013 Dry Land",
+      "Blades": "24 Pcs – Dry Land",
       "Gear": "R, 0, 1, 2",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "800 mm"
     },
     "features": [
@@ -9950,7 +9972,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-570g",
@@ -9981,9 +10003,9 @@ export const PRODUCTS = [
       "Transmission": "Gear",
       "Handlebar System": "Up / Down",
       "Tyre": "4.0-8 Rubber Tyre",
-      "Blades": "32 Pcs \u2013 Dry Land",
+      "Blades": "32 Pcs – Dry Land",
       "Gear": "R, 0, 1, 2",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "1050 mm"
     },
     "features": [
@@ -10014,7 +10036,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-my-573d",
@@ -10048,7 +10070,7 @@ export const PRODUCTS = [
       "Handlebar System": "Up / Down",
       "Tyre": "4.0-8",
       "Blades": "32 PCS",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "1050 mm"
     },
     "features": [
@@ -10079,7 +10101,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-578d",
@@ -10113,7 +10135,7 @@ export const PRODUCTS = [
       "Handlebar System": "Up / Down / Left / Right",
       "Tyre": "5.0-12",
       "Blades": "32 Pcs",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "1350 mm"
     },
     "features": [
@@ -10144,7 +10166,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "kg-my-585d",
@@ -10175,7 +10197,7 @@ export const PRODUCTS = [
       "Handlebar System": "Up / Down / Left / Right",
       "Tyre": "5.0-12",
       "Blades": "40 Pcs",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "1350 mm"
     },
     "features": [
@@ -10206,7 +10228,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-585d-de",
@@ -10242,7 +10264,7 @@ export const PRODUCTS = [
       "Handle Bar System": "Up / Down / Left / Right",
       "Tyre Size": "5.0-12",
       "Blades": "40 Pcs (Dry Land)",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tilling Width": "1350 mm"
     },
     "features": [
@@ -10273,7 +10295,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-470g-hl-173",
@@ -10339,7 +10361,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-480g",
@@ -10372,7 +10394,7 @@ export const PRODUCTS = [
       "Handle Bar System": "Up / Down Adjustable",
       "Blades": "32 Pcs Heavy Duty",
       "Tilling Width": "1050 mm",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tyre Size": "4.0-8"
     },
     "features": [
@@ -10403,7 +10425,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-478d",
@@ -10436,7 +10458,7 @@ export const PRODUCTS = [
       "Handle Bar System": "Adjustable Up / Down &#038; Left / Right",
       "Blade Quantity": "32 Heavy-Duty Blades",
       "Tilling Width": "1050 mm",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Tyre Size": "4.0-8"
     },
     "features": [
@@ -10467,7 +10489,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-473d",
@@ -10531,7 +10553,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-470g",
@@ -10597,7 +10619,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-450g",
@@ -10628,10 +10650,10 @@ export const PRODUCTS = [
       "Starting System": "Recoil Start",
       "Transmission": "Gear Drive",
       "Handlebar System": "Adjustable (Up / Down)",
-      "Tyre Size": "4.0\u20138",
+      "Tyre Size": "4.0–8",
       "Blade Quantity": "24 Heavy-Duty Blades",
       "Tilling Width": "800 mm",
-      "Tilling Depth": "100\u2013300 mm"
+      "Tilling Depth": "100–300 mm"
     },
     "features": [
       "Genuine KrishiGears branded product",
@@ -10661,7 +10683,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-380g",
@@ -10690,9 +10712,9 @@ export const PRODUCTS = [
       "Power Output": "4 kW",
       "Transmission": "Gear Drive",
       "Tilling Width": "1050 mm",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Blade Quantity": "32 Blades",
-      "Tyre Type": "ATV Tyre 19 \u00d7 7 \u00d7 8",
+      "Tyre Type": "ATV Tyre 19 × 7 × 8",
       "Suspension": "Double Shocker",
       "Handle": "Adjustable",
       "Suitable For": "Rotary Tillage, Trenching, Weeding, Ridging"
@@ -10725,7 +10747,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-370g",
@@ -10787,7 +10809,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-360g",
@@ -10814,9 +10836,9 @@ export const PRODUCTS = [
       "Power Output": "4 kW",
       "Transmission": "Gear Drive",
       "Tilling Width": "1050 mm",
-      "Tilling Depth": "100\u2013300 mm",
+      "Tilling Depth": "100–300 mm",
       "Blade Quantity": "32 Blades",
-      "Tyre Size": "4.0\u20138 Solid",
+      "Tyre Size": "4.0–8 Solid",
       "Handle": "Adjustable",
       "Applications": "Rotary Tillage, Weeding, Trenching &amp; Ridging"
     },
@@ -10848,7 +10870,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-373d",
@@ -10910,7 +10932,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rapl-sm-g90",
@@ -10961,8 +10983,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-rapl-sm-g50",
@@ -11016,8 +11038,8 @@ export const PRODUCTS = [
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 12
+    "hsn": "8433",
+    "gst": 5
   },
   {
     "slug": "rly-rapl-apw-7000d",
@@ -11072,7 +11094,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rapl-apw-6000g",
@@ -11127,7 +11149,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-rapl-apw-5000g",
@@ -11182,7 +11204,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-573d",
@@ -11241,7 +11263,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-470-gh",
@@ -11297,12 +11319,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-550g-es",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-550G-ES",
+    "name": "KrishiGears Power Weeder – MY-550G-ES",
     "model": "MY-550G-ES",
     "brand": "KrishiGears",
     "badges": [
@@ -11357,12 +11379,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-550g-191",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-550G",
+    "name": "KrishiGears Power Weeder – MY-550G",
     "model": "MY-550G",
     "brand": "KrishiGears",
     "badges": [
@@ -11417,12 +11439,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-600g-192",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-600G",
+    "name": "KrishiGears Power Weeder – MY-600G",
     "model": "MY-600G",
     "brand": "KrishiGears",
     "badges": [
@@ -11478,12 +11500,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-673d",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-673D",
+    "name": "KrishiGears Power Weeder – MY-673D",
     "model": "MY-673D",
     "brand": "KrishiGears",
     "badges": [
@@ -11538,12 +11560,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-685d-194",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-685D",
+    "name": "KrishiGears Power Weeder – MY-685D",
     "model": "MY-685D",
     "brand": "KrishiGears",
     "badges": [
@@ -11598,7 +11620,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-450g-195",
@@ -11654,7 +11676,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-470g-196",
@@ -11710,7 +11732,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-480g-197",
@@ -11766,7 +11788,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-473d-198",
@@ -11822,7 +11844,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-478d-199",
@@ -11878,7 +11900,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-570g-200",
@@ -11934,7 +11956,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-578d-201",
@@ -11990,7 +12012,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-585d",
@@ -12046,7 +12068,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-585-de",
@@ -12102,12 +12124,12 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   },
   {
     "slug": "rly-my-685d-de",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder \u2013 MY-685D-DE",
+    "name": "KrishiGears Power Weeder – MY-685D-DE",
     "model": "MY-685D-DE",
     "brand": "KrishiGears",
     "badges": [
@@ -12159,7 +12181,7 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
-    "gst": 12
+    "gst": 5
   }
 ];
 

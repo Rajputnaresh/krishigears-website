@@ -177,7 +177,7 @@ export default function ProductDetail() {
                       Direct B2C / Single Unit Price
                     </span>
                     <span className="text-[10px] font-bold bg-lime-500/20 text-lime-400 px-2 py-0.5 rounded border border-lime-500/40">
-                      Inclusive of 12% GST
+                      Inclusive of {product.gst || 5}% GST
                     </span>
                     <span className="text-[10px] font-semibold bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded border border-zinc-700">
                       PAN-India Delivery Included
