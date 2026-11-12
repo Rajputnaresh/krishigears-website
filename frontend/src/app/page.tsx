@@ -519,7 +519,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/5] overflow-hidden border border-zinc-800 relative">
-              <img src={FARMER_FIELD} alt="Indian farmer" loading="lazy" className="w-full h-full object-cover" />
+              <img src={FARMER_FIELD} alt="Indian farmer" width={640} height={800} loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-lime-500 text-black dark:text-black p-6 max-w-xs lime-glow">
@@ -570,7 +570,7 @@ export default function Home() {
       {/* ========== DEALER OPPORTUNITY ========== */}
       <section data-testid="dealer-cta-section" className="kg-section relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
+          <img src={INDIA_MAP} alt="" width={1400} height={800} loading="lazy" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
@@ -1012,7 +1012,7 @@ function VideoCard({ video }: { video: any }) {
         data-testid={`home-video-${video.id}`}
         className="relative aspect-video overflow-hidden border border-zinc-700 group cursor-pointer block bg-zinc-900 rounded-lg"
       >
-        {thumb && <img src={thumb} alt={video.title} loading="lazy" className="w-full h-full object-cover opacity-75 group-hover:opacity-90 transition"/>}
+        {thumb && <img src={thumb} alt={video.title} width={480} height={270} loading="lazy" className="w-full h-full object-cover opacity-75 group-hover:opacity-90 transition"/>}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"/>
         <div className="absolute inset-0 grid place-items-center">
           <div className="h-16 w-16 grid place-items-center bg-lime-500 text-black dark:text-black rounded-full group-hover:scale-110 transition shadow-lg ">
@@ -1040,7 +1040,7 @@ function TestimonialsSection({ reviews }: { reviews: any[] }) {
             <div key={t.id || `t-${i}`} data-testid={`testimonial-${i}`} className="kg-card p-6 border-zinc-700">
               {t.photo_url && (
                 <div className="h-14 w-14 overflow-hidden border border-zinc-700 mb-4 bg-white rounded-full">
-                  <img src={t.photo_url} alt={t.name} loading="lazy" className="w-full h-full object-cover"/>
+                  <img src={t.photo_url} alt={t.name} width={56} height={56} loading="lazy" className="w-full h-full object-cover"/>
                 </div>
               )}
               {!t.photo_url && <Quote className="h-6 w-6 text-lime-400 mb-4" />}

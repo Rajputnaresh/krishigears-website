@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-4">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="KrishiGears" className="h-14 w-14 rounded-full ring-1 ring-lime-500/40" />
+            <img src={LOGO_URL} alt="KrishiGears" width={56} height={56} className="h-14 w-14 rounded-full ring-1 ring-lime-500/40" />
             <div>
               <div className="font-display font-black text-xl text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
               <div className="text-sm tracking-[0.25em] text-zinc-400 uppercase">Farming Tools</div>

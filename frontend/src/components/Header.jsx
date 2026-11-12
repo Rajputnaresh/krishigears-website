@@ -166,7 +166,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-14 md:h-18 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" data-testid="header-logo-link" className="flex items-center gap-2.5 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-md">
-          <img src={LOGO_URL} alt="KrishiGears" className="h-9 w-9 md:h-11 md:w-11 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
+          <img src={LOGO_URL} alt="KrishiGears" width={44} height={44} className="h-9 w-9 md:h-11 md:w-11 rounded-full ring-1 ring-lime-500/40 group-hover:ring-lime-400 transition" />
           <div className="leading-tight">
             <div className="font-display font-black text-base md:text-lg tracking-tight text-white">
               KRISHI<span className="text-lime-500">GEARS</span>
@@ -347,7 +347,7 @@ export default function Header() {
           <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white w-[85vw] sm:w-96 p-0 overflow-y-auto">
             <div className="p-5 border-b border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img src={LOGO_URL} alt="KrishiGears" className="h-10 w-10 rounded-full ring-1 ring-lime-500/40" />
+                <img src={LOGO_URL} alt="KrishiGears" width={40} height={40} className="h-10 w-10 rounded-full ring-1 ring-lime-500/40" />
                 <div className="font-display font-black text-white">KRISHI<span className="text-lime-500">GEARS</span></div>
               </div>
               <div className="flex items-center gap-2">
