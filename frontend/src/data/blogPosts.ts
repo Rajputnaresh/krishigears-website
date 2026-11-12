@@ -1721,13 +1721,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     created_at: "2026-02-06T10:00:00Z",
     tags: ["2T Oil", "Fuel Mixing", "2-Stroke", "Engine Care"],
     content: `> **Direct Answer: How Much 2T Oil for 1 Litre Petrol?**
-> For standard 2-stroke brush cutters (33cc, 43cc, 52cc), mix **40 ml of 2T oil per 1 Litre of petrol (1:25 ratio)** using standard mineral/semi-synthetic 2T oil. If using premium JASO-FD fully synthetic 2T oil, mix **25 ml per 1 Litre of petrol (1:40 ratio)**.
+> Always verify the exact fuel-to-oil ratio in your machine's engine manual first. For standard 2-stroke brush cutters (33cc, 43cc, 52cc), manufacturer manuals typically specify **40 ml of 2T oil per 1 Litre of petrol (1:25 ratio)** using standard mineral/semi-synthetic 2T oil. If your manual explicitly approves JASO-FD fully synthetic 2T oil, the ratio is typically **25 ml per 1 Litre of petrol (1:40 ratio)**. Always measure using a graduated beaker or calibrated dispenser.
 
 ### Quick Reference 2T Oil Mixing Table
 
 | Petrol (Gasoline) Volume | Mineral 2T Oil (1:25 Ratio) | Synthetic JASO-FD 2T Oil (1:40 Ratio) |
 | :--- | :--- | :--- |
-| **1 Litre Petrol** | **40 ml** (approx. 2 standard bottle caps) | **25 ml** |
+| **1 Litre Petrol** | **40 ml** (measure with graduated beaker; never estimate with bottle caps) | **25 ml** (measure with graduated beaker) |
 | **2 Litres Petrol** | **80 ml** | **50 ml** |
 | **3 Litres Petrol** | **120 ml** | **75 ml** |
 | **5 Litres Petrol** | **200 ml** | **125 ml** |
@@ -1737,8 +1737,10 @@ Using the wrong oil ratio is the #1 cause of dead 2-stroke engines across India:
 - **Too Much Oil (over 60ml per liter):** Heavy carbon buildup plugs the exhaust port, fouls the spark plug, and gums up piston rings.
 
 ## Exact Recommended Ratios
-* **Mineral 2T Oil (Standard 2T):** Mix **40ml of oil per 1 liter of petrol (1:25 ratio)**.
-* **Fully Synthetic 2T Oil (JASO FD Grade):** Mix **25ml of oil per 1 liter of petrol (1:40 ratio)**.
+* **Consult Engine Manual First:** Always follow the exact fuel-oil ratio specified in your machine's engine manual. Do not alter the manufacturer-specified ratio based solely on oil grade.
+* **Mineral 2T Oil (Standard 2T):** Mix **40ml of oil per 1 liter of petrol (1:25 ratio)** where prescribed by the engine manual.
+* **Fully Synthetic 2T Oil (JASO FD Grade):** Mix **25ml of oil per 1 liter of petrol (1:40 ratio)** only where approved by the engine manual.
+* **Graduated Measurement Required:** Always measure 2T oil with a graduated beaker, calibrated cylinder, or syringe. Never use bottle caps or uncalibrated containers, which cause dangerous ratio errors.
 * **Golden Rule:** Always shake the mixing can thoroughly before pouring into the brush cutter tank. Never add oil directly to the fuel tank!
 
 ## Technical Engineering Context & Field Dynamics
@@ -1748,7 +1750,7 @@ Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 
 ## Step-by-Step 2T Fuel Mixing Procedure
 
 1. **Measure Clean Petrol:** Measure exactly 1 Litre of fresh unleaded petrol into a separate clean fuel mixing container. Never use stale petrol stored over 30 days.
-2. **Measure 2T Oil Volume:** Use a graduated measuring bottle or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) for standard mineral oil, or 25 ml (1:40 ratio) for JASO-FD synthetic oil.
+2. **Measure 2T Oil Volume:** Use a graduated measuring beaker, calibrated bottle, or syringe to draw exactly 40 ml of 2T engine oil (1:25 ratio) or 25 ml (1:40 ratio) as prescribed by your engine manual.
 3. **Pre-Mix Thoroughly:** Add the measured 2T oil into the petrol can, seal the cap, and shake vigorously for 15 seconds until the petrol takes on a uniform blue/green tinted tint.
 4. **Filter & Fill Tank:** Pour the pre-mixed fuel into the brush cutter tank using a fine-mesh funnel to block dust and dirt particles.
 
@@ -1756,7 +1758,7 @@ Brush cutters and crop harvesters operate at extreme crankshaft speeds of 7,500 
 
 | Component / Maintenance Point | Operating Specification | Corrective Action & Interval |
 | :--- | :--- | :--- |
-| 2-Stroke Fuel Pre-Mix Ratio | 1:25 (40ml 2T oil per 1L petrol) for break-in; 1:40 with JASO-FD synthetic | Never run lean on 2T oil; use dedicated measuring bottle |
+| 2-Stroke Fuel Pre-Mix Ratio | 1:25 (40ml 2T oil per 1L petrol) for break-in; 1:40 with JASO-FD synthetic | Never run lean on 2T oil; use graduated measuring beaker and follow engine manual |
 | Gear Head Working Grease | High-Temperature Lithium Complex EP-0 / EP-2 Molybdenum Grease | Inject 15g into gearhead grease port every 15 working hours |
 | Drive Shaft Spline Lubrication | Moly disulfide chassis grease on 7-spline / 9-spline ends | Lubricate inner solid drive shaft every 40 hours |
 | Carburetor Metering Diaphragm | Walbro / Ruixing diaphragm flexibility test | Replace diaphragm kit if stiffened or ethanol-wrinkled |
@@ -1768,9 +1770,9 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Genuine Fitment Guarantee:** KrishiGears coordinates fitment-verified spare parts sourced order-per-sale for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India B2B fulfillment.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: 1 liter petrol me kitna 2t oil padta hai?\n**Expert Resolution:** 1 liter petrol mein 40 ml standard 2T oil (1:25 ratio) milana chahiye 2-stroke brush cutter aur grass cutter machine ke liye. Agar aap high-grade fully synthetic JASO-FD 2T oil use kar rahe hain, toh 1 liter petrol mein 25 ml (1:40 ratio) dalein. Khet me bina 2T oil ke petrol chalane par piston 15 minute ke andar garam hokar cylinder me jaam (seize) ho jayega.\n\n### Q: 2 stroke brush cutter petrol oil ratio kya hona chahiye?\n**Expert Resolution:** Exact ratio 1:25 hota hai (40ml 2T oil prati 1 Litre petrol). Nayi machine ke break-in period aur heavy paddy/wheat harvesting ke dauran 1:25 ratio sabse safe hai. Synthetic JASO-FD oil ke saath 1:40 (25ml per liter) ratio use kiya jata hai.\n\n### Q: 2t oil ratio for grass cutter: kya seedhe petrol tank me oil daal sakte hain?\n**Expert Resolution:** Kabhi bhi 2T oil seedhe brush cutter ya grass cutter ke petrol tank me na daalein. 2T oil petrol se bhari hota hai aur tank ke tal me baith jata hai, jisse carburetor block ho jata hai aur spark plug foul ho jata hai. Hamesha alag can me petrol aur 2T oil ko 15 second shake karke pre-mix karein.\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears stocks [genuine brush cutter spare parts](/products/category/brush-cutters) with 24-48 hour dispatch from Jaipur — MOQ 2 units, GST invoicing, dealer wholesale pricing on request.`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: 1 liter petrol me kitna 2t oil padta hai?\n**Expert Resolution:** Pehle apni machine ke engine manual mein prescribed ratio verify karein. Aamtaur par 1 liter petrol mein 40 ml standard 2T oil (1:25 ratio) graduated beaker se naap kar milaya jata hai. Agar engine manual JASO-FD fully synthetic 2T oil allow karta hai, toh 25 ml (1:40 ratio) dalein. Bottle cap se andaze se kabhi na dalein; khet me bina sahi naap ke chalane par piston 15 minute ke andar garam hokar cylinder me jaam (seize) ho sakta hai.\n\n### Q: 2 stroke brush cutter petrol oil ratio kya hona chahiye?\n**Expert Resolution:** Exact ratio 1:25 hota hai (40ml 2T oil prati 1 Litre petrol). Nayi machine ke break-in period aur heavy paddy/wheat harvesting ke dauran 1:25 ratio sabse safe hai. Synthetic JASO-FD oil ke saath 1:40 (25ml per liter) ratio use kiya jata hai.\n\n### Q: 2t oil ratio for grass cutter: kya seedhe petrol tank me oil daal sakte hain?\n**Expert Resolution:** Kabhi bhi 2T oil seedhe brush cutter ya grass cutter ke petrol tank me na daalein. 2T oil petrol se bhari hota hai aur tank ke tal me baith jata hai, jisse carburetor block ho jata hai aur spark plug foul ho jata hai. Hamesha alag can me petrol aur 2T oil ko 15 second shake karke pre-mix karein.\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears coordinates [genuine brush cutter spare parts](/products/category/brush-cutters) on an order-per-sale B2B model — MOQ 2 units, GST invoicing, dealer wholesale pricing and supplier-confirmed dispatch timelines on request.`
   },
   "nylon-trimmer-line-breaking-and-jamming-in-bump-feed": {
     slug: "nylon-trimmer-line-breaking-and-jamming-in-bump-feed",
