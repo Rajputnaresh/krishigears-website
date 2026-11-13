@@ -1,0 +1,41 @@
+name: Automated SEO & Security Health Audit
+
+on:
+  schedule:
+    # Run every Monday at 06:00 UTC (11:30 AM IST)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 cryptography requests PySocks
+
+      - name: Install Claude SEO Core Tools
+        run: |
+          git clone --depth 1 https://github.com/AgriciDaniel/claude-seo.git /tmp/claude-seo
+
+      - name: Run Transport & Security Header Checks
+        run: |
+          echo "=== Auditing krishigears.com Transport & TLS ==="
+          python3 /tmp/claude-seo/scripts/transport_check.py https://krishigears.com
+          echo "=== Auditing farmingtools.in Transport & TLS ==="
+          python3 /tmp/claude-seo/scripts/transport_check.py https://farmingtools.in
+
+      - name: Run Deterministic On-Page SEO Checks
+        run: |
+          echo "=== Auditing krishigears.com On-Page Quality ==="
+          python3 /tmp/claude-seo/scripts/page_checks.py --url https://krishigears.com
+          echo "=== Auditing farmingtools.in On-Page Quality ==="
+          python3 /tmp/claude-seo/scripts/page_checks.py --url https://farmingtools.in
