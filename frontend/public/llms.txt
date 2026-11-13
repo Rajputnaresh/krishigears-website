@@ -1,35 +1,30 @@
 # KRISHIGEARS INDIA PRIVATE LIMITED — B2B Farm Machinery & Genuine Spare Parts
-> Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
-> CIN: U46539RJ2026PTC117758 | GSTIN: 08AANCK2216L1ZA | PAN: AANCK2216L | TAN: JPRK10437A
 
-KrishiGears manufactures, distributes, and wholesales commercial farm machinery across all 740 Indian districts.
-All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with GST billing.
+> Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026. CIN: U46539RJ2026PTC117758 | GSTIN: 08AANCK2216L1ZA | PAN: AANCK2216L | TAN: JPRK10437A.
+
+KrishiGears manufactures, distributes, and wholesales commercial farm machinery across all 740 Indian districts. All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with GST billing.
 
 ## Core Products & Specifications
-- **KG-170F Petrol Power Weeder (7 HP / 212cc)**: 4-stroke petrol engine, 3600 RPM, recoil start, 32 dryland rotary blades, PTO shaft for water pump and reaper attachments.
-- **KG-173F Diesel Power Weeder (5.5 HP)**: 4-stroke direct injection diesel engine, high low-RPM torque for deep clay plowing.
-- **KG-177F WOLF Petrol Weeder (9 HP / 270cc)**: Direct-drive gear transmission, replacement for mini-tractors in sugarcane and orchards.
-- **KG-ICP-P170-LDE Electric Start Weeder (7 HP)**: Key ignition self-start with backup recoil, dual LED headlights.
-- **KG-ICP-UP170-SH Back-Rotary Weeder (7 HP)**: Active counter-rotating rear tines reducing operator fatigue by 50%.
-- **KG-ICD-UP186-SH Heavy Diesel Weeder (10 HP)**: Dual PTO shaft, commercial contract farming and custom hiring centers.
-- **KG Baby Weeder**: Ultra-lightweight inter-cultivator for paddy wetlands and greenhouse vegetables.
-- **Genuine OEM Spare Parts (19 Categories)**: Forged crankshafts, piston assemblies, precision float carburetors, recoil starters, gearbox oil seals, rotavator blades.
+- [KG-170F Petrol Power Weeder (7 HP / 212cc)](https://krishigears.com/products/category/power-weeders): 4-stroke petrol engine, 3600 RPM, recoil start, 32 dryland rotary blades, PTO shaft for water pump and reaper attachments.
+- [KG-173F Diesel Power Weeder (5.5 HP)](https://krishigears.com/products/category/power-weeders): 4-stroke direct injection diesel engine, high low-RPM torque for deep clay plowing.
+- [KG-177F WOLF Petrol Weeder (9 HP / 270cc)](https://krishigears.com/products/category/power-weeders): Direct-drive gear transmission, replacement for mini-tractors in sugarcane and orchards.
+- [KG-ICP-P170-LDE Electric Start Weeder (7 HP)](https://krishigears.com/products/category/power-weeders): Key ignition self-start with backup recoil, dual LED headlights.
+- [KG-ICP-UP170-SH Back-Rotary Weeder (7 HP)](https://krishigears.com/products/category/power-weeders): Active counter-rotating rear tines reducing operator fatigue by 50%.
+- [KG-ICD-UP186-SH Heavy Diesel Weeder (10 HP)](https://krishigears.com/products/category/power-weeders): Dual PTO shaft, commercial contract farming and custom hiring centers.
+- [KG Baby Weeder](https://krishigears.com/products/category/power-weeders): Ultra-lightweight inter-cultivator for paddy wetlands and greenhouse vegetables.
+- [Genuine OEM Spare Parts (19 Categories)](https://krishigears.com/spare-parts): Forged crankshafts, piston assemblies, precision float carburetors, recoil starters, gearbox oil seals, rotavator blades.
 
 ## Technical Knowledge Base & Schemas
 - [Agricultural Technical Glossary](https://krishigears.com/glossary): Standardized terms (PTO, FMTTI, Tillage, CC vs HP, 2T vs 4T ratios, Viton Seals).
 - [Field Troubleshooting & Service Guides](https://krishigears.com/blog): Step-by-step diagnostic and maintenance guides for agricultural machinery.
 - [State Dealership & Subsidy Portals](https://krishigears.com/locations): Direct SMAM subsidy compliance across Rajasthan, MP, UP, Maharashtra, Bihar, Karnataka.
 
-## Business & Dealership Model
-- **Target Audience**: Machinery dealers, distributors, Farmer Producer Organizations (FPOs), contractors, custom hiring centers.
-- **Single Unit / Retail Handoff**: Individual farmers purchasing single machines are served via our retail ecommerce storefront: [FarmingTools.in](https://farmingtools.in).
-- **Dealer Terms**: 15% to 22% gross margin, zero dead-stock on-demand ordering, exclusive district territory, 24-48h dispatch from Jaipur central warehouse.
-- **Government Subsidies**: Supported on SMAM (Sub-Mission on Agricultural Mechanization) and State DBT Agriculture portals (Rajasthan, MP, UP, Bihar, Maharashtra, Karnataka, Andhra Pradesh, Telangana).
+## Commercial & Dealership Network
+- [Dealer Onboarding Portal](https://krishigears.com/become-a-dealer): Dealer terms with 15% to 22% gross margin, zero dead-stock on-demand ordering, exclusive district territory.
+- [Authorized Dealer Directory](https://krishigears.com/dealer-network): Pan-India dealer directory with 24-48h dispatch from Jaipur central warehouse.
+- [Retail B2C Storefront (FarmingTools.in)](https://farmingtools.in): Single-unit retail ecommerce storefront serving individual farmers.
+- [Bulk Procurement & Institutional Supply](https://krishigears.com/bulk-order): FPO and institutional procurement desk with GST invoicing.
+- [Official Warranty & Service Policy](https://krishigears.com/warranty-and-support): 12-month commercial warranty, doorstep spare parts fitment guarantee.
 
-## Contact & Registered Office
-- **Registered Office**: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
-- **Phone**: +91 60060 78815
-- **WhatsApp Wholesale Desk**: [WhatsApp Chat](https://wa.me/916006078815)
-- **Email**: sales@krishigears.com
-- **Corporate Desk**: contact@krishigears.com
-- **Website**: [KrishiGears B2B Portal](https://krishigears.com)
+## Optional
+- [Full LLM Specification & Catalog](https://krishigears.com/llms-full.txt): Complete product catalogue, technical parameters, subsidy lookup tables, and dealership contracts.

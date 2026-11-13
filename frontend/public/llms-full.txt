@@ -1,0 +1,88 @@
+# KRISHIGEARS INDIA PRIVATE LIMITED — Complete Technical Specification & Commercial Catalog
+
+## Corporate & Statutory Profile
+- Company Name: KRISHIGEARS INDIA PRIVATE LIMITED
+- Brand Identity: KrishiGears (B2B wholesale, manufacturer, importer, distributor)
+- Retail Storefront: FarmingTools.in (B2C direct-to-farmer ecommerce)
+- Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026, India
+- Central Logistics Hub: Jaipur Warehouse & Dispatch Depot, Rajasthan
+- Corporate Identity Number (CIN): U46539RJ2026PTC117758
+- GSTIN: 08AANCK2216L1ZA
+- Permanent Account Number (PAN): AANCK2216L
+- Tax Deduction Account Number (TAN): JPRK10437A
+- Contact: sales@krishigears.com | WhatsApp: +91 60060 78815
+
+## Mission & Operational Footprint
+KrishiGears serves farm machinery dealers, agricultural implement retailers, Farmer Producer Organizations (FPOs), primary agricultural credit societies (PACS), government custom hiring centers (CHCs), and commercial contractors across all 740 districts of India.
+We operate an on-demand, zero dead-stock dealer replenishment model with verified 24-48 hour dispatch of full machinery and 100% genuine OEM spare parts.
+
+## Machinery Product Lines & Technical Specifications
+
+### 1. Power Weeders & Rotary Tillers
+- **KG-170F Petrol Power Weeder (7 HP / 212cc)**
+  - Engine: 4-Stroke, Single Cylinder, OHV Air-Cooled Petrol Engine
+  - Power Output: 7.0 HP (5.2 kW) @ 3600 RPM
+  - Displacement: 212 cc
+  - Fuel Consumption: 650-750 ml/hr under field load
+  - Transmission: Dual-belt drive with heavy-duty chain gearbox, 2 Forward + 1 Reverse gears
+  - Working Width: 24 to 36 inches (adjustable by removing outer blade sets)
+  - Working Depth: 4 to 8 inches
+  - Blades: 32 high-carbon manganese steel rotary tines (dryland & wetland interchangeable)
+  - Features: Rear hitch pin for ridger, ditcher, potato digger; auxiliary PTO output shaft for 2-inch water pump and front reaping attachment.
+
+- **KG-173F / KG-178F Direct-Injection Diesel Weeder (5.5 - 7 HP)**
+  - Engine: Direct injection vertical 4-stroke single cylinder air-cooled diesel
+  - Fuel Economy: 450-550 ml/hr high-torque low-RPM operation
+  - Transmission: All-gear oil bath transmission (no belts)
+  - Ideal For: Heavy black cotton, clay soil, sugarcane ratoon management, inter-row cotton weeding.
+
+- **KG-ICP-UP170-SH Active Rear-Rotary Weeder (7 HP)**
+  - Configuration: Counter-rotating rear-mounted tine box with front propulsion wheels
+  - Advantage: Zero operator recoil vibration; turns hard compact soil into fine tilth in single pass.
+
+- **KG Baby / Mini Weeder (2-Stroke 52cc & 4-Stroke 35cc)**
+  - Weight: 12-14 kg ultra-portable
+  - Application: High-density vegetable polyhouses, horticulture nurseries, and paddy weeding between narrow 15-20 cm crop rows.
+
+### 2. Commercial Brush Cutters & Harvester Trimmers
+- **KG-BC-52 2-Stroke Heavy Duty Brush Cutter (52cc / 2.2 HP)**
+  - Shaft: 28mm solid steel drive shaft with 9-tooth spline, heavy-duty anti-vibration rubber damper
+  - Attachments: 80T carbide-tipped circular saw blade, 3T brush knife, 2-line nylon weed trimmer head, paddy harvesting crop collector guide.
+
+- **KG-BC-35 4-Stroke Overhead Cam Brush Cutter (35.8cc GX35 Compatible)**
+  - Fuel: Pure petrol (no 2T oil mixing required)
+  - Emissions & Noise: Low vibration, low smoke, easy recoil start, smooth continuous operation.
+
+### 3. Agricultural Sprayers & Foggers
+- High-pressure HTP power sprayers (16-22 LPM, 50 bar operating pressure, tractor and motor PTO driven).
+- 2-in-1 battery cum manual knapsack sprayers (12V 12Ah lead-acid & lithium-ion variants).
+- Thermal pulse foggers for mosquito vector control, locust management, and greenhouse pest sanitation.
+
+### 4. Earth Augers & Ground Drillers
+- 52cc & 68cc 2-Stroke earth augers with single-man and two-man tubular steel frames.
+- Bit Diameters: 4 inch, 6 inch, 8 inch, 10 inch, 12 inch dual-spiral auger drills with replaceable tungsten carbide cutting tips.
+- Depth Capability: 800mm standard, extendable up to 1.6 meters with extension rods for tree plantation, solar farm fencing, and horticulture sapling digging.
+
+## OEM Spare Parts Catalog (19 Component Categories)
+1. Engine Core: Forged connecting rods, hardened crankshafts, piston assemblies, piston rings, cylinder heads.
+2. Fuel Delivery: Precision brass float carburetors, fuel filters, fuel petcock valves, primer bulbs.
+3. Ignition & Electrical: Electronic ignition coils, CDI modules, copper-core spark plugs, start-stop toggle switches.
+4. Starting Mechanism: Heavy-duty recoil starter assemblies, aluminum starter pawls, pull cords.
+5. Transmission: Oil seals (FKM / Viton high-temperature), bronze worm gears, driving chains, drive belts (B-series).
+6. Ground Engaging Tines: Curved weeding blades, straight blades, dryland tines, wetland paddle blades.
+
+## Government Subsidy Framework & Farmer Enablement
+- Compliant with **SMAM (Sub-Mission on Agricultural Mechanization)** central norms.
+- Approved under State Direct Benefit Transfer (DBT) Agriculture schemes:
+  - Rajasthan: Rajkisan Saathi Portal
+  - Madhya Pradesh: e-Krishi Yantra Anudan Portal
+  - Uttar Pradesh: UP Agriculture Portal (Darpan)
+  - Maharashtra: MahaDBT Shetkari Portal
+  - Bihar: OFMAS (Online Farm Mechanization Application Software)
+- We assist registered dealers and FPOs with official commercial proforma invoices, GST compliance records, FMTTI certification dossiers, and subsidy application documentation.
+
+## Dealer Network & Commercial Terms
+- Gross Margins: 15% to 22% guaranteed dealer markup.
+- Ordering Policy: Zero dead stock required; dealers order as customer orders arrive or maintain demo display units.
+- Freight & Dispatch: Pan-India road transport, V-Trans, Safechem, TCI, DTDC, Delhivery freight tie-ups from Jaipur central depot.
+- Technical Support: Video call troubleshooting, field mechanic training, and warranty claim settlement within 48 hours.
