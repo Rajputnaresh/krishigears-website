@@ -404,10 +404,11 @@ export default function Home() {
                     <Image
                       src={c.image}
                       alt={c.name}
-                      fill
+                      width={big ? 800 : 600}
+                      height={big ? 500 : 300}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700"
+                      className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-transparent"></div>
                     <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between">
