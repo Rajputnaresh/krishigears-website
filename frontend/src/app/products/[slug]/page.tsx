@@ -79,7 +79,7 @@ export default async function ProductDetailPage({
     "url": `https://krishigears.com/products/${product.slug}`,
     "additionalProperty": productSpecifications(product),
     "image": product.images?.[0] ? (product.images[0].startsWith("http") ? product.images[0] : `https://krishigears.com${product.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
-    "description": `${product.name} engineered for high-durability Indian farming operations. Model: ${product.model || product.slug}. Available for wholesale dealer supply and single-unit order via FarmingTools.in.`,
+    "description": `${product.name} catalogue specifications. Model: ${product.model || product.slug}. Availability, suitability, attachments and dispatch require supplier confirmation.`,
     "sku": product.model || product.slug,
     "mpn": product.model || product.slug,
     "brand": {

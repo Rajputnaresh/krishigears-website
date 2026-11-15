@@ -83,6 +83,10 @@ export default function ProductDetail() {
     `Hello KrishiGears, I'm interested in ${product.name}${product.model ? ` (${product.model})` : ""} for bulk/dealer/institutional supply. Please share details.`
   );
   const retailUrl = farmingtoolsProductUrl(product);
+  const isPowerWeeder = product.category === "power-weeders";
+  const price = Number(product.price);
+  const hasPrice = product.price !== null && product.price !== undefined && Number.isFinite(price) && price > 0;
+  const features = productCopyItems(product.features).filter(feature => !isPowerWeeder || !/^(Easy for|Fuel efficient|Perfectly balanced|Precision-engineered)/i.test(feature));
   const isMachine = ["power-weeders", "lawn-mowers", "brush-cutters", "crop-reapers", "farm-machinery"].includes(product.category);
   const compatibleSpares = isMachine
     ? PRODUCTS.filter((p) => p.category === "power-weeder-spare-parts").slice(0, 4)
@@ -178,14 +182,9 @@ export default function ProductDetail() {
                   </div>
                   <div className="flex items-baseline gap-3 mt-2">
                     <span className="text-3xl md:text-4xl font-display font-black text-lime-400">
-                      ₹{Number(product.price || 26000).toLocaleString("en-IN")}
+                      {hasPrice ? `₹${price.toLocaleString("en-IN")}` : "Request quotation"}
                     </span>
-                    <span className="text-sm text-zinc-400 line-through">
-                      ₹{Math.round((product.price || 26000) * 1.15).toLocaleString("en-IN")}
-                    </span>
-                    <span className="text-xs font-bold text-emerald-400">
-                      Save ~15% Factory Direct
-                    </span>
+
                   </div>
                   <p className="text-xs text-zinc-400 mt-1">
                     KrishiGears holds no stock. Machines are ordered from suppliers per sale. Confirm availability, attachments, warranty, freight and dispatch timing in your quotation.
@@ -266,7 +265,7 @@ export default function ProductDetail() {
             <div className="mt-10">
               <div className="kg-eyebrow mb-4">Key Features</div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {product.features && productCopyItems(product.features).map((f, i) => (
+                {features.map((f, i) => (
                   <li key={`feat-${i}-${f.slice(0, 30)}`} className="flex items-start gap-2 text-sm text-zinc-200">
                     <Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" /> {f}
                   </li>
@@ -414,7 +413,7 @@ export default function ProductDetail() {
         <div className="mt-16 grid md:grid-cols-2 gap-6">
           <div className="kg-card p-7">
             <div className="kg-eyebrow">Applications</div>
-            <ul className="mt-4 space-y-3">
+            {isPowerWeeder ? <p className="mt-4 text-zinc-300 text-sm">Share your crop, soil type, plot size and intended task. Ask the supplier to confirm model suitability and the required attachments before ordering.</p> : <ul className="mt-4 space-y-3">
               {product.applications &&
                 product.applications.map((a, i) => (
                   <li key={`app-${i}-${a.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-200 text-sm">
@@ -422,11 +421,11 @@ export default function ProductDetail() {
                     {a}
                   </li>
                 ))}
-            </ul>
+            </ul>}
           </div>
           <div className="kg-card p-7">
             <div className="kg-eyebrow">Benefits</div>
-            <ul className="mt-4 space-y-3">
+            {isPowerWeeder ? <p className="mt-4 text-zinc-300 text-sm">Request model-specific field-trial evidence and operating-cost estimates. Labour requirements, working coverage and weed-control results depend on the operator, attachments and field conditions.</p> : <ul className="mt-4 space-y-3">
               {product.benefits &&
                 productCopyItems(product.benefits).map((b, i) => (
                   <li key={`ben-${i}-${b.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-200 text-sm">
@@ -434,7 +433,7 @@ export default function ProductDetail() {
                     {b}
                   </li>
                 ))}
-            </ul>
+            </ul>}
           </div>
         </div>
 
