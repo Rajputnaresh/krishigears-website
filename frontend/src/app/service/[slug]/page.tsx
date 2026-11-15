@@ -1,11 +1,12 @@
 import Page from "@/pages_temp/ServiceProblems.jsx";
+import { REPAIR_FAQS } from "@/lib/service-support.mjs";
 import { clampDescription } from "@/app/layout";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const readable = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   const title = `${readable} Troubleshooting & Service`;
-  const description = clampDescription(`Authorized dealer service packages and troubleshooting for ${readable.toLowerCase()}. Book field technician visits or find genuine engine repair centers in your district.`, 155);
+  const description = clampDescription(`Troubleshooting and repair enquiries for ${readable.toLowerCase()}. Supplier or partner routing, coverage, charges and timing require confirmation.`, 155);
 
   return {
     title,
@@ -40,7 +41,7 @@ export default async function ServiceProblemsPage({ params }: { params: Promise<
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Service Problems",
+        "name": "Service support",
         "item": "https://krishigears.com/service"
       },
       {
@@ -56,8 +57,12 @@ export default async function ServiceProblemsPage({ params }: { params: Promise<
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        mainEntity: REPAIR_FAQS.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })),
+      }).replace(/</g, "\\u003c") }} />
       <Page />
     </>
   );

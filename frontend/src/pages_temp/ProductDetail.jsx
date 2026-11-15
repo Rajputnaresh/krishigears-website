@@ -1,4 +1,5 @@
 "use client";
+import { productSpecifications, productCopyItems } from "@/lib/product-specifications.mjs";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -29,14 +30,6 @@ export default function ProductDetail() {
 
   useEffect(() => {
     const localProd = PRODUCTS.find((p) => p.slug === slug);
-    if (!localProd) {
-      setProduct(null);
-    } else {
-      setProduct(localProd);
-    }
-    setNotFound(false);
-    setActive(0);
-
     apiClient.get(`/products/${slug}`)
       .then((res) => {
         if (res.data && typeof res.data === "object" && !Array.isArray(res.data)) {
@@ -75,7 +68,7 @@ export default function ProductDetail() {
     return (
       <div className="kg-section text-center">
         <h1 className="kg-h2">Product not found</h1>
-        <p className="text-zinc-400 mt-3">The product you're looking for doesn't exist or has been moved.</p>
+        <p className="text-zinc-400 mt-3">The product you&apos;re looking for doesn&apos;t exist or has been moved.</p>
         <Link href="/products" className="mt-6 inline-flex items-center gap-2 text-lime-500 font-bold">
           <ChevronRight className="h-4 w-4" /> Browse all products
         </Link>
@@ -151,9 +144,9 @@ export default function ProductDetail() {
                 <span className="text-white">{product.model}</span>
               </div>
             )}
-            {product.badges && product.badges.length > 0 && (
+            {productCopyItems(product.badges).length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
-                {product.badges.map((b) => (
+                {productCopyItems(product.badges).map((b) => (
                   <span
                     key={b}
                     className="text-xs font-bold tracking-wider uppercase px-3 py-1 bg-lime-500/10 text-lime-400 border border-lime-500/40 rounded"
@@ -166,7 +159,7 @@ export default function ProductDetail() {
             <div className="mt-4 inline-flex items-center gap-2 text-lime-500 font-bold">
               <ShieldCheck className="h-4 w-4" /> Genuine KrishiGears Product
             </div>
-            <p className="text-zinc-300 mt-5 leading-relaxed">{product.warranty}</p>
+            <p className="text-zinc-300 mt-5 leading-relaxed">Warranty terms, coverage and supporting documents require confirmation for the exact model.</p>
 
             {/* Smart Pricing & Transaction Transparency Box (Payment Gateway & B2B Compliance) */}
             <div className="mt-6 p-5 rounded-xl bg-zinc-900/90 border border-zinc-800 shadow-xl">
@@ -180,7 +173,7 @@ export default function ProductDetail() {
                       Inclusive of {product.gst || 5}% GST
                     </span>
                     <span className="text-[10px] font-semibold bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded border border-zinc-700">
-                      PAN-India Delivery Included
+                      Freight confirmed in quotation
                     </span>
                   </div>
                   <div className="flex items-baseline gap-3 mt-2">
@@ -195,7 +188,7 @@ export default function ProductDetail() {
                     </span>
                   </div>
                   <p className="text-xs text-zinc-400 mt-1">
-                    Complete commercial machine ready to operate. Includes warranty, tool kit, and tax invoice under GSTIN 08AANCK2216L1ZA.
+                    KrishiGears holds no stock. Machines are ordered from suppliers per sale. Confirm availability, attachments, warranty, freight and dispatch timing in your quotation.
                   </p>
                 </div>
                 <div className="sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-3 sm:pt-0 sm:pl-5">
@@ -212,10 +205,10 @@ export default function ProductDetail() {
               </div>
               <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-zinc-400">
                 <span className="flex items-center gap-1.5">
-                  <Check className="h-3.5 w-3.5 text-lime-500" /> ₹1,500 – ₹2,500 Token Advance Booking
+                  <Check className="h-3.5 w-3.5 text-lime-500" /> Advance terms confirmed in quotation
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Check className="h-3.5 w-3.5 text-lime-500" /> Balance at Destination Transport Godown
+                  <Check className="h-3.5 w-3.5 text-lime-500" /> Delivery and payment terms by agreement
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Check className="h-3.5 w-3.5 text-lime-500" /> Razorpay Secured Payment
@@ -254,9 +247,9 @@ export default function ProductDetail() {
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Farmer Retail Purchase</span>
-                  <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">₹1,500 Token • Open-Box Godown Inspection</span>
+                  <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">Check current retail terms</span>
                 </div>
-                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Flat ₹{Number(product.price || 26000).toLocaleString("en-IN")} all-inclusive (GST + freight) with full standard accessories bundle.</p>
+                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Confirm the current price, freight and included accessories on FarmingTools.in before ordering.</p>
               </div>
               <a
                 href={retailUrl}
@@ -273,7 +266,7 @@ export default function ProductDetail() {
             <div className="mt-10">
               <div className="kg-eyebrow mb-4">Key Features</div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {product.features && product.features.map((f, i) => (
+                {product.features && productCopyItems(product.features).map((f, i) => (
                   <li key={`feat-${i}-${f.slice(0, 30)}`} className="flex items-start gap-2 text-sm text-zinc-200">
                     <Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" /> {f}
                   </li>
@@ -312,20 +305,18 @@ export default function ProductDetail() {
             </div>
           </div>
           <div className="mt-8 border border-zinc-800">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <dl className="grid grid-cols-1 md:grid-cols-2">
               {product.specs &&
-                Object.entries(product.specs).map(([k, v], i) => (
+                productSpecifications(product).map(({ name: k, value: v }, i) => (
                   <div
                     key={k}
                     className={`p-5 border-b border-zinc-800 ${i % 2 === 0 ? "md:border-r" : ""}`}
                   >
-                    <div className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">
-                      {k.replace(/_/g, " ")}
-                    </div>
-                    <div className="text-white font-bold mt-1">{v}</div>
+                    <dt className="text-xs tracking-[0.25em] uppercase text-zinc-400 font-bold">{k}</dt>
+                    <dd className="text-white font-bold mt-1">{v}</dd>
                   </div>
                 ))}
-            </div>
+            </dl>
           </div>
         </div>
 
@@ -396,7 +387,7 @@ export default function ProductDetail() {
                 <div key={spare.slug} className="group border border-zinc-800 bg-zinc-900/40 hover:border-lime-500/60 transition p-4 rounded-lg flex flex-col justify-between">
                   <Link href={`/products/${spare.slug}`}>
                     <div className="aspect-square bg-zinc-950/80 rounded-md p-3 flex items-center justify-center border border-zinc-800/40 mb-3 overflow-hidden">
-                      <img src={spare.images?.[0] || "/images/products/weeder.webp"} alt={spare.name} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition" />
+                      <Image width={320} height={320} src={spare.images?.[0] || "/images/products/weeder.webp"} alt={spare.name} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition" />
                     </div>
                     <div className="text-[10px] uppercase font-bold text-lime-400 mb-1">{spare.category === "power-weeder-spare-parts" ? "OEM Spare Part" : "Attachment"}</div>
                     <h4 className="font-bold text-sm text-zinc-100 group-hover:text-lime-400 line-clamp-2 leading-tight">{spare.name}</h4>
@@ -437,7 +428,7 @@ export default function ProductDetail() {
             <div className="kg-eyebrow">Benefits</div>
             <ul className="mt-4 space-y-3">
               {product.benefits &&
-                product.benefits.map((b, i) => (
+                productCopyItems(product.benefits).map((b, i) => (
                   <li key={`ben-${i}-${b.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-200 text-sm">
                     <Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" />
                     {b}
@@ -452,23 +443,23 @@ export default function ProductDetail() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
               <ShieldCheck className="h-8 w-8 text-lime-500" />
-              <div className="text-sm font-bold text-white">Genuine Warranty</div>
-              <div className="text-xs text-zinc-400">FMTTI Tested</div>
+              <div className="text-sm font-bold text-white">Warranty enquiry</div>
+              <div className="text-xs text-zinc-400">Model documents on request</div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Truck className="h-8 w-8 text-lime-500" />
               <div className="text-sm font-bold text-white">PAN India Delivery</div>
-              <div className="text-xs text-zinc-400">Fast Dispatch</div>
+              <div className="text-xs text-zinc-400">Supplier-confirmed timing</div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Award className="h-8 w-8 text-lime-500" />
-              <div className="text-sm font-bold text-white">Authorized Dealer</div>
-              <div className="text-xs text-zinc-400">Spares Guaranteed</div>
+              <div className="text-sm font-bold text-white">Parts enquiry</div>
+              <div className="text-xs text-zinc-400">Fitment and availability check</div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Phone className="h-8 w-8 text-lime-500" />
-              <div className="text-sm font-bold text-white">24x7 Support</div>
-              <div className="text-xs text-zinc-400">Service Network</div>
+              <div className="text-sm font-bold text-white">Support enquiries</div>
+              <div className="text-xs text-zinc-400">Repair routing by confirmation</div>
             </div>
           </div>
         </div>
@@ -491,7 +482,7 @@ export default function ProductDetail() {
                     className="group border border-zinc-800 bg-surface hover:border-lime-500/60 transition-all duration-300 overflow-hidden flex flex-col"
                   >
                     <div className="aspect-square bg-surface-darker flex items-center justify-center p-4">
-                      <img
+                      <Image width={320} height={320}
                         src={p.images?.[0] || "/placeholder.png"}
                         alt={p.name}
                         loading="lazy"

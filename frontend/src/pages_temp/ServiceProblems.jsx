@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useParams } from "next/navigation";
-import { Check, AlertTriangle, Wrench, Phone, ArrowRight } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
 import { COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { CITY_STATE_MAP } from "@/data/cityStateMap";
+import { REPAIR_FAQS } from "@/lib/service-support.mjs";
 import { pickRandom } from "@/lib/random";
 
 const ALL_ENGINE_PROBLEMS = [
@@ -37,12 +39,9 @@ const ALL_FIELD_PROBLEMS = [
 ];
 
 const SERVICE_OPTIONS = [
-  { name: "On-site Repair Call", desc: "KrishiGears technician visits your field in 48 hours across India", icon: "🔧" },
-  { name: "Machine Pickup Service", desc: "We collect your machine from your location for workshop repair", icon: "🚛" },
-  { name: "AMC — Annual Maintenance", desc: "Year-round coverage: 2 scheduled services + unlimited breakdown calls", icon: "📋" },
-  { name: "Operator Training", desc: "On-field training for your workers on correct operation and daily maintenance", icon: "📖" },
-  { name: "Genuine Parts Only", desc: "All replacements use OEM-spec parts, not cheap aftermarket copies", icon: "✅" },
-  { name: "Warranty Support", desc: "We handle warranty claims directly with the manufacturer on your behalf", icon: "🛡️" },
+  { name: "Repair Routing Enquiry", desc: "Share your location and machine details. We can check supplier or partner repair options; coverage and availability must be confirmed before arranging any work.", icon: "🔧" },
+  { name: "Spare Parts Enquiry", desc: "Send the model plate and part photos for a supplier fitment check. Parts availability, price and dispatch timing require confirmation.", icon: "✅" },
+  { name: "Warranty Enquiry", desc: "Share your invoice, serial number and fault details so we can route the enquiry to the relevant supplier. Coverage is subject to the supplier's warranty terms.", icon: "🛡️" },
 ];
 
 export default function ServiceProblems() {
@@ -75,38 +74,30 @@ export default function ServiceProblems() {
 
   return (
     <div data-testid="service-problems-page">
-      {location && state && (
-        <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
-          <Link href="/" className="hover:text-lime-500 transition">Home</Link>
-          <span>/</span>
-          <Link href="/dealer-network" className="hover:text-lime-500 transition">Dealers</Link>
-          <span>/</span>
-          <Link href={`/dealer/${state.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-lime-500 transition">{state}</Link>
-          <span>/</span>
-          <span className="text-zinc-300">{location} Service Center</span>
-        </div>
-      )}
+      <nav aria-label="Breadcrumb" className="max-w-[1200px] mx-auto px-6 pt-10 pb-4 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+        <Link href="/">Home</Link><span>/</span><Link href="/service">Service support</Link><span>/</span><span>{location} repair enquiry</span>
+      </nav>
       <section className="relative kg-section overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-30" />
+          <Image src={HERO_BG} alt="" fill sizes="100vw" className="object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         <div className="max-w-[1200px] mx-auto relative">
           <div className="kg-eyebrow">{COMPANY.name} · Service & Troubleshooting</div>
           <h1 className="kg-h1 mt-4 text-balance max-w-3xl">
-            Power Weeder Problems & Service in {location} — Expert Repair Support
+            Power Weeder Troubleshooting & Repair Enquiries in {location}
           </h1>
           <h2 className="text-xl text-zinc-300 mt-2 font-normal">
             {vernacularHeadline}
           </h2>
           <p className="text-zinc-200 mt-6 max-w-2xl leading-relaxed text-lg">
-            Whether your power weeder won't start in {location} paddy fields, blades aren't cutting properly,
-            or the engine keeps cutting out mid-session — we have the service team and spare parts to get you
-            back working in under 48 hours.
+            Whether your power weeder won&apos;t start in {location} paddy fields, blades aren&apos;t cutting properly,
+            or the engine keeps cutting out mid-session — share the model, fault details and your PIN code.
+            We check supplier or partner repair routing options. Local coverage, technician visits, charges and timing are subject to confirmation; no doorstep service is guaranteed.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <EnquiryDialog product={`Power Weeder Service in ${location}`} trigger={
-              <button data-testid="service-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Book Service Call</button>
+              <button data-testid="service-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Enquire About Repair Support</button>
             } />
             <a href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hi, I have a power weeder problem in ${location}. Machine details: `)}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label={`WhatsApp Service Desk for ${location}`} onClick={() => trackWhatsAppClick("service_problems", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Service Desk</a>
             <Link href="/warranty-and-support" data-testid="warranty-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Warranty Info</Link>
@@ -147,7 +138,7 @@ export default function ServiceProblems() {
       <section className="kg-section">
         <div className="max-w-[1200px] mx-auto">
           <div className="kg-eyebrow">Service Options in {location}</div>
-          <h2 className="kg-h2 mt-3">Service packages available for {location} dealers and farmers.</h2>
+          <h2 className="kg-h2 mt-3">Ask about support options for {location}.</h2>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICE_OPTIONS.map((opt) => (
               <div key={opt.name} className="p-6 bg-zinc-900 rounded-md border border-zinc-800">
@@ -160,6 +151,13 @@ export default function ServiceProblems() {
         </div>
       </section>
 
+      <section className="kg-section" aria-labelledby="repair-faqs">
+        <div className="max-w-[1200px] mx-auto space-y-4">
+          <h2 id="repair-faqs" className="kg-h2">Repair support questions</h2>
+          {REPAIR_FAQS.map(({ question, answer }) => <details key={question} className="border border-zinc-700 rounded-lg p-4"><summary className="min-h-11 cursor-pointer font-bold">{question}</summary><p className="mt-3 text-zinc-300">{answer}</p></details>)}
+        </div>
+      </section>
+
       {/* Internal Silo Links */}
       <section className="kg-section bg-surface-darker border-t border-zinc-800">
         <div className="max-w-[1200px] mx-auto text-center">
@@ -168,7 +166,7 @@ export default function ServiceProblems() {
             <Link href={`/power-weeders-in-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
               Power Weeder Dealers in {location}
             </Link>
-            <Link href={`/spare-parts/power-weeder-spare-parts-in-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
+            <Link href={`/power-weeder-spare-parts-in-${citySlug}`} className="px-6 py-3 border border-zinc-800 rounded-md hover:border-lime-500 hover:text-lime-500 transition text-sm">
               Power Weeder Spare Parts in {location}
             </Link>
           </div>

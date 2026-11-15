@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, useMemo } from "react";
+import Image from "next/image";
+import { useSyncExternalStore, useMemo } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ChevronRight, Search, X, SlidersHorizontal, RotateCcw } from "lucide-react";
@@ -7,20 +8,14 @@ import { CATEGORIES, COMPANY, PRODUCTS, farmingtoolsCategoryUrl } from "@/data/c
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { apiClient } from "@/lib/api";
+import PowerWeederGuide from "@/components/PowerWeederGuide";
+import { productSpecifications } from "@/lib/product-specifications.mjs";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function CategoryPage() {
   const { slug } = useParams();
   const category = CATEGORIES.find((c) => c.slug === slug);
-  const localMatches = category ? PRODUCTS.filter((p) => p.category === slug) : [];
-  const [items, setItems] = useState(localMatches);
-
-  useEffect(() => {
-    if (!category) return;
-    const matches = PRODUCTS.filter((p) => p.category === slug);
-    setItems(matches);
-  }, [slug, category]);
+  const items = category ? PRODUCTS.filter((p) => p.category === slug) : [];
 
   if (!category) {
     return (
@@ -98,7 +93,7 @@ export default function CategoryPage() {
           <div className="lg:col-span-5">
             <div className="aspect-[4/3] overflow-hidden border border-zinc-800/80 rounded-xl bg-zinc-900/40 p-3">
               <div className="w-full h-full rounded-lg bg-zinc-950/70 p-4 flex items-center justify-center border border-zinc-800/50">
-                <img src={category.image} alt={category.name} loading="lazy" className="w-full h-full object-contain" />
+                <Image src={category.image} alt={category.name} width={640} height={480} sizes="(max-width: 1024px) 100vw, 42vw" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -107,7 +102,7 @@ export default function CategoryPage() {
         <ModelsSection items={items} category={category} />
 
         {/* B2B Wholesale Commercial Guide & FAQ Section (>300 words SEO Content) */}
-        <div className="mt-16 pt-12 border-t border-zinc-800 space-y-12">
+        {slug === "power-weeders" ? <PowerWeederGuide items={items} /> : <div className="mt-16 pt-12 border-t border-zinc-800 space-y-12">
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">
@@ -257,63 +252,60 @@ export default function CategoryPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </div>
   );
 }
 
+function subscribeToFilters(callback) {
+  window.addEventListener("popstate", callback);
+  return () => window.removeEventListener("popstate", callback);
+}
+
 function ModelsSection({ items, category }) {
-  const [search, setSearch] = useState("");
-  const [fuel, setFuel] = useState("all");
-  const [hpRange, setHpRange] = useState("all");
+  const query = useSyncExternalStore(subscribeToFilters, () => window.location.search, () => "");
+  const params = new URLSearchParams(query);
+  const search = params.get("q") || "";
+  const fuel = ["petrol", "diesel", "electric"].includes(params.get("fuel")) ? params.get("fuel") : "all";
+  const hpRange = ["under-5", "5-7", "8-10", "10-plus"].includes(params.get("hp")) ? params.get("hp") : "all";
+  const transmission = params.get("transmission") || "all";
+  const rotary = params.get("rotary") || "all";
 
-  // Read URL search params on client mount for shareable B2B deep links
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const params = new URLSearchParams(window.location.search);
-    const q = params.get("q") || "";
-    const f = params.get("fuel") || "all";
-    const hp = params.get("hp") || "all";
-    if (q) setSearch(q);
-    if (["all", "petrol", "diesel", "electric"].includes(f)) setFuel(f);
-    if (["all", "under-5", "5-7", "8-10", "10-plus"].includes(hp)) setHpRange(hp);
-  }, []);
-
-  const updateUrl = (newSearch, newFuel, newHp) => {
+  const updateUrl = (newSearch, newFuel, newHp, newTransmission = transmission, newRotary = rotary) => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams();
     if (newSearch.trim()) params.set("q", newSearch.trim());
     if (newFuel !== "all") params.set("fuel", newFuel);
     if (newHp !== "all") params.set("hp", newHp);
+    if (newTransmission !== "all") params.set("transmission", newTransmission);
+    if (newRotary !== "all") params.set("rotary", newRotary);
     const qs = params.toString();
     const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
     window.history.replaceState(null, "", newUrl);
+    window.dispatchEvent(new PopStateEvent("popstate"));
   };
 
   const handleSearchChange = (val) => {
-    setSearch(val);
     updateUrl(val, fuel, hpRange);
   };
 
   const handleFuelChange = (val) => {
-    setFuel(val);
     updateUrl(search, val, hpRange);
   };
 
   const handleHpChange = (val) => {
-    setHpRange(val);
     updateUrl(search, fuel, val);
   };
 
   const extractHp = (product) => {
-    const text = `${product.name} ${product.specs?.Power || ""} ${product.specs?.Engine || ""}`;
+    const text = productSpecifications(product).find((s) => s.name === "Power")?.value || product.name;
     const match = text.match(/(\d+(?:\.\d+)?)\s*HP/i);
     return match ? parseFloat(match[1]) : null;
   };
 
   const extractFuel = (product) => {
-    const text = `${product.name} ${product.specs?.Fuel || ""} ${product.specs?.Engine || ""}`.toLowerCase();
+    const text = productSpecifications(product).filter((s) => ["Fuel", "Engine"].includes(s.name)).map((s) => s.value).join(" ").toLowerCase();
     if (text.includes("petrol") || text.includes("gasoline") || text.includes("gas")) return "petrol";
     if (text.includes("diesel")) return "diesel";
     if (text.includes("electric") || text.includes("battery") || text.includes("cordless")) return "electric";
@@ -325,6 +317,9 @@ function ModelsSection({ items, category }) {
   const filteredItems = useMemo(() => {
     if (!items) return [];
     return items.filter((p) => {
+      const specs = productSpecifications(p);
+      if (transmission !== "all" && !specs.some((s) => s.name === "Transmission" && s.value === transmission)) return false;
+      if (rotary !== "all" && !specs.some((s) => s.name === "Rotary type" && s.value === rotary)) return false;
       if (search.trim()) {
         const q = search.toLowerCase();
         const matchName = p.name?.toLowerCase().includes(q);
@@ -346,15 +341,12 @@ function ModelsSection({ items, category }) {
       }
       return true;
     });
-  }, [items, search, fuel, hpRange]);
+  }, [items, search, fuel, hpRange, transmission, rotary]);
 
-  const hasActiveFilters = search.trim() !== "" || fuel !== "all" || hpRange !== "all";
+  const hasActiveFilters = search.trim() !== "" || fuel !== "all" || hpRange !== "all" || transmission !== "all" || rotary !== "all";
 
   const resetFilters = () => {
-    setSearch("");
-    setFuel("all");
-    setHpRange("all");
-    updateUrl("", "all", "all");
+    updateUrl("", "all", "all", "all", "all");
   };
 
   if (items === null) {
@@ -377,12 +369,12 @@ function ModelsSection({ items, category }) {
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2 border-b border-zinc-800">
         <div>
-          <h2 className="kg-h2">
+          <h2 className="kg-h2" aria-live="polite">
             Supply <span className="text-lime-500">Models</span> ({filteredItems.length}
             {filteredItems.length !== items.length ? ` of ${items.length}` : ""})
           </h2>
           <p className="text-xs text-zinc-400 mt-1">
-            Factory-spec models available for direct B2B supply, dealership allocation, and bulk dispatch.
+            Catalogue models for specification comparison. Availability, price and dispatch require supplier confirmation.
           </p>
         </div>
 
@@ -393,11 +385,13 @@ function ModelsSection({ items, category }) {
             type="text"
             value={search}
             onChange={(e) => handleSearchChange(e.target.value)}
+            aria-label="Search models or specifications"
             placeholder="Search model or spec..."
             className="w-full bg-zinc-900 border border-zinc-800 rounded-lg pl-9 pr-8 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-lime-500"
           />
           {search && (
             <button
+              aria-label="Clear model search"
               onClick={() => handleSearchChange("")}
               className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
             >
@@ -416,7 +410,7 @@ function ModelsSection({ items, category }) {
 
           {/* Fuel Filter Pills (only for machinery, not pure spare parts) */}
           {!isSpareParts && (
-            <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
+            <div className="flex flex-wrap items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
               {[
                 { id: "all", label: "All Fuel" },
                 { id: "petrol", label: "Petrol" },
@@ -425,8 +419,9 @@ function ModelsSection({ items, category }) {
               ].map((f) => (
                 <button
                   key={f.id}
+                  aria-pressed={fuel === f.id}
                   onClick={() => handleFuelChange(f.id)}
-                  className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
+                  className={`px-3 py-2.5 min-h-11 rounded text-xs font-medium transition-colors ${
                     fuel === f.id
                       ? "bg-lime-500 text-black font-bold"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
@@ -440,7 +435,7 @@ function ModelsSection({ items, category }) {
 
           {/* Power Range Filter Pills */}
           {!isSpareParts && (
-            <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
+            <div className="flex flex-wrap items-center gap-1 bg-zinc-950 border border-zinc-800 rounded-lg p-1">
               {[
                 { id: "all", label: "All HP" },
                 { id: "under-5", label: "< 5 HP" },
@@ -450,8 +445,9 @@ function ModelsSection({ items, category }) {
               ].map((hp) => (
                 <button
                   key={hp.id}
+                  aria-pressed={hpRange === hp.id}
                   onClick={() => handleHpChange(hp.id)}
-                  className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
+                  className={`px-3 py-2.5 min-h-11 rounded text-xs font-medium transition-colors ${
                     hpRange === hp.id
                       ? "bg-lime-500 text-black font-bold"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
@@ -464,6 +460,18 @@ function ModelsSection({ items, category }) {
           )}
         </div>
 
+        {category.slug === "power-weeders" && [
+          { name: "Transmission", value: transmission, param: "transmission" },
+          { name: "Rotary type", value: rotary, param: "rotary" },
+        ].map((facet) => <label key={facet.param} className="text-sm text-zinc-200">{facet.name}
+          <select className="ml-2 min-h-11 bg-zinc-950 border border-zinc-700 rounded p-2" value={facet.value} onChange={(event) => {
+            const value = event.target.value;
+            updateUrl(search, fuel, hpRange, facet.param === "transmission" ? value : transmission, facet.param === "rotary" ? value : rotary);
+          }}>
+            <option value="all">All</option>
+            {[...new Set(items.flatMap((p) => productSpecifications(p).filter((s) => s.name === facet.name).map((s) => s.value)))].sort().map((value) => <option key={value} value={value}>{value}</option>)}
+          </select>
+        </label>)}
         {hasActiveFilters && (
           <button
             onClick={resetFilters}

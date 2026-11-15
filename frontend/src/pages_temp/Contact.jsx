@@ -24,7 +24,7 @@ export default function Contact() {
     try {
       await apiClient.post("/leads/contact", form);
       trackEnquirySubmit(null, "contact");
-      toast.success("Message sent. We will reply within 24 hours.");
+      toast.success("Message sent. Our team will review your enquiry.");
       setForm({ name: "", phone: "", email: "", subject: "", message: "" });
     } catch (err) {
       toast.error(formatApiError(err));
@@ -35,9 +35,9 @@ export default function Contact() {
     <div data-testid="contact-page" className="kg-section bg-background text-zinc-100">
       <div className="max-w-[1200px] mx-auto">
         <div className="kg-eyebrow">Contact Us</div>
-        <h1 className="kg-h1 mt-4 text-balance text-white">Let's talk about <span className="text-lime-500">your farm.</span></h1>
+        <h1 className="kg-h1 mt-4 text-balance text-white">Let&apos;s talk about <span className="text-lime-500">your farm.</span></h1>
         <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed">
-          Sales enquiries, dealer applications, bulk quotations, warranty support — pick the channel that works for you. Our team responds within 24 hours.
+          Sales enquiries, dealer applications, bulk quotations, warranty support — pick the channel that works for you. Machines are ordered from suppliers per sale; confirm availability and dispatch timing in your quotation.
         </p>
 
         <div className="mt-12 grid lg:grid-cols-12 gap-10">
@@ -51,7 +51,7 @@ export default function Contact() {
             <ChannelCard icon={Mail} title="Dealer Network" value={COMPANY.dealers} href={`mailto:${COMPANY.dealers}`} testid="contact-email-dealers" />
             <ChannelCard icon={Mail} title="Service & Technical Support" value={COMPANY.support} href={`mailto:${COMPANY.support}`} testid="contact-email-support" />
             <ChannelCard icon={Mail} title="Accounts & GST Billing" value={COMPANY.accounts} href={`mailto:${COMPANY.accounts}`} testid="contact-email-accounts" />
-            <ChannelCard icon={MapPin} title="Jaipur Central Depot" value={COMPANY.address} testid="contact-address" />
+            <ChannelCard icon={MapPin} title="Registered Office Address" value={COMPANY.address} testid="contact-address" />
           </div>
 
           {/* Form */}
@@ -95,9 +95,9 @@ export default function Contact() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-500/10 border border-lime-500/30 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
-                <MapPin className="h-3.5 w-3.5" /> Central Office & Dispatch Godown
+                <MapPin className="h-3.5 w-3.5" /> Registered Office
               </div>
-              <h3 className="font-display font-bold text-xl text-white">KrishiGears Jaipur Headquarters</h3>
+              <h3 className="font-display font-bold text-xl text-white">KrishiGears Registered Office, Jaipur</h3>
               <p className="text-zinc-400 text-sm mt-1">{COMPANY.address}</p>
             </div>
             <a
@@ -128,21 +128,21 @@ export default function Contact() {
           <div className="space-y-1">
             <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Support & Logistics Directory</span>
             <h2 className="text-xl md:text-2xl font-display font-bold text-white">
-              Visiting Jaipur HQ & Getting B2B Dealer Support
+              Contact & B2B Dealer Support
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 text-sm">
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
-              <h3 className="font-bold text-white text-sm">Working Hours & Walk-In Inquiries</h3>
+              <h3 className="font-bold text-white text-sm">Office Address & Visit Enquiries</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                Our central sales and dealer coordination office operates Monday through Saturday, 9:00 AM to 7:00 PM IST. Dealers and FPO representatives wishing to visit our facility in Jaipur can book an appointment in advance via WhatsApp or phone.
+                The address above is our registered office, not a walk-in showroom, stocked depot or repair workshop. Contact us by WhatsApp or phone before planning a visit; a visit is subject to confirmation.
               </p>
             </div>
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
               <h3 className="font-bold text-white text-sm">Urgent Spare Parts Inquiries & Dispatches</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                For emergency mechanic or repair shop spare part dispatches, message our WhatsApp parts counter (+91 60060 78815) with the part photo and machine model. Dispatches operate daily via express parcel services.
+                Send the part photo, machine model and delivery PIN code by WhatsApp. We check supplier availability and fitment details before quoting. Procurement is per sale; dispatch and delivery timing require supplier confirmation.
               </p>
             </div>
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
@@ -154,7 +154,7 @@ export default function Contact() {
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
               <h3 className="font-bold text-white text-sm">FMTTI & Subsidy Documentation Desk</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                If you require test compliance certificates or dealer quotations for state subsidy portals (SMAM, MahaDBT, Raj Kisan Sathi, Krishi Yantrikaran), contact <a href={`mailto:${COMPANY.email}`} className="text-lime-400 hover:underline">{COMPANY.email}</a> for same-day documentation.
+                If you require test compliance certificates or dealer quotations for state subsidy portals (SMAM, MahaDBT, Raj Kisan Sathi, Krishi Yantrikaran), contact <a href={`mailto:${COMPANY.email}`} className="text-lime-400 hover:underline">{COMPANY.email}</a> to check which documents are available for the exact model and current scheme.
               </p>
             </div>
           </div>

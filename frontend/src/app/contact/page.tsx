@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Contact KrishiGears | Jaipur HQ & B2B Wholesale Support",
-    description: "Connect directly with our machinery sales desk and service engineers in Jaipur. Fast quotation and PAN India dispatch.",
+    description: "Contact our sales and support desk for supplier-confirmed machinery quotations, spare parts enquiries and repair routing.",
     url: "https://krishigears.com/contact",
     siteName: "KrishiGears",
     images: [{ url: "/logo512.png", width: 512, height: 512, alt: "KrishiGears Contact" }],
@@ -20,8 +20,8 @@ const contactJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://krishigears.com/#localbusiness",
+      "@type": "Organization",
+      "@id": "https://krishigears.com/#organization",
       "name": "KRISHIGEARS INDIA PRIVATE LIMITED",
       "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
       "taxID": "08AANCK2216L1ZA",
@@ -36,24 +36,6 @@ const contactJsonLd = {
         "addressRegion": "Rajasthan",
         "postalCode": "302026",
         "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 26.8538,
-        "longitude": 75.7196
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:00",
-        "closes": "19:00"
       },
       "areaServed": "IN"
     },

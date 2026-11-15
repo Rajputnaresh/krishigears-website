@@ -37,7 +37,7 @@ export default function EnquiryDialog({ trigger, product = "" }) {
         email: (form.email || "").trim(),
       });
       trackEnquirySubmit(product);
-      toast.success("Enquiry sent! Our team will call you within 24 hours.");
+      toast.success("Enquiry sent. Our team will review your requirement.");
       setForm({ name: "", phone: "", email: "", location: "", product, message: "" });
       setOpen(false);
     } catch (err) {
@@ -54,7 +54,7 @@ export default function EnquiryDialog({ trigger, product = "" }) {
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">Bulk / Dealer Inquiry</DialogTitle>
           <DialogDescription className="text-zinc-300">
-            Share your requirement. Our team will contact you within 24 hours for dealer, bulk order or institutional supply support.
+            Share your requirement. Our team will review your dealer, bulk order or institutional supply enquiry. Availability and timing require confirmation.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={submit} className="space-y-4 mt-2">

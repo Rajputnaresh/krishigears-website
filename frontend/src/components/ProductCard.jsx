@@ -1,105 +1,19 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BadgeCheck } from "lucide-react";
-import { CATEGORIES, COMPANY, LOGO_URL } from "@/data/catalog";
+import { ArrowRight } from "lucide-react";
+import { CATEGORIES } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
-import { trackWhatsAppClick } from "@/lib/analytics";
 import { useTranslation } from "react-i18next";
+import { productCopyItems } from "@/lib/product-specifications.mjs";
 import { motion } from "framer-motion";
 
 export default function ProductCard({ product }) {
   const { t } = useTranslation();
   const category = CATEGORIES.find((c) => c.slug === product.category);
 
-  const productPrice = product.price;
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": product.images?.[0] ? (product.images[0].startsWith("http") ? product.images[0] : `https://krishigears.com${product.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
-    "description": `${product.name} - genuine commercial agricultural equipment from KrishiGears. Available for dealer and bulk supply across India.`,
-    "sku": product.model || product.slug,
-    "mpn": product.model || product.slug,
-    "brand": {
-      "@type": "Brand",
-      "name": product.brand || "KrishiGears"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "24",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Verified KrishiGears Dealer"
-        },
-        "reviewBody": `${product.name} delivered excellent durability, prompt Jaipur warehouse dispatch, and 100% genuine spares fitment.`
-      }
-    ],
-    ...(productPrice ? {
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "INR",
-        "price": productPrice,
-        "priceValidUntil": "2027-12-31",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "url": `https://krishigears.com/products/${product.slug}`,
-        "seller": {
-          "@type": "Organization",
-          "name": "KrishiGears",
-          "url": "https://krishigears.com"
-        },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "INR"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "IN"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 0,
-              "maxValue": 1,
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 2,
-              "maxValue": 5,
-              "unitCode": "DAY"
-            }
-          }
-        },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "IN",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-          "merchantReturnDays": 7,
-          "returnMethod": "https://schema.org/ReturnByMail",
-          "returnFees": "https://schema.org/FreeReturn"
-        }
-      }
-    } : {})
-  };
+  const badges = productCopyItems(product.badges);
 
   return (
     <motion.div
@@ -108,10 +22,6 @@ export default function ProductCard({ product }) {
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
       {/* Category and Badges Header */}
       <div className="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[70%]">
         {category && (
@@ -121,9 +31,9 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      {product.badges && product.badges.length > 0 && (
+      {badges.length > 0 && (
         <div className="absolute bottom-3 left-3 z-10 flex flex-wrap gap-1 max-w-[80%] pointer-events-none">
-          {product.badges.slice(0, 2).map((b) => (
+          {badges.slice(0, 2).map((b) => (
             <span
               key={b}
               className="text-[9px] font-bold bg-zinc-950/90 text-zinc-300 border border-zinc-800 px-1.5 py-0.5 rounded backdrop-blur-sm"

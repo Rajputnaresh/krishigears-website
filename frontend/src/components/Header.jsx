@@ -111,9 +111,9 @@ export default function Header() {
             <span className="text-[10px]">↗</span>
           </a>
           <span className="text-zinc-700 hidden md:inline">|</span>
-          <span className="text-zinc-300 hidden md:inline">FMTTI Tested Machinery</span>
+          <span className="text-zinc-300 hidden md:inline">Model documentation on request</span>
           <span className="text-zinc-700 hidden lg:inline">|</span>
-          <span className="text-zinc-400 hidden lg:inline">Factory Dispatch 24–48h PAN India</span>
+          <span className="text-zinc-400 hidden lg:inline">Supplier-confirmed dispatch</span>
         </div>
 
         {/* Right Pinned: Language & Sunlight Controls */}

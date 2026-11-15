@@ -1,3 +1,4 @@
+import { productSpecifications, POWER_WEEDER_FAQS } from "@/lib/product-specifications.mjs";
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Page from "@/pages_temp/CategoryPage.jsx";
@@ -32,7 +33,9 @@ export async function generateMetadata({
   const title = isSpareParts
     ? "Power Weeder Spare Parts Wholesale Suppliers & Price List"
     : `${category.name} B2B Factory Price & Wholesale Dealership`;
-  const description = isSpareParts
+  const description = slug === "power-weeders"
+    ? "Compare power weeder engine, HP, displacement, transmission and tilling dimensions. Supplier-confirmed quotations for dealer and bulk orders across India."
+    : isSpareParts
     ? "Wholesale supplier of genuine OEM power weeder and tiller spare parts: carburetors, recoil starters, Viton oil seals and gearboxes. Mixed MOQ, 24-48h dispatch."
     : `Direct factory supply of KrishiGears ${category.name} at wholesale prices. FMTTI-tested durability, genuine OEM parts and protected dealer margins.`;
 
@@ -97,6 +100,14 @@ export default async function CategoryDetailPage({
         "position": idx + 1,
         "name": prod.name,
         "url": `https://krishigears.com/products/${prod.slug}`,
+        "item": {
+          "@type": "Product",
+          "@id": `https://krishigears.com/products/${prod.slug}#product`,
+          "name": prod.name,
+          "url": `https://krishigears.com/products/${prod.slug}`,
+          "model": prod.model || prod.slug,
+          "additionalProperty": productSpecifications(prod),
+        },
         "image": prod.images?.[0] ? (prod.images[0].startsWith("http") ? prod.images[0] : `https://krishigears.com${prod.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
       }))
     }
@@ -105,7 +116,9 @@ export default async function CategoryDetailPage({
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": isSpareParts ? [
+    "mainEntity": slug === "power-weeders" ? POWER_WEEDER_FAQS.map(({ question, answer }) => ({
+      "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer },
+    })) : isSpareParts ? [
       {
         "@type": "Question",
         "name": "How can agricultural repair shops and dealers get the wholesale spare parts price list PDF?",
@@ -179,12 +192,12 @@ export default async function CategoryDetailPage({
       {categoryJsonLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd).replace(/</g, "\\u003c") }}
         />
       )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
       />
       <Page />
     </>
