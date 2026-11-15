@@ -146,11 +146,25 @@ export default function Footer() {
               <Phone className="h-4 w-4 text-lime-500 shrink-0" />
               <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} className="hover:text-lime-400">{COMPANY.phone}</a>
             </li>
-            <li className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-lime-500 shrink-0" />
-              <div className="flex flex-col">
-                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400">{COMPANY.email}</a>
-                <a href={`mailto:${COMPANY.dealers}`} className="hover:text-lime-400 text-xs text-zinc-400">Dealers: {COMPANY.dealers}</a>
+            <li className="flex items-start gap-3">
+              <Mail className="h-4 w-4 mt-0.5 text-lime-500 shrink-0" />
+              <div className="flex flex-col gap-1 text-xs text-zinc-300">
+                <div>
+                  <span className="text-zinc-400">Sales:</span>{" "}
+                  <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400 font-medium">{COMPANY.email}</a>
+                </div>
+                <div>
+                  <span className="text-zinc-400">Dealers:</span>{" "}
+                  <a href={`mailto:${COMPANY.dealers}`} className="hover:text-lime-400 font-medium">{COMPANY.dealers}</a>
+                </div>
+                <div>
+                  <span className="text-zinc-400">Support:</span>{" "}
+                  <a href={`mailto:${COMPANY.support}`} className="hover:text-lime-400 font-medium">{COMPANY.support}</a>
+                </div>
+                <div>
+                  <span className="text-zinc-400">Billing:</span>{" "}
+                  <a href={`mailto:${COMPANY.billing}`} className="hover:text-lime-400 font-medium">{COMPANY.billing}</a>
+                </div>
               </div>
             </li>
             <li className="flex items-start gap-3">

@@ -40,28 +40,29 @@ export const FIELD_TRACTOR = "https://images.pexels.com/photos/2933243/pexels-ph
 export const PLOWING = FIELD_TRACTOR;
 
 export const COMPANY = {
-  name: "KrishiGears",
-  legalName: "KRISHIGEARS INDIA PRIVATE LIMITED",
-  tagline: "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
-  website: "KrishiGears.com",
-  email: "sales@krishigears.com",
-  contact: "contact@krishigears.com",
-  support: "support@krishigears.com",
-  service: "service@krishigears.com",
-  accounts: "accounts@krishigears.com",
-  dealers: "dealers@krishigears.com",
-  phone: "+91 60060 78815",
-  whatsapp: "916006078815",
-  address: "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026",
-  city: "Jaipur",
-  state: "Rajasthan",
-  pincode: "302026",
-  gst: "08AANCK2216L1ZA",
-  cin: "U46539RJ2026PTC117758",
-  pan: "AANCK2216L",
-  tan: "JPRK10437A",
-  retailBrand: "FarmingTools.in",
-  retailWebsite: "https://farmingtools.in",
+  "name": "KrishiGears",
+  "legalName": "KRISHIGEARS INDIA PRIVATE LIMITED",
+  "tagline": "For the Farmers, With the Farmer, To the Farmer, HAMESHA",
+  "website": "KrishiGears.com",
+  "email": "sales@krishigears.com",
+  "contact": "sales@krishigears.com",
+  "support": "support@krishigears.com",
+  "service": "support@krishigears.com",
+  "accounts": "billing@krishigears.com",
+  "dealers": "dealers@krishigears.com",
+  "phone": "+91 60060 78815",
+  "whatsapp": "916006078815",
+  "address": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026",
+  "city": "Jaipur",
+  "state": "Rajasthan",
+  "pincode": "302026",
+  "gst": "08AANCK2216L1ZA",
+  "cin": "U46539RJ2026PTC117758",
+  "pan": "AANCK2216L",
+  "tan": "JPRK10437A",
+  "retailBrand": "FarmingTools.in",
+  "retailWebsite": "https://farmingtools.in",
+  "billing": "billing@krishigears.com"
 };
 
 // FarmingTools.in — sister B2C ecommerce site for consumer transactions.
@@ -253,16 +254,15 @@ export const PRODUCTS = [
       "Deep tilling capability"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetable inter-cultivation"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts labor costs by 70%",
-      "Perfect for hard soil"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -297,16 +297,15 @@ export const PRODUCTS = [
       "Rugged transmission"
     ],
     "applications": [
-      "Heavy clay soil",
-      "Orchards",
-      "Large farms"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Low running cost",
-      "Excellent for deep plowing"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -341,15 +340,15 @@ export const PRODUCTS = [
       "Wide tilling span"
     ],
     "applications": [
-      "Commercial farming",
-      "Hard terrain cultivation"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Replaces tractor for mid-size farms",
-      "High acreage coverage"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -385,15 +384,15 @@ export const PRODUCTS = [
       "Anti-vibration mount"
     ],
     "applications": [
-      "All crops",
-      "Night operations"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Zero effort starting",
-      "Highly comfortable operation"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -427,15 +426,15 @@ export const PRODUCTS = [
       "Perfectly balanced center of gravity"
     ],
     "applications": [
-      "Weed control in narrow rows",
-      "Soft soil tilling"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Leaves finely milled soil",
-      "Operator fatigue reduced by 50%"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -470,16 +469,15 @@ export const PRODUCTS = [
       "Multi-attachment ready (Reaper, Water Pump)"
     ],
     "applications": [
-      "Contract farming",
-      "Rental services",
-      "Large estates"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Industrial grade durability",
-      "Can power water pumps directly"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -511,15 +509,15 @@ export const PRODUCTS = [
       "Easy for women & senior farmers"
     ],
     "applications": [
-      "Rice paddy",
-      "Small kitchen gardens",
-      "Greenhouses"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "80% weed reduction in tight spaces"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "hsn": "8432",
@@ -552,14 +550,13 @@ export const PRODUCTS = [
       "Precision machined"
     ],
     "applications": [
-      "Engine overhaul",
-      "Service center stock"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Restores factory engine performance"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -592,15 +589,13 @@ export const PRODUCTS = [
       "Heat resistant rings"
     ],
     "applications": [
-      "Engine rebuilds",
-      "Compression loss repair"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Eliminates oil burning",
-      "Restores full compression"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -632,13 +627,13 @@ export const PRODUCTS = [
       "Heavy duty nylon cord"
     ],
     "applications": [
-      "Broken pull cord repair"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Quick field replacement"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -671,13 +666,13 @@ export const PRODUCTS = [
       "Rust resistant coating"
     ],
     "applications": [
-      "Regular blade replacement"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Deeper cut with less engine strain"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "Guaranteed against breakage during transit",
     "hsn": "8432",
@@ -725,18 +720,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -785,18 +777,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -845,18 +834,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -906,18 +892,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -966,18 +949,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1026,18 +1006,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1086,18 +1063,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1146,18 +1120,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1205,18 +1176,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1264,18 +1232,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1323,18 +1288,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1382,18 +1344,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1442,18 +1401,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1502,18 +1458,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1562,18 +1515,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1622,18 +1572,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1682,18 +1629,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1739,18 +1683,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1797,18 +1738,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1852,18 +1790,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Vegetables (Tomato, Onion, Chilli)",
-      "Maize"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Red Loamy Soil",
-      "Approved for state agricultural mechanization subsidies across Karnataka and Maharashtra"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": null,
@@ -1906,18 +1841,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -1960,18 +1892,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2014,18 +1943,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2068,18 +1994,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2121,18 +2044,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2175,18 +2095,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2229,18 +2146,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2283,18 +2197,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2337,18 +2248,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2358,8 +2266,8 @@ export const PRODUCTS = [
   {
     "slug": "ri-kp-1050-ae-2350",
     "category": "power-weeders",
-    "name": "KrishiGears Power Weeder 7hp Model Kp-1050 AE (9 Hp) - Petrol",
-    "model": "KP-1050 AE",
+    "name": "KrishiGears Power Weeder Model KP-1050 AE (9 HP) - Petrol",
+    "model": "KP-1050-AE",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -2391,18 +2299,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2444,18 +2349,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2497,18 +2399,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2551,18 +2450,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2605,18 +2501,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2659,18 +2552,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2713,18 +2603,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2767,18 +2654,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2821,18 +2705,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2875,18 +2756,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2929,18 +2807,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -2983,18 +2858,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3033,18 +2905,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3055,7 +2924,7 @@ export const PRODUCTS = [
     "slug": "ri-254022073-2073",
     "category": "power-weeders",
     "name": "KrishiGears Power Tiller Sc -90 7hp - 4 Stroke",
-    "model": "254022073",
+    "model": "KG-PT-SC90",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -3087,18 +2956,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=Dk8QFoE-h2k",
@@ -3141,18 +3007,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3195,18 +3058,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3249,18 +3109,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3302,18 +3159,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3356,18 +3210,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3409,18 +3260,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3462,18 +3310,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
@@ -3516,18 +3361,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3538,7 +3380,7 @@ export const PRODUCTS = [
     "slug": "leo-295837443-7443",
     "category": "brush-cutters",
     "name": "KrishiGears Side Pack Brushcutter CG-530 (2.4 HP) - 2 Stroke",
-    "model": "295837443",
+    "model": "KG-BC-CG530-SP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -3570,18 +3412,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3591,7 +3430,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-cg-680-0294",
     "category": "power-weeders",
-    "name": "KrishiGears Minni Tiller - Model CG-680 - 2-Stroke",
+    "name": "KrishiGears Mini Tiller - Model CG-680 - 2-Stroke",
     "model": "CG-680",
     "brand": "KrishiGears",
     "badges": [
@@ -3624,18 +3463,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3646,7 +3482,7 @@ export const PRODUCTS = [
     "slug": "leo-253407350-7350",
     "category": "farm-machinery",
     "name": "KrishiGears Chain Saw 62 Cc 2 Stroke (2.2 kW)",
-    "model": "253407350",
+    "model": "KG-CS-62CC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -3677,18 +3513,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Orchard tree pruning & thinning",
+      "Firewood & timber cutting",
+      "Farm boundary tree maintenance"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "High-torque engine for fast, clean wood cutting",
+      "Inertia-activated chain brake for operator safety",
+      "Automated chain lubrication system"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3698,7 +3530,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-rover-850-sp-1843",
     "category": "lawn-mowers",
-    "name": "KrishiGears Walk Bihind Mowers Model ROVER-850 SP (5.5 HP)",
+    "name": "KrishiGears Walk Behind Mowers Model ROVER-850 SP (5.5 HP)",
     "model": "ROVER-850 SP",
     "brand": "KrishiGears",
     "badges": [
@@ -3731,18 +3563,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -3753,7 +3582,7 @@ export const PRODUCTS = [
     "slug": "leo-254165680-5680",
     "category": "farm-machinery",
     "name": "KrishiGears Earth Auger Wheel Type 3.5hp / 68cc",
-    "model": "254165680",
+    "model": "KG-EA-68CC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -3785,18 +3614,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Fencing post hole drilling",
+      "Tree plantation & orchard pitting",
+      "Soil sampling & pole foundation holes"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Digs 2.5–3 ft deep post holes in under 60 seconds",
+      "High-torque gear reduction for stony & hard-crust soils",
+      "Dual-operator safety handle bars with emergency throttle stop"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3839,18 +3664,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Agricultural field irrigation",
+      "Well and canal water lifting",
+      "Emergency field de-watering & construction drainage"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "High discharge volume with robust fuel-efficient engine",
+      "Corrosion-resistant aluminium pump casing",
+      "Compact carry frame for easy field mobility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -3861,7 +3682,7 @@ export const PRODUCTS = [
     "slug": "leo-303454139-4139",
     "category": "brush-cutters",
     "name": "KrishiGears Rotary Slasher Shrub Master (10 hp) - Petrol",
-    "model": "303454139",
+    "model": "KG-RS-10HP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -3892,18 +3713,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -3946,18 +3764,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4000,18 +3815,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4054,18 +3866,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4076,7 +3885,7 @@ export const PRODUCTS = [
     "slug": "leo-297634235-4235",
     "category": "farm-machinery",
     "name": "KrishiGears Chaff Cutter Machine - Electric",
-    "model": "297634235",
+    "model": "KG-CC-ELEC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4108,18 +3917,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Dairy farm cattle fodder preparation",
+      "Dry and green crop residue chopping",
+      "Silage preparation for livestock"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "High output capacity for dairy herds of 10 to 50 cattle",
+      "Tempered high-carbon cutting blades for uniform fodder size",
+      "Heavy-duty vibration-free steel frame"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4158,18 +3963,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4180,7 +3980,7 @@ export const PRODUCTS = [
     "slug": "leo-34586930-6930",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears Cast Iron Clutch Brush Cutter - Petrol/Diesel",
-    "model": "34586930",
+    "model": "KG-SP-CLUTCH-BC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4212,18 +4012,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4233,8 +4028,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-34586928-6928",
     "category": "power-weeder-spare-parts",
-    "name": "KrishiGears Carburetor For Brush Cutter Parts - Electric",
-    "model": "34586928",
+    "name": "KrishiGears Carburetor For Brush Cutter Parts",
+    "model": "KG-SP-CARB-BC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4247,12 +4042,13 @@ export const PRODUCTS = [
       "/images/catalog/leo-34586928-6928.webp"
     ],
     "specs": {
-      "Power Source": "Electric",
+      "Power Source": "Petrol / 2-Stroke",
       "Material": "Aluminium",
       "Usage/Application": "Brush Cutter",
       "Displacement": "25.4 cc",
       "Engine": "2-stroke / 4-stroke",
-      "Pack Type": "Box"
+      "Pack Type": "Box",
+      "Engine Compatibility": "43cc / 52cc 2-Stroke Engines"
     },
     "features": [
       "Genuine KrishiGears branded product",
@@ -4266,18 +4062,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4288,7 +4079,7 @@ export const PRODUCTS = [
     "slug": "leo-34586965-6965",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears Tap N GO Brush Cutter - Petrol/Diesel",
-    "model": "34586965",
+    "model": "KG-SP-TAPNGO",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4320,18 +4111,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4342,7 +4128,7 @@ export const PRODUCTS = [
     "slug": "leo-303454205-4205",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears Brush Cutter Trimmer Line",
-    "model": "303454205",
+    "model": "KG-SP-TRIM-LINE",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4373,18 +4159,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4394,8 +4175,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-34586948-6948",
     "category": "power-weeder-spare-parts",
-    "name": "KrishiGears Cast Iron Spark Plug Cap For Brush Cutter - Electric",
-    "model": "34586948",
+    "name": "KrishiGears Cast Iron Spark Plug Cap For Brush Cutter",
+    "model": "KG-SP-SPARK-CAP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4413,7 +4194,8 @@ export const PRODUCTS = [
       "Usage/Application": "Brush Cutter",
       "Size": "1/4\"",
       "Pack Type": "Box",
-      "Weight": "1.6 ounces"
+      "Weight": "1.6 ounces",
+      "Engine Compatibility": "Brush Cutter & Power Weeder Petrol Engines"
     },
     "features": [
       "Genuine KrishiGears branded product",
@@ -4427,18 +4209,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4449,7 +4226,7 @@ export const PRODUCTS = [
     "slug": "leo-26277631-7631",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears Brush Cutter Spare Parts",
-    "model": "26277631",
+    "model": "KG-SP-BC-PARTS",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4481,18 +4258,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4502,8 +4274,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-34586968-6968",
     "category": "power-weeder-spare-parts",
-    "name": "KrishiGears 5 INCH 2 Tooth Brush Cutter Blade - Electric",
-    "model": "34586968",
+    "name": "KrishiGears 5 INCH 2 Tooth Brush Cutter Blade",
+    "model": "KG-SP-BLD-2T",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4521,7 +4293,8 @@ export const PRODUCTS = [
       "Usage/Application": "Brush Cutter",
       "Material": "HSS",
       "Color": "Black",
-      "Pack Type": "Box"
+      "Pack Type": "Box",
+      "Compatibility": "Universal 20mm/25.4mm Arbor (Petrol & Cordless Trimmers)"
     },
     "features": [
       "Genuine KrishiGears branded product",
@@ -4535,18 +4308,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4557,7 +4325,7 @@ export const PRODUCTS = [
     "slug": "leo-34586974-6974",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears 10 INCH HSS Brush Cutter Blades",
-    "model": "34586974",
+    "model": "KG-SP-BLD-10HSS",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4589,18 +4357,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4611,7 +4374,7 @@ export const PRODUCTS = [
     "slug": "leo-34586983-6983",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears 10 INCH Silver 100 T Brush Cutter Blade",
-    "model": "34586983",
+    "model": "KG-SP-BLD-100T",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4643,18 +4406,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4665,7 +4423,7 @@ export const PRODUCTS = [
     "slug": "leo-34586972-6972",
     "category": "power-weeder-spare-parts",
     "name": "KrishiGears 2 Tooth Brush Cutter Blade",
-    "model": "34586972",
+    "model": "KG-SP-BLD-2T-STD",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -4697,18 +4455,13 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Routine seasonal maintenance & overhaul",
+      "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "High-carbon and heat-treated metallurgy for extended operating life",
+      "24 to 48 hour express dispatch from central Jaipur facility"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4750,18 +4503,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4803,18 +4553,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4857,18 +4604,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4911,18 +4655,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4965,18 +4706,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5019,18 +4757,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5073,18 +4808,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5094,7 +4826,7 @@ export const PRODUCTS = [
   {
     "slug": "ri-394-8942",
     "category": "lawn-mowers",
-    "name": "KrishiGears Rotary Lawn Mower Model 394 , - Petrol",
+    "name": "KrishiGears Rotary Lawn Mower Model 394 - Petrol",
     "model": "394",
     "brand": "KrishiGears",
     "badges": [
@@ -5127,18 +4859,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5181,18 +4910,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5202,7 +4928,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-0385-8277",
     "category": "lawn-mowers",
-    "name": "KrishiGears Power Lawn Mower Model 0385 (50 W)",
+    "name": "KrishiGears Power Lawn Mower Model 0385",
     "model": "0385",
     "brand": "KrishiGears",
     "badges": [
@@ -5219,7 +4945,6 @@ export const PRODUCTS = [
       "Cutting Width": "6",
       "Cutting Height": "10 mm",
       "Forward Speed": "Adjustable",
-      "Power": "50 W",
       "Cutting Capacity": "large capacity",
       "Color": "Green"
     },
@@ -5235,18 +4960,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5257,7 +4979,7 @@ export const PRODUCTS = [
     "slug": "ri-332541464-1464",
     "category": "lawn-mowers",
     "name": "KrishiGears Rotary Lawn Mower (7 HP) - Petrol",
-    "model": "332541464",
+    "model": "KG-LM-7HP-PETROL",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -5289,18 +5011,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5341,18 +5060,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5395,18 +5111,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5449,18 +5162,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5503,18 +5213,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5557,18 +5264,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5611,18 +5315,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5633,7 +5334,7 @@ export const PRODUCTS = [
     "slug": "ri-332551977-1977",
     "category": "lawn-mowers",
     "name": "KrishiGears 45cm 10mm Manual Cutting Lawn Mower (1 HP)",
-    "model": "332551977",
+    "model": "KG-LM-MANUAL-1HP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -5665,18 +5366,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5719,18 +5417,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5773,18 +5468,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5827,18 +5519,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5881,18 +5570,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -5935,18 +5621,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -5989,18 +5672,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6011,7 +5691,7 @@ export const PRODUCTS = [
     "slug": "leo-20402307-2307",
     "category": "farm-machinery",
     "name": "KrishiGears Garden Roller",
-    "model": "20402307",
+    "model": "KG-GR-ROLLER",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6043,18 +5723,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Commercial farm maintenance",
+      "Post-harvest residue management",
+      "Rural enterprise machinery operations"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Heavy-duty commercial durability",
+      "Direct factory wholesale pricing with GST billing",
+      "Readily available OEM replacement spare parts"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6064,7 +5740,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-382-8975",
     "category": "lawn-mowers",
-    "name": "KrishiGears Roller Type Petrol Lawn Mower Model - 382 (50 W)",
+    "name": "KrishiGears Roller Type Petrol Lawn Mower Model - 382",
     "model": "382",
     "brand": "KrishiGears",
     "badges": [
@@ -6080,7 +5756,6 @@ export const PRODUCTS = [
     "specs": {
       "Cutting Width": "24 Inch",
       "Cutting Height": "25 mm",
-      "Power": "50 W",
       "Forward Speed": "Adjustable",
       "Product Code": "0382",
       "Cutting Capacity": "24inch"
@@ -6097,18 +5772,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6119,7 +5791,7 @@ export const PRODUCTS = [
     "slug": "leo-258558586-8586",
     "category": "lawn-mowers",
     "name": "KrishiGears Cub Cadet - Lx46 Fab Lawn Mower (20 HP)",
-    "model": "258558586",
+    "model": "KG-LM-LX46-FAB",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6151,18 +5823,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -6205,18 +5874,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6259,18 +5925,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -6281,7 +5944,7 @@ export const PRODUCTS = [
     "slug": "leo-296052269-2269",
     "category": "brush-cutters",
     "name": "KrishiGears Wheel String Trimmer (1.0 kW) - Petrol",
-    "model": "296052269",
+    "model": "KG-ST-1KW-PETROL",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6313,18 +5976,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6335,7 +5995,7 @@ export const PRODUCTS = [
     "slug": "leo-297386313-6313",
     "category": "lawn-mowers",
     "name": "KrishiGears Rotary Mower Self Propelled 225cc",
-    "model": "297386313",
+    "model": "KG-LM-SP-225CC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6363,18 +6023,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6392,8 +6049,8 @@ export const PRODUCTS = [
       "Commercial Agro Tested",
       "Commercial Grade"
     ],
-    "price": 65000,
-    "comparePrice": 76700,
+    "price": 135000,
+    "comparePrice": 155000,
     "images": [
       "/images/catalog/leo-0381-2663.webp"
     ],
@@ -6417,18 +6074,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6438,8 +6092,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-pro-cut-950-4145",
     "category": "lawn-mowers",
-    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Bihind Mowers (2.24 HP)",
-    "model": "Pro Cut-950 Walk Bihind Mowers",
+    "name": "KrishiGears 15 Mm Model Pro Cut-950 Walk Behind Mowers (2.24 HP)",
+    "model": "Pro Cut-950 Walk Behind Mowers",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6471,18 +6125,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -6492,7 +6143,7 @@ export const PRODUCTS = [
   {
     "slug": "leo-model-rover-7967",
     "category": "lawn-mowers",
-    "name": "KrishiGears 18 INCH Model ROVER-820 Patrol Walk Behind Mowers",
+    "name": "KrishiGears 18 INCH Model ROVER-820 Petrol Walk Behind Mowers",
     "model": "Model Rover-820",
     "brand": "KrishiGears",
     "badges": [
@@ -6525,18 +6176,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -6579,18 +6227,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6600,8 +6245,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-322540525-0525",
     "category": "brush-cutters",
-    "name": "KrishiGears Wheel String Trimmer (4599 W) - Petrol",
-    "model": "322540525",
+    "name": "KrishiGears Wheeled String Trimmer (4.5 kW) - Petrol",
+    "model": "KG-ST-4500P",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6615,7 +6260,7 @@ export const PRODUCTS = [
     ],
     "specs": {
       "Power Source": "Petrol",
-      "Power Output": "4599 W",
+      "Power Output": "4.5 kW",
       "Cutting Width": "22 - 24 inch",
       "Line Diameter": "3.5 mm",
       "Shaft Type": "Vertical Shaft",
@@ -6633,18 +6278,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6687,18 +6329,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6741,18 +6380,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6795,18 +6431,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Estate & farmhouse lawn maintenance",
+      "Commercial sports grounds & turf care",
+      "Resort landscaping & orchard pathways",
+      "Park vegetation & grass management"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Even turf clipping with multi-stage height adjustment",
+      "Heavy-gauge steel cutting deck engineered for rugged continuous operation",
+      "High-capacity grass collector reduces manual bagging toil"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6849,18 +6482,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6903,18 +6533,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6925,7 +6552,7 @@ export const PRODUCTS = [
     "slug": "leo-297263000-3000",
     "category": "brush-cutters",
     "name": "KrishiGears Back Pack Brushcutter Gx- 50 (2.0 kW) - 4 stroke",
-    "model": "297263000",
+    "model": "KG-BC-GX50-BP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -6957,18 +6584,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -6979,7 +6603,7 @@ export const PRODUCTS = [
     "slug": "leo-297380561-0561",
     "category": "brush-cutters",
     "name": "KrishiGears Cordless Brush Cutter (1.5 HP) - battery operated",
-    "model": "297380561",
+    "model": "KG-BC-CORDLESS-15",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7011,18 +6635,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7064,18 +6685,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7118,18 +6736,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7140,7 +6755,7 @@ export const PRODUCTS = [
     "slug": "leo-297279169-9169",
     "category": "brush-cutters",
     "name": "KrishiGears Mitsubishi Powered Brushcutter - Tu-43 (2.1hp) - 2 Stroke",
-    "model": "297279169",
+    "model": "KG-BC-TU43-SP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7172,18 +6787,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -7193,8 +6805,8 @@ export const PRODUCTS = [
   {
     "slug": "leo-332557074-7074",
     "category": "brush-cutters",
-    "name": "KrishiGears Wheeled String Trimmer (450 W) - Petrol",
-    "model": "332557074",
+    "name": "KrishiGears Wheeled String Trimmer (4.5 kW) - Petrol",
+    "model": "KG-WST-4500P",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7208,7 +6820,7 @@ export const PRODUCTS = [
     ],
     "specs": {
       "Power Source": "Petrol",
-      "Power Output": "450 W",
+      "Power Output": "4.5 kW",
       "Cutting Width": "350 mm",
       "Line Diameter": "3.5 mm",
       "Shaft Type": "vertical shaft",
@@ -7226,18 +6838,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -7248,7 +6857,7 @@ export const PRODUCTS = [
     "slug": "leo-253009174-9174",
     "category": "brush-cutters",
     "name": "KrishiGears Wheel Type Brushcutter Cg - 530 (2.4 HP) - 2 Stroke",
-    "model": "253009174",
+    "model": "KG-BC-WHEEL-530",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7280,18 +6889,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7302,7 +6908,7 @@ export const PRODUCTS = [
     "slug": "leo-34586937-6937",
     "category": "brush-cutters",
     "name": "KrishiGears Ignition Coil For Brush Cutter",
-    "model": "34586937",
+    "model": "KG-SP-IGN-COIL",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7334,18 +6940,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -7356,7 +6959,7 @@ export const PRODUCTS = [
     "slug": "leo-94097441-7441",
     "category": "brush-cutters",
     "name": "KrishiGears Side Pack Brushcutter Cg-530 (2.4 HP) - 2 stroke",
-    "model": "94097441",
+    "model": "KG-BC-CG530-SP2",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7388,18 +6991,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7410,7 +7010,7 @@ export const PRODUCTS = [
     "slug": "leo-297280912-0912",
     "category": "brush-cutters",
     "name": "KrishiGears Wheel Type Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
-    "model": "297280912",
+    "model": "KG-BC-GX35-WHEEL",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7442,18 +7042,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7464,7 +7061,7 @@ export const PRODUCTS = [
     "slug": "leo-252814707-4707",
     "category": "brush-cutters",
     "name": "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
-    "model": "252814707",
+    "model": "KG-BC-CG530-BP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7496,18 +7093,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7515,62 +7109,10 @@ export const PRODUCTS = [
     "gst": 18
   },
   {
-    "slug": "ri-kpd-1350-8308",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder Model Kpd- 1350 (10 Hp) - Diesel",
-    "model": "Kpd- 1350",
-    "brand": "KrishiGears",
-    "badges": [
-      "Industrial Standard Quality",
-      "Commercial Agro Tested",
-      "Commercial Grade"
-    ],
-    "price": 35000,
-    "comparePrice": 41300,
-    "images": [
-      "/images/catalog/ri-kpd-1350-8308.webp"
-    ],
-    "specs": {
-      "Power": "10 Hp",
-      "Engine Type": "Diesel",
-      "Grade Type": "Manual",
-      "Brand": "KrishiGears"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=XErTJ11jW2o",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
     "slug": "leo-295837771-7771",
     "category": "brush-cutters",
     "name": "KrishiGears Back Pack Brushcutter CG-530 (52cc) - 2 Stroke",
-    "model": "295837771",
+    "model": "KG-BC-CG530-52CC",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7602,18 +7144,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7624,7 +7163,7 @@ export const PRODUCTS = [
     "slug": "ri-297272678-2678",
     "category": "brush-cutters",
     "name": "KrishiGears Side Pack Brush cutter Cg-400 (2.6 HP 56 cc) - 2 Stroke",
-    "model": "297272678",
+    "model": "KG-BC-CG400-SP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7652,18 +7191,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -7674,7 +7210,7 @@ export const PRODUCTS = [
     "slug": "leo-297381357-1357",
     "category": "brush-cutters",
     "name": "KrishiGears 20v Cordless Multi Tool Brush Cutter",
-    "model": "297381357",
+    "model": "KG-BC-20V-CORDLESS",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7701,18 +7237,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7755,18 +7288,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7777,7 +7307,7 @@ export const PRODUCTS = [
     "slug": "leo-296052723-2723",
     "category": "brush-cutters",
     "name": "KrishiGears Back Pack Brushcutter Cg-530 (2.4 HP) - 2 Stroke",
-    "model": "296052723",
+    "model": "KG-BC-CG530-BP2",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7809,18 +7339,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7831,7 +7358,7 @@ export const PRODUCTS = [
     "slug": "leo-297262606-2606",
     "category": "brush-cutters",
     "name": "KrishiGears Side Pack Brushcutter Gx-50 (2 HP) - 4 Stroke",
-    "model": "297262606",
+    "model": "KG-BC-GX50-SP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7859,18 +7386,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7881,7 +7405,7 @@ export const PRODUCTS = [
     "slug": "leo-297262381-2381",
     "category": "brush-cutters",
     "name": "KrishiGears Back Pack Brushcutter Gx-35 (1.3 HP) - 4 Stroke",
-    "model": "297262381",
+    "model": "KG-BC-GX35-BP",
     "brand": "KrishiGears",
     "badges": [
       "Industrial Standard Quality",
@@ -7909,18 +7433,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -7960,18 +7481,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Cotton",
-      "Sugarcane",
-      "Wheat",
-      "Paddy"
+      "Crop harvesting (Wheat, Paddy, Mustard)",
+      "Orchard grass & weed trimming",
+      "Fodder and green grass cutting",
+      "Field border & bund clearing"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Cotton fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Madhya Pradesh"
+      "Replaces 6 to 8 manual farm laborers during harvesting season",
+      "Interchangeable blade attachments (2T, 3T, 80T carbide, tap-n-go)",
+      "Ergonomic backpack / shoulder harness reduces operator fatigue"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -8021,18 +7539,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8082,18 +7597,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8107,6 +7619,7 @@ export const PRODUCTS = [
     "model": "CR-R50-B",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8137,23 +7650,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-cr-r52-b",
@@ -8162,6 +7673,7 @@ export const PRODUCTS = [
     "model": "CR-R52-B",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8193,23 +7705,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-cr-r52-s",
@@ -8218,6 +7728,7 @@ export const PRODUCTS = [
     "model": "CR-R52-S",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8249,23 +7760,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-cr-r35-b",
@@ -8274,6 +7783,7 @@ export const PRODUCTS = [
     "model": "CR-R35-B",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8306,23 +7816,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-cr-r35-s",
@@ -8331,6 +7839,7 @@ export const PRODUCTS = [
     "model": "CR-R35-S",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8365,23 +7874,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-1e40f-2",
@@ -8390,6 +7897,7 @@ export const PRODUCTS = [
     "model": "1E40F-2",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8426,23 +7934,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-cr-r50-s",
@@ -8451,6 +7957,7 @@ export const PRODUCTS = [
     "model": "CR-R50-S",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8487,23 +7994,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-rapl-tb-52",
@@ -8512,6 +8017,7 @@ export const PRODUCTS = [
     "model": "RAPL-TB-52",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8551,23 +8057,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-m-52",
@@ -8576,6 +8080,7 @@ export const PRODUCTS = [
     "model": "M-52",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8613,23 +8118,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-m-35s",
@@ -8638,6 +8141,7 @@ export const PRODUCTS = [
     "model": "M-35S",
     "brand": "KrishiGears",
     "badges": [
+      "Indicative Base Price",
       "FMTTI Tested",
       "Commercial Grade",
       "Industrial Quality Standards"
@@ -8679,23 +8183,21 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean & mustard harvesting",
+      "Fodder crop cutting"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Clean cutting with conveyor baffle system to eliminate grain loss",
+      "Harvests up to 1 acre in under 2 hours",
+      "Significant reduction in harvesting labor costs during peak season"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8433",
-    "gst": 5
+    "gst": 5,
+    "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
     "slug": "rly-rh-3800d-sp",
@@ -8743,18 +8245,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8806,18 +8305,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8868,18 +8364,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8932,18 +8425,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -8997,18 +8487,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9061,18 +8548,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9120,18 +8604,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9180,18 +8661,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9240,18 +8718,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9294,18 +8769,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9349,18 +8821,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9412,18 +8881,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9472,18 +8938,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9535,18 +8998,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9596,18 +9056,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9657,18 +9114,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9716,18 +9170,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9777,18 +9228,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9832,18 +9280,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -9892,89 +9337,22 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
     "gst": 5
   },
-  {
-    "slug": "rly-my-550g-167",
-    "category": "power-weeders",
-    "name": "KrishiGears MY-550G Power Weeder | 212 CC Petrol",
-    "model": "MY-550G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 42000,
-    "comparePrice": 49000,
-    "images": [
-      "/images/catalog/rly-my-550g-167.webp",
-      "/images/catalog/rly-my-550g-167-1.webp",
-      "/images/catalog/rly-my-550g-167-2.webp",
-      "/images/catalog/rly-my-550g-167-3.webp"
-    ],
-    "specs": {
-      "Model": "MY-550G",
-      "Engine Model": "170F Engine",
-      "Fuel Type": "Petrol",
-      "Displacement": "212 CC",
-      "Maximum Power": "4 kW / 3600 RPM",
-      "Starting System": "Recoil",
-      "Transmission": "Gear",
-      "Handlebar System": "Up / Down",
-      "Tyre": "4.0-8",
-      "Blades": "24 Pcs – Dry Land",
-      "Gear": "R, 0, 1, 2",
-      "Tilling Depth": "100–300 mm",
-      "Tilling Width": "800 mm"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
+    {
     "slug": "rly-my-570g",
     "category": "power-weeders",
     "name": "KrishiGears MY-570G Power Weeder | 212 CC Petrol",
@@ -10020,18 +9398,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10085,18 +9460,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10150,18 +9522,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10212,18 +9581,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10279,91 +9645,22 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
     "hsn": "8432",
     "gst": 5
   },
-  {
-    "slug": "rly-my-470g-hl-173",
-    "category": "power-weeders",
-    "name": "KrishiGears MY-470G-HL Petrol Power Weeder | Premium Farm Machine",
-    "model": "MY-470G-HL",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 38000,
-    "comparePrice": 45000,
-    "images": [
-      "/images/catalog/rly-my-470g-hl-173.webp",
-      "/images/catalog/rly-my-470g-hl-173-1.webp",
-      "/images/catalog/rly-my-470g-hl-173-2.webp",
-      "/images/catalog/rly-my-470g-hl-173-3.webp"
-    ],
-    "specs": {
-      "Brand": "KrishiGears",
-      "Model": "MY-470G-HL",
-      "Product Type": "Petrol Power Weeder",
-      "Engine Quality": "Premium",
-      "Fuel Tank Capacity": "5 Litres",
-      "Tyre Size": "5.0-8",
-      "Fender": "Double",
-      "Bumper": "Heavy-Duty",
-      "Blade Weight": "350 gms",
-      "Tool Bar": "Metal",
-      "Handle Seat Design": "Improved",
-      "Handle Seat Cover": "Yes",
-      "Recoil Starter": "Improved",
-      "Air Filter &#038; Muffler": "Improved",
-      "Packing": "7 mm Wooden Box"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
+    {
     "slug": "rly-my-480g",
     "category": "power-weeders",
     "name": "KrishiGears MY-480G Petrol Power Weeder | 212 CC, 4 kW",
@@ -10409,18 +9706,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10473,18 +9767,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10537,18 +9828,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10603,18 +9891,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10667,18 +9952,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10731,18 +10013,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10793,18 +10072,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10854,18 +10130,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10916,18 +10189,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -10968,18 +10238,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Commercial farm maintenance",
+      "Post-harvest residue management",
+      "Rural enterprise machinery operations"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Heavy-duty commercial durability",
+      "Direct factory wholesale pricing with GST billing",
+      "Readily available OEM replacement spare parts"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11023,18 +10289,14 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Commercial farm maintenance",
+      "Post-harvest residue management",
+      "Rural enterprise machinery operations"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Heavy-duty commercial durability",
+      "Direct factory wholesale pricing with GST billing",
+      "Readily available OEM replacement spare parts"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11078,18 +10340,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11133,18 +10392,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11188,18 +10444,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11247,18 +10500,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11303,18 +10553,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -11363,651 +10610,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-550g-191",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder – MY-550G",
-    "model": "MY-550G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 42000,
-    "comparePrice": 49000,
-    "images": [
-      "/images/catalog/rly-my-550g-191.webp"
-    ],
-    "specs": {
-      "ENGINE MODEL": "170F ENGINE",
-      "DISPLACEMENT/FUEL": "212CC/PETROL",
-      "MAX POWER/RPM": "4KW/3600RPM",
-      "STARTING SYSTEM": "RECOIL",
-      "TRANSMISSION": "GEAR",
-      "HANDLE BAR SYSTEM": "UP/DOWN",
-      "TYRE": "4. 0-8",
-      "BLADES (DRY LAND)": "24 PCS",
-      "GEAR": "R,0,1,2",
-      "TILLING DEPTH (MM)": "100-300MM",
-      "TILLING WIDTH (MM)": "800MM",
-      "FUEL CONSUMPTION PER HOUR": "374G/KW. H"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-600g-192",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder – MY-600G",
-    "model": "MY-600G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 42000,
-    "comparePrice": 49000,
-    "images": [
-      "/images/catalog/rly-my-600g-192.webp",
-      "/images/catalog/rly-my-600g-192-1.webp"
-    ],
-    "specs": {
-      "ENGINE MODEL": "170F ENGINE",
-      "DISPLACEMENT/FUEL": "212CC/PETROL",
-      "MAX POWER/RPM": "4KW/3600RPM",
-      "STARTING SYSTEM": "RECOIL",
-      "TRANSMISSION": "GEAR",
-      "HANDLE BAR SYSTEM": "UP/DOWN LEFT/RIGHT",
-      "TYRE": "4. 0-8 (TUBELESS)",
-      "BLADES (DRY LAND)": "32 PCS",
-      "GEAR": "R,0,1,2",
-      "TILLING DEPTH (MM)": "100-300MM",
-      "TILLING WIDTH (MM)": "1000MM",
-      "FUEL CONSUMPTION PER HOUR": "374G/KW. H"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-673d",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder – MY-673D",
-    "model": "MY-673D",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 54000,
-    "comparePrice": 64000,
-    "images": [
-      "/images/catalog/rly-my-673d.webp"
-    ],
-    "specs": {
-      "ENGINE MODEL": "173F KAMA ENGINE",
-      "DISPLACEMENT/FUEL": "247CC/DIESEL",
-      "MAX POWER/RPM": "4KW/3600RPM",
-      "STARTING SYSTEM": "RECOIL",
-      "TRANSMISSION": "GEAR",
-      "HANDLE BAR SYSTEM": "UP/DOWN LEFT/RIGHT",
-      "TYRE": "4. 0-8 (TUBELESS)",
-      "BLADES (DRY LAND)": "32 PCS",
-      "GEAR": "R,0,1,2",
-      "TILLING DEPTH (MM)": "100-300MM",
-      "TILLING WIDTH (MM)": "1000MM",
-      "FUEL CONSUMPTION PER HOUR": "240G/KW. H"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-685d-194",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder – MY-685D",
-    "model": "MY-685D",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 56000,
-    "comparePrice": 66000,
-    "images": [
-      "/images/catalog/rly-my-685d-194.webp"
-    ],
-    "specs": {
-      "ENGINE MODEL": "186F KAMA ENGINE",
-      "DISPLACEMENT/FUEL": "406 CC/DIESEL",
-      "MAX POWER/RPM": "5. 5KW/3600RPM",
-      "STARTING SYSTEM": "RECOIL",
-      "TRANSMISSION": "GEAR",
-      "HANDLE BAR SYSTEM": "UP/DOWN LEFT/RIGHT",
-      "TYRE": "4. 00*8 (TUBELESS)",
-      "BLADES (DRY LAND)": "40 PCS",
-      "GEAR": "R,0,1,2",
-      "TILLING DEPTH (MM)": "100-300MM",
-      "TILLING WIDTH (MM)": "1350MM",
-      "FUEL CONSUMPTION PER HOUR": "280G/KW. H"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-450g-195",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-450G",
-    "model": "MY-450G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 38000,
-    "comparePrice": 45000,
-    "images": [
-      "/images/catalog/rly-my-450g-195.webp"
-    ],
-    "specs": {
-      "ENGINE": "170F PETROL",
-      "DIESEL": "212CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4 KW",
-      "BLADES": "24 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-470g-196",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-470G",
-    "model": "MY-470G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 38000,
-    "comparePrice": 45000,
-    "images": [
-      "/images/catalog/rly-my-470g-196.webp"
-    ],
-    "specs": {
-      "ENGINE": "170F PETROL",
-      "DISPLACEMENT": "212CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-480g-197",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-480G",
-    "model": "MY-480G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 38000,
-    "comparePrice": 45000,
-    "images": [
-      "/images/catalog/rly-my-480g-197.webp"
-    ],
-    "specs": {
-      "ENGINE": "170F PETROL",
-      "DISPLACEMENT": "212CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START WITH HEADLAMP"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-473d-198",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-473D",
-    "model": "MY-473D",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 48000,
-    "comparePrice": 56000,
-    "images": [
-      "/images/catalog/rly-my-473d-198.webp"
-    ],
-    "specs": {
-      "ENGINE": "173F DIESEL ENGINE",
-      "DISPLACEMENT": "247CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-478d-199",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-478D",
-    "model": "MY-478D",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 48000,
-    "comparePrice": 56000,
-    "images": [
-      "/images/catalog/rly-my-478d-199.webp"
-    ],
-    "specs": {
-      "ENGINE": "178F DIESEL ENGINE",
-      "DISPLACEMENT": "296CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4.4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-570g-200",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-570G",
-    "model": "MY-570G",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 39000,
-    "comparePrice": 46000,
-    "images": [
-      "/images/catalog/rly-my-570g-200.webp"
-    ],
-    "specs": {
-      "ENGINE": "170F PETROL",
-      "DISPLACEMENT": "212CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "4-0-8",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-578d-201",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder MY-578D",
-    "model": "MY-578D",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 39000,
-    "comparePrice": 46000,
-    "images": [
-      "/images/catalog/rly-my-578d-201.webp"
-    ],
-    "specs": {
-      "ENGINE": "178F DIESEL ENGINE",
-      "DISPLACEMENT": "296CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "4.4 KW",
-      "BLADES": "32 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC",
-      "TYRE": "5-0-12",
-      "START TYPE": "RECOIL START"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -12052,18 +10663,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -12108,75 +10716,15 @@ export const PRODUCTS = [
       "24-48 hour dispatch with genuine replacement spare parts guarantee"
     ],
     "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Cotton & Sugarcane inter-cultivation",
+      "Vegetable row de-weeding & aeration",
+      "Paddy wetland preparation (with cage wheels)",
+      "Orchard basin tillage & fertilizer incorporation"
     ],
     "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
-    ],
-    "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
-    "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
-    "hsn": "8432",
-    "gst": 5
-  },
-  {
-    "slug": "rly-my-685d-de",
-    "category": "power-weeders",
-    "name": "KrishiGears Power Weeder – MY-685D-DE",
-    "model": "MY-685D-DE",
-    "brand": "KrishiGears",
-    "badges": [
-      "FMTTI Tested",
-      "Commercial Grade",
-      "Industrial Quality Standards"
-    ],
-    "price": 88000,
-    "comparePrice": 99000,
-    "images": [
-      "/images/catalog/rly-my-685d-de.webp"
-    ],
-    "specs": {
-      "ENGINE": "186F",
-      "DIESEL": "KAMA",
-      "DISPLACEMENT": "406CC ,4 STROKE",
-      "TRANSMISSION": "GEAR DRIVE",
-      "POWER": "5.5 KW",
-      "BLADES": "40 PCS DRY LAND",
-      "ATTACHMENTS": "SIDE DISC ,",
-      "TYRE": "4-0-8 TUBELESS",
-      "START TYPE": "SELF START (WITHOUT BATTERY )/RECOIL START ,WITH HEADLAMP"
-    },
-    "features": [
-      "Genuine KrishiGears branded product",
-      "Backed by manufacturer warranty",
-      "PAN India delivery from KrishiGears",
-      "Genuine spare parts availability",
-      "Genuine KrishiGears commercial agricultural machinery",
-      "FMTTI-tested commercial durability standard",
-      "Precision-engineered transmission case for tough Indian soil",
-      "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
-    ],
-    "applications": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
-    ],
-    "benefits": [
-      "Saves significant manual labour",
-      "Reduces operating cost over time",
-      "FMTTI-tested durability",
-      "Cuts inter-cultivation labor cost by up to 70% in Sugarcane fields",
-      "High-torque de-weeding and soil aeration in Black Cotton Soil (Regur)",
-      "Approved for state agricultural mechanization subsidies across Maharashtra and Gujarat"
+      "Cuts inter-cultivation labor cost by up to 70% in row crops",
+      "High-torque de-weeding and soil aeration in tough Indian soils",
+      "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=KRJFfkK0eJM",
@@ -12186,26 +10734,78 @@ export const PRODUCTS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Rameshwar Patel", role: "Patel Agro Agency, Kolhapur (Maharashtra)", text: "KG-ICP-UP170-SH back-rotary weeder aur KG-177F 9HP model sugarcane inter-row weeding ke liye hamare 120+ farmers ne liya hai. Direct factory dispatch aur spare parts support best hai.", rating: 5 },
-  { name: "Suresh Choudhary", role: "Kisan Machinery Store, Alwar (Rajasthan)", text: "KrishiGears machines ki build quality aur FMTTI testing standards se farmers ko pura trust milta hai. Commercial grade durability hai.", rating: 5 },
-  { name: "Venkat Rao", role: "Sri Lakshmi Agri Implements, Nizamabad (Telangana)", text: "KG-173F diesel model black cotton soil mein high torque deliver karta hai. Engine warranty claims aur carburetor spares 48 ghante mein Jaipur godown se dispatch ho jate hain.", rating: 5 },
-  { name: "Manish Sharma", role: "Shree Ganesh Krishi Seva Kendra, Indore (MP)", text: "KrishiGears dealership lene ke baad hamari spare parts availability 100% ho gayi. Viton oil seals, recoil starters aur forged blades ki quality authentic OEM grade hai.", rating: 5 },
+  {
+    "name": "Rameshwar Patel",
+    "role": "Patel Agro Agency, Kolhapur (Maharashtra)",
+    "text": "KG-ICP-UP170-SH back-rotary weeder aur KG-177F 9HP model sugarcane inter-row weeding ke liye hamare 120+ farmers ne liya hai. Direct factory dispatch aur spare parts support best hai.",
+    "rating": 5
+  },
+  {
+    "name": "Suresh Choudhary",
+    "role": "Kisan Machinery Store, Alwar (Rajasthan)",
+    "text": "KrishiGears machines ki build quality aur FMTTI testing standards se farmers ko pura trust milta hai. Commercial grade durability hai.",
+    "rating": 5
+  },
+  {
+    "name": "Venkat Rao",
+    "role": "Sri Lakshmi Agri Implements, Nizamabad (Telangana)",
+    "text": "KG-173F diesel model black cotton soil mein high torque deliver karta hai. Engine warranty claims aur fuel injector & gearbox spares 48 ghante mein Jaipur godown se dispatch ho jate hain.",
+    "rating": 5
+  },
+  {
+    "name": "Manish Sharma",
+    "role": "Shree Ganesh Krishi Seva Kendra, Indore (MP)",
+    "text": "KrishiGears dealership lene ke baad hamari spare parts availability 100% ho gayi. Viton oil seals, recoil starters aur forged blades ki quality authentic OEM grade hai.",
+    "rating": 5
+  }
 ];
 
 export const TRUST_BADGES = [
-  { icon: "shield-check", label: "25% - 35% Factory Margin" },
-  { icon: "zap", label: "24-Hour Express Spares (Jaipur Hub)" },
-  { icon: "handshake", label: "Zero Dead-Stock (MOQ 2 Units)" },
-  { icon: "shield", label: "FMTTI-tested commercial durability standard" },
-  { icon: "truck", label: "PAN India Direct Logistics" },
-  { icon: "badge-check", label: "FMTTI / SRFMTTI Tested Standards" },
-  { icon: "wrench", label: "OEM Spare Part Distribution" },
-  { icon: "headphones", label: "Direct WhatsApp Video Tech Support" },
+  {
+    "icon": "shield-check",
+    "label": "15% - 25% Machine Margin (Up to 35% Spares)"
+  },
+  {
+    "icon": "zap",
+    "label": "24-Hour Express Spares (Jaipur Hub)"
+  },
+  {
+    "icon": "handshake",
+    "label": "Zero Dead-Stock (Starter MOQ: 2 Units)"
+  },
+  {
+    "icon": "shield",
+    "label": "FMTTI-tested commercial durability standard"
+  },
+  {
+    "icon": "truck",
+    "label": "PAN India Direct Logistics"
+  },
+  {
+    "icon": "badge-check",
+    "label": "FMTTI / SRFMTTI Tested Standards"
+  },
+  {
+    "icon": "wrench",
+    "label": "OEM Spare Part Distribution"
+  },
+  {
+    "icon": "headphones",
+    "label": "Direct WhatsApp Video Tech Support"
+  }
 ];
 
 export const SEO_PAGES = [
-  { slug: "power-weeder-supplier-india", title: "Power Weeder Dealer Network & Bulk Supply", category: "power-weeders" },
-  { slug: "power-weeder-spare-parts-supplier-india", title: "Power Weeder Spare Parts Distributor & OEM Supply", category: "power-weeder-spare-parts" }
+  {
+    "slug": "power-weeder-supplier-india",
+    "title": "Power Weeder Dealer Network & Bulk Supply",
+    "category": "power-weeders"
+  },
+  {
+    "slug": "power-weeder-spare-parts-supplier-india",
+    "title": "Power Weeder Spare Parts Distributor & OEM Supply",
+    "category": "power-weeder-spare-parts"
+  }
 ];
 
 export const SEO_PAGES_MAP = new Map(SEO_PAGES.map((p) => [p.slug, p]));

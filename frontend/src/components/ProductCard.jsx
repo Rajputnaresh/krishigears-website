@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 import { useTranslation } from "react-i18next";
-import { productCopyItems } from "@/lib/product-specifications.mjs";
+import { productCopyItems, getProductGSTRate } from "@/lib/product-specifications.mjs";
 import { motion } from "framer-motion";
 
 export default function ProductCard({ product }) {
@@ -134,7 +134,7 @@ export default function ProductCard({ product }) {
                       Direct B2C Price
                     </span>
                     <span className="text-[9px] font-bold text-lime-400 bg-lime-500/10 border border-lime-500/30 px-1 py-0.2 rounded">
-                      Incl. {product.gst || 5}% GST
+                      Incl. {getProductGSTRate(product)}% GST
                     </span>
                   </div>
                   <div className="flex items-baseline gap-1 mt-0.5">

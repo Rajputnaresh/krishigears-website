@@ -6,10 +6,10 @@ import { INDIA_MAP } from "@/data/catalog";
 const REGIONS = [
   { name: "North India", states: ["Punjab", "Haryana", "Uttar Pradesh", "Uttarakhand", "Himachal Pradesh", "Delhi", "Rajasthan"] },
   { name: "South India", states: ["Karnataka", "Tamil Nadu", "Kerala", "Andhra Pradesh", "Telangana"] },
-  { name: "West India", states: ["Maharashtra", "Gujarat", "Goa", "Madhya Pradesh"] },
+  { name: "West India", states: ["Maharashtra", "Gujarat", "Goa"] },
   { name: "East India", states: ["West Bengal", "Bihar", "Jharkhand", "Odisha"] },
   { name: "North-East", states: ["Assam", "Tripura", "Manipur", "Meghalaya", "Nagaland", "Arunachal Pradesh", "Mizoram", "Sikkim"] },
-  { name: "Central & UTs", states: ["Chhattisgarh", "Madhya Pradesh", "Jammu and Kashmir", "Chandigarh"] },
+  { name: "Central & UTs", states: ["Chhattisgarh", "Madhya Pradesh", "Jammu and Kashmir", "Ladakh", "Chandigarh"] },
 ];
 
 export default function DealerNetwork() {

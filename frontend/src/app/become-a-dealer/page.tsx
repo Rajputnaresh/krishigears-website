@@ -3,7 +3,7 @@ import Page from "@/pages_temp/BecomeDealer.jsx";
 
 export const metadata: Metadata = {
   title: "Power Weeder Dealership Kaise Le: PAN India",
-  description: "Apply for a KrishiGears power weeder dealership. 25%-35% direct factory margin, zero dead-stock on-demand MOQ from 2 units & 24hr spare parts dispatch from Jaipur.",
+  description: "Apply for a KrishiGears power weeder dealership. 15%-25% machine margins, up to 35% on OEM spares, zero dead-stock on-demand MOQ from 2 units & 24-48hr spare parts dispatch from Jaipur.",
   keywords: [
     "power weeder dealership kaise le",
     "power weeder dealership",
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     canonical: "https://krishigears.com/become-a-dealer",
   },
   openGraph: {
-    title: "Power Weeder Dealership Kaise Le | KrishiGears Wholesale Network",
-    description: "Start a certified farm machinery dealership. 25-35% direct factory margins, protected territory & 24-hour express spare parts dispatch from Jaipur.",
+    title: "Power Weeder Dealership Kaise Le",
+    description: "Start a certified farm machinery dealership. 15-25% machine margins, up to 35% on OEM spares, protected territory & 24-48 hour express spare parts dispatch from Jaipur.",
     url: "https://krishigears.com/become-a-dealer",
     siteName: "KrishiGears",
     images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears Dealership" }],

@@ -45,14 +45,25 @@ const SERVICE_OPTIONS = [
 ];
 
 export default function ServiceProblems() {
-  const { slug } = useParams();
+  const params = useParams();
+  const rawSlug = params?.slug || "";
   
-  // URL format: power-weeder-repair-service-in-{city_slug}
-  const citySlugMatch = slug?.match(/power-weeder-repair-service-in-(.+)/);
-  const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+  // URL format: power-weeder-repair-service-in-{city_slug} or {city_slug}
+  let extractedSlug = "";
+  if (rawSlug) {
+    if (rawSlug.includes("-in-")) {
+      extractedSlug = rawSlug.split("-in-").pop() || "";
+    } else {
+      extractedSlug = rawSlug
+        .replace(/^power-weeder-repair-service-in-/, "")
+        .replace(/^power-weeder-repair-service-/, "");
+    }
+  }
+  const citySlug = (extractedSlug || "").toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "");
   
-  const geo = CITY_STATE_MAP[citySlug] || {};
-  const location = geo.city || slug?.split("-").slice(0, -2).join(" ") || "India";
+  const geo = (citySlug && CITY_STATE_MAP[citySlug]) || {};
+  const formattedCity = citySlug ? citySlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "India";
+  const location = geo.city || formattedCity;
   const state = geo.state || "";
   
   // Deterministic random selection for this city to prevent duplicate content
@@ -99,7 +110,7 @@ export default function ServiceProblems() {
             <EnquiryDialog product={`Power Weeder Service in ${location}`} trigger={
               <button data-testid="service-enquiry" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md">Enquire About Repair Support</button>
             } />
-            <a href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hi, I have a power weeder problem in ${location}. Machine details: `)}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label={`WhatsApp Service Desk for ${location}`} onClick={() => trackWhatsAppClick("service_problems", slug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Service Desk</a>
+            <a href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hi, I have a power weeder problem in ${location}. Machine details: `)}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`} target="_blank" rel="noreferrer" aria-label={`WhatsApp Service Desk for ${location}`} onClick={() => trackWhatsAppClick("service_problems", rawSlug || citySlug)} className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">WhatsApp Service Desk</a>
             <Link href="/warranty-and-support" data-testid="warranty-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Warranty Info</Link>
           </div>
         </div>

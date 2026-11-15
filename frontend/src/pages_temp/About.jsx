@@ -88,8 +88,9 @@ export default function About() {
             <div><strong>Company Name:</strong> {COMPANY.legalName}</div>
             <div><strong>CIN:</strong> {COMPANY.cin} · <strong>GSTIN:</strong> {COMPANY.gst} · <strong>PAN:</strong> {COMPANY.pan}</div>
             <div><strong>Registered Office:</strong> {COMPANY.address}</div>
-            <div className="mt-2 text-zinc-400 border-t border-zinc-800/80 pt-2">
-              Both KrishiGears and FarmingTools.in operate under unified financial, billing, and regulatory governance of KRISHIGEARS INDIA PRIVATE LIMITED. Payment collections via Razorpay for both KrishiGears machinery token advances and FarmingTools.in orders settle into the registered corporate bank account of KRISHIGEARS INDIA PRIVATE LIMITED.
+            <div className="mt-2 text-zinc-400 border-t border-zinc-800/80 pt-2 space-y-1.5">
+              <div>Both KrishiGears and FarmingTools.in operate under unified financial, billing, and regulatory governance of KRISHIGEARS INDIA PRIVATE LIMITED. Payment collections via Razorpay for both KrishiGears machinery token advances and FarmingTools.in orders settle into the registered corporate bank account of KRISHIGEARS INDIA PRIVATE LIMITED.</div>
+              <div className="text-zinc-300 font-sans text-xs"><strong>Fulfillment Architecture:</strong> Fast-moving OEM spare parts dispatch within 24–48 hours from our Jaipur central facility. Commercial farm machinery dispatches directly from partner OEM assembly depots across India per confirmed order, eliminating dead-stock holding costs and ensuring factory-fresh machinery.</div>
             </div>
           </div>
         </div>

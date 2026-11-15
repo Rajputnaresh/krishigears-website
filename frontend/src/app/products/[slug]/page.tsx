@@ -1,4 +1,4 @@
-import { productSpecifications } from "@/lib/product-specifications.mjs";
+import { productSpecifications, getProductGSTRate } from "@/lib/product-specifications.mjs";
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PRODUCTS } from '@/data/catalog';
@@ -20,7 +20,7 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: 'Product Not Found | KrishiGears',
+      title: 'Product Not Found',
     };
   }
 
@@ -30,7 +30,7 @@ export async function generateMetadata({
       : `https://krishigears.com${product.images[0]}`
     : 'https://krishigears.com/images/products/weeder.webp';
 
-  const gstRate = (product as { gst?: number }).gst ?? 5;
+  const gstRate = getProductGSTRate(product);
   const title = `${product.name} Wholesale & Dealership Price`;
   const description = `${product.name} (Model: ${product.model || product.slug}). Compare catalogue specifications and request a supplier-confirmed quotation, availability and dispatch timing. ${gstRate}% GST.`;
 
@@ -86,7 +86,18 @@ export default async function ProductDetailPage({
       "@type": "Brand",
       "name": product.brand || "KrishiGears"
     },
-
+    "offers": {
+      "@type": "Offer",
+      "price": product.price || 0,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": `https://krishigears.com/products/${product.slug}`,
+      "priceValidUntil": "2027-12-31",
+      "seller": {
+        "@type": "Organization",
+        "name": "KrishiGears"
+      }
+    }
   };
 
   return (

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cancellation Policy · KrishiGears",
+  title: "Cancellation Policy",
   description: "Official cancellation policy for agricultural machinery orders, token bookings, and shipments by KRISHIGEARS INDIA PRIVATE LIMITED.",
   alternates: { canonical: "https://krishigears.com/cancellation-policy" }
 };

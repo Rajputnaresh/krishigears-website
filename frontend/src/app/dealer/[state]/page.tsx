@@ -16,6 +16,8 @@ const STATE_NAMES: Record<string, string> = {
   "dadra-and-nagar-haveli-ut": "Dadra and Nagar Haveli (UT)",
   "daman-and-diu": "Daman and Diu",
   "daman-and-diu-ut": "Daman and Diu (UT)",
+  "dadra-and-nagar-haveli-and-daman-and-diu": "Dadra and Nagar Haveli and Daman and Diu (UT)",
+  "dadra-and-nagar-haveli-and-daman-and-diu-ut": "Dadra and Nagar Haveli and Daman and Diu (UT)",
   "delhi": "Delhi",
   "delhi-nct": "Delhi (NCT)",
   "goa": "Goa",
@@ -26,6 +28,8 @@ const STATE_NAMES: Record<string, string> = {
   "jharkhand": "Jharkhand",
   "karnataka": "Karnataka",
   "kerala": "Kerala",
+  "ladakh": "Ladakh (UT)",
+  "ladakh-ut": "Ladakh (UT)",
   "lakshadweep": "Lakshadweep",
   "lakshadweep-ut": "Lakshadweep (UT)",
   "madhya-pradesh": "Madhya Pradesh",
@@ -58,7 +62,13 @@ export interface DistrictInfo {
 }
 
 export function getDistrictsForState(stateSlug: string): DistrictInfo[] {
-  const norm = (s: string) => s.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const norm = (s: string) =>
+    decodeURIComponent(s)
+      .toLowerCase()
+      .replace(/%26/g, "and")
+      .replace(/&/g, "and")
+      .replace(/[^a-zA-Z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
   const target = norm(stateSlug);
 
   const results: DistrictInfo[] = [];
@@ -66,7 +76,11 @@ export function getDistrictsForState(stateSlug: string): DistrictInfo[] {
   for (const [city, data] of Object.entries(locationsData as Record<string, any>)) {
     const st = data.state || "";
     const stNorm = norm(st);
-    if (stNorm === target || stNorm.replace(/-(ut|nct)$/, "") === target.replace(/-(ut|nct)$/, "")) {
+    if (
+      stNorm === target ||
+      stNorm.replace(/-(ut|nct)$/, "") === target.replace(/-(ut|nct)$/, "") ||
+      (target === "dadra-and-nagar-haveli-and-daman-and-diu" && (stNorm.includes("dadra") || stNorm.includes("daman")))
+    ) {
       const cityClean = city.trim();
       const citySlug = norm(cityClean);
       results.push({
@@ -100,8 +114,9 @@ export async function generateMetadata({
   params: Promise<{ state: string }>;
 }): Promise<Metadata> {
   const { state } = await params;
-  const stateSlug = state.toLowerCase();
-  const stateName = STATE_NAMES[stateSlug] || state.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const decoded = decodeURIComponent(state);
+  const stateSlug = decoded.replace(/%26/g, "and").replace(/&/g, "and").replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "").toLowerCase();
+  const stateName = STATE_NAMES[stateSlug] || stateSlug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const agronomy = getStateAgronomy(stateSlug);
 
   return {
@@ -132,8 +147,9 @@ export default async function DealerStatePage({
   params: Promise<{ state: string }>;
 }) {
   const { state } = await params;
-  const stateSlug = state.toLowerCase();
-  const stateName = STATE_NAMES[stateSlug] || state.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const decoded = decodeURIComponent(state);
+  const stateSlug = decoded.replace(/%26/g, "and").replace(/&/g, "and").replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "").toLowerCase();
+  const stateName = STATE_NAMES[stateSlug] || stateSlug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const districts = getDistrictsForState(stateSlug);
   const agronomy = getStateAgronomy(stateSlug);
 

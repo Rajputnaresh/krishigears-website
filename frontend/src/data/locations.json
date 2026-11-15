@@ -83,18 +83,6 @@
     "farming_profile": "Mixed cropping with coastal influence",
     "major_district": true
   },
-  "Ranga Reddy": {
-    "state": "Andhra Pradesh",
-    "key_crops": [
-      "Rice",
-      "Cotton",
-      "Jowar",
-      "Groundnut"
-    ],
-    "soil_type": "Red and black soils",
-    "farming_profile": "Semi-arid zone, dry season crops focus",
-    "major_district": true
-  },
   "Srikakulam": {
     "state": "Andhra Pradesh",
     "key_crops": [
@@ -105,42 +93,6 @@
     ],
     "soil_type": "Red and laterite soils",
     "farming_profile": "Northern district, cash crops emphasis",
-    "major_district": true
-  },
-  "Suravaram": {
-    "state": "Andhra Pradesh",
-    "key_crops": [
-      "Rice",
-      "Soybean",
-      "Green gram",
-      "Cotton"
-    ],
-    "soil_type": "Red loamy soils",
-    "farming_profile": "Rice-wheat rotation area",
-    "major_district": true
-  },
-  "Viziayaram": {
-    "state": "Andhra Pradesh",
-    "key_crops": [
-      "Rice",
-      "Maize",
-      "Groundnut",
-      "Sesame"
-    ],
-    "soil_type": "Red and black soils",
-    "farming_profile": "Northern Krishna basin, rain-fed crops",
-    "major_district": true
-  },
-  "Vizag (Visakhapatnam)": {
-    "state": "Andhra Pradesh",
-    "key_crops": [
-      "Rice",
-      "Coconut",
-      "Sugarcane",
-      "Horticulture"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Port city influence, high value horticulture",
     "major_district": true
   },
   "West Godavari": {
@@ -167,18 +119,6 @@
     "farming_profile": "Hill farming, mixed crops with forest produce",
     "major_district": false
   },
-  "Cheromu": {
-    "state": "Arunachal Pradesh",
-    "key_crops": [
-      "Rice",
-      "Maize",
-      "Vegetables",
-      "Pulse crops"
-    ],
-    "soil_type": "Red and alluvial soils",
-    "farming_profile": "Valley farming with terraced fields",
-    "major_district": false
-  },
   "East Siang": {
     "state": "Arunachal Pradesh",
     "key_crops": [
@@ -191,18 +131,6 @@
     "farming_profile": "Flood-prone areas, rice cultivation",
     "major_district": false
   },
-  "Kurung Kumara": {
-    "state": "Arunachal Pradesh",
-    "key_crops": [
-      "Rice",
-      "Maize",
-      "Root crops",
-      "Millet"
-    ],
-    "soil_type": "Red and lateritic soils",
-    "farming_profile": "High altitude farming, kharif crops",
-    "major_district": false
-  },
   "Lower Subansiri": {
     "state": "Arunachal Pradesh",
     "key_crops": [
@@ -213,18 +141,6 @@
     ],
     "soil_type": "Alluvial and red loam",
     "farming_profile": "River basin agriculture, flood management",
-    "major_district": false
-  },
-  "Namsad": {
-    "state": "Arunachal Pradesh",
-    "key_crops": [
-      "Rice",
-      "Maize",
-      "Vegetables",
-      "Horticultural crops"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Tropical valley farming with river irrigation",
     "major_district": false
   },
   "Papum Pare": {
@@ -286,19 +202,6 @@
     "soil_type": "Alluvial and red soils",
     "farming_profile": "Upstream valley with seasonal floods",
     "major_district": false
-  },
-  "Assam (Statewide)": {
-    "state": "Assam",
-    "key_crops": [
-      "Rice",
-      "Tea",
-      "Jute",
-      "Oilseeds",
-      "Vegetables"
-    ],
-    "soil_type": "Alluvial soils, Brahmaputra floodplains",
-    "farming_profile": "Major rice bowl, tea plantations, flood-adapted crops",
-    "major_district": true
   },
   "Barpeta": {
     "state": "Assam",
@@ -420,18 +323,6 @@
     "farming_profile": "Hill farming, shifting cultivation remnants",
     "major_district": false
   },
-  "Koochakhandai": {
-    "state": "Assam",
-    "key_crops": [
-      "Rice",
-      "Jute",
-      "Groundnut",
-      "Soybean"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Flood-prone areas, saline tolerance needed",
-    "major_district": true
-  },
   "Lakhimpur": {
     "state": "Assam",
     "key_crops": [
@@ -468,18 +359,6 @@
     "farming_profile": "Major rice district, Gangapur rice origin",
     "major_district": true
   },
-  "Nalpi": {
-    "state": "Assam",
-    "key_crops": [
-      "Rice",
-      "Jute",
-      "Groundnut",
-      "Sesame"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Brahmaputra flood plains, rice cultivation",
-    "major_district": true
-  },
   "Sivasagar": {
     "state": "Assam",
     "key_crops": [
@@ -504,18 +383,6 @@
     "farming_profile": "Upper Brahmaputra, industrial-agricultural mix",
     "major_district": true
   },
-  "Turghunjiya": {
-    "state": "Assam",
-    "key_crops": [
-      "Rice",
-      "Jute",
-      "Groundnut",
-      "Soybean"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Northern Assam, river access farming",
-    "major_district": true
-  },
   "Dibrugarh": {
     "state": "Assam",
     "key_crops": [
@@ -526,42 +393,6 @@
     ],
     "soil_type": "Red and lateritic soils",
     "farming_profile": "Upper Assam, tea plantation region",
-    "major_district": true
-  },
-  "Arrah": {
-    "state": "Bihar",
-    "key_crops": [
-      "Wheat",
-      "Rice",
-      "Maize",
-      "Oilseeds"
-    ],
-    "soil_type": "Alluvial and reddish brown soils",
-    "farming_profile": "Bhojpur region, wheat-rice rotation",
-    "major_district": true
-  },
-  "Ara": {
-    "state": "Bihar",
-    "key_crops": [
-      "Wheat",
-      "Rice",
-      "Maize",
-      "Oilseeds"
-    ],
-    "soil_type": "Alluvial and reddish brown soils",
-    "farming_profile": "North Bihar, fertile alluvial plains",
-    "major_district": true
-  },
-  "Bihar (Statewide)": {
-    "state": "Bihar",
-    "key_crops": [
-      "Paddy",
-      "Wheat",
-      "Maize",
-      "Oilseeds"
-    ],
-    "soil_type": "Alluvial plains, red and black soils",
-    "farming_profile": "Ganga basin agriculture, rice-wheat system",
     "major_district": true
   },
   "Bhagalpur": {
@@ -598,30 +429,6 @@
     ],
     "soil_type": "Alluvial and red soils",
     "farming_profile": "Bettapahar region, water-intensive crops",
-    "major_district": true
-  },
-  "Guyat": {
-    "state": "Bihar",
-    "key_crops": [
-      "Paddy",
-      "Rice",
-      "Maize",
-      "Soybean"
-    ],
-    "soil_type": "Alluvial and reddish brown soils",
-    "farming_profile": "Middle Ganges, mixed cropping",
-    "major_district": true
-  },
-  "Jaijau": {
-    "state": "Bihar",
-    "key_crops": [
-      "Wheat",
-      "Rice",
-      "Maize",
-      "Oilseeds"
-    ],
-    "soil_type": "Alluvial soils",
-    "farming_profile": "Northern Bihar, wheat cultivation area",
     "major_district": true
   },
   "Kaimur": {
@@ -673,27 +480,29 @@
     "major_district": true
   },
   "Maharajganj": {
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "key_crops": [
+      "Paddy",
+      "Sugarcane",
       "Wheat",
-      "Rice",
-      "Maize",
-      "Oilseeds"
+      "Lentil",
+      "Mustard"
     ],
-    "soil_type": "Alluvial and reddish brown soils",
-    "farming_profile": "Northern Bihar, canal irrigation dependent",
+    "soil_type": "Terai belt fertile alluvial clay loam",
+    "farming_profile": "Northern Terai belt with high water table, sugar mills and extensive paddy farming.",
     "major_district": true
   },
   "Mainpuri": {
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "key_crops": [
+      "Wheat",
       "Paddy",
-      "Rice",
-      "Maize",
-      "Soybean"
+      "Mustard",
+      "Potato",
+      "Garlic"
     ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Ganga canal area, wetland farming",
+    "soil_type": "Gangetic alluvial loam and sandy loam",
+    "farming_profile": "Intensive cereal, oilseed and commercial potato-garlic cultivation in western UP.",
     "major_district": true
   },
   "Muzaffarpur": {
@@ -706,18 +515,6 @@
     ],
     "soil_type": "Alluvial and black cotton soils",
     "farming_profile": "Major wheat bowl, Bihar's agricultural heartland",
-    "major_district": true
-  },
-  "Nandigaon": {
-    "state": "Bihar",
-    "key_crops": [
-      "Paddy",
-      "Rice",
-      "Maize",
-      "Soybean"
-    ],
-    "soil_type": "Alluvial soils",
-    "farming_profile": "Eastern Bihar, river basin agriculture",
     "major_district": true
   },
   "Patna": {
@@ -880,11 +677,12 @@
     "state": "Rajasthan",
     "key_crops": [
       "Wheat",
+      "Maize",
       "Mustard",
-      "Coconut",
-      "Fruits"
+      "Vegetables",
+      "Gram"
     ],
-    "soil_type": "Red and lateritic soils",
+    "soil_type": "Red and black mixed soils in Aravalli valleys",
     "farming_profile": "Mewar region, horticulture with millet crops",
     "major_district": true
   },
@@ -912,18 +710,6 @@
     "farming_profile": "Great Indian Plains, soybean-cotton rotation",
     "major_district": true
   },
-  "Bangalore (Urban)": {
-    "state": "Karnataka",
-    "key_crops": [
-      "Coffee",
-      "Areca nut",
-      "Spices",
-      "Vegetables"
-    ],
-    "soil_type": "Lateritic and red soils",
-    "farming_profile": "Plantation remnants, urban peri-urban farming",
-    "major_district": false
-  },
   "Beed": {
     "state": "Maharashtra",
     "key_crops": [
@@ -936,18 +722,6 @@
     "farming_profile": "Deccan plateau, rain-fed crops",
     "major_district": true
   },
-  "Bharti": {
-    "state": "Maharashtra",
-    "key_crops": [
-      "Cotton",
-      "Soybean",
-      "Groundnut",
-      "Jowar"
-    ],
-    "soil_type": "Black soils and red loams",
-    "farming_profile": "Central Maharashtra, oilseed focus",
-    "major_district": true
-  },
   "Chandrapur": {
     "state": "Maharashtra",
     "key_crops": [
@@ -958,18 +732,6 @@
     ],
     "soil_type": "Red and black soils",
     "farming_profile": "Ganjira region, turmeric production center",
-    "major_district": true
-  },
-  "Dahej": {
-    "state": "Gujarat",
-    "key_crops": [
-      "Cotton",
-      "Groundnut",
-      "Onions",
-      "Chilli"
-    ],
-    "soil_type": "Red and sandy soils",
-    "farming_profile": "Kutch region, export quality crops",
     "major_district": true
   },
   "Dhule": {
@@ -1032,18 +794,6 @@
     "farming_profile": "Godaveri basin, irrigation cotton",
     "major_district": true
   },
-  "Kalyan": {
-    "state": "Maharashtra",
-    "key_crops": [
-      "Onions",
-      "Potatoes",
-      "Tomatoes",
-      "Cucurbits"
-    ],
-    "soil_type": "Alluvial and red soils",
-    "farming_profile": "Pune region, vegetable market hub",
-    "major_district": true
-  },
   "Kolhapur": {
     "state": "Maharashtra",
     "key_crops": [
@@ -1055,18 +805,6 @@
     "soil_type": "Red and lateritic soils",
     "farming_profile": "Western Maharashtra, cotton and oilseeds",
     "major_district": true
-  },
-  "Mumbai (Urban)": {
-    "state": "Maharashtra",
-    "key_crops": [
-      "Vegetables",
-      "Fruits",
-      "Herbs",
-      "Nursery plants"
-    ],
-    "soil_type": "Various urban soils",
-    "farming_profile": "Urban peri-urban horticulture",
-    "major_district": false
   },
   "Nashik": {
     "state": "Maharashtra",
@@ -1228,11 +966,12 @@
     "state": "Andhra Pradesh",
     "key_crops": [
       "Rice",
-      "Cotton",
-      "Chilli",
-      "Groundnut"
+      "Sugarcane",
+      "Coconut",
+      "Groundnut",
+      "Horticulture"
     ],
-    "soil_type": "Red and black cotton soils",
+    "soil_type": "Coastal alluvial and red gravelly soils",
     "farming_profile": "High-yield commercial cash crop and horticulture belt",
     "major_district": false
   },
@@ -1240,11 +979,12 @@
     "state": "Andhra Pradesh",
     "key_crops": [
       "Rice",
-      "Cotton",
-      "Chilli",
-      "Groundnut"
+      "Sugarcane",
+      "Groundnut",
+      "Maize",
+      "Mango"
     ],
-    "soil_type": "Red and black cotton soils",
+    "soil_type": "Red loamy and sandy clay loam soils",
     "farming_profile": "High-yield commercial cash crop and horticulture belt",
     "major_district": false
   },
@@ -1668,18 +1408,6 @@
     "farming_profile": "Intensive multi-cropping smallholder agriculture",
     "major_district": false
   },
-  "Bhojpur": {
-    "state": "Bihar",
-    "key_crops": [
-      "Rice",
-      "Wheat",
-      "Maize",
-      "Pulses"
-    ],
-    "soil_type": "Rich Gangetic alluvial loam",
-    "farming_profile": "Intensive multi-cropping smallholder agriculture",
-    "major_district": false
-  },
   "Darbhanga": {
     "state": "Bihar",
     "key_crops": [
@@ -1981,16 +1709,17 @@
     "major_district": false
   },
   "Balrampur": {
-    "state": "Chhattisgarh",
+    "state": "Uttar Pradesh",
     "key_crops": [
-      "Rice",
+      "Paddy",
+      "Sugarcane",
+      "Wheat",
       "Maize",
-      "Pulses",
-      "Oilseeds"
+      "Mustard"
     ],
-    "soil_type": "Red and yellow laterite soils",
-    "farming_profile": "Central Indian grain and pulse farming",
-    "major_district": false
+    "soil_type": "Terai alluvial and clay loam soils",
+    "farming_profile": "Rapti river Terai basin with extensive sugarcane plantations and paddy agriculture.",
+    "major_district": true
   },
   "Bastar": {
     "state": "Chhattisgarh",
@@ -2281,7 +2010,7 @@
     "major_district": false
   },
   "Dadra and Nagar Haveli": {
-    "state": "Dadra and Nagar Haveli (UT)",
+    "state": "Dadra and Nagar Haveli and Daman and Diu (UT)",
     "key_crops": [
       "Rice",
       "Wheat",
@@ -2293,7 +2022,7 @@
     "major_district": false
   },
   "Daman": {
-    "state": "Daman and Diu (UT)",
+    "state": "Dadra and Nagar Haveli and Daman and Diu (UT)",
     "key_crops": [
       "Rice",
       "Wheat",
@@ -2305,7 +2034,7 @@
     "major_district": false
   },
   "Diu": {
-    "state": "Daman and Diu (UT)",
+    "state": "Dadra and Nagar Haveli and Daman and Diu (UT)",
     "key_crops": [
       "Rice",
       "Wheat",
@@ -3145,16 +2874,17 @@
     "major_district": false
   },
   "Hamirpur": {
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "key_crops": [
-      "Apple",
-      "Maize",
       "Wheat",
-      "Barley"
+      "Gram",
+      "Mustard",
+      "Lentil",
+      "Sesame"
     ],
-    "soil_type": "Mountain and brown forest soils",
-    "farming_profile": "Hill terrace farming, apple orchards and off-season vegetables",
-    "major_district": false
+    "soil_type": "Bundelkhand kabar and rakar black soils",
+    "farming_profile": "Yamuna and Betwa confluence with traditional pulse and oilseed farming.",
+    "major_district": true
   },
   "Kangra": {
     "state": "Himachal Pradesh",
@@ -3349,16 +3079,17 @@
     "major_district": false
   },
   "Kargil": {
-    "state": "Jammu and Kashmir",
+    "state": "Ladakh (UT)",
     "key_crops": [
+      "Apricot",
+      "Barley",
+      "Wheat",
       "Apple",
-      "Rice",
-      "Maize",
-      "Saffron"
+      "Vegetables"
     ],
-    "soil_type": "Alluvial Karewa and mountain soils",
-    "farming_profile": "Temperate fruit orchards and saffron valleys",
-    "major_district": false
+    "soil_type": "Cold mountain river valley alluvium",
+    "farming_profile": "Suru and Dras valley terraces with organic apricot and barley cultivation.",
+    "major_district": true
   },
   "Kathua": {
     "state": "Jammu and Kashmir",
@@ -3409,16 +3140,17 @@
     "major_district": false
   },
   "Leh": {
-    "state": "Jammu and Kashmir",
+    "state": "Ladakh (UT)",
     "key_crops": [
-      "Apple",
-      "Rice",
-      "Maize",
-      "Saffron"
+      "Barley (Grim)",
+      "Wheat",
+      "Alfalfa",
+      "Apricot",
+      "Sea Buckthorn"
     ],
-    "soil_type": "Alluvial Karewa and mountain soils",
-    "farming_profile": "Temperate fruit orchards and saffron valleys",
-    "major_district": false
+    "soil_type": "Cold arid mountain desert soil",
+    "farming_profile": "High-altitude Indus valley horticulture, apricot orchards and cold-climate agriculture.",
+    "major_district": true
   },
   "Poonch": {
     "state": "Jammu and Kashmir",
@@ -3853,18 +3585,6 @@
     "major_district": false
   },
   "Bengaluru (Bangalore) Rural": {
-    "state": "Karnataka",
-    "key_crops": [
-      "Ragi",
-      "Rice",
-      "Sugarcane",
-      "Coffee"
-    ],
-    "soil_type": "Red loamy and deep black cotton soils",
-    "farming_profile": "Deccan plateau grain, spices and cash crops",
-    "major_district": false
-  },
-  "Bengaluru (Bangalore) Urban": {
     "state": "Karnataka",
     "key_crops": [
       "Ragi",
@@ -5151,26 +4871,26 @@
   "Mumbai City": {
     "state": "Maharashtra",
     "key_crops": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Horticulture",
+      "Vegetables",
+      "Urban Landscaping",
+      "Floriculture"
     ],
-    "soil_type": "Deep black regur basaltic soils",
-    "farming_profile": "Major cash crop, sugarcane belt and horticulture",
-    "major_district": false
+    "soil_type": "Coastal alluvium and urban soils",
+    "farming_profile": "Urban and peri-urban horticulture, green roofs, and commercial nursery landscaping.",
+    "major_district": true
   },
   "Mumbai Suburban": {
     "state": "Maharashtra",
     "key_crops": [
-      "Sugarcane",
-      "Cotton",
-      "Soybean",
-      "Onion"
+      "Vegetables",
+      "Horticulture",
+      "Nurseries",
+      "Herbs"
     ],
-    "soil_type": "Deep black regur basaltic soils",
-    "farming_profile": "Major cash crop, sugarcane belt and horticulture",
-    "major_district": false
+    "soil_type": "Coastal sandy alluvium and reclaimed soils",
+    "farming_profile": "Peri-urban vegetable cultivation, greenhouse floriculture, and coastal fruit orchards.",
+    "major_district": true
   },
   "Nanded": {
     "state": "Maharashtra",
@@ -6483,13 +6203,14 @@
   "Banswara": {
     "state": "Rajasthan",
     "key_crops": [
-      "Mustard",
-      "Bajra",
-      "Guar",
-      "Wheat"
+      "Maize",
+      "Cotton",
+      "Soybean",
+      "Wheat",
+      "Gram"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
+    "soil_type": "Hilly red loam and mixed black soil",
+    "farming_profile": "Southern Rajasthan Mahi basin with hilly terrain, maize and cotton farming.",
     "major_district": false
   },
   "Baran": {
@@ -6508,12 +6229,12 @@
     "state": "Rajasthan",
     "key_crops": [
       "Mustard",
+      "Wheat",
       "Bajra",
-      "Guar",
-      "Wheat"
+      "Potato"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
+    "soil_type": "Alluvial plains and sandy loam soils",
+    "farming_profile": "Leading mustard and wheat producing alluvial belt in eastern Rajasthan.",
     "major_district": false
   },
   "Bhilwara": {
@@ -6579,13 +6300,13 @@
   "Dungarpur": {
     "state": "Rajasthan",
     "key_crops": [
-      "Mustard",
-      "Bajra",
-      "Guar",
-      "Wheat"
+      "Maize",
+      "Wheat",
+      "Gram",
+      "Soybean"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
+    "soil_type": "Hilly shallow red soils and rocky loam",
+    "farming_profile": "Hilly tribal terrain suitable for lightweight and maneuverable power weeders.",
     "major_district": false
   },
   "Hanumangarh": {
@@ -6627,13 +6348,14 @@
   "Jhalawar": {
     "state": "Rajasthan",
     "key_crops": [
+      "Orange (Mandarin)",
+      "Soybean",
       "Mustard",
-      "Bajra",
-      "Guar",
+      "Coriander",
       "Wheat"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
+    "soil_type": "Deep rich black cotton soils and loamy soils",
+    "farming_profile": "The citrus hub of Rajasthan with extensive orange orchards and soybean cultivation.",
     "major_district": false
   },
   "Karauli": {
@@ -6651,13 +6373,14 @@
   "Kota": {
     "state": "Rajasthan",
     "key_crops": [
+      "Soybean",
       "Mustard",
-      "Bajra",
-      "Guar",
-      "Wheat"
+      "Wheat",
+      "Coriander",
+      "Paddy"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
+    "soil_type": "Deep black cotton clay (vertisols) of Hadoti region",
+    "farming_profile": "Major Chambal canal-irrigated agricultural bowl with heavy clay soils.",
     "major_district": false
   },
   "Nagaur": {
@@ -6685,16 +6408,17 @@
     "major_district": false
   },
   "Pratapgarh": {
-    "state": "Rajasthan",
+    "state": "Uttar Pradesh",
     "key_crops": [
+      "Amla (Gooseberry)",
+      "Wheat",
+      "Paddy",
       "Mustard",
-      "Bajra",
-      "Guar",
-      "Wheat"
+      "Potato"
     ],
-    "soil_type": "Desert sandy, saline and alluvial soils",
-    "farming_profile": "Arid and semi-arid drought-hardy cultivation",
-    "major_district": false
+    "soil_type": "Gangetic alluvial and sandy loam soils",
+    "farming_profile": "India's premier Amla producing hub with fertile Gangetic plain agriculture.",
+    "major_district": true
   },
   "Rajsamand": {
     "state": "Rajasthan",
@@ -7417,18 +7141,6 @@
     "major_district": false
   },
   "Rajanna Sircilla": {
-    "state": "Telangana",
-    "key_crops": [
-      "Cotton",
-      "Paddy",
-      "Maize",
-      "Chilli"
-    ],
-    "soil_type": "Red sandy (chalka) and deep black soils",
-    "farming_profile": "Deccan commercial cotton, chilli and seed hub",
-    "major_district": false
-  },
-  "Rangareddy": {
     "state": "Telangana",
     "key_crops": [
       "Cotton",
@@ -8880,17 +8592,190 @@
     "farming_profile": "Intensive double/triple crop paddy and potato farming",
     "major_district": false
   },
-  "India": {
-    "state": "Pan-India",
+  "Rangareddy (Ranga Reddy)": {
+    "state": "Telangana",
     "key_crops": [
       "Cotton",
+      "Paddy",
+      "Maize",
+      "Chilli",
+      "Vegetables"
+    ],
+    "soil_type": "Red sandy loam (chalka) and deep black clay soils",
+    "farming_profile": "Semi-arid agricultural belt with peri-urban vegetable and commercial cotton cultivation.",
+    "major_district": true
+  },
+  "Mulugu": {
+    "state": "Telangana",
+    "key_crops": [
+      "Paddy",
+      "Chilli",
+      "Cotton",
+      "Maize"
+    ],
+    "soil_type": "Red sandy loam and alluvial riverine forest soils",
+    "farming_profile": "Godavari basin district with intensive paddy, cotton and chilli farming.",
+    "major_district": true
+  },
+  "Narayanpet": {
+    "state": "Telangana",
+    "key_crops": [
+      "Cotton",
+      "Paddy",
+      "Jowar",
+      "Red Gram",
+      "Castor"
+    ],
+    "soil_type": "Deep black cotton soils and red chalka soils",
+    "farming_profile": "Krishna basin dryland agriculture with commercial cotton and pulse cropping.",
+    "major_district": true
+  },
+  "Bhojpur (Arrah)": {
+    "state": "Bihar",
+    "key_crops": [
+      "Rice",
+      "Wheat",
+      "Maize",
+      "Pulses",
+      "Vegetables"
+    ],
+    "soil_type": "Gangetic fertile alluvial loam",
+    "farming_profile": "Core Gangetic alluvial plains with high canal irrigation and double-crop grain farming.",
+    "major_district": true
+  },
+  "Bengaluru Urban": {
+    "state": "Karnataka",
+    "key_crops": [
+      "Ragi (Finger Millet)",
+      "Vegetables",
+      "Flowers",
+      "Grapes",
+      "Maize"
+    ],
+    "soil_type": "Red loamy and red gravelly clay soils",
+    "farming_profile": "Peri-urban horticulture, floriculture and traditional ragi farming around Bengaluru.",
+    "major_district": true
+  },
+  "Chengalpattu": {
+    "state": "Tamil Nadu",
+    "key_crops": [
+      "Paddy",
+      "Groundnut",
+      "Sugarcane",
+      "Horticulture"
+    ],
+    "soil_type": "Coastal alluvium and red sandy loam",
+    "farming_profile": "Coastal and Palar river basin with intensive paddy and vegetable farming.",
+    "major_district": true
+  },
+  "Kallakurichi": {
+    "state": "Tamil Nadu",
+    "key_crops": [
       "Sugarcane",
       "Paddy",
+      "Maize",
+      "Tapioca"
+    ],
+    "soil_type": "Red sandy and clay loam soils",
+    "farming_profile": "Agricultural heartland with major sugarcane mills and paddy cultivation.",
+    "major_district": true
+  },
+  "Mayiladuthurai": {
+    "state": "Tamil Nadu",
+    "key_crops": [
+      "Paddy",
+      "Pulses",
+      "Sugarcane",
+      "Banana"
+    ],
+    "soil_type": "Cauvery delta deep alluvial clay loam",
+    "farming_profile": "Core Cauvery delta granary with intensive double-crop paddy cultivation.",
+    "major_district": true
+  },
+  "Ranipet": {
+    "state": "Tamil Nadu",
+    "key_crops": [
+      "Paddy",
+      "Groundnut",
+      "Sugarcane",
+      "Vegetables"
+    ],
+    "soil_type": "Red loam and alluvial riverine soil",
+    "farming_profile": "Palar river basin with irrigated agriculture and horticulture.",
+    "major_district": true
+  },
+  "Tenkasi": {
+    "state": "Tamil Nadu",
+    "key_crops": [
+      "Paddy",
+      "Banana",
+      "Spices",
+      "Coconut",
+      "Mango"
+    ],
+    "soil_type": "Red loam and black cotton soils",
+    "farming_profile": "Western Ghats foothills with perennial river irrigation and fruit orchards.",
+    "major_district": true
+  },
+  "Tirupathur": {
+    "state": "Tamil Nadu",
+    "key_crops": [
+      "Paddy",
+      "Groundnut",
+      "Ragi",
+      "Coconut",
+      "Mango"
+    ],
+    "soil_type": "Red loamy and gravelly soils",
+    "farming_profile": "Palar river upper basin with mixed agriculture and dryland crops.",
+    "major_district": true
+  },
+  "Niwari": {
+    "state": "Madhya Pradesh",
+    "key_crops": [
       "Wheat",
+      "Mustard",
+      "Gram",
       "Soybean"
     ],
-    "soil_type": "Alluvial, black cotton, red, and loamy soils",
-    "farming_profile": "Pan-India commercial agricultural machinery supply and OEM spare parts distribution network",
+    "soil_type": "Bundelkhand red and yellow sandy loam",
+    "farming_profile": "Betwa river basin with wheat and mustard farming in Bundelkhand.",
+    "major_district": true
+  },
+  "Mauganj": {
+    "state": "Madhya Pradesh",
+    "key_crops": [
+      "Paddy",
+      "Wheat",
+      "Gram",
+      "Mustard"
+    ],
+    "soil_type": "Mixed red and black clay loam",
+    "farming_profile": "Rewa plateau region with traditional cereal and pulse cultivation.",
+    "major_district": true
+  },
+  "Maihar": {
+    "state": "Madhya Pradesh",
+    "key_crops": [
+      "Wheat",
+      "Paddy",
+      "Mustard",
+      "Gram"
+    ],
+    "soil_type": "Alluvial and mixed black soil",
+    "farming_profile": "Tons river basin with wheat, oilseeds and pulse production.",
+    "major_district": true
+  },
+  "Pandhurna": {
+    "state": "Madhya Pradesh",
+    "key_crops": [
+      "Cotton",
+      "Orange (Citrus)",
+      "Soybean",
+      "Wheat"
+    ],
+    "soil_type": "Deep black cotton soils (vertisols)",
+    "farming_profile": "Leading cotton and orange producing hub in southern Madhya Pradesh.",
     "major_district": true
   }
 }

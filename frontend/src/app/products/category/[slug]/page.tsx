@@ -1,4 +1,4 @@
-import { productSpecifications, POWER_WEEDER_FAQS } from "@/lib/product-specifications.mjs";
+import { productSpecifications, POWER_WEEDER_FAQS, CATEGORY_FAQS } from "@/lib/product-specifications.mjs";
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Page from "@/pages_temp/CategoryPage.jsx";
@@ -113,78 +113,15 @@ export default async function CategoryDetailPage({
     }
   } : null;
 
+  const categoryFaqList = (CATEGORY_FAQS as Record<string, Array<{ question: string; answer: string }>>)[slug] || CATEGORY_FAQS["power-weeders"] || [];
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": slug === "power-weeders" ? POWER_WEEDER_FAQS.map(({ question, answer }) => ({
-      "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer },
-    })) : isSpareParts ? [
-      {
-        "@type": "Question",
-        "name": "How can agricultural repair shops and dealers get the wholesale spare parts price list PDF?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Authorized repair workshops and retailers can download or request the 2026 wholesale spare parts catalog via our WhatsApp procurement counter (+91 60060 78815) or by submitting the online Bulk Order form."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the Minimum Order Quantity (MOQ) for power weeder spare parts wholesale?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "KrishiGears offers flexible mixed-carton MOQs starting from ₹15,000, allowing local mechanics and stores to stock fast-moving carburetors, recoil starters, Viton seals, and rotary blades without large inventory lockup."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are KrishiGears replacement spare parts compatible with other brand power weeders?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our engine and transmission spares follow standard 170F/177F petrol and 173F/186F diesel dimensional tolerances, making them 100% fitment-compatible with Royal Kissan, Neptune, Balwaan, and Honda-clone agricultural weeders."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the dispatch and delivery timelines for wholesale spare parts orders?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All bulk orders are picked, packaged, and dispatched from our Jaipur central depot within 24 hours via express surface cargo or Speed Post with live tracking."
-        }
-      }
-    ] : [
-      {
-        "@type": "Question",
-        "name": `What is the wholesale power weeder price in India for ${category?.name || "machinery"}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wholesale dealer prices for commercial power weeders range between ₹18,000 to ₹38,000 depending on horsepower (7HP petrol vs 9HP/12HP diesel) and transmission gearbox configuration. Contact KrishiGears for tier-based bulk container pricing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are KrishiGears power weeders eligible for DBT agriculture subsidy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. KrishiGears equipment meets FMTTI / SRFMTTI test compliance standards. Authorized dealers receive complete documentation including test reports and HSN-coded GST tax invoices for 40% to 50% DBT / SMAM state subsidies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the minimum order quantity (MOQ) for dealers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Introductory dealer MOQ starts from as few as 2 units per order, minimizing working capital risks for rural machinery dealers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How fast can spare parts be delivered to remote districts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All critical wear-and-tear parts are stocked at our Jaipur central warehouse and dispatched within 24 to 48 hours via express logistics across PAN India."
-        }
-      }
-    ]
+    "mainEntity": categoryFaqList.map(({ question, answer }) => ({
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": { "@type": "Answer", "text": answer },
+    })),
   };
 
   return (

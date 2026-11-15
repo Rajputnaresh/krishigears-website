@@ -15,7 +15,41 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
+    const blogCloneRedirects: { source: string; destination: string; permanent: boolean }[] = [];
+    for (let i = 42; i <= 60; i++) {
+      blogCloneRedirects.push({
+        source: `/blog/brush-cutter-harvesting-trouble-${i}-guide`,
+        destination: '/blog/brush-cutter-harvesting-trouble-maintenance-guide',
+        permanent: true,
+      });
+    }
+    for (let i = 61; i <= 80; i++) {
+      blogCloneRedirects.push({
+        source: `/blog/earth-auger-drilling-troubleshooting-${i}`,
+        destination: '/blog/earth-auger-drilling-troubleshooting-guide',
+        permanent: true,
+      });
+    }
+    for (let i = 81; i <= 100; i++) {
+      blogCloneRedirects.push({
+        source: `/blog/agri-machinery-dealer-operations-${i}-profitability`,
+        destination: '/blog/agri-machinery-dealership-operations-profitability-guide',
+        permanent: true,
+      });
+    }
+
     return [
+      ...blogCloneRedirects,
+      {
+        source: '/dealer/jammu-%26-kashmir',
+        destination: '/dealer/jammu-and-kashmir',
+        permanent: true,
+      },
+      {
+        source: '/dealer/jammu-&-kashmir',
+        destination: '/dealer/jammu-and-kashmir',
+        permanent: true,
+      },
       {
         source: '/seo/power-weeder-spare-parts-supplier-india',
         destination: '/power-weeder-spare-parts-in-india',

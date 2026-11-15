@@ -27,14 +27,25 @@ const SERVICE_OFFERINGS = [
 ];
 
 export default function SpareParts() {
-  const { slug } = useParams();
+  const params = useParams();
+  const rawSlug = params?.slug || "";
   
-  // URL format: power-weeder-spare-parts-in-{city_slug}
-  const citySlugMatch = slug?.match(/power-weeder-spare-parts-in-(.+)/);
-  const citySlug = citySlugMatch ? citySlugMatch[1] : slug;
+  // URL format: power-weeder-spare-parts-in-{city_slug} or {city_slug}
+  let extractedSlug = "";
+  if (rawSlug) {
+    if (rawSlug.includes("-in-")) {
+      extractedSlug = rawSlug.split("-in-").pop() || "";
+    } else {
+      extractedSlug = rawSlug
+        .replace(/^power-weeder-spare-parts-in-/, "")
+        .replace(/^power-weeder-spare-parts-/, "");
+    }
+  }
+  const citySlug = (extractedSlug || "").toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-  const geo = CITY_STATE_MAP[citySlug] || {};
-  const location = geo.city || slug?.split("-").slice(0, -2).join(" ") || "India";
+  const geo = (citySlug && CITY_STATE_MAP[citySlug]) || {};
+  const formattedCity = citySlug ? citySlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "India";
+  const location = geo.city || formattedCity;
   const state = geo.state || "";
   
   // Deterministic random selection to prevent duplicate content across 5700+ pages
@@ -51,7 +62,7 @@ export default function SpareParts() {
     "@type": "LocalBusiness",
     "name": `KrishiGears Spare Parts Supplier in ${location}`,
     "description": `Genuine power weeder spare parts, blade sets, engine parts, transmission components and accessories for ${location}. Direct supply to dealers, distributors and farmers.`,
-    "url": `https://krishigears.com/spare-parts/${slug}`,
+    "url": `https://krishigears.com/spare-parts/${rawSlug || citySlug}`,
     "telephone": "+91-60060-78815",
     "priceRange": "₹₹",
     "address": { "@type": "PostalAddress", "addressLocality": location, "addressCountry": "IN" },

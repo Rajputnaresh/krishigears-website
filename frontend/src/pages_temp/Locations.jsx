@@ -90,10 +90,10 @@ export default function Locations() {
             <MapPin className="w-3.5 h-3.5" /> All-India Agricultural Coverage
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white mb-4 tracking-tight">
-            Find Machinery & Dealers <span className="text-lime-500">Across 740 Districts</span>
+            Find Machinery & Dealers <span className="text-lime-500">Across 730 Districts</span>
           </h1>
           <p className="text-zinc-300 text-sm md:text-base leading-relaxed">
-            Search your district to check localized soil fitment, recommended implements, state DBT subsidy links, and wholesale delivery timelines across all 35 States & Union Territories.
+            Search your district to check localized soil fitment, recommended implements, state DBT subsidy links, and wholesale delivery timelines across all 28 States & 8 Union Territories (36 total).
           </p>
         </div>
 

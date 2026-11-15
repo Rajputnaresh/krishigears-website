@@ -194,7 +194,7 @@ export default function Home() {
             {/* Quick stats - High contrast sunlight ready */}
             <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl">
               {[
-                { v: "25%–35%", l: "Dealer Margin", sub: "vs 8%–12% Traditional" },
+                { v: "15%–25%", l: "Machine Margin", sub: "Up to 35% on Spares · MOQ 2" },
                 { v: "24 Hours", l: "Jaipur Spares SLA", sub: "Express Dispatch Hub" },
                 { v: "2 Units", l: "Zero Dead-Stock MOQ", sub: "On-Demand Factory Order" },
                 { v: "100%", l: "SMAM / DBT Ready", sub: "Tested & Certified" },
@@ -247,7 +247,7 @@ export default function Home() {
                   <Store className="h-6 w-6" />
                 </div>
                 <div className="text-xs font-bold uppercase tracking-widest text-lime-400">For Machinery Dealers</div>
-                <h3 className="text-xl font-bold text-white mt-1">25%–35% Direct Margins with Zero Dead-Stock</h3>
+                <h3 className="text-xl font-bold text-white mt-1">15%–25% Direct Machine Margins (Up to 35% on Spares) with Zero Dead-Stock</h3>
                 <p className="text-zinc-400 text-sm mt-3 leading-relaxed">
                   Break free from 8% legacy distributor quotas. Order in micro-batches from just 2 units on demand and protect your working capital.
                 </p>
@@ -797,7 +797,7 @@ function DistrictLocator() {
   const states = useMemo(() => {
     const s = new Set<string>();
     locationEntries.forEach(([_, data]) => {
-      if (data.state) s.add(data.state);
+      if (data.state && data.state !== "Pan-India") s.add(data.state);
     });
     return Array.from(s).sort();
   }, [locationEntries]);

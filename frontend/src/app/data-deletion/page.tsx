@@ -4,7 +4,7 @@ export const metadata: Metadata = { title: "Data Deletion Requests", description
 export default function DataDeletionPage() {
   return <article className="mx-auto max-w-3xl px-6 py-12 text-foreground">
     <h1 className="text-3xl font-bold">Request deletion of your information</h1>
-    <p className="mt-4 leading-relaxed">For information held by KRISHIGEARS INDIA PRIVATE LIMITED, email <a className="underline underline-offset-4" href="mailto:founder@krishigears.com?subject=Data%20deletion%20request">founder@krishigears.com</a> with the subject “Data deletion request”. This is a manually reviewed request, not an instant deletion button.</p>
+    <p className="mt-4 leading-relaxed">For information held by KRISHIGEARS INDIA PRIVATE LIMITED, email <a className="underline underline-offset-4" href="mailto:support@krishigears.com?subject=Data%20deletion%20request">support@krishigears.com</a> with the subject “Data deletion request”. This is a manually reviewed request, not an instant deletion button.</p>
     <ol className="mt-6 list-decimal space-y-4 pl-6 leading-relaxed">
       <li>Tell us which company channel you used, such as our website, storefront, Facebook, Instagram or WhatsApp.</li>
       <li>Include the email address or phone number you used and any available enquiry or order reference. Send the request from the same email address where possible.</li>

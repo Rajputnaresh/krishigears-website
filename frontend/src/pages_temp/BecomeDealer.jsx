@@ -56,11 +56,11 @@ export default function BecomeDealer() {
           <div className="kg-eyebrow">Dealer Application</div>
           <h1 className="kg-h1 mt-4 text-balance">Become a <span className="text-lime-500">KrishiGears</span> dealer.</h1>
           <p className="text-zinc-300 mt-6 leading-relaxed">
-            Join India's fastest-growing agricultural machinery dealer network. Enjoy industry-leading <strong className="text-lime-400 font-semibold">25%–35% direct margins</strong>, zero dead-stock risk with 2-unit MOQ, and a guaranteed 24h Jaipur spares dispatch SLA.
+            Join India's fastest-growing agricultural machinery dealer network. Enjoy industry-leading <strong className="text-lime-400 font-semibold">15%–25% machine margins (up to 35% on OEM spares)</strong>, zero dead-stock risk with 2-unit MOQ, and a guaranteed 24-48h Jaipur spares dispatch SLA.
           </p>
           <ul className="mt-8 space-y-3">
             {[
-              "Industry-leading 25%–35% direct dealer margins (vs 8%–12% industry standard)",
+              "Protected 15%–25% machine margins · up to 35% on genuine OEM spares",
               "Zero dead-stock working capital: Micro-batch ordering from just 2 units",
               "24–48h Jaipur dispatch guarantee on all critical spares & belts",
               "Free in-crate 'First-Aid Spares Kit' (filters, cables, belt) with every unit",
@@ -92,9 +92,9 @@ export default function BecomeDealer() {
 
             <div className="pt-3 border-t border-zinc-800">
               <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Audio Guide & Instant Consultation (हिंदी)</span>
-              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें, 25-35% मार्जिन और 24h स्पेयर पार्ट्स गारंटी — व्हाट्सएप पर ऑडियो गाइड व जानकारी पाएं:</p>
+              <p className="text-xs text-zinc-300 mt-1 mb-2">डीलरशिप कैसे लें, 15-25% मशीन मार्जिन (स्पेयर पार्ट्स पर 35% तक) और 24h स्पेयर पार्ट्स गारंटी — व्हाट्सएप पर ऑडियो गाइड व जानकारी पाएं:</p>
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे डीलरशिप नियम, 25-35% मार्जिन विवरण, 24h स्पेयर पार्ट्स गारंटी और ऑडियो गाइड WhatsApp पर भेजें।")}`}
+                href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("नमस्ते KrishiGears, मुझे डीलरशिप नियम, 15-25% मार्जिन विवरण, 24h स्पेयर पार्ट्स गारंटी और ऑडियो गाइड WhatsApp पर भेजें।")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-semibold transition"
@@ -159,7 +159,7 @@ export default function BecomeDealer() {
           <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
             <h3 className="font-display font-bold text-base text-lime-400">Q: डीलर मार्जिन और प्रॉफिट शेयरिंग कैसी रहती है?</h3>
             <p className="text-zinc-300 text-sm leading-relaxed">
-              KrishiGears डीलर्स को 25% से 35% तक का स्वस्थ ग्रॉस मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।
+              KrishiGears डीलर्स को मशीनों पर 15% से 25% तक का ग्रॉस मार्जिन और OEM स्पेयर पार्ट्स पर 35% तक का मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।
             </p>
           </div>
 

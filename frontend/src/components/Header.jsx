@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown, ChevronRight, Globe, Headphones, Sun } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, ChevronRight, Globe, Headphones, Sun, Moon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
@@ -111,20 +111,20 @@ export default function Header() {
             <span className="text-[10px]">↗</span>
           </a>
           <span className="text-zinc-700 hidden md:inline">|</span>
-          <span className="text-zinc-300 hidden md:inline">Model documentation on request</span>
+          <span className="text-zinc-300 hidden md:inline">Fast-Moving Spares: 24–48h Dispatch from Jaipur</span>
           <span className="text-zinc-700 hidden lg:inline">|</span>
-          <span className="text-zinc-400 hidden lg:inline">Supplier-confirmed dispatch</span>
+          <span className="text-zinc-400 hidden lg:inline">Commercial Machinery: OEM Assembly Depot Dispatch per Order</span>
         </div>
 
-        {/* Right Pinned: Language & Sunlight Controls */}
+        {/* Right Pinned: Language & Light/Dark Theme Controls */}
         <div className="flex items-center gap-2 shrink-0 z-10">
           <DropdownMenu>
             <DropdownMenuTrigger
-              aria-label="Language & Display Options"
-              className="px-3 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition cursor-pointer"
+              aria-label="Language Selector"
+              className="px-2.5 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition cursor-pointer"
             >
               <Globe className="h-3.5 w-3.5 text-lime-400" />
-              <span>{(i18n.language || "en").toUpperCase()}</span>
+              <span>{i18n.language === "hi" ? "हिं" : i18n.language === "mr" ? "म" : "EN"}</span>
               <ChevronDown className="h-2.5 w-2.5 text-zinc-500" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-zinc-950 border-zinc-800 text-zinc-200 w-40 shadow-2xl z-[60]">
@@ -137,28 +137,37 @@ export default function Header() {
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('hi')} className="cursor-pointer flex justify-between text-xs">
                 <span>हिंदी</span>
-                <span className="text-zinc-500">HI</span>
+                <span className="text-zinc-500">हिं</span>
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => switchLanguage('mr')} className="cursor-pointer flex justify-between text-xs">
                 <span>मराठी</span>
-                <span className="text-zinc-500">MR</span>
+                <span className="text-zinc-500">म</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Sunlight Mode Pill */}
+          {/* Theme Toggle: Light / Dark Mode Button */}
           <button
             onClick={toggleSunlight}
-            title={sunlight ? "Dark Mode ON" : "Outdoor Sunlight Mode (धूप मोड)"}
-            aria-label={sunlight ? "Switch to Normal Mode (सामान्य मोड)" : "Switch to Outdoor Sunlight High-Contrast Mode (धूप मोड)"}
-            className={`px-3 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
+            title={sunlight ? "Switch to Dark Mode (डार्क मोड)" : "Switch to Light / Sunlight Mode (धूप मोड)"}
+            aria-label={sunlight ? "Switch to Dark Mode" : "Switch to Light Mode"}
+            className={`px-2.5 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
               sunlight
-                ? "bg-amber-100 text-amber-950 border-amber-300"
+                ? "bg-amber-100 text-amber-950 border-amber-300 shadow-sm"
                 : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
             }`}
           >
-            <Sun className={`h-3.5 w-3.5 ${sunlight ? "text-amber-600" : "text-lime-400"}`} />
-            <span>{sunlight ? "धूप ON" : "धूप"}</span>
+            {sunlight ? (
+              <>
+                <Sun className="h-3.5 w-3.5 text-amber-600" />
+                <span className="text-xs font-bold text-amber-900">☀️ Light</span>
+              </>
+            ) : (
+              <>
+                <Moon className="h-3.5 w-3.5 text-zinc-400" />
+                <span className="text-xs font-bold text-zinc-400">🌙 Dark</span>
+              </>
+            )}
           </button>
         </div>
       </div>

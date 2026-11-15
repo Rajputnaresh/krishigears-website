@@ -9,7 +9,7 @@ import EnquiryDialog from "@/components/EnquiryDialog";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import PowerWeederGuide from "@/components/PowerWeederGuide";
-import { productSpecifications } from "@/lib/product-specifications.mjs";
+import { productSpecifications, CATEGORY_FAQS } from "@/lib/product-specifications.mjs";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function CategoryPage() {
@@ -112,10 +112,10 @@ export default function CategoryPage() {
                 {category.name} Wholesale Supply & Dealership in India
               </h2>
               <p className="text-zinc-300 leading-relaxed text-sm">
-                KrishiGears supplies commercial-grade <strong className="text-white">{category.name}</strong> engineered specifically for intensive Indian agricultural soils and multi-crop farming operations. Every machine and component in our catalog adheres to strict FMTTI / SRFMTTI testing guidelines, guaranteeing true rated brake horsepower, reinforced transmission gearboxes, and heavy-gauge forged steel tines.
+                KrishiGears supplies commercial-grade <strong className="text-white">{category.name}</strong> engineered specifically for intensive Indian agricultural soils and multi-crop farming operations. Every machine and component in our catalog adheres to strict commercial manufacturing guidelines, guaranteeing rated power output, reinforced housings, and precision metallurgy tailored for Indian operating conditions.
               </p>
               <p className="text-zinc-300 leading-relaxed text-sm">
-                Whether you are a machinery dealer looking for exclusive territorial rights, a regional distributor outfitting local service centers, or an FPO executing DBT / SMAM subsidy schemes, KrishiGears delivers transparent factory-gate pricing, zero dead-stock consignment policies, and guaranteed 24 to 48-hour parts dispatch from our central Jaipur logistics facility.
+                Whether you are a machinery dealer looking for exclusive territorial rights, a regional distributor outfitting local service centers, or an FPO executing procurement tenders, KrishiGears delivers transparent factory-gate pricing, zero dead-stock on-demand ordering, and guaranteed 24 to 48-hour parts dispatch from our central Jaipur logistics facility.
               </p>
             </div>
             <div className="lg:col-span-5 bg-zinc-900/60 border border-zinc-800 rounded-lg p-6 space-y-4">
@@ -126,78 +126,80 @@ export default function CategoryPage() {
               <ul className="space-y-2.5 text-xs text-zinc-300">
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>
-                  <span><strong>15% – 22% Protected Margin:</strong> Standardized wholesale pricing protects your local territory from undercutting.</span>
+                  <span><strong>15% – 25% Machine Margins:</strong> High dealer returns, with up to 35% margin on genuine OEM replacement spares.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>
-                  <span><strong>Subsidy Invoicing:</strong> Full GST invoices with matching engine/chassis serials for state DBT & SMAM portals.</span>
+                  <span><strong>Low Starter MOQ:</strong> Begin with as few as 2 units per order with zero dead-stock capital lockup.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>
-                  <span><strong>100% Genuine OEM Spares:</strong> Direct availability of carburetors, recoil starters, and tiller gears.</span>
+                  <span><strong>Full Tax Invoicing:</strong> 100% compliant GST invoices (HSN code verified) for input tax credit (ITC) and subsidies.</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* State-by-State Agriculture Subsidy Eligibility Table */}
-          <div className="border border-zinc-800 bg-zinc-950/60 rounded-xl p-6 md:p-8 space-y-4">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-              <div>
-                <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Government Subsidies</span>
-                <h3 className="text-xl font-display font-bold text-white mt-1">State Subsidy Guidelines for {category.name} (DBT / SMAM)</h3>
+          {/* State-by-State Agriculture Subsidy Eligibility Table - strictly for machinery categories eligible for farm subsidies */}
+          {["crop-reapers", "farm-machinery"].includes(slug) && (
+            <div className="border border-zinc-800 bg-zinc-950/60 rounded-xl p-6 md:p-8 space-y-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                <div>
+                  <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Government Subsidies</span>
+                  <h3 className="text-xl font-display font-bold text-white mt-1">State Subsidy Guidelines for {category.name} (DBT / SMAM)</h3>
+                </div>
+                <span className="text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded self-start md:self-auto">
+                  FMTTI Commercial Test Compliant
+                </span>
               </div>
-              <span className="text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded self-start md:self-auto">
-                FMTTI Commercial Test Compliant
-              </span>
+              <p className="text-xs text-zinc-300 leading-relaxed max-w-3xl">
+                KrishiGears agricultural power machinery qualifies for direct beneficiary subsidies under the Sub-Mission on Agricultural Mechanization (SMAM) and state agriculture portals. Authorized dealers are provided complete documentation to facilitate customer approvals:
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr className="border-b border-zinc-800 text-zinc-400 font-semibold bg-zinc-900/50">
+                      <th className="py-3 px-4">State / Portal</th>
+                      <th className="py-3 px-4">Scheme Name</th>
+                      <th className="py-3 px-4">Subsidy Percentage</th>
+                      <th className="py-3 px-4">Eligible Beneficiaries</th>
+                      <th className="py-3 px-4">Required Documents</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-zinc-850 text-zinc-300">
+                    <tr className="hover:bg-zinc-900/30">
+                      <td className="py-3 px-4 font-bold text-white">Rajasthan (Raj Kisan Sathi)</td>
+                      <td className="py-3 px-4">Krishi Yantra Anudan Yojana</td>
+                      <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% (Up to ₹25,000)</td>
+                      <td className="py-3 px-4">Small, marginal, SC/ST, women farmers</td>
+                      <td className="py-3 px-4">GST invoice, Jamabandi, Aadhaar/Jan Aadhaar</td>
+                    </tr>
+                    <tr className="hover:bg-zinc-900/30">
+                      <td className="py-3 px-4 font-bold text-white">Madhya Pradesh (e-Krishi Yantra)</td>
+                      <td className="py-3 px-4">SMAM / Rashtriya Krishi Vikas Yojana</td>
+                      <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% DBT Grant</td>
+                      <td className="py-3 px-4">All registered landholding farmers</td>
+                      <td className="py-3 px-4">FMTTI Test Certificate, B1 Khasra, Bank Passbook</td>
+                    </tr>
+                    <tr className="hover:bg-zinc-900/30">
+                      <td className="py-3 px-4 font-bold text-white">Maharashtra (MahaDBT)</td>
+                      <td className="py-3 px-4">Krishi Yantrikikaran Scheme</td>
+                      <td className="py-3 px-4 text-lime-400 font-semibold">Up to 50% (Fixed cap)</td>
+                      <td className="py-3 px-4">Individual farmers & FPOs</td>
+                      <td className="py-3 px-4">7/12 & 8A Extract, GST Bill, Caste Certificate</td>
+                    </tr>
+                    <tr className="hover:bg-zinc-900/30">
+                      <td className="py-3 px-4 font-bold text-white">Uttar Pradesh (UP Agriculture)</td>
+                      <td className="py-3 px-4">Yantra Anudan Scheme (E-Lottery)</td>
+                      <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% Token Grant</td>
+                      <td className="py-3 px-4">Pre-registered portal farmers</td>
+                      <td className="py-3 px-4">Dealer bill, serial verification, Bank DBT link</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <p className="text-xs text-zinc-300 leading-relaxed max-w-3xl">
-              KrishiGears agricultural power machinery qualifies for direct beneficiary subsidies under the Sub-Mission on Agricultural Mechanization (SMAM) and state agriculture portals. Authorized dealers are provided complete documentation to facilitate customer approvals:
-            </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
-                <thead>
-                  <tr className="border-b border-zinc-800 text-zinc-400 font-semibold bg-zinc-900/50">
-                    <th className="py-3 px-4">State / Portal</th>
-                    <th className="py-3 px-4">Scheme Name</th>
-                    <th className="py-3 px-4">Subsidy Percentage</th>
-                    <th className="py-3 px-4">Eligible Beneficiaries</th>
-                    <th className="py-3 px-4">Required Documents</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-zinc-850 text-zinc-300">
-                  <tr className="hover:bg-zinc-900/30">
-                    <td className="py-3 px-4 font-bold text-white">Rajasthan (Raj Kisan Sathi)</td>
-                    <td className="py-3 px-4">Krishi Yantra Anudan Yojana</td>
-                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% (Up to ₹25,000)</td>
-                    <td className="py-3 px-4">Small, marginal, SC/ST, women farmers</td>
-                    <td className="py-3 px-4">GST invoice, Jamabandi, Aadhaar/Jan Aadhaar</td>
-                  </tr>
-                  <tr className="hover:bg-zinc-900/30">
-                    <td className="py-3 px-4 font-bold text-white">Madhya Pradesh (e-Krishi Yantra)</td>
-                    <td className="py-3 px-4">SMAM / Rashtriya Krishi Vikas Yojana</td>
-                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% DBT Grant</td>
-                    <td className="py-3 px-4">All registered landholding farmers</td>
-                    <td className="py-3 px-4">FMTTI Test Certificate, B1 Khasra, Bank Passbook</td>
-                  </tr>
-                  <tr className="hover:bg-zinc-900/30">
-                    <td className="py-3 px-4 font-bold text-white">Maharashtra (MahaDBT)</td>
-                    <td className="py-3 px-4">Krishi Yantrikikaran Scheme</td>
-                    <td className="py-3 px-4 text-lime-400 font-semibold">Up to 50% (Fixed cap)</td>
-                    <td className="py-3 px-4">Individual farmers & FPOs</td>
-                    <td className="py-3 px-4">7/12 & 8A Extract, GST Bill, Caste Certificate</td>
-                  </tr>
-                  <tr className="hover:bg-zinc-900/30">
-                    <td className="py-3 px-4 font-bold text-white">Uttar Pradesh (UP Agriculture)</td>
-                    <td className="py-3 px-4">Yantra Anudan Scheme (E-Lottery)</td>
-                    <td className="py-3 px-4 text-lime-400 font-semibold">40% – 50% Token Grant</td>
-                    <td className="py-3 px-4">Pre-registered portal farmers</td>
-                    <td className="py-3 px-4">Dealer bill, serial verification, Bank DBT link</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          )}
 
           {/* Category FAQs */}
           <div className="bg-zinc-950 border border-zinc-800 rounded-xl p-6 md:p-8 space-y-6">
@@ -211,45 +213,17 @@ export default function CategoryPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="border border-zinc-850 bg-zinc-900/30 rounded-lg p-5 space-y-2">
-                <h4 className="font-bold text-sm text-white flex items-center gap-2">
-                  <span className="text-lime-400">Q:</span>
-                  What is the wholesale power weeder price in India?
-                </h4>
-                <p className="text-xs text-zinc-300 leading-relaxed">
-                  Wholesale dealer prices for commercial power weeders range between ₹18,000 to ₹38,000 depending on horsepower (7HP petrol vs 9HP/12HP diesel), gearbox configuration (gear-driven vs belt-driven), and included attachments (dryland vs wetland puddle tines). Contact our sales desk for bulk container and multi-unit tiered pricing.
-                </p>
-              </div>
-
-              <div className="border border-zinc-850 bg-zinc-900/30 rounded-lg p-5 space-y-2">
-                <h4 className="font-bold text-sm text-white flex items-center gap-2">
-                  <span className="text-lime-400">Q:</span>
-                  Are KrishiGears power weeders eligible for DBT agriculture subsidy?
-                </h4>
-                <p className="text-xs text-zinc-300 leading-relaxed">
-                  Yes. KrishiGears equipment meets FMTTI / SRFMTTI test compliance standards. Authorized dealers receive complete documentation — including commercial test report numbers, stamped engine certificates, and HSN-coded GST tax invoices — allowing registered farmers to claim 40% to 50% DBT / SMAM state subsidies.
-                </p>
-              </div>
-
-              <div className="border border-zinc-850 bg-zinc-900/30 rounded-lg p-5 space-y-2">
-                <h4 className="font-bold text-sm text-white flex items-center gap-2">
-                  <span className="text-lime-400">Q:</span>
-                  What is the minimum order quantity (MOQ) for dealers?
-                </h4>
-                <p className="text-xs text-zinc-300 leading-relaxed">
-                  Our introductory dealer MOQ starts from as few as 2 units per order. This allows rural machinery dealers and agri-retailers to evaluate local demand without locking up working capital in heavy inventory.
-                </p>
-              </div>
-
-              <div className="border border-zinc-850 bg-zinc-900/30 rounded-lg p-5 space-y-2">
-                <h4 className="font-bold text-sm text-white flex items-center gap-2">
-                  <span className="text-lime-400">Q:</span>
-                  How fast can spare parts be delivered to remote districts?
-                </h4>
-                <p className="text-xs text-zinc-300 leading-relaxed">
-                  All critical wear-and-tear parts (rotary blades, carburetors, clutch cables, worm gears, and piston rings) are stocked at our Jaipur central warehouse and dispatched within 24 to 48 hours via express logistics across PAN India.
-                </p>
-              </div>
+              {(CATEGORY_FAQS[slug] || CATEGORY_FAQS["power-weeders"] || []).map((faq, idx) => (
+                <div key={idx} className="border border-zinc-850 bg-zinc-900/30 rounded-lg p-5 space-y-2">
+                  <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                    <span className="text-lime-400">Q:</span>
+                    {faq.question}
+                  </h4>
+                  <p className="text-xs text-zinc-300 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>}

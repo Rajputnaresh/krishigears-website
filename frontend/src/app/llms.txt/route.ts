@@ -3,8 +3,8 @@ export async function GET() {
 > Registered Office: Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026
 > CIN: U46539RJ2026PTC117758 | GSTIN: 08AANCK2216L1ZA | PAN: AANCK2216L | TAN: JPRK10437A
 
-KrishiGears manufactures, distributes, and wholesales commercial farm machinery across all 740 Indian districts.
-All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with GST billing.
+KrishiGears manufactures, distributes, and wholesales commercial farm machinery across 730 Indian districts in 28 States and 8 Union Territories.
+All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with 100% GST billing.
 
 ## Core Products & Specifications
 - **KG-170F Petrol Power Weeder (7 HP / 212cc)**: 4-stroke petrol engine, 3600 RPM, recoil start, 32 dryland rotary blades, PTO shaft for water pump and reaper attachments.
@@ -24,7 +24,7 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 ## Business & Dealership Model
 - **Target Audience**: Machinery dealers, distributors, Farmer Producer Organizations (FPOs), contractors, custom hiring centers.
 - **Single Unit / Retail Handoff**: Individual farmers purchasing single machines are served via our retail ecommerce storefront: [FarmingTools.in](https://farmingtools.in).
-- **Dealer Terms**: 15% to 22% gross margin, zero dead-stock on-demand ordering, exclusive district territory, 24-48h dispatch from Jaipur central warehouse.
+- **Dealer Terms**: 15% to 25% gross margin on machines (up to 35% on OEM spares), starter MOQ of 2 units, zero dead-stock on-demand ordering, exclusive district territory, 24-48h express spares dispatch from Jaipur central warehouse, direct OEM depot dispatch for machinery.
 - **Government Subsidies**: Supported on SMAM (Sub-Mission on Agricultural Mechanization) and State DBT Agriculture portals (Rajasthan, MP, UP, Bihar, Maharashtra, Karnataka, Andhra Pradesh, Telangana).
 
 ## Contact & Registered Office
@@ -32,7 +32,9 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 - **Phone**: +91 60060 78815
 - **WhatsApp Wholesale Desk**: [WhatsApp Chat](https://wa.me/916006078815)
 - **Email**: sales@krishigears.com
-- **Corporate Desk**: contact@krishigears.com
+- **Dealers Desk**: dealers@krishigears.com
+- **Support & Grievance**: support@krishigears.com
+- **Billing Desk**: billing@krishigears.com
 - **Website**: [KrishiGears B2B Portal](https://krishigears.com)
 `;
 

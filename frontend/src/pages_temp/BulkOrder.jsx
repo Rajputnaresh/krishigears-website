@@ -56,7 +56,7 @@ export default function BulkOrder() {
         <div className="kg-eyebrow">Bulk Machinery & Wholesale Spare Parts</div>
         <h1 className="kg-h1 mt-4 text-balance">Wholesale Supply for <span className="text-lime-500">Dealers, Repair Workshops & Institutions.</span></h1>
         <p className="text-zinc-300 mt-6 leading-relaxed max-w-2xl">
-          Direct factory wholesale procurement of agricultural machinery (power weeders, tillers, brush cutters) and OEM spare parts (carburetors, recoil starters, Viton seals, rotary blades) for retailers, repair workshops, FPOs, and contractors with GST billing and PAN-India dispatch from Jaipur.
+          Direct factory wholesale procurement of agricultural machinery (power weeders, tillers, brush cutters) and OEM spare parts (carburetors, recoil starters, Viton seals, rotary blades) for retailers, repair workshops, FPOs, and contractors with 100% GST billing and PAN-India dispatch (fast-moving spares dispatch in 24–48h from Jaipur; machinery dispatches directly from OEM partner assembly depots).
         </p>
 
         <form onSubmit={submit} className="mt-12 border border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">
@@ -115,7 +115,7 @@ export default function BulkOrder() {
               <span className="text-lime-400 font-bold text-xs uppercase tracking-widest">Machinery Dealers</span>
               <h3 className="text-white font-bold text-lg">Direct Machinery Consignments</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                Batch orders starting at 2 to 5 power weeders or brush cutters with protected margins of 15% to 22%. Standard GST tax invoices with chassis serial matching for state DBT subsidies.
+                Starter batch orders from MOQ 2 units with protected margins of 15% to 25% on machines (up to 35% on OEM spares). Standard GST tax invoices with chassis serial matching for state DBT subsidies.
               </p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-950 space-y-3">
@@ -158,7 +158,7 @@ export default function BulkOrder() {
               <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
                 <h3 className="font-bold text-white text-sm">What are the delivery timelines across Indian states?</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed">
-                  Consignments are dispatched from our central Jaipur godown within 24 to 48 hours. Surface transit typically delivers to major transport godowns within 3 to 5 business days nationwide with live LR tracking.
+                  Fast-moving spares dispatch from our Jaipur hub within 24 to 48 hours. Commercial machinery dispatches directly from partner OEM assembly depots per confirmed order. Surface cargo typically delivers within 3 to 5 business days nationwide with live LR tracking.
                 </p>
               </div>
             </div>

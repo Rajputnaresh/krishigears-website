@@ -44,43 +44,24 @@ export function clampDescription(value: string, max = 160): string {
 export const metadata: Metadata = {
   metadataBase: new URL("https://krishigears.com"),
   title: {
-    default: "KrishiGears — B2B Farm Machinery & Spares: 25-35% Margins",
+    default: "KrishiGears — B2B Farm Machinery & Spares",
     template: "%s | KrishiGears",
   },
-  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers & FPOs across India. 25-35% margins, 24h spares dispatch & GST invoicing."),
+  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers & FPOs across India. 15%–25% machine margins, 24–48h spares dispatch & 100% GST invoicing."),
   alternates: {
     canonical: "https://krishigears.com",
     languages: {
       "x-default": "https://krishigears.com",
     },
   },
-  keywords: [
-    "KrishiGears",
-    "power weeder manufacturer",
-    "b2b agricultural machinery",
-    "power weeder spare parts wholesale",
-    "farm equipment dealership india",
-    "power tiller dealer jaipur",
-    "power weeder dealership kaise le",
-    "7 hp diesel weeder price wholesale",
-    "power weeder subsidy portal registration",
-    "diesel weeder price kya hai",
-    "krishi yantra dealership rajasthan",
-    "power weeder subsidy rajasthan 2026",
-    "power tiller wholesale market",
-    "back rotary weeder price maharashtra",
-    "honda engine weeder spare parts",
-    "पावर वीडर डीलरशिप",
-    "कृषि यंत्र सब्सिडी पोर्टल"
-  ],
   authors: [{ name: "KrishiGears Engineering Desk", url: "https://krishigears.com" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://krishigears.com",
     siteName: "KrishiGears",
-    title: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
-    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, contractors. 25-35% dealer margins, 24-hour express spares dispatch, GST invoicing, WhatsApp video support.",
+    title: "KrishiGears — B2B Farm Machinery & Genuine Spare Parts · PAN India",
+    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, and contractors. 15%–25% machine margins (up to 35% on spares), 24–48h express spares dispatch, GST invoicing.",
     images: [
       {
         url: "/logo512.png",
@@ -92,8 +73,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KrishiGears — B2B Farm Machinery: 25-35% Dealer Margins · 24-Hour Spares · PAN India",
-    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, contractors. 25-35% dealer margins, 24-hour spares dispatch, GST registered.",
+    title: "KrishiGears — B2B Farm Machinery & Genuine Spare Parts · PAN India",
+    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, and contractors. 15%–25% machine margins (up to 35% on spares), 24–48h spares dispatch, GST registered.",
     images: ["/logo512.png"],
   },
   icons: {

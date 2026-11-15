@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Locations.jsx";
 
 export const metadata: Metadata = {
-  title: "Agricultural Machinery District Directory (740 Districts)",
-  description: "Browse KrishiGears authorized dealership availability, localized soil type recommendations, and state DBT subsidy links across all 740 Indian districts.",
+  title: "Agricultural Machinery District Directory (730 Districts)",
+  description: "Browse KrishiGears authorized dealership availability, localized soil type recommendations, and state DBT subsidy links across all 730 Indian districts in 28 States and 8 Union Territories.",
   alternates: {
     canonical: "https://krishigears.com/locations",
   },
   openGraph: {
-    title: "All-India Farm Machinery District Directory (740 Hubs)",
-    description: "Search machinery specifications, compatible crops, and authorized service centers in your district.",
+    title: "All-India Farm Machinery District Directory (730 Hubs)",
+    description: "Search machinery specifications, compatible crops, and authorized service centers across all 730 districts.",
     url: "https://krishigears.com/locations",
     siteName: "KrishiGears",
     images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears All-India Machinery Directory" }],
@@ -22,8 +22,8 @@ const locationsJsonLd = {
     {
       "@type": "CollectionPage",
       "@id": "https://krishigears.com/locations#webpage",
-      "name": "All-India Farm Machinery District Directory (740 Hubs)",
-      "description": "Directory of KrishiGears power weeder supply hubs, dealer availability, and soil agronomy across 740 districts in India.",
+      "name": "All-India Farm Machinery District Directory (730 Hubs)",
+      "description": "Directory of KrishiGears power weeder supply hubs, dealer availability, and soil agronomy across 730 districts in India.",
       "url": "https://krishigears.com/locations"
     },
     {

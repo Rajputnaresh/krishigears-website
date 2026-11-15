@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions · KrishiGears",
+  title: "Terms and Conditions",
   description: "Terms and conditions governing orders, agricultural machinery supply, payments, and services by KRISHIGEARS INDIA PRIVATE LIMITED.",
   alternates: { canonical: "https://krishigears.com/terms-and-conditions" }
 };
@@ -31,7 +31,7 @@ export default function TermsAndConditionsPage() {
           <div><strong>CIN:</strong> U46539RJ2026PTC117758</div>
           <div><strong>GSTIN:</strong> 08AANCK2216L1ZA · PAN: AANCK2216L · TAN: JPRK10437A</div>
           <div><strong>Registered Office:</strong> Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026, India</div>
-          <div><strong>Corporate Emails:</strong> billing@krishigears.com / founder@krishigears.com / support@farmingtools.in</div>
+          <div><strong>Corporate Emails:</strong> billing@krishigears.com / support@krishigears.com / support@farmingtools.in</div>
           <div><strong>Customer Helpline:</strong> +91 60060 78815 (Mon–Sat, 9:30 AM – 6:30 PM IST)</div>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function TermsAndConditionsPage() {
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">3. Order Booking &amp; Payment Gateway Terms</h2>
         <p className="leading-relaxed text-zinc-300">
-          Machinery orders placed via KrishiGears or tele-sales operate on a standard token advance booking model (typically ₹2,500 advance deposit online) or proforma invoice, with remaining balance payable upon delivery at the destination transport hub or authorized dealer location. Retail orders on FarmingTools.in may be paid online in full or via booking token.
+          Commercial machinery orders placed via KrishiGears or tele-sales operate on a standard token advance booking model (₹2,500 machinery booking deposit online on KrishiGears) or formal proforma invoice, with remaining balance payable upon delivery at the destination transport hub or authorized dealer location. Direct farmer retail orders on FarmingTools.in require a ₹1,500 token advance or full prepaid payment.
         </p>
         <p className="leading-relaxed text-zinc-300">
           All online payments across both <strong>KrishiGears</strong> and <strong>FarmingTools.in</strong> (including UPI, NetBanking, Debit/Credit Cards, and Wallets) are processed securely through RBI-authorized payment aggregators, specifically <strong>Razorpay</strong>, under the verified corporate merchant account of <strong>KRISHIGEARS INDIA PRIVATE LIMITED</strong>.
@@ -105,18 +105,36 @@ export default function TermsAndConditionsPage() {
       <section className="mt-8 space-y-3">
         <h2 className="text-xl font-semibold">9. Governing Law &amp; Jurisdiction</h2>
         <p className="leading-relaxed text-zinc-300">
-          These Terms and Conditions and all purchase contracts shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or related to these terms shall be subject to the exclusive jurisdiction of the competent courts in <strong>Jaipur, Rajasthan, India</strong>.
+          These Terms and Conditions and all purchase contracts shall be governed by and construed in accordance with the laws of India. Any disputes, claims, or controversies arising out of or related to these terms, commercial invoices, or product supply shall be subject to the exclusive jurisdiction of the competent courts in <strong>Jaipur, Rajasthan, India</strong>.
         </p>
       </section>
 
       <section className="mt-8 space-y-3">
-        <h2 className="text-xl font-semibold">10. Contact Information</h2>
+        <h2 className="text-xl font-semibold">10. Statutory Grievance Redressal Mechanism</h2>
+        <p className="leading-relaxed text-zinc-300 text-sm">
+          In accordance with the Consumer Protection Act, 2019 and the Consumer Protection (E-Commerce) Rules, 2020, the contact details of the designated Grievance Officer are provided below:
+        </p>
+        <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-xs text-zinc-300 space-y-1.5 font-mono">
+          <div><strong>Grievance Officer:</strong> Naresh Singh Bhau</div>
+          <div><strong>Designation:</strong> Director &amp; Grievance Officer</div>
+          <div><strong>Company:</strong> KRISHIGEARS INDIA PRIVATE LIMITED</div>
+          <div><strong>Address:</strong> Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road, Jaipur, Rajasthan 302026, India</div>
+          <div><strong>Email:</strong> <a href="mailto:grievance@krishigears.com" className="text-lime-400 underline">grievance@krishigears.com</a> / <a href="mailto:support@krishigears.com" className="text-lime-400 underline">support@krishigears.com</a></div>
+          <div><strong>Phone:</strong> +91 60060 78815 (Mon–Sat, 10:00 AM – 5:00 PM IST)</div>
+          <div className="pt-2 text-zinc-400 font-sans text-xs">
+            <strong>Grievance Redressal SLA:</strong> The Grievance Officer shall acknowledge receipt of any consumer or dealer complaint within <strong>48 hours</strong> and resolve the complaint within <strong>30 days</strong> from the date of receipt.
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-8 space-y-3">
+        <h2 className="text-xl font-semibold">11. Contact Information</h2>
         <p className="leading-relaxed text-zinc-300">
-          For inquiries or legal notices regarding these Terms, please contact:
+          For inquiries or commercial notices regarding these Terms, please contact:
         </p>
         <p className="text-sm text-zinc-300">
           Compliance Desk, KRISHIGEARS INDIA PRIVATE LIMITED<br />
-          Email: <a href="mailto:billing@krishigears.com" className="underline text-lime-400">billing@krishigears.com</a> / <a href="mailto:founder@krishigears.com" className="underline text-lime-400">founder@krishigears.com</a><br />
+          Email: <a href="mailto:billing@krishigears.com" className="underline text-lime-400">billing@krishigears.com</a> / <a href="mailto:support@krishigears.com" className="underline text-lime-400">support@krishigears.com</a><br />
           Phone: +91 60060 78815 (Mon–Sat, 9:30 AM – 6:30 PM IST)
         </p>
       </section>

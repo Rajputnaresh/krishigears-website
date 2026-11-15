@@ -74,7 +74,7 @@ const DEALER_PROCESS = [
   { step: 1, title: "Apply Online", desc: "Fill the dealer application form with your location, investment capacity and current business profile. Takes 5 minutes." },
   { step: 2, title: "Screening Call (24h)", desc: "Our territory manager calls you within 24 hours to verify details and explain the opportunity in your district." },
   { step: 3, title: "Territory Visit (7d)", desc: "We schedule a face-to-face meeting at your proposed location, validate commercial viability and finalize terms." },
-  { step: 4, title: "MOU & First Order (14d)", desc: "Sign the dealership MOU, place your first order (typically ₹3-8 lakh), and we dispatch within 48 hours." },
+  { step: 4, title: "MOU & First Order (14d)", desc: "Sign the dealership MOU, place your first order (starter MOQ: 2 units or mixed-carton spares from ₹15,000), and we dispatch within 24–48 hours." },
   { step: 5, title: "Training & Launch (21d)", desc: "Complete 3-day service training. We support your shop launch with co-marketing and demo day at your location." },
   { step: 6, title: "Ongoing Business", desc: "Live inventory access, monthly review calls, dedicated territory manager, and quarterly performance bonuses." },
 ];
@@ -91,7 +91,14 @@ const DEALER_PROCESS = [
 export default function DealerState({ districts = [], stateName: propStateName, stateSlug: propStateSlug, tier: propTier, agronomy: propAgronomy } = {}) {
   const params = useParams();
   const routeState = params?.state;
-  const activeSlug = propStateSlug || routeState?.toLowerCase();
+  const decodedState = routeState ? decodeURIComponent(routeState) : "";
+  const normalizedSlug = (propStateSlug || decodedState)
+    .replace(/%26/g, "and")
+    .replace(/&/g, "and")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+  const activeSlug = normalizedSlug;
   const stateData = STATE_DATA[activeSlug] || { name: activeSlug?.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()), cities: [], tier: propTier || "Tier 2" };
   const stateName = propStateName || stateData.name;
   const agronomy = propAgronomy || getStateAgronomy(activeSlug || "rajasthan");
@@ -130,7 +137,7 @@ export default function DealerState({ districts = [], stateName: propStateName, 
           </h2>
           <p className="text-zinc-200 mt-6 max-w-2xl leading-relaxed text-lg">
             We're expanding our power weeder and spare parts distribution network across {stateName}. Partner with
-            India's fastest-growing B2B agri-machinery brand — 30-40% margins, exclusive district territory,
+            India's fastest-growing B2B agri-machinery brand — 15%–25% machine margins (up to 35% on OEM spares), starter MOQ of 2 units, exclusive district territory,
             full service training and co-marketing support included.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -222,7 +229,7 @@ export default function DealerState({ districts = [], stateName: propStateName, 
           <div className="kg-eyebrow">Logistics & Supply Chain</div>
           <h2 className="kg-h2 mt-3">Factory Dispatch & Transport Hubs serving {stateName}.</h2>
           <p className="text-zinc-300 text-sm mt-2 max-w-2xl">
-            All machinery and OEM spare parts orders are dispatched from our central Jaipur logistics facility (VKI Area / Transport Nagar) directly to major regional freight depots across {stateName}:
+            Fast-moving OEM spare parts dispatch within 24–48 hours from our central Jaipur facility. Commercial machinery dispatches directly from partner OEM assembly depots to regional transport hubs across {stateName}:
           </p>
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">

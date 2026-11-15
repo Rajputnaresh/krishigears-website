@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund and Return Policy · KrishiGears",
+  title: "Refund and Return Policy",
   description: "Official refund and return policy for agricultural machinery, token advances, and spare parts by KRISHIGEARS INDIA PRIVATE LIMITED.",
   alternates: { canonical: "https://krishigears.com/refund-policy" }
 };

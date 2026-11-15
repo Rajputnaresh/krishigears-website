@@ -4,9 +4,10 @@ import { clampDescription } from "@/app/layout";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const readable = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const title = `${readable} Troubleshooting & Service`;
-  const description = clampDescription(`Troubleshooting and repair enquiries for ${readable.toLowerCase()}. Supplier or partner routing, coverage, charges and timing require confirmation.`, 155);
+  const districtSlug = slug.includes("-in-") ? slug.split("-in-").pop()! : slug.replace(/^power-weeder-repair-service-in-/, "").replace(/^power-weeder-repair-service-/, "");
+  const districtName = districtSlug ? districtSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "India";
+  const title = `Power Weeder Repair & Service in ${districtName} | Troubleshooting & Support`;
+  const description = clampDescription(`Expert power weeder repair, troubleshooting guide and spare parts support for ${districtName}. Technical guidance for engine, clutch, and transmission maintenance.`, 155);
 
   return {
     title,
@@ -19,14 +20,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       url: `https://krishigears.com/service/${slug}`,
       siteName: "KrishiGears",
-      images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: readable }],
+      images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: districtName }],
     }
   };
 }
 
 export default async function ServiceProblemsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const readable = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const districtSlug = slug.includes("-in-") ? slug.split("-in-").pop()! : slug.replace(/^power-weeder-repair-service-in-/, "").replace(/^power-weeder-repair-service-/, "");
+  const districtName = districtSlug ? districtSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "India";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -47,7 +49,7 @@ export default async function ServiceProblemsPage({ params }: { params: Promise<
       {
         "@type": "ListItem",
         "position": 3,
-        "name": readable,
+        "name": `${districtName} Service`,
         "item": `https://krishigears.com/service/${slug}`
       }
     ]

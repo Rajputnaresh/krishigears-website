@@ -1,5 +1,5 @@
 "use client";
-import { productSpecifications, productCopyItems } from "@/lib/product-specifications.mjs";
+import { productSpecifications, productCopyItems, getProductGSTRate } from "@/lib/product-specifications.mjs";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -87,10 +87,53 @@ export default function ProductDetail() {
   const price = Number(product.price);
   const hasPrice = product.price !== null && product.price !== undefined && Number.isFinite(price) && price > 0;
   const features = productCopyItems(product.features).filter(feature => !isPowerWeeder || !/^(Easy for|Fuel efficient|Perfectly balanced|Precision-engineered)/i.test(feature));
-  const isMachine = ["power-weeders", "lawn-mowers", "brush-cutters", "crop-reapers", "farm-machinery"].includes(product.category);
-  const compatibleSpares = isMachine
-    ? PRODUCTS.filter((p) => p.category === "power-weeder-spare-parts").slice(0, 4)
-    : [];
+  
+  const isElectric = /electric|cordless|battery|20v/i.test(product.name) ||
+    /electric|cordless|battery/i.test(product.specs?.["Power Source"] || "") ||
+    /electric|cordless|battery/i.test(product.specs?.["Fuel Type"] || "") ||
+    /electric|cordless|battery/i.test(product.specs?.["Type"] || "");
+
+  const isDiesel = /diesel/i.test(product.name) ||
+    /diesel/i.test(product.specs?.["Fuel Type"] || "") ||
+    /diesel/i.test(product.specs?.["Engine Type"] || "");
+
+  let compatibleSpares = [];
+  if (product.category === "power-weeders") {
+    if (isDiesel) {
+      // Diesel power weeders: show blades, crankshaft, piston ring (NO recoil starter if self-start, NO petrol carburetors)
+      compatibleSpares = PRODUCTS.filter(p => ["kg-rotary-blades", "kg-crankshaft", "kg-piston-ring"].includes(p.slug));
+    } else {
+      // Petrol power weeders: show recoil starter, rotary blades, crankshaft, piston ring
+      compatibleSpares = PRODUCTS.filter(p => ["kg-recoil-starter", "kg-rotary-blades", "kg-crankshaft", "kg-piston-ring"].includes(p.slug));
+    }
+  } else if (product.category === "brush-cutters") {
+    if (isElectric) {
+      // Electric brush cutters: ONLY electric-compatible accessories (blades, trimmer heads, trimmer line).
+      // NEVER engine crankshafts, pistons, recoil starters, spark plug caps, or carburetors!
+      compatibleSpares = PRODUCTS.filter(p => [
+        "leo-34586968-6968", // 5 INCH 2 Tooth Brush Cutter Blade
+        "leo-34586974-6974", // 10 INCH HSS Brush Cutter Blades
+        "leo-303454205-4205", // Brush Cutter Trimmer Line
+        "leo-34586965-6965"  // Tap N GO Brush Cutter
+      ].includes(p.slug));
+    } else {
+      // Petrol brush cutters: carburetor, spark plug cap, 2T blade, tap-n-go head
+      compatibleSpares = PRODUCTS.filter(p => [
+        "leo-34586928-6928", // Carburetor For Brush Cutter Parts
+        "leo-34586948-6948", // Cast Iron Spark Plug Cap
+        "leo-34586968-6968", // 2 Tooth Blade
+        "leo-34586965-6965"  // Tap N GO
+      ].includes(p.slug));
+    }
+  } else if (product.category === "power-weeder-spare-parts") {
+    // Show related spares within the spare parts category
+    const isEnginePart = /crank|piston|recoil|carb|spark|plug|ign/i.test(product.name);
+    if (isEnginePart) {
+      compatibleSpares = PRODUCTS.filter(p => p.category === "power-weeder-spare-parts" && p.slug !== product.slug && /crank|piston|recoil|carb|spark/i.test(p.name)).slice(0, 4);
+    } else {
+      compatibleSpares = PRODUCTS.filter(p => p.category === "power-weeder-spare-parts" && p.slug !== product.slug).slice(0, 4);
+    }
+  }
   const ytVideoId = product.video ? getYouTubeId(product.video) : null;
   const uniqueImages = Array.from(new Set(product.images || []));
 
@@ -174,7 +217,7 @@ export default function ProductDetail() {
                       Direct B2C / Single Unit Price
                     </span>
                     <span className="text-[10px] font-bold bg-lime-500/20 text-lime-400 px-2 py-0.5 rounded border border-lime-500/40">
-                      Inclusive of {product.gst || 5}% GST
+                      Inclusive of {getProductGSTRate(product)}% GST
                     </span>
                     <span className="text-[10px] font-semibold bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded border border-zinc-700">
                       Freight confirmed in quotation
@@ -413,27 +456,33 @@ export default function ProductDetail() {
         <div className="mt-16 grid md:grid-cols-2 gap-6">
           <div className="kg-card p-7">
             <div className="kg-eyebrow">Applications</div>
-            {isPowerWeeder ? <p className="mt-4 text-zinc-300 text-sm">Share your crop, soil type, plot size and intended task. Ask the supplier to confirm model suitability and the required attachments before ordering.</p> : <ul className="mt-4 space-y-3">
-              {product.applications &&
+            <ul className="mt-4 space-y-3">
+              {product.applications && product.applications.length > 0 ? (
                 product.applications.map((a, i) => (
                   <li key={`app-${i}-${a.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-200 text-sm">
-                    <div className="h-1.5 w-1.5 bg-lime-500 mt-2" />
+                    <div className="h-1.5 w-1.5 bg-lime-500 mt-2 shrink-0" />
                     {a}
                   </li>
-                ))}
-            </ul>}
+                ))
+              ) : (
+                <li className="text-zinc-400 text-sm">Share your intended crop and field requirements to confirm model fitment.</li>
+              )}
+            </ul>
           </div>
           <div className="kg-card p-7">
             <div className="kg-eyebrow">Benefits</div>
-            {isPowerWeeder ? <p className="mt-4 text-zinc-300 text-sm">Request model-specific field-trial evidence and operating-cost estimates. Labour requirements, working coverage and weed-control results depend on the operator, attachments and field conditions.</p> : <ul className="mt-4 space-y-3">
-              {product.benefits &&
+            <ul className="mt-4 space-y-3">
+              {product.benefits && productCopyItems(product.benefits).length > 0 ? (
                 productCopyItems(product.benefits).map((b, i) => (
                   <li key={`ben-${i}-${b.slice(0, 30)}`} className="flex items-start gap-2 text-zinc-200 text-sm">
                     <Check className="h-4 w-4 text-lime-500 mt-0.5 shrink-0" />
                     {b}
                   </li>
-                ))}
-            </ul>}
+                ))
+              ) : (
+                <li className="text-zinc-400 text-sm">Request model-specific field trial evidence and fuel efficiency benchmarks.</li>
+              )}
+            </ul>
           </div>
         </div>
 
