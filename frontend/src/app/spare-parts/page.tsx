@@ -3,17 +3,17 @@ import Page from "@/pages_temp/SpareParts.jsx";
 import { clampDescription } from "@/app/layout";
 
 export const metadata: Metadata = {
-  title: "OEM Agricultural Machinery Spare Parts Wholesale Hub",
-  description: clampDescription("Direct factory wholesale supply of OEM power weeder, brush cutter, and earth auger spare parts across India. Carburetors, recoil starters, gearboxes, and blades with 24-48h dispatch.", 155),
+  title: "Agricultural Machinery Spare Parts & Fitment Support",
+  description: clampDescription("Enquire for power weeder, brush cutter, and earth auger spare parts across India. Model-matched carburetors, recoil starters, gearboxes, and blades procured per order.", 155),
   alternates: {
     canonical: "https://krishigears.com/spare-parts"
   },
   openGraph: {
-    title: "KrishiGears OEM Agricultural Machinery Spare Parts Wholesale Hub",
-    description: "Direct factory wholesale supply of OEM power weeder, brush cutter, and earth auger spare parts across India. Carburetors, recoil starters, gearboxes, and blades with 24-48h dispatch.",
+    title: "KrishiGears Agricultural Machinery Spare Parts & Fitment Support",
+    description: "Enquire for power weeder, brush cutter, and earth auger spare parts across India. Model-matched carburetors, recoil starters, gearboxes, and blades procured per order.",
     url: "https://krishigears.com/spare-parts",
     siteName: "KrishiGears",
-    images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears OEM Spare Parts" }],
+    images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears Spare Parts" }],
   }
 };
 

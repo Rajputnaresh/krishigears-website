@@ -18,12 +18,12 @@ const ALL_SPARE_CATEGORIES = [
 ];
 
 const SERVICE_OFFERINGS = [
-  "OEM guaranteed fitment for KrishiGears models",
-  "Next-day dispatch for critical breakdown parts",
-  "Wholesale pricing for local dealers & mechanics",
-  "Genuine KG- engine components",
-  "Field-tested high carbon rotary blades",
-  "Direct factory-to-farm supply chain",
+  "Fitment checked against your machine model plate and old part photos",
+  "Procured per order from verified suppliers — no held stock",
+  "Wholesale quotation for local dealers, mechanics & FPOs",
+  "Compatible 170F / 173F / 177F / 178F engine & transmission parts",
+  "High-carbon rotary blades matched to shaft size and soil type",
+  "Dispatch timing, availability and freight confirmed in your quote",
 ];
 
 export default function SpareParts() {
@@ -92,16 +92,16 @@ export default function SpareParts() {
             {vernacularHeadline}
           </h2>
           <p className="text-zinc-200 mt-6 max-w-2xl leading-relaxed text-lg">
-            Direct supply of genuine high-carbon blades, KG- engine components, gearboxes, and
-            maintenance kits for power weeders in {location}. We support local mechanics, dealers, and
-            farmers with guaranteed OEM fitment.
+            Enquire for high-carbon blades, engine components, gearboxes, and
+            maintenance kits for power weeders in {location}. Share your model plate and old part
+            photos so our parts desk can confirm supplier fitment, availability, price and dispatch timing.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/products/category/power-weeder-spare-parts"
               className="bg-lime-500 hover:bg-lime-400 text-black font-extrabold px-7 py-4 rounded-md inline-flex items-center gap-2 transition shadow-lg shadow-lime-500/20"
             >
-              Browse 70+ In-Stock Spares →
+              Browse Spare Parts Catalogue →
             </Link>
             <EnquiryDialog product={`Spare Parts Bulk Order in ${location}`} trigger={
               <button data-testid="parts-enquiry" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Submit RFQ / Bulk Order</button>
@@ -115,14 +115,14 @@ export default function SpareParts() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
-              <h2 className="kg-h2 mb-4">Available Inventory for {location}</h2>
+              <h2 className="kg-h2 mb-4">Spare Parts Sourcing for {location}</h2>
               <p className="text-zinc-300 mb-8 leading-relaxed">
-                We maintain a comprehensive catalog of wear-and-tear parts and core components.
-                If a specific part for your 7HP or 9HP weeder is not listed, our parts desk can source it using your machine's serial number.
+                KrishiGears holds no stock and procures spare parts per order.
+                Send your machine model plate, shaft dimensions and part photos so our desk can verify compatibility and confirm supplier availability.
               </p>
               <div className="p-6 bg-zinc-900 border border-zinc-800 rounded-md">
                 <h3 className="font-bold text-white mb-4 flex items-center gap-2">
-                  <Package className="h-5 w-5 text-lime-500" /> Supply Guarantees
+                  <Package className="h-5 w-5 text-lime-500" /> Fitment & Procurement Terms
                 </h3>
                 <ul className="space-y-3">
                   {SERVICE_OFFERINGS.map((offer, idx) => (

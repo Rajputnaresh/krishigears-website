@@ -6,7 +6,7 @@ import { PRODUCTS, CATEGORIES as ALL_CATEGORIES } from '@/data/catalog';
 const SITE_URL = 'https://krishigears.com';
 // Date when static content (products/categories/states/geo pages) last materially changed.
 // Bump this when editing catalog or geo templates instead of letting every build stamp 'today'.
-const SITE_CONTENT_UPDATED = new Date('2026-09-13');
+const SITE_CONTENT_UPDATED = new Date('2026-11-16');
 
 // Valid category slugs for programmatic geo-landing pages ([slug]-in-[location])
 const GEO_CATEGORIES = [
@@ -113,28 +113,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/privacy-policy`,
+      url: `${SITE_URL}/service`,
       lastModified: SITE_CONTENT_UPDATED,
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
     {
-      url: `${SITE_URL}/terms-and-conditions`,
+      url: `${SITE_URL}/service/power-weeder-repair-service-in-jaipur`,
       lastModified: SITE_CONTENT_UPDATED,
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
-      url: `${SITE_URL}/refund-policy`,
+      url: `${SITE_URL}/spare-parts`,
       lastModified: SITE_CONTENT_UPDATED,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${SITE_URL}/cancellation-policy`,
-      lastModified: SITE_CONTENT_UPDATED,
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
   ];
 

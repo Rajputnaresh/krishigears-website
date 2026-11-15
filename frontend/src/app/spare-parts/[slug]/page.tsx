@@ -4,8 +4,8 @@ import { clampDescription } from "@/app/layout";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const readable = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const title = `${readable} Spares & OEM Fitment`;
-  const description = clampDescription(`Direct factory wholesale supply of ${readable.toLowerCase()} and OEM machinery components. Get genuine replacement parts, carburetors, and gearboxes with 24-48h dispatch.`, 155);
+  const title = `${readable} Spares & Fitment Enquiry`;
+  const description = clampDescription(`Spare parts and fitment enquiries for ${readable.toLowerCase()}. Share model plate and part photos to confirm compatibility, availability, price and dispatch timing.`, 155);
 
   return {
     title,
