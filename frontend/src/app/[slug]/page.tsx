@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import locationsData from '@/data/locations.json';
 import { STATE_SUBSIDIES, CROP_GUIDES, DEFAULT_CROP_GUIDE, DEFAULT_SUBSIDY } from '@/data/enrichment';
 import { COMPANY, PRODUCTS, farmingtoolsCategoryUrl } from '@/data/catalog';
-import { clampTitle, clampDescription } from '@/app/layout';
+import { clampTitle, clampDescription } from '@/lib/seo-metadata';
 import Link from 'next/link';
 import { 
   Tractor, Wrench, Scissors, Drill, ShieldCheck, MapPin, 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Page from "@/pages_temp/SpareParts.jsx";
-import { clampDescription } from "@/app/layout";
+import { clampDescription } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = {
   title: "Agricultural Machinery Spare Parts & Fitment Support",

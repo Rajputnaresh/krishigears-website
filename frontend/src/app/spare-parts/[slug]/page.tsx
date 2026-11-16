@@ -1,5 +1,5 @@
 import Page from "@/pages_temp/SpareParts.jsx";
-import { clampDescription } from "@/app/layout";
+import { clampDescription } from "@/lib/seo-metadata";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

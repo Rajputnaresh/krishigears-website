@@ -3,7 +3,7 @@ import { GEO_SEO_PAGES } from "@/data/geoSeo";
 import { SEO_PAGES } from "@/data/catalog";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { clampTitle, clampDescription } from "@/app/layout";
+import { clampTitle, clampDescription } from "@/lib/seo-metadata";
 
 export const dynamicParams = true;
 

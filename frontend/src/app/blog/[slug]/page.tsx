@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS, BLOG_POSTS_ARRAY } from '@/data/blogPosts';
-import { clampTitle, clampDescription } from '@/app/layout';
+import { clampTitle, clampDescription } from '@/lib/seo-metadata';
 import BlogPostClient from '@/pages_temp/BlogPost.jsx';
 
 const BlogPostView = BlogPostClient as React.ComponentType<{ initialPost?: any }>;

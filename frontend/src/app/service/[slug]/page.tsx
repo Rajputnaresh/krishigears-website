@@ -1,6 +1,6 @@
 import Page from "@/pages_temp/ServiceProblems.jsx";
 import { REPAIR_FAQS } from "@/lib/service-support.mjs";
-import { clampDescription } from "@/app/layout";
+import { clampDescription } from "@/lib/seo-metadata";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
