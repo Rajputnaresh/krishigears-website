@@ -4,6 +4,7 @@ const path = require('path');
 const locs = require('./frontend/src/data/locations.json');
 const SITE_URL = 'https://krishigears.com';
 
+// Sole sitemap generator: npm prebuild and the legacy Python entrypoint use this file.
 const staticRoutes = [
   { path: '', prio: '1.0', freq: 'daily' },
   { path: '/about', prio: '0.8', freq: 'monthly' },
@@ -16,6 +17,8 @@ const staticRoutes = [
   { path: '/blog', prio: '0.8', freq: 'weekly' },
   { path: '/glossary', prio: '0.85', freq: 'weekly' },
   { path: '/contact', prio: '0.8', freq: 'monthly' },
+  { path: '/service', prio: '0.85', freq: 'weekly' },
+  { path: '/service/power-weeder-repair-service-in-jaipur', prio: '0.8', freq: 'weekly' },
   { path: '/spare-parts', prio: '0.95', freq: 'daily' },
   { path: '/seo/power-weeder-supplier-india', prio: '0.9', freq: 'weekly' },
   { path: '/power-weeder-spare-parts-in-india', prio: '0.9', freq: 'weekly' },

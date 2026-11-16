@@ -111,9 +111,9 @@ export default function Header() {
             <span className="text-[10px]">↗</span>
           </a>
           <span className="text-zinc-700 hidden md:inline">|</span>
-          <span className="text-zinc-300 hidden md:inline">Fast-Moving Spares: 24–48h Dispatch from Jaipur</span>
+          <span className="text-zinc-300 hidden md:inline">Spares: availability and dispatch timing confirmed per order</span>
           <span className="text-zinc-700 hidden lg:inline">|</span>
-          <span className="text-zinc-400 hidden lg:inline">Commercial Machinery: OEM Assembly Depot Dispatch per Order</span>
+          <span className="text-zinc-400 hidden lg:inline">Machinery: procured from suppliers per sale</span>
         </div>
 
         {/* Right Pinned: Language & Light/Dark Theme Controls */}

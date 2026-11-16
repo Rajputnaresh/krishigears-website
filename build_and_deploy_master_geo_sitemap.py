@@ -82,89 +82,11 @@ def generate_geo_seo_data():
     return geo_pages
 
 def build_sitemap(geo_pages):
-    print("Building master XML sitemap...")
-    
-    # 1. Core Static URLs
-    urls = [
-        {"loc": f"{SITE_URL}/", "priority": "1.0", "changefreq": "daily"},
-        {"loc": f"{SITE_URL}/about", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": f"{SITE_URL}/products", "priority": "0.9", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/dealer-network", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/become-a-dealer", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/bulk-order", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/contact", "priority": "0.7", "changefreq": "monthly"},
-        {"loc": f"{SITE_URL}/warranty-and-support", "priority": "0.7", "changefreq": "monthly"},
-        {"loc": f"{SITE_URL}/locations", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/glossary", "priority": "0.85", "changefreq": "weekly"},
-        {"loc": f"{SITE_URL}/blog", "priority": "0.9", "changefreq": "daily"}
-    ]
-    
-    # 2. Categories & Core National SEO
-    categories = ["power-weeders", "power-weeder-spare-parts"]
-    for c in categories:
-        urls.append({"loc": f"{SITE_URL}/products/category/{c}", "priority": "0.9", "changefreq": "weekly"})
-        urls.append({"loc": f"{SITE_URL}/seo/{c}-supplier-india", "priority": "0.9", "changefreq": "weekly"})
-        
-    # 3. State Dealer Hubs (35 States & UTs)
-    states = [
-        'andhra-pradesh', 'arunachal-pradesh', 'assam', 'bihar', 'chandigarh',
-        'chhattisgarh', 'dadra-and-nagar-haveli', 'daman-and-diu', 'delhi',
-        'goa', 'gujarat', 'haryana', 'himachal-pradesh', 'jammu-and-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'lakshadweep', 'madhya-pradesh',
-        'maharashtra', 'manipur', 'meghalaya', 'mizoram', 'nagaland', 'odisha',
-        'puducherry', 'punjab', 'rajasthan', 'sikkim', 'tamil-nadu', 'telangana',
-        'tripura', 'uttar-pradesh', 'uttarakhand', 'west-bengal'
-    ]
-    for st in states:
-        urls.append({"loc": f"{SITE_URL}/dealer/{st}", "priority": "0.8", "changefreq": "weekly"})
-        
-    # 4. Blog Posts
-    with open(BLOG_FILE, "r", encoding="utf-8") as f:
-        blog_text = f.read()
-    blog_slugs = re.findall(r"slug:\s*[\"\x27]([^\"]+)[\"\x27]", blog_text)
-    for bs in blog_slugs:
-        urls.append({"loc": f"{SITE_URL}/blog/{bs}", "priority": "0.8", "changefreq": "monthly"})
-    print(f"Added {len(blog_slugs)} blog post URLs.")
-    
-    # 5. Catalog Products
-    with open(CATALOG_FILE, "r", encoding="utf-8") as f:
-        cat_text = f.read()
-    prod_slugs = re.findall(r"slug:\s*[\"\x27]([^\"]+)[\"\x27]", cat_text)
-    for ps in prod_slugs:
-        if not ps.startswith("category"):
-            urls.append({"loc": f"{SITE_URL}/products/{ps}", "priority": "0.8", "changefreq": "weekly"})
-    print(f"Added {len(prod_slugs)} product URLs.")
-    
-    # 6. Programmatic Geo-SEO Landing Pages
-    for gp in geo_pages:
-        urls.append({
-            "loc": f"{SITE_URL}/seo/{gp['slug']}",
-            "priority": "0.7",
-            "changefreq": "weekly"
-        })
-        
-    print(f"Total URLs assembled in Master Sitemap: {len(urls)}")
-    
-    # Format XML
-    xml_lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    ]
-    for u in urls:
-        xml_lines.append(f'  <url><loc>{u["loc"]}</loc><lastmod>{TODAY}</lastmod><changefreq>{u["changefreq"]}</changefreq><priority>{u["priority"]}</priority></url>')
-    xml_lines.append('</urlset>')
-    
-    with open(SITEMAP_FILE, "w", encoding="utf-8") as f:
-        f.write("\n".join(xml_lines))
-        
-    # Also write to build/sitemap.xml if build directory exists
-    build_sitemap_path = os.path.join(BASE_DIR, "frontend/build/sitemap.xml")
-    if os.path.exists(os.path.dirname(build_sitemap_path)):
-        with open(build_sitemap_path, "w", encoding="utf-8") as f:
-            f.write("\n".join(xml_lines))
-            
-    print(f"[OK] Master sitemap saved to {SITEMAP_FILE}")
-    return len(urls)
+    """Delegate to the same owner used by frontend prebuild; do not fork URL policy."""
+    subprocess.run(["node", os.path.join(BASE_DIR, "generate_full_sitemap.js")], check=True)
+    import xml.etree.ElementTree as ET
+    return len(ET.parse(SITEMAP_FILE).getroot())
+
 
 def submit_to_gsc():
     print("Submitting sitemap to Google Search Console (sc-domain:krishigears.com)...")

@@ -40,6 +40,7 @@ const nextConfig: NextConfig = {
 
     return [
       ...blogCloneRedirects,
+      { source: '/dealers', destination: '/dealer-network', permanent: true },
       {
         source: '/dealer/jammu-%26-kashmir',
         destination: '/dealer/jammu-and-kashmir',

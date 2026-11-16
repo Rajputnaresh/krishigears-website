@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     default: "KrishiGears — B2B Farm Machinery & Spares",
     template: "%s | KrishiGears",
   },
-  description: clampDescription("Direct-factory B2B agricultural machinery and fitment-checked spare parts for dealers & FPOs across India. 15%–25% machine margins, 24–48h spares dispatch & 100% GST invoicing."),
+  description: clampDescription("B2B agricultural machinery and spare parts enquiries for dealers, FPOs and contractors across India. Procured per sale; availability and dispatch timing require confirmation."),
   alternates: {
     canonical: "https://krishigears.com",
     languages: {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: "https://krishigears.com",
     siteName: "KrishiGears",
     title: "KrishiGears — B2B Farm Machinery & Genuine Spare Parts · PAN India",
-    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, and contractors. 15%–25% machine margins (up to 35% on spares), 24–48h express spares dispatch, GST invoicing.",
+    description: "B2B agricultural machinery and spare parts enquiries for dealers, FPOs and contractors across India. Procured per sale; availability and dispatch timing require confirmation.",
     images: [
       {
         url: "/logo512.png",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "KrishiGears — B2B Farm Machinery & Genuine Spare Parts · PAN India",
-    description: "Direct-factory B2B agricultural machinery and genuine spare parts for dealers, FPOs, and contractors. 15%–25% machine margins (up to 35% on spares), 24–48h spares dispatch, GST registered.",
+    description: "B2B agricultural machinery and spare parts enquiries for dealers, FPOs and contractors across India. Procured per sale; availability and dispatch timing require confirmation.",
     images: ["/logo512.png"],
   },
   icons: {
@@ -124,10 +124,10 @@ const organizationJsonLd = {
     {
       "@type": "LocalBusiness",
       "@id": "https://krishigears.com/#localbusiness",
-      "name": "KRISHIGEARS INDIA PRIVATE LIMITED — Central Machinery & Spares Depot",
+      "name": "KRISHIGEARS INDIA PRIVATE LIMITED — Jaipur Registered Office",
       "image": "https://krishigears.com/logo512.png",
       "telephone": "+91-6006078815",
-      "priceRange": "₹₹",
+      "description": "Jaipur registered office. No walk-in workshop or stocked warehouse. KrishiGears holds no stock; machinery and parts are procured per sale. Confirm a repair destination with support before moving a machine.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Flat No.: T5-202, Mahima Shubh Nilay Apartments, Jaisinghpura, Ajmer Road",
@@ -140,12 +140,6 @@ const organizationJsonLd = {
         "@type": "GeoCoordinates",
         "latitude": 26.8538,
         "longitude": 75.7196
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "19:00"
       }
     }
   ]
