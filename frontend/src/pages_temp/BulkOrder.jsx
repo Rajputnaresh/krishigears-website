@@ -11,6 +11,7 @@ import {
 import { CATEGORIES } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
 import { trackBulkOrderSubmit } from "@/lib/analytics";
+import { BULK_ORDER_FAQS } from "@/lib/product-specifications.mjs";
 
 export default function BulkOrder() {
   const [loading, setLoading] = useState(false);
@@ -137,30 +138,12 @@ export default function BulkOrder() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 text-sm">
-              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
-                <h3 className="font-bold text-white text-sm">How can machinery repair shops get the spare parts wholesale price list?</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
-                  Submit this inquiry form, message our wholesale sales desk directly on WhatsApp at +91 60060 78815, or email <a href="mailto:sales@krishigears.com" className="text-lime-400 hover:underline">sales@krishigears.com</a>. We share the complete 2026 digital Excel/PDF catalog covering 170F/177F petrol and 173F/186F diesel components.
-                </p>
-              </div>
-              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
-                <h3 className="font-bold text-white text-sm">What payment terms and GST invoicing are provided?</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
-                  All consignments are billed with 100% compliant GST tax invoices (GSTIN: 08AANCK2216L1ZA) allowing instant Input Tax Credit (ITC) claiming. Payment can be processed via NEFT, RTGS, or confirmed trade credit for verified network dealers.
-                </p>
-              </div>
-              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
-                <h3 className="font-bold text-white text-sm">Are KrishiGears spares compatible with other machine brands?</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
-                  Yes, our spare parts follow standard universal dimensions and metallurgical tolerances, ensuring drop-in compatibility with Balwaan, Royal Kissan, Neptune, and standard Honda-clone power tillers and weeders.
-                </p>
-              </div>
-              <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
-                <h3 className="font-bold text-white text-sm">What are the delivery timelines across Indian states?</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">
-                  Fast-moving spares dispatch from our Jaipur hub within 24 to 48 hours. Commercial machinery dispatches directly from partner OEM assembly depots per confirmed order. Surface cargo typically delivers within 3 to 5 business days nationwide with live LR tracking.
-                </p>
-              </div>
+              {BULK_ORDER_FAQS.map((faq, idx) => (
+                <div key={idx} className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
+                  <h3 className="font-bold text-white text-sm">{faq.question}</h3>
+                  <p className="text-zinc-400 text-xs leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

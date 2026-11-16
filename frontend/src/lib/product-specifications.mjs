@@ -173,3 +173,69 @@ export const CATEGORY_FAQS = {
     }
   ]
 };
+
+export const WARRANTY_FAQS = [
+  {
+    question: "What warranty does KrishiGears offer on its products?",
+    answer: "All KrishiGears machines come with the manufacturer standard warranty — typically 6 to 12 months depending on the product category. Warranty covers manufacturing defects only; consumables, blades, belts, and normal wear-and-tear are excluded."
+  },
+  {
+    question: "How do I claim a warranty repair?",
+    answer: "Contact our technical support helpline or WhatsApp (+91 60060 78815) with your GST invoice and a short diagnostic video showing the issue. Our engineering team arranges spare parts dispatch or guides you to the nearest authorized technician."
+  },
+  {
+    question: "Do you ship genuine spare parts PAN India?",
+    answer: "Yes. 100% genuine OEM spare parts are dispatched from our Jaipur central depot within 24 to 48 hours via express surface cargo or Speed Post to every rural PIN code in India."
+  },
+  {
+    question: "Are KrishiGears products eligible for state DBT agriculture subsidies?",
+    answer: "Yes. Key machines are FMTTI / SRFMTTI approved and eligible for 40% to 50% DBT subsidies under SMAM and state agriculture department portals across Rajasthan, Maharashtra, MP, UP, Bihar, and Karnataka."
+  },
+  {
+    question: "Do you sell to FPOs, contractors and institutions?",
+    answer: "Yes. We serve Farmer Producer Organizations (FPOs), custom hiring centers (CHCs), contractors, and agri-input retail dealers with institutional wholesale pricing, formal quotations, and compliant GST invoices."
+  },
+  {
+    question: "What payment options are available for machinery and spares?",
+    answer: "UPI, NEFT/RTGS, bank transfer, and authorized dealer credit terms. We do not accept cash for orders above ₹2 lakh as per income tax norms."
+  }
+];
+
+export const DEALER_FAQS = [
+  {
+    question: "KrishiGears की Dealership लेने के लिए क्या योग्यता और न्यूनतम निवेश चाहिए?",
+    answer: "KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट नहीं है। आप केवल 2 मशीनों के न्यूनतम शुरुआती बैच (MOQ: 2 Units) से अपने जिले में डीलरशिप शुरू कर सकते हैं।"
+  },
+  {
+    question: "डीलर मार्जिन और प्रॉफिट शेयरिंग कैसी रहती है?",
+    answer: "KrishiGears डीलर्स को मशीनों पर 15% से 25% तक का ग्रॉस मार्जिन और OEM स्पेयर पार्ट्स पर 35% तक का मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।"
+  },
+  {
+    question: "क्या KrishiGears की मशीनें सरकारी सब्सिडी (SMAM / DBT Agriculture) में मान्य हैं?",
+    answer: "हाँ, KrishiGears के मॉडल्स FMTTI / SRFMTTI परीक्षण मानकों के अनुसार तैयार किए जाते हैं। हम डीलर को उचित GST इनवॉइस, चेसिस व इंजन नंबर सर्टिफिकेट, और टेस्ट रिपोर्ट दस्तावेज़ उपलब्ध कराते हैं जिससे किसान आसानी से राज्य सब्सिडी पोर्टल पर 40% से 50% अनुदान प्राप्त कर सकें।"
+  },
+  {
+    question: "स्पेयर पार्ट्स और आफ्टर-सेल्स सपोर्ट कैसे मिलता है?",
+    answer: "जयपुर सेंट्रल वेयरहाउस से 24 से 48 घंटे के भीतर क्रैंकशाफ्ट, पिस्टन रिंग, कार्ब्युरेटर, और गियरबॉक्स पार्ट्स ट्रांसपोर्ट या स्पीड पोस्ट द्वारा डिस्पैच किए जाते हैं। हमारे सर्विस इंजीनियर वीडियो कॉल और ऑन-फील्ड ट्रेनिंग के माध्यम से आपके मैकेनिक को पूरी तकनीकी सहायता देते हैं।"
+  }
+];
+
+export const BULK_ORDER_FAQS = [
+  {
+    question: "How can machinery repair shops get the spare parts wholesale price list?",
+    answer: "Submit this inquiry form, message our wholesale sales desk directly on WhatsApp at +91 60060 78815, or email sales@krishigears.com. We share the complete 2026 digital Excel/PDF catalog covering 170F/177F petrol and 173F/186F diesel components."
+  },
+  {
+    question: "What payment terms and GST invoicing are provided?",
+    answer: "All consignments are billed with 100% compliant GST tax invoices (GSTIN: 08AANCK2216L1ZA) allowing instant Input Tax Credit (ITC) claiming. Payment can be processed via NEFT, RTGS, or confirmed trade credit for verified network dealers."
+  },
+  {
+    question: "Are KrishiGears spares compatible with other machine brands?",
+    answer: "Yes, our spare parts follow standard universal dimensions and metallurgical tolerances, ensuring drop-in compatibility with Balwaan, Royal Kissan, Neptune, and standard Honda-clone power tillers and weeders."
+  },
+  {
+    question: "What are the delivery timelines across Indian states?",
+    answer: "Fast-moving spares dispatch from our Jaipur hub within 24 to 48 hours. Commercial machinery dispatches directly from partner OEM assembly depots per confirmed order. Surface cargo typically delivers within 3 to 5 business days nationwide with live LR tracking."
+  }
+];
+

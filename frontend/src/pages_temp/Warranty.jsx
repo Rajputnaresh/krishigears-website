@@ -10,15 +10,8 @@ import { Label } from "@/components/ui/label";
 import { COMPANY } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
 import { trackWarrantySubmit } from "@/lib/analytics";
+import { WARRANTY_FAQS } from "@/lib/product-specifications.mjs";
 
-const FAQS = [
-  { q: "What warranty does KrishiGears offer on its products?", a: "All KrishiGears machines come with the manufacturer's standard warranty — typically 6 to 12 months depending on the product category. Warranty covers manufacturing defects only; consumables, blades, belts and damages due to misuse are not covered." },
-  { q: "How do I claim a warranty repair?", a: "Call our support line or WhatsApp us with your invoice and a short video describing the issue. Our team will guide you to the nearest authorized service centre or arrange a pickup." },
-  { q: "Do you ship spare parts PAN India?", a: "Yes. Genuine spare parts are dispatched from our regional warehouses with 48-hour dispatch and 3-7 day delivery to any PIN code in India." },
-  { q: "Are KrishiGears products eligible for government subsidy?", a: "Several of our products are FMTTI-approved and eligible for state agriculture subsidies. Please share your state and product interest — our team will guide you on the documentation." },
-  { q: "Do you sell to FPOs and institutions?", a: "Yes — we serve Farmer Producer Organizations, agri input stores, contractors and government tender buyers with institutional pricing and GST invoicing. Use our Bulk Order form for a quotation." },
-  { q: "What payment options are available?", a: "UPI, NEFT/RTGS, bank transfer and authorized dealer credit terms. We do not accept cash for orders above ₹2 lakh as per income tax norms." },
-];
 
 export default function Warranty() {
   return (
@@ -67,13 +60,13 @@ export default function Warranty() {
           <div className="kg-eyebrow">FAQs</div>
           <h2 className="kg-h2 mt-3">Common <span className="text-lime-500">questions.</span></h2>
           <Accordion type="single" collapsible className="mt-8">
-            {FAQS.map((f, i) => (
-              <AccordionItem key={f.q} value={`f${i}`} className="border-zinc-800">
+            {WARRANTY_FAQS.map((f, i) => (
+              <AccordionItem key={f.question} value={`f${i}`} className="border-zinc-800">
                 <AccordionTrigger data-testid={`faq-trigger-${i}`} className="text-left text-base hover:text-lime-500 hover:no-underline">
-                  {f.q}
+                  {f.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300 leading-relaxed">
-                  {f.a}
+                  {f.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { apiClient, formatApiError } from "@/lib/api";
 import { trackDealerSubmit } from "@/lib/analytics";
+import { DEALER_FAQS } from "@/lib/product-specifications.mjs";
 import { FARMER_FIELD, COMPANY } from "@/data/catalog";
 
 export default function BecomeDealer() {
@@ -149,33 +150,14 @@ export default function BecomeDealer() {
         </div>
 
         <div className="mt-8 grid md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
-            <h3 className="font-display font-bold text-base text-lime-400">Q: KrishiGears की Dealership लेने के लिए क्या योग्यता और न्यूनतम निवेश चाहिए?</h3>
-            <p className="text-zinc-300 text-sm leading-relaxed">
-              KrishiGears डीलरशिप के लिए आपके पास वैध GST नंबर, कृषि उपकरण या खाद-बीज/ऑटो पार्ट्स की दुकान और स्थानीय किसानों/FPOs का नेटवर्क होना चाहिए। कोई भारी सिक्योरिटी डिपॉजिट नहीं है। आप केवल 2 मशीनों के न्यूनतम शुरुआती बैच (MOQ: 2 Units) से अपने जिले में डीलरशिप शुरू कर सकते हैं।
-            </p>
-          </div>
-
-          <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
-            <h3 className="font-display font-bold text-base text-lime-400">Q: डीलर मार्जिन और प्रॉफिट शेयरिंग कैसी रहती है?</h3>
-            <p className="text-zinc-300 text-sm leading-relaxed">
-              KrishiGears डीलर्स को मशीनों पर 15% से 25% तक का ग्रॉस मार्जिन और OEM स्पेयर पार्ट्स पर 35% तक का मार्जिन मिलता है। मशीनों के साथ-साथ OEM स्पेयर पार्ट्स और रोटरी ब्लेड अटैचमेंट्स पर साल भर लगातार हाई-मार्जिन रिटर्न रहता है।
-            </p>
-          </div>
-
-          <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
-            <h3 className="font-display font-bold text-base text-lime-400">Q: क्या KrishiGears की मशीनें सरकारी सब्सिडी (SMAM / DBT Agriculture) में मान्य हैं?</h3>
-            <p className="text-zinc-300 text-sm leading-relaxed">
-              हाँ, KrishiGears के मॉडल्स FMTTI / SRFMTTI परीक्षण मानकों के अनुसार तैयार किए जाते हैं। हम डीलर को उचित GST इनवॉइस, चेसिस व इंजन नंबर सर्टिफिकेट, और टेस्ट रिपोर्ट दस्तावेज़ उपलब्ध कराते हैं जिससे किसान आसानी से राज्य सब्सिडी पोर्टल पर 40% से 50% अनुदान प्राप्त कर सकें।
-            </p>
-          </div>
-
-          <div className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
-            <h3 className="font-display font-bold text-base text-lime-400">Q: स्पेयर पार्ट्स और आफ्टर-सेल्स सपोर्ट कैसे मिलता है?</h3>
-            <p className="text-zinc-300 text-sm leading-relaxed">
-              जयपुर सेंट्रल वेयरहाउस से 24 से 48 घंटे के भीतर क्रैंकशाफ्ट, पिस्टन रिंग, कार्ब्युरेटर, और गियरबॉक्स पार्ट्स ट्रांसपोर्ट या स्पीड पोस्ट द्वारा डिस्पैच किए जाते हैं। हमारे सर्विस इंजीनियर वीडियो कॉल और ऑन-फील्ड ट्रेनिंग के माध्यम से आपके मैकेनिक को पूरी तकनीकी सहायता देते हैं।
-            </p>
-          </div>
+          {DEALER_FAQS.map((faq, idx) => (
+            <div key={idx} className="p-6 rounded-lg border border-zinc-800 bg-surface-dark space-y-2">
+              <h3 className="font-display font-bold text-base text-lime-400">Q: {faq.question}</h3>
+              <p className="text-zinc-300 text-sm leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
