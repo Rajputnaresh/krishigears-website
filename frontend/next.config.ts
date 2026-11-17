@@ -41,6 +41,16 @@ const nextConfig: NextConfig = {
     return [
       ...blogCloneRedirects,
       { source: '/dealers', destination: '/dealer-network', permanent: true },
+      { source: '/dealer', destination: '/dealer-network', permanent: true },
+      { source: '/dealership', destination: '/become-a-dealer', permanent: true },
+      { source: '/distributor', destination: '/become-a-dealer', permanent: true },
+      { source: '/warranty', destination: '/warranty-and-support', permanent: true },
+      { source: '/support', destination: '/warranty-and-support', permanent: true },
+      { source: '/faq', destination: '/warranty-and-support', permanent: true },
+      { source: '/faqs', destination: '/warranty-and-support', permanent: true },
+      { source: '/parts', destination: '/spare-parts', permanent: true },
+      { source: '/spares', destination: '/spare-parts', permanent: true },
+      { source: '/repairs', destination: '/service', permanent: true },
       {
         source: '/dealer/jammu-%26-kashmir',
         destination: '/dealer/jammu-and-kashmir',
