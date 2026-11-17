@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit, Mukta } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
+import GoogleAnalyticsTracker from "@/components/GoogleAnalyticsTracker";
 import Providers from "./providers";
 import { clampDescription } from "@/lib/seo-metadata";
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-0DZCRCCCPR";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -144,9 +148,33 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script
+              id="google-analytics-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  window.gtag = gtag;
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    send_page_view: false
+                  });
+                `,
+              }}
+            />
+          </>
+        ) : null}
       </head>
       <body className="min-h-full flex flex-col pt-[86px] md:pt-[104px] bg-background text-foreground font-body">
         <Providers>
+          <GoogleAnalyticsTracker />
           <Header />
           <main className="flex-1">
             {children}

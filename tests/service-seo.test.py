@@ -41,7 +41,7 @@ class SEO(unittest.TestCase):
         self.assertEqual(before, p.read_bytes())
         spec = importlib.util.spec_from_file_location('legacy', ROOT/'build_and_deploy_master_geo_sitemap.py')
         module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
-        self.assertEqual(module.build_sitemap([]), 3052)
+        self.assertEqual(module.build_sitemap([]), 3030)
         self.assertEqual(before, p.read_bytes())
         self.assertFalse((ROOT/'frontend/src/app/sitemap.ts').exists())
         urls = [e.text for e in ET.fromstring(before).findall('s:url/s:loc', NS)]
@@ -49,6 +49,9 @@ class SEO(unittest.TestCase):
         for path in ['/service', '/service/power-weeder-repair-service-in-jaipur', '/dealer-network', '/spare-parts/168f-170f-gx35-fitment-guide']:
             self.assertEqual(urls.count('https://krishigears.com'+path), 1)
         self.assertNotIn('https://krishigears.com/dealers', urls)
+        for s in ['rajasthan', 'punjab', 'gujarat']:
+            self.assertNotIn('https://krishigears.com/become-a-dealer/' + s, urls)
+        self.assertNotIn('https://krishigears.com/blog/smam-portal-registration-guide-agricultural-machinery-subsidy', urls)
         with urllib.request.urlopen(BASE+'/sitemap.xml', timeout=60) as r:
             self.assertEqual(r.status, 200); self.assertEqual(r.read(), before)
 

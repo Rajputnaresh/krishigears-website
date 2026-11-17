@@ -80,7 +80,6 @@ categories.forEach(c => {
 
 states.forEach(s => {
   xml += `  <url><loc>${SITE_URL}/dealer/${s}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
-  xml += `  <url><loc>${SITE_URL}/become-a-dealer/${s}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
 });
 
 blogSlugs.forEach(b => {
@@ -107,4 +106,4 @@ xml += '</urlset>\n';
 
 const outPath = path.join(__dirname, 'frontend/public/sitemap.xml');
 fs.writeFileSync(outPath, xml);
-console.log(`Generated sitemap with ${staticRoutes.length + products.length + categories.length + states.length*2 + blogSlugs.length + geoCount} URLs to ${outPath}`);
+console.log(`Generated sitemap with ${staticRoutes.length + products.length + categories.length + states.length + blogSlugs.length + geoCount} URLs to ${outPath}`);
