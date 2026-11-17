@@ -2,17 +2,17 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/DealerNetwork.jsx";
 
 export const metadata: Metadata = {
-  title: "PAN-India Agricultural Machinery Dealer Network",
-  description: "Find authorized KrishiGears dealers and service stockists across Rajasthan, Maharashtra, Karnataka, Gujarat, MP, UP and Bihar.",
+  title: "Dealer Enquiries & Supply Availability",
+  description: "Enquire about machinery, parts and dealership. Procured per sale; confirm supplier availability, delivery coverage and dispatch timing for your PIN code.",
   alternates: {
     canonical: "https://krishigears.com/dealer-network",
   },
   openGraph: {
-    title: "Authorized KrishiGears Dealer & Service Network Across India",
-    description: "Locate certified KrishiGears machinery distributors and service partners in your state.",
+    title: "Dealer Enquiries & Supply Availability",
+    description: "KrishiGears holds no stock. Machinery and parts are procured per sale. Confirm availability, delivery coverage and dispatch timing before ordering.",
     url: "https://krishigears.com/dealer-network",
     siteName: "KrishiGears",
-    images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "Authorized KrishiGears Dealer Network" }],
+    images: [{ url: "/images/products/weeder.webp", width: 800, height: 600, alt: "KrishiGears dealer and supply enquiries" }],
   },
 };
 

@@ -21,41 +21,30 @@ export default function DealerNetwork() {
           <img src={INDIA_MAP} alt="" loading="lazy" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
-        <div className="max-w-[1400px] mx-auto relative grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto relative">
           <div>
-            <div className="kg-eyebrow">Pan India Network</div>
-            <h1 className="kg-h1 mt-4 text-balance">Wherever there is a farm, <span className="text-lime-500">there is KrishiGears.</span></h1>
+            <div className="kg-eyebrow">Dealer & Supply Enquiries</div>
+            <h1 className="kg-h1 mt-4 text-balance">Dealer enquiries & <span className="text-lime-500">supply availability.</span></h1>
             <p className="mt-6 text-zinc-300 text-lg max-w-xl leading-relaxed">
-              From Punjab fields to Tamil Nadu paddy lands — our dealer & supply network reaches every corner of India. Authorized dealers, priority dispatch and warranty service in 28+ states.
+              KrishiGears holds no stock. Machinery and parts are procured from suppliers per sale. Share your machine or part requirement and PIN code so we can confirm availability, delivery coverage and dispatch timing before you order.
             </p>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/become-a-dealer" data-testid="dn-become-dealer" className="bg-lime-500 hover:bg-lime-400 text-black dark:text-black font-bold px-7 py-4 rounded-md inline-flex items-center gap-2">
-                Join Network <ArrowRight className="h-4 w-4" />
+                Enquire About Dealership <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/contact" data-testid="dn-contact" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Find Local Dealer</Link>
+              <Link href="/contact" data-testid="dn-contact" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-7 py-4 font-bold rounded-md">Check Local Availability</Link>
             </div>
           </div>
-          <div className="hidden lg:grid grid-cols-2 gap-4">
-            {[
-              { v: "28+", l: "States Covered" },
-              { v: "500+", l: "Active Dealers" },
-              { v: "1000+", l: "Pin Codes Served" },
-              { v: "48h", l: "Fast Dispatch" },
-            ].map((s) => (
-              <div key={s.l} className="border border-lime-500/30 bg-black/70 backdrop-blur p-6">
-                <div className="font-display font-black text-4xl text-lime-500">{s.v}</div>
-                <div className="text-xs uppercase tracking-[0.2em] text-zinc-300 mt-2">{s.l}</div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 
       {/* Regions */}
       <section className="kg-section">
         <div className="max-w-[1400px] mx-auto">
-          <div className="kg-eyebrow">Regional Coverage</div>
-          <h2 className="kg-h2 mt-3">We supply <span className="text-lime-500">across India.</span></h2>
+          <div className="kg-eyebrow">Enquire by Region</div>
+          <h2 className="kg-h2 mt-3">Check supply options <span className="text-lime-500">for your location.</span></h2>
+          <p className="mt-4 text-zinc-300 max-w-3xl leading-relaxed">These state links are enquiry routes, not a verified dealer directory. A listed state does not confirm a local dealer, stock, delivery or service availability. Contact us with your PIN code to check.</p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {REGIONS.map((r) => (
               <div key={r.name} className="kg-card p-7">
@@ -81,17 +70,17 @@ export default function DealerNetwork() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Enquiry checks */}
       <section className="kg-section bg-surface-darker border-y border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
-          <div className="kg-eyebrow">Network Promise</div>
-          <h2 className="kg-h2 mt-3 max-w-3xl">What our PAN India network <span className="text-lime-500">guarantees.</span></h2>
+          <div className="kg-eyebrow">Before You Order</div>
+          <h2 className="kg-h2 mt-3 max-w-3xl">What to <span className="text-lime-500">confirm with us.</span></h2>
           <div className="mt-12 grid md:grid-cols-4 gap-5">
             {[
-              { i: Truck, t: "Fast Dispatch", d: "48-hour dispatch from regional warehouses, door-step delivery PAN India." },
-              { i: ShieldCheck, t: "Authorized Service", d: "Genuine warranty support through our authorized service network." },
-              { i: Headphones, t: "Local Support", d: "Regional sales team that speaks your language and understands local farming." },
-              { i: MapPin, t: "Last-mile Reach", d: "We serve over 1000+ pin codes including remote rural districts." },
+              { i: Truck, t: "Procurement & Dispatch", d: "We hold no stock and procure per sale. Confirm supplier availability, freight and dispatch timing before ordering." },
+              { i: ShieldCheck, t: "Warranty & Service", d: "Ask for the warranty terms for your model and confirm a service destination before moving a machine." },
+              { i: Headphones, t: "Requirement Details", d: "Share the machine model, part photos or specifications and your PIN code so we can review your enquiry." },
+              { i: MapPin, t: "Location Confirmation", d: "Delivery coverage and any dealer or service referral require confirmation for your location and requirement." },
             ].map((b) => {
               const I = b.i;
               return (
