@@ -79,7 +79,7 @@ export async function generateMetadata({
     openGraph: {
       title: `Farm Machinery Dealership in ${stateName}`,
       description: clampDescription(
-        `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins, ${agronomy.soil} fitment, and 48-hour parts dispatch.`,
+        `Exclusive territory dealership opportunity for agricultural machinery in ${stateName}. High dealer margins, ${agronomy.soil} fitment, and order-per-sale spares procurement support.`,
         155
       ),
       url: `https://krishigears.com/dealer/${stateSlug}`,

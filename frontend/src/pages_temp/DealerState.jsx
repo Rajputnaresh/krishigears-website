@@ -338,18 +338,30 @@ export default function DealerState({ districts = [], stateName: propStateName, 
                     )}
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-xs font-medium">
+                  <div className="mt-4 pt-3 border-t border-zinc-800/80 grid grid-cols-2 gap-1.5 text-[11px] font-medium">
                     <Link
                       href={`/power-weeders-in-${d.slug}`}
-                      className="text-lime-400 hover:text-lime-300 transition flex items-center gap-1"
+                      className="text-lime-400 hover:text-lime-300 transition truncate"
                     >
-                      Power Weeders &rarr;
+                      Weeders &rarr;
                     </Link>
                     <Link
                       href={`/power-weeder-spare-parts-in-${d.slug}`}
-                      className="text-zinc-400 hover:text-white transition flex items-center gap-1"
+                      className="text-zinc-400 hover:text-white transition truncate"
                     >
-                      <Wrench className="h-3 w-3" /> Spares
+                      Spares &rarr;
+                    </Link>
+                    <Link
+                      href={`/brush-cutters-in-${d.slug}`}
+                      className="text-zinc-400 hover:text-lime-400 transition truncate"
+                    >
+                      Brush Cutters &rarr;
+                    </Link>
+                    <Link
+                      href={`/earth-augers-in-${d.slug}`}
+                      className="text-zinc-400 hover:text-lime-400 transition truncate"
+                    >
+                      Earth Augers &rarr;
                     </Link>
                   </div>
                 </div>

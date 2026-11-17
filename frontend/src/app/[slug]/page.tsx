@@ -219,13 +219,19 @@ export default async function LocationCategoryPage({ params }: { params: Promise
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'WholesaleStore',
-        '@id': `https://krishigears.com/${slug}#store`,
-        name: `KrishiGears ${category.name} - ${locationName}`,
+        '@type': 'Service',
+        '@id': `https://krishigears.com/${slug}#service`,
+        name: `KrishiGears ${category.name} Supply - ${locationName}`,
+        serviceType: 'Agricultural Machinery Wholesale Supply',
         description: isIndia
-          ? `Authorized wholesale supplier of ${category.name} across India.`
-          : `Authorized wholesale supplier of ${category.name} in ${locationName}, ${data.state}.`,
+          ? `B2B supply and dealership coordination of ${category.name} across India.`
+          : `B2B supply and dealership coordination of ${category.name} in ${locationName}, ${data.state}.`,
         url: `https://krishigears.com/${slug}`,
+        provider: {
+          '@type': 'Organization',
+          '@id': 'https://krishigears.com/#organization',
+          name: 'KrishiGears'
+        },
         areaServed: isIndia ? {
           '@type': 'Country',
           name: 'India'
@@ -236,10 +242,6 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             '@type': 'State',
             name: data.state
           }
-        },
-        brand: {
-          '@type': 'Brand',
-          name: 'KrishiGears'
         }
       },
       {
@@ -262,7 +264,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             '@type': 'ListItem',
             position: 3,
             name: isIndia ? 'Pan-India' : data.state,
-            item: isIndia ? 'https://krishigears.com/dealer-network' : `https://krishigears.com/locations`
+            item: isIndia ? 'https://krishigears.com/dealer-network' : `https://krishigears.com/dealer/${data.state ? toLocationSlug(data.state) : "rajasthan"}`
           },
           {
             '@type': 'ListItem',
@@ -281,7 +283,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             name: `Where can I buy original KrishiGears machinery and spare parts in ${locationName}?`,
             acceptedAnswer: {
               '@type': 'Answer',
-              text: `Genuine equipment and fitment-checked spares are supplied through authorized machinery dealers and service counters in ${locationName}. Bulk commercial shipments are dispatched directly from central Jaipur logistics with GST e-way bills.`
+              text: `Genuine equipment and fitment-checked spares are supplied for enquiries in ${locationName}. KrishiGears holds no stock; equipment is procured per sale from verified OEM suppliers and dispatched directly with GST e-way bills.`
             }
           },
           {
@@ -289,7 +291,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             name: `What is the dispatch delivery timeframe for ${locationName}?`,
             acceptedAnswer: {
               '@type': 'Answer',
-              text: `Orders are processed within 24 hours. Express surface transport typically arrives at major transport godowns in ${locationName} within 48 to 72 hours, accompanied by transit insurance.`
+              text: `KrishiGears coordinates dispatch per confirmed sale. Availability and transit schedules require confirmation prior to order placement; delivery timeframes depend on destination freight transport transit.`
             }
           },
           {
@@ -653,7 +655,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
               {isSpareParts ? (
                 <>Are you a farm machinery mechanic, service center, or retail spare parts shop in {locationName}? Get direct factory pricing, mixed-carton minimum orders starting from ₹15,000, and verified supplier dispatch coordination with 100% GST input tax credit.</>
               ) : (
-                <>We are actively appointing exclusive machinery dealers, spare parts retailers, and service stockists in {locationName} and surrounding tehsils. Benefit from wholesale pricing, protected territory margins, and 24-hour spare parts dispatch.</>
+                <>We are actively appointing machinery dealers, spare parts retailers, and service stockists in {locationName} and surrounding tehsils. Benefit from wholesale pricing, protected territory margins, and order-per-sale spare parts procurement support.</>
               )}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -687,7 +689,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
                 <span className="text-lime-400 font-mono text-lg">+</span>
               </summary>
               <p className="text-zinc-400 text-xs sm:text-sm mt-3 pt-3 border-t border-zinc-800/80 leading-relaxed">
-                Genuine equipment and fitment-checked spares are supplied through authorized machinery dealers and service counters in {locationName}. Bulk commercial shipments are dispatched directly from central Jaipur logistics with GST e-way bills.
+                Genuine equipment and fitment-checked spares are supplied for commercial enquiries in {locationName}. KrishiGears holds no stock; machinery and parts are procured per sale from verified OEM suppliers and dispatched directly with GST e-way bills.
               </p>
             </details>
 
@@ -697,7 +699,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
                 <span className="text-lime-400 font-mono text-lg">+</span>
               </summary>
               <p className="text-zinc-400 text-xs sm:text-sm mt-3 pt-3 border-t border-zinc-800/80 leading-relaxed">
-                Orders are processed within 24 hours. Express surface transport typically arrives at major transport godowns in {locationName} within 48 to 72 hours, accompanied by transit insurance.
+                KrishiGears coordinates dispatch per confirmed sale. Availability and transit schedules require confirmation prior to order placement; delivery timeframes depend on destination freight transport transit.
               </p>
             </details>
 
@@ -710,6 +712,46 @@ export default async function LocationCategoryPage({ params }: { params: Promise
                 Yes. Eligible farmers can apply through {subsidyData.portalName}. Our dealer network provides official test compliance certificates and commercial quotations for subsidy approval.
               </p>
             </details>
+          </div>
+        </section>
+
+        {/* Cross-Category Sibling Silo Linking */}
+        <section className="bg-zinc-950 border border-zinc-800 p-8 rounded-2xl shadow-xl">
+          <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-800 flex-wrap gap-2">
+            <h3 className="font-display font-bold text-lg text-white">
+              All Equipment Categories in {locationName}
+            </h3>
+            {!isIndia && data.state && (
+              <Link 
+                href={`/dealer/${toLocationSlug(data.state)}`} 
+                className="text-xs text-lime-400 hover:underline"
+              >
+                View {data.state} State Hub →
+              </Link>
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {Object.entries(CATEGORIES).map(([catKey, catVal]) => {
+              const isCurrent = catKey === categorySlug;
+              const Icon = catVal.icon;
+              return (
+                <Link
+                  key={catKey}
+                  href={`/${catKey}-in-${locationSlug}`}
+                  className={`p-4 rounded-xl border flex items-center justify-between transition-all ${
+                    isCurrent
+                      ? 'bg-lime-500/10 border-lime-500/60 text-lime-400 font-bold'
+                      : 'bg-zinc-900/50 hover:bg-zinc-900 border-zinc-800/80 hover:border-lime-500/40 text-zinc-300 hover:text-white'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon className={`h-5 w-5 shrink-0 ${isCurrent ? 'text-lime-400' : 'text-zinc-500'}`} />
+                    <span className="text-xs sm:text-sm font-medium">{catVal.name}</span>
+                  </div>
+                  <span className="text-xs text-zinc-500">→</span>
+                </Link>
+              );
+            })}
           </div>
         </section>
 
