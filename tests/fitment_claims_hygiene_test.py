@@ -24,8 +24,20 @@ class TestFitmentGuideAndClaimsHygiene(unittest.TestCase):
 
         # Canonical & Title
         self.assertIn("https://krishigears.com/spare-parts/168f-170f-gx35-fitment-guide", content)
-        self.assertIn("168F, 170F & GX35 Engine Spares Fitment Guide", content)
+        self.assertIn('title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026)"', content)
+        self.assertNotIn('title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026) | KrishiGears"', content)
         self.assertIn("168F, 170F and GX35 Engine Spares and Fitment Authority Guide", content)
+
+        # Rendered document.title single suffix verification
+        html_path = os.path.join(ROOT, "frontend/.next/server/app/spare-parts/168f-170f-gx35-fitment-guide.html")
+        if os.path.exists(html_path):
+            with open(html_path, "r", encoding="utf-8") as f:
+                html = f.read()
+            m = re.search(r"<title>(.*?)</title>", html)
+            if m:
+                rendered_title = m.group(1)
+                self.assertEqual(rendered_title.count("| KrishiGears"), 1, f"Rendered title must contain exactly one \x27| KrishiGears\x27, got: {rendered_title}")
+                self.assertNotIn("| KrishiGears | KrishiGears", rendered_title)
 
         # Internal Links
         for href in ["/spare-parts", "/products/category/power-weeder-spare-parts", "/service", "/contact", "/dealer-network"]:

@@ -14,6 +14,21 @@ test('static spares fitment route exports valid canonical, title, h1 and breadcr
 
   assert(content.includes('https://krishigears.com/spare-parts/168f-170f-gx35-fitment-guide'), 'Canonical URL missing');
   assert(content.includes('168F, 170F & GX35 Engine Spares Fitment Guide'), 'Meta title missing');
+  assert(!content.includes('title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026) | KrishiGears"'), 'Meta title must not duplicate brand suffix');
+  assert(content.includes('title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026)"'), 'Meta title base without suffix missing');
+
+  // Rendered document.title single suffix verification
+  const htmlPath = path.join(ROOT, "frontend/.next/server/app/spare-parts/168f-170f-gx35-fitment-guide.html");
+  if (fs.existsSync(htmlPath)) {
+    const html = fs.readFileSync(htmlPath, "utf-8");
+    const m = html.match(/<title>(.*?)<\/title>/);
+    if (m) {
+      const renderedTitle = m[1];
+      const count = (renderedTitle.match(/\| KrishiGears/g) || []).length;
+      assert.equal(count, 1, `Rendered title must contain exactly one \x27| KrishiGears\x27, got: ${renderedTitle}`);
+      assert(!renderedTitle.includes("| KrishiGears | KrishiGears"), "Rendered title has duplicate brand suffix");
+    }
+  }
   assert(content.includes('168F, 170F and GX35 Engine Spares and Fitment Authority Guide'), 'H1 title missing');
 
   // Internal Links

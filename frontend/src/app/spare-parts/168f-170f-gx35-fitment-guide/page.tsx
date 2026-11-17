@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026) | KrishiGears",
+  title: "168F, 170F & GX35 Engine Spares Fitment Guide (2026)",
   description: "Engineering guide to 168F, 170F and GX35 agricultural engine spares. Cross-compatibility rules, carburetor differences, 28mm 9T shaft fitment, and diagnostic triage across 359 demand queries.",
   alternates: {
     canonical: "https://krishigears.com/spare-parts/168f-170f-gx35-fitment-guide"
