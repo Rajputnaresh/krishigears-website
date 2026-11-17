@@ -7,14 +7,14 @@ KrishiGears manufactures, distributes, and wholesales commercial farm machinery 
 All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch with 100% GST billing.
 
 ## Core Products & Specifications
-- **KG-170F Petrol Power Weeder (7 HP / 212cc)**: 4-stroke petrol engine, 3600 RPM, recoil start, 32 dryland rotary blades, PTO shaft for water pump and reaper attachments.
-- **KG-173F Diesel Power Weeder (5.5 HP)**: 4-stroke direct injection diesel engine, high low-RPM torque for deep clay plowing.
-- **KG-177F WOLF Petrol Weeder (9 HP / 270cc)**: Direct-drive gear transmission, replacement for mini-tractors in sugarcane and orchards.
-- **KG-ICP-P170-LDE Electric Start Weeder (7 HP)**: Key ignition self-start with backup recoil, dual LED headlights.
-- **KG-ICP-UP170-SH Back-Rotary Weeder (7 HP)**: Active counter-rotating rear tines reducing operator fatigue by 50%.
-- **KG-ICD-UP186-SH Heavy Diesel Weeder (10 HP)**: Dual PTO shaft, commercial contract farming and custom hiring centers.
-- **KG Baby Weeder**: Ultra-lightweight inter-cultivator for paddy wetlands and greenhouse vegetables.
-- **Genuine OEM Spare Parts (19 Categories)**: Forged crankshafts, piston assemblies, precision float carburetors, recoil starters, gearbox oil seals, rotavator blades.
+- [KG-170F Petrol Power Weeder (7 HP / 212cc)](https://krishigears.com/products/kg-170f): 4-stroke petrol engine, 3600 RPM, recoil start, 32 dryland rotary blades, PTO shaft for water pump and reaper attachments.
+- [KG-173F Diesel Power Weeder (5.5 HP)](https://krishigears.com/products/kg-173f-diesel): 4-stroke direct injection diesel engine, high low-RPM torque for deep clay plowing.
+- [KG-177F WOLF Petrol Weeder (9 HP / 270cc)](https://krishigears.com/products/kg-177f-wolf): Direct-drive gear transmission, replacement for mini-tractors in sugarcane and orchards.
+- [KG-ICP-P170-LDE Electric Start Weeder (7 HP)](https://krishigears.com/products/kg-icp-p170-lde): Key ignition self-start with backup recoil, dual LED headlights.
+- [KG-ICP-UP170-SH Back-Rotary Weeder (7 HP)](https://krishigears.com/products/kg-icp-up170-sh): Active counter-rotating rear tines reducing operator fatigue by 50%.
+- [KG-ICD-UP186-SH Heavy Diesel Weeder (10 HP)](https://krishigears.com/products/kg-icd-up186-sh): Dual PTO shaft, commercial contract farming and custom hiring centers.
+- [KG Baby Weeder](https://krishigears.com/products/kg-baby-weeder): Ultra-lightweight inter-cultivator for paddy wetlands and greenhouse vegetables.
+- [Genuine OEM Spare Parts (19 Categories)](https://krishigears.com/spare-parts): Forged crankshafts, piston assemblies, precision float carburetors, recoil starters, gearbox oil seals, rotavator blades.
 
 ## Technical Knowledge Base & Schemas
 - [Agricultural Technical Glossary](https://krishigears.com/glossary): Standardized terms (PTO, FMTTI, Tillage, CC vs HP, 2T vs 4T ratios, Viton Seals).
