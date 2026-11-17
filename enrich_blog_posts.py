@@ -72,12 +72,12 @@ CATEGORY_TEMPLATES = {
 | Spare Parts Counter Gross Margin | 35% – 45% on fast-moving consumables | Covers monthly showroom rent and technician salaries |
 | Pre-Delivery Inspection (PDI) Pass Rate | 100% verified (oil filled, engine run tested, farmer safety demo) | Reduces 30-day warranty claims by over 80% |
 | Subsidy Documentation Verification | 100% GST invoice match, FMTTI serial no. photo, Aadhaar match | Prevents state portal DBT subsidy rejections |
-| Turnaround Time on Emergency Field Spares | Under 48 hours to farmer counter | Builds lifelong farmer loyalty in the local taluka/tehsil |
+| Turnaround Time on Emergency Field Spares | Prompt dispatch per confirmed order | Builds lifelong farmer loyalty in the local taluka/tehsil |
 """,
         "faq": [
             ("How can agricultural machinery dealers increase their spare parts profitability?", "Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal."),
             ("What are the main reasons state DBT subsidy applications get rejected?", "Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories."),
-            ("What warranty support does KrishiGears offer to authorized dealers?", "KrishiGears provides genuine OEM-spec components, strict fitment guarantees, marketing collateral, and expedited 24-48 hour courier dispatch from central logistics in Jaipur.")
+            ("What warranty support does KrishiGears offer to authorized dealers?", "KrishiGears provides genuine OEM-spec components, model-matched fitment support, marketing collateral, and tracked courier dispatch from Jaipur logistics desk.")
         ]
     },
     "engine": {
@@ -133,7 +133,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, RK-173F/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for all standard 7HP, 9HP petrol engines, RK-173F/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 """
 
     comprehensive_content = f"""{clean_content}

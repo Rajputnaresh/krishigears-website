@@ -57,7 +57,7 @@ export default function BulkOrder() {
         <div className="kg-eyebrow">Bulk Machinery & Wholesale Spare Parts</div>
         <h1 className="kg-h1 mt-4 text-balance">Wholesale Supply for <span className="text-lime-500">Dealers, Repair Workshops & Institutions.</span></h1>
         <p className="text-zinc-300 mt-6 leading-relaxed max-w-2xl">
-          Direct factory wholesale procurement of agricultural machinery (power weeders, tillers, brush cutters) and OEM spare parts (carburetors, recoil starters, Viton seals, rotary blades) for retailers, repair workshops, FPOs, and contractors with 100% GST billing and PAN-India dispatch (fast-moving spares dispatch in 24–48h from Jaipur; machinery dispatches directly from OEM partner assembly depots).
+          Direct factory wholesale procurement of agricultural machinery (power weeders, tillers, brush cutters) and OEM spare parts (carburetors, recoil starters, Viton seals, rotary blades) for retailers, repair workshops, FPOs, and contractors with 100% GST billing and PAN-India dispatch (machinery and spares procured per confirmed order from partner OEM depots and vetted supplier networks).
         </p>
 
         <form onSubmit={submit} className="mt-12 border border-zinc-800 bg-surface-dark p-6 md:p-10 space-y-5">

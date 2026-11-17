@@ -35,7 +35,7 @@ export default function CompetitorComparison() {
               </tr>
               <tr>
                 <td className="p-4 sm:p-6 text-zinc-300 font-medium">Spare Parts Dispatch SLA</td>
-                <td className="p-4 sm:p-6 text-center text-zinc-500">15 to 30 days wait from central regional depots</td>
+                <td className="p-4 sm:p-6 text-center text-zinc-500">15 to 30 days wait from regional distributor hubs</td>
                 <td className="p-4 sm:p-6 text-center text-lime-400 font-bold bg-lime-500/5">24-Hour Express Dispatch from Jaipur Warehouse</td>
               </tr>
               <tr>

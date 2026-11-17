@@ -6,7 +6,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const districtSlug = slug.includes("-in-") ? slug.split("-in-").pop()! : slug.replace(/^power-weeder-spare-parts-in-/, "").replace(/^power-weeder-spare-parts-/, "");
   const districtName = districtSlug ? districtSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "India";
   const title = `Power Weeder Spare Parts in ${districtName} | Wholesale & Fitment`;
-  const description = clampDescription(`Wholesale power weeder spare parts and fitment in ${districtName}. Genuine engine parts, carburetors, blades, and transmission spares with 24–48h dispatch.`, 155);
+  const description = clampDescription(`Wholesale power weeder spare parts and fitment in ${districtName}. Genuine engine parts, carburetors, blades, and transmission spares procured per verified order.`, 155);
 
   return {
     title,

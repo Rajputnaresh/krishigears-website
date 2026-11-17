@@ -126,8 +126,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const rawDesc = isSpareParts
     ? (isIndia
-        ? `Factory wholesale OEM power weeder spare parts across India. Carburetors, recoil starters, gearboxes & blades with express 24-48h dispatch from Jaipur.`
-        : `Factory wholesale OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters & gearbox components with 24-48h dispatch.`)
+        ? `Factory wholesale OEM power weeder spare parts across India. Carburetors, recoil starters, gearboxes & blades procured per order from vetted component suppliers.`
+        : `Factory wholesale OEM power weeder spare parts in ${locationName}, ${locationData.state}. Carburetors, recoil starters & gearbox components procured per order.`)
     : (isIndia
         ? `Pan-India B2B supply of KrishiGears ${category.name}. Heavy-duty commercial farm machinery engineered for Indian soils with SMAM subsidy guidance.`
         : `B2B supply of KrishiGears ${category.name} in ${locationName}. Spec-matched for ${locationData.soil_type} and ${locationData.key_crops.slice(0, 2).join(', ')} with DBT subsidy guidance.`);
@@ -347,7 +347,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
 
           <p className="text-zinc-300 text-base md:text-lg max-w-3xl leading-relaxed mt-4">
             {isSpareParts ? (
-              <>Direct factory wholesale supply of OEM power weeder and power tiller spare parts for repair shops, dealers & retail stockists in {locationName}, {data.state}. Carburetors, recoil starters, Viton oil seals, gearboxes, and HRC 45+ rotary tines with express 24-48h dispatch from Jaipur.</>
+              <>Direct factory wholesale supply of OEM power weeder and power tiller spare parts for repair shops, dealers & retail stockists in {locationName}, {data.state}. Carburetors, recoil starters, Viton oil seals, gearboxes, and HRC 45+ rotary tines procured per verified order from vetted suppliers.</>
             ) : (
               <>Authorized B2B supply of KrishiGears {category.name.toLowerCase()} for commercial dealers, agro-service centers, and farming cooperatives in {locationName}. Spec-optimized for {data.soil_type.toLowerCase()} and local cultivation of {data.key_crops.join(', ')}.</>
             )}
@@ -651,7 +651,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
             </h2>
             <p className="text-black/85 text-sm sm:text-base font-medium mt-3 leading-relaxed">
               {isSpareParts ? (
-                <>Are you a farm machinery mechanic, service center, or retail spare parts shop in {locationName}? Get direct factory pricing, mixed-carton minimum orders starting from ₹15,000, and 24-hour dispatch from our Jaipur central depot with 100% GST input tax credit.</>
+                <>Are you a farm machinery mechanic, service center, or retail spare parts shop in {locationName}? Get direct factory pricing, mixed-carton minimum orders starting from ₹15,000, and verified supplier dispatch coordination with 100% GST input tax credit.</>
               ) : (
                 <>We are actively appointing exclusive machinery dealers, spare parts retailers, and service stockists in {locationName} and surrounding tehsils. Benefit from wholesale pricing, protected territory margins, and 24-hour spare parts dispatch.</>
               )}

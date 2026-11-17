@@ -115,7 +115,7 @@ for idx, p in enumerate(master_products, 1):
         "100% FMTTI / SMAM government subsidy compliant",
         "Precision-engineered transmission case for tough Indian soil",
         "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-        "24-48 hour dispatch with genuine replacement spare parts guarantee"
+        "Genuine OEM-spec replacement spare parts procured per order"
     ]
     
     crops = p['geo_targeting']['target_crops'][:4]

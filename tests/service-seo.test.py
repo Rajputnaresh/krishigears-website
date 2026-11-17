@@ -41,12 +41,12 @@ class SEO(unittest.TestCase):
         self.assertEqual(before, p.read_bytes())
         spec = importlib.util.spec_from_file_location('legacy', ROOT/'build_and_deploy_master_geo_sitemap.py')
         module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
-        self.assertEqual(module.build_sitemap([]), 3051)
+        self.assertEqual(module.build_sitemap([]), 3052)
         self.assertEqual(before, p.read_bytes())
         self.assertFalse((ROOT/'frontend/src/app/sitemap.ts').exists())
         urls = [e.text for e in ET.fromstring(before).findall('s:url/s:loc', NS)]
         self.assertEqual(len(urls), len(set(urls)))
-        for path in ['/service', '/service/power-weeder-repair-service-in-jaipur', '/dealer-network']:
+        for path in ['/service', '/service/power-weeder-repair-service-in-jaipur', '/dealer-network', '/spare-parts/168f-170f-gx35-fitment-guide']:
             self.assertEqual(urls.count('https://krishigears.com'+path), 1)
         self.assertNotIn('https://krishigears.com/dealers', urls)
         with urllib.request.urlopen(BASE+'/sitemap.xml', timeout=60) as r:

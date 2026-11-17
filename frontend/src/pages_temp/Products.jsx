@@ -135,7 +135,7 @@ export default function Products() {
             <div className="space-y-2 border border-zinc-850 p-4 rounded-lg bg-zinc-900/30">
               <h3 className="font-bold text-white text-sm">How fast are replacement spare parts dispatched to workshops?</h3>
               <p className="text-zinc-400 text-xs leading-relaxed">
-                All high-wear spare parts including carburetors, recoil starters, Viton oil seals, and 32-piece blade sets are packed and dispatched within 24 to 48 hours from our central Jaipur godown.
+                All high-wear spare parts including carburetors, recoil starters, Viton oil seals, and 32-piece blade sets are procured per verified order and dispatched via tracked carriers.
               </p>
             </div>
           </div>

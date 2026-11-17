@@ -74,7 +74,7 @@ const DEALER_PROCESS = [
   { step: 1, title: "Apply Online", desc: "Fill the dealer application form with your location, investment capacity and current business profile. Takes 5 minutes." },
   { step: 2, title: "Screening Call (24h)", desc: "Our territory manager calls you within 24 hours to verify details and explain the opportunity in your district." },
   { step: 3, title: "Territory Visit (7d)", desc: "We schedule a face-to-face meeting at your proposed location, validate commercial viability and finalize terms." },
-  { step: 4, title: "MOU & First Order (14d)", desc: "Sign the dealership MOU, place your first order (starter MOQ: 2 units or mixed-carton spares from ₹15,000), and we dispatch within 24–48 hours." },
+  { step: 4, title: "MOU & First Order (14d)", desc: "Sign the dealership MOU, place your first order (starter MOQ: 2 units or mixed-carton spares from ₹15,000), and dispatch is coordinated per confirmed order." },
   { step: 5, title: "Training & Launch (21d)", desc: "Complete 3-day service training. We support your shop launch with co-marketing and demo day at your location." },
   { step: 6, title: "Ongoing Business", desc: "Live inventory access, monthly review calls, dedicated territory manager, and quarterly performance bonuses." },
 ];
@@ -229,13 +229,13 @@ export default function DealerState({ districts = [], stateName: propStateName, 
           <div className="kg-eyebrow">Logistics & Supply Chain</div>
           <h2 className="kg-h2 mt-3">Factory Dispatch & Transport Hubs serving {stateName}.</h2>
           <p className="text-zinc-300 text-sm mt-2 max-w-2xl">
-            Fast-moving OEM spare parts dispatch within 24–48 hours from our central Jaipur facility. Commercial machinery dispatches directly from partner OEM assembly depots to regional transport hubs across {stateName}:
+            OEM spare parts and commercial machinery are procured per confirmed order from partner OEM depots and supplier networks to regional transport hubs across {stateName}:
           </p>
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
               <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Primary Rail Freight</span>
               <h4 className="font-bold text-white text-base">Container & Parcel Express</h4>
-              <p className="text-xs text-zinc-400">Direct booking via Western & North-Western Railway freight networks to {stateName} junction stations (24–48 hours transit).</p>
+              <p className="text-xs text-zinc-400">Direct booking via Western & North-Western Railway freight networks to {stateName} junction stations.</p>
             </div>
             <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
               <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Road Logistics</span>
@@ -245,7 +245,7 @@ export default function DealerState({ districts = [], stateName: propStateName, 
             <div className="p-5 border border-zinc-800 bg-surface-dark rounded-lg space-y-2">
               <span className="text-xs font-bold text-lime-400 uppercase tracking-wider">Urgent Spare Parts</span>
               <h4 className="font-bold text-white text-base">Air Cargo & Speed Post</h4>
-              <p className="text-xs text-zinc-400">Critical warranty spares, carburetors, and electrical components dispatched same-day to minimize machine downtime during sowing season.</p>
+              <p className="text-xs text-zinc-400">Critical warranty spares, carburetors, and electrical components coordinated on priority to minimize machine downtime during sowing season.</p>
             </div>
           </div>
         </div>

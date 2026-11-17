@@ -17,7 +17,7 @@ export const BLOG_POSTS: Record<string, BlogPostData> = {
   "power-weeder-spare-parts-wholesale-suppliers-price-list": {
     slug: "power-weeder-spare-parts-wholesale-suppliers-price-list",
     title: "Power Weeder Spare Parts Wholesale: Price List, MOQ & OEM Supply (2026)",
-    excerpt: "Direct factory wholesale supply of power weeder and tiller spare parts for repair shops, dealers & retailers in India. Carburetors, viton oil seals, recoil starters, gearboxes & rotary tines with 24-48hr Jaipur dispatch.",
+    excerpt: "Direct factory wholesale supply of power weeder and tiller spare parts for repair shops, dealers & retailers in India. Carburetors, viton oil seals, recoil starters, gearboxes & rotary tines procured per verified order.",
     cover_image: "/images/products/weeder.webp",
     created_at: "2026-03-18T10:00:00Z",
     tags: [
@@ -44,7 +44,7 @@ KrishiGears supplies precision-machined, tested replacement assemblies across al
 
 - **Bulk Profit Margin:** 35% to 50% retail margin for local repair shops and agro-service stockists.
 - **Low Minimum Order Quantity (MOQ):** Mixed-carton orders starting at ₹15,000 to enable shops to stock fast-moving parts without tying up capital.
-- **Express Dispatch:** Packed and dispatched within 24 to 48 hours via surface cargo or Speed Post directly from our Jaipur central depot.
+- **Express Dispatch:** Procured and dispatched via tracked surface cargo or Speed Post coordinated from our Jaipur logistics desk.
 - **GST Input Tax Credit (ITC):** 100% compliant GST tax invoices (GSTIN: 08AANCK2216L1ZA) allowing full input credit claims.
 
 ## 3. How to Request the 2026 Wholesale Price List PDF
@@ -78,8 +78,8 @@ Wholesale buyers, dealer stockists, and agricultural service technicians can req
 ## 3. Why Partner with KrishiGears?
 
 - **FMTTI Compliance:** Machines tested to Central Farm Machinery Training & Testing Institute standards for state DBT subsidies.
-- **Zero Locked Stock (Dropship Option):** Direct factory-to-dealer dispatch from our Jaipur hub within 24-48 hours.
-- **100% Guaranteed Fitment Spares:** Instant spare parts dispatch to ensure zero downtime during active tilling season.
+- **Zero Locked Stock (Dropship Option):** Direct factory-to-dealer dispatch coordinated per confirmed order.
+- **Fitment-Checked Spares:** Model-matched replacement spares procured to prevent seasonal machine downtime.
 
 To apply for an authorized district dealership, visit our [Dealer Application Portal](/become-a-dealer) or contact our wholesale desk directly at **+91 60060 78815** / **sales@krishigears.com**.
 `
@@ -134,7 +134,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -185,9 +185,9 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears stocks [power weeder spare parts — carburetors, fuel filters, injector lines](/products/category/power-weeder-spare-parts) with 24-48 hour dispatch from Jaipur — MOQ 2 units, GST invoicing, dealer wholesale pricing on request.`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears stocks [power weeder spare parts — carburetors, fuel filters, injector lines](/products/category/power-weeder-spare-parts) procured per order — MOQ 2 units, GST invoicing, dealer wholesale pricing on request.`
   },
   "carburetor-overflow-petrol-leakage-fix": {
     slug: "carburetor-overflow-petrol-leakage-fix",
@@ -234,7 +234,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -285,7 +285,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -338,7 +338,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -388,7 +388,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -438,7 +438,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -487,7 +487,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -535,7 +535,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -583,7 +583,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -637,7 +637,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -690,7 +690,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -738,7 +738,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -788,7 +788,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -840,7 +840,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -891,7 +891,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -939,7 +939,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -984,7 +984,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1035,7 +1035,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1085,7 +1085,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -1135,7 +1135,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: How do I know if my engine has blown piston rings or a bad valve seal?\n**Expert Resolution:** Bluish exhaust smoke under heavy throttle indicates worn piston rings burning oil. White smoke on cold start that disappears after warming up is normal moisture; persistent dense white smoke suggests fuel contamination.\n\n### Q: Why does my engine backfire through the carburetor?\n**Expert Resolution:** Backfiring through the intake indicates an overly lean fuel mixture, a sticking intake valve, or retarded ignition timing from a sheared flywheel woodruff key.\n\n### Q: How do I store a farm machinery engine over the off-season?\n**Expert Resolution:** Drain the fuel tank and run the engine until the carburetor bowl is completely dry. Remove the spark plug, inject 5ml of clean engine oil into the cylinder, pull the recoil 3 times to coat the bore, and store with valves closed.\n\n`
   },
@@ -1183,7 +1183,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1236,7 +1236,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1286,7 +1286,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1331,7 +1331,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1379,7 +1379,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1426,7 +1426,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1470,7 +1470,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1515,7 +1515,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1559,7 +1559,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1604,7 +1604,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -1656,7 +1656,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n`
   },
@@ -1707,7 +1707,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n`
   },
@@ -1819,7 +1819,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n`
   },
@@ -1864,7 +1864,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n`
   },
@@ -1909,7 +1909,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What causes sudden earth auger kickback during drilling?\n**Expert Resolution:** Violent torque kickback happens when the spiral blade strikes an underground rock or tree root while the centrifugal clutch fails to slip, transferring the full 3HP engine torque directly to the operator handles.\n\n### Q: How do I prevent the auger bit from getting stuck in heavy black cotton soil?\n**Expert Resolution:** In sticky clay and black cotton soils, drill in 6-inch increments, lifting the spinning bit to fling spoil out of the hole before drilling deeper. Never force the auger downward with body weight.\n\n### Q: What gear oil should be filled in earth auger reduction gearboxes?\n**Expert Resolution:** Use SAE 85W-140 or 80W-90 Extreme Pressure (EP) gear lubricant. Fill only to the level check plug to prevent oil seal blowouts from thermal expansion.\n\n`
   },
@@ -1955,7 +1955,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -2004,7 +2004,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
 ## Frequently Asked Field Questions & Expert Answers\n\n### Q: What is the correct engine oil change schedule for power weeders?\n**Expert Resolution:** First oil change must be performed at 5 to 8 running hours (break-in period) to flush out factory machining metal dust. Subsequent changes should occur every 45 to 50 field hours using genuine 20W-40 4T oil.\n\n### Q: Why does my power weeder slip gears or pop into neutral during tilling?\n**Expert Resolution:** Gear slippage is typically caused by stretched shift linkage cables, worn dog clutch teeth on the transmission shaft, or weakened detent ball springs inside the selector fork assembly.\n\n### Q: Can I run ethanol-blended E20 petrol in power weeders?\n**Expert Resolution:** Standard small engines tolerate up to 10% ethanol. E20 petrol causes accelerated degradation of rubber float needle tips, fuel hoses, and aluminum bowl oxidation if left stagnant. Always install a brass-mesh in-line filter and drain the carburetor bowl before multi-week storage.\n\n`
   },
@@ -2047,7 +2047,7 @@ Operating a profitable agricultural machinery showroom and service center requir
 | Spare Parts Counter Gross Margin | 35% – 45% on fast-moving consumables | Covers monthly showroom rent and technician salaries |
 | Pre-Delivery Inspection (PDI) Pass Rate | 100% verified (oil filled, engine run tested, farmer safety demo) | Reduces 30-day warranty claims by over 80% |
 | Subsidy Documentation Verification | 100% GST invoice match, FMTTI serial no. photo, Aadhaar match | Prevents state portal DBT subsidy rejections |
-| Turnaround Time on Emergency Field Spares | Under 48 hours to farmer counter | Builds lifelong farmer loyalty in the local taluka/tehsil |
+| Turnaround Time on Emergency Field Spares | Prompt dispatch per confirmed order | Builds lifelong farmer loyalty in the local taluka/tehsil |
 
 ## OEM Spare Parts & Workshop Specifications
 
@@ -2055,9 +2055,9 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: How can agricultural machinery dealers increase their spare parts profitability?\n**Expert Resolution:** Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal.\n\n### Q: What are the main reasons state DBT subsidy applications get rejected?\n**Expert Resolution:** Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories.\n\n### Q: What warranty support does KrishiGears offer to authorized dealers?\n**Expert Resolution:** KrishiGears provides genuine OEM-spec components, strict fitment guarantees, marketing collateral, and expedited 24-48 hour courier dispatch from central logistics in Jaipur.\n\n`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: How can agricultural machinery dealers increase their spare parts profitability?\n**Expert Resolution:** Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal.\n\n### Q: What are the main reasons state DBT subsidy applications get rejected?\n**Expert Resolution:** Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories.\n\n### Q: What warranty support does KrishiGears offer to authorized dealers?\n**Expert Resolution:** KrishiGears provides genuine OEM-spec components, model-matched fitment support, marketing collateral, and tracked courier dispatch coordinated from our Jaipur logistics desk.\n\n`
   },
   "how-dealers-prevent-subsidy-application-rejections": {
     slug: "how-dealers-prevent-subsidy-application-rejections",
@@ -2095,7 +2095,7 @@ Operating a profitable agricultural machinery showroom and service center requir
 | Spare Parts Counter Gross Margin | 35% – 45% on fast-moving consumables | Covers monthly showroom rent and technician salaries |
 | Pre-Delivery Inspection (PDI) Pass Rate | 100% verified (oil filled, engine run tested, farmer safety demo) | Reduces 30-day warranty claims by over 80% |
 | Subsidy Documentation Verification | 100% GST invoice match, FMTTI serial no. photo, Aadhaar match | Prevents state portal DBT subsidy rejections |
-| Turnaround Time on Emergency Field Spares | Under 48 hours to farmer counter | Builds lifelong farmer loyalty in the local taluka/tehsil |
+| Turnaround Time on Emergency Field Spares | Prompt dispatch per confirmed order | Builds lifelong farmer loyalty in the local taluka/tehsil |
 
 ## OEM Spare Parts & Workshop Specifications
 
@@ -2103,9 +2103,9 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 
 - **Surface Hardening:** Cultivator tines, auger tips, and drive shafts must carry induction hardening (HRC 48–52) to resist abrasion in quartz and gravel soils.
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
-- **Genuine Fitment Guarantee:** KrishiGears provides fitment-verified spare parts for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
+- **Fitment Support:** KrishiGears provides model-matched replacement spare parts for standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India express dispatch.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: How can agricultural machinery dealers increase their spare parts profitability?\n**Expert Resolution:** Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal.\n\n### Q: What are the main reasons state DBT subsidy applications get rejected?\n**Expert Resolution:** Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories.\n\n### Q: What warranty support does KrishiGears offer to authorized dealers?\n**Expert Resolution:** KrishiGears provides genuine OEM-spec components, strict fitment guarantees, marketing collateral, and expedited 24-48 hour courier dispatch from central logistics in Jaipur.\n\n`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: How can agricultural machinery dealers increase their spare parts profitability?\n**Expert Resolution:** Focus on bundling consumable service kits (air filters, spark plugs, carburetors, cables, gear oil) with every seasonal service rather than selling parts piecemeal.\n\n### Q: What are the main reasons state DBT subsidy applications get rejected?\n**Expert Resolution:** Submissions typically fail due to mismatched engine serial numbers between the physical plate and invoice, missing FMTTI/SRFMTTI batch test certificates, or incorrect GST portal filing categories.\n\n### Q: What warranty support does KrishiGears offer to authorized dealers?\n**Expert Resolution:** KrishiGears provides genuine OEM-spec components, model-matched fitment support, marketing collateral, and tracked courier dispatch coordinated from our Jaipur logistics desk.\n\n`
   },
     "brush-cutter-harvesting-trouble-maintenance-guide": {
     slug: "brush-cutter-harvesting-trouble-maintenance-guide",
@@ -2342,7 +2342,7 @@ Equipment dealers who operate a dedicated 1-bay service workshop retain over 85%
 **Resolution:** Under KrishiGears' on-demand partner structure, an existing agri-input retailer or new entrepreneur can launch with ₹75,000 to ₹1.5 lakh in working capital (covering 2 display machines and a fast-moving mixed spare parts carton), compared to ₹10+ lakh in traditional distributor arrangements.
 
 ### Q: How do dealers handle warranty claims on engine and transmission failures?
-**Resolution:** KrishiGears provides a 12-month manufacturer warranty on primary castings, engine blocks, and gearboxes. Dealers photograph the defective component and serial plate; approved replacement parts dispatch within 24 to 48 hours from central logistics in Jaipur.
+**Resolution:** KrishiGears provides a 12-month manufacturer warranty on primary castings, engine blocks, and gearboxes. Dealers photograph the defective component and serial plate; approved replacement parts are procured and dispatched via tracked courier coordinated from our Jaipur desk.
 `
   },
 
@@ -2375,7 +2375,7 @@ Equipment dealers who operate a dedicated 1-bay service workshop retain over 85%
 Farmers purchasing weeders through state portals (SMAM, DBT Agriculture) require official GST-compliant tax invoices, engine/chassis number verification, and FMTTI test reports. KrishiGears supplies complete documentation to dealers for swift claim approvals.
 
 ### 3. Spare Parts Continuity
-A low initial purchase price is counterproductive if replacement tines, recoil springs, or carburetors cannot be sourced within 48 hours. KrishiGears guarantees 100% genuine fitment spares dispatched directly from central Jaipur logistics.
+A low initial purchase price is counterproductive if replacement tines, recoil springs, or carburetors cannot be sourced during active tilling season. KrishiGears coordinates genuine OEM-spec replacement spares procured per verified order.
 `
   },
   "smam-subsidy-portal-registration-power-weeder-guide": {
@@ -2443,7 +2443,7 @@ Authorized KrishiGears dealers provide complete paper trails, machine serial mat
 
 ---
 
-**Need an official subsidy quotation?** KrishiGears issues verified proforma invoices and FMTTI compliance documents with 24-48 hour dispatch from Jaipur — GST invoicing and direct dealer support on request.
+**Need an official subsidy quotation?** KrishiGears issues verified proforma invoices and FMTTI compliance documents procured per verified order — GST invoicing and direct dealer support on request.
 `
   },
   "power-weeder-subsidy-rajasthan-2026": {
@@ -2476,7 +2476,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2523,7 +2523,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2570,7 +2570,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2617,7 +2617,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2664,7 +2664,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2711,7 +2711,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2758,7 +2758,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2805,7 +2805,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2852,7 +2852,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 
@@ -2899,7 +2899,7 @@ KrishiGears agricultural machinery is manufactured to rigorous FMTTI / SRFMTTI s
 - **Verified Chassis & Engine Serials:** Perfectly matching GST invoice documentation.
 - **Commercial Test Report Copy:** Readily recognized by Block Agricultural Extension Officers.
 - **Factory Protected Warranty:** 1-year engine and gearbox manufacturer warranty.
-- **Fast Parts Support:** 24–48 hour express dispatch from our central warehouse in Jaipur.
+- **Parts Support:** Order-per-sale procurement of genuine OEM-spec components via verified supplier networks.
 
 Contact KrishiGears sales or your local authorized dealer for an official proforma quotation and test certificate pack.
 

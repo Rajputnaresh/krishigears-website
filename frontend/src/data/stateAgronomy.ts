@@ -36,7 +36,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-170F 7HP Petrol & Back-Rotary Weeder with dust-sealed air filters",
     subsidy_scheme: "RajKisan Sathi Portal (Krishi Yantra Subsidy)",
     subsidy_pct: "40% to 50% DBT subsidy with physical verification",
-    dispatch_hub: "Factory Direct from VKI Industrial Area / Transport Nagar, Jaipur (Same-Day / 24h PAN-Rajasthan)",
+    dispatch_hub: "Factory Direct from VKI Industrial Area / Transport Nagar, Jaipur (Regional Road Freight)",
     faqs: [
       {
         question: "How to apply for power weeder subsidy in Rajasthan via RajKisan Sathi?",
@@ -44,7 +44,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
       },
       {
         question: "Why is KrishiGears dispatch fastest in Rajasthan?",
-        answer: "KrishiGears operates its primary logistics facility in Jaipur (VKI / Transport Nagar). Authorized dealers across all 33 Rajasthan districts receive same-day dispatch and 24-hour delivery on machines and emergency spares."
+        answer: "KrishiGears operates its primary logistics facility in Jaipur (VKI / Transport Nagar). Authorized dealers across all 33 Rajasthan districts receive dispatch via regional transport carriers once confirmed."
       }
     ]
   },
@@ -55,7 +55,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-177F 9HP Diesel with 32 Deep-Tillage Curved Blades",
     subsidy_scheme: "e-Krishi Yantra Anudan Portal (MP Dbt Agriculture)",
     subsidy_pct: "40% (General) to 50% (SC/ST/Small Farmers) via online lottery",
-    dispatch_hub: "Jaipur → SafeXpress / VRL depots in Indore, Bhopal, Jabalpur & Ujjain (24–48h)",
+    dispatch_hub: "Jaipur → SafeXpress / VRL transport corridor to Indore, Bhopal, Jabalpur & Ujjain",
     faqs: [
       {
         question: "How does the MP e-Krishi Yantra Anudan lottery work for power weeders?",
@@ -93,7 +93,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-170F 7HP Petrol Weeder with Ditcher & Mud Wheel Kit",
     subsidy_scheme: "Bihar OFMD DBT Portal (dbtagriculture.bihar.gov.in)",
     subsidy_pct: "Up to 50% subsidy with direct OFMD permit issuance",
-    dispatch_hub: "Jaipur → Railway Freight & Transport Nagar to Patna, Muzaffarpur, Gaya & Bhagalpur (36–48h)",
+    dispatch_hub: "Jaipur → Railway Freight & Transport routes to Patna, Muzaffarpur, Gaya & Bhagalpur",
     faqs: [
       {
         question: "How to get power weeder subsidy under Bihar OFMD scheme?",
@@ -139,7 +139,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
       },
       {
         question: "What is the warranty and service support in Haryana?",
-        answer: "KrishiGears provides a 1-year engine warranty and 48-hour parts dispatch across all Haryana districts via our regional dealer service network."
+        answer: "KrishiGears provides a 1-year engine warranty with model-matched replacement parts procured per order across Haryana districts."
       }
     ]
   },
@@ -169,7 +169,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-ICP-UP170-SH Rear-Tine Weeder & Compact 7HP Petrol Cultivator",
     subsidy_scheme: "Karnataka Raitha Siri & SMAM DBT Portal",
     subsidy_pct: "50% DBT subsidy for SC/ST and small/marginal farmers",
-    dispatch_hub: "Jaipur → SafeXpress / VRL depots to Bengaluru, Hubballi, Mysuru & Mangaluru (36–48h)",
+    dispatch_hub: "Jaipur → SafeXpress / VRL transport corridor to Bengaluru, Hubballi, Mysuru & Mangaluru",
     faqs: [
       {
         question: "How to register for power weeder subsidy in Karnataka?",
@@ -188,7 +188,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-170F 7HP Petrol & Back-Rotary Inter-Cultivator",
     subsidy_scheme: "Uzhavan App & Agrisnet Tamil Nadu Portal",
     subsidy_pct: "40% to 50% subsidy under Sub-Mission on Agricultural Mechanization",
-    dispatch_hub: "Jaipur → Express Road Logistics to Chennai, Coimbatore, Madurai & Trichy (48h)",
+    dispatch_hub: "Jaipur → Express Road Logistics to Chennai, Coimbatore, Madurai & Trichy",
     faqs: [
       {
         question: "How to apply for farm machinery subsidy through Tamil Nadu Uzhavan App?",
@@ -207,7 +207,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-170F 7HP Petrol & KG-177F 9HP Diesel with Ridger",
     subsidy_scheme: "Telangana Rythu Bandhu & Agri Mechanization Portal",
     subsidy_pct: "Up to 50% financial assistance for certified farm implements",
-    dispatch_hub: "Jaipur → Direct Transport to Hyderabad, Warangal, Karimnagar & Nizamabad (36–48h)",
+    dispatch_hub: "Jaipur → Direct Transport to Hyderabad, Warangal, Karimnagar & Nizamabad",
     faqs: [
       {
         question: "How do Telangana farmers apply for farm machinery subsidy?",
@@ -226,7 +226,7 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
     recommended_weeder: "KG-177F 9HP Diesel & KG-170F 7HP Petrol with Heavy Cultivator",
     subsidy_scheme: "AP Rythu Bharosa Kendras (RBK) & SMAM Portal",
     subsidy_pct: "40% to 50% subsidy processed through local RBK centers",
-    dispatch_hub: "Jaipur → Direct Freight to Vijayawada, Guntur, Kurnool & Visakhapatnam (36–48h)",
+    dispatch_hub: "Jaipur → Direct Freight to Vijayawada, Guntur, Kurnool & Visakhapatnam",
     faqs: [
       {
         question: "Can Andhra Pradesh farmers apply for power weeder subsidy via Rythu Bharosa Kendras?",
@@ -254,7 +254,7 @@ export function getStateAgronomy(slug: string): StateAgronomy {
     recommended_weeder: "KG-170F 7HP Petrol & KG-177F 9HP Diesel All-Terrain Weeder",
     subsidy_scheme: "State DBT Agriculture Mechanization & Central SMAM Scheme",
     subsidy_pct: "40% to 50% DBT grant on certified farm machinery",
-    dispatch_hub: "Jaipur Central Logistics → Regional Transport Depots (24–48 hours)",
+    dispatch_hub: "Jaipur Logistics Corridor → Regional Transport Depots",
     faqs: [
       {
         question: `How can farmers in ${readable} apply for farm machinery subsidy?`,
@@ -262,7 +262,7 @@ export function getStateAgronomy(slug: string): StateAgronomy {
       },
       {
         question: `What warranty is provided on KrishiGears machines in ${readable}?`,
-        answer: `KrishiGears provides a 1-year engine warranty, guaranteed OEM fitment spares, and doorstep dispatch via tracked express logistics.`
+        answer: `KrishiGears provides a 1-year engine warranty, genuine OEM-spec replacement spares, and delivery via tracked express logistics.`
       }
     ]
   };

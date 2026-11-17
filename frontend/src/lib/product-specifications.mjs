@@ -165,11 +165,11 @@ export const CATEGORY_FAQS = {
     },
     {
       question: "Are KrishiGears replacement spares compatible with other brand power weeders?",
-      answer: "Yes. Our engine and transmission spares adhere to standard 170F/177F petrol and 173F/186F diesel dimensional tolerances, making them 100% fitment-compatible with Royal Kissan, Neptune, Balwaan, and Honda-clone agricultural weeders."
+      answer: "Our engine and transmission spares adhere to standard 170F/177F petrol and 173F/186F diesel dimensional tolerances. Due to model variations across Royal Kissan, Neptune, Balwaan, and Honda-clone weeders, customers should verify physical dimensions (shaft size, bolt spacing) prior to ordering."
     },
     {
       question: "What are the dispatch and delivery timelines for wholesale spare parts orders?",
-      answer: "All spare parts orders are picked, packaged, and dispatched from our Jaipur central depot within 24 to 48 hours via express surface cargo or Speed Post with live consignment tracking."
+      answer: "Spare parts are procured per verified customer order from vetted component suppliers. Dispatch coordination and transit timelines are confirmed upon quotation review, with tracked surface cargo or Speed Post."
     }
   ]
 };
@@ -185,7 +185,7 @@ export const WARRANTY_FAQS = [
   },
   {
     question: "Do you ship genuine spare parts PAN India?",
-    answer: "Yes. 100% genuine OEM spare parts are dispatched from our Jaipur central depot within 24 to 48 hours via express surface cargo or Speed Post to every rural PIN code in India."
+    answer: "Yes. Genuine OEM-spec replacement spare parts are procured per verified order and dispatched via tracked surface cargo or Speed Post across India once availability and quotation are confirmed."
   },
   {
     question: "Are KrishiGears products eligible for state DBT agriculture subsidies?",
@@ -216,7 +216,7 @@ export const DEALER_FAQS = [
   },
   {
     question: "स्पेयर पार्ट्स और आफ्टर-सेल्स सपोर्ट कैसे मिलता है?",
-    answer: "जयपुर सेंट्रल वेयरहाउस से 24 से 48 घंटे के भीतर क्रैंकशाफ्ट, पिस्टन रिंग, कार्ब्युरेटर, और गियरबॉक्स पार्ट्स ट्रांसपोर्ट या स्पीड पोस्ट द्वारा डिस्पैच किए जाते हैं। हमारे सर्विस इंजीनियर वीडियो कॉल और ऑन-फील्ड ट्रेनिंग के माध्यम से आपके मैकेनिक को पूरी तकनीकी सहायता देते हैं।"
+    answer: "स्पेयर पार्ट्स ऑर्डर-पर-सेल आधार पर सप्लायर नेटवर्क से समन्वयित किए जाते हैं। डिस्पैच और डिलीवरी समय कोटेशन समीक्षा के बाद पुष्ट किया जाता है। हमारे सर्विस इंजीनियर वीडियो कॉल और ऑन-फील्ड ट्रेनिंग के माध्यम से आपके मैकेनिक को पूरी तकनीकी सहायता देते हैं।"
   }
 ];
 
@@ -235,7 +235,7 @@ export const BULK_ORDER_FAQS = [
   },
   {
     question: "What are the delivery timelines across Indian states?",
-    answer: "Fast-moving spares dispatch from our Jaipur hub within 24 to 48 hours. Commercial machinery dispatches directly from partner OEM assembly depots per confirmed order. Surface cargo typically delivers within 3 to 5 business days nationwide with live LR tracking."
+    answer: "Machinery and spare parts are procured per confirmed order from vetted component suppliers and partner OEM assembly depots. Dispatch timing and freight charges are confirmed upon quotation review, with live LR consignment tracking."
   }
 ];
 

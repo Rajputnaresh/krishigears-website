@@ -36,7 +36,7 @@ export async function generateMetadata({
   const description = slug === "power-weeders"
     ? "Compare power weeder engine, HP, displacement, transmission and tilling dimensions. Supplier-confirmed quotations for dealer and bulk orders across India."
     : isSpareParts
-    ? "Wholesale supplier of genuine OEM power weeder and tiller spare parts: carburetors, recoil starters, Viton oil seals and gearboxes. Mixed MOQ, 24-48h dispatch."
+    ? "Wholesale supplier of genuine OEM power weeder and tiller spare parts: carburetors, recoil starters, Viton oil seals and gearboxes. Mixed MOQ, order-per-sale procurement."
     : `Direct factory supply of KrishiGears ${category.name} at wholesale prices. FMTTI-tested durability, genuine OEM parts and protected dealer margins.`;
 
   return {

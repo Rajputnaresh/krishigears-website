@@ -20,6 +20,7 @@ const staticRoutes = [
   { path: '/service', prio: '0.85', freq: 'weekly' },
   { path: '/service/power-weeder-repair-service-in-jaipur', prio: '0.8', freq: 'weekly' },
   { path: '/spare-parts', prio: '0.95', freq: 'daily' },
+  { path: '/spare-parts/168f-170f-gx35-fitment-guide', prio: '0.9', freq: 'weekly' },
   { path: '/seo/power-weeder-supplier-india', prio: '0.9', freq: 'weekly' },
   { path: '/power-weeder-spare-parts-in-india', prio: '0.9', freq: 'weekly' },
   { path: '/power-weeders-in-india', prio: '0.9', freq: 'weekly' }

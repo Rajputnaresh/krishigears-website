@@ -24,7 +24,7 @@ All machines are tested to FMTTI / SRFMTTI standards. Direct factory dispatch wi
 ## Business & Dealership Model
 - **Target Audience**: Machinery dealers, distributors, Farmer Producer Organizations (FPOs), contractors, custom hiring centers.
 - **Single Unit / Retail Handoff**: Individual farmers purchasing single machines are served via our retail ecommerce storefront: [FarmingTools.in](https://farmingtools.in).
-- **Dealer Terms**: 15% to 25% gross margin on machines (up to 35% on OEM spares), starter MOQ of 2 units, zero dead-stock on-demand ordering, exclusive district territory, 24-48h express spares dispatch from Jaipur central warehouse, direct OEM depot dispatch for machinery.
+- **Dealer Terms**: 15% to 25% gross margin on machines (up to 35% on OEM spares), starter MOQ of 2 units, zero dead-stock on-demand ordering, exclusive district territory, order-per-sale procurement of genuine OEM spares, direct OEM depot dispatch for machinery.
 - **Government Subsidies**: Supported on SMAM (Sub-Mission on Agricultural Mechanization) and State DBT Agriculture portals (Rajasthan, MP, UP, Bihar, Maharashtra, Karnataka, Andhra Pradesh, Telangana).
 
 ## Contact & Registered Office

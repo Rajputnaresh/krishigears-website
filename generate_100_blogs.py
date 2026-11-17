@@ -787,7 +787,7 @@ Running a successful agricultural equipment dealership requires balancing showro
 - Provide farmers with the FMTTI test certificate and genuine GST billing needed for state DBT subsidy reimbursements.
 
 ### 3. Partnership with KrishiGears
-- KrishiGears dealers receive territory protection, wholesale pricing, and 24–48 hour dispatch guarantees on fitment-checked spare parts."""
+- KrishiGears dealers receive territory protection, wholesale pricing, and order-per-sale procurement supports on fitment-checked spare parts."""
 
     EXTENDED_TOPICS.append((slug, title, excerpt, cat, tags, content))
 

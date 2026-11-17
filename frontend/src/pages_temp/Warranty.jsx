@@ -32,7 +32,7 @@ export default function Warranty() {
             {[
               { i: ShieldCheck, t: "Manufacturer Warranty", d: "6 to 12 months on every machine, covering manufacturing defects." },
               { i: Wrench, t: "Authorized Service", d: "Repairs through our authorized service centre network across 28+ states." },
-              { i: FileCheck, t: "Genuine Spare Parts", d: "Only OEM-grade spare parts, dispatched PAN India within 48 hours." },
+              { i: FileCheck, t: "Genuine Spare Parts", d: "Only OEM-grade spare parts, procured per verified order and dispatched PAN India." },
               { i: Clock, t: "Fast Resolution", d: "Warranty queries acknowledged within 24 hours of submission." },
               { i: Headphones, t: "Dedicated Support", d: `Email: ${COMPANY.support} · Phone & WhatsApp support desk.`, link: `mailto:${COMPANY.support}` },
               { i: Phone, t: "Call Support", d: COMPANY.phone, link: `tel:${COMPANY.phone.replace(/\s+/g, "")}` },

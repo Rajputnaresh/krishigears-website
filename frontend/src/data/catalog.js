@@ -554,9 +554,9 @@ export const PRODUCTS = [
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -593,9 +593,9 @@ export const PRODUCTS = [
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -631,9 +631,9 @@ export const PRODUCTS = [
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "3 months replacement on manufacturing defects",
     "hsn": "8407",
@@ -670,11 +670,11 @@ export const PRODUCTS = [
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
-    "warranty": "Guaranteed against breakage during transit",
+    "warranty": "Covered against physical transit damage when reported upon delivery",
     "hsn": "8432",
     "gst": 5
   },
@@ -717,7 +717,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -774,7 +774,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -831,7 +831,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -889,7 +889,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -946,7 +946,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1003,7 +1003,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1060,7 +1060,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1117,7 +1117,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1173,7 +1173,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1229,7 +1229,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1285,7 +1285,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1341,7 +1341,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1398,7 +1398,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1455,7 +1455,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1512,7 +1512,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1569,7 +1569,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1626,7 +1626,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1680,7 +1680,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1735,7 +1735,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1787,7 +1787,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1838,7 +1838,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1889,7 +1889,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1940,7 +1940,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -1991,7 +1991,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2041,7 +2041,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2092,7 +2092,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2143,7 +2143,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2194,7 +2194,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2245,7 +2245,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2296,7 +2296,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2346,7 +2346,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2396,7 +2396,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2447,7 +2447,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2498,7 +2498,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2549,7 +2549,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2600,7 +2600,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2651,7 +2651,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2702,7 +2702,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2753,7 +2753,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2804,7 +2804,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2855,7 +2855,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2902,7 +2902,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -2953,7 +2953,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3004,7 +3004,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3055,7 +3055,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3106,7 +3106,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3156,7 +3156,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3207,7 +3207,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3257,7 +3257,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3307,7 +3307,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3358,7 +3358,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3409,7 +3409,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -3460,7 +3460,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -3510,7 +3510,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Orchard tree pruning & thinning",
@@ -3560,7 +3560,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -3611,7 +3611,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Fencing post hole drilling",
@@ -3661,7 +3661,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Agricultural field irrigation",
@@ -3710,7 +3710,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -3761,7 +3761,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -3812,7 +3812,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -3863,7 +3863,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -3914,7 +3914,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Dairy farm cattle fodder preparation",
@@ -3960,16 +3960,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "https://www.youtube.com/watch?v=EsLWgk1cdIE",
@@ -4009,16 +4009,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4059,16 +4059,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4108,16 +4108,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4156,16 +4156,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4206,16 +4206,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4255,16 +4255,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4305,16 +4305,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4354,16 +4354,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4403,16 +4403,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4452,16 +4452,16 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Routine seasonal maintenance & overhaul",
       "Field breakdown repair & component replacement"
     ],
     "benefits": [
-      "OEM dimensional tolerance guarantees exact drop-in fitment",
+      "OEM dimensional specifications; verify measurements on your existing part before ordering",
       "High-carbon and heat-treated metallurgy for extended operating life",
-      "24 to 48 hour express dispatch from central Jaipur facility"
+      "Genuine replacement spare parts procured per order"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
     "video": "",
@@ -4500,7 +4500,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4550,7 +4550,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4601,7 +4601,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4652,7 +4652,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4703,7 +4703,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4754,7 +4754,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4805,7 +4805,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4856,7 +4856,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4907,7 +4907,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -4957,7 +4957,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5008,7 +5008,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5057,7 +5057,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5108,7 +5108,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5159,7 +5159,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5210,7 +5210,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5261,7 +5261,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5312,7 +5312,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5363,7 +5363,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5414,7 +5414,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5465,7 +5465,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5516,7 +5516,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5567,7 +5567,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5618,7 +5618,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5669,7 +5669,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5720,7 +5720,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Commercial farm maintenance",
@@ -5769,7 +5769,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5820,7 +5820,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5871,7 +5871,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5922,7 +5922,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -5973,7 +5973,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6020,7 +6020,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6071,7 +6071,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6122,7 +6122,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6173,7 +6173,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6224,7 +6224,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6275,7 +6275,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6326,7 +6326,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6377,7 +6377,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6428,7 +6428,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Estate & farmhouse lawn maintenance",
@@ -6479,7 +6479,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6530,7 +6530,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6581,7 +6581,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6632,7 +6632,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6682,7 +6682,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6733,7 +6733,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6784,7 +6784,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6835,7 +6835,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6886,7 +6886,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6937,7 +6937,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -6988,7 +6988,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7039,7 +7039,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7090,7 +7090,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7141,7 +7141,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7188,7 +7188,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7234,7 +7234,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7285,7 +7285,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7336,7 +7336,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7383,7 +7383,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7430,7 +7430,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7478,7 +7478,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Crop harvesting (Wheat, Paddy, Mustard)",
@@ -7536,7 +7536,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -7594,7 +7594,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -7647,7 +7647,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7702,7 +7702,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7757,7 +7757,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7813,7 +7813,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7871,7 +7871,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7931,7 +7931,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -7991,7 +7991,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -8054,7 +8054,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -8115,7 +8115,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -8180,7 +8180,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Paddy (Rice) harvesting",
@@ -8242,7 +8242,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8302,7 +8302,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8361,7 +8361,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8422,7 +8422,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8484,7 +8484,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8545,7 +8545,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8601,7 +8601,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8658,7 +8658,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8715,7 +8715,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8766,7 +8766,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8818,7 +8818,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8878,7 +8878,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8935,7 +8935,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -8995,7 +8995,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9053,7 +9053,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9111,7 +9111,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9167,7 +9167,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9225,7 +9225,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9277,7 +9277,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9334,7 +9334,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9395,7 +9395,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9457,7 +9457,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9519,7 +9519,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9578,7 +9578,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9642,7 +9642,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9703,7 +9703,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9764,7 +9764,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9825,7 +9825,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9888,7 +9888,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -9949,7 +9949,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10010,7 +10010,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10069,7 +10069,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10127,7 +10127,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10186,7 +10186,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10235,7 +10235,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Commercial farm maintenance",
@@ -10286,7 +10286,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Commercial farm maintenance",
@@ -10337,7 +10337,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10389,7 +10389,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10441,7 +10441,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10497,7 +10497,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10550,7 +10550,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10607,7 +10607,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10660,7 +10660,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",
@@ -10713,7 +10713,7 @@ export const PRODUCTS = [
       "FMTTI-tested commercial durability standard",
       "Precision-engineered transmission case for tough Indian soil",
       "PAN India direct drop-ship dispatch from KrishiGears Express Network",
-      "24-48 hour dispatch with genuine replacement spare parts guarantee"
+      "Genuine OEM-spec replacement spare parts procured per order"
     ],
     "applications": [
       "Cotton & Sugarcane inter-cultivation",

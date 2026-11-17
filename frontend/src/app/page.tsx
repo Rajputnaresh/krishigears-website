@@ -258,7 +258,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0 mt-0.5" />
-                    <span><strong>24h Spares SLA:</strong> Critical parts dispatched from Jaipur central hub.</span>
+                    <span><strong>Spares Support:</strong> Model-matched components procured per verified order.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0 mt-0.5" />
@@ -607,10 +607,7 @@ export default function Home() {
           <div className="hidden lg:block">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { v: "28+", l: "States Covered" },
-                { v: "500+", l: "Dealer Network" },
-                { v: "1000+", l: "Pin Codes" },
-                { v: "48h", l: "Fast Dispatch" },
+                { v: "Pan-India", l: "Enquiry Coverage" }, { v: "B2B", l: "Factory Supply" }, { v: "OEM", l: "Spec Components" }, { v: "FMTTI", l: "Tested Durability" },
               ].map((s) => (
                 <div key={s.l} className="border border-lime-500/30 bg-black/80 backdrop-blur p-6">
                   <div className="font-display font-black text-4xl text-lime-400">{s.v}</div>
