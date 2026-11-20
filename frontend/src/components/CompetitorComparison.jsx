@@ -75,7 +75,7 @@ export default function CompetitorComparison() {
             trigger={
               <button
                 type="button"
-                className="px-6 py-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm rounded-lg whitespace-nowrap transition shadow-lg shrink-0 cursor-pointer active:scale-95"
+                className="px-6 py-3 bg-lime-500 hover:bg-lime-400 text-black font-extrabold text-sm rounded-lg whitespace-nowrap transition-colors shadow-lg shrink-0 cursor-pointer active:scale-98"
               >
                 Enquire About Dealership →
               </button>

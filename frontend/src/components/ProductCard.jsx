@@ -19,8 +19,8 @@ export default function ProductCard({ product }) {
     <motion.div
       data-testid={`product-card-${product.slug}`}
       className="kg-card overflow-hidden flex flex-col relative group"
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.2 }}
+      whileHover={{ y: -2 }}
+      transition={{ duration: 0.15, ease: "easeOut" }}
     >
       {/* Category and Badges Header */}
       <div className="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[70%]">
@@ -55,7 +55,7 @@ export default function ProductCard({ product }) {
               data-testid={`product-card-whatsapp-${product.slug}`}
               title={`WhatsApp enquiry for ${product.name}`}
               aria-label={`WhatsApp enquiry for ${product.name}`}
-              className="h-12 w-12 min-h-[48px] min-w-[48px] grid place-items-center bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-xl hover:scale-110 active:scale-95 transition cursor-pointer"
+              className="h-12 w-12 min-h-[48px] min-w-[48px] grid place-items-center bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-lg active:scale-98 transition-colors cursor-pointer"
             >
               <WhatsAppIcon className="h-5 w-5" />
             </button>
@@ -77,7 +77,7 @@ export default function ProductCard({ product }) {
                 width={320}
                 height={240}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                className="max-h-full max-w-full object-contain"
                 loading="lazy"
               />
             </div>
