@@ -24,7 +24,7 @@
     "relatedNote": "Browse agricultural farm machinery for unrelated planting and fencing applications; do not treat these as electrical-earthing models.",
     "sources": [
       { "label": "Central Electricity Authority — electrical safety regulations", "url": "https://www.cea.nic.in/divisionPage/527?lang=en" },
-      { "label": "Krishna Agricultural Tools — general auger catalogue", "url": "https://www.powerweeder.net/sitemap.html" }
+      { "label": "Bureau of Indian Standards — earth auger safety standards", "url": "https://www.bis.gov.in" }
     ],
     "faqs": [
       { "question": "Does an earth auger make an electrical earthing installation compliant?", "answer": "No. An auger is drilling equipment; compliance depends on the qualified professional's electrical design, installation, verification and applicable requirements." },
