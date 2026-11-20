@@ -2,8 +2,30 @@ import Link from "next/link";
 import { productSpecifications, POWER_WEEDER_FAQS } from "@/lib/product-specifications.mjs";
 
 export default function PowerWeederGuide({ items }) {
+  const rearRotary = items.filter((product) => productSpecifications(product).some(({ name, value }) => name === "Rotary type" && value === "Back rotary"));
   return (
     <section className="mt-12 space-y-6" aria-labelledby="weeder-comparison">
+      <div id="back-rotary" className="rounded-lg border border-zinc-700 bg-zinc-900/60 p-5 md:p-8 space-y-4">
+        <div className="kg-eyebrow">Dealer procurement guide</div>
+        <h2 className="kg-h2">Back rotary (rear rotary) power weeders</h2>
+        <p className="text-zinc-300 leading-relaxed">A back rotary or rear rotary power weeder has its soil-working rotor behind the wheels. The rotor position does not establish whether the tines turn forward or in the opposite direction, nor does it guarantee a particular depth or performance. If you are looking for a backward-rotary machine, confirm the rotor position and direction separately with the supplier.</p>
+        <p className="font-semibold text-white">What should a dealer or custom hiring centre compare?</p>
+        <ul className="list-disc pl-5 space-y-2 text-zinc-300">
+          <li>Actual row spacing, soil conditions, terrain, and proposed tilling task.</li>
+          <li>Fuel and transmission, rotor position and direction, working width and depth for the fitted blade assembly.</li>
+          <li>Model-specific guarding, controls, operating manual, spare blades and service arrangements.</li>
+        </ul>
+        {rearRotary.length > 0 && (
+          <div className="space-y-2">
+            <p className="font-semibold text-white">Existing catalogue models to compare:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              {rearRotary.map((product) => <li key={product.slug}><Link className="text-lime-400 underline" href={`/products/${product.slug}`}>{product.name}</Link></li>)}
+            </ul>
+            <p className="text-sm text-zinc-400">Request confirmation of the exact brand, model, configuration and supply terms; catalogue inclusion is not an availability claim.</p>
+          </div>
+        )}
+        <Link href="/bulk-order" className="inline-flex min-h-11 items-center rounded-md bg-lime-500 px-4 py-2 font-semibold text-black hover:bg-lime-400">Request a dealer quotation</Link>
+      </div>
       <h2 id="weeder-comparison" className="kg-h2">Compare power weeder specifications</h2>
       <p className="text-zinc-300">Catalog specifications are listed below in their original units. KrishiGears holds no stock; machines are ordered from suppliers per sale. Confirm specifications, attachments, price and dispatch in your quotation.</p>
       <div className="overflow-x-auto rounded-lg border border-zinc-700" role="region" aria-label="Power weeder specification comparison" tabIndex={0}>

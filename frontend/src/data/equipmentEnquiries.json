@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "earthing-earth-augers",
+    "name": "Earthing Earth Augers",
+    "title": "Earth Auger for Electrical Earthing Bore Preparation | Contractor Enquiry",
+    "description": "Discuss earth auger requirements for electrical earthing bore preparation. Confirm approved bore dimensions, ground conditions, intended machine use and site safety before procurement.",
+    "audience": "Electrical and infrastructure contractors",
+    "intro": "Looking for an earth auger to prepare bores for an electrical earthing system? KrishiGears invites project-specific enquiries from professional contractors. Bore preparation is not the same as installing, designing or testing the electrical earthing system.",
+    "contextTitle": "Choose equipment for the approved bore requirement",
+    "context": "A general earth auger for plantation or fence-post holes is not automatically suitable for electrical earthing work. Start with the qualified electrical professional's approved bore requirements, ground conditions, job access and the actual machine manufacturer's intended use. We do not claim an electrical-earthing-specific certified model at this stage.",
+    "checklist": [
+      { "label": "Project design", "detail": "Share the approved bore requirements and installation scope prepared by the qualified electrical professional." },
+      { "label": "Site and ground conditions", "detail": "Describe the soil, obstructions, access and site-control requirements; request an equipment suitability review." },
+      { "label": "Machine-specific information", "detail": "Confirm manufacturer limits, approved bits, operator controls, guarding, instructions and replacement parts." },
+      { "label": "Commercial confirmation", "detail": "Request the actual proposed model and verified brand, configuration, availability, warranty and dispatch terms." }
+    ],
+    "examples": [],
+    "exampleNote": "We are evaluating suitable configurations by enquiry; a horticultural auger or other machine is not presented as electrically approved equipment.",
+    "safetyTitle": "Electrical and excavation safety",
+    "safety": "Before any ground disturbance, the responsible contractor must arrange utility identification and clearance and a site-specific safe-work assessment. Electrical earthing design, installation, measurement and regulatory compliance remain with qualified personnel. Follow the actual machine's safety manual and approved site procedure. Equipment enquiry is not electrical advice or installation approval.",
+    "request": "Include your organization, project location, intended bore requirements, site and soil conditions, planned quantities and timeline.",
+    "relatedTitle": "General agricultural earth auger enquiries",
+    "relatedHref": "/products/category/farm-machinery",
+    "relatedNote": "Browse agricultural farm machinery for unrelated planting and fencing applications; do not treat these as electrical-earthing models.",
+    "sources": [
+      { "label": "Central Electricity Authority — electrical safety regulations", "url": "https://www.cea.nic.in/divisionPage/527?lang=en" },
+      { "label": "Krishna Agricultural Tools — general auger catalogue", "url": "https://www.powerweeder.net/sitemap.html" }
+    ],
+    "faqs": [
+      { "question": "Does an earth auger make an electrical earthing installation compliant?", "answer": "No. An auger is drilling equipment; compliance depends on the qualified professional's electrical design, installation, verification and applicable requirements." },
+      { "question": "Can I use any plantation auger for electrical earthing work?", "answer": "Do not assume interchangeability. Confirm the intended use, approved bit, ground conditions, guarding and machine limits for the exact proposed equipment." },
+      { "question": "Can I request a quote for an earthing bore project?", "answer": "Yes, share the professional project requirements and location. Actual equipment suitability, brand, commercial terms and availability require confirmation before an order." }
+    ]
+  },
+  {
+    "slug": "portable-trenchers",
+    "name": "Portable Trenchers",
+    "title": "Portable Walk-Behind Trenchers | Chain Trencher Contractor Enquiry",
+    "description": "Compare portable stand-alone chain trencher configurations for contractor and dealer enquiries. Review supplier-reported TR15D dimensions and confirm exact equipment and availability.",
+    "audience": "Irrigation, landscaping and infrastructure contractors",
+    "intro": "Planning linear excavations for an approved site project? Enquire about standalone portable chain trenchers, with machine selection based on the professionally planned trench profile, access, ground conditions and transport requirements.",
+    "contextTitle": "Standalone trencher or cultivator attachment?",
+    "context": "A portable walk-behind trencher is a dedicated excavation machine, not a tiller or PTO trenching attachment. Single- and double-chain versions may differ in rated trench dimensions and digging assemblies. Portable does not mean hand-carried: check machine weight, access and safe transport before specifying a configuration.",
+    "checklist": [
+      { "label": "Trench profile", "detail": "Provide the approved width, depth, route and ground conditions for the intended project." },
+      { "label": "Machine variant", "detail": "Confirm the chain configuration, exact engine and controls, manufacturer limits, guarding and operating manual." },
+      { "label": "Transport and continuity", "detail": "Review access, handling and transport requirements; request chain, tooth and other replacement parts information." },
+      { "label": "Service and quotation", "detail": "Request the exact supplied brand and variant, availability, warranty, freight and dispatch terms." }
+    ],
+    "examples": [
+      { "name": "Mecstroke TR15D — single-chain reference", "attributes": "Supplier-listed trench width: 150 mm; depth: 900 mm; listed weight: 220 kg.", "source": "https://strokemachines.in/product/mecstroke-brand-mild-steel-mini-trench-digger-machine-with-single-chain/" },
+      { "name": "Mecstroke TR15D — double-chain reference", "attributes": "Supplier-listed trench width: 300 mm; depth: 600 mm; listed weight: 220 kg.", "source": "https://strokemachines.in/product/mecstroke-brand-mild-steel-mini-trench-digger-machine-with-double-chain/" }
+    ],
+    "exampleNote": "Mecstroke reports these dimensions in its published model tables; they are not KrishiGears field-verified ratings, stock listings or interchangeable SKUs. The supplier's descriptive text and engine tables differ regarding fuel type; request exact engine confirmation. Confirm rated dimensions and suitability for actual ground conditions before procurement.",
+    "safetyTitle": "Underground utilities and jobsite safety",
+    "safety": "Before excavation, the responsible contractor must arrange utility location, site clearance and a job-specific risk assessment. Only trained operators should use the exact machine under its manufacturer's instructions. Do not assume a trenching machine is suitable for work near buried power, gas, water or communications services.",
+    "request": "Include your organization, intended project, approved trench profile, ground conditions, access, location, quantity and timeline.",
+    "relatedTitle": "Compare power weeder and tiller configurations",
+    "relatedHref": "/products/category/power-weeders",
+    "relatedNote": "For tillage or cultivator enquiries rather than a dedicated trenching machine.",
+    "sources": [
+      { "label": "Ditch Witch — jobsite and equipment safety guidance", "url": "https://www.ditchwitch.com/thoughts/safety-first-five-tips-for-getting-the-most-out-of-rental-equipment/" }
+    ],
+    "faqs": [
+      { "question": "What is the difference between a single-chain and double-chain trencher?", "answer": "The chain assembly and rated trench dimensions may differ. The two Mecstroke TR15D supplier records describe distinct chain variants; confirm the exact configuration and rated data in writing." },
+      { "question": "Is a portable trencher the same as a power weeder attachment?", "answer": "No. This enquiry concerns standalone chain trenchers. A tiller attachment is a separate equipment configuration; compatibility must be checked independently." },
+      { "question": "Are the two TR15D versions available to buy now?", "answer": "The published supplier model references are for specification comparison only. Request confirmation of the exact available variant, commercial terms, service and dispatch before ordering." }
+    ]
+  },
+  {
+    "slug": "food-dehydrators",
+    "name": "Food Dehydrators",
+    "title": "Commercial Food Dehydrators | Tray Dryer & Food Processor Enquiry",
+    "description": "Evaluate commercial tray food dehydrator requirements for produce processors and FPOs. Compare supplier-reported 12-, 24- and 48-tray references, loading area, power and controls.",
+    "audience": "FPOs, food processors and produce businesses",
+    "intro": "For produce and food-processing businesses, choosing a commercial food dehydrator starts with the product, batch requirements and facility—not just the number of trays. Share your needs for a model and quotation review.",
+    "contextTitle": "Compare useful tray capacity, not tray count alone",
+    "context": "A tray-based dryer can have different usable tray area, spacing, airflow and controls even at the same tray count. Electrical input does not tell you drying time, batch output or the energy used per completed batch. Confirm the exact product-specific process requirements and machine capabilities before purchase.",
+    "checklist": [
+      { "label": "Product and batch requirements", "detail": "Specify the material, desired batch workload and planned operating workflow." },
+      { "label": "Tray and air movement", "detail": "Request tray dimensions, usable loading area, spacing, ventilation and temperature control information." },
+      { "label": "Facility and sanitation", "detail": "Confirm the required electrical supply, food-contact materials, cleanability and cleaning instructions." },
+      { "label": "Support and quotation", "detail": "Request exact model and brand, manuals, warranty, parts availability and commercial terms." }
+    ],
+    "examples": [
+      { "name": "Sun Agro catalogue reference SA-SSTD12", "attributes": "Supplier-listed trays: 12; electrical input listed: 1000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" },
+      { "name": "Sun Agro catalogue reference SA-SSTD24", "attributes": "Supplier-listed trays: 24; electrical input listed: 2000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" },
+      { "name": "Sun Agro catalogue reference SA-SSTD48", "attributes": "Supplier-listed trays: 48; electrical input listed: 4000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" }
+    ],
+    "exampleNote": "These identifiers, tray counts and wattages are reported by the supplier on one grouped catalogue card. They are technical reference options, not verified KrishiGears-branded SKUs or availability claims. Ask for variant-specific data, actual supply brand, electrical configuration, usable capacity and commercial terms.",
+    "safetyTitle": "Food processing and electrical safety",
+    "safety": "Validate the intended food process and sanitation arrangements with qualified food-process and electrical professionals. A dehydrator alone does not establish safe preservation, shelf life or regulatory compliance. Request actual food-contact material documentation, installation and cleaning guidance for the selected model.",
+    "request": "Include your organization, produce or material, intended batch requirements, available electrical supply, facility location and expected order quantity.",
+    "relatedTitle": "Browse commercial farm machinery",
+    "relatedHref": "/products/category/farm-machinery",
+    "relatedNote": "Explore the existing agricultural machinery catalogue; dehydrator references above are separate enquiry options.",
+    "sources": [],
+    "faqs": [
+      { "question": "How many kilograms can a 12-tray dehydrator dry per batch?", "answer": "Tray count alone cannot determine batch mass. Request the actual tray sizes, allowable loading and material-specific validated process data for the model." },
+      { "question": "Does a higher wattage mean faster drying?", "answer": "Not necessarily. Input wattage is different from drying performance. Airflow, controls, usable loading area, material and operating conditions all matter." },
+      { "question": "Can I order a commercial dehydrator through KrishiGears?", "answer": "You may request a commercial enquiry. Exact variant, supplied brand, availability, installation requirements, warranty and quotation must be verified first." }
+    ]
+  }
+]

@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/data/catalog";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import WhatsAppLeadModal from "@/components/WhatsAppLeadModal";
 import { useTranslation } from "react-i18next";
-import { productCopyItems, getProductGSTRate } from "@/lib/product-specifications.mjs";
+import { productCopyItems } from "@/lib/product-specifications.mjs";
 import { motion } from "framer-motion";
 
 export default function ProductCard({ product }) {
@@ -125,37 +125,7 @@ export default function ProductCard({ product }) {
               )}
             </div>
 
-            {/* Direct B2C Price and Dealer Margin Strip */}
-            {product.price ? (
-              <div className="mt-3 pt-2.5 border-t border-zinc-800/70 flex items-center justify-between gap-2">
-                <div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] uppercase tracking-wider text-zinc-400 font-bold">
-                      Direct B2C Price
-                    </span>
-                    <span className="text-[9px] font-bold text-lime-400 bg-lime-500/10 border border-lime-500/30 px-1 py-0.2 rounded">
-                      Incl. {getProductGSTRate(product)}% GST
-                    </span>
-                  </div>
-                  <div className="flex items-baseline gap-1 mt-0.5">
-                    <span className="text-base sm:text-lg font-black text-lime-400 font-display">
-                      ₹{Number(product.price).toLocaleString("en-IN")}
-                    </span>
-                    <span className="text-[10px] text-zinc-400 font-medium">
-                      / unit
-                    </span>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <span className="text-[10px] uppercase tracking-wider text-amber-400 font-bold block">
-                    Dealer Wholesale
-                  </span>
-                  <span className="text-[11px] font-semibold text-zinc-300 block">
-                    Slab on MOQ 2+
-                  </span>
-                </div>
-              </div>
-            ) : null}
+            <div className="mt-3 pt-2.5 border-t border-zinc-800/70 text-sm font-semibold text-lime-400">Wholesale quotation on request</div>
           </div>
         </div>
       </Link>
@@ -164,7 +134,7 @@ export default function ProductCard({ product }) {
       <div className="px-5 pb-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between gap-2 bg-zinc-950/40">
         <div className="flex items-center gap-1.5 flex-wrap">
           <span className="inline-flex items-center gap-1 text-xs font-bold tracking-[0.15em] uppercase text-lime-400 bg-lime-500/10 border border-lime-500/30 px-2 py-0.5 rounded">
-            {t('products.factorySupply', 'Factory Supply')}
+            {product.brand || "Catalogue model"}
           </span>
           <span className="text-xs font-semibold text-zinc-300 border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 rounded">
             {t('products.moq', 'MOQ: 2 Units')}

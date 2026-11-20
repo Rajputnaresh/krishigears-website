@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const locs = require('./frontend/src/data/locations.json');
+const equipmentEnquiries = require('./frontend/src/data/equipmentEnquiries.json');
 const SITE_URL = 'https://krishigears.com';
 
 // Sole sitemap generator: npm prebuild and the legacy Python entrypoint use this file.
@@ -42,7 +43,8 @@ const products = [
 
 const categories = [
   'power-weeders',
-  'power-weeder-spare-parts'
+  'power-weeder-spare-parts',
+  ...equipmentEnquiries.map(({ slug }) => slug)
 ];
 
 const states = [

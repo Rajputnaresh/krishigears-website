@@ -54,6 +54,7 @@ export const POWER_WEEDER_FAQS = [
   { question: "How should I compare power weeder specifications?", answer: "Compare engine fuel, rated power in HP, displacement in cc, transmission, rotary position, tilling width and tilling depth for the exact model. HP describes engine power; cc describes engine displacement and is not a power rating. Missing specifications need supplier confirmation." },
   { question: "What do tilling width and tilling depth mean?", answer: "Tilling width is the soil-working span in one pass. Tilling depth is how far the tines work below the soil surface. Both depend on the fitted blades, adjustment and soil conditions; confirm the configuration and units before ordering." },
   { question: "What is the difference between front and back rotary weeders?", answer: "Front and back rotary describe the position of the soil-working rotor relative to the machine wheels. Rotary position does not identify the transmission type. Confirm both separately for the exact model." },
+  { question: "Does a backward-rotary weeder always have counter-rotating tines?", answer: "No. Rear or back rotary describes where the rotor is mounted. The direction of tine rotation is a separate specification. Ask for a model-specific manual or demonstration to confirm both." },
   { question: "Are power weeders in stock and eligible for subsidies?", answer: "KrishiGears holds no stock: machines are ordered from suppliers per sale. Price, availability, dispatch timing and attachments require a supplier-confirmed quotation. Subsidy eligibility depends on the exact model, approved test documentation and current state scheme; it is not guaranteed." },
 ];
 
@@ -231,7 +232,7 @@ export const BULK_ORDER_FAQS = [
   },
   {
     question: "Are KrishiGears spares compatible with other machine brands?",
-    answer: "Yes, our spare parts follow standard universal dimensions and metallurgical tolerances, ensuring drop-in compatibility with Balwaan, Royal Kissan, Neptune, and standard Honda-clone power tillers and weeders."
+    answer: "Some spares use common dimensional standards across Balwaan, Royal Kissan, Neptune, and Honda-clone power tillers and weeders. Confirm the original model, part dimensions and fitment with our service desk before ordering; brands and production batches can differ."
   },
   {
     question: "What are the delivery timelines across Indian states?",
