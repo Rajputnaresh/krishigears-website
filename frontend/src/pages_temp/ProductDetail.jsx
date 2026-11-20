@@ -84,8 +84,6 @@ export default function ProductDetail() {
   );
   const retailUrl = farmingtoolsProductUrl(product);
   const isPowerWeeder = product.category === "power-weeders";
-  const price = Number(product.price);
-  const hasPrice = product.price !== null && product.price !== undefined && Number.isFinite(price) && price > 0;
   const features = productCopyItems(product.features).filter(feature => !isPowerWeeder || !/^(Easy for|Fuel efficient|Perfectly balanced|Precision-engineered)/i.test(feature));
   
   const isElectric = /electric|cordless|battery|20v/i.test(product.name) ||
@@ -214,10 +212,10 @@ export default function ProductDetail() {
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-xs uppercase tracking-wider text-zinc-400 font-bold">
-                      Direct B2C / Single Unit Price
+                      B2B dealer and institutional supply
                     </span>
                     <span className="text-[10px] font-bold bg-lime-500/20 text-lime-400 px-2 py-0.5 rounded border border-lime-500/40">
-                      Inclusive of {getProductGSTRate(product)}% GST
+                      {getProductGSTRate(product)}% GST
                     </span>
                     <span className="text-[10px] font-semibold bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded border border-zinc-700">
                       Freight confirmed in quotation
@@ -225,12 +223,12 @@ export default function ProductDetail() {
                   </div>
                   <div className="flex items-baseline gap-3 mt-2">
                     <span className="text-3xl md:text-4xl font-display font-black text-lime-400">
-                      {hasPrice ? `₹${price.toLocaleString("en-IN")}` : "Request quotation"}
+                      Request quotation
                     </span>
 
                   </div>
                   <p className="text-xs text-zinc-400 mt-1">
-                    KrishiGears holds no stock. Machines are ordered from suppliers per sale. Confirm availability, attachments, warranty, freight and dispatch timing in your quotation.
+                    Machines are ordered per confirmed sale. Confirm the supplied brand, availability, price, attachments, warranty, freight and dispatch timing in your quotation.
                   </p>
                 </div>
                 <div className="sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-3 sm:pt-0 sm:pl-5">
@@ -291,7 +289,7 @@ export default function ProductDetail() {
                   <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Farmer Retail Purchase</span>
                   <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">Check current retail terms</span>
                 </div>
-                <p className="text-xs text-zinc-300 mt-1">Need a single machine for your farm? Confirm the current price, freight and included accessories on FarmingTools.in before ordering.</p>
+                <p className="text-xs text-zinc-300 mt-1">Retail listings may be for a different brand or configuration. Verify the actual brand, model, availability, price, freight and included accessories on FarmingTools.in before ordering.</p>
               </div>
               <a
                 href={retailUrl}
@@ -300,7 +298,7 @@ export default function ProductDetail() {
                 data-testid="product-buy-online-btn"
                 className="shrink-0 px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold rounded-lg border border-emerald-600 hover:border-lime-400 transition inline-flex items-center justify-center gap-1.5 shadow-md shadow-emerald-950/40"
               >
-                Buy on FarmingTools.in →
+                Browse retail listing →
               </a>
             </div>
 
@@ -435,7 +433,7 @@ export default function ProductDetail() {
                     <h4 className="font-bold text-sm text-zinc-100 group-hover:text-lime-400 line-clamp-2 leading-tight">{spare.name}</h4>
                   </Link>
                   <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-white">₹{spare.price.toLocaleString("en-IN")}</span>
+                    <span className="text-xs font-bold text-white">Confirm fitment &amp; quote</span>
                     <a
                       href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hello KrishiGears, I need the ${spare.name} compatible with ${product.name}. Please share availability.`)}&utm_source=krishigears_web&utm_medium=spares_crossell`}
                       target="_blank"
@@ -443,7 +441,7 @@ export default function ProductDetail() {
                       className="text-xs bg-zinc-800 hover:bg-lime-500 hover:text-black font-bold p-1.5 rounded text-zinc-300 transition"
                       title="Inquire via WhatsApp"
                     >
-                      Order Spare →
+                      Enquire →
                     </a>
                   </div>
                 </div>

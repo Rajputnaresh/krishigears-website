@@ -199,7 +199,7 @@ export default function Home() {
                 { v: "2 Units", l: "Zero Dead-Stock MOQ", sub: "On-Demand Factory Order" },
                 { v: "100%", l: "SMAM / DBT Ready", sub: "Tested & Certified" },
               ].map((s) => (
-                <div key={s.l} className="border-l-2 border-lime-500 pl-2.5 sm:pl-3.5 bg-zinc-950/60 py-2 sm:py-2.5 rounded-r">
+                <div key={s.l} className="rounded border border-zinc-800 bg-zinc-950/60 px-2.5 py-2 sm:px-3.5 sm:py-2.5">
                   <div className="font-display font-black text-xl sm:text-2xl text-zinc-50">{s.v}</div>
                   <div className="text-xs uppercase tracking-wider text-lime-400 font-bold mt-0.5">{s.l}</div>
                   <div className="text-[11px] text-zinc-400 font-normal">{s.sub}</div>
@@ -341,7 +341,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Comprehensive Attachments:</strong> Ridgers, reapers, water pumps, and trenchers in one order.</span>
+                    <span><strong>Equipment &amp; Attachment Enquiries:</strong> Confirm the model, compatibility and availability of required attachments in your quotation.</span>
                   </li>
                 </ul>
               </div>
@@ -497,7 +497,7 @@ export default function Home() {
               <div className="kg-eyebrow">{t('products.eyebrow', 'Products We Supply')}</div>
               <h2 className="kg-h2 mt-3 text-zinc-100">{t('products.title', 'Featured B2B equipment.')}</h2>
               <p className="text-zinc-400 text-sm mt-2 max-w-2xl">
-                Transparent factory pricing with GST included for direct single-unit farmer orders, plus wholesale quantity slabs for dealers and institutions.
+                Explore KrishiGears catalogue models for dealer and institutional enquiries. Confirm the supplied brand, availability, wholesale pricing and dispatch in your quotation.
               </p>
             </div>
             <Link

@@ -85,18 +85,6 @@ export default async function ProductDetailPage({
     "brand": {
       "@type": "Brand",
       "name": product.brand || "KrishiGears"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": product.price || 0,
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock",
-      "url": `https://krishigears.com/products/${product.slug}`,
-      "priceValidUntil": "2027-12-31",
-      "seller": {
-        "@type": "Organization",
-        "name": "KrishiGears"
-      }
     }
   };
 

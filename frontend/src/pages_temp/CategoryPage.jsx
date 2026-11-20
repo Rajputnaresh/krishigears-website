@@ -75,7 +75,7 @@ export default function CategoryPage() {
                 data-testid="cat-buy-online-btn"
                 className="border border-zinc-700 hover:border-lime-500 hover:text-lime-500 px-6 py-3.5 font-bold rounded-md"
               >
-                Buy Online at FarmingTools
+                Browse FarmingTools Retail Listings
               </a>
               <a
                 href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${waMsg}&utm_source=website&utm_medium=whatsapp&utm_campaign=kg_catalog`}
@@ -115,7 +115,7 @@ export default function CategoryPage() {
                 KrishiGears supplies commercial-grade <strong className="text-white">{category.name}</strong> engineered specifically for intensive Indian agricultural soils and multi-crop farming operations. Every machine and component in our catalog adheres to strict commercial manufacturing guidelines, guaranteeing rated power output, reinforced housings, and precision metallurgy tailored for Indian operating conditions.
               </p>
               <p className="text-zinc-300 leading-relaxed text-sm">
-                Whether you are a machinery dealer looking for exclusive territorial rights, a regional distributor outfitting local service centers, or an FPO executing procurement tenders, KrishiGears delivers transparent factory-gate pricing, zero dead-stock on-demand ordering, and guaranteed 24 to 48-hour parts dispatch from our central Jaipur logistics facility.
+                Whether you are a machinery dealer, regional distributor or FPO, request a quotation confirming the supplied brand, configuration, price, warranty, availability, freight and dispatch timing before placing an order.
               </p>
             </div>
             <div className="lg:col-span-5 bg-zinc-900/60 border border-zinc-800 rounded-lg p-6 space-y-4">
@@ -126,11 +126,11 @@ export default function CategoryPage() {
               <ul className="space-y-2.5 text-xs text-zinc-300">
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>
-                  <span><strong>15% – 25% Machine Margins:</strong> High dealer returns, with up to 35% margin on genuine OEM replacement spares.</span>
+                  <span><strong>Dealer Pricing:</strong> Request delivered cost and quantity-specific terms for the selected model.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>
-                  <span><strong>Low Starter MOQ:</strong> Begin with as few as 2 units per order with zero dead-stock capital lockup.</span>
+                  <span><strong>Order Quantities:</strong> Confirm the required minimum order and procurement terms.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-lime-400 font-bold">✓</span>

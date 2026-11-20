@@ -202,7 +202,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
     .filter(([name, d]) => (isIndia ? d.major_district : d.state === data.state) && name !== locationName)
     .slice(0, 12);
 
-  // Filter products matching this category for dynamic district inventory presentation
+  // Filter catalogue models matching this category for district enquiries.
   const districtProducts = PRODUCTS.filter((p) => p.category === categorySlug).slice(0, 4);
 
   // Pre-filled WhatsApp message
@@ -484,16 +484,16 @@ export default async function LocationCategoryPage({ params }: { params: Promise
           </div>
         </section>
 
-        {/* Dynamic District Machinery Inventory */}
+        {/* District machinery catalogue */}
         {districtProducts.length > 0 && (
           <section className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-semibold tracking-wide uppercase bg-lime-500/10 text-lime-400 border border-lime-500/30">
-                  Direct Dispatch Available
+                  Dispatch by confirmation
                 </div>
                 <h2 className="font-display font-bold text-2xl text-white mt-2">
-                  {category.name} Models for Delivery in {locationName}
+                  {category.name} Catalogue for Enquiries in {locationName}
                 </h2>
               </div>
               <Link href={`/products/category/${categorySlug}`} className="text-lime-400 hover:text-lime-300 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1">
@@ -524,7 +524,7 @@ export default async function LocationCategoryPage({ params }: { params: Promise
                   <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between">
                     <div>
                       <div className="text-[10px] text-zinc-400 uppercase">Wholesale B2B</div>
-                      <div className="font-mono text-sm font-bold text-white">₹{p.price.toLocaleString("en-IN")}</div>
+                      <div className="text-sm font-bold text-white">Quotation on request</div>
                     </div>
                     <a
                       href={`https://api.whatsapp.com/send?phone=${COMPANY.whatsapp}&text=${encodeURIComponent(`Hello KrishiGears, I am inquiring about delivery and dealer price for ${p.name} in ${locationName}, ${data.state}.`)}&utm_source=krishigears_web&utm_medium=geo_district_catalog`}

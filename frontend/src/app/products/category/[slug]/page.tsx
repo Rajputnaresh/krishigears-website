@@ -3,10 +3,12 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Page from "@/pages_temp/CategoryPage.jsx";
 import { CATEGORIES, PRODUCTS } from "@/data/catalog";
+import equipmentEnquiries from "@/data/equipmentEnquiries.json";
+import Link from "next/link";
 
 
 export async function generateStaticParams() {
-  return CATEGORIES.map((category) => ({
+  return [...CATEGORIES, ...equipmentEnquiries].map((category) => ({
     slug: category.slug,
   }));
 }
@@ -18,6 +20,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const enquiry = equipmentEnquiries.find((entry) => entry.slug === slug);
+  if (enquiry) {
+    return {
+      title: enquiry.title,
+      description: enquiry.description,
+      alternates: { canonical: `https://krishigears.com/products/category/${slug}` },
+    };
+  }
   const category = CATEGORIES.find((c) => c.slug === slug);
 
   if (!category) {
@@ -76,6 +86,61 @@ export default async function CategoryDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const enquiry = equipmentEnquiries.find((entry) => entry.slug === slug);
+  if (enquiry) {
+    return (
+      <main className="mx-auto max-w-4xl space-y-10 px-5 py-16">
+        <header className="space-y-4">
+          <Link href="/products" className="underline">Equipment catalogue</Link>
+          <h1 className="text-4xl font-bold">{enquiry.name}</h1>
+          <p className="font-semibold">{enquiry.audience}</p>
+          <p>{enquiry.intro}</p>
+          <Link href="/bulk-order" className="inline-flex min-h-11 items-center rounded bg-emerald-700 px-5 font-semibold text-white">Request a quote</Link>
+        </header>
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold">{enquiry.contextTitle}</h2>
+          <p>{enquiry.context}</p>
+          <dl className="space-y-3">
+            {enquiry.checklist.map(({ label, detail }) => (
+              <div key={label}><dt className="font-semibold">{label}</dt><dd>{detail}</dd></div>
+            ))}
+          </dl>
+        </section>
+        {enquiry.examples.length > 0 && (
+          <section className="space-y-3">
+            <h2 className="text-2xl font-semibold">Supplier catalogue references</h2>
+            <ul className="space-y-3">
+              {enquiry.examples.map(({ name, attributes, source }) => (
+                <li key={name}><a className="font-semibold underline" href={source}>{name}</a><p>{attributes}</p></li>
+              ))}
+            </ul>
+            <p>{enquiry.exampleNote}</p>
+          </section>
+        )}
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold">{enquiry.safetyTitle}</h2>
+          <p>{enquiry.safety}</p>
+          <ul className="space-y-2">
+            {enquiry.sources.map(({ label, url }) => (
+              <li key={url}><a className="underline" href={url}>{label}</a></li>
+            ))}
+          </ul>
+        </section>
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold">Common questions</h2>
+          {enquiry.faqs.map(({ question, answer }) => (
+            <details key={question} className="rounded border p-4">
+              <summary className="cursor-pointer font-semibold">{question}</summary>
+              <p className="mt-2">{answer}</p>
+            </details>
+          ))}
+          <p>{enquiry.request}</p>
+          <Link href={enquiry.relatedHref} className="underline">{enquiry.relatedTitle}</Link>
+          <p>{enquiry.relatedNote}</p>
+        </section>
+      </main>
+    );
+  }
   const isSpareParts = slug === "power-weeder-spare-parts";
   const category = CATEGORIES.find((c) => c.slug === slug);
 
@@ -113,7 +178,7 @@ export default async function CategoryDetailPage({
     }
   } : null;
 
-  const categoryFaqList = (CATEGORY_FAQS as Record<string, Array<{ question: string; answer: string }>>)[slug] || CATEGORY_FAQS["power-weeders"] || [];
+  const categoryFaqList = slug === "power-weeders" ? POWER_WEEDER_FAQS : (CATEGORY_FAQS as Record<string, Array<{ question: string; answer: string }>>)[slug] || [];
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

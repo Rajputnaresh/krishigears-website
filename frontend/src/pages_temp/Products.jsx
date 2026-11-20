@@ -12,7 +12,7 @@ export default function Products() {
           Certified Commercial Farm Machinery & Genuine Spares for <span className="text-lime-500">dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution.</span>
         </h1>
         <p className="text-zinc-300 mt-6 max-w-2xl leading-relaxed">
-          Explore our certified product categories for dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution. Retail buyers can purchase single units online through FarmingTools.in with COD.
+          Explore KrishiGears catalogue models for dealers, bulk buyers, FPOs, contractors, institutions and OEM distribution. Confirm supplied brand, availability and wholesale pricing by quotation. Retail buyers can browse separate listings on FarmingTools.in.
         </p>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
@@ -43,11 +43,11 @@ export default function Products() {
           })}
         </div>
 
-        {/* Featured Commercial Models Grid */}
+        {/* Commercial Models Grid */}
         <div className="mt-16">
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800">
             <div>
-              <div className="kg-eyebrow">Featured Supply Models</div>
+              <div className="kg-eyebrow">Catalogue Models</div>
               <h2 className="kg-h2 mt-1 text-white">Commercial Farm Equipment & Fitment Spares</h2>
             </div>
             <Link href="/bulk-order" className="text-xs text-lime-400 hover:underline">
@@ -70,21 +70,7 @@ export default function Products() {
                     {prod.features?.[0] || "Heavy-duty commercial agricultural machine built to FMTTI standards."}
                   </p>
                 </div>
-                {prod.price ? (
-                  <div className="mt-3 pt-2.5 border-t border-zinc-800/70 flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold block">Retail / Direct</span>
-                      <div className="flex items-baseline gap-1 mt-0.5">
-                        <span className="text-sm font-bold text-lime-400">₹{Number(prod.price).toLocaleString("en-IN")}</span>
-                        <span className="text-[10px] text-zinc-400">(Incl. GST)</span>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-[10px] text-amber-400 uppercase tracking-wider font-semibold block">Wholesale</span>
-                      <span className="text-[11px] text-zinc-300 font-medium">MOQ 2+</span>
-                    </div>
-                  </div>
-                ) : null}
+                <div className="mt-3 pt-2.5 border-t border-zinc-800/70 text-sm font-semibold text-lime-400">Wholesale quotation on request</div>
                 <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
                   <Link
                     href={`/products/${prod.slug}`}
@@ -148,9 +134,9 @@ export default function Products() {
             <p className="text-zinc-300 mt-2 text-sm">FPOs, agri input stores, contractors and institutions — talk to us.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md shadow-lg shadow-lime-500/20">Buy Online</a>
-            <Link href="/bulk-order" data-testid="products-bulk-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-400 text-zinc-200 px-6 py-3.5 font-bold rounded-md">Bulk Order Inquiry</Link>
+            <Link href="/bulk-order" data-testid="products-bulk-link" className="bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3.5 rounded-md shadow-lg shadow-lime-500/20">Bulk Order Inquiry</Link>
             <Link href="/become-a-dealer" data-testid="products-dealer-link" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-400 text-zinc-200 px-6 py-3.5 font-bold rounded-md">Become Dealer</Link>
+            <a href={FARMINGTOOLS_URL} target="_blank" rel="noreferrer" data-testid="products-buy-online" className="border border-zinc-700 hover:border-lime-500 hover:text-lime-400 text-zinc-200 px-6 py-3.5 font-bold rounded-md">Browse Retail Listings</a>
           </div>
         </div>
       </div>

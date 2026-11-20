@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Page from "@/pages_temp/Products.jsx";
+import equipmentEnquiries from "@/data/equipmentEnquiries.json";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "B2B Agricultural Machinery & Genuine Spare Parts Catalog",
@@ -54,6 +56,15 @@ export default function RoutePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <Page />
+      <nav aria-labelledby="equipment-enquiries" className="mx-auto max-w-4xl px-5 py-10">
+        <h2 id="equipment-enquiries" className="text-2xl font-semibold">Specialist equipment enquiries</h2>
+        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+          <li><Link className="inline-flex min-h-11 items-center underline" href="/products/category/power-weeders#back-rotary">Rear-rotary power weeders</Link></li>
+          {equipmentEnquiries.map(({ slug, name }) => (
+            <li key={slug}><Link className="inline-flex min-h-11 items-center underline" href={`/products/category/${slug}`}>{name}</Link></li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }
