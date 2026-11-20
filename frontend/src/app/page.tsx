@@ -515,6 +515,173 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== COMMERCIAL CONTRACTOR & CHC FLEET SPOTLIGHT ========== */}
+      <section data-testid="commercial-contractor-section" className="kg-section bg-zinc-950 border-y border-zinc-800">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+                <Zap className="h-3.5 w-3.5 text-amber-400" /> High-Demand Commercial Contracting Trio
+              </div>
+              <h2 className="kg-h2 mt-2 text-zinc-100">
+                Heavy-Duty Equipment for <span className="text-lime-500">Contractors, Solar &amp; Sugarcane</span>.
+              </h2>
+              <p className="text-zinc-400 text-sm mt-2 max-w-2xl">
+                High-margin, high-torque machinery engineered for Custom Hiring Centers (CHCs), agricultural contractors, and solar infrastructure. Direct wholesale dispatch with full GST input tax credit.
+              </p>
+            </div>
+            <a
+              href="https://farmingtools.in/blogs/krishigears-farming-knowledge-hub/commercial-contractors-guide-trenchers-solar-earthing-augers-back-rotary-weeders-2026-fleet-blueprint"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 border border-amber-500/30 bg-amber-950/20 px-4 py-2.5 rounded-lg transition"
+            >
+              Read Commercial Contractor Fleet Guide &rarr;
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Trencher */}
+            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+              <div>
+                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/DOUBLE-CHAIN-T-1.jpg?v=1795216178"
+                    alt="KrishiGears Portable Chain Trencher"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                  <span className="absolute top-3 left-3 bg-amber-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                    10x Trenching Speed
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears Portable Chain Trencher</h3>
+                <p className="text-xs text-zinc-400 mb-4">Drip sub-main pipes, electrical conduits &amp; fiber optic laying</p>
+                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Output:</strong> 60 meters/hr excavation in hardpan</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Trench Profile:</strong> 100mm width &bull; 300-600mm depth</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Cutting Teeth:</strong> Tungsten carbide chain teeth</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
+                  <div className="text-base font-black text-lime-400">₹26,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+                </div>
+                <a
+                  href="https://farmingtools.in/products/kg-stg-tr15d-portable-trencher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
+                >
+                  Buy / View &rarr;
+                </a>
+              </div>
+            </div>
+
+            {/* Card 2: Earth Auger */}
+            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+              <div>
+                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/x1-ea70.jpg?v=1795215216"
+                    alt="KrishiGears 70cc Earth Auger"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                  <span className="absolute top-3 left-3 bg-emerald-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                    Solar Earthing Specialist
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears 70cc Commercial Earth Auger</h3>
+                <p className="text-xs text-zinc-400 mb-4">Solar plant chemical earthing pits, fencing &amp; plantation</p>
+                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Speed:</strong> 45-sec pit boring for earthing rods</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>High Torque:</strong> 70cc engine with anti-vibration dual frame</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Bit Compatibility:</strong> 6&quot;, 8&quot;, 10&quot; &amp; 12&quot; heavy ground bits</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
+                  <div className="text-base font-black text-lime-400">₹10,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+                </div>
+                <a
+                  href="https://farmingtools.in/products/kg-stg-x1-power-x1-ea70-3de94fe1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
+                >
+                  Buy / View &rarr;
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3: Back Rotary Weeder */}
+            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+              <div>
+                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/kg-186-backrotary.webp?v=1795180532"
+                    alt="KrishiGears KG-186 Back Rotary Diesel Weeder"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                  <span className="absolute top-3 left-3 bg-blue-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                    Sugarcane &amp; Clay Soil King
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-186 Back Rotary Weeder</h3>
+                <p className="text-xs text-zinc-400 mb-4">Sugarcane, cotton &amp; orchard inter-row weeding without root damage</p>
+                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>10 HP Diesel:</strong> Direct-injection heavy-torque powertrain</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Rear Rotary PTO:</strong> 0% wheel slipping &bull; no machine leaping</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Output:</strong> 2.5–3.0 Acres/day commercial capacity</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
+                  <div className="text-base font-black text-lime-400">₹58,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+                </div>
+                <a
+                  href="https://farmingtools.in/products/krishigears-kg-186-back-rotary-diesel-weeder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
+                >
+                  Buy / View &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ========== ABOUT KRISHIGEARS ========== */}
       <section data-testid="about-section" className="kg-section">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
