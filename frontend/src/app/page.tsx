@@ -516,12 +516,12 @@ export default function Home() {
       </section>
 
       {/* ========== COMMERCIAL CONTRACTOR & CHC FLEET SPOTLIGHT ========== */}
-      <section data-testid="commercial-contractor-section" className="kg-section bg-zinc-950 border-y border-zinc-800">
+      <section data-testid="commercial-contractor-section" className="kg-section bg-[#0F1010] border-y border-[#27272A]">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
               <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-                <Zap className="h-3.5 w-3.5 text-amber-400" /> High-Demand Commercial Contracting Trio
+                <Zap className="h-3.5 w-3.5 text-amber-400" /> Commercial Contracting Heavyweights &bull; 2026 Fleet
               </div>
               <h2 className="kg-h2 mt-2 text-zinc-100">
                 Heavy-Duty Equipment for <span className="text-lime-500">Contractors, Solar &amp; Sugarcane</span>.
@@ -534,7 +534,7 @@ export default function Home() {
               href="https://farmingtools.in/blogs/krishigears-farming-knowledge-hub/commercial-contractors-guide-trenchers-solar-earthing-augers-back-rotary-weeders-2026-fleet-blueprint"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 border border-amber-500/30 bg-amber-950/20 px-4 py-2.5 rounded-lg transition"
+              className="text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 border border-amber-500/30 bg-amber-950/20 px-4 py-2.5 rounded-lg transition min-h-[44px]"
             >
               Read Commercial Contractor Fleet Guide &rarr;
             </a>
@@ -542,28 +542,28 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1: Trencher */}
-            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+            <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
-                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
                   <img
                     src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/DOUBLE-CHAIN-T-1.jpg?v=1795216178"
                     alt="KrishiGears Portable Chain Trencher"
                     className="max-h-full max-w-full object-contain"
                   />
-                  <span className="absolute top-3 left-3 bg-amber-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                  <span className="absolute top-3 left-3 bg-amber-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
                     10x Trenching Speed
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears Portable Chain Trencher</h3>
                 <p className="text-xs text-zinc-400 mb-4">Drip sub-main pipes, electrical conduits &amp; fiber optic laying</p>
-                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Output:</strong> 60 meters/hr excavation in hardpan</span>
+                    <span><strong>Output:</strong> 60 meters/hr continuous excavation in hardpan</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Trench Profile:</strong> 100mm width &bull; 300-600mm depth</span>
+                    <span><strong>Trench Profile:</strong> 100mm width &bull; 300-600mm adjustable depth</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
@@ -571,41 +571,51 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
-                <div>
-                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
-                  <div className="text-base font-black text-lime-400">₹26,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+              <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹26,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
-                <a
-                  href="https://farmingtools.in/products/kg-stg-tr15d-portable-trencher"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
-                >
-                  Buy / View &rarr;
-                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://farmingtools.in/products/kg-stg-tr15d-portable-trencher"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
+                  >
+                    Buy Direct &rarr;
+                  </a>
+                  <a
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20a%20dealer/contractor%20quotation%20for%20the%20Portable%20Chain%20Trencher."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5 text-lime-400 shrink-0" /> Quote
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Card 2: Earth Auger */}
-            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+            <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
-                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
                   <img
                     src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/x1-ea70.jpg?v=1795215216"
                     alt="KrishiGears 70cc Earth Auger"
                     className="max-h-full max-w-full object-contain"
                   />
-                  <span className="absolute top-3 left-3 bg-emerald-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                  <span className="absolute top-3 left-3 bg-emerald-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
                     Solar Earthing Specialist
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears 70cc Commercial Earth Auger</h3>
                 <p className="text-xs text-zinc-400 mb-4">Solar plant chemical earthing pits, fencing &amp; plantation</p>
-                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Speed:</strong> 45-sec pit boring for earthing rods</span>
+                    <span><strong>Speed:</strong> 45-sec pit boring for earthing electrodes</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
@@ -617,45 +627,55 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
-                <div>
-                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
-                  <div className="text-base font-black text-lime-400">₹10,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+              <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹10,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
-                <a
-                  href="https://farmingtools.in/products/kg-stg-x1-power-x1-ea70-3de94fe1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
-                >
-                  Buy / View &rarr;
-                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://farmingtools.in/products/kg-stg-x1-power-x1-ea70-3de94fe1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
+                  >
+                    Buy Direct &rarr;
+                  </a>
+                  <a
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20the%2070cc%20Earth%20Auger%20with%20solar%20earthing%20bits%20for%20a%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5 text-lime-400 shrink-0" /> Quote
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Card 3: Back Rotary Weeder */}
-            <div className="bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition hover:-translate-y-1">
+            <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
-                <div className="relative h-48 bg-zinc-950 rounded-xl overflow-hidden mb-5 border border-zinc-800/80 flex items-center justify-center p-3">
+                <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
                   <img
                     src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/kg-186-backrotary.webp?v=1795180532"
                     alt="KrishiGears KG-186 Back Rotary Diesel Weeder"
                     className="max-h-full max-w-full object-contain"
                   />
-                  <span className="absolute top-3 left-3 bg-blue-500/90 text-zinc-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wide">
+                  <span className="absolute top-3 left-3 bg-sky-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
                     Sugarcane &amp; Clay Soil King
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-186 Back Rotary Weeder</h3>
                 <p className="text-xs text-zinc-400 mb-4">Sugarcane, cotton &amp; orchard inter-row weeding without root damage</p>
-                <ul className="text-xs text-zinc-300 space-y-2 mb-6">
+                <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
                     <span><strong>10 HP Diesel:</strong> Direct-injection heavy-torque powertrain</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Rear Rotary PTO:</strong> 0% wheel slipping &bull; no machine leaping</span>
+                    <span><strong>Rear Rotary PTO:</strong> 0% wheel slipping &bull; zero machine leaping</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
@@ -663,19 +683,29 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between gap-3">
-                <div>
-                  <div className="text-[11px] text-zinc-400">Direct Retail / B2B</div>
-                  <div className="text-base font-black text-lime-400">₹58,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></div>
+              <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹58,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
-                <a
-                  href="https://farmingtools.in/products/krishigears-kg-186-back-rotary-diesel-weeder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-2 bg-lime-600 hover:bg-lime-500 text-zinc-950 text-xs font-bold rounded-lg transition"
-                >
-                  Buy / View &rarr;
-                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://farmingtools.in/products/krishigears-kg-186-back-rotary-diesel-weeder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
+                  >
+                    Buy Direct &rarr;
+                  </a>
+                  <a
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20want%20a%20B2B%20dealership%20quote%20for%20the%2010HP%20Back%20Rotary%20Diesel%20Weeder."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5 text-lime-400 shrink-0" /> Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>
