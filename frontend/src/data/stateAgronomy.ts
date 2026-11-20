@@ -237,6 +237,158 @@ export const STATE_AGRONOMY: Record<string, StateAgronomy> = {
         answer: "In heavy black clay soils, the KG-177F 9HP Diesel Weeder provides the necessary weight and penetration torque to cut through tough dry-season soil crusts."
       }
     ]
+  },
+  "west-bengal": {
+    name: "West Bengal",
+    soil: "Gangetic Alluvial, Coastal Saline & Terai Loam",
+    crops: "Aman/Boro Paddy, Jute, Potato, Mustard, Vegetables",
+    recommended_weeder: "KG-170F 7HP Petrol & KG-177F 9HP Diesel with wetland cage wheels and ditching blades",
+    subsidy_scheme: "Matir Katha / Financial Support for Farm Mechanization (FSSM)",
+    subsidy_pct: "40% to 50% DBT subsidy on power weeders and tillers",
+    dispatch_hub: "Jaipur Logistics Hub -> Kolkata / Howrah / Siliguri Depots (36-48h)",
+    faqs: [
+      {
+        question: "How do West Bengal farmers apply for power weeder subsidy under FSSM?",
+        answer: "Farmers in West Bengal can apply through the Matir Katha portal (matirkatha.gov.in) with their Krishi Jomi land records and proforma invoice from an authorized KrishiGears dealer."
+      },
+      {
+        question: "Can KrishiGears power weeders operate in wet Aman/Boro paddy fields?",
+        answer: "Yes, our KG-170F and KG-177F models support bolt-on anti-skid puddle cage wheels and water-resistant Viton axle seals engineered specifically for wetland puddling."
+      }
+    ]
+  },
+  "odisha": {
+    name: "Odisha",
+    soil: "Red Loam, Coastal Alluvial, Lateritic & Black Soils",
+    crops: "Paddy, Pulses (Urad/Moong), Groundnut, Mustard, Vegetables, Cashew",
+    recommended_weeder: "KG-177F 9HP Diesel & KG-170F 7HP Petrol with heavy-duty rotary tines",
+    subsidy_scheme: "Krushak Odisha / Farm Mechanization DBT (Balaram / SAFAL)",
+    subsidy_pct: "40% to 50% DBT subsidy for general; up to 60% for women/SC/ST farmers",
+    dispatch_hub: "Jaipur Logistics Facility -> Bhubaneswar, Cuttack & Sambalpur Transporters (48h)",
+    faqs: [
+      {
+        question: "How can Odisha farmers get farm machinery subsidy via Krushak Odisha?",
+        answer: "Register with your Krushak ID on agrisnetodisha.ori.nic.in or the SAFAL portal. Select power tiller/weeder, choose your district, and submit your authorized dealer quotation."
+      },
+      {
+        question: "Which model is best for Western Odisha red laterite soils?",
+        answer: "The KG-177F 9HP Diesel Weeder delivers the low-RPM torque needed to break compacted red laterite crusts without excessive belt slippage."
+      }
+    ]
+  },
+  "chhattisgarh": {
+    name: "Chhattisgarh",
+    soil: "Matasi (Sandy Loam), Dorsa (Clay Loam) & Kanhar (Deep Black Clay)",
+    crops: "Paddy, Maize, Kodo-Kutki (Millets), Soybean, Pulses",
+    recommended_weeder: "KG-186-BR 10HP Back Rotary Diesel & KG-177F 9HP Diesel Weeder",
+    subsidy_scheme: "Rajiv Gandhi Kisan Nyay Mechanization & State DBT Subsidy",
+    subsidy_pct: "40% to 50% DBT grant on certified farm machinery",
+    dispatch_hub: "Jaipur Central Corridor -> Raipur, Bilaspur & Durg Transport Depots (36h)",
+    faqs: [
+      {
+        question: "How can Chhattisgarh farmers apply for weeder subsidy on the Kisaan portal?",
+        answer: "Apply on kisan.cg.nic.in under the Krishi Yantrikikaran scheme using your B1 Bhoo-naksha land records and KrishiGears dealer estimate."
+      },
+      {
+        question: "Why is a back-rotary weeder recommended for Kanhar soils in Durg and Raipur?",
+        answer: "Kanhar soils turn sticky when wet and rock-hard when dry. The KG-186-BR Back Rotary utilizes independent traction wheels and high-speed enclosed tines to prevent operator bucking."
+      }
+    ]
+  },
+  "jharkhand": {
+    name: "Jharkhand",
+    soil: "Red Gravelly Upland Soils (Tanr) & Clay Loam Lowlands (Don)",
+    crops: "Paddy, Maize, Arhar (Pigeon Pea), Vegetables, Mustard",
+    recommended_weeder: "KG-170F 7HP Petrol & KG-177F 9HP Diesel Multi-Purpose Weeder",
+    subsidy_scheme: "Jharkhand Krishi Yantrikaran Protsahan Yojana",
+    subsidy_pct: "50% DBT subsidy on certified power weeders and tillers",
+    dispatch_hub: "Jaipur Central Hub -> Ranchi, Jamshedpur & Dhanbad Logistics Depots (48h)",
+    faqs: [
+      {
+        question: "How can Jharkhand farmers apply for machinery subsidy?",
+        answer: "Submit an online application on krishi.jharkhand.gov.in under the Agricultural Mechanization Portal with an official KrishiGears proforma invoice."
+      },
+      {
+        question: "Are KrishiGears weeders suitable for terraced Tanr lands?",
+        answer: "Yes, the KG-170F 7HP Petrol weeder is lightweight (under 75kg) and easy to maneuver across narrow upland terrace steps."
+      }
+    ]
+  },
+  "kerala": {
+    name: "Kerala",
+    soil: "Coastal Sandy, Lateritic & High-Altitude Hill/Forest Soils",
+    crops: "Rubber, Coconut, Areca Nut, Black Pepper, Cardamom, Banana, Spices",
+    recommended_weeder: "KG-170F 7HP Petrol Mini-Weeder & Portable Earth Augers for saplings",
+    subsidy_scheme: "Subhiksha Keralam & Kerala Agricultural Mechanization Mission",
+    subsidy_pct: "40% to 50% subsidy under State Horticulture Mission (SHM)",
+    dispatch_hub: "Jaipur Hub -> Kochi, Thrissur & Kozhikode Express Depots (48-72h)",
+    faqs: [
+      {
+        question: "How can Kerala plantation owners get subsidies on weeding machinery?",
+        answer: "Apply on the AIMS portal (aims.kerala.gov.in) under the Subhiksha Keralam farm mechanization program with local Krishi Bhavan verification."
+      },
+      {
+        question: "Which weeder is best for coconut and rubber inter-row weed clearance?",
+        answer: "The compact KG-170F 7HP Petrol model maneuvers effortlessly between tree basins without damaging shallow lateral roots."
+      }
+    ]
+  },
+  "himachal-pradesh": {
+    name: "Himachal Pradesh",
+    soil: "Brown Hill Soils, Mountain Glacial Loam & Gravelly Alluvium",
+    crops: "Apples, Stone Fruits (Plum/Peach), Off-Season Vegetables, Maize",
+    recommended_weeder: "KG-170F 7HP Petrol Narrow-Tread Weeder & Portable Chain Trenchers",
+    subsidy_scheme: "HP Krishi Yantrikaran Scheme & National Horticulture Mission (NHM)",
+    subsidy_pct: "50% subsidy for hill horticulture machinery",
+    dispatch_hub: "Jaipur Facility -> Chandigarh / Solan / Mandi Transport Centers (24-36h)",
+    faqs: [
+      {
+        question: "How do Himachal apple growers apply for power weeder subsidy?",
+        answer: "Apply through the HP Agriculture Department portal (agrishivalik.hp.gov.in) with Revenue Record (Khatoni) and KrishiGears authorized quote."
+      },
+      {
+        question: "Can KrishiGears machines navigate steep terrace apple orchards?",
+        answer: "Yes, our narrow-frame 7HP petrol units feature adjustable handles and low center of gravity engineered specifically for narrow hill terrace contours."
+      }
+    ]
+  },
+  "uttarakhand": {
+    name: "Uttarakhand",
+    soil: "Hill Brown Forest Soils, Gravelly Bhabar & Terai Alluvium",
+    crops: "Apple, Pear, Hill Millets (Mandua), Pulses, Sugarcane (Terai belt)",
+    recommended_weeder: "KG-170F 7HP Petrol for hills & KG-177F 9HP Diesel for Udham Singh Nagar Terai",
+    subsidy_scheme: "Uttarakhand Krishi Yantrikaran Protsahan Scheme",
+    subsidy_pct: "40% to 50% DBT grant on agricultural mechanization",
+    dispatch_hub: "Jaipur Logistics Hub -> Dehradun, Haridwar & Rudrapur Transport Depots (24-36h)",
+    faqs: [
+      {
+        question: "How do Uttarakhand farmers register for agricultural machinery subsidy?",
+        answer: "Register on agriculture.uk.gov.in or consult your local Block Development Office (BDO) with a KrishiGears authorized proforma quotation."
+      },
+      {
+        question: "Which machine is recommended for sugarcane weeding in Udham Singh Nagar?",
+        answer: "For Terai flat lands and wide sugarcane rows, the KG-177F 9HP Diesel provides high ground clearance and aggressive weed cutting."
+      }
+    ]
+  },
+  "assam": {
+    name: "Assam",
+    soil: "Brahmaputra Alluvial Loam, Riverine Clay & Sub-Himalayan Red Soils",
+    crops: "Ahu/Sali/Boro Paddy, Tea Gardens, Mustard, Jute, Areca Nut",
+    recommended_weeder: "KG-170F 7HP Petrol Multi-Tine & KG-177F 9HP Diesel with cage wheels",
+    subsidy_scheme: "CMSGUY & SMAM Assam Mechanization Mission",
+    subsidy_pct: "50% to 70% subsidy for smallholders and FPOs",
+    dispatch_hub: "Jaipur Hub -> Guwahati / Tinsukia / Silchar Freight Corridors (72h)",
+    faqs: [
+      {
+        question: "How can Assam farmers and FPOs access power weeder subsidies?",
+        answer: "Apply on the CMSGUY portal or Assam Agriculture Department platform (diragri.assam.gov.in) with your Farmer ID and KrishiGears dealer quote."
+      },
+      {
+        question: "Can KrishiGears weeders be used between rows in tea estates?",
+        answer: "Yes, the adjustable 18-inch narrow rotor on the KG-170F petrol model removes invasive creeper weeds between mature tea bush rows without collar damage."
+      }
+    ]
   }
 };
 
