@@ -8200,6 +8200,210 @@ export const PRODUCTS = [
     "priceNotice": "Indicative base price: confirmed quotation subject to cutter bar width and tractor/engine mounting specs."
   },
   {
+    "slug": "vardhman-2fp",
+    "category": "crop-reapers",
+    "name": "Vardhman 2FP 5HP Petrol Walk-Behind Multi-Crop Reaper",
+    "model": "2FP",
+    "brand": "Vardhman",
+    "badges": [
+      "Quotation on Request",
+      "5.0 HP Petrol",
+      "Self-Propelled",
+      "Paddy & Wheat Harvester"
+    ],
+    "price": 110000,
+    "comparePrice": 125000,
+    "images": [
+      "/images/products/vardhman/vardhman-2fp.webp"
+    ],
+    "specs": {
+      "Brand": "Vardhman",
+      "Model": "2FP",
+      "Product Type": "Self-Propelled Walk-Behind Crop Reaper",
+      "Engine Power": "5.0 HP (GX200 type, 4-Stroke OHV)",
+      "Fuel Type": "Petrol",
+      "Fuel Tank Capacity": "3.5 Litres",
+      "Cutting Width": "1200 mm (4 Feet)",
+      "Cutting Height": "50 mm - 100 mm (Adjustable)",
+      "Working Capacity": "1 to 1.5 Acres / Hour",
+      "Fuel Consumption": "800 - 1000 ml / Hour",
+      "Weight": "130 kg",
+      "Drive System": "Gear / Belt Transmission"
+    },
+    "features": [
+      "Heavy-duty 5.0 HP petrol engine delivering consistent harvesting torque",
+      "Dual-conveyor star-wheel mechanism engineered for tangle-free crop conveyance",
+      "1200 mm cutter bar engineered for wheat, paddy, soybean, and fodder harvesting",
+      "Self-propelled walk-behind design reducing operator fatigue on multi-acre farms",
+      "Direct factory supply with verified manufacturer warranty & pan-India spares"
+    ],
+    "applications": [
+      "Paddy (Rice) harvesting",
+      "Wheat harvesting",
+      "Soybean harvesting",
+      "Mustard & cereal crop cutting"
+    ],
+    "benefits": [
+      "Replaces 12-15 manual laborers per acre, completing harvesting in ~1 hour",
+      "Clean cutting mechanism eliminates shattering and grain loss during harvest",
+      "Protected dealer margins with full GST invoice and institutional financing support"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears dealer after-sales support.",
+    "hsn": "8433",
+    "gst": 5
+  },
+  {
+    "slug": "vardhman-2fd",
+    "category": "crop-reapers",
+    "name": "Vardhman 2FD 5HP Diesel Heavy-Duty Soybean & Crop Reaper",
+    "model": "2FD",
+    "brand": "Vardhman",
+    "badges": [
+      "Quotation on Request",
+      "5.0 HP Diesel",
+      "High Fuel Efficiency",
+      "Soybean Specialist"
+    ],
+    "price": 125000,
+    "comparePrice": 145000,
+    "images": [
+      "/images/products/vardhman/vardhman-2fd.webp"
+    ],
+    "specs": {
+      "Brand": "Vardhman",
+      "Model": "2FD",
+      "Product Type": "Self-Propelled Walk-Behind Diesel Crop Reaper",
+      "Engine Power": "5.0 HP Air-Cooled Diesel Engine",
+      "Fuel Type": "Diesel",
+      "Fuel Tank Capacity": "5.0 Litres",
+      "Cutting Width": "1200 mm (4 Feet)",
+      "Cutting Height": "50 mm - 100 mm (Adjustable)",
+      "Working Capacity": "1 to 1.5 Acres / Hour",
+      "Fuel Consumption": "700 - 900 ml / Hour",
+      "Weight": "145 kg",
+      "Drive System": "Heavy-Duty Oil-Bath Gearbox"
+    },
+    "features": [
+      "Fuel-efficient 5.0 HP diesel engine providing maximum torque for dense and tough stalks",
+      "Low running cost per acre making it ideal for custom hiring centres (CHCs) and contractors",
+      "Mild steel reinforced chassis built for uneven Indian paddy and soybean fields",
+      "High-capacity 5.0-litre fuel tank enabling extended field shifts without refuelling",
+      "Official Vardhman manufacturer warranty backed by KrishiGears spares network"
+    ],
+    "applications": [
+      "Soybean harvesting specialist",
+      "Paddy (Rice) harvesting",
+      "Wheat & barley harvesting",
+      "Fodder and pulse cutting"
+    ],
+    "benefits": [
+      "Extreme diesel fuel economy: harvests 1 acre on less than 1 litre of diesel",
+      "Robust cutting blade engineered for hard crop stems and low-cut soybean harvesting",
+      "Wholesale quotation support with fast door-step logistics across India"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears dealer after-sales support.",
+    "hsn": "8433",
+    "gst": 5
+  },
+  {
+    "slug": "vardhman-2fpc",
+    "category": "crop-reapers",
+    "name": "Vardhman 2FPC 5HP Compact Petrol Multi-Crop Reaper",
+    "model": "2FPC",
+    "brand": "Vardhman",
+    "badges": [
+      "Quotation on Request",
+      "5.0 HP Petrol",
+      "Compact & Agile",
+      "Terraced Field Specialist"
+    ],
+    "price": 105000,
+    "comparePrice": 120000,
+    "images": [
+      "/images/products/vardhman/vardhman-2fpc.webp"
+    ],
+    "specs": {
+      "Brand": "Vardhman",
+      "Model": "2FPC",
+      "Product Type": "Compact Self-Propelled Multi-Crop Reaper",
+      "Engine Power": "5.0 HP Petrol Engine",
+      "Fuel Type": "Petrol",
+      "Fuel Tank Capacity": "3.5 Litres",
+      "Cutting Width": "1000 mm / 1200 mm",
+      "Weight": "135 kg",
+      "Drive System": "Gear Transmission"
+    },
+    "features": [
+      "Compact chassis designed specifically for smallholders, narrow bunds, and terraced plots",
+      "Lightweight 135 kg construction allowing easy loading onto pick-up trucks and field transfer",
+      "Precision cutter bar delivering clean cuts without lodging grain heads",
+      "Ergonomic handle controls for effortless tight-radius turning at field borders"
+    ],
+    "applications": [
+      "Terraced & smallholder paddy harvesting",
+      "Wheat harvesting in bounded plots",
+      "Millets & pulse harvesting"
+    ],
+    "benefits": [
+      "High agility in small, fragmented Indian landholdings where full-size harvesters cannot enter",
+      "Quick field deployment with zero setup time",
+      "Wholesale supply with dealer territorial exclusivity options"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears dealer after-sales support.",
+    "hsn": "8433",
+    "gst": 5
+  },
+  {
+    "slug": "vardhman-3fd",
+    "category": "crop-reapers",
+    "name": "Vardhman 3FD 5HP 3-Conveyor Diesel Heavy-Duty Crop Reaper",
+    "model": "3FD",
+    "brand": "Vardhman",
+    "badges": [
+      "Quotation on Request",
+      "5.0 HP Diesel",
+      "3-Conveyor System",
+      "Walk-Behind & Ride-On Seat"
+    ],
+    "price": 145000,
+    "comparePrice": 170000,
+    "images": [
+      "/images/products/vardhman/vardhman-3fd.webp"
+    ],
+    "specs": {
+      "Brand": "Vardhman",
+      "Model": "3FD",
+      "Product Type": "Heavy-Duty 3-Conveyor Diesel Crop Reaper",
+      "Engine Power": "5.0 HP Diesel Engine",
+      "Fuel Type": "Diesel",
+      "Fuel Tank Capacity": "5.0 Litres",
+      "Conveyor System": "3-Star Wheel / 3-Belt Conveyor System",
+      "Cutting Width": "1200 mm (4 Feet)",
+      "Working Capacity": "1 to 1.5 Acres / Hour",
+      "Configurations": "Walk-Behind Handles & Operator Ride-On Seat Attachment",
+      "Drive System": "Heavy-Duty Multi-Speed Transmission"
+    },
+    "features": [
+      "3-conveyor star-wheel system engineered specifically for tall-stem crops like mustard, wheat, and Sudan grass",
+      "Prevents tall crop stems from tangling or clogging during continuous cutting",
+      "Available with comfortable operator ride-on seat attachment for large-scale contract harvesting",
+      "5.0 HP air-cooled industrial diesel engine built for high-duty continuous harvesting cycles"
+    ],
+    "applications": [
+      "Tall crop harvesting (Mustard, Sudan Grass, Jowar, Bajra)",
+      "High-yield wheat & paddy harvesting",
+      "Commercial contract harvesting operations"
+    ],
+    "benefits": [
+      "Tri-conveyor design completely stops crop backfall and ensures uniform row windrowing",
+      "Optional ride-on seat allows operators to harvest 8-10 acres a day without physical fatigue",
+      "Direct factory supply with genuine OEM conveyor belts and blade sets"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears dealer after-sales support.",
+    "hsn": "8433",
+    "gst": 5
+  },
+  {
     "slug": "rly-rh-3800d-sp",
     "category": "power-weeders",
     "name": "KrishiGears RH-3800D-SP Front Rotary Mini Tiller | 247 CC",
