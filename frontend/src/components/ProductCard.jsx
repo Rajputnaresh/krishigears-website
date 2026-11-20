@@ -145,7 +145,7 @@ export default function ProductCard({ product }) {
           href={`/products/${product.slug}`}
           data-testid={`product-card-cta-${product.slug}`}
           aria-label={`View full specifications and quotation for ${product.name}`}
-          className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform min-h-[36px] py-1 pl-2"
+          className="text-xs font-bold text-lime-400 hover:text-lime-300 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform min-h-[44px] py-1 pl-2"
         >
           <span>{t('products.specsCta', 'Specs & Quote')}</span>
           <ArrowRight className="h-3.5 w-3.5" />

@@ -269,7 +269,7 @@ export default function Home() {
               <div className="mt-7 pt-5 border-t border-zinc-800">
                 <Link
                   href="/become-a-dealer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs uppercase tracking-wider rounded-md transition"
+                  className="w-full inline-flex items-center justify-center gap-2 min-h-[44px] py-2.5 px-4 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs uppercase tracking-wider rounded-md transition"
                 >
                   Apply For Dealership <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -309,7 +309,7 @@ export default function Home() {
                   trigger={
                     <button
                       type="button"
-                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-emerald-500/40 transition cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 min-h-[44px] py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-emerald-500/40 transition cursor-pointer"
                     >
                       <WhatsAppIcon className="h-4 w-4 fill-current" />
                       Request CHC Fleet Quote
@@ -352,7 +352,7 @@ export default function Home() {
                   trigger={
                     <button
                       type="button"
-                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-amber-500/40 transition cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 min-h-[44px] py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold text-xs uppercase tracking-wider rounded-md border border-zinc-700 hover:border-amber-500/40 transition cursor-pointer"
                     >
                       <WhatsAppIcon className="h-4 w-4 fill-current" />
                       FPO Subsidy Invoicing

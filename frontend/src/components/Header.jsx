@@ -121,7 +121,7 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Language Selector"
-              className="px-2.5 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition cursor-pointer"
+              className="px-2.5 py-1.5 min-h-[44px] text-xs md:text-sm font-semibold text-zinc-300 hover:text-white flex items-center gap-1 rounded border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 outline-none focus-visible:ring-2 focus-visible:ring-lime-400 transition cursor-pointer"
             >
               <Globe className="h-3.5 w-3.5 text-lime-400" />
               <span>{i18n.language === "hi" ? "हिं" : i18n.language === "mr" ? "म" : "EN"}</span>
@@ -151,7 +151,7 @@ export default function Header() {
             onClick={toggleSunlight}
             title={sunlight ? "Switch to Dark Mode (डार्क मोड)" : "Switch to Light / Sunlight Mode (धूप मोड)"}
             aria-label={sunlight ? "Switch to Dark Mode" : "Switch to Light Mode"}
-            className={`px-2.5 py-1.5 min-h-[36px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
+            className={`px-2.5 py-1.5 min-h-[44px] text-xs md:text-sm font-semibold rounded flex items-center gap-1.5 transition border cursor-pointer ${
               sunlight
                 ? "bg-amber-100 text-amber-950 border-amber-300 shadow-sm"
                 : "bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white"
