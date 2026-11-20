@@ -27,19 +27,8 @@ const staticRoutes = [
   { path: '/power-weeders-in-india', prio: '0.9', freq: 'weekly' }
 ];
 
-const products = [
-  'kg-170f',
-  'kg-173f-diesel',
-  'kg-177f-wolf',
-  'kg-icp-p170-lde',
-  'kg-icp-up170-sh',
-  'kg-icd-up186-sh',
-  'kg-baby-weeder',
-  'kg-crankshaft',
-  'kg-piston-ring',
-  'kg-recoil-starter',
-  'kg-rotary-blades'
-];
+const { PRODUCTS } = require('./frontend/src/data/catalog.js');
+const products = Array.from(new Set(PRODUCTS.map(p => p.slug)));
 
 const categories = [
   'power-weeders',
