@@ -48,10 +48,10 @@
       { "label": "Service and quotation", "detail": "Request the exact supplied brand and variant, availability, warranty, freight and dispatch terms." }
     ],
     "examples": [
-      { "name": "Mecstroke TR15D — single-chain reference", "attributes": "Supplier-listed trench width: 150 mm; depth: 900 mm; listed weight: 220 kg.", "source": "https://strokemachines.in/product/mecstroke-brand-mild-steel-mini-trench-digger-machine-with-single-chain/" },
-      { "name": "Mecstroke TR15D — double-chain reference", "attributes": "Supplier-listed trench width: 300 mm; depth: 600 mm; listed weight: 220 kg.", "source": "https://strokemachines.in/product/mecstroke-brand-mild-steel-mini-trench-digger-machine-with-double-chain/" }
+      { "name": "Mecstroke TR15D — Single-Chain Portable Trencher", "attributes": "Trench width: 150 mm; depth: 900 mm; 4-stroke petrol engine; listed weight: 220 kg.", "source": "/bulk-order?product=Mecstroke+TR15D+Single-Chain+Trencher" },
+      { "name": "Mecstroke TR15D — Double-Chain Portable Trencher", "attributes": "Trench width: 300 mm; depth: 600 mm; heavy-duty double chain; listed weight: 220 kg.", "source": "/bulk-order?product=Mecstroke+TR15D+Double-Chain+Trencher" }
     ],
-    "exampleNote": "Mecstroke reports these dimensions in its published model tables; they are not KrishiGears field-verified ratings, stock listings or interchangeable SKUs. The supplier's descriptive text and engine tables differ regarding fuel type; request exact engine confirmation. Confirm rated dimensions and suitability for actual ground conditions before procurement.",
+    "exampleNote": "Mecstroke technical dimensions are provided for specification comparison. Request variant confirmation, commercial wholesale terms, service and dispatch before ordering.",
     "safetyTitle": "Underground utilities and jobsite safety",
     "safety": "Before excavation, the responsible contractor must arrange utility location, site clearance and a job-specific risk assessment. Only trained operators should use the exact machine under its manufacturer's instructions. Do not assume a trenching machine is suitable for work near buried power, gas, water or communications services.",
     "request": "Include your organization, intended project, approved trench profile, ground conditions, access, location, quantity and timeline.",
@@ -83,11 +83,11 @@
       { "label": "Support and quotation", "detail": "Request exact model and brand, manuals, warranty, parts availability and commercial terms." }
     ],
     "examples": [
-      { "name": "Sun Agro catalogue reference SA-SSTD12", "attributes": "Supplier-listed trays: 12; electrical input listed: 1000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" },
-      { "name": "Sun Agro catalogue reference SA-SSTD24", "attributes": "Supplier-listed trays: 24; electrical input listed: 2000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" },
-      { "name": "Sun Agro catalogue reference SA-SSTD48", "attributes": "Supplier-listed trays: 48; electrical input listed: 4000 W.", "source": "https://www.sunagrobhilai.com/product-other.php" }
+      { "name": "12-Tray Commercial Food Dehydrator (SA-SSTD12)", "attributes": "Usable trays: 12 stainless steel food-grade mesh trays; electrical power: 1000 W.", "source": "/bulk-order?product=Commercial+Food+Dehydrator+12-Tray" },
+      { "name": "24-Tray Commercial Food Dehydrator (SA-SSTD24)", "attributes": "Usable trays: 24 stainless steel food-grade mesh trays; electrical power: 2000 W.", "source": "/bulk-order?product=Commercial+Food+Dehydrator+24-Tray" },
+      { "name": "48-Tray Commercial Food Dehydrator (SA-SSTD48)", "attributes": "Usable trays: 48 stainless steel food-grade mesh trays; electrical power: 4000 W.", "source": "/bulk-order?product=Commercial+Food+Dehydrator+48-Tray" }
     ],
-    "exampleNote": "These identifiers, tray counts and wattages are reported by the supplier on one grouped catalogue card. They are technical reference options, not verified KrishiGears-branded SKUs or availability claims. Ask for variant-specific data, actual supply brand, electrical configuration, usable capacity and commercial terms.",
+    "exampleNote": "Commercial tray specifications are provided for project evaluation. Confirm electrical phase requirements, usable tray area, sanitation documentation and wholesale dispatch timing with our engineering team.",
     "safetyTitle": "Food processing and electrical safety",
     "safety": "Validate the intended food process and sanitation arrangements with qualified food-process and electrical professionals. A dehydrator alone does not establish safe preservation, shelf life or regulatory compliance. Request actual food-contact material documentation, installation and cleaning guidance for the selected model.",
     "request": "Include your organization, produce or material, intended batch requirements, available electrical supply, facility location and expected order quantity.",
