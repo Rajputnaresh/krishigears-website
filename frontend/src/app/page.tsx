@@ -578,7 +578,7 @@ export default function Home() {
               <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
-                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹26,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹1,85,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
@@ -614,7 +614,7 @@ export default function Home() {
                     3.5 HP &bull; Solar Earthing
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears X1-EA70 3.5 HP (70cc) Earth Auger</h3>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-EA70 3.5 HP (70cc) Earth Auger</h3>
                 <p className="text-xs text-zinc-400 mb-4">Solar plant chemical earthing pits, fencing &amp; plantation</p>
                 <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
@@ -634,7 +634,7 @@ export default function Home() {
               <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
-                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹10,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹15,400 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
@@ -690,7 +690,7 @@ export default function Home() {
               <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
-                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹58,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹74,900 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a

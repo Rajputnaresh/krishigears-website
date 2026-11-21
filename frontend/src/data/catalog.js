@@ -110,6 +110,8 @@ const FARMINGTOOLS_PRODUCT_HANDLES = {
   "bi-1250-pro": "stg-krishigears-kg-stg-x1-1250-pro",
   "bi-1250": "stg-krishigears-kg-stg-x1-1250-pro",
   "kg-750p-diesel": "stg-krishigears-kg-stg-x1-x1-750p",
+  "kg-tr15d-trencher": "kg-stg-tr15d-portable-trencher",
+  "kg-ea70": "kg-stg-x1-power-x1-ea70-3de94fe1",
   "kg-186-backrotary": "krishigears-kg-186-back-rotary-diesel-weeder",
   "kg-1350-4wd": "stg-krishigears-kg-stg-x1-x1-1350-4wd",
   "bi-bi-600": "kg-stg-mitsuyama-my-hpw-1600-e8a7a3fc",
@@ -1646,19 +1648,112 @@ export const PRODUCTS = [
     "hsn": "8432",
     "gst": 5
   },
-  {
-    "slug": "kg-186-backrotary",
-    "category": "power-weeders",
-    "name": "KrishiGears KG-186 Back Rotary Series (7.0 HP max, Diesel / 5.5 Litre)",
-    "model": "KG-186 Back Rotary Series",
+    {
+    "slug": "kg-tr15d-trencher",
+    "category": "commercial-contractor-fleet",
+    "name": "KrishiGears KG-TR15D 15 HP Commercial Chain Trencher (Self-Propelled)",
+    "model": "KG-TR15D",
     "brand": "KrishiGears",
     "badges": [
-      "FMTTI Tested",
-      "ISO 9001:2015",
+      "15 HP Petrol",
+      "Self-Propelled",
+      "Tungsten Chain",
+      "Contractor Grade"
+    ],
+    "price": 185000,
+    "comparePrice": 220000,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/kg_tr15d_trencher.jpg"
+    ],
+    "specs": {
+      "Engine": "15 HP / 420cc Commercial 4-Stroke Petrol",
+      "Excavation Speed": "60 Meters/Hour in Hardpan Soil",
+      "Trench Dimensions": "100mm Width x 600mm Adjustable Depth",
+      "Chain Teeth": "27 Tungsten Carbide Rock & Soil Cutters",
+      "Drive System": "Self-Propelled Heavy-Duty Roller Chain Drive",
+      "Applications": "Drip Irrigation, Optical Fiber & Electrical Conduits"
+    },
+    "features": [
+      "Genuine KrishiGears commercial heavy-duty machinery",
+      "10x faster than manual trenching crews",
+      "High-tensile alloy digging chain with heat-treated sprockets",
+      "PAN India delivery with verified GST tax invoice",
+      "12-month commercial warranty with OEM replacement chain spares"
+    ],
+    "applications": [
+      "Agricultural drip sub-main pipeline installation",
+      "Solar farm electrical cabling and earthing channels",
+      "Telecom fiber-optic conduit trenching",
+      "Civil drainage and municipal conduit trenching"
+    ],
+    "benefits": [
+      "Reduces manual excavation labor by 90%",
+      "Consistent 600mm depth prevents pipe crushing and damage",
+      "Self-propelled operation allows single-operator deployment"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears PAN-India spare parts support.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 18
+  },
+  {
+    "slug": "kg-ea70",
+    "category": "earth-augers",
+    "name": "KrishiGears KG-EA70 3.5 HP (70cc) Commercial Earth Auger with Drill Bit",
+    "model": "KG-EA70",
+    "brand": "KrishiGears",
+    "badges": [
+      "3.5 HP 70cc",
+      "Planetary Gear",
+      "Earthing Specialist",
       "Commercial Grade"
     ],
-    "price": 58000,
-    "comparePrice": 68000,
+    "price": 15400,
+    "comparePrice": 18500,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/kg_ea70_earth_auger.jpg"
+    ],
+    "specs": {
+      "Engine": "3.5 HP / 70cc High-Torque 2-Stroke Petrol",
+      "Reduction Gear": "Commercial Heavy-Duty Planetary Gearbox",
+      "Boring Speed": "45 Seconds per 3-Foot Hole in Hard Soil",
+      "Bit Compatibility": "6-inch, 8-inch, 10-inch, 12-inch Earth Drill Bits",
+      "Frame": "Dual-Operator Anti-Vibration Heavy Steel Frame"
+    },
+    "features": [
+      "Genuine KrishiGears high-output earth boring equipment",
+      "High reduction planetary gear delivers extreme digging torque",
+      "Includes double-spiral tungsten tipped ground drill bit",
+      "PAN India delivery with full GST tax input credit invoice"
+    ],
+    "applications": [
+      "Solar park chemical earthing pits and grounding rods",
+      "Highway and agricultural boundary fencing pole erection",
+      "Horticulture sapling plantation and orchard pit preparation"
+    ],
+    "benefits": [
+      "Bores 300+ holes per day with a two-person crew",
+      "Eliminates manual digging fatigue in rocky and compacted clays"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears replacement parts support.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 12
+  },
+{
+    "slug": "kg-186-backrotary",
+    "category": "power-weeders",
+    "name": "KrishiGears KG-186 10 HP Back Rotary Diesel Power Weeder (PTO Rotavator)",
+    "model": "KG-186 Back Rotary",
+    "brand": "KrishiGears",
+    "badges": [
+      "10 HP Diesel",
+      "FMTTI Tested",
+      "Rear Rotary PTO",
+      "Contractor Grade"
+    ],
+    "price": 74900,
+    "comparePrice": 89900,
     "images": [
       "/images/catalog/kg-186-backrotary.webp"
     ],
