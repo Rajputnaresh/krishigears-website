@@ -551,12 +551,16 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                   <span className="absolute top-3 left-3 bg-amber-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    10x Trenching Speed
+                    15 HP &bull; 10x Speed
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears Portable Chain Trencher</h3>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears TR15D 15 HP Chain Trencher</h3>
                 <p className="text-xs text-zinc-400 mb-4">Drip sub-main pipes, electrical conduits &amp; fiber optic laying</p>
                 <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>15 HP Powertrain:</strong> 420cc heavy-duty 4-stroke commercial engine</span>
+                  </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
                     <span><strong>Output:</strong> 60 meters/hr continuous excavation in hardpan</span>
@@ -607,19 +611,19 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                   <span className="absolute top-3 left-3 bg-emerald-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    Solar Earthing Specialist
+                    3.5 HP &bull; Solar Earthing
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears 70cc Commercial Earth Auger</h3>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears X1-EA70 3.5 HP (70cc) Earth Auger</h3>
                 <p className="text-xs text-zinc-400 mb-4">Solar plant chemical earthing pits, fencing &amp; plantation</p>
                 <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Speed:</strong> 45-sec pit boring for earthing electrodes</span>
+                    <span><strong>3.5 HP Powertrain:</strong> 70cc 2-stroke engine with high reduction planetary gearbox</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>High Torque:</strong> 70cc engine with anti-vibration dual frame</span>
+                    <span><strong>Speed:</strong> 45-sec pit boring for earthing electrodes</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
@@ -663,15 +667,15 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                   <span className="absolute top-3 left-3 bg-sky-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    Sugarcane &amp; Clay Soil King
+                    10 HP Diesel &bull; Sugarcane King
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-186 Back Rotary Weeder</h3>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-186 10 HP Back Rotary Diesel Weeder</h3>
                 <p className="text-xs text-zinc-400 mb-4">Sugarcane, cotton &amp; orchard inter-row weeding without root damage</p>
                 <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>10 HP Diesel:</strong> Direct-injection heavy-torque powertrain</span>
+                    <span><strong>10 HP Diesel:</strong> 460cc direct-injection 186F heavy-torque engine</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
