@@ -111,6 +111,12 @@ const FARMINGTOOLS_PRODUCT_HANDLES = {
   "bi-1250": "stg-krishigears-kg-stg-x1-1250-pro",
   "kg-750p-diesel": "stg-krishigears-kg-stg-x1-x1-750p",
   "kg-tr15d-trencher": "kg-stg-tr15d-portable-trencher",
+  "kg-tt200-tractor-trencher": "krishigears-kg-tt200-tractor-chain-trencher",
+  "krishigears-kg-tt200-tractor-chain-trencher": "kg-tt200-tractor-trencher",
+  "kg-eea700-earthing-auger": "krishigears-kg-eea700-deep-earthing-auger",
+  "krishigears-kg-eea700-deep-earthing-auger": "kg-eea700-earthing-auger",
+  "kg-fd16-dehydrator": "kg-stg-commercial-tray-dehydrator",
+  "kg-stg-commercial-tray-dehydrator": "kg-fd16-dehydrator",
   "kg-ea70": "kg-stg-x1-power-x1-ea70-3de94fe1",
   "kg-186-backrotary": "krishigears-kg-186-back-rotary-diesel-weeder",
   "kg-1350-4wd": "stg-krishigears-kg-stg-x1-x1-1350-4wd",
@@ -1694,6 +1700,154 @@ export const PRODUCTS = [
     "warranty": "12 months manufacturer warranty + KrishiGears PAN-India spare parts support.",
     "video": null,
     "hsn": "8432",
+    "gst": 18
+  },
+  {
+    "slug": "kg-tt200-tractor-trencher",
+    "category": "commercial-contractor-fleet",
+    "name": "KrishiGears KG-TT200 Heavy Commercial Tractor-Mounted Chain Trencher (120-180 HP PTO)",
+    "model": "KG-TT200",
+    "brand": "KrishiGears",
+    "badges": [
+      "120-180 HP PTO",
+      "2000mm Max Depth",
+      "Heavy Trenching",
+      "Civil & Canal Grade"
+    ],
+    "price": 485000,
+    "comparePrice": 550000,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-tt200-tractor-chain-trencher.jpg?v=1795255812"
+    ],
+    "specs": {
+      "Tractor Power Required": "120 - 180 HP PTO with Creeper Gearbox",
+      "Excavation Depth": "Up to 2,000 mm (Adjustable Hydraulic Boom)",
+      "Excavation Width": "Up to 800 mm",
+      "Working Speed": "150 - 300 Meters / Hour",
+      "Digging Mechanism": "Dual-Drive Heavy-Duty Chain with Tungsten Carbide Bullet Teeth",
+      "Spoil Management": "Dual Integrated High-Pitch Screw Auger Dischargers",
+      "Mounting": "Category 3 Three-Point Hitch (Cat III 3PH)",
+      "Hydraulic Operation": "Auxiliary Dual-Circuit Hydraulic Control"
+    },
+    "features": [
+      "Genuine KrishiGears heavy contractor infrastructure implement",
+      "Digs trenches 20x faster than traditional backhoe excavators at 40% fuel cost",
+      "Dual continuous screw augers deposit spoil evenly on both trench shoulders",
+      "Tungsten carbide bullet teeth crush boulders, clay, weathered shale, and hardpan",
+      "12-month commercial warranty with full OEM wear-parts availability across India"
+    ],
+    "applications": [
+      "Canal lining, drainage channels, and flood management works",
+      "Large-scale agricultural underground sub-main pipeline networks",
+      "Cross-country high-voltage underground cabling (HV/MV power transmission)",
+      "Municipal water supply, sewer main laying, and fiber-optic networks"
+    ],
+    "benefits": [
+      "Eliminates heavy excavator hire rates and road-width access limitations",
+      "Uniform, clean, flat-bottom trench minimizes pipe sagging and stress cracks",
+      "Direct PTO drive delivers maximum torque transfer with minimal fuel loss"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears PAN-India on-site technical support.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 18
+  },
+  {
+    "slug": "kg-eea700-earthing-auger",
+    "category": "commercial-contractor-fleet",
+    "name": "KrishiGears KG-EEA700 7 HP Deep Earthing Vertical Earth Auger Rig (20 Ft Depth)",
+    "model": "KG-EEA700",
+    "brand": "KrishiGears",
+    "badges": [
+      "7 HP Petrol",
+      "20-FT Depth Boring",
+      "Heavy Trolley Rig",
+      "Solar Earthing Specialist"
+    ],
+    "price": 48500,
+    "comparePrice": 58000,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-eea700-deep-earthing-auger.jpg?v=1795255822"
+    ],
+    "specs": {
+      "Engine": "7 HP / 212cc 4-Stroke Commercial OHV Petrol Engine",
+      "Max Boring Depth": "20 Feet (6 Meters) with Modular 5-Ft Connecting Rods",
+      "Drill Bit Included": "4-Inch (100mm) Heavy-Duty Spiral Auger Bit with Carbide Tip",
+      "Rig Framework": "6-Foot Heavy-Gauge Welded Steel Upright Guide Columns",
+      "Mobility Chassis": "Dual Pneumatic Heavy-Duty Wheels for Rough Terrain",
+      "Drive Transmission": "High-Torque Reduction Worm & Bevel Gearbox",
+      "Application": "Chemical Earthing Pits, Lightning Arresters, Solar Plant Grounding"
+    },
+    "features": [
+      "Specialist vertical earthing rig engineered for electrical and solar EPC contractors",
+      "Completes a 20-foot deep vertical earthing bore in under 15 minutes",
+      "Heavy trolley structure provides vertical stability and minimizes operator fatigue",
+      "Modular 5-foot extension shafts with precision quick-lock coupler pins",
+      "GST billed tax invoice eligible for contractor input tax credit (ITC)"
+    ],
+    "applications": [
+      "Ground-mounted and rooftop solar power plant chemical earthing pits",
+      "Substation lightning protection grounding systems",
+      "Telecom tower ground grid installations",
+      "Deep agricultural soil sampling and tree plantation anchoring"
+    ],
+    "benefits": [
+      "Bores deep vertical holes with perfect 4-inch diameter for chemical earthing pipes",
+      "Replaces backhoe excavation and manual laborers for earthing hole creation",
+      "Fits inside standard utility vehicles and pick-ups for easy site transit"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears PAN-India spare parts support.",
+    "video": null,
+    "hsn": "8430",
+    "gst": 18
+  },
+  {
+    "slug": "kg-fd16-dehydrator",
+    "category": "commercial-contractor-fleet",
+    "name": "KrishiGears KG-FD16 16-Tray Stainless Steel Commercial Food Dehydrator",
+    "model": "KG-FD16",
+    "brand": "KrishiGears",
+    "badges": [
+      "16-Tray SUS304",
+      "1500W Dual Fan",
+      "Digital PID Control",
+      "Agribusiness Grade"
+    ],
+    "price": 34900,
+    "comparePrice": 42000,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-fd16-commercial-tray-dehydrator.jpg?v=1795255834"
+    ],
+    "specs": {
+      "Tray Capacity": "16 Removable SUS304 Food-Grade Stainless Steel Trays (400 x 380 mm)",
+      "Heating Power": "1500 Watts High-Efficiency Heating Element",
+      "Circulation System": "Dual Rear-Mounted Horizontal Convection Circulation Fans",
+      "Temperature Range": "30°C to 90°C (Digital Touchscreen Microprocessor Control)",
+      "Timer Range": "0 to 24 Hours with Automatic Auto-Cool & Shutoff",
+      "Door Construction": "High-Impact Tempered Visual Glass with Magnetic Latches & LED Lighting",
+      "Dimensions": "550mm (W) x 420mm (D) x 680mm (H) | Approx 23.5 kg"
+    },
+    "features": [
+      "Commercial agribusiness dehydration machine for farm-level value addition",
+      "100% Food-Grade SUS304 stainless steel chamber, shelves, and drip trays",
+      "Even horizontal airflow eliminates tray rotation during commercial drying cycles",
+      "Precision PID thermal regulation preserves color, aroma, and essential nutrients",
+      "Supplied with verified GST invoice and commercial 1-year heating element warranty"
+    ],
+    "applications": [
+      "Dehydration of onion flakes, garlic powder, ginger slices, and turmeric roots",
+      "Drying of high-value culinary herbs, moringa leaves, and medicinal botanicals",
+      "Dehydration of seasonal fruits (mango, banana, apple chips, tomatoes)",
+      "Processing of mushrooms, chili flakes, and solar dry replacement"
+    ],
+    "benefits": [
+      "Transforms perishable farm surplus into 12-month shelf-stable premium value products",
+      "Eliminates dust, insect, and bird contamination inherent in open-air sun drying",
+      "Low operating cost: draws approx. 1.2 units of electricity per operating hour"
+    ],
+    "warranty": "12 months manufacturer warranty + KrishiGears heating element and thermostat support.",
+    "video": null,
+    "hsn": "8419",
     "gst": 18
   },
   {

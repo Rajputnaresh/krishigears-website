@@ -540,8 +540,8 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1: Trencher */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1: 15 HP Portable Trencher */}
             <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
                 <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
@@ -551,7 +551,7 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                   <span className="absolute top-3 left-3 bg-amber-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    15 HP &bull; 10x Speed
+                    15 HP &bull; 60 M/Hr
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears TR15D 15 HP Chain Trencher</h3>
@@ -563,15 +563,11 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Output:</strong> 60 meters/hr continuous excavation in hardpan</span>
+                    <span><strong>Excavation:</strong> 60 meters/hr in hardpan &bull; 600mm max depth</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Trench Profile:</strong> 100mm width &bull; 300-600mm adjustable depth</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Cutting Teeth:</strong> Tungsten carbide chain teeth</span>
+                    <span><strong>Chain Teeth:</strong> 27 Tungsten carbide rock &amp; clay cutters</span>
                   </li>
                 </ul>
               </div>
@@ -601,44 +597,44 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2: Earth Auger */}
+            {/* Card 2: 7 HP Deep Earthing Auger Rig (20-Ft Depth) */}
             <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
                 <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
                   <img
-                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/x1-ea70.jpg?v=1795215216"
-                    alt="KrishiGears 70cc Earth Auger"
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-eea700-deep-earthing-auger.jpg?v=1795255822"
+                    alt="KrishiGears 7 HP Deep Earthing Auger Rig"
                     className="max-h-full max-w-full object-contain"
                   />
                   <span className="absolute top-3 left-3 bg-emerald-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                    3.5 HP &bull; Solar Earthing
+                    7 HP &bull; 20-Ft Rig
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-EA70 3.5 HP (70cc) Earth Auger</h3>
-                <p className="text-xs text-zinc-400 mb-4">Solar plant chemical earthing pits, fencing &amp; plantation</p>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-EEA700 7 HP Deep Earthing Rig</h3>
+                <p className="text-xs text-zinc-400 mb-4">Solar power chemical earthing pits, substations &amp; deep vertical boring</p>
                 <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>3.5 HP Powertrain:</strong> 70cc 2-stroke engine with high reduction planetary gearbox</span>
+                    <span><strong>7 HP Powertrain:</strong> 212cc 4-stroke commercial OHV petrol engine</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Speed:</strong> 45-sec pit boring for earthing electrodes</span>
+                    <span><strong>Boring Depth:</strong> 20 Feet (6m) with modular 5-ft quick-lock shafts</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
-                    <span><strong>Bit Compatibility:</strong> 6&quot;, 8&quot;, 10&quot; &amp; 12&quot; heavy ground bits</span>
+                    <span><strong>Chassis:</strong> 6-Ft high-stability wheeled trolley structure</span>
                   </li>
                 </ul>
               </div>
               <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
-                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹15,400 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹48,500 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
-                    href="https://farmingtools.in/products/kg-stg-x1-power-x1-ea70-3de94fe1"
+                    href="https://farmingtools.in/products/krishigears-kg-eea700-deep-earthing-auger"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
@@ -646,7 +642,7 @@ export default function Home() {
                     Buy Direct &rarr;
                   </a>
                   <a
-                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20the%2070cc%20Earth%20Auger%20with%20solar%20earthing%20bits%20for%20a%20project."
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20a%20quotation%20for%20the%20KG-EEA700%207HP%20Deep%20Earthing%20Auger%20Rig."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
@@ -657,7 +653,119 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3: Back Rotary Weeder */}
+            {/* Card 3: 120-180 HP Tractor-Mounted Chain Trencher */}
+            <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
+              <div>
+                <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-tt200-tractor-chain-trencher.jpg?v=1795255812"
+                    alt="KrishiGears Heavy Tractor-Mounted Chain Trencher"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                  <span className="absolute top-3 left-3 bg-amber-500 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
+                    120-180 HP PTO &bull; 2000mm
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-TT200 Tractor Chain Trencher</h3>
+                <p className="text-xs text-zinc-400 mb-4">Civil drainage, canals, high-voltage cabling &amp; water pipeline works</p>
+                <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Tractor Drive:</strong> 120–180 HP PTO with Creeper Gearbox</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Capacity:</strong> 2,000mm max depth &bull; up to 800mm trench width</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Excavation:</strong> 150–300 meters/hr with dual screw spoil augers</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹4,85,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://farmingtools.in/products/krishigears-kg-tt200-tractor-chain-trencher"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
+                  >
+                    Buy Direct &rarr;
+                  </a>
+                  <a
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20a%20tender/contractor%20quotation%20for%20the%20KG-TT200%20Tractor%20Chain%20Trencher."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5 text-lime-400 shrink-0" /> Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4: 16-Tray Commercial Stainless Food Dehydrator */}
+            <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
+              <div>
+                <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-fd16-commercial-tray-dehydrator.jpg?v=1795255834"
+                    alt="KrishiGears 16-Tray Commercial Food Dehydrator"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                  <span className="absolute top-3 left-3 bg-rose-400 text-zinc-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
+                    16-Tray SUS304 &bull; 1500W
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-1">KrishiGears KG-FD16 16-Tray Food Dehydrator</h3>
+                <p className="text-xs text-zinc-400 mb-4">Onion/garlic flakes, spices, herbs, fruits &amp; agribusiness processing</p>
+                <ul className="text-xs text-zinc-300 space-y-2.5 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>SUS304 Stainless:</strong> 16 food-grade trays (400x380mm) with inspection glass</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Convection:</strong> 1500W dual horizontal fans &bull; 0 tray rotation required</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-lime-400 shrink-0" />
+                    <span><strong>Control:</strong> 30°C–90°C digital PID thermostat with 24-hr timer</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹34,900 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://farmingtools.in/products/kg-stg-commercial-tray-dehydrator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
+                  >
+                    Buy Direct &rarr;
+                  </a>
+                  <a
+                    href="https://wa.me/916006078815?text=Hi%20KrishiGears%2C%20I%20need%20a%20commercial%20quote%20for%20the%2016-Tray%20Stainless%20Steel%20Food%20Dehydrator."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 border border-zinc-700 hover:border-lime-500/50 text-zinc-200 hover:text-white bg-zinc-800/80 text-xs font-semibold rounded-lg transition min-h-[44px] inline-flex items-center justify-center gap-1 text-center"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5 text-lime-400 shrink-0" /> Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5: 10 HP Back Rotary Diesel Weeder */}
             <div className="bg-[#191919] border border-[#27272A] hover:border-lime-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(163,230,53,0.12)]">
               <div>
                 <div className="relative h-48 bg-[#0F1010] rounded-xl overflow-hidden mb-5 border border-[#27272A] flex items-center justify-center p-3">
