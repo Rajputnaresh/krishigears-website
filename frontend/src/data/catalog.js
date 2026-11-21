@@ -110,12 +110,16 @@ const FARMINGTOOLS_PRODUCT_HANDLES = {
   "bi-1250-pro": "stg-krishigears-kg-stg-x1-1250-pro",
   "bi-1250": "stg-krishigears-kg-stg-x1-1250-pro",
   "kg-750p-diesel": "stg-krishigears-kg-stg-x1-x1-750p",
-  "kg-tr15d-trencher": "kg-stg-tr15d-portable-trencher",
+  "kg-tr15d-trencher": "krishigears-kg-tr15d-commercial-chain-trencher",
+  "krishigears-kg-tr15d-commercial-chain-trencher": "kg-tr15d-trencher",
   "kg-tt200-tractor-trencher": "krishigears-kg-tt200-tractor-chain-trencher",
   "krishigears-kg-tt200-tractor-chain-trencher": "kg-tt200-tractor-trencher",
   "kg-eea700-earthing-auger": "krishigears-kg-eea700-deep-earthing-auger",
   "krishigears-kg-eea700-deep-earthing-auger": "kg-eea700-earthing-auger",
-  "kg-fd16-dehydrator": "kg-stg-commercial-tray-dehydrator",
+  "kg-fd16-dehydrator": "krishigears-kg-fd16-commercial-food-dehydrator",
+  "krishigears-kg-fd16-commercial-food-dehydrator": "kg-fd16-dehydrator",
+  "x1-186br-backrotary": "x1-power-x1-186br-back-rotary-diesel-weeder",
+  "x1-power-x1-186br-back-rotary-diesel-weeder": "x1-186br-backrotary",
   "kg-stg-commercial-tray-dehydrator": "kg-fd16-dehydrator",
   "kg-ea70": "kg-stg-x1-power-x1-ea70-3de94fe1",
   "kg-186-backrotary": "krishigears-kg-186-back-rotary-diesel-weeder",
@@ -855,6 +859,62 @@ export const PRODUCTS = [
       "FMTTI / SRFMTTI compliant durability standard with full spare parts support"
     ],
     "warranty": "12 months manufacturer warranty + KrishiGears after-sales service network.",
+    "video": null,
+    "hsn": "8432",
+    "gst": 5
+  },
+  {
+    "slug": "x1-186br-backrotary",
+    "category": "power-weeders",
+    "name": "X1 Power X1-186BR 10 HP Back Rotary Diesel Power Weeder",
+    "model": "X1-186BR",
+    "brand": "X1 Power",
+    "badges": [
+      "10 HP Diesel",
+      "Rear Rotary PTO",
+      "Heavy Black Cotton Soil",
+      "Contractor Grade"
+    ],
+    "price": 143990,
+    "comparePrice": 165000,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/x1_186_clean_1200.jpg?v=1795274824"
+    ],
+    "specs": {
+      "Engine": "10 HP Air-Cooled Direct Injection Diesel (186FA)",
+      "Transmission": "Direct Gear Drive with Independent Rear Rotary PTO",
+      "Tilling Width": "600mm - 900mm Adjustable Inter-Row",
+      "Tilling Depth": "150mm - 300mm Deep Tillage",
+      "Starting": "Recoil & Electric Key Start",
+      "Drive System": "Heavy-Duty Iron Grip Lug Tyres + Independent Tine Shaft",
+      "Applications": "Ratoon Sugarcane, Cotton, Turmeric, Ginger & Heavy Clay"
+    },
+    "features": [
+      "Independent rear PTO drive isolates rotary blades from driving wheels to prevent bucking and soil compaction",
+      "10 HP high-torque diesel engine provides immense lugging power through unworked hardpan and sugarcane trash",
+      "Reverse and neutral PTO safety lockouts prevent accidental reverse engagement while blades are spinning",
+      "Full manufacturer 1-year warranty with direct dispatch from verified Bushra supplier inventory"
+    ],
+    "description": "The X1 Power X1-186BR is a premier 10 HP diesel back-rotary power weeder engineered specifically for commercial sugarcane farmers and agricultural contractors facing heavy clay or black cotton soils. Unlike standard front-tine tillers that buck and cause severe operator fatigue, the X1-186BR powers forward on heavy tractor-tread wheels while its rear-mounted rotary tines pulverize weeds and aerate soil at high RPM.",
+    "whatsInTheBox": [
+      "1x X1 Power X1-186BR Diesel Power Weeder Power Unit",
+      "1x Rear Rotary Tine Set (24 Heat-Treated Deep Tilling Blades)",
+      "2x Heavy-Duty Pneumatic Lug Wheels (4.00-8)",
+      "1x Adjustable Depth Resistance Skid Bar",
+      "1x Factory Toolkit, Instruction Manual & Warranty Card"
+    ],
+    "applications": [
+      "Sugarcane ratoon de-weeding & root aeration",
+      "Cotton & maize deep inter-row tilling",
+      "Black cotton & heavy clay soil cultivation",
+      "Turmeric & ginger ridge tillage"
+    ],
+    "benefits": [
+      "Zero operator fatigue with rear-mounted counter-rotating tines",
+      "10 HP diesel torque delivers 2.5 to 3 acres per day output",
+      "Sub-Mission on Agricultural Mechanization (SMAM) DBT subsidy compliant"
+    ],
+    "warranty": "12 months manufacturer warranty with genuine spare parts support.",
     "video": null,
     "hsn": "8432",
     "gst": 5
