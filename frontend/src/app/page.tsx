@@ -578,7 +578,7 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
-                    href="https://farmingtools.in/products/kg-stg-tr15d-portable-trencher"
+                    href="https://farmingtools.in/products/krishigears-kg-tr15d-commercial-chain-trencher"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"
@@ -686,7 +686,7 @@ export default function Home() {
               <div className="pt-4 border-t border-[#27272A] flex flex-col gap-3">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[11px] text-zinc-400">Direct Retail / B2B Price</span>
-                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹4,85,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
+                  <span className="text-base font-black text-lime-400 font-mono tabular-nums">₹4,00,000 <span className="text-[10px] text-zinc-400 font-normal">incl. GST</span></span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
@@ -746,7 +746,7 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
-                    href="https://farmingtools.in/products/kg-stg-commercial-tray-dehydrator"
+                    href="https://farmingtools.in/products/krishigears-kg-fd16-commercial-food-dehydrator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-2 bg-lime-400 hover:bg-lime-300 text-zinc-950 text-xs font-bold rounded-lg transition min-h-[44px] inline-flex items-center justify-center text-center"

@@ -1727,7 +1727,7 @@ export const PRODUCTS = [
       "Contractor Grade"
     ],
     "price": 185000,
-    "comparePrice": 220000,
+    "comparePrice": null,
     "images": [
       "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/kg_tr15d_trencher.jpg"
     ],
@@ -1774,8 +1774,8 @@ export const PRODUCTS = [
       "Heavy Trenching",
       "Civil & Canal Grade"
     ],
-    "price": 485000,
-    "comparePrice": 550000,
+    "price": 400000,
+    "comparePrice": null,
     "images": [
       "https://cdn.shopify.com/s/files/1/0776/7028/5470/files/krishigears-kg-tt200-tractor-chain-trencher.jpg?v=1795255812"
     ],

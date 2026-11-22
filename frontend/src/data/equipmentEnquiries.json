@@ -48,10 +48,10 @@
       { "label": "Service and quotation", "detail": "Request the exact supplied brand and variant, availability, warranty, freight and dispatch terms." }
     ],
     "examples": [
-      { "name": "Mecstroke TR15D — Single-Chain Portable Trencher", "attributes": "Trench width: 150 mm; depth: 900 mm; 4-stroke petrol engine; listed weight: 220 kg.", "source": "/bulk-order?product=Mecstroke+TR15D+Single-Chain+Trencher" },
-      { "name": "Mecstroke TR15D — Double-Chain Portable Trencher", "attributes": "Trench width: 300 mm; depth: 600 mm; heavy-duty double chain; listed weight: 220 kg.", "source": "/bulk-order?product=Mecstroke+TR15D+Double-Chain+Trencher" }
+      { "name": "KrishiGears KG-TR15D — Single-Chain Commercial Trencher", "attributes": "Trench width: 150 mm; depth: 900 mm; 4-stroke 15 HP engine; listed weight: 220 kg.", "source": "/bulk-order?product=KrishiGears+KG-TR15D+Single-Chain+Trencher" },
+      { "name": "KrishiGears KG-TR15D — Double-Chain Commercial Trencher", "attributes": "Trench width: 300 mm; depth: 600 mm; heavy-duty double chain; listed weight: 220 kg.", "source": "/bulk-order?product=KrishiGears+KG-TR15D+Double-Chain+Trencher" }
     ],
-    "exampleNote": "Mecstroke technical dimensions are provided for specification comparison. Request variant confirmation, commercial wholesale terms, service and dispatch before ordering.",
+    "exampleNote": "KrishiGears technical dimensions are provided for specification comparison. Request variant confirmation, commercial wholesale terms, service and dispatch before ordering.",
     "safetyTitle": "Underground utilities and jobsite safety",
     "safety": "Before excavation, the responsible contractor must arrange utility location, site clearance and a job-specific risk assessment. Only trained operators should use the exact machine under its manufacturer's instructions. Do not assume a trenching machine is suitable for work near buried power, gas, water or communications services.",
     "request": "Include your organization, intended project, approved trench profile, ground conditions, access, location, quantity and timeline.",
@@ -62,7 +62,7 @@
       { "label": "Ditch Witch — jobsite and equipment safety guidance", "url": "https://www.ditchwitch.com/thoughts/safety-first-five-tips-for-getting-the-most-out-of-rental-equipment/" }
     ],
     "faqs": [
-      { "question": "What is the difference between a single-chain and double-chain trencher?", "answer": "The chain assembly and rated trench dimensions may differ. The two Mecstroke TR15D supplier records describe distinct chain variants; confirm the exact configuration and rated data in writing." },
+      { "question": "What is the difference between a single-chain and double-chain trencher?", "answer": "The chain assembly and rated trench dimensions may differ. The two KrishiGears KG-TR15D variants describe distinct chain widths (150mm vs 300mm); confirm the exact configuration and rated depth required for your site." },
       { "question": "Is a portable trencher the same as a power weeder attachment?", "answer": "No. This enquiry concerns standalone chain trenchers. A tiller attachment is a separate equipment configuration; compatibility must be checked independently." },
       { "question": "Are the two TR15D versions available to buy now?", "answer": "The published supplier model references are for specification comparison only. Request confirmation of the exact available variant, commercial terms, service and dispatch before ordering." }
     ]
