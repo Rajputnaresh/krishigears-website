@@ -166,7 +166,7 @@ export const CATEGORY_FAQS = {
     },
     {
       question: "Are KrishiGears replacement spares compatible with other brand power weeders?",
-      answer: "Our engine and transmission spares adhere to standard 170F/177F petrol and 173F/186F diesel dimensional tolerances. Due to model variations across Royal Kissan, Neptune, Balwaan, and Honda-clone weeders, customers should verify physical dimensions (shaft size, bolt spacing) prior to ordering."
+      answer: "Our engine and transmission spares adhere to standard 170F/177F petrol and 173F/186F diesel dimensional tolerances. Due to model variations across market weeders and OEM clone engines, customers should verify physical dimensions (shaft size, bolt spacing) prior to ordering."
     },
     {
       question: "What are the dispatch and delivery timelines for wholesale spare parts orders?",
@@ -232,7 +232,7 @@ export const BULK_ORDER_FAQS = [
   },
   {
     question: "Are KrishiGears spares compatible with other machine brands?",
-    answer: "Some spares use common dimensional standards across Balwaan, Royal Kissan, Neptune, and Honda-clone power tillers and weeders. Confirm the original model, part dimensions and fitment with our service desk before ordering; brands and production batches can differ."
+    answer: "Some spares use common dimensional standards across standard power tillers and weeders. Confirm the original model, part dimensions and fitment with our service desk before ordering; brands and production batches can differ."
   },
   {
     question: "What are the delivery timelines across Indian states?",

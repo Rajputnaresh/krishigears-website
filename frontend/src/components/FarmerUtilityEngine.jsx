@@ -132,7 +132,7 @@ export default function FarmerUtilityEngine() {
                   <strong className="text-zinc-200">Mechanic Tip:</strong> Always pour 2T oil into the canister <em className="text-lime-300 not-italic">before</em> adding petrol, then shake vigorously for 30 seconds. Never mix fuel directly inside the machine’s fuel tank.
                 </p>
                 <p className="text-zinc-500 text-[11px]">
-                  Applicable for: Balwaan BX-35/BE-52, Neptune CS-58M, Royal Kissan 52cc/63cc engines, and all 2-stroke agricultural implements.
+                  Applicable for: 52cc / 63cc brush cutters, earth augers, chainsaws, and all 2-stroke agricultural engines.
                 </p>
               </div>
             </div>

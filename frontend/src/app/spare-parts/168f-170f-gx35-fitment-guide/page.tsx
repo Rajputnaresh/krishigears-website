@@ -242,7 +242,7 @@ export default function SparesFitmentGuidePage() {
             2. Complete 25-Component Interchangeability Matrix
           </h2>
           <p className="text-zinc-300 text-sm leading-relaxed">
-            The table below provides dimensional rules and cross-compatibility guidance across the 25 most frequently replaced assemblies in Indian workshops. Due to variations across manufacturing batches and branded rebadgers (Balwaan, Neptune, Royal Kissan), always verify critical dimensions before ordering.
+            The table below provides dimensional rules and cross-compatibility guidance across the 25 most frequently replaced assemblies in Indian workshops. Due to variations across manufacturing batches and generic OEM rebadgers, always verify critical dimensions before ordering.
           </p>
 
           <div className="overflow-x-auto my-6 border border-zinc-800 rounded-lg" role="region" aria-label="25-Component Interchangeability Matrix" tabIndex={0}>
