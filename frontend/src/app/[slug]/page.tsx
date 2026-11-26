@@ -81,10 +81,33 @@ const toLocationSlug = (name: string) =>
 // All other equipment categories and regional districts render on-demand via ISR and are cached at CloudFront edge.
 const PRE_RENDER_GEO_CATEGORIES = ['power-weeders', 'power-weeder-spare-parts'];
 
+const PAN_INDIA_LOCATION: DistrictData = {
+  state: 'Pan-India',
+  key_crops: ['Cotton', 'Sugarcane', 'Paddy', 'Wheat', 'Soybean'],
+  soil_type: 'Alluvial, black cotton, red, and loamy soils',
+  farming_profile: 'Pan-India commercial agricultural machinery supply and OEM spare parts distribution network',
+  major_district: true,
+};
+
+function resolveLocation(locationSlug: string): { locationName: string; locationData: DistrictData } | null {
+  if (locationSlug === 'india') {
+    return { locationName: 'India', locationData: PAN_INDIA_LOCATION };
+  }
+  const locationName = Object.keys(locations).find(
+    k => toLocationSlug(k) === locationSlug
+  );
+  if (!locationName) return null;
+  return { locationName, locationData: locations[locationName] };
+}
+
 // Generate static params for ISR
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
-  
+
+  PRE_RENDER_GEO_CATEGORIES.forEach(categorySlug => {
+    params.push({ slug: `${categorySlug}-in-india` });
+  });
+
   Object.entries(locations).forEach(([locationName, data]) => {
     if (data.major_district) {
       const locationSlug = toLocationSlug(locationName);
@@ -109,13 +132,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const category = CATEGORIES[categorySlug];
   if (!category) return {};
 
-  const locationName = Object.keys(locations).find(
-    k => toLocationSlug(k) === locationSlug
-  );
-  
-  if (!locationName) return {};
+  const resolved = resolveLocation(locationSlug);
+  if (!resolved) return {};
 
-  const locationData = locations[locationName];
+  const { locationName, locationData } = resolved;
 
   const isSpareParts = categorySlug === 'power-weeder-spare-parts';
   const isIndia = locationName === 'India';
@@ -175,13 +195,10 @@ export default async function LocationCategoryPage({ params }: { params: Promise
 
   const isSpareParts = categorySlug === 'power-weeder-spare-parts';
 
-  const locationName = Object.keys(locations).find(
-    k => toLocationSlug(k) === locationSlug
-  );
-  
-  if (!locationName) notFound();
+  const resolved = resolveLocation(locationSlug);
+  if (!resolved) notFound();
 
-  const data = locations[locationName];
+  const { locationName, locationData: data } = resolved;
   const subsidyData = STATE_SUBSIDIES[data.state] || DEFAULT_SUBSIDY;
   
   // Find a matching crop guide
