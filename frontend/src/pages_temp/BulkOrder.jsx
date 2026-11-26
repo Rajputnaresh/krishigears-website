@@ -12,6 +12,7 @@ import { CATEGORIES } from "@/data/catalog";
 import { apiClient, formatApiError } from "@/lib/api";
 import { trackBulkOrderSubmit } from "@/lib/analytics";
 import { BULK_ORDER_FAQS } from "@/lib/product-specifications.mjs";
+import B2BDealerConfigurator from "@/components/B2BDealerConfigurator";
 
 export default function BulkOrder() {
   const [loading, setLoading] = useState(false);
@@ -103,6 +104,7 @@ export default function BulkOrder() {
         </form>
 
         {/* Wholesale Procurement Tiers & Policies */}
+        <B2BDealerConfigurator />
         <div className="mt-16 pt-12 border-t border-zinc-800 space-y-12">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-950 space-y-3">
