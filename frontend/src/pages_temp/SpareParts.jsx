@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { Check, ArrowRight, MapPin, Wrench, Package, Phone } from "lucide-react";
 import { CATEGORIES, COMPANY, HERO_BG } from "@/data/catalog";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import InteractiveSparesTriage from "@/components/InteractiveSparesTriage";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { CITY_STATE_MAP } from "@/data/cityStateMap";
 import { pickRandom } from "@/lib/random";
@@ -167,6 +168,8 @@ export default function SpareParts() {
           </div>
         </div>
       </section>
+
+      <InteractiveSparesTriage />
 
       {/* Internal Silo Links */}
       <section className="kg-section bg-surface-darker border-t border-zinc-800">
