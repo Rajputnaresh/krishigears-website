@@ -2,7 +2,7 @@ import Link from "next/link";
 import { COMPANY } from "@/data/catalog";
 
 export const metadata = {
-  title: "Power Weeder Service Support & Repair Enquiries",
+  title: "Power Weeder Service & Repair Support",
   description: "Contact KrishiGears for troubleshooting, spare parts enquiries and supplier or partner repair routing. Coverage and timing require confirmation.",
   alternates: { canonical: "https://krishigears.com/service" },
 };

@@ -6,7 +6,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const districtSlug = slug.includes("-in-") ? slug.split("-in-").pop()! : slug.replace(/^power-weeder-repair-service-in-/, "").replace(/^power-weeder-repair-service-/, "");
   const districtName = districtSlug ? districtSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "India";
-  const title = `Power Weeder Repair & Service in ${districtName} | Troubleshooting & Support`;
+  const title = `Power Weeder Repair in ${districtName}`;
   const description = clampDescription(`Expert power weeder repair, troubleshooting guide and spare parts support for ${districtName}. Technical guidance for engine, clutch, and transmission maintenance.`, 155);
 
   return {

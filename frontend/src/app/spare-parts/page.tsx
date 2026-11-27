@@ -3,7 +3,7 @@ import Page from "@/pages_temp/SpareParts.jsx";
 import { clampDescription } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = {
-  title: "Agricultural Machinery Spare Parts & Fitment Support",
+  title: "Agricultural Machinery Spare Parts",
   description: clampDescription("Enquire for power weeder, brush cutter, and earth auger spare parts across India. Model-matched carburetors, recoil starters, gearboxes, and blades procured per order.", 155),
   alternates: {
     canonical: "https://krishigears.com/spare-parts"

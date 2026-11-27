@@ -28,6 +28,7 @@ export default function Warranty() {
 
       <section className="kg-section bg-surface-darker border-y border-zinc-900 -mt-8">
         <div className="max-w-[1200px] mx-auto">
+          <h2 className="sr-only">Warranty Pillars &amp; Service Guarantees</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {[
               { i: ShieldCheck, t: "Manufacturer Warranty", d: "6 to 12 months on every machine, covering manufacturing defects." },
