@@ -9,7 +9,11 @@ export function clampTitle(value: string, max = 45): string {
   if (base.length <= max) return base;
   const cut = base.slice(0, max);
   const lastSpace = cut.lastIndexOf(" ");
-  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim();
+  let result = (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim();
+  if ((result.match(/\(/g) || []).length > (result.match(/\)/g) || []).length) {
+    result = result.replace(/\s*\([^)]*$/, "");
+  }
+  return result.replace(/[\s\-–—:,;|&/]+$/, "").trim();
 }
 
 export function clampDescription(value: string, max = 155): string {

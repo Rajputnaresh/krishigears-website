@@ -72,7 +72,8 @@ export default async function ProductDetailPage({
     notFound();
   }
 
-  const price = (product as any).price || 26000;
+  const rawPrice = Number((product as any).price);
+  const hasValidPrice = Number.isFinite(rawPrice) && rawPrice > 0;
   const productJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -89,11 +90,14 @@ export default async function ProductDetailPage({
       "name": product.brand || "KrishiGears"
     },
     "category": product.category || "Agricultural Machinery",
-    "offers": {
+  };
+
+  if (hasValidPrice) {
+    productJsonLd.offers = {
       "@type": "Offer",
       "url": `https://krishigears.com/products/${product.slug}`,
       "priceCurrency": "INR",
-      "price": price,
+      "price": rawPrice,
       "priceValidUntil": "2027-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
@@ -137,8 +141,8 @@ export default async function ProductDetailPage({
         "returnMethod": "https://schema.org/ReturnByMail",
         "returnFees": "https://schema.org/FreeReturn"
       }
-    }
-  };
+    };
+  }
 
   return (
     <>
