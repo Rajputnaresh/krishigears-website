@@ -144,7 +144,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     meta_title: "Remove Air Lock in Diesel Power Weeder",
     meta_description: "Fast 5-step procedure to remove air lock in diesel power weeders (173F/178F/186F). Bleed fuel filter and high-pressure injector pipe to start engine instantly.",
     excerpt: "Step-by-step procedure to bleed air from fuel pipe, diesel injector pump, and high-pressure nozzle after running out of fuel in the field.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-02T10:00:00Z",
     tags: ["Diesel Engine", "Air Lock", "Maintenance", "KG-"],
     content: `> **Quick Answer: How to Remove Air Lock in a Diesel Power Weeder**
@@ -193,7 +193,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "carburetor-overflow-petrol-leakage-fix",
     title: "Power Weeder Carburetor Overflow: How to Fix Petrol Leaking from Air Filter",
     excerpt: "Stop petrol leaking from the air filter box or carburetor bowl caused by jammed float needles, ethanol gum, or fuel tank rust particles.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-03T10:00:00Z",
     tags: ["Carburetor", "Petrol Leak", "Float Needle", "Repair"],
     content: `Petrol dripping continuously from the air filter housing or the carburetor throat is an extreme fire hazard and dilutes engine oil inside the crankcase.
@@ -293,7 +293,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "black-smoke-vs-white-smoke-vs-blue-smoke-weeder",
     title: "Power Weeder Exhaust Smoke Colors: Black, Blue & White Smoke Meaning & Fixes",
     excerpt: "Decode engine exhaust smoke: Black smoke (excess fuel/choke), Blue smoke (piston ring wear/burning oil), and White smoke (water in fuel or blown head gasket).",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-05T10:00:00Z",
     tags: ["Engine Smoke", "Piston Rings", "Oil Burning", "Exhaust"],
     content: `Exhaust smoke color is the clearest diagnostic window into internal engine health.
@@ -346,7 +346,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "diesel-weeder-engine-hunting-rpm-fluctuation",
     title: "Diesel Weeder Engine Hunting: How to Fix RPM Surging and Unstable Idle",
     excerpt: "Fix fluctuating, pulsing RPM (engine hunting) on KG- and diesel weeders by adjusting governor springs, cleaning fuel injector nozzles, and checking idle dampers.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-06T10:00:00Z",
     tags: ["Governor", "Engine Hunting", "Diesel", "RPM Surge"],
     content: `When an engine 'hunts', the RPM erratically swings up and down in a rhythmic wave (vroom... idle... vroom... idle) without the operator touching the throttle lever.
@@ -396,7 +396,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "low-engine-oil-sensor-shutoff-bypass",
     title: "Why Low Oil Sensor Shuts Down Power Weeder on Slopes & How to Handle It",
     excerpt: "Understand the oil alert switch: why your machine cuts off when cultivating tilted terraces, how to inspect the float sensor, and safe bypass instructions.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-07T10:00:00Z",
     tags: ["Oil Sensor", "Terraced Farming", "Electrical", "Field Fix"],
     content: `Most 7HP and 9HP petrol power weeders come equipped with an automatic Yellow-Wire Low-Oil Alert Sensor installed inside the crankcase.
@@ -446,7 +446,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "spark-plug-gap-fouling-ignition-coil-testing",
     title: "How to Test Ignition Coil & Set Spark Plug Gap on Agricultural Weeders",
     excerpt: "Proper 0.7mm spark plug gap specs, ignition coil to flywheel clearance (0.35mm), and testing for weak spark under compression.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-08T10:00:00Z",
     tags: ["Spark Plug", "Ignition Coil", "Electrical", "Maintenance"],
     content: `A spark plug that sparks outside the engine in open air may still fail under high compression pressure inside the cylinder if the ignition coil is weak or the gap is incorrect.
@@ -543,7 +543,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "diesel-injector-testing-pressure-setting",
     title: "Diesel Weeder Fuel Injector Nozzle Pressure & Spray Pattern Testing",
     excerpt: "How to check injector opening pressure (190-200 bar), fix nozzle needle sticking, and prevent diesel knock in KG- engines.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-10T10:00:00Z",
     tags: ["Diesel Injector", "Nozzle", "Spray Pattern", "Fuel Pressure"],
     content: `Poor diesel injection leads to severe black smoke, high fuel consumption, and loud mechanical 'diesel knock' (clattering metal noise).
@@ -848,7 +848,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-v-belt-slipping-snapping-tension",
     title: "Belt-Drive Power Tillers: Why V-Belts Snap, Pulley Alignment & Proper Tension",
     excerpt: "Fix belt squeal, premature belt snapping, and power loss on belt-driven tillers. Correct belt tensioning, B-section vs A-section belts, and pulley groove wear.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-16T10:00:00Z",
     tags: ["V-Belt", "Belt Drive", "Tension", "Pulleys"],
     content: `On belt-driven cultivators, V-belts should last 200–300 hours. If belts are fraying or snapping every 20 hours, there is a fundamental setup error.
@@ -899,7 +899,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-hex-shaft-bearing-failure-replacement",
     title: "How to Replace Axle Bearings (6206 / 6207) on Power Weeder Output Shafts",
     excerpt: "Diagnose wobbly rotor blades, grinding noises, and bearing replacement protocol for sealed ball and tapered roller bearings on cultivator axles.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-17T10:00:00Z",
     tags: ["Bearings", "Axle Repair", "Maintenance", "Workshop"],
     content: `When rotary blades develop noticeable side-to-side wobble or emit a heavy metallic grinding noise under load, the output axle bearings have collapsed.
@@ -1043,7 +1043,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "power-weeder-engine-overheating-symptoms-solutions",
     title: "Power Weeder Engine Overheating: Cooling Fin Cleaning & Cylinder Head Care",
     excerpt: "Prevent piston seizure caused by high engine temperatures: clean clogged air shroud cooling fins, check engine oil quality, and manage summer field shifts.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-20T10:00:00Z",
     tags: ["Overheating", "Cooling Fins", "Engine Care", "Summer Maintenance"],
     content: `Unlike water-cooled tractors with radiators, power weeders rely entirely on **forced air cooling**. The flywheel fan blows air across thin aluminum cooling fins on the cylinder block.
@@ -1093,7 +1093,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "loss-of-power-under-load-weeder-engine-bogging",
     title: "Power Weeder Bogs Down When Blades Touch Soil: Compression & Valve Clearance",
     excerpt: "Restore full tilling horsepower: check valve lash clearance (0.15mm), decarbonize exhaust muffler, and inspect piston ring seal.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/engine.webp",
+    cover_image: "/images/products/engine.webp",
     created_at: "2026-01-21T10:00:00Z",
     tags: ["Loss of Power", "Engine Bogging", "Valve Clearance", "Compression"],
     content: `The engine starts fine and idles crisply, but the moment you drop the rotary blades into the soil, the engine groans, drops RPM, and threatens to stall unless pulled out.
@@ -1143,7 +1143,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "broken-recoil-starter-spring-rope-repair",
     title: "How to Replace Broken Recoil Starter Rope & Rewind Spiral Spring in 15 Minutes",
     excerpt: "Fix snapped starter cords and rewind escaped spiral recoil springs without buying an entire replacement starter assembly.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-22T10:00:00Z",
     tags: ["Recoil Starter", "Starter Rope", "Spring Repair", "DIY Fix"],
     content: `A snapped starter cord in the middle of a 5-acre field halts work completely. Every farmer should master replacing a starter cord in under 15 minutes.
@@ -1339,7 +1339,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "rotary-shaft-hex-pin-shearing-causes-fixes",
     title: "Why Rotary Blade Hex Pins Shear Off & How to Choose High-Tensile Lock Pins",
     excerpt: "Stop losing blades in the field: grade 8.8 vs mild steel R-clips, avoiding hardened steel bolts that crack axle hubs, and vibration safety.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-01-26T10:00:00Z",
     tags: ["Shear Pin", "Hex Pin", "Blade Lock", "Field Fix"],
     content: `Losing a set of rotary blades in a tall sugarcane field because a lock pin sheared off wastes valuable working hours.
@@ -1478,7 +1478,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "onion-and-garlic-raised-bed-weeding-baby-weeder",
     title: "Weeding Onion & Garlic Beds: Why 63cc Baby Weeders Outperform Heavy Tillers",
     excerpt: "Navigate narrow 15cm to 20cm row spacing in high-density vegetable crops using lightweight 2-stroke mini cultivators and weeding wheels.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/baby-weeder.webp",
+    cover_image: "/images/products/baby-weeder.webp",
     created_at: "2026-02-01T10:00:00Z",
     tags: ["Onion Farming", "Garlic", "Baby Weeder", "Vegetable Crops"],
     content: `High-density crops like onion, garlic, and carrot are planted with tight row spacing (15cm to 25cm), making standard 100kg power weeders far too wide and destructive.
@@ -1612,7 +1612,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "brush-cutter-shaft-vibration-inner-cable-greasing",
     title: "Why Brush Cutter Shafts Vibrate Severely: Flexible Inner Shaft Greasing Guide",
     excerpt: "Eliminate hand numbness and rod shaking on backpack and straight-shaft brush cutters by lubricating the internal flex shaft with high-temp lithium grease.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-04T10:00:00Z",
     tags: ["Brush Cutter", "Shaft Vibration", "Greasing", "Maintenance"],
     content: `Extreme vibration along the aluminum shaft tube of a brush cutter makes 30 minutes of work unbearable for the operator.
@@ -1666,7 +1666,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     meta_title: "Brush Cutter Gearbox Greasing Guide",
     meta_description: "How and when to grease brush cutter gearbox head: Use high-temp lithium/moly grease every 15-20 hours. Prevent stripped bevel gears and expensive shaft repairs.",
     excerpt: "Prevent gear teeth stripping on brush cutter heads: finding the grease port bolt, using lithium gear grease, and inspection intervals.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-05T10:00:00Z",
     tags: ["Brush Cutter Gearbox", "Greasing", "Maintenance", "Field Care"],
     content: `> **Quick Answer: How Often to Grease a Brush Cutter Gearbox?**
@@ -1717,7 +1717,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     meta_title: "1 Liter Petrol Me Kitna 2T Oil Padta Hai? (40ml/L)",
     meta_description: "1 liter petrol me kitna 2T oil padta hai? Exact ratio: 40ml per 1L petrol (1:25) for standard 2-stroke brush cutters; 25ml per 1L (1:40) for synthetic JASO-FD. Prevent seizures.",
     excerpt: "Why incorrect 2T oil mixing ruins 2-stroke brush cutter engines: measuring accurate oil ratios (40ml vs 25ml per liter), synthetic vs mineral 2T oil.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-06T10:00:00Z",
     tags: ["2T Oil", "Fuel Mixing", "2-Stroke", "Engine Care"],
     content: `> **Direct Answer: How Much 2T Oil for 1 Litre Petrol?**
@@ -1772,13 +1772,13 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
 - **Viton Seals:** Use double-lip Viton oil seals on rotor output shafts to withstand high soil friction and prevent oil contamination.
 - **Genuine Fitment Guarantee:** KrishiGears coordinates fitment-verified spare parts sourced order-per-sale for all standard 7HP, 9HP petrol engines, KG-/186F diesel models, and 52cc/63cc 2-stroke equipment with PAN-India B2B fulfillment.
 
-## Frequently Asked Field Questions & Expert Answers\n\n### Q: 1 liter petrol me kitna 2t oil padta hai?\n**Expert Resolution:** Pehle apni machine ke engine manual mein prescribed ratio verify karein. Aamtaur par 1 liter petrol mein 40 ml standard 2T oil (1:25 ratio) graduated beaker se naap kar milaya jata hai. Agar engine manual JASO-FD fully synthetic 2T oil allow karta hai, toh 25 ml (1:40 ratio) dalein. Bottle cap se andaze se kabhi na dalein; khet me bina sahi naap ke chalane par piston 15 minute ke andar garam hokar cylinder me jaam (seize) ho sakta hai.\n\n### Q: 2 stroke brush cutter petrol oil ratio kya hona chahiye?\n**Expert Resolution:** Exact ratio 1:25 hota hai (40ml 2T oil prati 1 Litre petrol). Nayi machine ke break-in period aur heavy paddy/wheat harvesting ke dauran 1:25 ratio sabse safe hai. Synthetic JASO-FD oil ke saath 1:40 (25ml per liter) ratio use kiya jata hai.\n\n### Q: 2t oil ratio for grass cutter: kya seedhe petrol tank me oil daal sakte hain?\n**Expert Resolution:** Kabhi bhi 2T oil seedhe brush cutter ya grass cutter ke petrol tank me na daalein. 2T oil petrol se bhari hota hai aur tank ke tal me baith jata hai, jisse carburetor block ho jata hai aur spark plug foul ho jata hai. Hamesha alag can me petrol aur 2T oil ko 15 second shake karke pre-mix karein.\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Need parts for this repair?** KrishiGears coordinates [genuine brush cutter spare parts](/products/category/brush-cutters) on an order-per-sale B2B model — MOQ 2 units, GST invoicing, dealer wholesale pricing and supplier-confirmed dispatch timelines on request.`
+## Frequently Asked Field Questions & Expert Answers\n\n### Q: 1 liter petrol me kitna 2t oil padta hai?\n**Expert Resolution:** Pehle apni machine ke engine manual mein prescribed ratio verify karein. Aamtaur par 1 liter petrol mein 40 ml standard 2T oil (1:25 ratio) graduated beaker se naap kar milaya jata hai. Agar engine manual JASO-FD fully synthetic 2T oil allow karta hai, toh 25 ml (1:40 ratio) dalein. Bottle cap se andaze se kabhi na dalein; khet me bina sahi naap ke chalane par piston 15 minute ke andar garam hokar cylinder me jaam (seize) ho sakta hai.\n\n### Q: 2 stroke brush cutter petrol oil ratio kya hona chahiye?\n**Expert Resolution:** Exact ratio 1:25 hota hai (40ml 2T oil prati 1 Litre petrol). Nayi machine ke break-in period aur heavy paddy/wheat harvesting ke dauran 1:25 ratio sabse safe hai. Synthetic JASO-FD oil ke saath 1:40 (25ml per liter) ratio use kiya jata hai.\n\n### Q: 2t oil ratio for grass cutter: kya seedhe petrol tank me oil daal sakte hain?\n**Expert Resolution:** Kabhi bhi 2T oil seedhe brush cutter ya grass cutter ke petrol tank me na daalein. 2T oil petrol se bhari hota hai aur tank ke tal me baith jata hai, jisse carburetor block ho jata hai aur spark plug foul ho jata hai. Hamesha alag can me petrol aur 2T oil ko 15 second shake karke pre-mix karein.\n\n### Q: Why does my 2-stroke brush cutter bog down when I pull the throttle?\n**Expert Resolution:** Bogging under load is usually caused by a partially clogged carburetor main jet, a stiffened metering diaphragm that cannot pulse fuel, or an exhaust spark arrestor screen blocked with 2T carbon soot.\n\n### Q: Why does my nylon trimmer line snap repeatedly inside the head?\n**Expert Resolution:** Trimmer line breaks rapidly if operated too close to masonry stones, if using degraded brittle line stored in dry sunlight, or if running oversized gauge line (>2.7mm) that overheats the eyelet grommets.\n\n### Q: How do I avoid gearhead overheating when harvesting paddy?\n**Expert Resolution:** Grease the bevel gear head every morning with high-temp lithium grease and periodically clear wound weed fibers from behind the anti-wrap flanged collar.\n\n\n\n---\n\n**Tired of mixing 2T oil?** Upgrade to a zero-smoke [KrishiGears KG-GX35 4-Stroke Brush Cutter on FarmingTools.in](https://farmingtools.in/products/kg-stg-x1-power-x1-gx35lt-d69636d2) (pure petrol, 1-year service support, pan-India spares), browse [B2B brush cutters & spares](/products/category/brush-cutters), or [chat with our machinery technician on WhatsApp](https://wa.me/916006078815?text=Hello%20KrishiGears%2C%20I%20read%20your%202T%20oil%20ratio%20guide%20and%20need%20a%20brush%20cutter%20recommendation) for instant model & spare parts support.`
   },
   "nylon-trimmer-line-breaking-and-jamming-in-bump-feed": {
     slug: "nylon-trimmer-line-breaking-and-jamming-in-bump-feed",
     title: "Why Nylon Trimmer Line Snaps Constantly & Melts Inside Bump-Feed Heads",
     excerpt: "Fix trimmer wire snapping at the eyelet: nylon line water-soaking trick, avoiding line welding inside spool, and picking round vs square line.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-07T10:00:00Z",
     tags: ["Trimmer Line", "Bump Feed", "Nylon Wire", "Weeding"],
     content: `When trimming tough grass around stone walls or trees, nylon line frequently snaps right at the brass eyelet or welds together into a melted plastic lump inside the spool.
@@ -1827,7 +1827,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "crop-collector-attachment-for-paddy-wheat-harvesting",
     title: "Harvesting Paddy & Wheat with Brush Cutter: Crop Collector Harvester Setup",
     excerpt: "Turn your 4-stroke brush cutter into a commercial grain harvester: mounting 80-tooth carbide blades, adjusting the crop collection basket, and field technique.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-08T10:00:00Z",
     tags: ["Paddy Harvesting", "Wheat Harvester", "Crop Collector", "Attachments"],
     content: `Manual harvesting of wheat and paddy requires 8–10 laborers per acre. Equipping a 4-stroke brush cutter with an 80T blade and crop collector attachment allows a single operator to harvest an acre in 3.5 hours.
@@ -1872,7 +1872,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "earth-auger-gearbox-kickback-safety-clutch-repair",
     title: "Earth Auger Sudden Kickback: Fixing Centrifugal Clutch Slip & Gearbox Shocks",
     excerpt: "Prevent operator wrist sprains when drilling holes in rocky soil: clutch spring wear, shear bolt inspection, and two-man handle operation.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/earth-auger.webp",
+    cover_image: "/images/products/earth-auger.webp",
     created_at: "2026-02-09T10:00:00Z",
     tags: ["Earth Auger", "Safety Clutch", "Kickback", "Post Hole Digger"],
     content: `When an earth auger drill bit spinning at 200 RPM suddenly strikes a buried rock or thick tree root, the rotational torque instantly transfers to the operator's handlebars—producing violent kickback that can fracture wrists.
@@ -1917,7 +1917,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "battery-sprayer-pump-pressure-drop-diaphragm-repair",
     title: "Battery Sprayer Not Building Pressure: 12V Diaphragm Pump Repair Guide",
     excerpt: "Troubleshoot electric knapsack sprayers: pressure micro-switch failure, clogged suction strainer, battery voltage drop, and pump diaphragm replacement.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/sprayer.webp",
+    cover_image: "/images/products/sprayer.webp",
     created_at: "2026-02-10T10:00:00Z",
     tags: ["Battery Sprayer", "Diaphragm Pump", "Pressure Drop", "Repair"],
     content: `Battery sprayers are the backbone of pesticide and foliar fertilizer application. When pressure drops to a weak trickle, work stops.
@@ -1963,7 +1963,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "htp-sprayer-pump-pressure-unloader-valve-adjustment",
     title: "HTP Power Sprayer Pressure Regulator & Piston Packing Maintenance",
     excerpt: "How to set 30-40 kg/cm\u00b2 pressure on brass HTP pumps, adjust Teflon piston packing grease cups, and clean unloader bypass valves.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/sprayer.webp",
+    cover_image: "/images/products/sprayer.webp",
     created_at: "2026-02-11T10:00:00Z",
     tags: ["HTP Sprayer", "Pressure Regulator", "Packing", "Orchard Spraying"],
     content: `High-pressure triplex piston pumps (HTP pumps) driven by 5HP petrol engines or tractor PTO deliver the high reach needed for tall mango, coconut, and apple orchards.
@@ -2012,7 +2012,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "agricultural-machinery-dealer-fast-moving-spare-parts-inventory",
     title: "Top 20 Fast-Moving Spare Parts Every Agri Machinery Dealer Must Stock",
     excerpt: "The essential spare parts inventory checklist: carburetors, recoil starters, clutch cables, blades, oil seals, spark plugs, and air filters.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/Carburetor.webp",
+    cover_image: "/images/products/carburetor.webp",
     created_at: "2026-02-12T10:00:00Z",
     tags: ["Dealer Inventory", "Spare Parts", "Fast Moving", "B2B Business"],
     content: `A machinery dealership’s reputation and profitability are built on after-sales spare parts availability, not just machine boxes in the showroom.
@@ -2111,7 +2111,7 @@ For agricultural workshops, mechanics, and equipment dealers across India, maint
     slug: "brush-cutter-harvesting-trouble-maintenance-guide",
     title: "Comprehensive Brush Cutter Harvesting & Maintenance Guide: Troubleshooting, Blade Selection & Engine Care",
     excerpt: "Complete field troubleshooting and maintenance guide for 2-stroke and 4-stroke brush cutters: vibration diagnosis, fuel mixing, blade selection, gearhead greasing, and engine longevity.",
-    cover_image: "https://royalkissanagro.com/wp-content/uploads/2025/10/brush-cutter.webp",
+    cover_image: "/images/products/brush-cutter.webp",
     created_at: "2026-02-14T10:00:00Z",
     tags: ["Brush Cutter", "Harvesting", "Maintenance", "Field Troubleshooting", "Blade Selection"],
     content: `## Overview: High-RPM Brush Cutter Operations in Agriculture
