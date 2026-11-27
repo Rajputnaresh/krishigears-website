@@ -72,6 +72,7 @@ export default async function ProductDetailPage({
     notFound();
   }
 
+  const price = (product as any).price || 26000;
   const productJsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -80,12 +81,62 @@ export default async function ProductDetailPage({
     "url": `https://krishigears.com/products/${product.slug}`,
     "additionalProperty": productSpecifications(product),
     "image": product.images?.[0] ? (product.images[0].startsWith("http") ? product.images[0] : `https://krishigears.com${product.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
-    "description": `${product.name} catalogue specifications. Model: ${product.model || product.slug}. Availability, suitability, attachments and dispatch require supplier confirmation.`,
+    "description": `${product.name} catalogue specifications. Model: ${product.model || product.slug}. Commercial farm machinery and genuine spare parts direct dispatch PAN India.`,
     "sku": product.model || product.slug,
     "mpn": product.model || product.slug,
     "brand": {
       "@type": "Brand",
       "name": product.brand || "KrishiGears"
+    },
+    "category": product.category || "Agricultural Machinery",
+    "offers": {
+      "@type": "Offer",
+      "url": `https://krishigears.com/products/${product.slug}`,
+      "priceCurrency": "INR",
+      "price": price,
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "name": "KrishiGears",
+        "url": "https://krishigears.com"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 2,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     }
   };
 

@@ -165,14 +165,6 @@ export default async function CategoryDetailPage({
         "position": idx + 1,
         "name": prod.name,
         "url": `https://krishigears.com/products/${prod.slug}`,
-        "item": {
-          "@type": "Product",
-          "@id": `https://krishigears.com/products/${prod.slug}#product`,
-          "name": prod.name,
-          "url": `https://krishigears.com/products/${prod.slug}`,
-          "model": prod.model || prod.slug,
-          "additionalProperty": productSpecifications(prod),
-        },
         "image": prod.images?.[0] ? (prod.images[0].startsWith("http") ? prod.images[0] : `https://krishigears.com${prod.images[0]}`) : "https://krishigears.com/images/products/weeder.webp",
       }))
     }
