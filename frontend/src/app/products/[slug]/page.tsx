@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PRODUCTS } from '@/data/catalog';
 import Page from "@/pages_temp/ProductDetail.jsx";
+import { clampTitle, clampDescription } from "@/lib/seo-metadata";
 
 export async function generateStaticParams() {
   return PRODUCTS.map((product) => ({
@@ -31,8 +32,8 @@ export async function generateMetadata({
     : 'https://krishigears.com/images/products/weeder.webp';
 
   const gstRate = getProductGSTRate(product);
-  const title = `${product.name} Wholesale & Dealership Price`;
-  const description = `${product.name} (Model: ${product.model || product.slug}). Compare catalogue specifications and request a supplier-confirmed quotation, availability and dispatch timing. ${gstRate}% GST.`;
+  const title = clampTitle(`${product.name} Wholesale Price`, 44);
+  const description = clampDescription(`${product.name} (Model: ${product.model || product.slug}). Compare specifications, ${gstRate}% GST, and request a supplier-confirmed quotation with fast dispatch.`, 155);
 
   return {
     title,

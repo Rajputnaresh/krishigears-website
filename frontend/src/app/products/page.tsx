@@ -4,7 +4,7 @@ import equipmentEnquiries from "@/data/equipmentEnquiries.json";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "B2B Agricultural Machinery & Genuine Spare Parts Catalog",
+  title: "B2B Farm Machinery & Spares Catalog",
   description: "Browse KrishiGears B2B machinery: 7HP/9HP/10HP power weeders, power tillers, brush cutters, earth augers and OEM spare parts with PAN-India dispatch.",
   alternates: {
     canonical: "https://krishigears.com/products",

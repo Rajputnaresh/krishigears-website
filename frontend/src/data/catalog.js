@@ -11428,11 +11428,13 @@ export const SEO_PAGES = [
   {
     "slug": "power-weeder-supplier-india",
     "title": "Power Weeder Dealer Network & Bulk Supply",
+    "description": "Authorized KrishiGears power weeder wholesale supply and dealership distribution across India. 7HP and 9HP models with GST billing and direct dispatch.",
     "category": "power-weeders"
   },
   {
     "slug": "power-weeder-spare-parts-supplier-india",
     "title": "Power Weeder Spare Parts Distributor & OEM Supply",
+    "description": "Wholesale distributor of OEM power weeder spare parts across India. Tines, gearboxes, recoil starters, and engine components with express dispatch.",
     "category": "power-weeder-spare-parts"
   }
 ];

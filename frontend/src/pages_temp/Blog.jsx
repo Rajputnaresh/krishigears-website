@@ -96,7 +96,7 @@ export default function Blog() {
                   <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5 text-lime-400"/> {new Date(p.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</span>
                   {p.tags?.[0] && <span className="text-xs uppercase font-bold tracking-wider px-2 py-0.5 bg-lime-500/10 text-lime-400 border border-lime-500/30 rounded">{p.tags[0]}</span>}
                 </div>
-                <h3 className="font-display font-bold text-base mt-3 leading-snug text-zinc-100 line-clamp-2">{p.title}</h3>
+                <h2 className="font-display font-bold text-base mt-3 leading-snug text-zinc-100 line-clamp-2">{p.title}</h2>
                 <p className="text-zinc-300 text-xs mt-3 leading-relaxed flex-1 line-clamp-3">{p.excerpt}</p>
                 <div className="mt-5 inline-flex items-center gap-2 text-lime-400 text-xs font-bold pt-3 border-t border-zinc-800">
                   Read complete guide <ArrowRight className="h-3.5 w-3.5" />

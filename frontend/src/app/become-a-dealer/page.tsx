@@ -3,8 +3,8 @@ import Page from "@/pages_temp/BecomeDealer.jsx";
 import { DEALER_FAQS } from "@/lib/product-specifications.mjs";
 
 export const metadata: Metadata = {
-  title: "Power Weeder Dealership Kaise Le: PAN India",
-  description: "Apply for a KrishiGears power weeder dealership. 15%-25% machine margins, up to 35% on OEM spares, zero dead-stock on-demand MOQ from 2 units & order-per-sale spare parts procurement support.",
+  title: "Power Weeder Dealership: Apply PAN India",
+  description: "Apply for a KrishiGears dealership: 15%-25% machine margins, up to 35% on OEM spares, 2-unit MOQ, zero dead-stock, and order-per-sale procurement support.",
   keywords: [
     "power weeder dealership kaise le",
     "power weeder dealership",

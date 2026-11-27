@@ -531,9 +531,9 @@ export default async function LocationCategoryPage({ params }: { params: Promise
                       />
                     </div>
                     <div className="text-[10px] uppercase font-bold tracking-wider text-lime-400 mb-1">{p.brand || "KrishiGears"}</div>
-                    <h4 className="font-display font-bold text-sm text-white group-hover:text-lime-400 line-clamp-2 leading-tight">
+                    <h3 className="font-display font-bold text-sm text-white group-hover:text-lime-400 line-clamp-2 leading-tight">
                       {p.name}
-                    </h4>
+                    </h3>
                     {p.specs?.Power && (
                       <div className="mt-2 text-xs text-zinc-400">Power: <span className="text-zinc-200 font-semibold">{p.specs.Power}</span></div>
                     )}

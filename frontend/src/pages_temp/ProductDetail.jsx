@@ -430,7 +430,7 @@ export default function ProductDetail() {
                       <Image width={320} height={320} src={spare.images?.[0] || "/images/products/weeder.webp"} alt={spare.name} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition" />
                     </div>
                     <div className="text-[10px] uppercase font-bold text-lime-400 mb-1">{spare.category === "power-weeder-spare-parts" ? "OEM Spare Part" : "Attachment"}</div>
-                    <h4 className="font-bold text-sm text-zinc-100 group-hover:text-lime-400 line-clamp-2 leading-tight">{spare.name}</h4>
+                    <h3 className="font-bold text-sm text-zinc-100 group-hover:text-lime-400 line-clamp-2 leading-tight">{spare.name}</h3>
                   </Link>
                   <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between">
                     <span className="text-xs font-bold text-white">Confirm fitment &amp; quote</span>

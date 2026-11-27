@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Page from "@/pages_temp/Locations.jsx";
 
 export const metadata: Metadata = {
-  title: "Agricultural Machinery District Directory (730 Districts)",
-  description: "Browse KrishiGears authorized dealership availability, localized soil type recommendations, and state DBT subsidy links across all 730 Indian districts in 28 States and 8 Union Territories.",
+  title: "Farm Machinery Directory: 730 Hubs",
+  description: "Browse authorized dealer availability, localized soil recommendations, and state DBT subsidy links across all 730 Indian districts in 28 States and 8 UTs.",
   alternates: {
     canonical: "https://krishigears.com/locations",
   },

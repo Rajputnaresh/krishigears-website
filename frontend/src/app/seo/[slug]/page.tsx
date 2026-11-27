@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
 
   let title = "Agricultural Machinery Dealer";
-  let description = "Wholesale supply of Power Weeders and Agricultural Machinery.";
+  let description = "Wholesale supplier of FMTTI-tested power weeders, tillers, and OEM spare parts across India with GST billing and direct factory dispatch.";
 
   const geoPage = GEO_SEO_PAGES.find(p => p.slug === slug);
   if (geoPage) {

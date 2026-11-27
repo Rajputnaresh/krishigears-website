@@ -79,7 +79,7 @@ export default function BecomeDealer() {
             <div className="flex items-start justify-between gap-3">
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-lime-400">Dealer Resources</span>
-                <h4 className="font-bold text-white text-sm mt-0.5">KrishiGears Dealership Terms (PDF)</h4>
+                <p className="font-bold text-white text-sm mt-0.5">KrishiGears Dealership Terms (PDF)</p>
                 <p className="text-xs text-zinc-400 mt-1">Download the 1-page summary of territory margins, MOQ terms, and warranty process.</p>
               </div>
               <a
